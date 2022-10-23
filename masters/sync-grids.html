@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<select id="trainersList"></select>
+		<textarea id="area"></textarea>
+		<table id="table"></table>
+		
+		<script>
+			let abilityPanelByTrainer;
+			let abilities;
+			let abilityConditions;
+			let passiveSkillName;
+			let passiveSkillNameParts;
+			let passiveList;
+			let moveList;
+			
+			let trainerSelect;
+			let table;
+			let textarea;
+			
+			function getCellType(ability) {
+				let cellType = null;
+				switch(ability) {
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+					case 5:
+					case 6:
+						//stat boosts
+						return abilityType[1];
+					
+					case 7:
+						//Passive
+						return abilityType[2];
+					
+					case 8:
+						//additional move effect
+						return abilityType[3];
+					
+					case 9:
+					case 10:
+						//move power/accuracy boost
+						//TODO : Check if it's a sync move, then return abilityType[5]
+						return abilityType[4];
+				}
+			}
+
+			function getByTrainerID(data) {
+				return data.reduce(function (r, a) {
+					r[a.trainerId] = r[a.trainerId] || {};
+					
+					let cellType = getCellType(a.ability.type);
+					
+					r[a.trainerId][cellType] = r[a.trainerId][cellType] || [];
+					r[a.trainerId][cellType].push(a);
+					return r;
+				}, {});
+			}
+			
+			function getByAbilityID(data) {
+				return data.reduce(function (r, a) {
+					r[a.abilityId] = r[a.abilityId] || [];
+					r[a.abilityId].push(a);
+					return r;
+				}, {});
+			}
+			
+			function getByCondID(data) {
+				return data.reduce(function (r, a) {
+					r[a.conditionId] = r[a.conditionId] || [];
+					r[a.conditionId].push(a);
+					return r;
+				}, {});
+			}
+			
+			function setConditionsAndAbilities() {
+				abilityPanelByTrainer.forEach(abilityPanel => {
+					abilityPanel.ability = abilities[abilityPanel.abilityId][0];
+					
+					abilityPanel.conditionIds.forEach(condId => {
+						if(condId >= 12 && condId <= 15)
+							abilityPanel.level = condLevel[condId];
+					});
+					
+					abilityPanel.level = abilityPanel.level || "1/5";
+				});
+				
+			}
+			
+			function setPassiveList() {
+				let idx = null;
+				const digitReplace = "[Name:PassiveSkillNameDigit ]";
+				
+				passiveList = {};
+				
+				Object.keys(passiveSkillName).forEach( id => {
+					var re = /\[Name:PassiveSkillNameParts Idx="(\d+)" \]/gi;
+					idx = re.exec(passiveSkillName[id]);
+					
+					if(idx != null) {
+						idx = idx[1];
+						passiveList[id] = passiveSkillNameParts[idx].replace(digitReplace, (id - idx) + "");
+					}
+					else {
+						passiveList[id] = passiveSkillName[id];
+					}
+				});
+			}
+
+			async function init() {
+				const options = {
+					mode: 'no-cors'
+				};
+			
+				const [abilityPanelResponse, abilityConditionsResponse, moveNameResponse, passiveSkillNameResponse, passiveSNPartsResponse, abilitiesResponse] = await Promise.all([
+					fetch("./data/proto/AbilityPanel.json", options),
+					fetch("./data/proto/AbilityReleaseCondition.json", options),
+					fetch("./data/lsd/move_name_fr.json", options),
+					fetch("./data/lsd/passive_skill_name_fr.json", options),
+					fetch("./data/lsd/passive_skill_name_parts_fr.json", options),
+					fetch("./data/proto/Ability.json", options)
+				])
+				.catch(error => console.log(error));
+				
+				abilityPanelByTrainer = await abilityPanelResponse.json();
+				abilityPanelByTrainer = abilityPanelByTrainer.entries;
+				
+				const abilityConditionsJSON = await abilityConditionsResponse.json();
+				abilityConditions = getByCondID(abilityConditionsJSON.entries);
+				
+				moveList = await moveNameResponse.json();
+				passiveSkillName = await passiveSkillNameResponse.json();
+				passiveSkillNameParts = await passiveSNPartsResponse.json();
+				
+				setPassiveList();
+				
+				const abilitiesJSON = await abilitiesResponse.json();
+				abilities = getByAbilityID(abilitiesJSON.entries);
+				
+				setConditionsAndAbilities();
+				
+				abilityPanelByTrainer = getByTrainerID(abilityPanelByTrainer);
+									
+				sortCells();
+				
+				trainerSelect = document.getElementById("trainersList");
+				populateSelect();
+				
+				table = document.getElementById("table");
+				textarea = document.getElementById("area");
+				
+				trainerSelect.onchange = function() {
+					setTrainer(trainerSelect.value);
+				};
+				
+				
+				setTrainer(trainerSelect.value);
+			}
+			
+			init();
+			
+			function populateSelect() {
+				while(trainerSelect.length > 0) {
+					trainerSelect.remove(0);
+				}
+				
+				Object.keys(abilityPanelByTrainer).forEach(trainer => {
+					let option = document.createElement("option");
+					option.value = trainer;
+					option.text = trainer;
+					trainerSelect.add(option);
+				});
+			}
+			
+			function sortCells() {
+				Object.keys(abilityPanelByTrainer).forEach(trainer => {
+					Object.keys(abilityPanelByTrainer[trainer]).forEach(boost => {
+						abilityPanelByTrainer[trainer][boost].sort((a, b) => a.level.localeCompare(b.level) || a.cellId - b.cellId);
+					});
+				});
+			}
+			
+			function getReplacedText(text, ability) {
+				text = text.replace("{val}", ability.value);
+				if(ability.passiveId != 0)
+					text = text.replace("{passive}", passiveList[ability.passiveId]);
+				if(ability.moveId != 0)
+					text = text.replace("{move}", moveList[ability.moveId].replace("\n", " "));
+					
+				return text;
+			}
+			
+			function setTrainer(id) {
+				table.innerHTML = "";
+				table.innerHTML += "<tr><th>Amélioration</th><th>Effet</th><th>Énergie requise</th><th>Duo-Sphères requises</th><th>Niveau des Capacités requis</th></tr>\n";
+				
+				textarea.value = "[center][table]\n[tr][th|width=250px]Amélioration[/th][th|width=300px]Effet[/th][th|width=100px]Énergie requise[/th][th|width=100px]Duo-Sphères requises[/th][th|width=100px]Niveau des Capacités requis[/th][/tr]\n";
+				
+				appendCategory(abilityPanelByTrainer[id], "StatsBoost");
+				appendCategory(abilityPanelByTrainer[id], "MovePowerAccuracyBoost");
+				appendCategory(abilityPanelByTrainer[id], "AdditionalMoveEffect");
+				appendCategory(abilityPanelByTrainer[id], "Passive");
+				appendCategory(abilityPanelByTrainer[id], "SyncMove");
+				
+				textarea.value += "[/table][/center]";
+			}
+			
+			function appendCategory(trainer, category) {
+				
+				if(typeof trainer[category] === 'undefined') {
+					return;
+				}
+				
+				table.innerHTML += "<tr><th style='background-color:" + bgColor[category] + ";' colspan=5>" + abilityTypeTitle[category] + "</th></tr>\n";
+				textarea.value += "\t[tr][th|bgcolor=" + bgColor[category] + "|colspan=5]" + abilityTypeTitle[category] + "[/th][/tr]\n"
+
+				trainer[category].forEach(cell => {
+				let amelioration = getReplacedText(abilityName[cell.ability.type], cell.ability);
+				
+					table.innerHTML += "<tr><td>" + amelioration
+					+ "</td><td>-</td><td>" + (cell.energyCost == 0 ? '-' : cell.energyCost)
+					+ "</td><td>" + cell.orbCost
+					+ "</td><td>" + cell.level
+					+ "</td></tr>\n";
+					
+					textarea.value += "\t[tr]\n\t[td]" + amelioration
+					+ "[/td]\n\t[td]-[/td]\n\t[td]" + (cell.energyCost == 0 ? '-' : cell.energyCost)
+					+ "[/td]\n\t[td]" + cell.orbCost + " [img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/duo-sphere.png[/img]"
+					+ "[/td]\n\t[td][img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/niveau-capacites-" + cell.level.charAt(0) + ".png[/img]"
+					+ "[/td]\n\t[/tr]\n"
+				});
+			}
+			
+			let abilityType = {
+				1 : "StatsBoost",
+				2 : "Passive",
+				3 : "AdditionalMoveEffect",
+				4 : "MovePowerAccuracyBoost",
+				5 : "SyncMove"
+			};
+			
+			let abilityTypeTitle = {
+				"StatsBoost" : "Amélioration de Stat",
+				"MovePowerAccuracyBoost" : "Amélioration de Capacité",
+				"AdditionalMoveEffect" : "Amélioration d'Effet de Capacité",
+				"Passive" : "Amélioration de Talent",
+				"SyncMove" : "Amélioration de Capacité Duo"
+			}
+			
+			let abilityName = {
+				1  : "PV +{val}",
+				2  : "Attaque +{val}",
+				3  : "Défense +{val}",
+				4  : "Atq. Spé. +{val}",
+				5  : "Déf. Spé. +{val}",
+				6  : "Vitesse +{val}",
+				7  : "{passive}",
+				8  : "{move} : {passive}",
+				9  : "{move} : Puissance +{val}",
+				10 : "{move} : Précision +{val}"
+			};
+			
+			let bgColor = {
+				"StatsBoost" : "#779EFF",
+				"MovePowerAccuracyBoost" : "#47D147",
+				"AdditionalMoveEffect" : "#FF0066",
+				"Passive" : "#FFC266",
+				"SyncMove" : "#BF80FF"
+			};
+			
+			let condLevel = {
+				11 : "1/5",
+				12 : "2/5",
+				13 : "3/5",
+				14 : "4/5",
+				15 : "5/5"
+			};
+		</script>
+	</body>
+
+</html>
