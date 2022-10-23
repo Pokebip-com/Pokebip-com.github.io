@@ -1,0 +1,8 @@
+{
+    "10": "Aumenta di [Digit:2digits ] il seguente livello spedizione:\n• [Name:ExpeditionRewardCategory ]",
+    "20": "Aumenta di [Digit:2digits ] i seguenti livelli spedizione:\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "30": "Aumenta di [Digit:2digits Idx=\"1\" ] il seguente livello spedizione:\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n\nRiduce di [Digit:2digits Idx=\"2\" ] il seguente livello spedizione:\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "50": "Aumenta di [Digit:2digits Idx=\"1\" ] il seguente livello spedizione:\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n\nRiduce di [Digit:2digits Idx=\"2\" ] i seguenti livelli spedizione:\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]\n• [Name:ExpeditionRewardCategory Idx=\"3\" ]",
+    "70": "Aumenta di [Digit:2digits Idx=\"2\" ] il seguente livello spedizione\nse formi una squadra con [Digit:2digits Idx=\"1\" ] o più Unità\ndel gruppo [Name:TeamSkillTag ]:\n• [Name:ExpeditionRewardCategory ]",
+    "80": "Aumenta il seguente livello spedizione per ogni\nUnità del gruppo [Name:TeamSkillTag ] inserita\nnella squadra:\n• [Name:ExpeditionRewardCategory ]"
+}

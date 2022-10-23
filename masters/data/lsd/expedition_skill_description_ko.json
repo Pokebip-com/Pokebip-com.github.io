@@ -1,0 +1,8 @@
+{
+    "10": "아래의 탐색 레벨이 [Digit:2digits ] 오른다\n・[Name:ExpeditionRewardCategory ]",
+    "20": "아래의 탐색 레벨이 [Digit:2digits ] 오른다\n・[Name:ExpeditionRewardCategory Idx=\"1\" ]\n・[Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "30": "아래의 탐색 레벨이 [Digit:2digits Idx=\"1\" ] 오른다\n・[Name:ExpeditionRewardCategory Idx=\"1\" ]\n\n아래의 탐색 레벨을 [Digit:2digits Idx=\"2\" ] 떨어뜨린다\n・[Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "50": "아래의 탐색 레벨이 [Digit:2digits Idx=\"1\" ] 오른다\n・[Name:ExpeditionRewardCategory Idx=\"1\" ]\n\n아래의 탐색 레벨을 [Digit:2digits Idx=\"2\" ] 떨어뜨린다\n・[Name:ExpeditionRewardCategory Idx=\"2\" ]\n・[Name:ExpeditionRewardCategory Idx=\"3\" ]",
+    "70": "\"[Name:TeamSkillTag ]\" 태그를 가진 버디즈를 [Digit:2digits Idx=\"1\" ] 이상 편성하면\n아래의 탐색 레벨이 [Digit:2digits Idx=\"2\" ] 오른다\n・[Name:ExpeditionRewardCategory ]",
+    "80": "\"[Name:TeamSkillTag ]\" 태그를 가진 버디즈의 편성 수만큼\n아래의 탐색 레벨이 오른다\n・[Name:ExpeditionRewardCategory ]"
+}

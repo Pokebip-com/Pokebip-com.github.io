@@ -1,0 +1,6 @@
+{
+    "1300001": "Si se usa durante una conversación, revela\nel interés actual del visitante.",
+    "1300002": "Si se usa durante una conversación, garantiza\nel estado de euforia cuando el tema escogido\nse corresponde con el interés actual del\nvisitante.",
+    "1300003": "Si se usa durante una conversación, disminuye\nen [Digit:2digits ] la reducción de la atención, pero esta\nnunca puede bajar de 0.",
+    "1300004": "Si se usa durante una conversación, es más\nprobable que aparezcan temas que se\ncorrespondan con el interés actual del\nvisitante."
+}

@@ -1,0 +1,8 @@
+{
+    "10": "下列探索等級提高[Digit:2digits ]\n・[Name:ExpeditionRewardCategory ]",
+    "20": "下列探索等級提高[Digit:2digits ]\n・[Name:ExpeditionRewardCategory Idx=\"1\" ]\n・[Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "30": "下列探索等級提高[Digit:2digits Idx=\"1\" ]\n・[Name:ExpeditionRewardCategory Idx=\"1\" ]\n\n下列探索等級降低[Digit:2digits Idx=\"2\" ]\n・[Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "50": "下列探索等級提高[Digit:2digits Idx=\"1\" ]\n・[Name:ExpeditionRewardCategory Idx=\"1\" ]\n\n下列探索等級降低[Digit:2digits Idx=\"2\" ]\n・[Name:ExpeditionRewardCategory Idx=\"2\" ]\n・[Name:ExpeditionRewardCategory Idx=\"3\" ]",
+    "70": "編制[Digit:2digits Idx=\"1\" ]對以上擁有「[Name:TeamSkillTag ]」標籤的拍組時\n下列探索等級提高[Digit:2digits Idx=\"2\" ]\n・[Name:ExpeditionRewardCategory ]",
+    "80": "依照擁有「[Name:TeamSkillTag ]」標籤的拍組編制數量\n提高下列探索等級\n・[Name:ExpeditionRewardCategory ]"
+}

@@ -1,0 +1,7 @@
+{
+    "1410001": "探索で使用するとメラメラ結晶の探索レベルを\n[Digit:2digits Idx=\"1\" ]時間[Digit:2digits Idx=\"2\" ]上昇させます",
+    "1410002": "探索で使用するとポカポカ結晶の探索レベルを\n[Digit:2digits Idx=\"1\" ]時間[Digit:2digits Idx=\"2\" ]上昇させます",
+    "1410003": "探索で使用するとウルウル結晶の探索レベルを\n[Digit:2digits Idx=\"1\" ]時間[Digit:2digits Idx=\"2\" ]上昇させます",
+    "1410004": "探索で使用するとレアアイテムの探索レベルを\n[Digit:2digits Idx=\"1\" ]時間[Digit:2digits Idx=\"2\" ]上昇させます",
+    "1410005": "探索で使用すると全ての探索レベルを\n[Digit:2digits Idx=\"1\" ]時間[Digit:2digits Idx=\"2\" ]上昇させます"
+}

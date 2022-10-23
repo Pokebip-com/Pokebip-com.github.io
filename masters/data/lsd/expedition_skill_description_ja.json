@@ -1,0 +1,8 @@
+{
+    "10": "以下の探索レベルを[Digit:2digits ]上げる\n・[Name:ExpeditionRewardCategory ]",
+    "20": "以下の探索レベルを[Digit:2digits ]上げる\n・[Name:ExpeditionRewardCategory Idx=\"1\" ]\n・[Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "30": "以下の探索レベルを[Digit:2digits Idx=\"1\" ]上げる\n・[Name:ExpeditionRewardCategory Idx=\"1\" ]\n\n以下の探索レベルを[Digit:2digits Idx=\"2\" ]下げる\n・[Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "50": "以下の探索レベルを[Digit:2digits Idx=\"1\" ]上げる\n・[Name:ExpeditionRewardCategory Idx=\"1\" ]\n\n以下の探索レベルを[Digit:2digits Idx=\"2\" ]下げる\n・[Name:ExpeditionRewardCategory Idx=\"2\" ]\n・[Name:ExpeditionRewardCategory Idx=\"3\" ]",
+    "70": "「[Name:TeamSkillTag ]」のタグを持つバディーズを[Digit:2digits Idx=\"1\" ]組以上編成すると\n以下の探索レベルを[Digit:2digits Idx=\"2\" ]上げる\n・[Name:ExpeditionRewardCategory ]",
+    "80": "「[Name:TeamSkillTag ]」のタグを持つバディーズの編成数分\n以下の探索レベルを上げる\n・[Name:ExpeditionRewardCategory ]"
+}

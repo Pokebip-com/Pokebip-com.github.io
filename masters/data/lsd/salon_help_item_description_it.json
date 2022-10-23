@@ -1,0 +1,6 @@
+{
+    "1300001": "Se usati per una conversazione, rivelano\nl'argomento desiderato dall'ospite.",
+    "1300002": "Se usato per una conversazione, garantisce\nmassima sintonia quando viene selezionato\nl'argomento desiderato dall'ospite.",
+    "1300003": "Se usato per una conversazione, riduce\ndi [Digit:2digits ] la diminuzione della probabilità di\ncontinuare (ma non può renderla negativa).",
+    "1300004": "Se usato per una conversazione, aumenta\nla probabilità che appaiano argomenti\ncompatibili con quello desiderato dall'ospite."
+}

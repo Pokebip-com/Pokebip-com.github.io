@@ -1,0 +1,8 @@
+{
+    "10": "Aumenta en [Digit:2digits ] el siguiente nivel de exploración:\n• [Name:ExpeditionRewardCategory ]",
+    "20": "Aumenta en [Digit:2digits ] los siguientes niveles de\nexploración:\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "30": "Aumenta en [Digit:2digits Idx=\"1\" ] el siguiente nivel de exploración:\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n\nReduce en [Digit:2digits Idx=\"2\" ] el siguiente nivel de exploración:\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "50": "Aumenta en [Digit:2digits Idx=\"1\" ] el siguiente nivel de exploración:\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n\nReduce en [Digit:2digits Idx=\"2\" ] los siguientes niveles de\nexploración:\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]\n• [Name:ExpeditionRewardCategory Idx=\"3\" ]",
+    "70": "Aumenta en [Digit:2digits Idx=\"2\" ] el siguiente nivel de exploración\nal formar un equipo de al menos [Digit:2digits Idx=\"1\" ] pareja[ES:Qty Ref=\"1\" P=\"s\" ] de\ncompis con el distintivo [Name:TeamSkillTag ]:\n• [Name:ExpeditionRewardCategory ]",
+    "80": "Aumenta el siguiente nivel de exploración\nproporcionalmente al número de parejas de\ncompis que haya en tu equipo con el distintivo\n[Name:TeamSkillTag ]:\n• [Name:ExpeditionRewardCategory ]"
+}

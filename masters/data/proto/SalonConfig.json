@@ -1,0 +1,22 @@
+{"entries": [
+{ "salonConfigId": "common.initial_guest_id", "value": "1" },
+{ "salonConfigId": "common.pc_mask_scale_x", "value": "1300" },
+{ "salonConfigId": "common.pc_mask_scale_y", "value": "1200" },
+{ "salonConfigId": "common.photobook_mask_scale_x", "value": "1500" },
+{ "salonConfigId": "common.photobook_mask_scale_y", "value": "1000" },
+{ "salonConfigId": "interact.base_chance_rate_max", "value": "11" },
+{ "salonConfigId": "interact.base_chance_rate_min", "value": "9" },
+{ "salonConfigId": "interact.fever_lot_rate", "value": "50" },
+{ "salonConfigId": "interact.give_bad_friendship_point", "value": "5" },
+{ "salonConfigId": "interact.give_good_friendship_point", "value": "10" },
+{ "salonConfigId": "interact.give_normal_friendship_point", "value": "7" },
+{ "salonConfigId": "interact.match_like_status_chance_rate", "value": "50" },
+{ "salonConfigId": "interact.talk_evaluation_1", "value": "9" },
+{ "salonConfigId": "interact.talk_evaluation_2", "value": "12" },
+{ "salonConfigId": "interact.topic_lot_base_weight", "value": "100" },
+{ "salonConfigId": "interact.tutorial_mood_id", "value": "5" },
+{ "salonConfigId": "occasion.cheer_max_cool_time", "value": "20" },
+{ "salonConfigId": "occasion.cheer_min_cool_time", "value": "12" },
+{ "salonConfigId": "occasion.lucky_event_rate", "value": "5" },
+{ "salonConfigId": "occasion.monster_ball_rate", "value": "100" }
+]}

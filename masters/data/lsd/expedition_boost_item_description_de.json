@@ -1,0 +1,7 @@
+{
+    "1410001": "Erhöht beim Einsatz während einer\nErkundungstour den Erkundungslevel für\nFeurige Kristalle [Digit:2digits Idx=\"1\" ] Stunden lang um [Digit:2digits Idx=\"2\" ].",
+    "1410002": "Erhöht beim Einsatz während einer\nErkundungstour den Erkundungslevel für\nWarme Kristalle [Digit:2digits Idx=\"1\" ] Stunden lang um [Digit:2digits Idx=\"2\" ].",
+    "1410003": "Erhöht beim Einsatz während einer\nErkundungstour den Erkundungslevel für\nWässrige Kristalle [Digit:2digits Idx=\"1\" ] Stunden lang um [Digit:2digits Idx=\"2\" ].",
+    "1410004": "Erhöht beim Einsatz während einer\nErkundungstour den Erkundungslevel für\nSeltene Items [Digit:2digits Idx=\"1\" ] Stunden lang um [Digit:2digits Idx=\"2\" ].",
+    "1410005": "Erhöht beim Einsatz während einer\nErkundungstour alle Erkundungslevel\n[Digit:2digits Idx=\"1\" ] Stunden lang um [Digit:2digits Idx=\"2\" ]."
+}

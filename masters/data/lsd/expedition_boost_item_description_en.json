@@ -1,0 +1,7 @@
+{
+    "1410001": "When used during an expedition, raises your\nFiery Crystal discovery level by [Digit:2digits Idx=\"2\" ] for [Digit:2digits Idx=\"1\" ] hours.",
+    "1410002": "When used during an expedition, raises your\nSoothing Crystal discovery level by [Digit:2digits Idx=\"2\" ] for\n[Digit:2digits Idx=\"1\" ] hours.",
+    "1410003": "When used during an expedition, raises your\nWistful Crystal discovery level by [Digit:2digits Idx=\"2\" ] for [Digit:2digits Idx=\"1\" ] hours.",
+    "1410004": "When used during an expedition, raises your\nrare cache discovery level by [Digit:2digits Idx=\"2\" ] for [Digit:2digits Idx=\"1\" ] hours.",
+    "1410005": "When used during an expedition, raises all\ndiscovery levels by [Digit:2digits Idx=\"2\" ] for [Digit:2digits Idx=\"1\" ] hours."
+}

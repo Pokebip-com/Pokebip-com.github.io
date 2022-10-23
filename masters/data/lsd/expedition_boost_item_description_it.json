@@ -1,0 +1,7 @@
+{
+    "1410001": "Se usato in una spedizione, aumenta il livello\nspedizione dei Cristalli ferventi di [Digit:2digits Idx=\"2\" ]\nper [Digit:2digits Idx=\"1\" ] or[IT:Qty Ref=\"1\" S=\"a\" P=\"e\" ].",
+    "1410002": "Se usato in una spedizione, aumenta il livello\nspedizione dei Cristalli calorosi di [Digit:2digits Idx=\"2\" ]\nper [Digit:2digits Idx=\"1\" ] or[IT:Qty Ref=\"1\" S=\"a\" P=\"e\" ].",
+    "1410003": "Se usato in una spedizione, aumenta il livello\nspedizione dei Cristalli toccanti di [Digit:2digits Idx=\"2\" ]\nper [Digit:2digits Idx=\"1\" ] or[IT:Qty Ref=\"1\" S=\"a\" P=\"e\" ].",
+    "1410004": "Se usato in una spedizione, aumenta il livello\nspedizione degli strumenti rari di [Digit:2digits Idx=\"2\" ] per [Digit:2digits Idx=\"1\" ] or[IT:Qty Ref=\"1\" S=\"a\" P=\"e\" ].",
+    "1410005": "Se usato in una spedizione, aumenta tutti\ni livelli spedizione di [Digit:2digits Idx=\"2\" ] per [Digit:2digits Idx=\"1\" ] or[IT:Qty Ref=\"1\" S=\"a\" P=\"e\" ]."
+}

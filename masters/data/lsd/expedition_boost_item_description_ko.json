@@ -1,0 +1,7 @@
+{
+    "1410001": "탐색에서 사용하면 이글이글 결정의 탐색 레벨을\n[Digit:2digits Idx=\"1\" ]시간 동안 [Digit:2digits Idx=\"2\" ] 상승시킵니다",
+    "1410002": "탐색에서 사용하면 따끈따끈 결정의 탐색 레벨을\n[Digit:2digits Idx=\"1\" ]시간 동안 [Digit:2digits Idx=\"2\" ] 상승시킵니다",
+    "1410003": "탐색에서 사용하면 글썽글썽 결정의 탐색 레벨을\n[Digit:2digits Idx=\"1\" ]시간 동안 [Digit:2digits Idx=\"2\" ] 상승시킵니다",
+    "1410004": "탐색에서 사용하면 레어 아이템의 탐색 레벨을\n[Digit:2digits Idx=\"1\" ]시간 동안 [Digit:2digits Idx=\"2\" ] 상승시킵니다",
+    "1410005": "탐색에서 사용하면 모든 탐색 레벨을\n[Digit:2digits Idx=\"1\" ]시간 동안 [Digit:2digits Idx=\"2\" ] 상승시킵니다"
+}

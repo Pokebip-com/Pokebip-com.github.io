@@ -1,0 +1,8 @@
+{
+    "10": "Erhöht den Erkundungslevel um [Digit:2digits ] für:\n• [Name:ExpeditionRewardCategory ]",
+    "20": "Erhöht den Erkundungslevel um [Digit:2digits ] für:\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "30": "Erhöht den Erkundungslevel um [Digit:2digits Idx=\"1\" ] für:\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n\nVerringert den Erkundungslevel um [Digit:2digits Idx=\"2\" ] für:\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "50": "Erhöht den Erkundungslevel um [Digit:2digits Idx=\"1\" ] für:\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n\nVerringert den Erkundungslevel um [Digit:2digits Idx=\"2\" ] für:\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]\n• [Name:ExpeditionRewardCategory Idx=\"3\" ]",
+    "70": "Erhöht den Erkundungslevel für Folgendes um [Digit:2digits Idx=\"2\" ],\nwenn sich [Digit:2digits Idx=\"1\" ] oder mehr Trainer mit dem Attribut\n„[Name:TeamSkillTag ]“ im Team befinden:\n• [Name:ExpeditionRewardCategory ]",
+    "80": "Erhöht den Erkundungslevel für Folgendes um die\nAnzahl der Trainer im Team, die über das Attribut\n„[Name:TeamSkillTag ]“ verfügen:\n• [Name:ExpeditionRewardCategory ]"
+}

@@ -1,0 +1,8 @@
+{
+    "10": "Augmente le niveau d'exploration suivant de [Digit:2digits ]\n• [Name:ExpeditionRewardCategory ]",
+    "20": "Augmente les niveaux d'exploration suivants de [Digit:2digits ]\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "30": "Augmente le niveau d'exploration suivant de [Digit:2digits Idx=\"1\" ]\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n\nBaisse le niveau d'exploration suivant de [Digit:2digits Idx=\"2\" ]\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]",
+    "50": "Augmente le niveau d'exploration suivant de [Digit:2digits Idx=\"1\" ]\n• [Name:ExpeditionRewardCategory Idx=\"1\" ]\n\nBaisse les niveaux d'exploration suivants de [Digit:2digits Idx=\"2\" ]\n• [Name:ExpeditionRewardCategory Idx=\"2\" ]\n• [Name:ExpeditionRewardCategory Idx=\"3\" ]",
+    "70": "Augmente le niveau d'exploration suivant de [Digit:2digits Idx=\"2\" ]\nquand vous formez une équipe avec [Digit:2digits Idx=\"1\" ] Duo[FR:Qty P=\"s\" ]\nou plus, qui ont en commun le mot-clé :\n[Name:TeamSkillTag ]\n• [Name:ExpeditionRewardCategory ]",
+    "80": "Augmente le niveau d'exploration suivant\npour chaque Duo dans votre équipe\nqui ont en commun le mot-clé :\n[Name:TeamSkillTag ]\n• [Name:ExpeditionRewardCategory ]"
+}

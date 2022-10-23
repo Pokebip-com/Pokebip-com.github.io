@@ -1,0 +1,7 @@
+{
+    "1410001": "Si se usa para ir de exploración, aumenta\nen [Digit:2digits Idx=\"2\" ] el nivel de exploración de los Cristales\nPasión durante [Digit:2digits Idx=\"1\" ] hora[ES:Qty Ref=\"1\" P=\"s\" ].",
+    "1410002": "Si se usa para ir de exploración, aumenta\nen [Digit:2digits Idx=\"2\" ] el nivel de exploración de los Cristales\nTernura durante [Digit:2digits Idx=\"1\" ] hora[ES:Qty Ref=\"1\" P=\"s\" ].",
+    "1410003": "Si se usa para ir de exploración, aumenta\nen [Digit:2digits Idx=\"2\" ] el nivel de exploración de los Cristales\nSensibilidad durante [Digit:2digits Idx=\"1\" ] hora[ES:Qty Ref=\"1\" P=\"s\" ].",
+    "1410004": "Si se usa para ir de exploración, aumenta\nen [Digit:2digits Idx=\"2\" ] el nivel de exploración de los Botines\nRaros durante [Digit:2digits Idx=\"1\" ] hora[ES:Qty Ref=\"1\" P=\"s\" ].",
+    "1410005": "Si se usa para ir de exploración, aumenta\nen [Digit:2digits Idx=\"2\" ] el nivel de exploración de todos\nlos objetos durante [Digit:2digits Idx=\"1\" ] hora[ES:Qty Ref=\"1\" P=\"s\" ]."
+}
