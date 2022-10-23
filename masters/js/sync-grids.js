@@ -359,6 +359,22 @@ function setTrainer(id) {
 	textarea.value += "[/table][/center]";
 }
 
+function getCleanDescr(descr, level) {
+	
+	descr = descr.replaceAll(/\[Digit:2digits \]\s%/gi, ((level+1) * 10 + "") + " %");
+	descr = descr.replaceAll(/\[Digit:1digit \]/gi, level + "");
+	
+	const matches = [...descr.matchAll(/\[FR:Qty\sS=\"(\w+)\"\sP=\"(\w+)\"\s\]/gi)];
+	
+	if(matches.length > 0) {
+		matches.forEach(match => {
+			descr = descr.replace(/\[FR:Qty\sS=\"\w+\"\sP=\"\w+\"\s\]/gi, (level > 1 ? match[2] : match[1]));
+		});
+	}
+	
+	return descr;
+}
+
 function appendCategory(trainer, category) {
 	
 	if(typeof trainer[category] === 'undefined') {
@@ -369,20 +385,32 @@ function appendCategory(trainer, category) {
 	textarea.value += "\t[tr][th|bgcolor=" + bgColor[category] + "|colspan=5]" + abilityTypeTitle[category] + "[/th][/tr]\n"
 
 	trainer[category].forEach(cell => {
-	let amelioration = getReplacedText(abilityName[cell.ability.type], cell.ability);
+		let amelioration = getReplacedText(abilityName[cell.ability.type], cell.ability);
+		let amelioLevel = Number.isInteger(amelioration.slice(-1)*1) ? amelioration.slice(-1)*1 : null;
+		let passiveDescr = '-';
+		
+		if(cell.ability.passiveId !== 0) {
+			passiveDescr = passiveList[cell.ability.passiveId].description;
+			
+			if(amelioLevel !== null) {
+				console.log(amelioLevel);
+				passiveDescr = getCleanDescr(passiveDescr, amelioLevel);
+			}
+		}
 	
 		table.innerHTML += "<tr><td>" + amelioration
-		+ "</td><td>" + (cell.ability.passiveId == 0 ? '-' : passiveList[cell.ability.passiveId].description)
-		+ "</td><td>" + (cell.energyCost == 0 ? '-' : cell.energyCost)
-		+ "</td><td>" + cell.orbCost
-		+ "</td><td>" + cell.level
-		+ "</td></tr>\n";
+			+ "</td><td>" + passiveDescr
+			+ "</td><td>" + (cell.energyCost == 0 ? '-' : cell.energyCost)
+			+ "</td><td>" + cell.orbCost
+			+ "</td><td>" + cell.level
+			+ "</td></tr>\n";
 		
 		textarea.value += "\t[tr]\n\t[td]" + amelioration
-		+ "[/td]\n\t[td]-[/td]\n\t[td]" + (cell.energyCost == 0 ? '-' : cell.energyCost)
-		+ "[/td]\n\t[td]" + cell.orbCost + " [img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/duo-sphere.png[/img]"
-		+ "[/td]\n\t[td][img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/niveau-capacites-" + cell.level.charAt(0) + ".png[/img]"
-		+ "[/td]\n\t[/tr]\n"
+			+ "[/td]\n\t[td]" + passiveDescr
+			+ "[/td]\n\t[td]" + (cell.energyCost == 0 ? '-' : cell.energyCost)
+			+ "[/td]\n\t[td]" + cell.orbCost + " [img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/duo-sphere.png[/img]"
+			+ "[/td]\n\t[td][img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/niveau-capacites-" + cell.level.charAt(0) + ".png[/img]"
+			+ "[/td]\n\t[/tr]\n"
 	});
 }
 
