@@ -1,11 +1,17 @@
 let abilityPanelByTrainer;
 let abilities;
 let abilityConditions;
+let monsterBase;
+let monsterInfos;
+let monsterNames;
+let moveInfos;
+let moveNames;
+let trainerBase;
+let trainerInfos;
+let trainerNames;
 let passiveSkillName;
 let passiveSkillNameParts;
 let passiveList;
-let moveInfos;
-let moveNames;
 
 let abilityType;
 let abilityTypeTitle;
@@ -13,9 +19,10 @@ let abilityName;
 let bgColor;
 let condLevel;
 
-let trainerSelect;
+let btnCopy;
 let table;
 let textarea;
+let trainerSelect;
 
 function getCellType(ability) {
 	switch(ability.type) {
@@ -48,7 +55,7 @@ function getCellType(ability) {
 	}
 }
 
-function getByTrainerID(data) {
+function getAbilitiesByTrainerID(data) {
 	return data.reduce(function (r, a) {
 		r[a.trainerId] = r[a.trainerId] || {};
 		
@@ -79,6 +86,34 @@ function getByCondID(data) {
 function getByMoveID(data) {
 	return data.reduce(function (r, a) {
 		r[a.moveId] = a;
+		return r;
+	}, {});
+}
+
+function getByMonsterID(data) {
+	return data.reduce(function (r, a) {
+		r[a.monsterId] = a;
+		return r;
+	}, {});
+}
+
+function getByMonsterBaseID(data) {
+	return data.reduce(function (r, a) {
+		r[a.monsterBaseId] = a;
+		return r;
+	}, {});
+}
+
+function getByTrainerID(data) {
+	return data.reduce(function (r, a) {
+		r[a.trainerId] = a;
+		return r;
+	}, {});
+}
+
+function getByID(data) {
+	return data.reduce(function (r, a) {
+		r[a.id] = a;
 		return r;
 	}, {});
 }
@@ -157,22 +192,34 @@ async function getData() {
 		abilitiesResponse,
 		abilityPanelResponse,
 		abilityConditionsResponse,
+		monsterResponse,
+		monsterBaseResponse,
 		moveResponse,
+		trainerResponse,
+		trainerBaseResponse,
+		monsterNameResponse,
 		moveNameResponse,
 		passiveSkillDescrResponse,
 		passiveSDescrPartsResponse,
 		passiveSkillNameResponse,
-		passiveSNamePartsResponse
+		passiveSNamePartsResponse,
+		trainerNameResponse
 	] = await Promise.all([
 		fetch("./data/proto/Ability.json"),
 		fetch("./data/proto/AbilityPanel.json"),
 		fetch("./data/proto/AbilityReleaseCondition.json"),
+		fetch("./data/proto/Monster.json"),
+		fetch("./data/proto/MonsterBase.json"),
 		fetch("./data/proto/Move.json"),
+		fetch("./data/proto/Trainer.json"),
+		fetch("./data/proto/TrainerBase.json"),
+		fetch("./data/lsd/monster_name_fr.json"),
 		fetch("./data/lsd/move_name_fr.json"),
 		fetch("./data/lsd/passive_skill_description_fr.json"),
 		fetch("./data/lsd/passive_skill_description_parts_fr.json"),
 		fetch("./data/lsd/passive_skill_name_fr.json"),
-		fetch("./data/lsd/passive_skill_name_parts_fr.json")
+		fetch("./data/lsd/passive_skill_name_parts_fr.json"),
+		fetch("./data/lsd/trainer_name_fr.json")
 	])
 	.catch(error => console.log(error));
 	
@@ -182,9 +229,9 @@ async function getData() {
 	const abilityConditionsJSON = await abilityConditionsResponse.json();
 	abilityConditions = getByCondID(abilityConditionsJSON.entries);
 	
-	moveNames = await moveNameResponse.json();
 	const moveInfosJSON = await moveResponse.json();
 	moveInfos = getByMoveID(moveInfosJSON.entries);
+	moveNames = await moveNameResponse.json();
 	
 	passiveSkillDescription = await passiveSkillDescrResponse.json();
 	passiveSkillDescriptionParts = await passiveSDescrPartsResponse.json();
@@ -194,6 +241,21 @@ async function getData() {
 	
 	const abilitiesJSON = await abilitiesResponse.json();
 	abilities = getByAbilityID(abilitiesJSON.entries);
+	
+	const monstersJSON = await monsterResponse.json();
+	monsterInfos = getByMonsterID(monstersJSON.entries);
+	
+	const monstersBaseJSON = await monsterBaseResponse.json();
+	monsterBase = getByMonsterBaseID(monstersBaseJSON.entries);
+	
+	const trainersJSON = await trainerResponse.json();
+	trainerInfos = getByTrainerID(trainersJSON.entries);
+	
+	const trainersBaseJSON = await trainerBaseResponse.json();
+	trainerBase = getByID(trainersBaseJSON.entries);
+	
+	monsterNames = await monsterNameResponse.json();
+	trainerNames = await trainerNameResponse.json();
 }
 
 async function getCustomJSON() {
@@ -224,12 +286,44 @@ function populateSelect() {
 		trainerSelect.remove(0);
 	}
 	
+	let optionsArray = [];
+	
 	Object.keys(abilityPanelByTrainer).forEach(trainer => {
-		let option = document.createElement("option");
+		let trainerName = trainerNames[trainerBase[trainerInfos[trainer].trainerBaseId].trainerNameId] || "Dresseur (Scottie/Bettie)";
+		let monsterName = monsterNames[monsterBase[monsterInfos[trainerInfos[trainer].monsterId].monsterBaseId].monsterNameId];
+		
+		let option = {};
 		option.value = trainer;
-		option.text = trainer;
-		trainerSelect.add(option);
+		option.text = `${trainerName} & ${monsterName}`;
+		
+		optionsArray.push(option);
 	});
+	
+	optionsArray.sort((a, b) => a.text.localeCompare(b.text));
+	
+	optionsArray.forEach(opt => {
+		trainerSelect.add(new Option(opt.text, opt.value));
+	});
+}
+
+function sortSelect() {
+	let tmpArray = [];
+	for(let i = 0; i < trainerSelect.options.length; i++) {
+		tmpArray[i] = {};
+		tmpArray[i].text = trainerSelect.options[i].text;
+		tmpArray[i].value = trainerSelect.options[i].value;
+	}
+	
+	tmpArray.sort((a, b) => a.text.localeCompare(b.text));
+	
+	while(trainerSelect.options.length > 0) {
+		trainerSelect.options[0] = null;
+	}
+	
+	for(let i = 0; i < tmpArray.length; i++) {
+		let op = new Option(tmpArray[i].text, tmpArray[i].value);
+		trainerSelect.options[i] = op;
+	}
 }
 
 function sortCells() {
@@ -296,18 +390,22 @@ async function init() {
 	await getData();
 	await getCustomJSON();
 	
-	trainerSelect = document.getElementById("trainersList");
+	btnCopy = document.getElementById("btnCopy");
 	table = document.getElementById("table");
 	textarea = document.getElementById("area");
+	trainerSelect = document.getElementById("trainersList");
 	
 	setPassiveList();
 	setConditionsAndAbilities();
 	
-	abilityPanelByTrainer = getByTrainerID(abilityPanelByTrainer);
+	abilityPanelByTrainer = getAbilitiesByTrainerID(abilityPanelByTrainer);
 	sortCells();
 	
 	populateSelect();
 	
+	btnCopy.onclick = function() {
+		navigator.clipboard.writeText(textarea.value);
+	};
 	
 	trainerSelect.onchange = function() {
 		setTrainer(trainerSelect.value);
