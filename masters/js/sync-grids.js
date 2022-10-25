@@ -360,9 +360,9 @@ function setTrainer(id) {
 }
 
 function getCleanDescr(descr, level) {
-	
 	descr = descr.replaceAll(/\[Digit:2digits \]\s%/gi, ((level+1) * 10 + "") + " %");
 	descr = descr.replaceAll(/\[Digit:1digit \]/gi, level + "");
+	descr = descr.replaceAll("\n", " ");
 	
 	const matches = [...descr.matchAll(/\[FR:Qty\sS=\"(\w+)\"\sP=\"(\w+)\"\s\]/gi)];
 	
@@ -393,7 +393,6 @@ function appendCategory(trainer, category) {
 			passiveDescr = passiveList[cell.ability.passiveId].description;
 			
 			if(amelioLevel !== null) {
-				console.log(amelioLevel);
 				passiveDescr = getCleanDescr(passiveDescr, amelioLevel);
 			}
 		}
@@ -412,6 +411,12 @@ function appendCategory(trainer, category) {
 			+ "[/td]\n\t[td][img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/niveau-capacites-" + cell.level.charAt(0) + ".png[/img]"
 			+ "[/td]\n\t[/tr]\n"
 	});
+}
+
+function setUrlTID(value) {
+	const url = new URL(window.location);
+	url.searchParams.set('trainerId', value);
+	window.history.pushState(null, '', url.toString());
 }
 
 async function init() {
@@ -436,9 +441,24 @@ async function init() {
 	};
 	
 	trainerSelect.onchange = function() {
+		setUrlTID(trainerSelect.value);
 		setTrainer(trainerSelect.value);
 	};
-	
+
+	const urlTID = new URL(window.location).searchParams.get('trainerId');
+
+	if(urlTID !== null) {
+
+		let i = 0;
+		for(const opt of trainerSelect.options) {
+			if(urlTID === opt.value) {
+				trainerSelect.selectedIndex = i;
+				break;
+			}
+			i++;
+		}
+	}
+
 	setTrainer(trainerSelect.value);
 }
 
