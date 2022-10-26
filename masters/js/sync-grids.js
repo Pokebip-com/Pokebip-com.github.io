@@ -59,7 +59,9 @@ function getCellType(ability) {
 function getAbilitiesByTrainerID(data) {
 	return data.reduce(function (r, a) {
 		r[a.trainerId] = r[a.trainerId] || {};
-		
+
+		r[a.trainerId].nbCells = r[a.trainerId].nbCells + 1 || 1;
+
 		let cellType = getCellType(a.ability);
 		
 		r[a.trainerId][cellType] = r[a.trainerId][cellType] || [];
@@ -310,7 +312,9 @@ function populateSelect() {
 function sortCells() {
 	Object.keys(abilityPanelByTrainer).forEach(trainer => {
 		Object.keys(abilityPanelByTrainer[trainer]).forEach(boost => {
-			abilityPanelByTrainer[trainer][boost].sort((a, b) => a.level.localeCompare(b.level) || a.cellId - b.cellId);
+			if(Array.isArray(abilityPanelByTrainer[trainer][boost])) {
+				abilityPanelByTrainer[trainer][boost].sort((a, b) => a.level.localeCompare(b.level) || a.cellId - b.cellId);
+			}
 		});
 	});
 }
@@ -338,6 +342,8 @@ function setTrainer(id) {
 	appendCategory(abilityPanelByTrainer[id], "SyncMove");
 	
 	textarea.value += "[/table][/center]";
+
+	document.getElementById("nbCells").innerText = abilityPanelByTrainer[id].nbCells;
 }
 
 function getCleanDescr(descr, level) {
