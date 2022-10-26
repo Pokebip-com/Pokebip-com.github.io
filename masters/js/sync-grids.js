@@ -24,6 +24,8 @@ let table;
 let textarea;
 let trainerSelect;
 
+let zip = new JSZip();
+
 function getCellType(ability) {
 	switch(ability.type) {
 		case 1:
@@ -49,8 +51,7 @@ function getCellType(ability) {
 			if(moveInfos[ability.moveId].group === "Sync") {
 				return abilityType[5];
 			}
-			
-			//TODO : Check if it's a sync move, then return abilityType[5]
+
 			return abilityType[4];
 	}
 }
@@ -148,7 +149,7 @@ function setPassiveNames() {
 	Object.keys(passiveSkillName).forEach( id => {
 		passiveList[id] = passiveList[id] || {};
 	
-		var re = /\[Name:PassiveSkillNameParts Idx="(\w+)" \]/gi;
+		var re = /\[Name:PassiveSkillNameParts Idx="(\w+)" ]/gi;
 		idx = re.exec(passiveSkillName[id]);
 		
 		if(idx != null) {
@@ -169,7 +170,7 @@ function setPassiveDescriptions() {
 	Object.keys(passiveSkillDescription).forEach( id => {
 		passiveList[id] = passiveList[id] || {};
 		
-		var re = /\[Name:PassiveSkillDescriptionPartsIdTag Idx="(\w+)" \]/gi;
+		var re = /\[Name:PassiveSkillDescriptionPartsIdTag Idx="(\w+)" ]/gi;
 		idx = re.exec(passiveSkillDescription[id]);
 		
 		if(idx != null) {
@@ -306,26 +307,6 @@ function populateSelect() {
 	});
 }
 
-function sortSelect() {
-	let tmpArray = [];
-	for(let i = 0; i < trainerSelect.options.length; i++) {
-		tmpArray[i] = {};
-		tmpArray[i].text = trainerSelect.options[i].text;
-		tmpArray[i].value = trainerSelect.options[i].value;
-	}
-	
-	tmpArray.sort((a, b) => a.text.localeCompare(b.text));
-	
-	while(trainerSelect.options.length > 0) {
-		trainerSelect.options[0] = null;
-	}
-	
-	for(let i = 0; i < tmpArray.length; i++) {
-		let op = new Option(tmpArray[i].text, tmpArray[i].value);
-		trainerSelect.options[i] = op;
-	}
-}
-
 function sortCells() {
 	Object.keys(abilityPanelByTrainer).forEach(trainer => {
 		Object.keys(abilityPanelByTrainer[trainer]).forEach(boost => {
@@ -336,9 +317,9 @@ function sortCells() {
 
 function getReplacedText(text, ability) {
 	text = text.replace("{val}", ability.value);
-	if(ability.passiveId != 0)
+	if(ability.passiveId !== 0)
 		text = text.replace("{passive}", passiveList[ability.passiveId].name);
-	if(ability.moveId != 0)
+	if(ability.moveId !== 0)
 		text = text.replace("{move}", moveNames[ability.moveId].replace("\n", " "));
 		
 	return text;
@@ -360,15 +341,15 @@ function setTrainer(id) {
 }
 
 function getCleanDescr(descr, level) {
-	descr = descr.replaceAll(/\[Digit:2digits \]\s%/gi, ((level+1) * 10 + "") + " %");
-	descr = descr.replaceAll(/\[Digit:1digit \]/gi, level + "");
+	descr = descr.replaceAll(/\[Digit:2digits ]\s%/gi, ((level+1) * 10 + "") + " %");
+	descr = descr.replaceAll(/\[Digit:1digit ]/gi, level + "");
 	descr = descr.replaceAll("\n", " ");
 	
-	const matches = [...descr.matchAll(/\[FR:Qty\sS=\"(\w+)\"\sP=\"(\w+)\"\s\]/gi)];
+	const matches = [...descr.matchAll(/\[FR:Qty\sS="(\w+)"\sP="(\w+)"\s]/gi)];
 	
 	if(matches.length > 0) {
 		matches.forEach(match => {
-			descr = descr.replace(/\[FR:Qty\sS=\"\w+\"\sP=\"\w+\"\s\]/gi, (level > 1 ? match[2] : match[1]));
+			descr = descr.replace(/\[FR:Qty\sS="\w+"\sP="\w+"\s]/gi, (level > 1 ? match[2] : match[1]));
 		});
 	}
 	
@@ -399,14 +380,14 @@ function appendCategory(trainer, category) {
 	
 		table.innerHTML += "<tr><td>" + amelioration
 			+ "</td><td>" + passiveDescr
-			+ "</td><td>" + (cell.energyCost == 0 ? '-' : cell.energyCost)
+			+ "</td><td>" + (cell.energyCost === 0 ? '-' : cell.energyCost)
 			+ "</td><td>" + cell.orbCost
 			+ "</td><td>" + cell.level
 			+ "</td></tr>\n";
 		
 		textarea.value += "\t[tr]\n\t[td]" + amelioration
 			+ "[/td]\n\t[td]" + passiveDescr
-			+ "[/td]\n\t[td]" + (cell.energyCost == 0 ? '-' : cell.energyCost)
+			+ "[/td]\n\t[td]" + (cell.energyCost === 0 ? '-' : cell.energyCost)
 			+ "[/td]\n\t[td]" + cell.orbCost + " [img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/duo-sphere.png[/img]"
 			+ "[/td]\n\t[td][img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/niveau-capacites-" + cell.level.charAt(0) + ".png[/img]"
 			+ "[/td]\n\t[/tr]\n"
@@ -462,4 +443,26 @@ async function init() {
 	setTrainer(trainerSelect.value);
 }
 
-init();
+init().then(() => {
+	document.getElementById("btnSave").onclick = function () {
+		let currTrainer = trainerSelect.value;
+		let dlCount = document.getElementById("dlCount");
+		let i = 1;
+
+		for(const opt of trainerSelect.options) {
+			dlCount.innerText = `Génération du fichier no ${i}/${trainerSelect.options.length}...`;
+			setTrainer(opt.value);
+			let filename = opt.text.replace(/[/\\?%*:|"<>]/g, '_') + ".txt";
+			zip.file(filename, textarea.value);
+		}
+
+		setTrainer(currTrainer);
+		dlCount.innerText = `Génération du zip...`;
+
+		zip.generateAsync({ type: 'blob' })
+			.then(function(content) {
+				saveAs(content, "Duos.zip");
+				dlCount.innerText = '';
+			});
+	};
+});
