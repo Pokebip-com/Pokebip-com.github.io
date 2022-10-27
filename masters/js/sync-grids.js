@@ -2,6 +2,7 @@ let abilityPanelByTrainer;
 let abilities;
 let abilityConditions;
 let monsterBase;
+let monsterEvolution;
 let monsterInfos;
 let monsterNames;
 let moveInfos;
@@ -9,6 +10,9 @@ let moveNames;
 let trainerBase;
 let trainerInfos;
 let trainerNames;
+let lastUpdateGrids;
+let passiveSkillDescription;
+let passiveSkillDescriptionParts;
 let passiveSkillName;
 let passiveSkillNameParts;
 let passiveList;
@@ -20,9 +24,11 @@ let bgColor;
 let condLevel;
 
 let btnCopy;
-let table;
+let statsTable;
+let gridTable;
 let textarea;
 let trainerSelect;
+let updatedGridsSpan;
 
 let zip = new JSZip();
 
@@ -103,6 +109,14 @@ function getByMonsterID(data) {
 function getByMonsterBaseID(data) {
 	return data.reduce(function (r, a) {
 		r[a.monsterBaseId] = a;
+		return r;
+	}, {});
+}
+
+function getEvolutionByTrainerId(data) {
+	return data.reduce(function (r, a) {
+		r[a.trainerId] = r[a.trainerId] || [];
+		r[a.trainerId][a.monsterIdCurrent] = a;
 		return r;
 	}, {});
 }
@@ -197,6 +211,7 @@ async function getData() {
 		abilityConditionsResponse,
 		monsterResponse,
 		monsterBaseResponse,
+		monsterEvolutionResponse,
 		moveResponse,
 		trainerResponse,
 		trainerBaseResponse,
@@ -213,6 +228,7 @@ async function getData() {
 		fetch("./data/proto/AbilityReleaseCondition.json"),
 		fetch("./data/proto/Monster.json"),
 		fetch("./data/proto/MonsterBase.json"),
+		fetch("./data/proto/MonsterEvolution.json"),
 		fetch("./data/proto/Move.json"),
 		fetch("./data/proto/Trainer.json"),
 		fetch("./data/proto/TrainerBase.json"),
@@ -250,6 +266,9 @@ async function getData() {
 	
 	const monstersBaseJSON = await monsterBaseResponse.json();
 	monsterBase = getByMonsterBaseID(monstersBaseJSON.entries);
+
+	const monsterEvolutionJSON = await monsterEvolutionResponse.json();
+	monsterEvolution = getEvolutionByTrainerId(monsterEvolutionJSON.entries);
 	
 	const trainersJSON = await trainerResponse.json();
 	trainerInfos = getByTrainerID(trainersJSON.entries);
@@ -266,12 +285,14 @@ async function getCustomJSON() {
 		abilityNameResponse,
 		abilityTypeResponse,
 		abilityTypeTitleResponse,
+		lastUpdateGridsResponse,
 		condLevelResponse,
 		bgColorResponse
 	] = await Promise.all([
 		fetch("./data/custom/ability_name.json"),
 		fetch("./data/custom/ability_type.json"),
 		fetch("./data/custom/ability_type_title.json"),
+		fetch("./data/custom/last_update_grids.json"),
 		fetch("./data/custom/cond_level.json"),
 		fetch("./data/custom/table_bgcolor.json")
 	])
@@ -280,8 +301,41 @@ async function getCustomJSON() {
 	abilityName = await abilityNameResponse.json();
 	abilityType = await abilityTypeResponse.json();
 	abilityTypeTitle = await abilityTypeTitleResponse.json();
+	lastUpdateGrids = await lastUpdateGridsResponse.json();
 	condLevel = await condLevelResponse.json();
 	bgColor = await bgColorResponse.json();
+}
+
+function checkIfNew(trainerId) {
+	let lastNumberOfCells = lastUpdateGrids[trainerId] || 0;
+
+	if(lastNumberOfCells !== abilityPanelByTrainer[trainerId].nbCells) {
+		let anchor = document.createElement('a');
+		anchor.href = '#';
+		anchor.textContent = `${getTrainerName(trainerId)} & ${getMonsterNameByTrainerId(trainerId)} (${lastNumberOfCells} -> ${abilityPanelByTrainer[trainerId].nbCells})`;
+
+		anchor.onclick = function() {
+			const url = new URL(window.location);
+			url.searchParams.set('trainerId', trainerId);
+			window.history.pushState(null, '', url.toString());
+			setTrainer(trainerId);
+		};
+
+		if(updatedGridsSpan.children.length === 0) {
+			updatedGridsSpan.innerHTML = "<b>Plateaux mis à jour :</b>";
+		}
+
+		updatedGridsSpan.appendChild(document.createElement("br"));
+		updatedGridsSpan.appendChild(anchor);
+	}
+}
+
+function getTrainerName(id) {
+	return trainerNames[trainerBase[trainerInfos[id].trainerBaseId].trainerNameId] || "Dresseur (Scottie/Bettie)";
+}
+
+function getMonsterNameByTrainerId(id) {
+	return monsterNames[monsterBase[monsterInfos[trainerInfos[id].monsterId].monsterBaseId].monsterNameId];
 }
 
 function populateSelect() {
@@ -290,16 +344,19 @@ function populateSelect() {
 	}
 	
 	let optionsArray = [];
+	updatedGridsSpan.innerText = "";
 	
 	Object.keys(abilityPanelByTrainer).forEach(trainer => {
-		let trainerName = trainerNames[trainerBase[trainerInfos[trainer].trainerBaseId].trainerNameId] || "Dresseur (Scottie/Bettie)";
-		let monsterName = monsterNames[monsterBase[monsterInfos[trainerInfos[trainer].monsterId].monsterBaseId].monsterNameId];
+		let trainerName = getTrainerName(trainer);
+		let monsterName = getMonsterNameByTrainerId(trainer);
 		
 		let option = {};
 		option.value = trainer;
 		option.text = `${trainerName} & ${monsterName}`;
 		
 		optionsArray.push(option);
+
+		checkIfNew(trainer);
 	});
 	
 	optionsArray.sort((a, b) => a.text.localeCompare(b.text));
@@ -329,21 +386,38 @@ function getReplacedText(text, ability) {
 	return text;
 }
 
-function setTrainer(id) {
-	table.innerHTML = "";
-	table.innerHTML += "<tr><th>Amélioration</th><th>Effet</th><th>Énergie requise</th><th>Duo-Sphères requises</th><th>Niveau des Capacités requis</th></tr>\n";
-	
+function setStats(id) {
+	statsTable.innerHTML = "";
+	console.log(trainerInfos[id]);
+	console.log(monsterInfos[trainerInfos[id].monsterId]);
+	console.log(monsterEvolution);
+	console.log(id);
+	console.log(monsterEvolution[id][trainerInfos[id].monsterId]);
+	console.log(monsterInfos[monsterEvolution[id][trainerInfos[id].monsterId].monsterIdNext]);
+
+}
+
+function setGrid(id) {
+	gridTable.innerHTML = "";
+	gridTable.innerHTML += "<tr><th>Amélioration</th><th>Effet</th><th>Énergie requise</th><th>Duo-Sphères requises</th><th>Niveau des Capacités requis</th></tr>\n";
+
 	textarea.value = "[center][table]\n[tr][th|width=250px]Amélioration[/th][th|width=300px]Effet[/th][th|width=100px]Énergie requise[/th][th|width=100px]Duo-Sphères requises[/th][th|width=100px]Niveau des Capacités requis[/th][/tr]\n";
-	
+
 	appendCategory(abilityPanelByTrainer[id], "StatsBoost");
 	appendCategory(abilityPanelByTrainer[id], "MovePowerAccuracyBoost");
 	appendCategory(abilityPanelByTrainer[id], "AdditionalMoveEffect");
 	appendCategory(abilityPanelByTrainer[id], "Passive");
 	appendCategory(abilityPanelByTrainer[id], "SyncMove");
-	
+
 	textarea.value += "[/table][/center]";
 
 	document.getElementById("nbCells").innerText = abilityPanelByTrainer[id].nbCells;
+}
+
+function setTrainer(id) {
+	//setStats(id);
+	setGrid(id);
+	trainerSelect.value = id;
 }
 
 function getCleanDescr(descr, level) {
@@ -368,7 +442,7 @@ function appendCategory(trainer, category) {
 		return;
 	}
 	
-	table.innerHTML += "<tr><th style='background-color:" + bgColor[category] + ";' colspan=5>" + abilityTypeTitle[category] + "</th></tr>\n";
+	gridTable.innerHTML += "<tr><th style='background-color:" + bgColor[category] + ";' colspan=5>" + abilityTypeTitle[category] + "</th></tr>\n";
 	textarea.value += "\t[tr][th|bgcolor=" + bgColor[category] + "|colspan=5]" + abilityTypeTitle[category] + "[/th][/tr]\n"
 
 	trainer[category].forEach(cell => {
@@ -384,7 +458,7 @@ function appendCategory(trainer, category) {
 			}
 		}
 	
-		table.innerHTML += "<tr><td>" + amelioration
+		gridTable.innerHTML += "<tr><td>" + amelioration
 			+ "</td><td>" + passiveDescr
 			+ "</td><td>" + (cell.energyCost === 0 ? '-' : cell.energyCost)
 			+ "</td><td>" + cell.orbCost
@@ -411,9 +485,11 @@ async function init() {
 	await getCustomJSON();
 	
 	btnCopy = document.getElementById("btnCopy");
-	table = document.getElementById("table");
+	gridTable = document.getElementById("gridTable");
+	statsTable = document.getElementById("statsTable");
 	textarea = document.getElementById("area");
 	trainerSelect = document.getElementById("trainersList");
+	updatedGridsSpan = document.getElementById("updatedGrids");
 	
 	setPassiveList();
 	setConditionsAndAbilities();
@@ -435,15 +511,7 @@ async function init() {
 	const urlTID = new URL(window.location).searchParams.get('trainerId');
 
 	if(urlTID !== null) {
-
-		let i = 0;
-		for(const opt of trainerSelect.options) {
-			if(urlTID === opt.value) {
-				trainerSelect.selectedIndex = i;
-				break;
-			}
-			i++;
-		}
+		trainerSelect.value = urlTID;
 	}
 
 	setTrainer(trainerSelect.value);
