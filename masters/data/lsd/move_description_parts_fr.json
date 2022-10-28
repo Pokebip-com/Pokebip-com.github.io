@@ -483,5 +483,11 @@
     "999456": "Augmente la puissance de l'attaque quand la zone est une [Name:ReferencedMessageTag ].",
     "999455": "Active aléatoirement de 0 à 5 effets supplémentaires parmi plusieurs.",
     "999454": "Augmente la Déf. Spé. et le taux de critiques du lanceur de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
-    "999453": "Augmente l'[Name:ReferencedMessageTag Idx=\"1\" ] du lanceur de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ]."
+    "999453": "Augmente l'[Name:ReferencedMessageTag Idx=\"1\" ] du lanceur de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ].",
+    "999452": "Baisse la Défense, la Déf. Spé. et la Vitesse du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
+    "999451": "Quand le lanceur charge l'attaque.",
+    "999450": "Augmente l'[Name:ReferencedMessageTag ] du lanceur de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
+    "999449": "Baisse l'Attaque, l'Atq. Spé. et la Vitesse de tous les Duos ennemis de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ].",
+    "999448": "Si l'Attaque du lanceur a été augmentée, augmente également son Atq. Spé. de la même proportion.",
+    "999431": "N'échoue jamais."
 }

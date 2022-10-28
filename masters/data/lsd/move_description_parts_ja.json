@@ -483,5 +483,11 @@
     "999456": "ゾーンが[Name:ReferencedMessageTag ]のときは威力があがる",
     "999455": "いろいろな追加効果の中から０～５つが発動する",
     "999454": "自分の特防と急所率を[Digit:1digit Idx=\"1\" ]段階あげる",
-    "999453": "自分の[Name:ReferencedMessageTag Idx=\"1\" ]を[Digit:1digit Idx=\"2\" ]段階あげる"
+    "999453": "自分の[Name:ReferencedMessageTag Idx=\"1\" ]を[Digit:1digit Idx=\"2\" ]段階あげる",
+    "999452": "自分の防御と特防と素早さを[Digit:1digit ]段階さげる",
+    "999451": "攻撃待機状態になったとき",
+    "999450": "自分の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階あげる",
+    "999449": "相手のバディーズ全員の攻撃と特攻と素早さを[Digit:1digit Idx=\"2\" ]段階さげる",
+    "999448": "自分の攻撃があがっているときは攻撃と同じ分だけ特攻をあげる",
+    "999431": "技が必ず命中する"
 }

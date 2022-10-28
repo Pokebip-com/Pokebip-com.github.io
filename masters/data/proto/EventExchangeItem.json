@@ -309,5 +309,16 @@
 { "itemId": "750000000342", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "610324", "trainerId": "-1", "scheduleId": "4090_4W_Event_PokemasDay_Exchange" },
 { "itemId": "750000000343", "descriptionId": 600000, "imageId": "i075_2000_01", "u4": 2, "storyQuestId": "610330", "trainerId": "-1", "scheduleId": "4090_4W_Event_Happy_Exchange" },
 { "itemId": "750000000344", "descriptionId": 600000, "imageId": "i075_2000_02", "u4": 3, "storyQuestId": "610330", "trainerId": "-1", "scheduleId": "4090_4W_Event_Happy_Exchange" },
-{ "itemId": "750000000345", "descriptionId": 600000, "imageId": "i075_2000_03", "u4": 4, "storyQuestId": "610330", "trainerId": "-1", "scheduleId": "4090_4W_Event_Happy_Exchange" }
+{ "itemId": "750000000345", "descriptionId": 600000, "imageId": "i075_2000_03", "u4": 4, "storyQuestId": "610330", "trainerId": "-1", "scheduleId": "4090_4W_Event_Happy_Exchange" },
+{ "itemId": "750000000347", "descriptionId": 600000, "imageId": "i075_0013_00", "u4": 0, "storyQuestId": "610333", "trainerId": "-1", "scheduleId": "4100_1W_Event_AKU_Exchange" },
+{ "itemId": "750000000348", "descriptionId": 600000, "imageId": "i075_0007_00", "u4": 0, "storyQuestId": "610293", "trainerId": "-1", "scheduleId": "4100_2W_Event_Equipment_Exchange" },
+{ "itemId": "750000000349", "descriptionId": 600003, "imageId": "i075_1000_01", "u4": 0, "storyQuestId": "610341", "trainerId": "-1", "scheduleId": "4100_2W_Event_N_BoxSearch" },
+{ "itemId": "750000000350", "descriptionId": 600000, "imageId": "i075_0009_00", "u4": 0, "storyQuestId": "610335", "trainerId": "-1", "scheduleId": "4100_3W_Event_AKU_Exchange" },
+{ "itemId": "750000000351", "descriptionId": 600032, "imageId": "i075_6000_05", "u4": 9, "storyQuestId": "610335", "trainerId": "-1", "scheduleId": "4100_3W_Event_AKU_Exchange" },
+{ "itemId": "750000000352", "descriptionId": 600000, "imageId": "i075_0019_00", "u4": 0, "storyQuestId": "610337", "trainerId": "-1", "scheduleId": "4100_3W_Event_Eevee_Exchange" },
+{ "itemId": "750000000353", "descriptionId": 600000, "imageId": "i075_0018_00", "u4": 0, "storyQuestId": "610342", "trainerId": "-1", "scheduleId": "4100_4W_Event_SoloBattle_Exchange" },
+{ "itemId": "750000000354", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "610338", "trainerId": "-1", "scheduleId": "4100_4W_Event_PokemasDay_Exchange" },
+{ "itemId": "750000000355", "descriptionId": 600000, "imageId": "i075_2000_01", "u4": 2, "storyQuestId": "610354", "trainerId": "-1", "scheduleId": "4100_2W_Event_Happy_Exchange" },
+{ "itemId": "750000000356", "descriptionId": 600000, "imageId": "i075_2000_02", "u4": 3, "storyQuestId": "610354", "trainerId": "-1", "scheduleId": "4100_2W_Event_Happy_Exchange" },
+{ "itemId": "750000000357", "descriptionId": 600000, "imageId": "i075_2000_03", "u4": 4, "storyQuestId": "610354", "trainerId": "-1", "scheduleId": "4100_2W_Event_Happy_Exchange" }
 ]}

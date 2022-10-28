@@ -483,5 +483,11 @@
     "999456": "Questo attacco aumenta di potenza in presenza di una [Name:ReferencedMessageTag ].",
     "999455": "Attiva da 0 a 5 effetti aggiuntivi a caso tra vari.",
     "999454": "Aumenta la Difesa Speciale e la probabilità di mandare a segno brutti colpi di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
-    "999453": "Aumenta l'[Name:ReferencedMessageTag Idx=\"1\" ] di chi la usa di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ]."
+    "999453": "Aumenta l'[Name:ReferencedMessageTag Idx=\"1\" ] di chi la usa di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
+    "999452": "Riduce la Difesa, la Difesa Speciale e la Velocità di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
+    "999451": "Quando chi la usa entra in uno stato di attesa per potere attaccare.",
+    "999450": "Aumenta l'[Name:ReferencedMessageTag ] di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
+    "999449": "Riduce l'Attacco, l'Attacco Speciale e la Velocità di tutte le Unità avversarie di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
+    "999448": "Quando l'Attacco di chi la usa viene aumentato, applica al suo Attacco Speciale lo stesso aumento.",
+    "999431": "Va sempre a segno."
 }

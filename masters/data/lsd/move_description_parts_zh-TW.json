@@ -483,5 +483,11 @@
     "999456": "當領域為[Name:ReferencedMessageTag ]時，威力會提高。",
     "999455": "從各種追加效果當中，隨機發動０～５種追加效果。",
     "999454": "提高自己的特防和擊中要害率[Digit:1digit Idx=\"1\" ]階段。",
-    "999453": "提高自己的[Name:ReferencedMessageTag Idx=\"1\" ][Digit:1digit Idx=\"2\" ]階段。"
+    "999453": "提高自己的[Name:ReferencedMessageTag Idx=\"1\" ][Digit:1digit Idx=\"2\" ]階段。",
+    "999452": "降低自己的防禦、特防和速度[Digit:1digit ]階段。",
+    "999451": "變成等待攻擊狀態時",
+    "999450": "提高自己的[Name:ReferencedMessageTag ][Digit:1digit Idx=\"1\" ]階段。",
+    "999449": "降低對手全體拍組的攻擊、特攻和速度[Digit:1digit Idx=\"2\" ]階段。",
+    "999448": "當自己的攻擊處於提高狀態時，會讓特攻也同等提高。",
+    "999431": "招式必定會命中。"
 }

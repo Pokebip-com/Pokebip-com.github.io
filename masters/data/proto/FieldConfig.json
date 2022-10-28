@@ -1,4 +1,6 @@
 {"entries": [
+{ "fieldConfigId": "battle_point_boost_quest_group_id", "value": "1000002" },
+{ "fieldConfigId": "battle_point_boost_rate", "value": "2" },
 { "fieldConfigId": "buddy_drop_boost_quest_group_id", "value": "1000002" },
 { "fieldConfigId": "buddy_drop_boost_rate", "value": "2" },
 { "fieldConfigId": "champion_battle_open_schedule.2080_champion_battle_FOREVER", "value": "1" },
@@ -7,6 +9,7 @@
 { "fieldConfigId": "champion_battle_reset_schedule.2080_champion_battle_reset_FOREVER", "value": "1" },
 { "fieldConfigId": "change_date_of_day_for_quest", "value": "21600" },
 { "fieldConfigId": "change_date_of_day_of_week", "value": "21600" },
+{ "fieldConfigId": "ex_daily_diapack_appeal_openat", "value": "1667196000" },
 { "fieldConfigId": "field_billboard_actor_distance", "value": "100000" },
 { "fieldConfigId": "field_item_heal_large_item_id", "value": "720000000200" },
 { "fieldConfigId": "field_item_heal_small_item_id", "value": "720000000100" },

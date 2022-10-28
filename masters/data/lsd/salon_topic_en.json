@@ -82,7 +82,7 @@
     "20000060": "Shalour Sables",
     "20000061": "The Zephyr Badge",
     "20000062": "Research",
-    "20000063": "Training",
+    "20000063": "Tough training",
     "20000064": "Nature",
     "20000065": "Cooking",
     "20000066": "Ferris wheels",
@@ -215,5 +215,10 @@
     "20000194": "Headphones",
     "20000195": "Wyndon",
     "20000196": "Sandstorms",
-    "20000197": "Supernatural powers"
+    "20000197": "Supernatural powers",
+    "20000198": "Jokes",
+    "20000199": "Walking",
+    "20000201": "Models",
+    "20000202": "Bianca",
+    "20000204": "Friends"
 }

@@ -285,5 +285,14 @@
 { "missionGroupId": 2409070, "scheduleId": "4090_4W_Event_Halloween2021_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 409070, "itemSetId": "414", "bannerId": 1309004, "u9": 1, "u10": 0 },
 { "missionGroupId": 2409080, "scheduleId": "4090_4W_LegendBattle_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 409080, "itemSetId": "2010056", "bannerId": 1309005, "u9": 1, "u10": 0 },
 { "missionGroupId": 2409090, "scheduleId": "4090_4W_Campaign_ActivitySupportMission", "u3": 0, "u4": 1, "u5": 0, "u6": 409090, "itemSetId": "2020155", "bannerId": 5303002, "u9": 1, "u10": 0 },
-{ "missionGroupId": 2409100, "scheduleId": "4090_4W_Event_Happy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 409100, "itemSetId": "636", "bannerId": 1210005, "u9": 1, "u10": 0 }
+{ "missionGroupId": 2409100, "scheduleId": "4090_4W_Event_Happy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 409100, "itemSetId": "636", "bannerId": 1210005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2410010, "scheduleId": "4100_1W_Event_AKU_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 410010, "itemSetId": "414", "bannerId": 1410001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2410020, "scheduleId": "4100_2W_Event_N_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 410020, "itemSetId": "414", "bannerId": 1212002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2410030, "scheduleId": "4100_2W_Event_Egg", "u3": 0, "u4": 1, "u5": 0, "u6": 410030, "itemSetId": "206118", "bannerId": 1410004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2410040, "scheduleId": "4100_2W_Campaign_ActivitySupportMission", "u3": 0, "u4": 1, "u5": 0, "u6": 410040, "itemSetId": "2020155", "bannerId": 5303002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2410050, "scheduleId": "4100_2W_LegendBattle_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 410050, "itemSetId": "2010056", "bannerId": 1208005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2410060, "scheduleId": "4100_3W_Event_AKU_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 410060, "itemSetId": "414", "bannerId": 1410005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2410070, "scheduleId": "4100_3W_Event_Eevee_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 410070, "itemSetId": "414", "bannerId": 1410007, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2410080, "scheduleId": "4100_4W_Event_SoloBattle_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 410080, "itemSetId": "414", "bannerId": 1403008, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2410090, "scheduleId": "4100_2W_Event_Happy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 410090, "itemSetId": "636", "bannerId": 1210005, "u9": 1, "u10": 0 }
 ]}

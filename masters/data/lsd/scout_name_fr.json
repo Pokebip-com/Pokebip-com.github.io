@@ -74,5 +74,7 @@
     "event_4090_3W_MasterTicket_01": "Appel Duo saisonn.\ngaranti : Iris !",
     "event_4090_3W_SuperTicket_02": "Appel Duo saisonn.\ntaux ↑ : Alistair !",
     "event_4090_3W_MasterTicket_02": "Appel Duo saisonn.\ngaranti : Alistair !",
-    "event_4090_4W_SuperTicket_01": "Appel Duo\nsaisonnier taux ↑"
+    "event_4090_4W_SuperTicket_01": "Appel Duo\nsaisonnier taux ↑",
+    "event_4100_2W_MasterTicket_01": "Appel Duo garanti :\nMatis !",
+    "event_4100_3W_MasterTicket_02": "Appel Duo garanti :\nNikolaï !"
 }

@@ -203,7 +203,7 @@
     "999736": "Consume hasta [Digit:1digit ] [ES:Qty S=\"punto\" P=\"puntos\" ] de la barra de movimientos del usuario. Cuantos más puntos consuma, más aumenta el Ataque y la Defensa del usuario (hasta [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ]).",
     "999735": "Evoluciona a Mega-Gallade. Vuelve a la normalidad tras terminar el combate.",
     "999734": "El usuario adopta una pose de ataque.",
-    "999733": "Si se usa de nuevo este movimiento, vuelve a su posición habitual y ataca.",
+    "999733": "Si se usa de nuevo este movimiento, el usuario vuelve a su posición habitual y ataca.",
     "999732": "Mientras adopta la pose, el usuario no puede realizar ninguna otra acción.",
     "999731": "Cuando está soleado, el usuario ataca al instante.",
     "999730": "Si se usa de nuevo este movimiento, el usuario vuelve a su posición habitual.",
@@ -483,5 +483,11 @@
     "999456": "La potencia de este ataque aumenta cuando la zona es [Name:ReferencedMessageTag ].",
     "999455": "Activa de 0 a 5 efectos adicionales al azar.",
     "999454": "Aumenta la Defensa Especial y la probabilidad de asestar golpes críticos del usuario en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
-    "999453": "Aumenta el [Name:ReferencedMessageTag Idx=\"1\" ] del usuario en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ]."
+    "999453": "Aumenta el [Name:ReferencedMessageTag Idx=\"1\" ] del usuario en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
+    "999452": "Reduce la Defensa, la Defensa Especial y la Velocidad del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+    "999451": "Cuando el usuario adopta una pose de ataque.",
+    "999450": "Aumenta el [Name:ReferencedMessageTag ] del usuario en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
+    "999449": "Reduce el Ataque, Ataque Especial y Velocidad de todos los compis rivales en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
+    "999448": "Si el Ataque del usuario ha sido incrementado, aumenta la misma cantidad de su Ataque Especial.",
+    "999431": "Acierta siempre."
 }

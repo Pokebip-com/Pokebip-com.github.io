@@ -9,6 +9,7 @@
 { "passiveId": 11010108, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 11010109, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 11011501, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 11012101, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 12010801, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 12020301, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 12020302, "u2": 0, "u3": 1, "type": -1 },
@@ -105,6 +106,7 @@
 { "passiveId": 17049407, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 17049408, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 17049409, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17060405, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 18041401, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 18041402, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 18041403, "u2": 0, "u3": 1, "type": -1 },
@@ -283,5 +285,6 @@
 { "passiveId": 99010901, "u2": 1, "u3": 0, "type": -1 },
 { "passiveId": 99010902, "u2": 1, "u3": 0, "type": -1 },
 { "passiveId": 99011001, "u2": 0, "u3": 0, "type": 9 },
-{ "passiveId": 99011401, "u2": 0, "u3": 1, "type": -1 }
+{ "passiveId": 99011401, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 99011701, "u2": 0, "u3": 1, "type": -1 }
 ]}

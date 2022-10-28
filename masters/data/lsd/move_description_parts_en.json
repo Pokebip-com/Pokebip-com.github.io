@@ -483,5 +483,11 @@
     "999456": "This attack’s power increases when the zone is a [Name:ReferencedMessageTag ].",
     "999455": "Activates zero to five effects from several additional effects at random.",
     "999454": "Raises the user’s Sp. Def and critical-hit rate by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
-    "999453": "Increases the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by [Digit:1digit Idx=\"2\" ] [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ]."
+    "999453": "Increases the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by [Digit:1digit Idx=\"2\" ] [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
+    "999452": "Lowers the user’s Defense, Sp. Def, and Speed by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "999451": "When the user gets ready to attack.",
+    "999450": "Increases the user’s [Name:ReferencedMessageTag ] by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "999449": "Lowers the Attack, Sp. Atk, and Speed of all opposing sync pairs by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
+    "999448": "When the user’s Attack is raised, raises the user’s Sp. Atk by the same amount.",
+    "999431": "Never misses."
 }

@@ -2,5 +2,6 @@
 { "monsterEnhancementId": "920129000000", "trainerId": "10129000000", "monsterIdCurrent": "20129000000", "monsterIdNext": "20129000002", "scheduleId": "chara_4075_0810_FOREVER", "type": "3" },
 { "monsterEnhancementId": "920133000000", "trainerId": "10133000000", "monsterIdCurrent": "20133000000", "monsterIdNext": "20133000001", "scheduleId": "event_4050_1W_Johto_Reinforcement", "type": "2" },
 { "monsterEnhancementId": "920140000000", "trainerId": "10140000000", "monsterIdCurrent": "20140000000", "monsterIdNext": "20140000001", "scheduleId": "update_3090_1W_3_FOREVER", "type": "1" },
-{ "monsterEnhancementId": "920194000000", "trainerId": "10194000000", "monsterIdCurrent": "20194000000", "monsterIdNext": "20194000001", "scheduleId": "update_4010_3W_1", "type": "2" }
+{ "monsterEnhancementId": "920194000000", "trainerId": "10194000000", "monsterIdCurrent": "20194000000", "monsterIdNext": "20194000001", "scheduleId": "update_4010_3W_1", "type": "2" },
+{ "monsterEnhancementId": "920195000000", "trainerId": "10195000000", "monsterIdCurrent": "20195000000", "monsterIdNext": "20195000001", "scheduleId": "4100_3W_Event_AKU_FOREVER", "type": "2" }
 ]}
