@@ -32,6 +32,11 @@ let updatedGridsSpan;
 
 let zip = new JSZip();
 
+const replace_nth = function(s, f, r, n) {
+	// From the given string s, find f, replace as r only on n’th occurrence
+	return s.replace(RegExp("^(?:.*?" + f + "){" + n + "}"), x => x.replace(RegExp(f + "$"), r));
+};
+
 function getCellType(ability) {
 	switch(ability.type) {
 		case 1:
@@ -424,16 +429,23 @@ function getCleanDescr(descr, level) {
 	descr = descr.replaceAll(/\[Digit:2digits ]\s%/gi, ((level+1) * 10 + "") + " %");
 	descr = descr.replaceAll(/\[Digit:1digit ]/gi, level + "");
 	descr = descr.replaceAll("\n", " ");
+
+	const qtyRegex = /\[FR:Qty\sS="(\w+)"\sP="(\w+)"\s]/gi;
+	const qtyMatches = [...descr.matchAll(qtyRegex)];
 	
-	const matches = [...descr.matchAll(/\[FR:Qty\sS="(\w+)"\sP="(\w+)"\s]/gi)];
-	
-	if(matches.length > 0) {
-		matches.forEach(match => {
-			descr = descr.replace(/\[FR:Qty\sS="\w+"\sP="\w+"\s]/gi, (level > 1 ? match[2] : match[1]));
+	if(qtyMatches.length > 0) {
+		qtyMatches.forEach(match => {
+			descr = descr.replace(qtyRegex, (level > 1 ? match[2] : match[1]));
 		});
 	}
 	
 	return descr;
+}
+
+function outlineBrackets(descr) {
+	// Met les balises restantes en gras souligné sur l'aperçu
+	return descr.replaceAll(/\[/gi, "<span style='color:yellowgreen;'><strong><u>[")
+		.replaceAll(/]/gi, "]</u></strong></span>");
 }
 
 function appendCategory(trainer, category) {
@@ -459,7 +471,7 @@ function appendCategory(trainer, category) {
 		}
 	
 		gridTable.innerHTML += "<tr><td>" + amelioration
-			+ "</td><td>" + passiveDescr
+			+ `</td><td${(passiveDescr.includes("[") || passiveDescr.includes("]")) ? " style='background-color:#f2748e;'" : ""}>` + outlineBrackets(passiveDescr)
 			+ "</td><td>" + (cell.energyCost === 0 ? '-' : cell.energyCost)
 			+ "</td><td>" + cell.orbCost
 			+ "</td><td>" + cell.level
