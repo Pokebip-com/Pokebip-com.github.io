@@ -44,6 +44,7 @@
     "235": "Resiliencia Hielo ↑",
     "241": "Resiliencia Bicho ↑",
     "243": "Resiliencia Fantasma ↑",
+    "245": "Resiliencia Siniestro ↑",
     "247": "Resiliencia Hada ↑",
     "249": "Resiliencia Fuego ↓",
     "250": "Resiliencia Agua ↓",
@@ -51,6 +52,7 @@
     "253": "Resiliencia Hielo ↓",
     "259": "Resiliencia Bicho ↓",
     "261": "Resiliencia Fantasma ↓",
+    "263": "Resiliencia Siniestro ↓",
     "265": "Resiliencia Hada ↓",
     "301": "Daño físico ↓",
     "302": "Daño especial ↓",
@@ -182,5 +184,6 @@
     "9028": "Resiliencia Hielo",
     "9034": "Resiliencia Bicho",
     "9036": "Resiliencia Fantasma",
+    "9038": "Resiliencia Siniestro",
     "9040": "Resiliencia Hada"
 }

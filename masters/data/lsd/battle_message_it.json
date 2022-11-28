@@ -77,6 +77,7 @@
     "806": "La protezione dal tipo Ghiaccio non può\naumentare di più per [Name:PokemonName ]!",
     "812": "La protezione dal tipo Coleottero non può\naumentare di più per [Name:PokemonName ]!",
     "814": "La protezione dal tipo Spettro non può aumentare\ndi più per [Name:PokemonName ]!",
+    "816": "La protezione dal tipo Buio non può aumentare\ndi più per [Name:PokemonName ]!",
     "818": "La protezione dal tipo Folletto non può aumentare\ndi più per [Name:PokemonName ]!",
     "852": "La protezione dal tipo Fuoco non può diminuire\ndi più per [Name:PokemonName ]!",
     "853": "La protezione dal tipo Acqua non può diminuire\ndi più per [Name:PokemonName ]!",
@@ -84,6 +85,7 @@
     "856": "La protezione dal tipo Ghiaccio non può diminuire\ndi più per [Name:PokemonName ]!",
     "862": "La protezione dal tipo Coleottero non può\ndiminuire di più per [Name:PokemonName ]!",
     "864": "La protezione dal tipo Spettro non può diminuire\ndi più per [Name:PokemonName ]!",
+    "866": "La protezione dal tipo Buio non può diminuire\ndi più per [Name:PokemonName ]!",
     "868": "La protezione dal tipo Folletto non può diminuire\ndi più per [Name:PokemonName ]!",
     "996": "La barra mosse si è rigenerata!",
     "1307": "[Digit:1digit ] Pokémon hanno già tutti i PS!",
@@ -149,6 +151,7 @@
     "1806": "La protezione dal tipo Ghiaccio non può\naumentare di più per [Digit:1digit ] Pokémon!",
     "1812": "La protezione dal tipo Coleottero non può\naumentare di più per [Digit:1digit ] Pokémon!",
     "1814": "La protezione dal tipo Spettro non può aumentare\ndi più per [Digit:1digit ] Pokémon!",
+    "1816": "La protezione dal tipo Buio non può aumentare\ndi più per [Digit:1digit ] Pokémon!",
     "1818": "La protezione dal tipo Folletto non può aumentare\ndi più per [Digit:1digit ] Pokémon!",
     "1852": "La protezione dal tipo Fuoco non può diminuire\ndi più per [Digit:1digit ] Pokémon!",
     "1853": "La protezione dal tipo Acqua non può diminuire\ndi più per [Digit:1digit ] Pokémon!",
@@ -156,6 +159,7 @@
     "1856": "La protezione dal tipo Ghiaccio non può diminuire\ndi più per [Digit:1digit ] Pokémon!",
     "1862": "La protezione dal tipo Coleottero non può\ndiminuire di più per [Digit:1digit ] Pokémon!",
     "1864": "La protezione dal tipo Spettro non può diminuire\ndi più per [Digit:1digit ] Pokémon!",
+    "1866": "La protezione dal tipo Buio non può diminuire\ndi più per [Digit:1digit ] Pokémon!",
     "1868": "La protezione dal tipo Folletto non può diminuire\ndi più per [Digit:1digit ] Pokémon!",
     "1996": "La barra mosse si è rigenerata!"
 }

@@ -44,6 +44,7 @@
     "235": "Eiswiderstand↑",
     "241": "Käferwiderstand↑",
     "243": "Geistwiderstand↑",
+    "245": "Unlichtwiderstand↑",
     "247": "Feenwiderstand↑",
     "249": "Feuerwiderstand↓",
     "250": "Wasserwiderstand↓",
@@ -51,6 +52,7 @@
     "253": "Eiswiderstand↓",
     "259": "Käferwiderstand↓",
     "261": "Geistwiderstand↓",
+    "263": "Unlichtwiderstand↓",
     "265": "Feenwiderstand↓",
     "301": "Physischer Schaden↓",
     "302": "Spezial-Schaden↓",
@@ -182,5 +184,6 @@
     "9028": "Eiswiderstand",
     "9034": "Käferwiderstand",
     "9036": "Geistwiderstand",
+    "9038": "Unlichtwiderstand",
     "9040": "Feenwiderstand"
 }

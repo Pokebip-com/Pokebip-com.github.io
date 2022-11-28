@@ -19,7 +19,7 @@
     "10111400000": "Lance \n(New Year's 2021)",
     "10130400000": "Serena \n(Palentine's 2021)",
     "10116400000": "Dawn \n(Palentine's 2021)",
-    "10092800000": "Iris \n(Champion)",
+    "10092800000": "Iris (Alt.)",
     "10126400000": "May \n(Spring 2021)",
     "10170400000": "Burgh \n(Spring 2021)",
     "10243400000": "Gloria \n(Summer 2021)",
@@ -81,5 +81,9 @@
     "10652680000": "Helena \n(Hex Maniac)",
     "10020100000": "Sygna Suit Hilbert",
     "10004100000": "Sygna Suit Hilda",
-    "10089100000": "Sygna Suit N"
+    "10089100000": "Sygna Suit N",
+    "10130900000": "Serena \n(Champion)",
+    "10003900000": "Calem \n(Champion)",
+    "10026400000": "Whitney \n(Holiday 2022)",
+    "10113410000": "Jasmine \n(Holiday 2022)"
 }

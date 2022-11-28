@@ -166,5 +166,13 @@
 { "itemExchangeGroupId": 2410040, "questGroupId": 610337 },
 { "itemExchangeGroupId": 2410050, "questGroupId": 610342 },
 { "itemExchangeGroupId": 2410060, "questGroupId": 610354 },
-{ "itemExchangeGroupId": 2410070, "questGroupId": 610338 }
+{ "itemExchangeGroupId": 2410070, "questGroupId": 610338 },
+{ "itemExchangeGroupId": 2411010, "questGroupId": 610343 },
+{ "itemExchangeGroupId": 2411020, "questGroupId": 610352 },
+{ "itemExchangeGroupId": 2411030, "questGroupId": 610353 },
+{ "itemExchangeGroupId": 2411040, "questGroupId": 610349 },
+{ "itemExchangeGroupId": 2411050, "questGroupId": 610346 },
+{ "itemExchangeGroupId": 2411060, "questGroupId": 610351 },
+{ "itemExchangeGroupId": 2411070, "questGroupId": 610348 },
+{ "itemExchangeGroupId": 2411080, "questGroupId": 610368 }
 ]}

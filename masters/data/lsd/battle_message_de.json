@@ -77,6 +77,7 @@
     "806": "Eiswiderstand von [Name:PokemonName ]\nkann nicht weiter steigen!",
     "812": "Käferwiderstand von [Name:PokemonName ]\nkann nicht weiter steigen!",
     "814": "Geistwiderstand von [Name:PokemonName ]\nkann nicht weiter steigen!",
+    "816": "Unlichtwiderstand von [Name:PokemonName ]\nkann nicht weiter steigen!",
     "818": "Feenwiderstand von [Name:PokemonName ]\nkann nicht weiter steigen!",
     "852": "Feuerwiderstand von [Name:PokemonName ]\nkann nicht weiter sinken!",
     "853": "Wasserwiderstand von [Name:PokemonName ]\nkann nicht weiter sinken!",
@@ -84,6 +85,7 @@
     "856": "Eiswiderstand von [Name:PokemonName ]\nkann nicht weiter sinken!",
     "862": "Käferwiderstand von [Name:PokemonName ]\nkann nicht weiter sinken!",
     "864": "Geistwiderstand von [Name:PokemonName ]\nkann nicht weiter sinken!",
+    "866": "Unlichtwiderstand von [Name:PokemonName ]\nkann nicht weiter sinken!",
     "868": "Feenwiderstand von [Name:PokemonName ]\nkann nicht weiter sinken!",
     "996": "Die Attackenleiste wurde aufgefüllt!",
     "1307": "Die KP von [Digit:1digit ] Pokémon sind schon voll!",
@@ -149,6 +151,7 @@
     "1806": "Eiswiderstand von [Digit:1digit ] Pokémon kann nicht weiter\nsteigen!",
     "1812": "Käferwiderstand von [Digit:1digit ] Pokémon kann nicht weiter\nsteigen!",
     "1814": "Geistwiderstand von [Digit:1digit ] Pokémon kann nicht weiter\nsteigen!",
+    "1816": "Unlichtwiderstand von [Digit:1digit ] Pokémon kann nicht\nweiter steigen!",
     "1818": "Feenwiderstand von [Digit:1digit ] Pokémon kann nicht weiter\nsteigen!",
     "1852": "Feuerwiderstand von [Digit:1digit ] Pokémon kann nicht weiter\nsinken!",
     "1853": "Wasserwiderstand von [Digit:1digit ] Pokémon kann nicht\nweiter sinken!",
@@ -156,6 +159,7 @@
     "1856": "Eiswiderstand von [Digit:1digit ] Pokémon kann nicht weiter\nsinken!",
     "1862": "Käferwiderstand von [Digit:1digit ] Pokémon kann nicht weiter\nsinken!",
     "1864": "Geistwiderstand von [Digit:1digit ] Pokémon kann nicht weiter\nsinken!",
+    "1866": "Unlichtwiderstand von [Digit:1digit ] Pokémon kann nicht\nweiter sinken!",
     "1868": "Feenwiderstand von [Digit:1digit ] Pokémon kann nicht weiter\nsinken!",
     "1996": "Die Attackenleiste wurde aufgefüllt!"
 }
