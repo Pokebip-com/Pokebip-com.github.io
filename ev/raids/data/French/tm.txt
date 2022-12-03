@@ -1,0 +1,171 @@
+TM001	Bélier
+TM002	Charme
+TM003	Croco Larme
+TM004	Hâte
+TM005	Coud’Boue
+TM006	Grimace
+TM007	Abri
+TM008	Crocs Feu
+TM009	Crocs Éclair
+TM010	Crocs Givre
+TM011	Vibraqua
+TM012	Balayage
+TM013	Bombe Acide
+TM014	Acrobatie
+TM015	Survinsecte
+TM016	Rafale Psy
+TM017	Onde Folie
+TM018	Larcin
+TM019	Voix Enjôleuse
+TM020	Désherbaffe
+TM021	Bond
+TM022	Douche Froide
+TM023	Rayon Chargé
+TM024	Danse Flammes
+TM025	Façade
+TM026	Queue-Poison
+TM027	Aéropique
+TM028	Piétisol
+TM029	Châtiment
+TM030	Aboiement
+TM031	Griffe Acier
+TM032	Météores
+TM033	Feuille Magik
+TM034	Vent Glace
+TM035	Tir de Boue
+TM036	Tomberoche
+TM037	Vampibaiser
+TM038	Nitrocharge
+TM039	Balayette
+TM040	Tranch’Air
+TM041	Force Ajoutée
+TM042	Ombre Nocturne
+TM043	Dégommage
+TM044	Draco-Queue
+TM045	Choc Venin
+TM046	Avalanche
+TM047	Ténacité
+TM048	Change-Éclair
+TM049	Zénith
+TM050	Danse Pluie
+TM051	Tempête de Sable
+TM052	Chute de Neige
+TM053	Estocorne
+TM054	Choc Psy
+TM055	Tunnel
+TM056	Balle Graine
+TM057	Faux-Chage
+TM058	Casse-Brique
+TM059	Psykoud’Boul
+TM060	Demi-Tour
+TM061	Griffe Ombre
+TM062	Tricherie
+TM063	Psycho-Croc
+TM064	Gonflette
+TM065	Lame d’Air
+TM066	Plaquage
+TM067	Poing Feu
+TM068	Poing Éclair
+TM069	Poing Glace
+TM070	Blabla Dodo
+TM071	Canon Graine
+TM072	Boule Élek
+TM073	Vampi-Poing
+TM074	Protection
+TM075	Mur Lumière
+TM076	Boule Roc
+TM077	Cascade
+TM078	Draco-Griffe
+TM079	Éclat Magique
+TM080	Métronome
+TM081	Nœud Herbe
+TM082	Cage Éclair
+TM083	Direct Toxik
+TM084	Trépignement
+TM085	Repos
+TM086	Éboulement
+TM087	Provoc
+TM088	Danse Lames
+TM089	Big Splash
+TM090	Picots
+TM091	Pics Toxik
+TM092	Possessif
+TM093	Luminocanon
+TM094	Vibrobscur
+TM095	Vampirisme
+TM096	Ondes Étranges
+TM097	Vol
+TM098	Échange
+TM099	Tête de Fer
+TM100	Danse Draco
+TM101	Rayon Gemme
+TM102	Détricanon
+TM103	Clonage
+TM104	Mur de Fer
+TM105	Plaie Croix
+TM106	Tunnelier
+TM107	Feu Follet
+TM108	Mâchouille
+TM109	Tour de Magie
+TM110	Aqua-Brèche
+TM111	Giga-Sangsue
+TM112	Aurasphère
+TM113	Vent Arrière
+TM114	Ball’Ombre
+TM115	Draco-Choc
+TM116	Piège de Roc
+TM117	Mégaphone
+TM118	Canicule
+TM119	Éco-Sphère
+TM120	Psyko
+TM121	Tacle Lourd
+TM122	Encore
+TM123	Surf
+TM124	Cryo-Pirouette
+TM125	Lance-Flammes
+TM126	Tonnerre
+TM127	Câlinerie
+TM128	Amnésie
+TM129	Plénitude
+TM130	Coup d’Main
+TM131	Boule Pollen
+TM132	Relais
+TM133	Telluriforce
+TM134	Contre
+TM135	Laser Glace
+TM136	Champ Électrifié
+TM137	Champ Herbu
+TM138	Champ Psychique
+TM139	Champ Brumeux
+TM140	Machination
+TM141	Déflagration
+TM142	Hydrocanon
+TM143	Blizzard
+TM144	Aire de Feu
+TM145	Aire d’Eau
+TM146	Aire d’Herbe
+TM147	Éclair Fou
+TM148	Bombe Beurk
+TM149	Séisme
+TM150	Lame de Roc
+TM151	Hantise
+TM152	Giga Impact
+TM153	Rafale Feu
+TM154	Hydroblast
+TM155	Végé-Attaque
+TM156	Colère
+TM157	Surchauffe
+TM158	Exploforce
+TM159	Tempête Verte
+TM160	Vent Violent
+TM161	Distorsion
+TM162	Bourdon
+TM163	Ultralaser
+TM164	Rapace
+TM165	Boutefeu
+TM166	Fatal-Foudre
+TM167	Close Combat
+TM168	Lance-Soleil
+TM169	Draco-Météore
+TM170	Métalaser
+TM171	Téra Explosion
