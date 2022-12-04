@@ -89,18 +89,9 @@ async function getData() {
 	resourceNames = itemNames.slice(firstResourceId, lastResourceId);
 }
 
-async function getEventDirectories() {/*
-	const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents' + eventsPath);
-	const dataDir = await response.json();*/
-
-	dataDir = [
-		{
-			"name" : "2022.11.25-Evoli"
-		},
-		{
-			"name" : "2022.12.02-Dracaufeu"
-		}
-	];
+async function getEventDirectories() {
+	const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents/ev/raids' + eventsPath.substring(1));
+	const dataDir = await response.json();
 
 	dataDir.sort((a, b) => b.name.localeCompare(a.name))
 
