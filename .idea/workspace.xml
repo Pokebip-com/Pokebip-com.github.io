@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2316eb72-76f5-499e-8335-d1c912f9b201" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ev/raids/data/custom/form-to-sprite.json" beforeDir="false" afterPath="$PROJECT_DIR$/ev/raids/data/custom/form-to-sprite.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ev/raids/data/events/2022.11.18-Delivery/bonus.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ev/raids/data/events/2022.11.18-Delivery/drop.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ev/raids/data/events/2022.11.18-Delivery/enc.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ev/raids/js/raids.js" beforeDir="false" afterPath="$PROJECT_DIR$/ev/raids/js/raids.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ev/raids/raids.html" beforeDir="false" afterPath="$PROJECT_DIR$/ev/raids/raids.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
       <workItem from="1669612142705" duration="646000" />
       <workItem from="1670102852765" duration="7030000" />
       <workItem from="1670155099474" duration="26000000" />
-      <workItem from="1670273736302" duration="13730000" />
+      <workItem from="1670273736302" duration="14768000" />
     </task>
     <servers />
   </component>

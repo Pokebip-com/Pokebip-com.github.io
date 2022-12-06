@@ -119,6 +119,7 @@ async function getStandardDirectories() {
 	else {
 		const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents/ev/raids' + standardPath.substring(1));
 		dataDir = await response.json();
+		dataDir = dataDir.filter(entry => entry.type === "dir");
 	}
 
 	dataDir.sort((a, b) => a.name.localeCompare(b.name))
@@ -154,6 +155,7 @@ async function getEventDirectories() {
 	else {
 		const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents/ev/raids' + eventsPath.substring(1));
 		dataDir = await response.json();
+		dataDir = dataDir.filter(entry => entry.type === "dir");
 	}
 
 	dataDir.sort((a, b) => b.name.localeCompare(a.name))
