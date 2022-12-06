@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2316eb72-76f5-499e-8335-d1c912f9b201" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ev/raids/data/custom/form-to-sprite.json" beforeDir="false" afterPath="$PROJECT_DIR$/ev/raids/data/custom/form-to-sprite.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ev/raids/js/raids.js" beforeDir="false" afterPath="$PROJECT_DIR$/ev/raids/js/raids.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ev/raids/raids.html" beforeDir="false" afterPath="$PROJECT_DIR$/ev/raids/raids.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +19,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Gdn1cb0nehD8DoHVEJUMtUy6cR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,16 +31,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Documents/dev/gh-pages/Pokebip-com.github.io/ev/raids/data/French",
+    "last_opened_file_path": "D:/Documents/dev/gh-pages/Pokebip-com.github.io/ev/raids/data/standard/6",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Documents\dev\gh-pages\Pokebip-com.github.io\ev\raids\data\French" />
-      <recent name="D:\Documents\dev\gh-pages\Pokebip-com.github.io\ev\raids\data" />
-      <recent name="D:\Documents\dev\gh-pages\Pokebip-com.github.io\ev" />
+      <recent name="D:\Documents\dev\gh-pages\Pokebip-com.github.io\ev\raids\data\standard\6" />
+      <recent name="D:\Documents\dev\gh-pages\Pokebip-com.github.io\ev\raids\data\standard\5" />
+      <recent name="D:\Documents\dev\gh-pages\Pokebip-com.github.io\ev\raids\data\standard\4" />
+      <recent name="D:\Documents\dev\gh-pages\Pokebip-com.github.io\ev\raids\data\standard\3" />
+      <recent name="D:\Documents\dev\gh-pages\Pokebip-com.github.io\ev\raids\data\standard\2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Documents\dev\gh-pages\Pokebip-com.github.io\ev\raids\data\events" />
@@ -56,7 +64,8 @@
       <workItem from="1668519038384" duration="14000" />
       <workItem from="1669612142705" duration="646000" />
       <workItem from="1670102852765" duration="7030000" />
-      <workItem from="1670155099474" duration="25495000" />
+      <workItem from="1670155099474" duration="26000000" />
+      <workItem from="1670273736302" duration="13730000" />
     </task>
     <servers />
   </component>

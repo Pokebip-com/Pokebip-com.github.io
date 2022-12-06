@@ -5,17 +5,24 @@
 		<link rel="stylesheet" href="../../css/pokebip.css">
 		<script src="js/dist/FileSaver.min.js"></script>
 		<script src="js/dist/jszip.min.js"></script>
-	<body>
+	<body style="padding:10px;">
 		<select id="raidsList"></select>
 		<textarea id="area"></textarea>
 		<button id="btnCopy">Copier le code</button>
 		<button id="btnSave">Télécharger les données en ZIP</button>
 		<span id="dlCount"></span>
 		<br /><br />
-		<span id="pokemonList"></span>
+		<div>
+			<ul class="listh-bipcode">
+				<li class="listh-no-style">
+					<span id="pokemonList"></span>
+				</li>
 
-		<br />
-		<table id="raidTable" class="bipcode" style="text-align:center;"></table>
+				<li class="listh-no-style">
+					<table id="raidTable" class="bipcode" style="text-align:center;"></table>
+				</li>
+			</ul>
+		</div>
 		
 		<script src="js/raids.js"></script>
 	</body>

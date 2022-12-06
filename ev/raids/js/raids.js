@@ -1,10 +1,9 @@
 const dataPath = "./data";
 const eventsPath = dataPath + '/events';
+const standardPath = dataPath + '/standard';
 const language = "French";
-let eventsList;
 
 let encData;
-let priorityData;
 let dropData;
 let bonusDropData
 
@@ -24,6 +23,9 @@ let itemIdToBipname;
 const normalTeraShardId = 1862;
 const firstResourceId = 1956;
 const lastResourceId = 2159;
+
+const raidTypes = Object.freeze({"STANDARD" : 1, "EVENT" : 2});
+let selectedType;
 
 let btnCopy;
 let raidTable;
@@ -89,18 +91,102 @@ async function getData() {
 	resourceNames = itemNames.slice(firstResourceId, lastResourceId);
 }
 
+async function getStandardDirectories() {
+	let dataDir;
+
+	if(location.hostname === "") {
+		dataDir = [
+			{
+				"name": "1-Etoile"
+			},
+			{
+				"name": "2-Etoiles"
+			},
+			{
+				"name": "3-Etoiles"
+			},
+			{
+				"name": "4-Etoiles"
+			},
+			{
+				"name": "5-Etoiles"
+			},
+			{
+				"name": "6-Etoiles"
+			}
+		];
+	}
+	else {
+		const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents/ev/raids' + standardPath.substring(1));
+		dataDir = await response.json();
+	}
+
+	dataDir.sort((a, b) => a.name.localeCompare(b.name))
+
+	let optGroup = document.createElement("OPTGROUP");
+
+	optGroup.label = "Standard";
+	optGroup.id = raidTypes.STANDARD;
+
+	for(let dir of dataDir) {
+		let stars = dir.name.charAt(0);
+		let opt = new Option(`Raids ${stars}★`, dir.name);
+		opt.setAttribute("data-stars", stars);
+		optGroup.appendChild(opt);
+	}
+
+	raidsListSelect.add(optGroup);
+}
+
 async function getEventDirectories() {
-	const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents/ev/raids' + eventsPath.substring(1));
-	const dataDir = await response.json();
+	let dataDir;
+
+	if(location.hostname === "") {
+		dataDir = [
+			{
+				"name": "2022.11.25-Evoli"
+			},
+			{
+				"name": "2022.12.02-Dracaufeu"
+			}
+		];
+	}
+	else {
+		const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents/ev/raids' + eventsPath.substring(1));
+		dataDir = await response.json();
+	}
 
 	dataDir.sort((a, b) => b.name.localeCompare(a.name))
 
-	eventsList = [];
+	let optGroup = document.createElement("OPTGROUP");
+
+	optGroup.label = "Événements";
+	optGroup.id = raidTypes.EVENT;
 
 	for(let dir of dataDir) {
-		eventsList.push(dir.name);
-		raidsListSelect.add(new Option(dir.name, dir.name));
+		optGroup.appendChild(new Option(dir.name, dir.name))
 	}
+
+	raidsListSelect.add(optGroup);
+}
+
+async function getStandardData(id) {
+	const path = standardPath + '/' + id + '/';
+
+	const [
+		encDataResponse,
+		dropDataResponse,
+		bonusDropDataResponse
+	] = await Promise.all([
+		fetch(path + "enc.json"),
+		fetch(standardPath + '/drop.json'),
+		fetch(standardPath + '/bonus.json')
+	])
+		.catch(error => console.log(error + "\n ID = " + id));
+
+	encData = (await encDataResponse.json()).Table;
+	dropData = (await dropDataResponse.json()).Table;
+	bonusDropData = (await bonusDropDataResponse.json()).Table;
 }
 
 async function getEventData(event) {
@@ -108,31 +194,42 @@ async function getEventData(event) {
 
 	const [
 		encDataResponse,
-		priorityDataResponse,
 		dropDataResponse,
 		bonusDropDataResponse
 	] = await Promise.all([
 		fetch(eventPath + "enc.json"),
-		fetch(eventPath + "priority.json"),
 		fetch(eventPath + "drop.json"),
 		fetch(eventPath + "bonus.json"),
 	])
 		.catch(error => console.log(error));
 
 	encData = (await encDataResponse.json()).Table;
-	priorityData = (await priorityDataResponse.json()).Table;
 	dropData = (await dropDataResponse.json()).Table;
 	bonusDropData = (await bonusDropDataResponse.json()).Table;
 }
 
-function setEvent(id, entry = null) {
-	getEventData(id).then(() => {
-		raidsListSelect.value = id;
+async function getRaidData(id) {
+	selectedType = document.querySelector('#raidsList option:checked').parentElement.id;
 
+	if(selectedType == raidTypes.EVENT) {
+		await getEventData(id);
+	}
+	else if(selectedType == raidTypes.STANDARD) {
+		await getStandardData(id);
+	}
+	else {
+		console.error("Unknown raid type selected...");
+	}
+}
+
+function setEvent(id, entry = null, setUrl = true) {
+	raidsListSelect.value = id;
+
+	getRaidData(id).then(() => {
 		setAnchors(id);
 		setPokemon(entry);
-
-		setUrlEventID(id, entry);
+		if(setUrl)
+			setUrlEventID(id, entry);
 	});
 }
 
@@ -140,20 +237,34 @@ function setAnchors() {
 	pokemonListSpan.innerHTML = "<b>Liste des Raids de l'événement :</b>";
 	let i = 0;
 
-	encData.filter(enc => enc.RaidEnemyInfo.Rate > 0).forEach(enc => {
-		let anchor = document.createElement('a');
-		anchor.href = '#';
-		anchor.textContent = `${specieNames[enc.RaidEnemyInfo.BossPokePara.DevId]} ${enc.RaidEnemyInfo.Difficulty}★`;
+	encData.filter(enc => enc.RaidEnemyInfo.Rate > 0)
+		.sort((a, b) => {
+			if(a.RaidEnemyInfo.BossPokePara.DevId > b.RaidEnemyInfo.BossPokePara.DevId) return 1;
+			if(a.RaidEnemyInfo.BossPokePara.DevId < b.RaidEnemyInfo.BossPokePara.DevId) return -1;
 
-		anchor.onclick = function() {
-			setUrlEventID(raidsListSelect.value, enc.RaidEnemyInfo.No);
-			setPokemon(enc.RaidEnemyInfo.No);
-		};
+			if(a.RaidEnemyInfo.BossPokePara.FormId > b.RaidEnemyInfo.BossPokePara.FormId) return 1;
+			if(a.RaidEnemyInfo.BossPokePara.FormId < b.RaidEnemyInfo.BossPokePara.FormId) return -1;
 
-		pokemonListSpan.appendChild(document.createElement('br'));
-		pokemonListSpan.appendChild(anchor);
+			if(a.RaidEnemyInfo.Difficulty > b.RaidEnemyInfo.Difficulty) return 1;
+			if(a.RaidEnemyInfo.Difficulty < b.RaidEnemyInfo.Difficulty) return -1;
+		})
+		.forEach(enc => {
+			let anchor = document.createElement('a');
+			let difficulty = enc.RaidEnemyInfo.Difficulty || raidsListSelect.options[raidsListSelect.selectedIndex].getAttribute("data-stars");
+			let formText = enc.RaidEnemyInfo.BossPokePara.FormId > 0 ? `-${enc.RaidEnemyInfo.BossPokePara.FormId}` : "";
+			anchor.href = '#';
+			anchor.textContent = `${specieNames[enc.RaidEnemyInfo.BossPokePara.DevId]}${formText} ${difficulty}★`;
+			anchor.setAttribute("data-raid-id", enc.RaidEnemyInfo.No);
 
-		i++;
+			anchor.onclick = function() {
+				setUrlEventID(raidsListSelect.value, enc.RaidEnemyInfo.No);
+				setPokemon(enc.RaidEnemyInfo.No);
+			};
+
+			pokemonListSpan.appendChild(document.createElement('br'));
+			pokemonListSpan.appendChild(anchor);
+
+			i++;
 	});
 }
 
@@ -168,14 +279,15 @@ function setPokemon(id) {
 	}
 
 	raidEnemy = raidEnemy.RaidEnemyInfo;
+	let difficulty = raidEnemy.Difficulty || raidsListSelect.options[raidsListSelect.selectedIndex].getAttribute("data-stars");
 
 	textarea.value = "[center][table]\n";
 
 	let html = "";
 
 	// TH Nom du Pokémon
-	html = `<thead><tr><th colspan="4">${specieNames[raidEnemy.BossPokePara.DevId]} ${raidEnemy.Difficulty}★</th></tr></thead>`;
-	textarea.value += `\t[tr]\n\t\t[th|colspan=4]${specieNames[raidEnemy.BossPokePara.DevId]} ${raidEnemy.Difficulty}★[/th]\n\t[/tr]\n`;
+	html = `<thead><tr><th colspan="4">${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★</th></tr></thead>`;
+	textarea.value += `\t[tr]\n\t\t[th|colspan=4]${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★[/th]\n\t[/tr]\n`;
 
 	let imgName = formToSprite[raidEnemy.BossPokePara.DevId + "-" + raidEnemy.BossPokePara.FormId] || raidEnemy.BossPokePara.DevId;
 
@@ -196,26 +308,26 @@ function setPokemon(id) {
 	}
 
 	// TD TerraType
-	let terraTypeID = raidEnemy.BossPokePara.GemType - 1;
+	let terraTypeID = raidEnemy.BossPokePara.GemType;
 
 	html += `<tr><td colspan="4">`;
 	textarea.value += `\t[tr]\n\t\t[td|colspan=4]`;
 
-	let teraType = "";
+	let teraType = [];
 	let isText = false;
 
 	switch(terraTypeID) {
-		case -1:
-			console.log("Terra Type is default ???");
+		case 0:
+			teraType = getPokemonTypeNames(raidEnemy.BossPokePara.DevId, raidEnemy.BossPokePara.FormId);
 			break;
 
-		case 0:
-			teraType = "Aléatoire";
+		case 1:
+			teraType.push("Aléatoire");
 			isText = true;
 			break;
 
 		default:
-			teraType = getTypeName(terraTypeID - 1);
+			teraType.push(getTypeName(terraTypeID - 2));
 			break;
 	}
 
@@ -227,8 +339,10 @@ function setPokemon(id) {
 		textarea.value += teraType;
 	}
 	else {
-		html += `<img src="../../images/types/tera-${teraType}.png" />`;
-		textarea.value += `[type=tera-${teraType}|9G]`;
+		for(let i = 0; i < teraType.length; i++) {
+			html += `${i > 0 ? " ou " : ""}<img src="../../images/types/tera-${teraType[i]}.png" />`;
+			textarea.value += `${i > 0 ? " ou " : ""}[type=tera-${teraType[i]}|9G]`;
+		}
 	}
 
 	html += `</td></tr>`;
@@ -351,8 +465,8 @@ function getFixedDrops(tableId, teraTypeId, pokemonId) {
 		return [null, null];
 	}
 
-	const teraShardId = teraTypeId === 0 ? normalTeraShardId : normalTeraShardId + teraTypeId - 2;
-	const teraShardName = teraTypeId === 0 ? "Téra-Éclat du type" : itemNames[teraShardId];
+	const teraShardId = teraTypeId <= 1 ? normalTeraShardId : normalTeraShardId + teraTypeId - 3;
+	const teraShardName = teraTypeId <= 1 ? "Téra-Éclat du type" : itemNames[teraShardId];
 	const baseMonName = getBaseMonName(pokemonId);
 	const resourceIndex = firstResourceId + resourceNames.findIndex(res => res.includes(baseMonName));
 	let html = "";
@@ -425,12 +539,20 @@ function getBonusDrops(tableId, teraTypeId, pokemonId) {
 		return [null, null];
 	}
 
-	const teraShardId = teraTypeId === 0 ? normalTeraShardId : normalTeraShardId + teraTypeId - 2;
-	const teraShardName = teraTypeId === 0 ? "Téra-Éclat du type" : itemNames[teraShardId];
+	let divider = 1;
+
+	const teraShardId = teraTypeId <= 1 ? normalTeraShardId : normalTeraShardId + teraTypeId - 3;
+	const teraShardName = teraTypeId <= 1 ? "Téra-Éclat du type" : itemNames[teraShardId];
 	const baseMonName = getBaseMonName(pokemonId);
 	const resourceIndex = firstResourceId + resourceNames.findIndex(res => res.includes(baseMonName));
 	let html = "";
 	let bipcode = "";
+
+	Object.keys(table).filter(k => k.startsWith("RewardItem")).forEach(key => {
+		while(table[key].Rate/divider > 100) {
+			divider *= 10;
+		}
+	})
 
 	for(let i = 0; i < 30; i++) {
 		let reward = table["RewardItem" + i.toString().padStart(2, '0')];
@@ -463,8 +585,8 @@ function getBonusDrops(tableId, teraTypeId, pokemonId) {
 
 		}
 
-		html += `</td><td>${reward.Rate}%</td></tr>`;
-		bipcode += `[/td]\n\t\t[td]${reward.Rate}%[/td]\n\t[/tr]\n`;
+		html += `</td><td>${reward.Rate/divider}%</td></tr>`;
+		bipcode += `[/td]\n\t\t[td]${reward.Rate/divider}%[/td]\n\t[/tr]\n`;
 	}
 
 	return [html, bipcode];
@@ -489,6 +611,12 @@ function getPokemonAbilityName(DevId, FormId, Tokusei) {
 	return abilityNames[pokemon["Ability" + Tokusei]];
 }
 
+function getPokemonTypeNames(DevId, FormId) {
+	let pokemon = personalArray.find(p => p.Info.DexIndexNational === DevId && p.Info.Form === FormId);
+
+	return [... new Set([getTypeName(pokemon.Type1), getTypeName(pokemon.Type2)].filter(t => t !== ""))];
+}
+
 function getTypeName(typeId) {
 	return typeNames[typeId].toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
 }
@@ -509,6 +637,7 @@ async function init() {
 	pokemonListSpan = document.getElementById("pokemonList");
 
 	await getData();
+	await getStandardDirectories();
 	await getEventDirectories();
 
 	raidsListSelect.onchange = function() {
@@ -531,28 +660,56 @@ async function init() {
 }
 
 init().then(() => {
-	document.getElementById("btnSave").onclick = function () {
+	document.getElementById("btnSave").onclick = async function () {
 		let currEvent = raidsListSelect.value;
 		let dlCount = document.getElementById("dlCount");
-		let i = 1;
+		let standard = zip.folder("standard");
+		let events = zip.folder("events");
+
+		let indiv = zip.folder("_indiv");
+		let indivStandard = indiv.folder("standard");
+		let indivEvents = indiv.folder("events");
 
 		for(const opt of raidsListSelect.options) {
-			dlCount.innerText = `Génération du fichier no ${i}/${raidsListSelect.options.length}...`;
-			setEvent(opt.value);
-			let filename = opt.text.replace(/[/\\?%*:|"<>]/g, '_') + ".txt";
+			dlCount.innerText = `Génération du zip...`;
 
+			raidsListSelect.value = opt.value;
+			await getRaidData(opt.value);
+			setAnchors(opt.value);
+
+			let filename = opt.text.replace(/[/\\?%*:|"<>]/g, '_') + ".txt";
 			let content = "[listh]\n";
 
-			encData.filter(enc => enc.RaidEnemyInfo.Rate > 0).forEach(enc => {
-				setPokemon(enc.RaidEnemyInfo.No);
-				setUrlEventID(opt.value, enc.RaidEnemyInfo.No);
+			for (const raid of encData.filter(enc => enc.RaidEnemyInfo.Rate > 0)) {
+				await setPokemon(raid.RaidEnemyInfo.No);
+
+				let raidName = document.querySelector(`[data-raid-id="${raid.RaidEnemyInfo.No}"]`).innerText;
+				let indivFilename = raid.RaidEnemyInfo.No + "-" + raidName.replace(/[/\\?%*:|"<>]/g, '_') + ".txt";
+
+				if(selectedType == raidTypes.STANDARD) {
+					indivStandard.file(opt.value + "/" + indivFilename, textarea.value);
+				}
+				else if(selectedType == raidTypes.EVENT) {
+					indivEvents.file(opt.value + "/" + indivFilename, textarea.value);
+				}
+				else {
+					indiv.file(opt.value + "/" + indivFilename, textarea.value);
+				}
 
 				content += `[item|nostyle]\n${textarea.value}\n[/item]\n`;
-			});
+			}
 
 			content += "[/listh]";
 
-			zip.file(filename, content);
+			if(selectedType == raidTypes.STANDARD) {
+				standard.file(filename, content);
+			}
+			else if(selectedType == raidTypes.EVENT) {
+				events.file(filename, content);
+			}
+			else {
+				zip.file(filename, content);
+			}
 		}
 
 		setEvent(currEvent);
