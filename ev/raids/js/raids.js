@@ -22,7 +22,7 @@ let itemIdToBipname;
 
 const normalTeraShardId = 1862;
 const firstResourceId = 1956;
-const lastResourceId = 2159;
+const lastResourceId = 2160;
 
 const raidTypes = Object.freeze({"STANDARD" : 1, "EVENT" : 2});
 let selectedType;
@@ -92,35 +92,10 @@ async function getData() {
 }
 
 async function getStandardDirectories() {
-	let dataDir;
+	const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents/ev/raids' + standardPath.substring(1));
 
-	if(location.hostname === "") {
-		dataDir = [
-			{
-				"name": "1-Etoile"
-			},
-			{
-				"name": "2-Etoiles"
-			},
-			{
-				"name": "3-Etoiles"
-			},
-			{
-				"name": "4-Etoiles"
-			},
-			{
-				"name": "5-Etoiles"
-			},
-			{
-				"name": "6-Etoiles"
-			}
-		];
-	}
-	else {
-		const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents/ev/raids' + standardPath.substring(1));
-		dataDir = await response.json();
-		dataDir = dataDir.filter(entry => entry.type === "dir");
-	}
+	let dataDir = await response.json();
+	dataDir = dataDir.filter(entry => entry.type === "dir");
 
 	dataDir.sort((a, b) => a.name.localeCompare(b.name))
 
@@ -140,23 +115,10 @@ async function getStandardDirectories() {
 }
 
 async function getEventDirectories() {
-	let dataDir;
+	const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents/ev/raids' + eventsPath.substring(1));
 
-	if(location.hostname === "") {
-		dataDir = [
-			{
-				"name": "2022.11.25-Evoli"
-			},
-			{
-				"name": "2022.12.02-Dracaufeu"
-			}
-		];
-	}
-	else {
-		const response = await fetch('https://api.github.com/repos/pokebip-com/Pokebip-com.github.io/contents/ev/raids' + eventsPath.substring(1));
-		dataDir = await response.json();
-		dataDir = dataDir.filter(entry => entry.type === "dir");
-	}
+	let dataDir = await response.json();
+	dataDir = dataDir.filter(entry => entry.type === "dir");
 
 	dataDir.sort((a, b) => b.name.localeCompare(a.name))
 
@@ -241,8 +203,11 @@ function setAnchors() {
 
 	encData.filter(enc => enc.RaidEnemyInfo.Rate > 0)
 		.sort((a, b) => {
-			if(a.RaidEnemyInfo.BossPokePara.DevId > b.RaidEnemyInfo.BossPokePara.DevId) return 1;
-			if(a.RaidEnemyInfo.BossPokePara.DevId < b.RaidEnemyInfo.BossPokePara.DevId) return -1;
+			let speciesCopyA = getSpeciesCopyFromDevId(a.RaidEnemyInfo.BossPokePara.DevId, a.RaidEnemyInfo.BossPokePara.FormId);
+			let speciesCopyB = getSpeciesCopyFromDevId(b.RaidEnemyInfo.BossPokePara.DevId, b.RaidEnemyInfo.BossPokePara.FormId);
+
+			if(speciesCopyA > speciesCopyB) return 1;
+			if(speciesCopyA < speciesCopyB) return -1;
 
 			if(a.RaidEnemyInfo.BossPokePara.FormId > b.RaidEnemyInfo.BossPokePara.FormId) return 1;
 			if(a.RaidEnemyInfo.BossPokePara.FormId < b.RaidEnemyInfo.BossPokePara.FormId) return -1;
@@ -286,12 +251,22 @@ function setPokemon(id) {
 	textarea.value = "[center][table]\n";
 
 	let html = "";
+	let versionNo = raidEnemy.RomVer;
 
 	// TH Nom du Pokémon
-	html = `<thead><tr><th colspan="4">${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★</th></tr></thead>`;
-	textarea.value += `\t[tr]\n\t\t[th|colspan=4]${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★[/th]\n\t[/tr]\n`;
+	html = `<thead><tr><th colspan="4">${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★`;
+	textarea.value += `\t[tr]\n\t\t[th|colspan=4]${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★`;
 
-	let imgName = formToSprite[raidEnemy.BossPokePara.DevId + "-" + raidEnemy.BossPokePara.FormId] || raidEnemy.BossPokePara.DevId;
+	if(versionNo !== 0) {
+		html += ` <img src="../../images/ev-emblems/icon_emblem_${versionNo}.png" width="30px" height="30px" />`;
+		textarea.value += ` [img]/pages/jeuxvideo/pokemon-ecarlate-violet/images/logos/icon_emblem_${versionNo}.png[/img]`;
+	}
+
+	html += `</th></tr></thead>`;
+	textarea.value += `[/th]\n\t[/tr]\n`;
+
+	let speciesCopy = getSpeciesCopyFromDevId(raidEnemy.BossPokePara.DevId, raidEnemy.BossPokePara.FormId);
+	let imgName = formToSprite[speciesCopy + "-" + raidEnemy.BossPokePara.FormId] || speciesCopy;
 
 	// TD pokeimg
 	html += `<tbody><tr><td colspan="4"><img src="../../images/ev-sprites/${imgName}.png" /></td></tr>`;
@@ -389,8 +364,8 @@ function setPokemon(id) {
 		let moveType = getTypeName(move.Type);
 		let moveName = moveNames[moveID];
 
-		html += `${nbMoves > 0 ? '<br />' : ''}<img src="../../images/types/${moveType}-mini.png" /> ${moveName}`;
-		textarea.value += `${nbMoves > 0 ? '[br]' : ''}[type=${moveType}-mini|9G] ${moveName}`;
+		html += `${nbMoves > 0 ? '<br />' : ''}<img src="../../images/types/${moveType}.png" /> ${moveName}`;
+		textarea.value += `${nbMoves > 0 ? '[br]' : ''}[type=${moveType}|9G] ${moveName}`;
 
 		nbMoves++;
 	}
@@ -425,8 +400,8 @@ function setPokemon(id) {
 		let moveType = getTypeName(move.Type);
 		let moveName = moveNames[wazaNo];
 
-		html += `${nbMoves > 0 ? '<br />' : ''}<img src="../../images/types/${moveType}-mini.png" /> ${moveName}`;
-		textarea.value += `${nbMoves > 0 ? '[br]' : ''}[type=${moveType}-mini|9G] ${moveName}`;
+		html += `${nbMoves > 0 ? '<br />' : ''}<img src="../../images/types/${moveType}.png" /> ${moveName}`;
+		textarea.value += `${nbMoves > 0 ? '[br]' : ''}[type=${moveType}|9G] ${moveName}`;
 
 		nbMoves++;
 	}
@@ -602,6 +577,12 @@ function getBaseMonName(pokemonId) {
 	}
 
 	return specieNames[pokeInfo.Hatch.Species];
+}
+
+function getSpeciesCopyFromDevId(DevId, FormId) {
+	let pokemon = personalArray.find(p => p.Info.DexIndexNational === DevId && p.Info.Form === FormId);
+
+	return pokemon.Info.SpeciesCopy;
 }
 
 function getPokemonAbilityName(DevId, FormId, Tokusei) {
