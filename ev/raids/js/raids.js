@@ -250,14 +250,14 @@ function setPokemon(id) {
 
 	textarea.value = "[center][table]\n";
 
-	let html = "";
-	let versionNo = raidEnemy.RomVer;
+	let html;
+	let versionNo = parseInt(raidEnemy.RomVer);
 
 	// TH Nom du Pokémon
 	html = `<thead><tr><th colspan="4">${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★`;
 	textarea.value += `\t[tr]\n\t\t[th|colspan=4]${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★`;
 
-	if(versionNo !== 0) {
+	if(versionNo > 0) {
 		html += ` <img src="../../images/ev-emblems/icon_emblem_${versionNo}.png" width="30px" height="30px" />`;
 		textarea.value += ` [img]/pages/jeuxvideo/pokemon-ecarlate-violet/images/logos/icon_emblem_${versionNo}.png[/img]`;
 	}

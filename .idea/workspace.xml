@@ -2,101 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2316eb72-76f5-499e-8335-d1c912f9b201" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/images/ev-emblems/icon_emblem_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ev-emblems/icon_emblem_2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ev/raids/data/custom/form-to-sprite.json" beforeDir="false" afterPath="$PROJECT_DIR$/ev/raids/data/custom/form-to-sprite.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ev/raids/js/raids.js" beforeDir="false" afterPath="$PROJECT_DIR$/ev/raids/js/raids.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/1000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/1001.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/1001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/1002.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/1002.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/1003.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/1003.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/1004.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/1004.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/1005.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/1005.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/1006.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/1006.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/1007.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/1007.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/1008.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/1008.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/917.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/917.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/918.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/918.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/919.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/919.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/920.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/920.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/921.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/921.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/922.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/922.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/923.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/923.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/924.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/924.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/925.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/925.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/926.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/926.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/927.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/927.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/928.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/928.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/929.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/929.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/930.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/930.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/931.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/931.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/932.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/932.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/933.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/933.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/934.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/934.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/935.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/935.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/936.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/936.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/937.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/937.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/938.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/938.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/939.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/939.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/940.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/940.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/941.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/941.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/942.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/942.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/943.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/943.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/944.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/944.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/945.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/945.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/946.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/946.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/947.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/947.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/948.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/948.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/949.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/949.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/950.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/950.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/951.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/951.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/952.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/952.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/953.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/953.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/954.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/954.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/955.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/955.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/956.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/956.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/957.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/957.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/958.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/958.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/959.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/959.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/960.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/960.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/961.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/961.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/962.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/962.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/963.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/963.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/964.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/964.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/965.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/965.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/966.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/966.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/967.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/967.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/968.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/968.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/969.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/969.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/970.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/970.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/971.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/971.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/972.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/972.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/973.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/973.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/974.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/974.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/975.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/975.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/976.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/976.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/977.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/977.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/978.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/978.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/979.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/979.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/981.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/981.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/982.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/982.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/983.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/983.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/984.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/984.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/985.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/985.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/986.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/986.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/988.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/988.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/989.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/989.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/990.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/990.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/991.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/991.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/992.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/992.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/993.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/993.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/994.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/994.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/995.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/995.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/996.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/996.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/997.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/997.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/998.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/998.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ev-sprites/999.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ev-sprites/999.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +67,7 @@
       <workItem from="1670155099474" duration="26000000" />
       <workItem from="1670273736302" duration="15404000" />
       <workItem from="1670452950240" duration="1200000" />
-      <workItem from="1670540471640" duration="2813000" />
+      <workItem from="1670540471640" duration="4227000" />
     </task>
     <servers />
   </component>
