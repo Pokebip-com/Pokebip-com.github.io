@@ -25,6 +25,7 @@ const firstResourceId = 1956;
 const lastResourceId = 2160;
 
 const raidTypes = Object.freeze({"STANDARD" : 1, "EVENT" : 2});
+const versions = ["" , "Pokémon Écarlate", "Pokémon Violet"];
 let selectedType;
 
 let btnCopy;
@@ -258,8 +259,10 @@ function setPokemon(id) {
 	textarea.value += `\t[tr]\n\t\t[th|colspan=4]${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★`;
 
 	if(versionNo > 0) {
-		html += ` <img src="../../images/ev-emblems/icon_emblem_${versionNo}.png" width="30px" height="30px" />`;
-		textarea.value += ` [img]/pages/jeuxvideo/pokemon-ecarlate-violet/images/logos/icon_emblem_${versionNo}.png[/img]`;
+		let title = `Exclusif à ${versions[versionNo]}`;
+		html += ` <span data-toggle="tooltip" data-placement="auto bottom" data-html="true" class="has-tooltip" title="${title}" data-original-title="${title}">`;
+		html += `<img src="../../images/ev-emblems/icon_emblem_${versionNo}.png" width="30px" height="30px" /></span>`;
+		textarea.value += ` [tooltip=[img]/pages/jeuxvideo/pokemon-ecarlate-violet/images/logos/icon_emblem_${versionNo}.png[/img]]${title}[/tooltip]`;
 	}
 
 	html += `</th></tr></thead>`;
