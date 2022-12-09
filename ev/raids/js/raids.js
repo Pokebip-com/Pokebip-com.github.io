@@ -442,8 +442,8 @@ function getFixedDrops(tableId, teraTypeId, pokemonId) {
 		return [null, null];
 	}
 
-	const teraShardId = teraTypeId <= 1 ? normalTeraShardId : normalTeraShardId + teraTypeId - 3;
-	const teraShardName = teraTypeId <= 1 ? "Téra-Éclat du type" : itemNames[teraShardId];
+	const teraShardName = teraTypeId <= 1 ? "Téra-Éclat du type" : `Téra-Éclat ${typeNames[teraTypeId-2]}`;
+	const teraShardId =  teraTypeId <= 1 ? normalTeraShardId : itemNames.indexOf(teraShardName);
 	const baseMonName = getBaseMonName(pokemonId);
 	const resourceIndex = firstResourceId + resourceNames.findIndex(res => res.includes(baseMonName));
 	let html = "";
@@ -518,8 +518,8 @@ function getBonusDrops(tableId, teraTypeId, pokemonId) {
 
 	let divider = 1;
 
-	const teraShardId = teraTypeId <= 1 ? normalTeraShardId : normalTeraShardId + teraTypeId - 3;
-	const teraShardName = teraTypeId <= 1 ? "Téra-Éclat du type" : itemNames[teraShardId];
+	const teraShardName = teraTypeId <= 1 ? "Téra-Éclat du type" : `Téra-Éclat ${typeNames[teraTypeId-2]}`;
+	const teraShardId =  teraTypeId <= 1 ? normalTeraShardId : itemNames.indexOf(teraShardName);
 	const baseMonName = getBaseMonName(pokemonId);
 	const resourceIndex = firstResourceId + resourceNames.findIndex(res => res.includes(baseMonName));
 	let html = "";
