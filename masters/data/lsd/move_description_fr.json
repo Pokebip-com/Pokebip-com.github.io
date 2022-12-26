@@ -1,4 +1,6 @@
 {
+    "11390": "[Name:MoveDescriptionPartsIdTag Idx=\"999419\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999468\" ]",
+    "19630": "[Name:MoveDescriptionPartsIdTag Idx=\"999430\" ]",
     "2": "Taux de critiques élevé.",
     "7": "[Name:MoveDescriptionPartsIdTag Idx=\"999896\" ]",
     "8": "[Name:MoveDescriptionPartsIdTag Idx=\"999895\" ]",
@@ -1018,5 +1020,19 @@
     "93900": "[Name:MoveDescriptionPartsIdTag Idx=\"999981\" ]",
     "94000": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
     "94100": "[Name:MoveDescriptionPartsIdTag Idx=\"999432\" ]",
-    "94800": "[Name:MoveDescriptionPartsIdTag Idx=\"999921\" ]"
+    "94800": "[Name:MoveDescriptionPartsIdTag Idx=\"999921\" ]",
+    "8044": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
+    "12154": "[Name:MoveDescriptionPartsIdTag Idx=\"999808\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999429\" ]",
+    "11169": "[Name:MoveDescriptionPartsIdTag Idx=\"999621\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999832\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999428\" ]",
+    "95200": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
+    "95300": "[Name:MoveDescriptionPartsIdTag Idx=\"999994\" ]",
+    "596": "[Name:MoveDescriptionPartsIdTag Idx=\"999854\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999853\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999852\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999427\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999426\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999425\" ]",
+    "6007": "[Name:MoveDescriptionPartsIdTag Idx=\"999486\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999424\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999484\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999423\" ]\n\n[Name:MoveDescriptionPartsIdTag Idx=\"999422\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999470\" ]",
+    "11581": "[Name:MoveDescriptionPartsIdTag Idx=\"999674\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999898\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999974\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999421\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999674\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999453\" ]",
+    "63700": "[Name:MoveDescriptionPartsIdTag Idx=\"999561\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999456\" ]",
+    "91500": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
+    "11168": "[Name:MoveDescriptionPartsIdTag Idx=\"999709\" ]",
+    "16106": "[Name:MoveDescriptionPartsIdTag Idx=\"999419\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999468\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999974\" ]",
+    "95600": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
+    "95700": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]"
 }

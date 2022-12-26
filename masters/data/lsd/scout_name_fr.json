@@ -81,5 +81,11 @@
     "event_4110_3W_MasterTicket_01": "Appel Duo saisonn.\ngaranti : Jasmine !",
     "event_4110_3W_SuperTicket_02": "Appel Duo saisonn.\ntaux ↑ : Blanche !",
     "event_4110_3W_MasterTicket_02": "Appel Duo saisonn.\ngaranti : Blanche !",
-    "event_4110_3W_SuperTicket_03": "Appel Duo\nsaisonnier taux ↑"
+    "event_4110_3W_SuperTicket_03": "Appel Duo\nsaisonnier taux ↑",
+    "event_4120_1W_SuperTicket_01": "Appel Duo saisonn.\ntaux ↑ : Atalante !",
+    "event_4120_1W_MasterTicket_01": "Appel Duo saisonn.\ngaranti : Atalante !",
+    "event_4120_1W_SuperTicket_02": "Appel Duo saisonn.\ntaux ↑ : Aurore !",
+    "event_4120_1W_MasterTicket_02": "Appel Duo saisonn.\ngaranti : Aurore !",
+    "event_4120_2W_SuperTicket_01": "Appel Duo\nsaisonnier taux ↑",
+    "event_4120_3W_MasterTicket_01": "Appel Duo garanti :\nSannah !"
 }

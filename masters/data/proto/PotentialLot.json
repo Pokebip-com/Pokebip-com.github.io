@@ -414,5 +414,6 @@
 { "potentialLotId": 60032, "potentialId": 13016403, "rate": 1 },
 { "potentialLotId": 60033, "potentialId": 12020404, "rate": 1 },
 { "potentialLotId": 60034, "potentialId": 17041601, "rate": 1 },
-{ "potentialLotId": 60035, "potentialId": 17043701, "rate": 1 }
+{ "potentialLotId": 60035, "potentialId": 17043701, "rate": 1 },
+{ "potentialLotId": 60036, "potentialId": 15010301, "rate": 1 }
 ]}

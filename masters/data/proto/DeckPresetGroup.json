@@ -202,6 +202,8 @@
 { "deckPresetGroupId": 2202101, "deckPresetId": 22021012 },
 { "deckPresetGroupId": 2202102, "deckPresetId": 22021021 },
 { "deckPresetGroupId": 2202102, "deckPresetId": 22021022 },
+{ "deckPresetGroupId": 8021104, "deckPresetId": 80211041 },
+{ "deckPresetGroupId": 8021104, "deckPresetId": 80211042 },
 { "deckPresetGroupId": 9221101, "deckPresetId": 92211011 },
 { "deckPresetGroupId": 9221101, "deckPresetId": 92211012 },
 { "deckPresetGroupId": 9221102, "deckPresetId": 92211021 },

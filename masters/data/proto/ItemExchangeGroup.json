@@ -198,5 +198,12 @@
 { "itemExchangeGroupId": 2411050, "u2": 1, "scheduleId": "4110_3W_Event_Season_Exchange_1", "bannerId": 1411005, "u5": 0 },
 { "itemExchangeGroupId": 2411060, "u2": 1, "scheduleId": "4110_3W_Event_Season_Exchange_2", "bannerId": 1311007, "u5": 0 },
 { "itemExchangeGroupId": 2411070, "u2": 1, "scheduleId": "4110_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 },
-{ "itemExchangeGroupId": 2411080, "u2": 1, "scheduleId": "4110_4W_Event_Anniversary_Exchange", "bannerId": 1308001, "u5": 0 }
+{ "itemExchangeGroupId": 2411080, "u2": 1, "scheduleId": "4110_4W_Event_Anniversary_Exchange", "bannerId": 1308001, "u5": 0 },
+{ "itemExchangeGroupId": 2412010, "u2": 1, "scheduleId": "4120_1W_Event_Gasho2023_Exchange", "bannerId": 1412003, "u5": 0 },
+{ "itemExchangeGroupId": 2412020, "u2": 1, "scheduleId": "4120_2W_Event_Gasho2022_Exchange", "bannerId": 5312008, "u5": 0 },
+{ "itemExchangeGroupId": 2412030, "u2": 1, "scheduleId": "4120_2W_Event_Happy_Exchange", "bannerId": 1210005, "u5": 0 },
+{ "itemExchangeGroupId": 2412040, "u2": 1, "scheduleId": "4120_3W_Event_KALOS_Exchange", "bannerId": 1412005, "u5": 0 },
+{ "itemExchangeGroupId": 2412050, "u2": 1, "scheduleId": "4120_3W_Event_Tag_Exchange", "bannerId": 1412007, "u5": 0 },
+{ "itemExchangeGroupId": 2412060, "u2": 1, "scheduleId": "4120_3W_Event_Equipment_Exchange", "bannerId": 1412008, "u5": 0 },
+{ "itemExchangeGroupId": 2412070, "u2": 1, "scheduleId": "4120_5W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 }
 ]}

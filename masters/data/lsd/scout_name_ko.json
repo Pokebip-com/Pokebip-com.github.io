@@ -81,5 +81,11 @@
     "event_4110_3W_MasterTicket_01": "규리 시즌 한정 확정 B서치",
     "event_4110_3W_SuperTicket_02": "꼭두 시즌 한정 출현율업 B서치",
     "event_4110_3W_MasterTicket_02": "꼭두 시즌 한정 확정 B서치",
-    "event_4110_3W_SuperTicket_03": "시즌 한정 출현율업 B서치"
+    "event_4110_3W_SuperTicket_03": "시즌 한정 출현율업 B서치",
+    "event_4120_1W_SuperTicket_01": "루티아 시즌 한정 출현율업 B서치",
+    "event_4120_1W_MasterTicket_01": "루티아 시즌 한정 확정 B서치",
+    "event_4120_1W_SuperTicket_02": "빛나 시즌 한정 출현율업 B서치",
+    "event_4120_1W_MasterTicket_02": "빛나 시즌 한정 확정 B서치",
+    "event_4120_2W_SuperTicket_01": "시즌 한정 출현율업 B서치",
+    "event_4120_3W_MasterTicket_01": "사나 확정 버디즈서치"
 }

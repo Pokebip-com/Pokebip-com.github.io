@@ -40,6 +40,7 @@
 { "questGroupId": 610284, "days": 7, "u3": 2 },
 { "questGroupId": 610337, "days": 7, "u3": 2 },
 { "questGroupId": 610341, "days": 7, "u3": 2 },
+{ "questGroupId": 610365, "days": 7, "u3": 2 },
 { "questGroupId": 800001, "days": 7, "u3": 1 },
 { "questGroupId": 800004, "days": 7, "u3": 1 },
 { "questGroupId": 800005, "days": 7, "u3": 1 },
@@ -69,5 +70,8 @@
 { "questGroupId": 836681282, "days": 30, "u3": 3 },
 { "questGroupId": 1036579282, "days": 30, "u3": 3 },
 { "questGroupId": 1036580282, "days": 30, "u3": 3 },
-{ "questGroupId": 1036581282, "days": 30, "u3": 3 }
+{ "questGroupId": 1036581282, "days": 30, "u3": 3 },
+{ "questGroupId": 1236679282, "days": 30, "u3": 3 },
+{ "questGroupId": 1236680282, "days": 30, "u3": 3 },
+{ "questGroupId": 1236681282, "days": 30, "u3": 3 }
 ]}
