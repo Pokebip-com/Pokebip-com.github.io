@@ -7,6 +7,8 @@ let monsterInfos;
 let monsterNames;
 let moveInfos;
 let moveNames;
+let movePassiveDigit;
+let tagNames;
 let trainerBase;
 let trainerInfos;
 let trainerNames;
@@ -198,7 +200,7 @@ function setPassiveDescriptions() {
 			descr = passiveSkillDescription[id];
 			
 			do {
-				descr = descr.replace(idTagReplace.replace("{ID}", idx[1]), passiveSkillDescriptionParts[idx[1]]);
+				descr = descr.replace(idTagReplace.replace("{ID}", idx[1]), getSkillMoveDescr(passiveSkillDescriptionParts[idx[1]], id));
 			} while((idx = re.exec(descr)) !== null);
 			
 			passiveList[id].description = descr;
@@ -218,6 +220,7 @@ async function getData() {
 		monsterBaseResponse,
 		monsterEvolutionResponse,
 		moveResponse,
+		movePassiveSkillDigitResponse,
 		trainerResponse,
 		trainerBaseResponse,
 		monsterNameResponse,
@@ -226,6 +229,7 @@ async function getData() {
 		passiveSDescrPartsResponse,
 		passiveSkillNameResponse,
 		passiveSNamePartsResponse,
+		tagNameResponse,
 		trainerNameResponse
 	] = await Promise.all([
 		fetch("./data/proto/Ability.json"),
@@ -235,6 +239,7 @@ async function getData() {
 		fetch("./data/proto/MonsterBase.json"),
 		fetch("./data/proto/MonsterEvolution.json"),
 		fetch("./data/proto/Move.json"),
+		fetch("./data/proto/MoveAndPassiveSkillDigit.json"),
 		fetch("./data/proto/Trainer.json"),
 		fetch("./data/proto/TrainerBase.json"),
 		fetch("./data/lsd/monster_name_fr.json"),
@@ -243,6 +248,7 @@ async function getData() {
 		fetch("./data/lsd/passive_skill_description_parts_fr.json"),
 		fetch("./data/lsd/passive_skill_name_fr.json"),
 		fetch("./data/lsd/passive_skill_name_parts_fr.json"),
+		fetch("./data/lsd/tag_name_with_prepositions_fr.json"),
 		fetch("./data/lsd/trainer_name_fr.json")
 	])
 	.catch(error => console.log(error));
@@ -255,7 +261,12 @@ async function getData() {
 	
 	const moveInfosJSON = await moveResponse.json();
 	moveInfos = getByMoveID(moveInfosJSON.entries);
+
 	moveNames = await moveNameResponse.json();
+	tagNames = await tagNameResponse.json();
+
+	const movePassiveSkillDigitJSON = await movePassiveSkillDigitResponse.json();
+	movePassiveDigit = getByID(movePassiveSkillDigitJSON.entries);
 	
 	passiveSkillDescription = await passiveSkillDescrResponse.json();
 	passiveSkillDescriptionParts = await passiveSDescrPartsResponse.json();
@@ -425,20 +436,136 @@ function setTrainer(id) {
 	trainerSelect.value = id;
 }
 
-function getCleanDescr(descr, level) {
-	descr = descr.replaceAll(/\[Digit:2digits ]\s%/gi, ((level+1) * 10 + "") + " %");
-	descr = descr.replaceAll(/\[Digit:1digit ]/gi, level + "");
-	descr = descr.replaceAll("\n", " ");
+function getMovePassiveDigitTags(id) {
+	tags = {};
 
-	const qtyRegex = /\[FR:Qty\sS="(\w+)"\sP="(\w+)"\s]/gi;
-	const qtyMatches = [...descr.matchAll(qtyRegex)];
-	
-	if(qtyMatches.length > 0) {
-		qtyMatches.forEach(match => {
-			descr = descr.replace(qtyRegex, (level > 1 ? match[2] : match[1]));
-		});
+	if(typeof movePassiveDigit[id] === "undefined") {
+		return tags;
 	}
-	
+
+	for(let i = 1; i <= 20; i +=2) {
+		switch(movePassiveDigit[id][`param${i}`]) {
+			case "1":
+				if(typeof tags["Digit"] === "undefined") {
+					tags["Digit"] = {};
+				}
+				const digit = movePassiveDigit[id][`param${i+1}`];
+				const digitName = digit.length + "digit" + (digit.length > 1 ? "s" : "");
+
+				if(typeof tags["Digit"][digitName] === "undefined") {
+					tags["Digit"][digitName] = [];
+				}
+
+				tags["Digit"][digitName].push(digit);
+				break;
+
+			case "2":
+				if(typeof tags["Name"] === "undefined") {
+					tags["Name"] = {
+						"ReferencedMessageTag": []
+					};
+				}
+
+				tags["Name"]["ReferencedMessageTag"].push(tagNames[movePassiveDigit[id][`param${i+1}`]]);
+				break;
+		}
+	}
+
+	return tags;
+}
+
+function getArgumentValue(string, argText) {
+	let startIndex = string.indexOf(`${argText}="`);
+
+	if(startIndex === -1) {
+		return "";
+	}
+
+	startIndex += `${argText}="`.length;
+
+	const endIndex = startIndex + string.substring(startIndex).indexOf(`"`);
+
+	return string.substring(startIndex, endIndex);
+}
+
+function getSkillMoveDescr(descr, id) {
+	let tags = getMovePassiveDigitTags(id);
+
+	let lastQty = 0;
+	let lastValue = "";
+	let lastName = "";
+
+	let Idx = [];
+
+	while(descr.indexOf("[") !== -1) {
+		const indexOpen = descr.indexOf("[");
+		const indexClose = descr.indexOf("]");
+
+		const substring = descr.substring(indexOpen, indexClose + 1);
+
+		const indexColon = indexOpen + substring.indexOf(":");
+		const indexSubstrSpace = indexOpen + substring.indexOf(" ");
+
+		const tagType = descr.substring(indexOpen + 1, indexColon);
+		const tagValue = descr.substring(indexColon + 1, indexSubstrSpace);
+
+		const idxValue = getArgumentValue(descr, "Idx");
+		const refValue = getArgumentValue(descr, "Ref");
+
+		const singularValue = getArgumentValue(descr, "S");
+		const pluralValue = getArgumentValue(descr, "P");
+
+		if(idxValue.length > 0) {
+			Idx.push(idxValue);
+		}
+
+		if(tagType === "FR") {
+			let qtyRef = lastQty;
+
+			if(refValue.length > 0) {
+				qtyRef = Idx[refValue];
+			}
+
+			let replaceStr = singularValue;
+
+			if(qtyRef > 1) {
+				replaceStr = pluralValue;
+			}
+
+			descr = descr.replace(substring, replaceStr);
+		}
+		else if(tagType === "Name" && tagValue === "MoveId") {
+			descr = descr.replace(substring, moveNames[idxValue].replace("\n", " "));
+			Idx.pop();
+		}
+		else if(tags[tagType][tagValue].length > 0) {
+			lastValue = tags[tagType][tagValue].shift();
+			descr = descr.replace(substring, lastValue);
+		}
+		else if(tagType === "Name") {
+			lastValue = lastName;
+			descr = descr.replace(substring, lastValue);
+		}
+		else {//*
+			if(tagType === "Digit") {
+				lastValue = lastQty;
+			}
+			else if(tagType === "Name") {
+				lastValue = lastName;
+			}
+			descr = descr.replace(substring, lastValue);
+			//*/
+		}
+
+		if(tagType === "Digit") {
+			lastQty = lastValue;
+		}
+		else if(tagType === "Name") {
+			lastName = lastValue;
+		}
+
+	}
+
 	return descr;
 }
 
@@ -459,15 +586,10 @@ function appendCategory(trainer, category) {
 
 	trainer[category].forEach(cell => {
 		let amelioration = getReplacedText(abilityName[cell.ability.type], cell.ability);
-		let amelioLevel = Number.isInteger(amelioration.slice(-1)*1) ? amelioration.slice(-1)*1 : null;
 		let passiveDescr = '-';
 		
 		if(cell.ability.passiveId !== 0) {
 			passiveDescr = passiveList[cell.ability.passiveId].description;
-			
-			if(amelioLevel !== null) {
-				passiveDescr = getCleanDescr(passiveDescr, amelioLevel);
-			}
 		}
 	
 		gridTable.innerHTML += "<tr><td>" + amelioration
