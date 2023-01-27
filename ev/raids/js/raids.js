@@ -646,7 +646,7 @@ async function init() {
 }
 
 init().then(() => {
-	document.getElementById("btnSave").onclick = async function () {
+	document.getElementById("btnSaveAll").onclick = async function () {
 		let currEvent = raidsListSelect.value;
 		let dlCount = document.getElementById("dlCount");
 		let standard = zip.folder("standard");
@@ -699,11 +699,47 @@ init().then(() => {
 		}
 
 		setEvent(currEvent);
-		dlCount.innerText = `Génération du zip...`;
 
 		zip.generateAsync({ type: 'blob' })
 			.then(function(content) {
 				saveAs(content, "event-raids.zip");
+				dlCount.innerText = '';
+			});
+	};
+
+	document.getElementById("btnSaveEvent").onclick = async function () {
+		let event = raidsListSelect.value;
+		let dlCount = document.getElementById("dlCount");
+
+		let indiv = zip.folder("_indiv");
+
+		dlCount.innerText = `Génération du Zip...`;
+
+		await getRaidData(event);
+		setAnchors(event);
+
+		let filename = event.replace(/[/\\?%*:|"<>]/g, '_') + ".txt";
+		let content = "[listh]\n";
+
+		for(const raid of encData.filter(enc => enc.RaidEnemyInfo.Rate > 0)) {
+			await setPokemon(raid.RaidEnemyInfo.No);
+
+			let raidName = document.querySelector(`[data-raid-id="${raid.RaidEnemyInfo.No}"]`).innerText;
+			let indivFilename = raid.RaidEnemyInfo.No + "-" + raidName.replace(/[/\\?%*:|"<>]/g, '_') + ".txt";
+			indiv.file(indivFilename, textarea.value);
+
+			content += `[item|nostyle]\n${textarea.value}\n[/item]\n`;
+		}
+
+		content += "[/listh]";
+
+		zip.file(filename, content);
+
+		setEvent(event);
+
+		zip.generateAsync({ type: 'blob' })
+			.then(function(content) {
+				saveAs(content, event.replace(/[/\\?%*:|"<>]/g, '_') + ".zip");
 				dlCount.innerText = '';
 			});
 	};
