@@ -518,5 +518,11 @@
     "999421": "當蒂安希已經變成超級蒂安希時，還會再發揮下列所有效果。",
     "999420": "提高自己的[Name:ReferencedMessageTag Idx=\"2\" ][Digit:1digit Idx=\"3\" ]階段。",
     "999419": "提高我方全體拍組的[Name:ReferencedMessageTag ][Digit:1digit Idx=\"1\" ]階段。",
-    "999418": "提高自己的[Name:ReferencedMessageTag ][Digit:1digit Idx=\"1\" ]階段。"
+    "999418": "提高自己的[Name:ReferencedMessageTag ][Digit:1digit Idx=\"1\" ]階段。",
+    "999417": "當對手的場地上有陷入灼傷狀態的寶可夢時",
+    "999416": "當對手的場地上變為沒有陷入灼傷狀態的寶可夢時",
+    "999415": "會幫自己提高和對手的場地上陷入灼傷狀態的寶可夢相同數量的[Name:ReferencedMessageTag ]。",
+    "999414": "當對手的場地上有陷入中毒或劇毒狀態的寶可夢時",
+    "999413": "當對手的場地上變為沒有陷入中毒或劇毒狀態的寶可夢時",
+    "999412": "提高我方全體拍組的速度和擊中要害率[Digit:1digit ]階段。"
 }

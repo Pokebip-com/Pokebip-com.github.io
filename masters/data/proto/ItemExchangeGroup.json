@@ -205,5 +205,12 @@
 { "itemExchangeGroupId": 2412040, "u2": 1, "scheduleId": "4120_3W_Event_KALOS_Exchange", "bannerId": 1412005, "u5": 0 },
 { "itemExchangeGroupId": 2412050, "u2": 1, "scheduleId": "4120_3W_Event_Tag_Exchange", "bannerId": 1412007, "u5": 0 },
 { "itemExchangeGroupId": 2412060, "u2": 1, "scheduleId": "4120_3W_Event_Equipment_Exchange", "bannerId": 1412008, "u5": 0 },
-{ "itemExchangeGroupId": 2412070, "u2": 1, "scheduleId": "4120_5W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 }
+{ "itemExchangeGroupId": 2412070, "u2": 1, "scheduleId": "4120_5W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 },
+{ "itemExchangeGroupId": 2501010, "u2": 1, "scheduleId": "5010_1W_Event_valentine_Exchange", "bannerId": 1501003, "u5": 0 },
+{ "itemExchangeGroupId": 2501020, "u2": 1, "scheduleId": "5010_2W_Event_valentine_Exchange", "bannerId": 5401003, "u5": 0 },
+{ "itemExchangeGroupId": 2501030, "u2": 1, "scheduleId": "5010_2W_Event_Happy_Exchange", "bannerId": 1210005, "u5": 0 },
+{ "itemExchangeGroupId": 2501040, "u2": 1, "scheduleId": "5010_3W_Event_AKU_Exchange", "bannerId": 1501004, "u5": 0 },
+{ "itemExchangeGroupId": 2501060, "u2": 1, "scheduleId": "5010_4W_Event_swordshield_Exchange_2", "bannerId": 1302003, "u5": 0 },
+{ "itemExchangeGroupId": 2501070, "u2": 1, "scheduleId": "5010_4W_Event_sakaki_get_Exchange", "bannerId": 1407503, "u5": 0 },
+{ "itemExchangeGroupId": 2501080, "u2": 1, "scheduleId": "5010_5W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 }
 ]}

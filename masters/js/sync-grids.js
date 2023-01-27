@@ -323,12 +323,10 @@ async function getCustomJSON() {
 }
 
 function checkIfNew(trainerId) {
-	let lastNumberOfCells = lastUpdateGrids[trainerId] || 0;
-
-	if(lastNumberOfCells !== abilityPanelByTrainer[trainerId].nbCells) {
+	if(abilityPanelByTrainer[trainerId].oldNbCells !== abilityPanelByTrainer[trainerId].nbCells) {
 		let anchor = document.createElement('a');
 		anchor.href = '#';
-		anchor.textContent = `${getTrainerName(trainerId)} & ${getMonsterNameByTrainerId(trainerId)} (${lastNumberOfCells} -> ${abilityPanelByTrainer[trainerId].nbCells})`;
+		anchor.textContent = `${getTrainerName(trainerId)} & ${getMonsterNameByTrainerId(trainerId)} (${abilityPanelByTrainer[trainerId].oldNbCells} -> ${abilityPanelByTrainer[trainerId].nbCells})`;
 
 		anchor.onclick = function() {
 			const url = new URL(window.location);
@@ -415,10 +413,11 @@ function setStats(id) {
 
 function setGrid(id) {
 	gridTable.innerHTML = "";
-	gridTable.innerHTML += "<tr><th>Amélioration</th><th>Effet</th><th>Énergie requise</th><th>Duo-Sphères requises</th><th>Niveau des Capacités requis</th></tr>\n";
+	gridTable.innerHTML += "<thead><tr><th>Amélioration</th><th>Effet</th><th>Énergie requise</th><th>Duo-Sphères requises</th><th>Niveau des Capacités requis</th></tr></thead>\n";
 
 	textarea.value = "[center][table]\n[tr][th|width=250px]Amélioration[/th][th|width=300px]Effet[/th][th|width=100px]Énergie requise[/th][th|width=100px]Duo-Sphères requises[/th][th|width=100px]Niveau des Capacités requis[/th][/tr]\n";
 
+	console.log(abilityPanelByTrainer[id]);
 	appendCategory(abilityPanelByTrainer[id], "StatsBoost");
 	appendCategory(abilityPanelByTrainer[id], "MovePowerAccuracyBoost");
 	appendCategory(abilityPanelByTrainer[id], "AdditionalMoveEffect");
@@ -591,8 +590,12 @@ function appendCategory(trainer, category) {
 		if(cell.ability.passiveId !== 0) {
 			passiveDescr = passiveList[cell.ability.passiveId].description;
 		}
+
+		console.log(`CellID - trainerID : ${cell.cellId-cell.trainerId/10}\noldNbCells : ${trainer.oldNbCells}\nIsBigger? ${((cell.cellId - cell.trainerId/10) >= trainer.oldNbCells) ? "true" : "false"}`);
+
 	
-		gridTable.innerHTML += "<tr><td>" + amelioration
+		gridTable.innerHTML += `<tr${((cell.cellId - cell.trainerId/10) >= trainer.oldNbCells) ? " style='background-color:#7afa96;'" : " style=''"}>`
+			+ "<td>" + amelioration
 			+ `</td><td${(passiveDescr.includes("[") || passiveDescr.includes("]")) ? " style='background-color:#f2748e;'" : ""}>` + outlineBrackets(passiveDescr)
 			+ "</td><td>" + (cell.energyCost === 0 ? '-' : cell.energyCost)
 			+ "</td><td>" + cell.orbCost
@@ -629,8 +632,12 @@ async function init() {
 	setConditionsAndAbilities();
 	
 	abilityPanelByTrainer = getAbilitiesByTrainerID(abilityPanelByTrainer);
+
+	Object.keys(abilityPanelByTrainer).forEach(trainerID => {
+		abilityPanelByTrainer[trainerID].oldNbCells = lastUpdateGrids[trainerID] || 0;
+	});
+
 	sortCells();
-	
 	populateSelect();
 	
 	btnCopy.onclick = function() {

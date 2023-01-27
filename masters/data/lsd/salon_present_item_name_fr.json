@@ -11,9 +11,9 @@
     "131040110": "Barrette",
     "131040120": "Barrette supérieure",
     "131040130": "Barrette optimale",
-    "131050110": "Pare-soleil",
-    "131050120": "Pare-soleil supérieur",
-    "131050130": "Pare-soleil optimal",
+    "131050110": "Visière",
+    "131050120": "Visière supérieure",
+    "131050130": "Visière optimale",
     "131050210": "Figurine",
     "131050220": "Figurine supérieure",
     "131050230": "Figurine optimale",
@@ -37,5 +37,8 @@
     "131060230": "Ruban de chapeau optimal",
     "131040210": "Petite barrette",
     "131040220": "Petite barrette supérieure",
-    "131040230": "Petite barrette optimale"
+    "131040230": "Petite barrette optimale",
+    "131020210": "Bandana",
+    "131020220": "Bandana supérieur",
+    "131020230": "Bandana optimal"
 }

@@ -115,6 +115,10 @@
 { "monsterEvolutionId": "618000020662", "level": 45, "itemSetId": "61000210" },
 { "monsterEvolutionId": "618000020666", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000020667", "level": 45, "itemSetId": "61000210" },
+{ "monsterEvolutionId": "618000020671", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000020676", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000020681", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000020686", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000030031", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000030036", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000030051", "level": 30, "itemSetId": "61000110" },
@@ -231,6 +235,10 @@
 { "monsterEvolutionId": "618000030662", "level": 45, "itemSetId": "61000210" },
 { "monsterEvolutionId": "618000030666", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000030667", "level": 45, "itemSetId": "61000210" },
+{ "monsterEvolutionId": "618000030671", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000030676", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000030681", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000030686", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000040001", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000040002", "level": 45, "itemSetId": "61000210" },
 { "monsterEvolutionId": "618000040004", "level": 30, "itemSetId": "61000110" },
@@ -352,5 +360,9 @@
 { "monsterEvolutionId": "618000040661", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000040662", "level": 45, "itemSetId": "61000210" },
 { "monsterEvolutionId": "618000040666", "level": 30, "itemSetId": "61000110" },
-{ "monsterEvolutionId": "618000040667", "level": 45, "itemSetId": "61000210" }
+{ "monsterEvolutionId": "618000040667", "level": 45, "itemSetId": "61000210" },
+{ "monsterEvolutionId": "618000040671", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000040676", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000040681", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000040686", "level": 30, "itemSetId": "61000110" }
 ]}

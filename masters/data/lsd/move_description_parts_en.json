@@ -518,5 +518,11 @@
     "999421": "If the user’s Diancie has Mega Evolved, also grants all of the following effects:",
     "999420": "Raises the user’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] stat [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ].",
     "999419": "Raises the [Name:ReferencedMessageTag ] of all allied sync pairs by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
-    "999418": "Raises the user’s [Name:ReferencedMessageTag ] by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ]."
+    "999418": "Raises the user’s [Name:ReferencedMessageTag ] by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "999417": "When there is at least one burned Pokémon on the opponent’s field of play.",
+    "999416": "When there are no longer any burned Pokémon on the opponent’s field of play.",
+    "999415": "Increases the user’s [Name:ReferencedMessageTag ] by a number of ranks equal to the number of burned Pokémon on the opponent’s field of play.",
+    "999414": "When there is at least one poisoned or badly poisoned Pokémon on the opponent’s field of play.",
+    "999413": "When there are no longer any poisoned or badly poisoned Pokémon on the opponent’s field of play.",
+    "999412": "Raises the Speed and critical-hit rate of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ]."
 }

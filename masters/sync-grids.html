@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 	</head>
+		<link rel="stylesheet" href="../css/pokebip.css">
 		<script src="./js/dist/FileSaver.min.js"></script>
 		<script src="./js/dist/jszip.min.js"></script>
-	<body>
+	<body style="padding:10px;">
 		<select id="trainersList"></select>
 		<textarea id="area"></textarea>
 		<button id="btnCopy">Copier le code</button>
@@ -15,11 +16,17 @@
 		<span id="updatedGrids"></span>
 
 		<br />
-		<table id="statsTable" style="text-align:center;"></table>
+		<table id="statsTable" style="text-align:center;" class="bipcode"></table>
 
 		<br />
 		<p>Nombre de cases : <span id="nbCells"></span></p>
-		<table id="gridTable" style="text-align:center;"></table>
+		<div>
+			<ul class="listh-bipcode">
+				<li class="listh-no-style">
+					<table id="gridTable" style="text-align:center;" class="bipcode"></table>
+				</li>
+			</ul>
+		</div>
 		
 		<script src="./js/sync-grids.js"></script>
 	</body>

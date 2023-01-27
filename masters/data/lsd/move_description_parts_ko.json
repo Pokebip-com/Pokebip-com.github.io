@@ -518,5 +518,11 @@
     "999421": "추가로 자신이 메가디안시가 되어있을 때는 아래의 모든 효과를 발휘한다",
     "999420": "자신의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다",
     "999419": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 오른다",
-    "999418": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 오른다"
+    "999418": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 오른다",
+    "999417": "상대의 필드에 화상 상태의 포켓몬이 있을 때",
+    "999416": "상대의 필드에 화상 상태의 포켓몬이 없어졌을 때",
+    "999415": "상대의 필드에 있는 화상 상태의 포켓몬 수만큼 자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 오른다",
+    "999414": "상대의 필드에 독 상태나 맹독 상태의 포켓몬이 있을 때",
+    "999413": "상대의 필드에 독 상태나 맹독 상태의 포켓몬이 없어졌을 때",
+    "999412": "같은 편 버디즈 전원의 스피드와 급소율이 [Digit:1digit ]단계 오른다"
 }
