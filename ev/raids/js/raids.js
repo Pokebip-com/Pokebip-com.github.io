@@ -8,6 +8,7 @@ let dropData;
 let bonusDropData
 
 let abilityNames;
+let natureNames;
 let itemNames;
 let resourceNames;
 let moveNames;
@@ -44,6 +45,7 @@ async function getData() {
 		abilityNamesResponse,
 		itemNamesResponse,
 		moveNamesResponse,
+		natureNamesResponse,
 		specieNamesResponse,
 		tmNamesResponse,
 		typeNamesResponse,
@@ -57,6 +59,7 @@ async function getData() {
 		fetch(languagePath + 'abilities.txt'),
 		fetch(languagePath + 'items.txt'),
 		fetch(languagePath + 'moves.txt'),
+		fetch(languagePath + 'seikaku.txt'),
 		fetch(languagePath + 'species.txt'),
 		fetch(languagePath + 'tm.txt'),
 		fetch(languagePath + 'typename.txt'),
@@ -70,6 +73,7 @@ async function getData() {
 		.catch(error => console.log(error));
 
 	abilityNames = (await abilityNamesResponse.text()).split(/\r?\n/);
+	natureNames = (await natureNamesResponse.text()).split(/\r?\n/);
 	itemNames = (await itemNamesResponse.text()).split(/\r?\n/);
 	moveNames = (await moveNamesResponse.text()).split(/\r?\n/);
 	specieNames = (await specieNamesResponse.text()).split(/\r?\n/);
@@ -349,6 +353,15 @@ function setPokemon(id) {
 
 	html += `<b>Talent :</b> ${ability}</td></tr>`;
 	textarea.value += `[b]Talent :[/b] ${ability}[/td]\n\t[/tr]\n`;
+
+	// TD Nature
+	html += `<tr><td colspan="4">`;
+	textarea.value += `\t[tr]\n\t\t[td|colspan=4]`;
+
+	let nature = natureNames[raidEnemy.BossPokePara.Seikaku];
+
+	html += `<b>Nature :</b> ${nature}</td></tr>`;
+	textarea.value += `[b]Nature :[/b] ${nature}[/td]\n\t[/tr]\n`;
 
 	// TD Attaques
 	html += `<tr><td colspan="4"><div style="text-align: left">`;
