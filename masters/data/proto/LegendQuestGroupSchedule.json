@@ -50,5 +50,6 @@
 { "questGroupId": 800010, "scheduleId": "event_4010_5W_1" },
 { "questGroupId": 800011, "scheduleId": "4080_2W_LegendBattle_FOREVER" },
 { "questGroupId": 800011, "scheduleId": "event_3090_4W_3" },
-{ "questGroupId": 800011, "scheduleId": "event_3120_2W_2" }
+{ "questGroupId": 800011, "scheduleId": "event_3120_2W_2" },
+{ "questGroupId": 800012, "scheduleId": "5020_2W_LegendBattle_FOREVER" }
 ]}

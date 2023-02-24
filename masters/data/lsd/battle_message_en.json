@@ -78,6 +78,7 @@
     "812": "[Name:PokemonName ]’s Bug Type\nRebuff won’t go any higher!",
     "814": "[Name:PokemonName ]’s Ghost Type\nRebuff won’t go any higher!",
     "816": "[Name:PokemonName ]’s Dark Type\nRebuff won’t go any higher!",
+    "817": "[Name:PokemonName ]’s Steel Type\nRebuff won’t go any higher!",
     "818": "[Name:PokemonName ]’s Fairy Type\nRebuff won’t go any higher!",
     "852": "[Name:PokemonName ]’s Fire Type Rebuff\nwon’t go any lower!",
     "853": "[Name:PokemonName ]’s Water Type\nRebuff won’t go any lower!",
@@ -86,6 +87,7 @@
     "862": "[Name:PokemonName ]’s Bug Type\nRebuff won’t go any lower!",
     "864": "[Name:PokemonName ]’s Ghost Type\nRebuff won’t go any lower!",
     "866": "[Name:PokemonName ]’s Dark Type\nRebuff won’t go any lower!",
+    "867": "[Name:PokemonName ]’s Steel Type\nRebuff won’t go any lower!",
     "868": "[Name:PokemonName ]’s Fairy Type\nRebuff won’t go any lower!",
     "996": "Move gauge charged!",
     "1307": "Those [Digit:1digit ] Pokémon’s HP are full!",
@@ -152,6 +154,7 @@
     "1812": "Those [Digit:1digit ] Pokémon’s Bug Type Rebuff won’t go\nany higher!",
     "1814": "Those [Digit:1digit ] Pokémon’s Ghost Type Rebuff won’t go\nany higher!",
     "1816": "Those [Digit:1digit ] Pokémon’s Dark Type Rebuff won’t go\nany higher!",
+    "1817": "Those [Digit:1digit ] Pokémon’s Steel Type Rebuff won’t go\nany higher!",
     "1818": "Those [Digit:1digit ] Pokémon’s Fairy Type Rebuff won’t go\nany higher!",
     "1852": "Those [Digit:1digit ] Pokémon’s Fire Type Rebuff won’t go\nany lower!",
     "1853": "Those [Digit:1digit ] Pokémon’s Water Type Rebuff won’t go\nany lower!",
@@ -160,6 +163,7 @@
     "1862": "Those [Digit:1digit ] Pokémon’s Bug Type Rebuff won’t go\nany lower!",
     "1864": "Those [Digit:1digit ] Pokémon’s Ghost Type Rebuff won’t go\nany lower!",
     "1866": "Those [Digit:1digit ] Pokémon’s Dark Type Rebuff won’t go\nany lower!",
+    "1867": "Those [Digit:1digit ] Pokémon’s Steel Type Rebuff won’t go\nany lower!",
     "1868": "Those [Digit:1digit ] Pokémon’s Fairy Type Rebuff won’t go\nany lower!",
     "1996": "Move gauge charged!"
 }

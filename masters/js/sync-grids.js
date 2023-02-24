@@ -417,7 +417,6 @@ function setGrid(id) {
 
 	textarea.value = "[center][table]\n[tr][th|width=250px]Amélioration[/th][th|width=300px]Effet[/th][th|width=100px]Énergie requise[/th][th|width=100px]Duo-Sphères requises[/th][th|width=100px]Niveau des Capacités requis[/th][/tr]\n";
 
-	console.log(abilityPanelByTrainer[id]);
 	appendCategory(abilityPanelByTrainer[id], "StatsBoost");
 	appendCategory(abilityPanelByTrainer[id], "MovePowerAccuracyBoost");
 	appendCategory(abilityPanelByTrainer[id], "AdditionalMoveEffect");
@@ -591,7 +590,7 @@ function appendCategory(trainer, category) {
 			passiveDescr = passiveList[cell.ability.passiveId].description;
 		}
 
-		console.log(`CellID - trainerID : ${cell.cellId-cell.trainerId/10}\noldNbCells : ${trainer.oldNbCells}\nIsBigger? ${((cell.cellId - cell.trainerId/10) >= trainer.oldNbCells) ? "true" : "false"}`);
+		// console.log(`CellID - trainerID : ${cell.cellId-cell.trainerId/10}\noldNbCells : ${trainer.oldNbCells}\nIsBigger? ${((cell.cellId - cell.trainerId/10) >= trainer.oldNbCells) ? "true" : "false"}`);
 
 	
 		gridTable.innerHTML += `<tr${((cell.cellId - cell.trainerId/10) >= trainer.oldNbCells) ? " style='background-color:#7afa96;'" : " style=''"}>`

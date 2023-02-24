@@ -197,5 +197,14 @@
     "138_element": "• [Name:TeamSkillTag ]",
     "139": "Porta a termine [Digit:6digits ] conversazion[IT:Qty S=\"e\" P=\"i\" ]\nnel Salotto Allenatori.",
     "140": "Raggiungi il livello intesa [Digit:7digits Idx=\"1\" ] con\n[Digit:3digits ] ospit[IT:Qty S=\"e\" P=\"i\" ].",
-    "141": "Raggiungi il livello intesa [Digit:7digits ] con\nqualsiasi ospite."
+    "141": "Raggiungi il livello intesa [Digit:7digits ] con\nqualsiasi ospite.",
+    "142": "Ottieni una Riproduzione di Level Ball!\nCompleta le missioni nell'evento\n\"Il fanatico di Poké Ball di Galar\"!",
+    "143": "Ottieni una Riproduzione di Luna Ball!\nCerca nel covo segreto nell'evento\n\"Il fanatico di Poké Ball di Galar!\"",
+    "144": "Ottieni una Riproduzione di Rapid Ball!\nTrova 10 Voltorb in \"Trova i Pokémon\nBall!\"",
+    "145": "Ottieni una Riproduzione di Esca Ball!\nScova una Poké Ball dai colori rari\nin \"Trova i Pokémon Ball!\"",
+    "146": "Ottieni una Riproduzione di Chic Ball!\nFai schiudere tantissime Uova!",
+    "147": "Ottieni una Riproduzione di Peso Ball!\nDai un'occhiata allo scambio strumenti\ndi \"Accessori Veleno per rimbalzare\ndalla gioia!\"!",
+    "148": "Ottieni una Riproduzione di UC Ball!\nTi alleno io!",
+    "152": "Ottieni una Riproduzione di Friend\nBall! Cerca nel covo segreto\nnell'evento \"Il fanatico di Poké Ball\ndi Galar!\"",
+    "153": "Ottieni una Riproduzione di Love Ball!\nCerca nel covo segreto nell'evento\n\"Il fanatico di Poké Ball di Galar!\""
 }

@@ -33,6 +33,7 @@
     "20000010": "Matisse",
     "20000011": "Artie",
     "20000012": "Géraldine",
+    "20000013": "Victor",
     "20000014": "Gloria",
     "20000015": "Pokédexe",
     "20000016": "Orden",
@@ -90,7 +91,7 @@
     "20000068": "Accessoires",
     "20000069": "Die Kanto-Region",
     "20000070": "Alabastia",
-    "20000071": "Das Indigo Plateau",
+    "20000071": "Das Indigo-Plateau",
     "20000072": "Azuria City",
     "20000073": "Rayono City",
     "20000074": "Spikeford",
@@ -244,5 +245,14 @@
     "20000225": "Geister-Orden",
     "20000226": "Teak City",
     "20000227": "Turmruine",
-    "20000228": "Hellsehen"
+    "20000228": "Hellsehen",
+    "20000229": "Hop",
+    "20000230": "Mary",
+    "20000231": "Betys",
+    "20000232": "Curry",
+    "20000233": "Mahlzeiten",
+    "20000234": "Camping",
+    "20000235": "Furlongham",
+    "20000236": "Stadien",
+    "20000237": "Kampfkoryphäen"
 }

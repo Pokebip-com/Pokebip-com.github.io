@@ -197,5 +197,14 @@
     "138_element": "• [Name:TeamSkillTag ]",
     "139": "Have [Digit:6digits ] [EN:Qty S=\"interaction\" P=\"interactions\" ] in the\nTrainer Lodge (counts only if the\n[EN:Qty S=\"interaction is\" P=\"interactions are\" ] completed)",
     "140": "Reach friendship level [Digit:7digits Idx=\"1\" ] with\n[Digit:3digits ] [EN:Qty S=\"guest\" P=\"guests\" ]",
-    "141": "Reach friendship level [Digit:7digits ] with\nany guest"
+    "141": "Reach friendship level [Digit:7digits ] with\nany guest",
+    "142": "Obtain a Level Ball Replica!\nComplete missions in “Galar’s\nPoké Ball Enthusiast”!",
+    "143": "Obtain a Moon Ball Replica!\nSearch the secret hideout in “Galar’s\nPoké Ball Enthusiast”!",
+    "144": "Obtain a Fast Ball Replica!\nFind 10 Voltorb in “Find the\nBall Pokémon”!",
+    "145": "Obtain a Lure Ball Replica!\nFind a ball with rare colors\nin “Find the Ball Pokémon”!",
+    "146": "Obtain a Luxury Ball Replica!\nLet’s hatch a bunch of Eggs!",
+    "147": "Obtain a Heavy Ball Replica!\nHave a look at the item exchange\nfor “Collecta-ball Poison Gear!”",
+    "148": "Obtain a Beast Ball Replica!\nI’ll train you up!",
+    "152": "Obtain a Friend Ball Replica!\nSearch the secret hideout in “Galar’s\nPoké Ball Enthusiast”!",
+    "153": "Obtain a Love Ball Replica!\nSearch the secret hideout in “Galar’s\nPoké Ball Enthusiast”!"
 }

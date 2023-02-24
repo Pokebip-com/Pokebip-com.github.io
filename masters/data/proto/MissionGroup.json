@@ -326,5 +326,15 @@
 { "missionGroupId": 2501080, "scheduleId": "5010_4W_Event_swordshield_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 501080, "itemSetId": "414", "bannerId": 1501009, "u9": 1, "u10": 0 },
 { "missionGroupId": 2501090, "scheduleId": "5010_4W_Event_swordshield_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 501090, "itemSetId": "414", "bannerId": 1302003, "u9": 1, "u10": 0 },
 { "missionGroupId": 2501100, "scheduleId": "5010_4W_Event_nyarth_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 501100, "itemSetId": "206118", "bannerId": 1501007, "u9": 1, "u10": 0 },
-{ "missionGroupId": 2501110, "scheduleId": "5010_4W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 501110, "itemSetId": "2010056", "bannerId": 1303007, "u9": 1, "u10": 0 }
+{ "missionGroupId": 2501110, "scheduleId": "5010_4W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 501110, "itemSetId": "2010056", "bannerId": 1303007, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2502010, "scheduleId": "5020_1W_Event_Anniversary_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 502010, "itemSetId": "414", "bannerId": 1502001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2502020, "scheduleId": "5020_2W_Event_AKU_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 502020, "itemSetId": "414", "bannerId": 1502004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2502030, "scheduleId": "5020_2W_Event_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 502030, "itemSetId": "414", "bannerId": 1502005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2502040, "scheduleId": "5020_2W_Campaign_ActivitySupportMission", "u3": 0, "u4": 1, "u5": 0, "u6": 502040, "itemSetId": "2020155", "bannerId": 5303002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2502050, "scheduleId": "5020_2W_Event_Happy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 502050, "itemSetId": "636", "bannerId": 1210005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2502055, "scheduleId": "5020_3W_Event_Whiteday_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 502055, "itemSetId": "414", "bannerId": 1502007, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2502060, "scheduleId": "5020_4W_Event_Egg_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 502060, "itemSetId": "206118", "bannerId": 1502011, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2502070, "scheduleId": "5020_4W_Event_Ballguy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 502070, "itemSetId": "414", "bannerId": 1502009, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2502080, "scheduleId": "5020_5W_Event_AKU_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 502080, "itemSetId": "414", "bannerId": 1407001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2502090, "scheduleId": "5020_5W_Event_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 502090, "itemSetId": "414", "bannerId": 1407501, "u9": 1, "u10": 0 }
 ]}

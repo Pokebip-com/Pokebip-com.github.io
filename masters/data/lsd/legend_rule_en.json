@@ -28,5 +28,8 @@
     "legend_rule_3060_003": "The opponent’s flinch resistance increases\nevery time it recovers from flinching.",
     "legend_rule_3090_001": "The opponent takes less damage during its\nfirst and third HP bars when it is not\naffected by a status condition.",
     "legend_rule_3090_002": "The opponent takes less damage during its\nsecond and third HP bars when it is not\naffected by a status change.",
-    "legend_rule_3090_003": "When the opponent recovers from a status\ncondition or interference, its resistance to\nthat condition or interference increases."
+    "legend_rule_3090_003": "When the opponent recovers from a status\ncondition or interference, its resistance to\nthat condition or interference increases.",
+    "legend_rule_5020_001": "Powers up the opponent’s moves and sync\nmove when its Attack is raised.",
+    "legend_rule_5020_002": "Powers up the opponent’s moves and sync\nmove when its Sp. Atk is raised.",
+    "legend_rule_5020_003": "Starting from the opponent’s second HP bar,\nthe opponent takes less damage when it is\nnot affected by a field effect."
 }

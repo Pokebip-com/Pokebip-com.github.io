@@ -28,5 +28,8 @@
     "legend_rule_3060_003": "Al recuperarse de un efecto de retroceso,\nel rival adquiere resistencia al retroceso.",
     "legend_rule_3090_001": "En la 1.ª y la 3.ª barra de PS, el rival sufre\nmenos daño si no sufre problemas de estado.",
     "legend_rule_3090_002": "En la 2.ª y la 3.ª barra de PS, el rival sufre\nmenos daño si no sufre cambios de estado.",
-    "legend_rule_3090_003": "El rival adquiere resistencia a un problema\no cambio de estado tras sobreponerse a él."
+    "legend_rule_3090_003": "El rival adquiere resistencia a un problema\no cambio de estado tras sobreponerse a él.",
+    "legend_rule_5020_001": "Se potencian los movimientos y movimientos\ncompi del rival cuando aumenta su Ataque.",
+    "legend_rule_5020_002": "Se potencian los movimientos y movimientos\ncompi del rival cuando aumenta su At. Esp.",
+    "legend_rule_5020_003": "Cuando alcanza la 2.ª barra de PS, el rival\nsufre menos daño si no hay efectos de campo."
 }

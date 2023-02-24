@@ -524,5 +524,20 @@
     "999415": "Augmente l'[Name:ReferencedMessageTag ] du lanceur d'un nombre de rangs égal au nombre de Pokémon brûlés du côté ennemi.",
     "999414": "Quand au moins un Pokémon empoisonné ou gravement empoisonné se trouve du côté ennemi.",
     "999413": "Quand plus aucun Pokémon empoisonné ou gravement empoisonné ne se trouve du côté ennemi.",
-    "999412": "Augmente la Vitesse et le taux de critiques de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ]."
+    "999412": "Augmente la Vitesse et le taux de critiques de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
+    "999411": "Baisse [Name:ReferencedMessageTag ] de la cible de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
+    "999410": "Quand le nombre d'actions nécessaires pour lancer une capacité Duo de votre équipe est réduit de [Digit:1digit Idx=\"1\" ] pendant que cette capacité est désactivée.",
+    "999409": "Baisse la Défense et le Vitesse de la cible de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
+    "999408": "(Le compte à rebours avant activation n'est pas réduit quand les PPC restants pour cette capacité sont égaux à 0.)",
+    "999407": "Augmente la Défense et la Déf. Spé. de tous les Duos alliés de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ].",
+    "999406": "Applique l'[Name:ReferencedMessageTag Idx=\"3\" ] à tous les Duos alliés.",
+    "999405": "Baisse [Name:ReferencedMessageTag Idx=\"4\" ] du lanceur de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ].",
+    "999404": "Augmente l'effet Prochain boost capacité physique et l'effet Prochain boost capacité spéciale de tous les Duos alliés de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
+    "999403": "Augmente [Name:ReferencedMessageTag Idx=\"4\" ] du lanceur de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ].",
+    "999402": "Applique l'[Name:ReferencedMessageTag Idx=\"6\" ] au lanceur.",
+    "999401": "Le lanceur subit des dégâts équivalents à [Digit:2digits Idx=\"7\" ] % de ses PV restants.",
+    "999400": "Applique l'[Name:ReferencedMessageTag Idx=\"4\" ] au lanceur.",
+    "999399": "Quand le Duo de votre équipe utilise une capacité Duo [Digit:1digit Idx=\"2\" ] fois.",
+    "999398": "La puissance et les chances d'appliquer les effets supplémentaires de cette capacité ne sont pas baissées même s'il y a plusieurs cibles.",
+    "999397": "Augmente la puissance de l'attaque de 20 % quand le lanceur est en mauvaise posture."
 }

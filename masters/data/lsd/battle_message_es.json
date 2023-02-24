@@ -78,6 +78,7 @@
     "812": "¡La resiliencia de [Name:PokemonName ]\nal tipo Bicho no puede aumentar más!",
     "814": "¡La resiliencia de [Name:PokemonName ] al tipo Fantasma no puede aumentar más!",
     "816": "¡La resiliencia de [Name:PokemonName ]\nal tipo Siniestro no puede aumentar más!",
+    "817": "¡La resiliencia de [Name:PokemonName ] al tipo Acero no puede aumentar más!",
     "818": "¡La resiliencia de [Name:PokemonName ] al tipo Hada no puede aumentar más!",
     "852": "¡La resiliencia de [Name:PokemonName ] al tipo Fuego no puede disminuir más!",
     "853": "¡La resiliencia de [Name:PokemonName ]\nal tipo Agua no puede disminuir más!",
@@ -86,6 +87,7 @@
     "862": "¡La resiliencia de [Name:PokemonName ]\nal tipo Bicho no puede disminuir más!",
     "864": "¡La resiliencia de [Name:PokemonName ] al tipo Fantasma no puede disminuir más!",
     "866": "¡La resiliencia de [Name:PokemonName ]\nal tipo Siniestro no puede disminuir más!",
+    "867": "¡La resiliencia de [Name:PokemonName ] al tipo Acero no puede disminuir más!",
     "868": "¡La resiliencia de [Name:PokemonName ] al tipo Hada no puede disminuir más!",
     "996": "¡Se ha restaurado la barra de movimientos!",
     "1307": "¡Pero los PS de [Digit:1digit ] de los Pokémon ya están al\nmáximo!",
@@ -152,6 +154,7 @@
     "1812": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo Bicho\nno puede aumentar más!",
     "1814": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo\nFantasma no puede aumentar más!",
     "1816": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo\nSiniestro no puede aumentar más!",
+    "1817": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo Acero\nno puede aumentar más!",
     "1818": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo Hada\nno puede aumentar más!",
     "1852": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo Fuego\nno puede disminuir más!",
     "1853": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo Agua\nno puede disminuir más!",
@@ -160,6 +163,7 @@
     "1862": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo Bicho\nno puede disminuir más!",
     "1864": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo\nFantasma no puede disminuir más!",
     "1866": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo\nSiniestro no puede disminuir más!",
+    "1867": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo Acero\nno puede disminuir más!",
     "1868": "¡La resiliencia de [Digit:1digit ] de los Pokémon al tipo Hada\nno puede disminuir más!",
     "1996": "¡Se ha restaurado la barra de movimientos!"
 }

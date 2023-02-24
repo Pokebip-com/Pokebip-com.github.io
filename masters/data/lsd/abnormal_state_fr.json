@@ -45,6 +45,7 @@
     "241": "Résilience Insecte ↑",
     "243": "Résilience Spectre ↑",
     "245": "Résilience Ténèbres ↑",
+    "246": "Résilience Acier ↑",
     "247": "Résilience Fée ↑",
     "249": "Résilience Feu ↓",
     "250": "Résilience Eau ↓",
@@ -53,6 +54,7 @@
     "259": "Résilience Insecte ↓",
     "261": "Résilience Spectre ↓",
     "263": "Résilience Ténèbres ↓",
+    "264": "Résilience Acier ↓",
     "265": "Résilience Fée ↓",
     "301": "Résiste capa. phys.",
     "302": "Résiste capa. spé.",
@@ -189,5 +191,6 @@
     "9034": "Résilience Insecte",
     "9036": "Résilience Spectre",
     "9038": "Résilience Ténèbres",
+    "9039": "Résilience Acier",
     "9040": "Résilience Fée"
 }

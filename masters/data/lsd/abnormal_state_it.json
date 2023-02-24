@@ -45,6 +45,7 @@
     "241": "Protezione Coleottero ↑",
     "243": "Protezione Spettro ↑",
     "245": "Protezione Buio ↑",
+    "246": "Protezione Acciaio ↑",
     "247": "Protezione Folletto ↑",
     "249": "Protezione Fuoco ↓",
     "250": "Protezione Acqua ↓",
@@ -53,6 +54,7 @@
     "259": "Protezione Coleottero ↓",
     "261": "Protezione Spettro ↓",
     "263": "Protezione Buio ↓",
+    "264": "Protezione Acciaio ↓",
     "265": "Protezione Folletto ↓",
     "301": "Danni fisici ↓",
     "302": "Danni speciali ↓",
@@ -189,5 +191,6 @@
     "9034": "Protezione Coleottero",
     "9036": "Protezione Spettro",
     "9038": "Protezione Buio",
+    "9039": "Protezione Acciaio",
     "9040": "Protezione Folletto"
 }

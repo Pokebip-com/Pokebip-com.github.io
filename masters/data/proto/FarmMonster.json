@@ -570,6 +570,7 @@
 { "farmMonsterId": "180000303911", "trainerId": "18000030391", "nbPassives": 1, "isShiny": false, "u5": "18000000391", "u6": 0 },
 { "farmMonsterId": "180000303912", "trainerId": "18000030391", "nbPassives": 2, "isShiny": false, "u5": "18000000391", "u6": 0 },
 { "farmMonsterId": "180000303913", "trainerId": "18000030391", "nbPassives": 3, "isShiny": false, "u5": "18000000391", "u6": 0 },
+{ "farmMonsterId": "180000304010", "trainerId": "18000030401", "nbPassives": 3, "isShiny": true, "u5": "18000000401", "u6": 0 },
 { "farmMonsterId": "180000304011", "trainerId": "18000030401", "nbPassives": 1, "isShiny": false, "u5": "18000000401", "u6": 0 },
 { "farmMonsterId": "180000304012", "trainerId": "18000030401", "nbPassives": 2, "isShiny": false, "u5": "18000000401", "u6": 0 },
 { "farmMonsterId": "180000304013", "trainerId": "18000030401", "nbPassives": 3, "isShiny": false, "u5": "18000000401", "u6": 0 },

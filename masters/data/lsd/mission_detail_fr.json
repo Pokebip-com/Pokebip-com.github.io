@@ -197,5 +197,14 @@
     "138_element": "• [Name:TeamSkillTag ]",
     "139": "Complétez [Digit:6digits ] interaction[FR:Qty P=\"s\" ] dans\nle Salon des Dresseurs (seules les\ninteractions terminées comptent).",
     "140": "Atteignez le niveau d'affinité [Digit:7digits Idx=\"1\" ]\navec [Digit:3digits ] invité[FR:Qty P=\"s\" ].",
-    "141": "Atteignez le niveau d'affinité [Digit:7digits ]\navec n'importe quel invité."
+    "141": "Atteignez le niveau d'affinité [Digit:7digits ]\navec n'importe quel invité.",
+    "142": "Obtenez une Réplique de Niveau Ball !\nComplétez une mission dans « Le fan\nde Poké Ball de Galar » !",
+    "143": "Obtenez une Réplique de Lune Ball !\nFouillez le repaire secret dans\n« Le fan de Poké Ball de Galar » !",
+    "144": "Obtenez une Réplique de Speed Ball !\nTrouvez 10 Voltorbe dans « À la\nrecherche des Pokémon Balle ! »",
+    "145": "Obtenez une Réplique d'Appât Ball !\nRetrouvez la trace du Pokémon Balle\nchromatique dans « À la recherche\ndes Pokémon Balle ! »",
+    "146": "Obtenez une Réplique de Luxe Ball !\nFaites éclore plusieurs Œufs !",
+    "147": "Obtenez une Réplique de Masse Ball !\nJetez un œil à l'échange d'objets\ndans « Collection d'équipement\nPoison à dé-Ball-iser ! »",
+    "148": "Obtenez une Réplique d'Ultra Ball !\nEntraînez-vous avec le Ball Masqué !",
+    "152": "Obtenez une Réplique de Copain Ball !\nFouillez le repaire secret dans\n« Le fan de Poké Ball de Galar » !",
+    "153": "Obtenez une Réplique de Love Ball !\nFouillez le repaire secret dans\n« Le fan de Poké Ball de Galar » !"
 }

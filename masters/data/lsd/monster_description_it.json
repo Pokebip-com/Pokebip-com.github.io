@@ -281,6 +281,7 @@
     "20058614": "Cambia dimora a seconda delle stagioni.\nGli uomini si accorgono del cambio di stagione\nosservando le sue corna.",
     "20058700": "Si carica di energia e si alza in volo.\nNelle notti di fulmini e tempesta, questi Pokémon\nsono così numerosi da invadere tutto il cielo.",
     "20058900": "Protegge il corpo con la conchiglia che ha rubato\na Shelmet mentre spunzona il nemico con due lance.",
+    "20059100": "Cerca di attirare le prede esibendo un cappello a forma\ndi Poké Ball, ma sono pochi i Pokémon che si fanno\ningannare.",
     "20059200": "Con i suoi tentacoli a forma di velo avvolge la sua preda\nmentre nuota e la trascina con sé sul fondo del mare.",
     "20059500": "Non può produrre elettricità da sé, per cui si attacca a\nPokémon più grandi per succhiarne l'energia elettrostatica.",
     "20059900": "Produce l'energia che gli serve per vivere incastrando\ne facendo ruotare le due parti che lo compongono.",
@@ -432,6 +433,7 @@
     "20038801": "Vive nelle foreste vicino all'acqua, ma esce di giorno\nper far prendere sole alle piante sul guscio.",
     "20038901": "In tempi antichissimi la gente pensava che sottoterra\nci fossero dei giganteschi Torterra.",
     "2000780031": "È intrepido e orgoglioso. Corre leggiadro per i boschi\nconcentrando i suoi poteri psichici nella peluria\nall'estremità delle zampe.",
+    "2008110000": "I Thwackey più rispettati dai propri simili sono quelli\nin grado di produrre un ritmo forsennato con le due\nbacchette.",
     "2008120000": "Controlla il potere del suo ceppo speciale usandolo\ncome un tamburo e lotta servendosi delle radici.",
     "2008180000": "Ha vari assi nella manica. Emette getti d'acqua\ndalle dita e si fa trasportare dal vento grazie\nalla membrana che ha sulla schiena.",
     "2008340000": "Ha una natura estremamente feroce e addenta\nle prede con la sua mascella, così potente da\npoter sbriciolare sbarre di ferro.",
@@ -456,5 +458,8 @@
     "20086512": "Necrozma assume questa forma quando si nutre\ndella luce di Solgaleo. Lacera i nemici con gli\nartigli che ha sulla schiena e sugli arti.",
     "20086514": "Necrozma assume questa forma dopo aver\nassorbito un'enorme quantità di energia\nluminosa. Spara raggi laser da tutto il corpo.",
     "2008980012": "Si racconta che non mostrava alcuna pietà per chi\nostacolava il suo cammino, ma che dopo la lotta\nguariva le ferite dei suoi avversari.",
-    "2008920012": "Il suo credo è sconfiggere l'avversario a suon di colpi.\nSferra raffiche di attacchi che si abbattono sul nemico\ncome un flusso d'acqua continuo."
+    "2008920012": "Il suo credo è sconfiggere l'avversario a suon di colpi.\nSferra raffiche di attacchi che si abbattono sul nemico\ncome un flusso d'acqua continuo.",
+    "2001440031": "È conosciuto con il nome di Articuno. Emette\nun raggio che limita i movimenti del bersaglio,\ncome se lo congelasse.",
+    "2001450031": "Viene chiamato Zapdos per via del crepitio elettrico\ngenerato dallo sfregamento delle sue piume.",
+    "2001460031": "È conosciuto con il nome di Moltres. È avvolto da un'aura\nmaligna che arde come il fuoco."
 }

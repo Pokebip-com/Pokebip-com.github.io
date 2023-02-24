@@ -524,5 +524,20 @@
     "999415": "상대의 필드에 있는 화상 상태의 포켓몬 수만큼 자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 오른다",
     "999414": "상대의 필드에 독 상태나 맹독 상태의 포켓몬이 있을 때",
     "999413": "상대의 필드에 독 상태나 맹독 상태의 포켓몬이 없어졌을 때",
-    "999412": "같은 편 버디즈 전원의 스피드와 급소율이 [Digit:1digit ]단계 오른다"
+    "999412": "같은 편 버디즈 전원의 스피드와 급소율이 [Digit:1digit ]단계 오른다",
+    "999411": "상대의 [Name:ReferencedMessageTag ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"1\" ]단계 떨어뜨린다",
+    "999410": "봉인 상태인 동안 자신의 팀의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 [Digit:1digit Idx=\"1\" ] 줄였을 때",
+    "999409": "상대의 방어와 스피드를 [Digit:1digit ]단계 떨어뜨린다",
+    "999408": "(이 기술의 남은 횟수가 0일 때는 해방 조건의 카운트가 줄어들지 않는다)",
+    "999407": "같은 편 버디즈 전원의 방어와 특수방어가 [Digit:1digit Idx=\"2\" ]단계 오른다",
+    "999406": "같은 편 버디즈 전원을 [Name:ReferencedMessageTag Idx=\"3\" ] 상태[Kor:Particle char=\"ni\" ] 만든다",
+    "999405": "자신의 [Name:ReferencedMessageTag Idx=\"4\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"5\" ]단계 떨어뜨린다",
+    "999404": "같은 편 버디즈 전원의 차회물리기술위력부스트와 차회특수기술위력부스트가 각각 [Digit:1digit Idx=\"1\" ]단계 오른다",
+    "999403": "자신의 [Name:ReferencedMessageTag Idx=\"4\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"5\" ]단계 오른다",
+    "999402": "자신을 [Name:ReferencedMessageTag Idx=\"6\" ] 상태로 만든다",
+    "999401": "자신의 남은 HP의 [Digit:2digits Idx=\"7\" ]%만큼 데미지를 입는다",
+    "999400": "자신을 [Name:ReferencedMessageTag Idx=\"4\" ] 상태로 만든다",
+    "999399": "자신의 팀이 버디즈기술을 [Digit:1digit Idx=\"2\" ]회 사용했을 때",
+    "999398": "대상이 여럿일 경우에도 기술의 위력이나 추가 효과의 성공률이 떨어지지 않는다",
+    "999397": "자신이 위급할 때는 위력이 1.2배가 된다"
 }

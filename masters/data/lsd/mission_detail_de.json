@@ -197,5 +197,14 @@
     "138_element": "• [Name:TeamSkillTag ]",
     "139": "Interagiere [Digit:6digits ] Mal mit Gästen in\nder PokéLounge (nur abgeschlossene\nInteraktionen zählen).",
     "140": "Erreiche Interaktionslevel [Digit:7digits Idx=\"1\" ] mit\n[Digit:3digits ] [DE:Qty S=\"Gast\" P=\"Gästen\" ].",
-    "141": "Erreiche Interaktionslevel [Digit:7digits ] mit\neinem beliebigen Gast."
+    "141": "Erreiche Interaktionslevel [Digit:7digits ] mit\neinem beliebigen Gast.",
+    "142": "Erhalte ein Levelball-Replikat!\nSchließe Missionen in\n„Galars Pokéball-Enthusiast“ ab!",
+    "143": "Erhalte ein Mondball-Replikat!\nSuche nach dem geheimen Versteck\nin „Galars Pokéball-Enthusiast“!",
+    "144": "Erhalte ein Turboball-Replikat!\nFinde 10 Voltobal in „Auf Bällejagd“!",
+    "145": "Erhalte ein Köderball-Replikat!\nFinde einen Ball mit seltener Farbe in\n„Auf Bällejagd“!",
+    "146": "Erhalte ein Luxusball-Replikat!\nLassen wir ein paar Eier schlüpfen!",
+    "147": "Erhalte ein Schwerball-Replikat!\nWirf einen Blick in die Item-Täusche\nfür „Kugelige Kollektion“!",
+    "148": "Erhalte ein Ultraball-Replikat!\nIch trainiere dich!",
+    "152": "Erhalte ein Freundesball-Replikat!\nSuche nach dem geheimen Versteck\nin „Galars Pokéball-Enthusiast“!",
+    "153": "Erhalte ein Sympaball-Replikat!\nSuche nach dem geheimen Versteck\nin „Galars Pokéball-Enthusiast“!"
 }

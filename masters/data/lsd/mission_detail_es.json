@@ -197,5 +197,14 @@
     "138_element": "• [Name:TeamSkillTag ]",
     "139": "Entabla [Digit:6digits ] conversaci[ES:Qty S=\"ón\" P=\"ones\" ] en el\nSalón de Entrenadores (solo cuentan\nlas conversaciones terminadas).",
     "140": "Llega al nivel de amistad [Digit:7digits Idx=\"1\" ] con [Digit:3digits ] visitante[ES:Qty P=\"s\" ].",
-    "141": "Llega al nivel de amistad [Digit:7digits ] con un visitante."
+    "141": "Llega al nivel de amistad [Digit:7digits ] con un visitante.",
+    "142": "Consigue una réplica de Nivel Ball.\nCompleta misiones del evento\n\"Un plan redondo\".",
+    "143": "Consigue una réplica de Luna Ball.\nExplora el cubil secreto en el evento\n\"Un plan redondo\".",
+    "144": "Consigue una réplica de Rapid Ball.\nEncuentra 10 Voltorb en el evento\n\"¡En busca de Pokémon Bola!\".",
+    "145": "Consigue una réplica de Cebo Ball.\nEncuentra una bola de un color\ninusual en el evento \"¡En busca de\nPokémon Bola!\".",
+    "146": "Consigue una réplica de Lujo Ball.\n¡A incubar unos cuantos huevos!",
+    "147": "Consigue una réplica de Peso Ball.\nEcha un vistazo a los objetos que hay\npara canjear en el \"Evento accesorios\nde tipo Veneno con Bolifacio\".",
+    "148": "Consigue una réplica de Ente Ball.\n¡Yo te ayudo a entrenar!",
+    "152": "Consigue una réplica de Amigo Ball.\nExplora el cubil secreto en el evento\n\"Un plan redondo\".",
+    "153": "Consigue una réplica de Amor Ball.\nExplora el cubil secreto en el evento\n\"Un plan redondo\"."
 }

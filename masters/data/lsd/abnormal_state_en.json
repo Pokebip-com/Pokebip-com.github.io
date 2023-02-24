@@ -45,6 +45,7 @@
     "241": "Bug Type Rebuff ↑",
     "243": "Ghost Type Rebuff ↑",
     "245": "Dark Type Rebuff ↑",
+    "246": "Steel Type Rebuff ↑",
     "247": "Fairy Type Rebuff ↑",
     "249": "Fire Type Rebuff ↓",
     "250": "Water Type Rebuff ↓",
@@ -53,6 +54,7 @@
     "259": "Bug Type Rebuff ↓",
     "261": "Ghost Type Rebuff ↓",
     "263": "Dark Type Rebuff ↓",
+    "264": "Steel Type Rebuff ↓",
     "265": "Fairy Type Rebuff ↓",
     "301": "Physical Damage\nReduction",
     "302": "Special Damage\nReduction",
@@ -189,5 +191,6 @@
     "9034": "Bug Type Rebuff",
     "9036": "Ghost Type Rebuff",
     "9038": "Dark Type Rebuff",
+    "9039": "Steel Type Rebuff",
     "9040": "Fairy Type Rebuff"
 }
