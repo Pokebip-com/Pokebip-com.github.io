@@ -32,6 +32,7 @@ let selectedType;
 let btnCopy;
 let raidTable;
 let textarea;
+let jsonData;
 let raidsListSelect;
 let pokemonListSpan;
 
@@ -189,6 +190,25 @@ async function getRaidData(id) {
 	else {
 		console.error("Unknown raid type selected...");
 	}
+}
+
+function syntaxHighlight(json) {
+	json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+		var cls = 'number';
+		if (/^"/.test(match)) {
+			if (/:$/.test(match)) {
+				cls = 'key';
+			} else {
+				cls = 'string';
+			}
+		} else if (/true|false/.test(match)) {
+			cls = 'boolean';
+		} else if (/null/.test(match)) {
+			cls = 'null';
+		}
+		return '<span class="' + cls + '">' + match + '</span>';
+	});
 }
 
 function setEvent(id, entry = null, setUrl = true) {
@@ -363,11 +383,24 @@ function setPokemon(id) {
 	html += `<b>Nature :</b> ${nature}</td></tr>`;
 	textarea.value += `[b]Nature :[/b] ${nature}[/td]\n\t[/tr]\n`;
 
+	// TD Objet
+	if(raidEnemy.BossPokePara.Item > 0) {
+		html += `<tr><td colspan="4">`;
+		textarea.value += `\t[tr]\n\t\t[td|colspan=4]`;
+
+		item = itemNames[raidEnemy.BossPokePara.Item];
+
+		html += `<b>Objet :</b> <img src="../../images/items/item_${raidEnemy.BossPokePara.Item.toString().padStart(4, '0')}.png" width="30" height="30" /> ${item}</td></tr>`;
+		textarea.value += `[b]Objet :[/b] [objet=${itemIdToBipname[raidEnemy.BossPokePara.Item]}|EV] ${item}[/td]\n\t[/tr]\n`;
+
+	}
+
 	// TD Attaques
 	html += `<tr><td colspan="4"><div style="text-align: left">`;
 	textarea.value += `\t[tr]\n\t\t[td|colspan=4][left]`;
 
 	let nbMoves = 0;
+	let addedMoveIDs = [];
 
 	for(let i = 1; i <= 4; i++) {
 		let moveID = raidEnemy.BossPokePara["Waza" + i].WazaId;
@@ -383,6 +416,7 @@ function setPokemon(id) {
 		html += `${nbMoves > 0 ? '<br />' : ''}<img src="../../images/types/${moveType}.png" /> ${moveName}`;
 		textarea.value += `${nbMoves > 0 ? '[br]' : ''}[type=${moveType}|9G] ${moveName}`;
 
+		addedMoveIDs.push(raidEnemy.BossPokePara["Waza" + i].WazaId);
 		nbMoves++;
 	}
 
@@ -402,7 +436,7 @@ function setPokemon(id) {
 		let [action, wazaNo] = [raidEnemy.BossDesc["ExtraAction" + i].Action, raidEnemy.BossDesc["ExtraAction" + i].Wazano];
 		let move = wazaArray.find(waza => waza.MoveID === wazaNo);
 
-		if(action !== 3 || wazaNo === 0 || typeof move === "undefined") {
+		if(action !== 3 || wazaNo === 0 || addedMoveIDs.includes(wazaNo) || typeof move === "undefined") {
 			continue;
 		}
 
@@ -419,6 +453,7 @@ function setPokemon(id) {
 		html += `${nbMoves > 0 ? '<br />' : ''}<img src="../../images/types/${moveType}.png" /> ${moveName}`;
 		textarea.value += `${nbMoves > 0 ? '[br]' : ''}[type=${moveType}|9G] ${moveName}`;
 
+		addedMoveIDs.push(wazaNo);
 		nbMoves++;
 	}
 
@@ -448,6 +483,9 @@ function setPokemon(id) {
 	textarea.value += "[/table][/center]";
 
 	raidTable.innerHTML = html;
+
+	jsonData.innerHTML = syntaxHighlight(JSON.stringify(raidEnemy, null, 2));
+
 }
 
 // TODO Merge les deux fonctions de drops... ?
@@ -632,6 +670,7 @@ async function init() {
 	btnCopy = document.getElementById("btnCopy");
 	raidTable = document.getElementById("raidTable");
 	textarea = document.getElementById("area");
+	jsonData = document.getElementById("jsonData");
 	raidsListSelect = document.getElementById("raidsList");
 	pokemonListSpan = document.getElementById("pokemonList");
 

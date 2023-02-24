@@ -2,10 +2,18 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-	</head>
 		<link rel="stylesheet" href="../../css/pokebip.css">
 		<script src="js/dist/FileSaver.min.js"></script>
 		<script src="js/dist/jszip.min.js"></script>
+		<style>
+			pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+			.string { color: green; }
+			.number { color: darkorange; }
+			.boolean { color: blue; }
+			.null { color: magenta; }
+			.key { color: red; }
+		</style>
+	</head>
 	<body style="padding:10px;">
 		<select id="raidsList"></select>
 		<textarea id="area"></textarea>
@@ -24,6 +32,10 @@
 
 				<li class="listh-no-style">
 					<table id="raidTable" class="bipcode" style="text-align:center;"></table>
+				</li>
+
+				<li class="listh-no-style" >
+					<pre id="jsonData" style="text-align:left"></pre>
 				</li>
 			</ul>
 		</div>
