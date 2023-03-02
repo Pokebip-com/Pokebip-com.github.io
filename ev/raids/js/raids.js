@@ -4,7 +4,7 @@ const standardPath = dataPath + '/standard';
 const language = "French";
 
 let encData;
-let dropData;
+let fixedDropData;
 let bonusDropData
 
 let abilityNames;
@@ -155,7 +155,7 @@ async function getStandardData(id) {
 		.catch(error => console.log(error + "\n ID = " + id));
 
 	encData = (await encDataResponse.json()).Table;
-	dropData = (await dropDataResponse.json()).Table;
+	fixedDropData = (await dropDataResponse.json()).Table;
 	bonusDropData = (await bonusDropDataResponse.json()).Table;
 }
 
@@ -174,7 +174,7 @@ async function getEventData(event) {
 		.catch(error => console.log(error));
 
 	encData = (await encDataResponse.json()).Table;
-	dropData = (await dropDataResponse.json()).Table;
+	fixedDropData = (await dropDataResponse.json()).Table;
 	bonusDropData = (await bonusDropDataResponse.json()).Table;
 }
 
@@ -228,11 +228,11 @@ function setAnchors() {
 
 	encData.filter(enc => enc.RaidEnemyInfo.Rate > 0)
 		.sort((a, b) => {
-			let speciesCopyA = getSpeciesCopyFromDevId(a.RaidEnemyInfo.BossPokePara.DevId, a.RaidEnemyInfo.BossPokePara.FormId);
-			let speciesCopyB = getSpeciesCopyFromDevId(b.RaidEnemyInfo.BossPokePara.DevId, b.RaidEnemyInfo.BossPokePara.FormId);
+			let nationalIdA = getNationalIdFromDevId(a.RaidEnemyInfo.BossPokePara.DevId, a.RaidEnemyInfo.BossPokePara.FormId);
+			let nationalIdB = getNationalIdFromDevId(b.RaidEnemyInfo.BossPokePara.DevId, b.RaidEnemyInfo.BossPokePara.FormId);
 
-			if(speciesCopyA > speciesCopyB) return 1;
-			if(speciesCopyA < speciesCopyB) return -1;
+			if(nationalIdA > nationalIdB) return 1;
+			if(nationalIdA < nationalIdB) return -1;
 
 			if(a.RaidEnemyInfo.BossPokePara.FormId > b.RaidEnemyInfo.BossPokePara.FormId) return 1;
 			if(a.RaidEnemyInfo.BossPokePara.FormId < b.RaidEnemyInfo.BossPokePara.FormId) return -1;
@@ -245,7 +245,7 @@ function setAnchors() {
 			let difficulty = enc.RaidEnemyInfo.Difficulty || raidsListSelect.options[raidsListSelect.selectedIndex].getAttribute("data-stars");
 			let formText = enc.RaidEnemyInfo.BossPokePara.FormId > 0 ? `-${enc.RaidEnemyInfo.BossPokePara.FormId}` : "";
 			anchor.href = '#';
-			anchor.textContent = `${specieNames[enc.RaidEnemyInfo.BossPokePara.DevId]}${formText} ${difficulty}★`;
+			anchor.textContent = `${specieNames[getNationalIdFromDevId(enc.RaidEnemyInfo.BossPokePara.DevId, enc.RaidEnemyInfo.BossPokePara.FormId)]}${formText} ${difficulty}★`;
 			anchor.setAttribute("data-raid-id", enc.RaidEnemyInfo.No);
 
 			anchor.onclick = function() {
@@ -277,10 +277,11 @@ function setPokemon(id) {
 
 	let html;
 	let versionNo = parseInt(raidEnemy.RomVer);
+	let nationalId = getNationalIdFromDevId(raidEnemy.BossPokePara.DevId, raidEnemy.BossPokePara.FormId);
 
 	// TH Nom du Pokémon
-	html = `<thead><tr><th colspan="4">${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★`;
-	textarea.value += `\t[tr]\n\t\t[th|colspan=4]${specieNames[raidEnemy.BossPokePara.DevId]} ${difficulty}★`;
+	html = `<thead><tr><th colspan="4">${specieNames[nationalId]} ${difficulty}★`;
+	textarea.value += `\t[tr]\n\t\t[th|colspan=4]${specieNames[nationalId]} ${difficulty}★`;
 
 	if(versionNo > 0) {
 		let title = `Exclusif à ${versions[versionNo]}`;
@@ -291,9 +292,7 @@ function setPokemon(id) {
 
 	html += `</th></tr></thead>`;
 	textarea.value += `[/th]\n\t[/tr]\n`;
-
-	let speciesCopy = getSpeciesCopyFromDevId(raidEnemy.BossPokePara.DevId, raidEnemy.BossPokePara.FormId);
-	let imgName = formToSprite[speciesCopy + "-" + raidEnemy.BossPokePara.FormId] || speciesCopy;
+	let imgName = formToSprite[nationalId + "-" + raidEnemy.BossPokePara.FormId] || nationalId;
 
 	// TD pokeimg
 	html += `<tbody><tr><td colspan="4"><img src="../../images/ev-sprites/${imgName}.png" /></td></tr>`;
@@ -469,12 +468,12 @@ function setPokemon(id) {
 	html += `<tr><th>Nb</th><th colspan="2">Objet</th><th>Proba</th></tr>`;
 	textarea.value += `\t[tr]\n\t\t[th]Nb[/th]\n\t\t[th|colspan=2]Objet[/th]\n\t\t[th]Proba[/th]\n\t[/tr]\n`;
 
-	let [fixedDropsHTML, fixedDropsBipcode] = getFixedDrops(raidEnemy.DropTableFix, terraTypeID, raidEnemy.BossPokePara.DevId);
+	let [fixedDropsHTML, fixedDropsBipcode] = getDrops(fixedDropData, raidEnemy.DropTableFix, terraTypeID, raidEnemy.BossPokePara.DevId);
 
 	html += fixedDropsHTML;
 	textarea.value += fixedDropsBipcode;
 
-	let [bonusDropsHTML, bonusDropsBipcode] = getBonusDrops(raidEnemy.DropTableRandom, terraTypeID, raidEnemy.BossPokePara.DevId);
+	let [bonusDropsHTML, bonusDropsBipcode] = getDrops(bonusDropData, raidEnemy.DropTableRandom, terraTypeID, raidEnemy.BossPokePara.DevId);
 
 	html += bonusDropsHTML;
 	textarea.value += bonusDropsBipcode;
@@ -488,83 +487,8 @@ function setPokemon(id) {
 
 }
 
-// TODO Merge les deux fonctions de drops... ?
-function getFixedDrops(tableId, teraTypeId, pokemonId) {
+function getDrops(dropData, tableId, teraTypeId, pokemonId) {
 	let table = dropData.find(t => t.TableName === tableId);
-
-	if(typeof table === "undefined") {
-		return [null, null];
-	}
-
-	const teraShardName = teraTypeId <= 1 ? "Téra-Éclat du type" : `Téra-Éclat ${typeNames[teraTypeId-2]}`;
-	const teraShardId =  teraTypeId <= 1 ? normalTeraShardId : itemNames.indexOf(teraShardName);
-	const baseMonName = getBaseMonName(pokemonId);
-	const resourceIndex = firstResourceId + resourceNames.findIndex(res => res.includes(baseMonName));
-	let html = "";
-	let bipcode = "";
-
-	for(let i = 0; i < 15; i++) {
-		let reward = table["RewardItem" + i.toString().padStart(2, '0')];
-
-		if(reward.Num === 0) {
-			continue;
-		}
-
-		html += `<tr><td>${reward.Num}x</td><td>`;
-		bipcode += `\t[tr]\n\t\t[td]${reward.Num}x[/td]\n\t\t[td]`;
-
-		switch(reward.Category) {
-			case 0:
-				html += `<img src="../../images/items/item_${reward.ItemID.toString().padStart(4, '0')}.png" width="30" height="30" /></td><td>${itemNames[reward.ItemID]}`;
-				bipcode += `[objet=${itemIdToBipname[reward.ItemID]}|EV][/td]\n\t\t[td]${itemNames[reward.ItemID]}`;
-				if(typeof itemIdToBipname[reward.ItemID] === "undefined") {
-					console.log(`UNDEFINED ITEM; ID = ${reward.ItemID}; Name = ${itemNames[reward.ItemID]}`)
-				}
-				break;
-
-			case 1:
-				html += `<img src="../../images/items/item_${resourceIndex}.png" width="30" height="30" /></td><td>${itemNames[resourceIndex]}`;
-				bipcode += `[objet=${itemIdToBipname[resourceIndex]}|EV][/td]\n\t\t[td]${itemNames[resourceIndex]}`;
-				break;
-
-			case 2:
-				html += `<img src="../../images/items/item_${teraShardId}.png" width="30" height="30" /></td><td>${teraShardName}`;
-				bipcode += `[objet=${itemIdToBipname[teraShardId]}|EV][/td]\n\t\t[td]${teraShardName}`;
-				break;
-
-		}
-
-		if(reward.SubjectType > 0) {
-			html += `<br /><span style="font-size: 80%;">`;
-			bipcode += `[br][size=80%]`;
-		}
-
-		// noinspection JSDuplicateCaseLabel
-		switch(reward.SubjectType) {
-			case 1:
-				html += `Hôte uniquement</span>`;
-				bipcode += `Hôte uniquement[/size]`;
-				break;
-			case 2:
-				html += `Tous sauf l'hôte</span>`;
-				bipcode += `Tous sauf l'hôte[/size]`;
-				break;
-			case 3:
-				html += `Seulement une fois</span>`;
-				bipcode += `Seulement une fois[/size]`;
-				break;
-		}
-
-		html += `</td><td>100%</td></tr>`;
-		bipcode += `[/td]\n\t\t[td]100%[/td]\n\t[/tr]\n`;
-	}
-
-	return [html, bipcode];
-
-}
-
-function getBonusDrops(tableId, teraTypeId, pokemonId) {
-	let table = bonusDropData.find(t => t.TableName === tableId);
 
 	if(typeof table === "undefined") {
 		return [null, null];
@@ -579,16 +503,20 @@ function getBonusDrops(tableId, teraTypeId, pokemonId) {
 	let html = "";
 	let bipcode = "";
 
-	Object.keys(table).filter(k => k.startsWith("RewardItem")).forEach(key => {
-		while(table[key].Rate/divider > 100) {
-			divider *= 10;
-		}
-	})
+	let isFixed = "SubjectType" in table["RewardItem00"];
 
-	for(let i = 0; i < 30; i++) {
-		let reward = table["RewardItem" + i.toString().padStart(2, '0')];
+	if(!isFixed) {
+		Object.keys(table).filter(k => k.startsWith("RewardItem")).forEach(key => {
+			while(table[key].Rate/divider > 100) {
+				divider *= 10;
+			}
+		});
+	}
 
-		if(reward.Num === 0) {
+	for(let i = 0, rewardKey = "RewardItem" + i.toString().padStart(2, '0'); typeof table[rewardKey] !== "undefined"; i++, rewardKey = "RewardItem" + i.toString().padStart(2, '0')) {
+		let reward = table[rewardKey];
+
+		if(reward.Num === 0 || (reward.Category === 1 && resourceIndex < firstResourceId)) {
 			continue;
 		}
 
@@ -616,31 +544,60 @@ function getBonusDrops(tableId, teraTypeId, pokemonId) {
 
 		}
 
-		html += `</td><td>${reward.Rate/divider}%</td></tr>`;
-		bipcode += `[/td]\n\t\t[td]${reward.Rate/divider}%[/td]\n\t[/tr]\n`;
+		if(isFixed)
+		{
+			if(reward.SubjectType > 0) {
+				html += `<br /><span style="font-size: 80%;">`;
+				bipcode += `[br][size=80%]`;
+
+				// noinspection JSDuplicateCaseLabel
+				switch(reward.SubjectType) {
+					case 1:
+						html += `Hôte uniquement</span>`;
+						bipcode += `Hôte uniquement[/size]`;
+						break;
+					case 2:
+						html += `Tous sauf l'hôte</span>`;
+						bipcode += `Tous sauf l'hôte[/size]`;
+						break;
+					case 3:
+						html += `Seulement une fois</span>`;
+						bipcode += `Seulement une fois[/size]`;
+						break;
+				}
+			}
+
+			html += `</td><td>100%</td></tr>`;
+			bipcode += `[/td]\n\t\t[td]100%[/td]\n\t[/tr]\n`;
+
+		}
+		else {
+			html += `</td><td>${reward.Rate/divider}%</td></tr>`;
+			bipcode += `[/td]\n\t\t[td]${reward.Rate/divider}%[/td]\n\t[/tr]\n`;
+		}
 	}
 
 	return [html, bipcode];
 }
 
 function getBaseMonName(pokemonId) {
-	let pokeInfo = personalArray.find(p => p.Info.DexIndexNational === pokemonId);
+	let pokeInfo = personalArray.find(p => p.Info.SpeciesInternal === pokemonId);
 
 	if(typeof pokeInfo === "undefined") {
 		return "Pikachu";
 	}
 
-	return specieNames[pokeInfo.Hatch.Species];
+	return specieNames[pokeInfo.Hatch.SpeciesInternal];
 }
 
-function getSpeciesCopyFromDevId(DevId, FormId) {
-	let pokemon = personalArray.find(p => p.Info.DexIndexNational === DevId && p.Info.Form === FormId);
+function getNationalIdFromDevId(DevId, FormId) {
+	let pokemon = personalArray.find(p => p.Info.SpeciesInternal === DevId && p.Info.Form === FormId);
 
-	return pokemon.Info.SpeciesCopy;
+	return pokemon.Info.SpeciesNational;
 }
 
 function getPokemonAbilityName(DevId, FormId, Tokusei) {
-	let pokemon = personalArray.find(p => p.Info.DexIndexNational === DevId && p.Info.Form === FormId);
+	let pokemon = personalArray.find(p => p.Info.SpeciesInternal === DevId && p.Info.Form === FormId);
 
 	if(Tokusei === 3)
 		Tokusei = "H";
@@ -649,7 +606,7 @@ function getPokemonAbilityName(DevId, FormId, Tokusei) {
 }
 
 function getPokemonTypeNames(DevId, FormId) {
-	let pokemon = personalArray.find(p => p.Info.DexIndexNational === DevId && p.Info.Form === FormId);
+	let pokemon = personalArray.find(p => p.Info.SpeciesInternal === DevId && p.Info.Form === FormId);
 
 	return [... new Set([getTypeName(pokemon.Type1), getTypeName(pokemon.Type2)].filter(t => t !== ""))];
 }
