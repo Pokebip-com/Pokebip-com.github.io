@@ -419,7 +419,7 @@
     "999520": "자신의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다",
     "999519": "자신을 [Name:ReferencedMessageTag Idx=\"1\" ] 상태로 만든다",
     "999518": "여러 추가 효과 중에서 하나가 발동된다",
-    "999517": "같은 편 버디즈 전원을 [Name:ReferencedMessageTag Idx=\"1\" ] 상태[Kor:Particle char=\"ni\" ] 만든다",
+    "999517": "같은 편 버디즈 전원을 [Name:ReferencedMessageTag Idx=\"1\" ] 상태로 만든다",
     "999516": "상대 전원의 필드를 [Name:ReferencedMessageTag ][Kor:Particle char=\"ni\" ] 만든다\n([Name:ReferencedMessageTag ]: 버디즈가 행동할 때마다 [Name:ReferencedMessageTag Idx=\"1\" ]타입 데미지를 입는 상태)",
     "999515": "날씨가 모래바람일 때는 추가로 같은 편 버디즈 전원의 방어와 특수방어가 [Digit:1digit ]단계 오른다",
     "999514": "날씨가 모래바람일 때는 위력이 오른다",
@@ -539,5 +539,16 @@
     "999400": "자신을 [Name:ReferencedMessageTag Idx=\"4\" ] 상태로 만든다",
     "999399": "자신의 팀이 버디즈기술을 [Digit:1digit Idx=\"2\" ]회 사용했을 때",
     "999398": "대상이 여럿일 경우에도 기술의 위력이나 추가 효과의 성공률이 떨어지지 않는다",
-    "999397": "자신이 위급할 때는 위력이 1.2배가 된다"
+    "999397": "자신이 위급할 때는 위력이 1.2배가 된다",
+    "999396": "상대 전원의 필드가 [Name:ReferencedMessageTag ]일 때는 위력이 오른다",
+    "999395": "같은 편의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 오른다",
+    "999394": "같은 편의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다",
+    "999393": "상대의 필드에 타입 저항이 떨어진 포켓몬이 있을 때",
+    "999392": "상대의 필드에 타입 저항이 떨어진 포켓몬이 없어졌을 때",
+    "999391": "상대의 공격과 방어, 스피드를 [Digit:1digit ]단계 떨어뜨린다",
+    "999389": "상대의 필드에 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 떨어진 포켓몬이 있을 때",
+    "999388": "상대의 필드에 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 떨어진 포켓몬이 없어졌을 때",
+    "999386": "상대 전원의 필드를 [Name:ReferencedMessageTag Idx=\"1\" ] 상태로 만든다",
+    "999385": "같은 편 버디즈 전원을 [Name:ReferencedMessageTag Idx=\"4\" ] 상태로 만든다",
+    "999384": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"4\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"5\" ]단계 오른다"
 }

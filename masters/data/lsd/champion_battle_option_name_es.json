@@ -21,10 +21,21 @@
     "champion_battle_option_name_2120_1602": "Aumento de PS +2",
     "champion_battle_option_name_2120_1604": "Aumento de PS +4",
     "champion_battle_option_name_2120_1606": "Aumento de PS +6",
+    "champion_battle_option_name_2120_1608": "Aumento de PS +8",
     "champion_battle_option_name_2120_1701": "Inmunidad a probl. estado",
     "champion_battle_option_name_2120_1801": "Inmunidad a caract. ↓",
     "champion_battle_option_name_2120_1905": "Curación reducida +5",
     "champion_battle_option_name_2120_2001": "Reducción de PM",
     "champion_battle_option_name_2120_2101": "Ataque potenciador +1",
-    "champion_battle_option_name_2120_2102": "Ataque potenciador +2"
+    "champion_battle_option_name_2120_2102": "Ataque potenciador +2",
+    "champion_battle_option_name_5030_0101": "Inmunidad a\nsabotajes",
+    "champion_battle_option_name_5030_0201": "Aumento inicial\nde 5 carac. +3",
+    "champion_battle_option_name_5030_0202": "Reducción inicial\nde 5 carac. +3",
+    "champion_battle_option_name_5030_0301": "Reducción de\ndaño físico +8",
+    "champion_battle_option_name_5030_0302": "Reducción de\ndaño especial +8",
+    "champion_battle_option_name_5030_0303": "Reducción de\ndaño simple +8",
+    "champion_battle_option_name_5030_0401": "Sin cambios de tiempo,\ncampo o zona",
+    "champion_battle_option_name_5030_0501": "Daño ×3 a compis\nde ataque",
+    "champion_battle_option_name_5030_0502": "Daño ×3 a compis\nde sabotaje",
+    "champion_battle_option_name_5030_0503": "Daño ×3 a compis\nde apoyo"
 }

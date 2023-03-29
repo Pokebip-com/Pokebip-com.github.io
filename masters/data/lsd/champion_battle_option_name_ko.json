@@ -21,10 +21,21 @@
     "champion_battle_option_name_2120_1602": "HP상승2",
     "champion_battle_option_name_2120_1604": "HP상승4",
     "champion_battle_option_name_2120_1606": "HP상승6",
+    "champion_battle_option_name_2120_1608": "HP상승8",
     "champion_battle_option_name_2120_1701": "상태이상무효",
     "champion_battle_option_name_2120_1801": "능력다운무효",
     "champion_battle_option_name_2120_1905": "같은편\nHP회복량감소5",
     "champion_battle_option_name_2120_2001": "같은편\n기술횟수상한감소",
     "champion_battle_option_name_2120_2101": "공격할때마다\n위력상승1",
-    "champion_battle_option_name_2120_2102": "공격할때마다\n위력상승2"
+    "champion_battle_option_name_2120_2102": "공격할때마다\n위력상승2",
+    "champion_battle_option_name_5030_0101": "방해상태무효",
+    "champion_battle_option_name_5030_0201": "시작시\n능력5종업3",
+    "champion_battle_option_name_5030_0202": "시작시\n능력5종다운3",
+    "champion_battle_option_name_5030_0301": "P기술B기술BD기술\n물리경감8",
+    "champion_battle_option_name_5030_0302": "P기술B기술BD기술\n특수경감8",
+    "champion_battle_option_name_5030_0303": "비발군시P기술B기술\nBD기술경감8",
+    "champion_battle_option_name_5030_0401": "날씨필드\n존변경금지",
+    "champion_battle_option_name_5030_0501": "어태커P기술\n피격데미지3배",
+    "champion_battle_option_name_5030_0502": "테크니컬P기술\n피격데미지3배",
+    "champion_battle_option_name_5030_0503": "서포트P기술\n피격데미지3배"
 }

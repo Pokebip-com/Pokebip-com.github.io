@@ -15,5 +15,15 @@
     "champion_battle_option_description_2120_18": "Opponents become immune to all\nstat-lowering effects.",
     "champion_battle_option_description_2120_19": "Reduces the HP restored by allies’ healing moves\nby [Digit:6digits ]%.",
     "champion_battle_option_description_2120_20": "Halves the MP of all allied sync pairs.",
-    "champion_battle_option_description_2120_21": "Every time an opponent’s attack is successful,\npowers up that opponent’s attacks by [Digit:6digits ]%."
+    "champion_battle_option_description_2120_21": "Every time an opponent’s attack is successful,\npowers up that opponent’s attacks by [Digit:6digits ]%.",
+    "champion_battle_option_description_5030_0101": "Prevents the opponent from flinching, becoming\nconfused, or becoming trapped.",
+    "champion_battle_option_description_5030_0201": "At the start of battle, raises the Attack, Defense,\nSp. Atk, Sp. Def, and Speed of all opposing sync\npairs by three stat ranks.",
+    "champion_battle_option_description_5030_0202": "At the start of battle, lowers the Attack, Defense,\nSp. Atk, Sp. Def, and Speed of all allied sync\npairs by three stat ranks.",
+    "champion_battle_option_description_5030_0301": "Reduces damage the opponent receives by\n[Digit:6digits ]% when the opponent is hit by a move,\nsync move, or max move that is a physical attack.",
+    "champion_battle_option_description_5030_0302": "Reduces damage the opponent receives by\n[Digit:6digits ]% when the opponent is hit by a move,\nsync move, or max move that is a special attack.",
+    "champion_battle_option_description_5030_0303": "Reduces damage the opponent receives by\n[Digit:6digits ]% when the opponent is hit by a move,\nsync move, or max move that is not a\nsupereffective attack.",
+    "champion_battle_option_description_5030_0401": "The user cannot change the weather, terrain,\nor zone.",
+    "champion_battle_option_description_5030_0501": "All allied Physical Strike sync pairs and Special\nStrike sync pairs receive three times the damage\nwhen hit by an attack move.",
+    "champion_battle_option_description_5030_0502": "All allied tech sync pairs receive three times the\ndamage when hit by an attack move.",
+    "champion_battle_option_description_5030_0503": "All allied support sync pairs receive three times\nthe damage when hit by an attack move."
 }

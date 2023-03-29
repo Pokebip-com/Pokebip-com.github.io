@@ -93,5 +93,17 @@
     "event_5010_1W_SuperTicket_02": "카밀레 시즌 한정 출현율업 B서치",
     "event_5010_1W_MasterTicket_02": "카밀레 시즌 한정 확정 B서치",
     "event_5010_2W_SuperTicket_01": "시즌 한정 출현율업 B서치",
-    "event_5020_4W_MasterTicket_01": "볼가이 확정 버라이어티 B서치"
+    "event_5020_4W_MasterTicket_01": "볼가이 확정 버라이어티 B서치",
+    "event_5030_1W_SuperTicket_01": "성호 스페셜 코스튬 출현율업 B서치",
+    "event_5030_1W_MasterTicket_01": "성호 스페셜 코스튬 확정 B서치",
+    "event_5030_1W_SuperTicket_02": "사나 스페셜 코스튬 출현율업 B서치",
+    "event_5030_1W_MasterTicket_02": "사나 스페셜 코스튬 확정 B서치",
+    "event_5030_2W_SuperTicket_01": "시즌 한정 출현율업 B서치",
+    "event_5030_3W_SuperTicket_01": "피아나 스페셜 코스튬 출현율업 B서치",
+    "event_5030_3W_MasterTicket_01": "피아나 스페셜 코스튬 확정 B서치",
+    "event_5030_3W_SuperTicket_02": "금선 스페셜 코스튬 출현율업 B서치",
+    "event_5030_3W_MasterTicket_02": "금선 스페셜 코스튬 확정 B서치",
+    "event_5030_4W_MasterTicket_01": "칸나 확정 버라이어티 B서치",
+    "event_5030_4W_MasterTicket_02": "시바 확정 버라이어티 B서치",
+    "event_5030_4W_SuperTicket_01": "스페셜 코스튬 출현율업 B서치"
 }

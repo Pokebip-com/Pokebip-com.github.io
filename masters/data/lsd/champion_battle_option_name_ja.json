@@ -21,10 +21,21 @@
     "champion_battle_option_name_2120_1602": "ＨＰ上昇２",
     "champion_battle_option_name_2120_1604": "ＨＰ上昇４",
     "champion_battle_option_name_2120_1606": "ＨＰ上昇６",
+    "champion_battle_option_name_2120_1608": "ＨＰ上昇８",
     "champion_battle_option_name_2120_1701": "状態異常無効",
     "champion_battle_option_name_2120_1801": "能力ダウン無効",
     "champion_battle_option_name_2120_1905": "味方ＨＰ回復量\n減少５",
     "champion_battle_option_name_2120_2001": "味方わざ回数\n上限減少",
     "champion_battle_option_name_2120_2101": "攻撃するたび\n威力上昇１",
-    "champion_battle_option_name_2120_2102": "攻撃するたび\n威力上昇２"
+    "champion_battle_option_name_2120_2102": "攻撃するたび\n威力上昇２",
+    "champion_battle_option_name_5030_0101": "妨害状態無効",
+    "champion_battle_option_name_5030_0201": "開始時\n能力５種アップ３",
+    "champion_battle_option_name_5030_0202": "開始時\n能力５種ダウン３",
+    "champion_battle_option_name_5030_0301": "Ｐ技Ｂ技ＢＤ技\n物理軽減８",
+    "champion_battle_option_name_5030_0302": "Ｐ技Ｂ技ＢＤ技\n特殊軽減８",
+    "champion_battle_option_name_5030_0303": "非抜群時Ｐ技Ｂ技\nＢＤ技軽減８",
+    "champion_battle_option_name_5030_0401": "天気フィールド\nゾーン変更禁止",
+    "champion_battle_option_name_5030_0501": "アタッカーＰ技\n被ダメージ３倍",
+    "champion_battle_option_name_5030_0502": "テクニカルＰ技\n被ダメージ３倍",
+    "champion_battle_option_name_5030_0503": "サポートＰ技\n被ダメージ３倍"
 }

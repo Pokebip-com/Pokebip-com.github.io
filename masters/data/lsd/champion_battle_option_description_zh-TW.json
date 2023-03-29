@@ -15,5 +15,15 @@
     "champion_battle_option_description_2120_18": "對手所有的能力都不會下降。",
     "champion_battle_option_description_2120_19": "當自己使出會回復ＨＰ的招式時，ＨＰ回復量會降低[Digit:6digits ]％。",
     "champion_battle_option_description_2120_20": "我方全體拍組的招式次數會變成一半。",
-    "champion_battle_option_description_2120_21": "當對手每次攻擊成功後，攻擊的威力會提高[Digit:6digits ]％。"
+    "champion_battle_option_description_2120_21": "當對手每次攻擊成功後，攻擊的威力會提高[Digit:6digits ]％。",
+    "champion_battle_option_description_5030_0101": "對手不會陷入畏縮狀態、混亂狀態\n和束縛狀態。",
+    "champion_battle_option_description_5030_0201": "對戰開始時，會提高對手全體拍組的\n攻擊、防禦、特攻、特防、速度３階段。",
+    "champion_battle_option_description_5030_0202": "對戰開始時，會降低我方全體拍組的\n攻擊、防禦、特攻、特防、速度３階段。",
+    "champion_battle_option_description_5030_0301": "減輕對手受到招式、\n拍組招式、拍組極巨化招式\n的物理攻擊時的傷害[Digit:6digits ]％。",
+    "champion_battle_option_description_5030_0302": "減輕對手受到招式、\n拍組招式、拍組極巨化招式\n的特殊攻擊時的傷害[Digit:6digits ]％。",
+    "champion_battle_option_description_5030_0303": "減輕對手受到非效果絕佳的\n招式、拍組招式、拍組極巨化招式\n攻擊時的傷害[Digit:6digits ]％。",
+    "champion_battle_option_description_5030_0401": "自己無法變更天氣、場地、領域。",
+    "champion_battle_option_description_5030_0501": "我方全體物理攻擊型拍組和特殊攻擊型拍組\n受到招式攻擊時的傷害會變成３倍。",
+    "champion_battle_option_description_5030_0502": "我方全體技術型拍組\n受到招式攻擊時的傷害會變成３倍。",
+    "champion_battle_option_description_5030_0503": "我方全體輔助型拍組\n受到招式攻擊時的傷害會變成３倍。"
 }

@@ -15,5 +15,15 @@
     "champion_battle_option_description_2120_18": "No se pueden reducir las características del\nbando rival.",
     "champion_battle_option_description_2120_19": "Se reduce en un [Digit:6digits ]% la cantidad de PS\nrecuperada por el bando del usuario al usar\nmovimientos curativos.",
     "champion_battle_option_description_2120_20": "Se reducen a la mitad los PM del bando del\nusuario.",
-    "champion_battle_option_description_2120_21": "Se aumenta en un [Digit:6digits ]% la potencia de los\nmovimientos del bando rival si uno de sus\nmovimientos acierta."
+    "champion_battle_option_description_2120_21": "Se aumenta en un [Digit:6digits ]% la potencia de los\nmovimientos del bando rival si uno de sus\nmovimientos acierta.",
+    "champion_battle_option_description_5030_0101": "El rival es inmune al retroceso, a la confusión\ny a las ataduras.",
+    "champion_battle_option_description_5030_0201": "Se aumentan en 3 niveles el Ataque, la Defensa,\nel Ataque Especial, la Defensa Especial y la\nVelocidad de todos los rivales al comienzo del\ncombate.",
+    "champion_battle_option_description_5030_0202": "Se reducen en 3 niveles el Ataque, la Defensa,\nel Ataque Especial, la Defensa Especial y la\nVelocidad de todos los aliados al comienzo del\ncombate.",
+    "champion_battle_option_description_5030_0301": "Se reduce en un [Digit:6digits ]% el daño que el rival\nrecibe de movimientos, movimientos compi\no movimientos compi Dinamax si estos son\nataques físicos.",
+    "champion_battle_option_description_5030_0302": "Se reduce en un [Digit:6digits ]% el daño que el rival\nrecibe de movimientos, movimientos compi\no movimientos compi Dinamax si estos son\nataques especiales.",
+    "champion_battle_option_description_5030_0303": "Se reduce en un [Digit:6digits ]% el daño que el rival\nrecibe de movimientos, movimientos compi\no movimientos compi Dinamax si estos no\nresultan supereficaces.",
+    "champion_battle_option_description_5030_0401": "El usuario no puede cambiar el tiempo\natmosférico, el campo ni la zona.",
+    "champion_battle_option_description_5030_0501": "Todos los compis de ataque físico o de ataque\nespecial aliados reciben el triple de daño cuando\nles golpean con un movimiento de ataque.",
+    "champion_battle_option_description_5030_0502": "Todos los compis de sabotaje aliados reciben\nel triple de daño cuando les golpean con un\nmovimiento de ataque.",
+    "champion_battle_option_description_5030_0503": "Todos los compis de apoyo aliados reciben el\ntriple de daño cuando les golpean con un\nmovimiento de ataque."
 }

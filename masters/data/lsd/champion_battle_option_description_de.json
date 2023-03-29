@@ -15,5 +15,15 @@
     "champion_battle_option_description_2120_18": "Alle Gegner sind vor der Senkung von\nStatuswerten geschützt.",
     "champion_battle_option_description_2120_19": "Die Menge an KP, die der Spieler mit Attacken\nwiederherstellen kann, sinkt um [Digit:6digits ]%.",
     "champion_battle_option_description_2120_20": "Die Attackeneinsetzpunkte (AEP) aller Gefährten\nim Team werden halbiert.",
-    "champion_battle_option_description_2120_21": "Die Stärke von Angriffen des Gegners steigt mit\njedem Treffer um [Digit:6digits ]%."
+    "champion_battle_option_description_2120_21": "Die Stärke von Angriffen des Gegners steigt mit\njedem Treffer um [Digit:6digits ]%.",
+    "champion_battle_option_description_5030_0101": "Schützt den Gegner vor Zurückschrecken,\nVerwirrung und Umschlingung.",
+    "champion_battle_option_description_5030_0201": "Erhöht zu Beginn des Kampfes den Angriff,\ndie Verteidigung, den Spezial-Angriff, die\nSpezial-Verteidigung und die Initiative aller\ngegnerischen Gefährten um 3.",
+    "champion_battle_option_description_5030_0202": "Senkt zu Beginn des Kampfes den Angriff,\ndie Verteidigung, den Spezial-Angriff, die\nSpezial-Verteidigung und die Initiative aller\nGefährten im Team um 3.",
+    "champion_battle_option_description_5030_0301": "Verringert beim Gegner den durch einen Angriff\nmit einer Attacke, Gefährtenattacke oder\nGefährten-Dynamax-Attacke erlittenen Schaden\num [Digit:6digits ] %, wenn es sich dabei um einen\nphysischen Angriff handelt.",
+    "champion_battle_option_description_5030_0302": "Verringert beim Gegner den durch einen Angriff\nmit einer Attacke, Gefährtenattacke oder\nGefährten-Dynamax-Attacke erlittenen Schaden\num [Digit:6digits ] %, wenn es sich dabei um einen\nSpezial-Angriff handelt.",
+    "champion_battle_option_description_5030_0303": "Verringert beim Gegner den durch einen Angriff\nmit einer Attacke, Gefährtenattacke oder\nGefährten-Dynamax-Attacke erlittenen Schaden\num [Digit:6digits ] %, wenn es sich dabei nicht um einen\nsehr effektiven Angriff handelt.",
+    "champion_battle_option_description_5030_0401": "Der Anwender kann weder Wetter noch Feld oder\nFokus ändern.",
+    "champion_battle_option_description_5030_0501": "Alle Gefährten im Team, die physische Angreifer\noder Spezial-Angreifer sind, erleiden das\nDreifache an Schaden, wenn sie von einem\nAngriff mit einer Attacke getroffen werden.",
+    "champion_battle_option_description_5030_0502": "Alle Taktiker-Gefährten im Team erleiden das\nDreifache an Schaden, wenn sie von einem\nAngriff mit einer Attacke getroffen werden.",
+    "champion_battle_option_description_5030_0503": "Alle Helfer-Gefährten im Team erleiden das\nDreifache an Schaden, wenn sie von einem\nAngriff mit einer Attacke getroffen werden."
 }

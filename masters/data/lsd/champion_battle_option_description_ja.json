@@ -15,5 +15,15 @@
     "champion_battle_option_description_2120_18": "相手はすべての能力がさがらない",
     "champion_battle_option_description_2120_19": "ＨＰを回復させるわざを自分がつかったときのＨＰ回復量が[Digit:6digits ]％さがる",
     "champion_battle_option_description_2120_20": "味方全員のわざの回数が半分になる",
-    "champion_battle_option_description_2120_21": "相手は攻撃が成功するたびに攻撃の威力が[Digit:6digits ]％ずつあがる"
+    "champion_battle_option_description_2120_21": "相手は攻撃が成功するたびに攻撃の威力が[Digit:6digits ]％ずつあがる",
+    "champion_battle_option_description_5030_0101": "相手はひるみ状態やこんらん状態や\nバインド状態にならない",
+    "champion_battle_option_description_5030_0201": "バトルの開始時に相手全員の攻撃と防御と特攻と特防と\n素早さが３段階あがる",
+    "champion_battle_option_description_5030_0202": "バトルの開始時に味方全員の攻撃と防御と特攻と特防と\n素早さが３段階さがる",
+    "champion_battle_option_description_5030_0301": "相手は技やバディーズわざや\nバディーズダイマックスわざで物理攻撃を受けたときの\nダメージが[Digit:6digits ]％軽減される",
+    "champion_battle_option_description_5030_0302": "相手は技やバディーズわざや\nバディーズダイマックスわざで特殊攻撃を受けたときの\nダメージが[Digit:6digits ]％軽減される",
+    "champion_battle_option_description_5030_0303": "相手は技やバディーズわざや\nバディーズダイマックスわざで効果抜群ではない攻撃を\n受けたときのダメージが[Digit:6digits ]％軽減される",
+    "champion_battle_option_description_5030_0401": "自分は天気やフィールドやゾーンを変更できなくなる",
+    "champion_battle_option_description_5030_0501": "味方全員の物理アタッカーと特殊アタッカーは\n技で攻撃を受けたときのダメージが３倍になる",
+    "champion_battle_option_description_5030_0502": "味方全員のテクニカルは\n技で攻撃を受けたときのダメージが３倍になる",
+    "champion_battle_option_description_5030_0503": "味方全員のサポートは\n技で攻撃を受けたときのダメージが３倍になる"
 }

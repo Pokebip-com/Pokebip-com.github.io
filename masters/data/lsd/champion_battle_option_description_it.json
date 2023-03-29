@@ -15,5 +15,15 @@
     "champion_battle_option_description_2120_18": "Le Unità avversarie sono immuni alle riduzioni\ndelle statistiche.",
     "champion_battle_option_description_2120_19": "Quando un'Unità alleata usa una mossa che fa\nrecuperare PS, i PS recuperati diminuiscono\n([Digit:6digits ]% in meno).",
     "champion_battle_option_description_2120_20": "Il numero di utilizzi delle mosse viene dimezzato\nper tutte le Unità alleate.",
-    "champion_battle_option_description_2120_21": "Ogni volta che un'Unità avversaria manda\na segno un attacco, la potenza dei suoi attacchi\naumenta ([Digit:6digits ]% in più)."
+    "champion_battle_option_description_2120_21": "Ogni volta che un'Unità avversaria manda\na segno un attacco, la potenza dei suoi attacchi\naumenta ([Digit:6digits ]% in più).",
+    "champion_battle_option_description_5030_0101": "Le Unità avversarie sono immuni alla confusione,\nal tentennamento e all'imprigionamento.",
+    "champion_battle_option_description_5030_0201": "All'inizio della lotta, l'Attacco, la Difesa,\nl'Attacco Speciale, la Difesa Speciale\ne la Velocità di tutte le Unità avversarie\naumentano di tre gradi.",
+    "champion_battle_option_description_5030_0202": "All'inizio della lotta, l'Attacco, la Difesa,\nl'Attacco Speciale, la Difesa Speciale\ne la Velocità di tutte le Unità alleate\ndiminuiscono di tre gradi.",
+    "champion_battle_option_description_5030_0301": "Le Unità avversarie subiscono meno danni\n([Digit:6digits ]% in meno) dagli attacchi fisici\nscagliati tramite mosse, Unimosse o mosse\nUniDynamax.",
+    "champion_battle_option_description_5030_0302": "Le Unità avversarie subiscono meno danni\n([Digit:6digits ]% in meno) dagli attacchi speciali\nscagliati tramite mosse, Unimosse o mosse\nUniDynamax.",
+    "champion_battle_option_description_5030_0303": "Le Unità avversarie subiscono meno danni\n([Digit:6digits ]% in meno) dagli attacchi non\nsuperefficaci scagliati tramite mosse,\nUnimosse o mosse UniDynamax.",
+    "champion_battle_option_description_5030_0401": "Non puoi cambiare le condizioni atmosferiche,\nné trasformare il campo di lotta o la zona.",
+    "champion_battle_option_description_5030_0501": "Tutte le Unità alleate con il ruolo di Attaccante\nfisico o Attaccante speciale ricevono il triplo\ndei danni quando colpite da un attacco semplice.",
+    "champion_battle_option_description_5030_0502": "Tutte le Unità alleate con il ruolo di Tecnico\nricevono il triplo dei danni quando colpite\nda un attacco semplice.",
+    "champion_battle_option_description_5030_0503": "Tutte le Unità alleate con il ruolo di Aiutante\nricevono il triplo dei danni quando colpite\nda un attacco semplice."
 }

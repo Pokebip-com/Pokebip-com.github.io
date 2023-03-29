@@ -21,10 +21,21 @@
     "champion_battle_option_name_2120_1602": "PV ↑ 2",
     "champion_battle_option_name_2120_1604": "PV ↑ 4",
     "champion_battle_option_name_2120_1606": "PV ↑ 6",
+    "champion_battle_option_name_2120_1608": "PV ↑ 8",
     "champion_battle_option_name_2120_1701": "Immunité\nAltérations Statut",
     "champion_battle_option_name_2120_1801": "Immunité ↓Stats",
     "champion_battle_option_name_2120_1905": "Soin Alliés ↓ 5",
     "champion_battle_option_name_2120_2001": "PPC Alliés ↓",
     "champion_battle_option_name_2120_2101": "Capa. Offensive\nPui. ↑ 1",
-    "champion_battle_option_name_2120_2102": "Capa. Offensive\nPui. ↑ 2"
+    "champion_battle_option_name_2120_2102": "Capa. Offensive\nPui. ↑ 2",
+    "champion_battle_option_name_5030_0101": "Immunité Tourment",
+    "champion_battle_option_name_5030_0201": "Début 5 stats ↑ 3",
+    "champion_battle_option_name_5030_0202": "Début 5 stats ↓ 3",
+    "champion_battle_option_name_5030_0301": "Action Capa. Duo\nC. D D. Stoï. Phys. 8",
+    "champion_battle_option_name_5030_0302": "Action Capa. Duo\nC. D D. Stoï. Spé. 8",
+    "champion_battle_option_name_5030_0303": "Action Capa. Duo\nC. D D. Non SE 8",
+    "champion_battle_option_name_5030_0401": "Météo Champ Zone\nInaltérables",
+    "champion_battle_option_name_5030_0501": "Attaquants Action\nDégâts Subis × 3",
+    "champion_battle_option_name_5030_0502": "Tacticiens Action\nDégâts Subis × 3",
+    "champion_battle_option_name_5030_0503": "Soutiens Action\nDégâts Subis × 3"
 }

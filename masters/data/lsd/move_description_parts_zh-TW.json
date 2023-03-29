@@ -539,5 +539,16 @@
     "999400": "讓自己變成[Name:ReferencedMessageTag Idx=\"4\" ]狀態。",
     "999399": "我方隊伍使出[Digit:1digit Idx=\"2\" ]次拍組招式時",
     "999398": "即使對象為複數，招式的威力與追加效果的成功率也不會降低。",
-    "999397": "當自己陷入危機時，威力會變成１．２倍。"
+    "999397": "當自己陷入危機時，威力會變成１．２倍。",
+    "999396": "當對手場地為[Name:ReferencedMessageTag ]時，威力會提高。",
+    "999395": "提高我方的[Name:ReferencedMessageTag ][Digit:1digit Idx=\"1\" ]階段。",
+    "999394": "提高我方的[Name:ReferencedMessageTag Idx=\"2\" ][Digit:1digit Idx=\"3\" ]階段。",
+    "999393": "當對手的場地上有屬性抵抗降低的寶可夢時",
+    "999392": "當對手的場地上變為沒有屬性抵抗降低的寶可夢時",
+    "999391": "降低對手的攻擊、防禦和速度[Digit:1digit ]階段。",
+    "999389": "當對手的場地上有[Name:ReferencedMessageTag ]降低的寶可夢時",
+    "999388": "當對手的場地上變為沒有[Name:ReferencedMessageTag ]降低的寶可夢時",
+    "999386": "讓對手場地變成[Name:ReferencedMessageTag Idx=\"1\" ]狀態。",
+    "999385": "讓我方全體拍組變成[Name:ReferencedMessageTag Idx=\"4\" ]狀態。",
+    "999384": "提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"4\" ][Digit:1digit Idx=\"5\" ]階段。"
 }

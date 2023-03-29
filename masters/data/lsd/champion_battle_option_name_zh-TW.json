@@ -21,10 +21,21 @@
     "champion_battle_option_name_2120_1602": "ＨＰ提升２",
     "champion_battle_option_name_2120_1604": "ＨＰ提升４",
     "champion_battle_option_name_2120_1606": "ＨＰ提升６",
+    "champion_battle_option_name_2120_1608": "ＨＰ提升８",
     "champion_battle_option_name_2120_1701": "異常狀態無效",
     "champion_battle_option_name_2120_1801": "能力下降無效",
     "champion_battle_option_name_2120_1905": "我方ＨＰ回復量\n減少５",
     "champion_battle_option_name_2120_2001": "我方招式次數\n上限減少",
     "champion_battle_option_name_2120_2101": "每次攻擊後\n威力提升１",
-    "champion_battle_option_name_2120_2102": "每次攻擊後\n威力提升２"
+    "champion_battle_option_name_2120_2102": "每次攻擊後\n威力提升２",
+    "champion_battle_option_name_5030_0101": "妨害狀態無效",
+    "champion_battle_option_name_5030_0201": "開始時\n５種能力提升３",
+    "champion_battle_option_name_5030_0202": "開始時\n５種能力下降３",
+    "champion_battle_option_name_5030_0301": "寶可夢／拍組／拍組極巨化招式\n減輕物理傷害８",
+    "champion_battle_option_name_5030_0302": "寶可夢／拍組／拍組極巨化招式\n減輕特殊傷害８",
+    "champion_battle_option_name_5030_0303": "非效果絕佳時減輕寶可夢／\n拍組／拍組極巨化招式招式威力８",
+    "champion_battle_option_name_5030_0401": "天氣／場地／領域\n禁止變更",
+    "champion_battle_option_name_5030_0501": "中寶可夢招式時\n攻擊型負傷３倍",
+    "champion_battle_option_name_5030_0502": "中寶可夢招式時\n技術型負傷３倍",
+    "champion_battle_option_name_5030_0503": "中寶可夢招式時\n輔助型負傷３倍"
 }

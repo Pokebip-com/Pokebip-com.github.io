@@ -21,10 +21,21 @@
     "champion_battle_option_name_2120_1602": "KP↑ 2",
     "champion_battle_option_name_2120_1604": "KP↑ 4",
     "champion_battle_option_name_2120_1606": "KP↑ 6",
+    "champion_battle_option_name_2120_1608": "KP↑ 8",
     "champion_battle_option_name_2120_1701": "Statusproblem-\nschutz",
     "champion_battle_option_name_2120_1801": "Wertesenkungs-\nschutz",
     "champion_battle_option_name_2120_1905": "Team-KP-\nHeilmenge↓ 5",
     "champion_battle_option_name_2120_2001": "Team-MAX-AEP↓",
     "champion_battle_option_name_2120_2101": "Pro Treffer-\nStärke↑ 1",
-    "champion_battle_option_name_2120_2102": "Pro Treffer-\nStärke↑ 2"
+    "champion_battle_option_name_2120_2102": "Pro Treffer-\nStärke↑ 2",
+    "champion_battle_option_name_5030_0101": "Störungsschutz",
+    "champion_battle_option_name_5030_0201": "Kampfbeginn-\n5-Statuswerte↑ 3",
+    "champion_battle_option_name_5030_0202": "Kampfbeginn-\n5-Statuswerte↓ 3",
+    "champion_battle_option_name_5030_0301": "Permanent-\nPhys.-Schaden↓ 8",
+    "champion_battle_option_name_5030_0302": "Permanent-\nSpez.-Schaden↓ 8",
+    "champion_battle_option_name_5030_0303": "Permanent-\nStand.-Schaden↓ 8",
+    "champion_battle_option_name_5030_0401": "Wetter-Feld-Fokus-\nWechsel-unmögl.",
+    "champion_battle_option_name_5030_0501": "Angr.-Gefährten-\nerlit.-Schaden ×3",
+    "champion_battle_option_name_5030_0502": "Takt.-Gefährten-\nerlit.-Schaden ×3",
+    "champion_battle_option_name_5030_0503": "Helf.-Gefährten-\nerlit.-Schaden ×3"
 }
