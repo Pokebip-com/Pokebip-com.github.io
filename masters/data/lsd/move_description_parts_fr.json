@@ -550,5 +550,20 @@
     "999388": "Quand plus aucun Pokémon avec une [Name:ReferencedMessageTag ] baissée ne se trouve du côté ennemi.",
     "999386": "Applique l'[Name:ReferencedMessageTag Idx=\"1\" ] au côté ennemi.",
     "999385": "Applique l'[Name:ReferencedMessageTag Idx=\"4\" ] à tous les Duos alliés.",
-    "999384": "Augmente l'[Name:ReferencedMessageTag Idx=\"4\" ] de tous les Duos alliés de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ]."
+    "999384": "Augmente l'[Name:ReferencedMessageTag Idx=\"4\" ] de tous les Duos alliés de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ].",
+    "999383": "Quand les effets de météo, de champ ou de zone sont actifs.",
+    "999382": "Quand tous les effets de météo, de champ et de zone sont annulés.",
+    "999381": "Cette attaque est deux fois plus puissante quand la zone est une [Name:ReferencedMessageTag ].",
+    "999380": "Augmente [Name:ReferencedMessageTag Idx=\"3\" ] de tous les Duos alliés de [Digit:1digit Idx=\"4\" ] [FR:Qty Ref=\"4\" S=\"rang\" P=\"rangs\" ].",
+    "999379": "Applique l'[Name:ReferencedMessageTag ] à tous les Duos alliés.",
+    "999378": "Restaure environ [Digit:2digits Idx=\"1\" ] % des PV maximums de tous les Duos alliés. Les PV sont restaurés de [Digit:2digits Idx=\"3\" ] % à la place quand la zone est une [Name:ReferencedMessageTag Idx=\"2\" ].",
+    "999377": "Annule les baisses de stats de tous les Duos alliés quand il pleut.",
+    "999376": "Augmente l'[Name:ReferencedMessageTag Idx=\"3\" ] de tous les Duos alliés de [Digit:1digit Idx=\"4\" ] [FR:Qty Ref=\"4\" S=\"rang\" P=\"rangs\" ].",
+    "999375": "Baisse de [Digit:1digit Idx=\"1\" ] le nombre de segments de Jauge Capacité requis pour utiliser la capacité quand le champ est un [Name:ReferencedMessageTag ].",
+    "999374": "Augmente [Name:ReferencedMessageTag Idx=\"4\" ] de tous les Duos alliés de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ] quand le soleil brille.",
+    "999373": "Réduit de [Digit:1digit Idx=\"5\" ] le nombre d'actions nécessaires pour lancer une capacité Duo quand la zone est une [Name:ReferencedMessageTag Idx=\"4\" ].",
+    "999372": "Augmente [Name:ReferencedMessageTag Idx=\"5\" ] de tous les Duos alliés de [Digit:1digit Idx=\"6\" ] [FR:Qty Ref=\"6\" S=\"rang\" P=\"rangs\" ].",
+    "999371": "Applique l'[Name:ReferencedMessageTag Idx=\"2\" ] au lanceur quand le champ est un [Name:ReferencedMessageTag Idx=\"1\" ].",
+    "999370": "Remplit [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"segment\" P=\"segments\" ] de la Jauge Capacité du lanceur quand le soleil brille.",
+    "999369": "Augmente également [Name:ReferencedMessageTag Idx=\"2\" ] de tous les Duos alliés de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ] quand il pleut."
 }

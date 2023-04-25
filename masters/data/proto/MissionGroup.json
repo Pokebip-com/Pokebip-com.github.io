@@ -349,5 +349,18 @@
 { "missionGroupId": 2503100, "scheduleId": "5030_4W_Event_SoloBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 503100, "itemSetId": "414", "bannerId": 1503007, "u9": 1, "u10": 0 },
 { "missionGroupId": 2503110, "scheduleId": "5030_4W_Event_Spcos_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 503110, "itemSetId": "414", "bannerId": 1503008, "u9": 1, "u10": 0 },
 { "missionGroupId": 2503115, "scheduleId": "5030_4W_Event_Spcos_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 503115, "itemSetId": "414", "bannerId": 1403002, "u9": 1, "u10": 0 },
-{ "missionGroupId": 2503120, "scheduleId": "5030_4W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 503120, "itemSetId": "2010056", "bannerId": 1301002, "u9": 1, "u10": 0 }
+{ "missionGroupId": 2503120, "scheduleId": "5030_4W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 503120, "itemSetId": "2010056", "bannerId": 1301002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504010, "scheduleId": "5040_1W_Event_AKU_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 504010, "itemSetId": "414", "bannerId": 1504001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504020, "scheduleId": "5040_1W_Event_fashionweek_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 504020, "itemSetId": "4080008", "bannerId": 1504002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504030, "scheduleId": "5040_1W_Event_Magikarp_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 504030, "itemSetId": "4040189", "bannerId": 1404003, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504040, "scheduleId": "5040_1W_Event_goldball_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 504040, "itemSetId": "414", "bannerId": 1404007, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504050, "scheduleId": "5040_2W_Event_SoloBattle_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 504050, "itemSetId": "414", "bannerId": 1504003, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504060, "scheduleId": "5040_2W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 504060, "itemSetId": "2010056", "bannerId": 1207005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504070, "scheduleId": "5040_2W_Event_timeattack_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 504070, "itemSetId": "414", "bannerId": 1504004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504080, "scheduleId": "5040_3W_Event_AKU_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 504080, "itemSetId": "414", "bannerId": 1504005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504090, "scheduleId": "5040_3W_Event_sunmoon_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 504090, "itemSetId": "414", "bannerId": 1403009, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504100, "scheduleId": "5040_4W_Event_Happy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 504100, "itemSetId": "636", "bannerId": 1210005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504110, "scheduleId": "5040_4W_Event_AKU_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 504110, "itemSetId": "414", "bannerId": 5312011, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504120, "scheduleId": "5040_4W_Event_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 504120, "itemSetId": "414", "bannerId": 5401005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2504130, "scheduleId": "5040_5W_Campaign_ActivitySupportMission", "u3": 0, "u4": 1, "u5": 0, "u6": 504130, "itemSetId": "2020155", "bannerId": 5303002, "u9": 1, "u10": 0 }
 ]}

@@ -550,5 +550,20 @@
     "999388": "相手の場に[Name:ReferencedMessageTag ]がさがったポケモンがいなくなったとき",
     "999386": "相手全体の場を[Name:ReferencedMessageTag Idx=\"1\" ]にする",
     "999385": "味方のバディーズ全員を[Name:ReferencedMessageTag Idx=\"4\" ]にする",
-    "999384": "味方のバディーズ全員の[Name:ReferencedMessageTag Idx=\"4\" ]を[Digit:1digit Idx=\"5\" ]段階あげる"
+    "999384": "味方のバディーズ全員の[Name:ReferencedMessageTag Idx=\"4\" ]を[Digit:1digit Idx=\"5\" ]段階あげる",
+    "999383": "天気かフィールドかゾーンのいずれかが発生したとき",
+    "999382": "天気とフィールドとゾーンのすべてが解除されたとき",
+    "999381": "ゾーンが[Name:ReferencedMessageTag ]のときは威力が２倍になる",
+    "999380": "味方のバディーズ全員の[Name:ReferencedMessageTag Idx=\"3\" ]を[Digit:1digit Idx=\"4\" ]段階あげる",
+    "999379": "味方のバディーズ全員を[Name:ReferencedMessageTag ]にする",
+    "999378": "味方のバディーズ全員のＨＰを最大ＨＰの約[Digit:2digits Idx=\"1\" ]％回復する\nゾーンが[Name:ReferencedMessageTag Idx=\"2\" ]のときは約[Digit:2digits Idx=\"3\" ]％回復する",
+    "999377": "天気があめのときは味方のバディーズ全員のさがった能力をもとに戻す",
+    "999376": "味方のバディーズ全員の[Name:ReferencedMessageTag Idx=\"3\" ]を[Digit:1digit Idx=\"4\" ]段階あげる",
+    "999375": "フィールドが[Name:ReferencedMessageTag ]のときはつかうわざゲージの量を[Digit:1digit Idx=\"1\" ]減らす",
+    "999374": "天気がひざしがつよい状態のときは味方のバディーズ全員の[Name:ReferencedMessageTag Idx=\"4\" ]を[Digit:1digit Idx=\"5\" ]段階あげる",
+    "999373": "ゾーンが[Name:ReferencedMessageTag Idx=\"4\" ]のときは自分のバディーズわざ発動可能状態までのカウントを[Digit:1digit Idx=\"5\" ]減らす",
+    "999372": "味方のバディーズ全員の[Name:ReferencedMessageTag Idx=\"5\" ]を[Digit:1digit Idx=\"6\" ]段階あげる",
+    "999371": "フィールドが[Name:ReferencedMessageTag Idx=\"1\" ]のときは自分を[Name:ReferencedMessageTag Idx=\"2\" ]にする",
+    "999370": "天気がひざしがつよい状態のときは自分のわざゲージを[Digit:1digit Idx=\"2\" ]増やす",
+    "999369": "天気があめのときはさらに味方のバディーズ全員の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階あげる"
 }

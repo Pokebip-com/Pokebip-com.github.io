@@ -178,7 +178,7 @@
     "pvoice_ch0021_00_green/system011": "Come on! As long as you’re with me,\nwe can handle anybody who comes\nour way!",
     "pvoice_ch0110_10_kasumi/system001": "I’m Misty, the tomboyish mermaid! Let’s get\ntogether and pummel through our rivals with\nan all-out offensive!",
     "pvoice_ch0008_10_erika/system001": "My name is Erika. Would you like to have a\nPokémon battle with me?",
-    "pvoice_ch0159_00_kokuran/system001": "Pleased to make your acquaintance. My\nname is Darach. I’ve long had the honor of\nserving as Castle Valet of the Battle Frontier.",
+    "pvoice_ch0159_00_kokuran/system001": "Greetings. My name is Darach. I’ve long\nhad the honor of serving as Castle Valet\nof the Battle Frontier.",
     "pvoice_ch0251_00_onion/system001": "Um... Hi...\n...\n...’M Allister.",
     "pvoice_ch0148_40_matsuba/system001": "My name’s Morty. Would you like to join me\nin the Midnight Parade?",
     "pvoice_ch0095_40_cattleya/system001": "It’s me, Caitlin. *giggle*\nSomething tells me we’re about to embark\non an enchanting journey together.",
@@ -288,5 +288,10 @@
     "pvoice_ch0139_00_sana/system011": "Hey there! Looks like we meet again! ♪\nLet’s take this opportunity to make some\nbright and sparkling memories! ♪",
     "pvoice_ch0090_00_daigo/system011": "Let’s walk this world on our own two\nfeet...see it with our own eyes, and feel it in\nour hearts.",
     "pvoice_ch0005_00_kanna/system011": "Cool as ice but with a burning passion.\nLet’s make sure our Pokémon battles\nhave both!",
-    "pvoice_ch0057_00_shiba/system011": "Through rigorous training, people and\nPokémon can become infinitely stronger! \nBelieve in your potential!"
+    "pvoice_ch0057_00_shiba/system011": "Through rigorous training, people and\nPokémon can become infinitely stronger! \nBelieve in your potential!",
+    "pvoice_ch0098_10_hau/system001": "Yeah, I’m Hau! I just can’t wait to have an\nall-out battle with you!",
+    "pvoice_ch0034_10_matsurika/system001": "I’m Mina! As a token of our acquaintance,\nI’ll draw a portrait of you!",
+    "pvoice_ch0007_10_acerola/system001": "Hiya, Acerola here! I’ll teach any bad kids\nwho don’t care about the environment\na lesson!",
+    "pvoice_ch0160_10_suiren/system001": "Hello. I’m Lana. You look like you’re well\nworth catching.",
+    "pvoice_ch0061_00_kikuko/system011": "I’m Agatha, of the Indigo Elite Four!\nLet’s see what you can do, child!"
 }

@@ -103,7 +103,9 @@
     "event_5030_3W_MasterTicket_01": "Reclutamiento garantizado\nde trajes esp.: Tristana",
     "event_5030_3W_SuperTicket_02": "Reclutamiento favorable\nde trajes esp.: Lira",
     "event_5030_3W_MasterTicket_02": "Reclutamiento garantizado\nde trajes esp.: Lira",
-    "event_5030_4W_MasterTicket_01": "Reclutamiento garantizado\nvariado: Lorelei",
+    "event_5030_4W_MasterTicket_01": "Reclutamiento variado\ngarantizado: Lorelei",
     "event_5030_4W_MasterTicket_02": "Reclutamiento variado\ngarantizado: Bruno (Alto Mando)",
-    "event_5030_4W_SuperTicket_01": "Reclutamiento favorable\nde trajes especiales"
+    "event_5030_4W_SuperTicket_01": "Reclutamiento favorable\nde trajes especiales",
+    "event_5040_2W_MasterTicket_01": "Reclutamiento variado\ngarantizado: Agatha",
+    "event_5040_2W_MasterTicket_02": "Reclutamiento variado\ngarantizado: Lance"
 }

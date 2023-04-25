@@ -233,5 +233,16 @@
 { "itemExchangeGroupId": 2503040, "u2": 1, "scheduleId": "5030_3W_Event_Spcos_Exchange", "bannerId": 1503006, "u5": 0 },
 { "itemExchangeGroupId": 2503050, "u2": 1, "scheduleId": "5030_4W_Event_SoloBattle_Exchange", "bannerId": 1503007, "u5": 0 },
 { "itemExchangeGroupId": 2503060, "u2": 1, "scheduleId": "5030_4W_Event_Spcos_Exchange", "bannerId": 1503008, "u5": 0 },
-{ "itemExchangeGroupId": 2503070, "u2": 1, "scheduleId": "5030_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 }
+{ "itemExchangeGroupId": 2503070, "u2": 1, "scheduleId": "5030_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 },
+{ "itemExchangeGroupId": 2504010, "u2": 1, "scheduleId": "5040_1W_Event_AKU_Exchange", "bannerId": 1504001, "u5": 0 },
+{ "itemExchangeGroupId": 2504020, "u2": 1, "scheduleId": "5040_1W_Event_Magikarp_Exchange", "bannerId": 1404003, "u5": 0 },
+{ "itemExchangeGroupId": 2504030, "u2": 1, "scheduleId": "5040_1W_Event_goldball_Exchange", "bannerId": 1404007, "u5": 0 },
+{ "itemExchangeGroupId": 2504040, "u2": 1, "scheduleId": "5040_2W_Event_SoloBattle_Exchange", "bannerId": 1504003, "u5": 0 },
+{ "itemExchangeGroupId": 2504050, "u2": 1, "scheduleId": "5040_3W_Event_AKU_Exchange", "bannerId": 1504005, "u5": 0 },
+{ "itemExchangeGroupId": 2504060, "u2": 1, "scheduleId": "5040_3W_Event_sunmoon_Exchange", "bannerId": 1403009, "u5": 0 },
+{ "itemExchangeGroupId": 2504070, "u2": 1, "scheduleId": "5040_4W_Event_Happy_Exchange", "bannerId": 1210005, "u5": 0 },
+{ "itemExchangeGroupId": 2504080, "u2": 1, "scheduleId": "5040_4W_Event_AKU_Exchange_1", "bannerId": 5312011, "u5": 0 },
+{ "itemExchangeGroupId": 2504090, "u2": 1, "scheduleId": "5040_4W_Event_AKU_Exchange_2", "bannerId": 5401005, "u5": 0 },
+{ "itemExchangeGroupId": 2504100, "u2": 1, "scheduleId": "5040_5W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 },
+{ "itemExchangeGroupId": 2504110, "u2": 1, "scheduleId": "5040_5W_Event_Equipment_Exchange", "bannerId": 1504007, "u5": 0 }
 ]}

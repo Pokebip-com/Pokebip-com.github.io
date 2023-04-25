@@ -550,5 +550,20 @@
     "999388": "Wenn es auf der Gegner-Seite keine Pokémon mit gesenktem [Name:ReferencedMessageTag ] mehr gibt.",
     "999386": "Verursacht auf der Gegner-Seite den [Name:ReferencedMessageTag Idx=\"1\" ].",
     "999385": "Verursacht den [Name:ReferencedMessageTag Idx=\"4\" ] bei allen verbündeten Gefährten.",
-    "999384": "Erhöht den [Name:ReferencedMessageTag Idx=\"4\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"5\" ]."
+    "999384": "Erhöht den [Name:ReferencedMessageTag Idx=\"4\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"5\" ].",
+    "999383": "Wenn Wetter-, Feld- oder Fokuseffekte aktiviert sind.",
+    "999382": "Wenn alle Wetter-, Feld- und Fokuseffekte aufgelöst wurden.",
+    "999381": "Die Stärke dieses Angriffs wird verdoppelt, wenn ein [Name:ReferencedMessageTag ] aktiv ist.",
+    "999380": "Erhöht [Name:ReferencedMessageTag Idx=\"3\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"4\" ].",
+    "999379": "Verursacht den [Name:ReferencedMessageTag ] bei allen verbündeten Gefährten.",
+    "999378": "Stellt bei allen verbündeten Gefährten etwa [Digit:2digits Idx=\"1\" ] % ihrer maximalen KP wieder her. Die KP werden stattdessen um [Digit:2digits Idx=\"3\" ] % wiederhergestellt, wenn ein [Name:ReferencedMessageTag Idx=\"2\" ] aktiv ist.",
+    "999377": "Setzt bei Regen gesenkte Statuswerte aller verbündeten Gefährten auf den Ausgangswert zurück.",
+    "999376": "Erhöht den [Name:ReferencedMessageTag Idx=\"3\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"4\" ].",
+    "999375": "Senkt den Verbrauch der Attackenleiste, der zum Einsatz dieser Attacke nötig ist, um [Digit:1digit Idx=\"1\" ] [DE:Qty Ref=\"1\" S=\"Segment\" P=\"Segmente\" ], wenn ein [Name:ReferencedMessageTag ] aktiv ist.",
+    "999374": "Erhöht bei starkem Sonnenlicht [Name:ReferencedMessageTag Idx=\"4\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"5\" ].",
+    "999373": "Reduziert den Wert des Gefährtenattacken-\nCountdowns des Anwenders um [Digit:1digit Idx=\"5\" ], wenn ein [Name:ReferencedMessageTag Idx=\"4\" ] aktiv ist.",
+    "999372": "Erhöht [Name:ReferencedMessageTag Idx=\"5\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"6\" ].",
+    "999371": "Verursacht beim Anwender den [Name:ReferencedMessageTag Idx=\"2\" ], wenn ein [Name:ReferencedMessageTag Idx=\"1\" ] aktiv ist.",
+    "999370": "Füllt bei starkem Sonnenlicht die Attackenleiste deines Teams um [Digit:1digit Idx=\"2\" ] [DE:Qty Ref=\"2\" S=\"Segment\" P=\"Segmente\" ] auf.",
+    "999369": "Außerdem wird [Name:ReferencedMessageTag Idx=\"2\" ] aller verbündeten Gefährten bei Regen um [Digit:1digit Idx=\"3\" ] erhöht."
 }

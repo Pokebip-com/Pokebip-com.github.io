@@ -550,5 +550,20 @@
     "999388": "Quando non ci sono più Pokémon con [Name:ReferencedMessageTag ] ridotta nel campo avversario.",
     "999386": "Applica l'[Name:ReferencedMessageTag Idx=\"1\" ] sul campo avversario.",
     "999385": "Applica l'[Name:ReferencedMessageTag Idx=\"4\" ] a tutte le Unità alleate.",
-    "999384": "Aumenta l'[Name:ReferencedMessageTag Idx=\"4\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ]."
+    "999384": "Aumenta l'[Name:ReferencedMessageTag Idx=\"4\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ].",
+    "999383": "Quando vengono attivati cambiamenti atmosferici o trasformazioni del campo di lotta o della zona.",
+    "999382": "Quando tutti i cambiamenti atmosferici o le trasformazioni del campo di lotta e della zona vengono annullati.",
+    "999381": "Raddoppia la potenza di questo attacco in presenza di una [Name:ReferencedMessageTag ].",
+    "999380": "Aumenta [Name:ReferencedMessageTag Idx=\"3\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"4\" ] [IT:Qty Ref=\"4\" S=\"grado\" P=\"gradi\" ].",
+    "999379": "Applica l'[Name:ReferencedMessageTag ] a tutte le Unità alleate.",
+    "999378": "Fa recuperare PS a tutte le Unità alleate per circa il [Digit:2digits Idx=\"1\" ]% dei loro PS massimi. I PS vengono invece recuperati del [Digit:2digits Idx=\"3\" ]% in presenza di una [Name:ReferencedMessageTag Idx=\"2\" ].",
+    "999377": "Annulla le riduzioni delle statistiche di tutte le Unità alleate quando piove.",
+    "999376": "Aumenta l'[Name:ReferencedMessageTag Idx=\"3\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"4\" ] [IT:Qty Ref=\"4\" S=\"grado\" P=\"gradi\" ].",
+    "999375": "Questa mossa consuma [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"barretta\" P=\"barrette\" ] della barra mosse in meno quando il campo di lotta è un [Name:ReferencedMessageTag ].",
+    "999374": "Aumenta [Name:ReferencedMessageTag Idx=\"4\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ] quando la luce del sole è intensa.",
+    "999373": "Abbassa di [Digit:1digit Idx=\"5\" ] il numero di azioni necessarie a chi la usa per sferrare un'Unimossa in presenza di una [Name:ReferencedMessageTag Idx=\"4\" ].",
+    "999372": "Aumenta [Name:ReferencedMessageTag Idx=\"5\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"6\" ] [IT:Qty Ref=\"6\" S=\"grado\" P=\"gradi\" ].",
+    "999371": "Applica l'[Name:ReferencedMessageTag Idx=\"2\" ] a chi la usa quando il campo di lotta è un [Name:ReferencedMessageTag Idx=\"1\" ].",
+    "999370": "Aggiunge [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"barretta\" P=\"barrette\" ] alla barra mosse di chi la usa quando la luce del sole è intensa.",
+    "999369": "Inoltre, aumenta [Name:ReferencedMessageTag Idx=\"2\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ] quando piove."
 }

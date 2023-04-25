@@ -550,5 +550,20 @@
     "999388": "當對手的場地上變為沒有[Name:ReferencedMessageTag ]降低的寶可夢時",
     "999386": "讓對手場地變成[Name:ReferencedMessageTag Idx=\"1\" ]狀態。",
     "999385": "讓我方全體拍組變成[Name:ReferencedMessageTag Idx=\"4\" ]狀態。",
-    "999384": "提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"4\" ][Digit:1digit Idx=\"5\" ]階段。"
+    "999384": "提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"4\" ][Digit:1digit Idx=\"5\" ]階段。",
+    "999383": "當天氣、場地或領域其中之一生效時",
+    "999382": "當天氣、場地和領域全部解除時",
+    "999381": "當領域為[Name:ReferencedMessageTag ]時，威力會變成２倍。",
+    "999380": "提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"3\" ][Digit:1digit Idx=\"4\" ]階段。",
+    "999379": "讓我方全體拍組變成[Name:ReferencedMessageTag ]狀態。",
+    "999378": "回復我方全體拍組的ＨＰ，約為最大ＨＰ的[Digit:2digits Idx=\"1\" ]％。\n當領域為[Name:ReferencedMessageTag Idx=\"2\" ]時，回復約[Digit:2digits Idx=\"3\" ]％。",
+    "999377": "當天氣為下雨時，會讓我方全體拍組降低的能力回到初始狀態。",
+    "999376": "提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"3\" ][Digit:1digit Idx=\"4\" ]階段。",
+    "999375": "當場地為[Name:ReferencedMessageTag ]時，會減少使用[Digit:1digit Idx=\"1\" ]條招式計量槽。",
+    "999374": "當天氣為日照強烈時，會提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"4\" ][Digit:1digit Idx=\"5\" ]階段。",
+    "999373": "當領域為[Name:ReferencedMessageTag Idx=\"4\" ]時，自己發動拍組招式所需的行動數會減少[Digit:1digit Idx=\"5\" ]次。",
+    "999372": "提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"5\" ][Digit:1digit Idx=\"6\" ]階段。",
+    "999371": "當場地為[Name:ReferencedMessageTag Idx=\"1\" ]時，會讓自己變成[Name:ReferencedMessageTag Idx=\"2\" ]狀態。",
+    "999370": "當天氣為日照強烈時，會幫自己增加[Digit:1digit Idx=\"2\" ]條招式計量槽。",
+    "999369": "當天氣為下雨時，還會再提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"2\" ][Digit:1digit Idx=\"3\" ]階段。"
 }
