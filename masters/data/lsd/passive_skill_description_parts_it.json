@@ -867,7 +867,7 @@
     "p999129": "Ha una certa probabilità ([Digit:2digits ]%) di far recuperare PS a chi la usa quando sferra una mossa.",
     "p999128": "Chi la usa recupera PS quando sferra una mossa.",
     "p999127": "Quando chi la usa attacca un avversario con la sua mossa UniDynamax, tutte le Unità avversarie diventano il bersaglio. La potenza delle mosse UniDynamax influenzate da questa abilità passiva non viene ridotta anche se sono presenti molteplici bersagli.",
-    "p999126": "Se la zona si trasforma in una [Name:ReferencedMessageTag ] quando chi la usa è in campo, aumenta la durata della [Name:ReferencedMessageTag ].",
+    "p999126": "Se la zona si trasforma in una [Name:ReferencedMessageTag ] mentre chi la usa è in campo, aumenta la durata della [Name:ReferencedMessageTag ].",
     "p999125": "Aumenta la potenza delle mosse di chi la usa quando al campo avversario viene applicato [Name:ReferencedMessageTag ].",
     "p999124": "Aumenta la durata dell'[Name:ReferencedMessageTag ] quando viene applicato l'[Name:ReferencedMessageTag ] sul campo alleato.",
     "p999122": "Ha una certa probabilità ([Digit:2digits ]%) di scottare l'avversario che ha attaccato l'Unità quando chi la usa subisce un attacco semplice.",
@@ -1120,5 +1120,17 @@
     "p998873": "Applica l'[Name:ReferencedMessageTag Idx=\"1\" ] a chi la usa la prima volta che i suoi PS scendono a [Digit:2digits ]% o meno in ogni lotta.",
     "p998871": "Abbassa di [Digit:1digit Idx=\"1\" ] il numero di azioni necessarie a chi la usa per sferrare un'Unimossa quando i suoi PS scendono a [Digit:2digits ]% o meno. Questo effetto può essere attivato una volta sola per lotta.",
     "p998870": "Chi la usa recupera PS per circa il [Digit:2digits Idx=\"1\" ]% dei suoi PS massimi la prima volta che i suoi PS scendono a [Digit:2digits ]% o meno in ogni lotta.",
-    "p998869": "Aumenta l'Attacco e l'Attacco Speciale di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ] la prima volta che i suoi PS scendono a [Digit:2digits ]% o meno in ogni lotta."
+    "p998869": "Aumenta l'Attacco e l'Attacco Speciale di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ] la prima volta che i suoi PS scendono a [Digit:2digits ]% o meno in ogni lotta.",
+    "p998868": "Applica l'[Name:ReferencedMessageTag ] a chi la usa quando manda a segno un brutto colpo.",
+    "p998867": "Aumenta la potenza delle mosse e dell'Unimossa di chi la usa quando il bersaglio è imprigionato.",
+    "p998866": "Protegge tutte le Unità alleate dai danni da grandine.",
+    "p998865": "Aumenta la potenza delle mosse di tutte le Unità alleate quando grandina.",
+    "p998864": "Causa una grandinata quando chi la usa trasforma la zona in una Zona Ghiaccio.",
+    "p998863": "Riduce i danni subiti da chi la usa da un attacco semplice quando grandina.",
+    "p998862": "Non è possibile causare problemi di stato a chi la usa quando grandina.",
+    "p998861": "Se inizia a grandinare quando chi la usa è in campo, aumenta la durata della grandinata.",
+    "p998860": "Ha una certa probabilità ([Digit:2digits Idx=\"1\" ]%) di applicare l'[Name:ReferencedMessageTag ] sul campo alleato quando chi la usa manda KO il bersaglio con una mossa.",
+    "p998859": "Applica l'[Name:ReferencedMessageTag ] sul campo alleato quando chi la usa manda KO il bersaglio con una mossa.",
+    "p998803": "Trasforma la zona in una Zona Ghiaccio la prima volta che chi la usa entra in campo in ogni lotta.",
+    "p998802": "(Una Zona Ghiaccio aumenta la potenza degli attacchi di tipo Ghiaccio.)"
 }

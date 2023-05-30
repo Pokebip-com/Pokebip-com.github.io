@@ -1,5 +1,6 @@
 {
     "11390": "[Name:MoveDescriptionPartsIdTag Idx=\"999419\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999468\" ]",
+    "19560": "[Name:MoveDescriptionPartsIdTag Idx=\"999347\" ]",
     "19630": "[Name:MoveDescriptionPartsIdTag Idx=\"999430\" ]",
     "2": "Probabile brutto colpo.",
     "7": "[Name:MoveDescriptionPartsIdTag Idx=\"999896\" ]",
@@ -1103,5 +1104,22 @@
     "51101": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
     "51802": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
     "97700": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
-    "97800": "[Name:MoveDescriptionPartsIdTag Idx=\"999771\" ]"
+    "97800": "[Name:MoveDescriptionPartsIdTag Idx=\"999771\" ]",
+    "813": "[Name:MoveDescriptionPartsIdTag Idx=\"999368\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999367\" ]",
+    "6021": "[Name:MoveDescriptionPartsIdTag Idx=\"999486\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999366\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999484\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999479\" ]\n\n[Name:MoveDescriptionPartsIdTag Idx=\"999893\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999398\" ]",
+    "6022": "[Name:MoveDescriptionPartsIdTag Idx=\"999486\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999365\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999484\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999364\" ]\n\n[Name:MoveDescriptionPartsIdTag Idx=\"999368\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999363\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999362\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999367\" ]",
+    "12160": "[Name:MoveDescriptionPartsIdTag Idx=\"999418\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999420\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999603\" ]",
+    "11331": "[Name:MoveDescriptionPartsIdTag Idx=\"999991\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999418\" ]",
+    "95400": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
+    "95500": "[Name:MoveDescriptionPartsIdTag Idx=\"999939\" ]",
+    "235": "[Name:MoveDescriptionPartsIdTag Idx=\"999541\" ]",
+    "6019": "[Name:MoveDescriptionPartsIdTag Idx=\"999486\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999361\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999484\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999476\" ]\n\n[Name:MoveDescriptionPartsIdTag Idx=\"999998\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999360\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999459\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999359\" ]",
+    "6020": "[Name:MoveDescriptionPartsIdTag Idx=\"999486\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999358\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999484\" ]\n[Name:MoveDescriptionPartsIdTag Idx=\"999357\" ]\n\n[Name:MoveDescriptionPartsIdTag Idx=\"999622\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999895\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999422\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999991\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999984\" ]",
+    "12840": "[Name:MoveDescriptionPartsIdTag Idx=\"999418\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999420\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999356\" ]",
+    "12850": "[Name:MoveDescriptionPartsIdTag Idx=\"999418\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999420\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999355\" ]",
+    "96400": "[Name:MoveDescriptionPartsIdTag Idx=\"999592\" ]",
+    "96500": "[Name:MoveDescriptionPartsIdTag Idx=\"999770\" ]",
+    "12849": "[Name:MoveDescriptionPartsIdTag Idx=\"999418\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999468\" ] [Name:MoveDescriptionPartsIdTag Idx=\"999630\" ]",
+    "97900": "[Name:MoveDescriptionPartsIdTag Idx=\"999999\" ]",
+    "64000": "[Name:MoveDescriptionPartsIdTag Idx=\"999354\" ]"
 }

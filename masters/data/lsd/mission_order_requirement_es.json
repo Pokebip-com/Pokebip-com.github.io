@@ -1,3 +1,5 @@
 {
-    "3": "Se desbloquea tras completar\nla misión [Digit:3digits ]."
+    "3": "Se desbloquea tras completar\nla misión [Digit:3digits ].",
+    "4_1": "Se desbloqueará dentro de [Digit:3digits ] día[ES:Qty P=\"s\" ].",
+    "4_2": "Se desbloqueará dentro de [Name:DateTime ]."
 }

@@ -218,7 +218,7 @@
     "p999782": "Baisse l'Atq. Spé. de tous les Duos ennemis de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] quand le lanceur arrive au combat.",
     "p999781": "[Digit:2digits ] % de chances d'augmenter l'Attaque du lanceur de 1 rang quand il subit une capacité offensive.",
     "p999780": "Augmente l'Attaque du lanceur de 1 rang quand il subit une capacité offensive.",
-    "p999779": "Quand il grêle, la Jauge Capacité se remplit plus vite.",
+    "p999779": "La Jauge Capacité se remplit plus vite quand il grêle.",
     "p999778": "Invoque la grêle après l'utilisation d'une capacité Duo par le lanceur.",
     "p999777": "Augmente la puissance de la capacité Duo du lanceur pendant les tempêtes de sable.",
     "p999776": "Invoque une tempête de sable après l'utilisation d'une capacité Duo par le lanceur.",
@@ -1120,5 +1120,17 @@
     "p998873": "Applique l'[Name:ReferencedMessageTag Idx=\"1\" ] au lanceur la première fois que ses PV tombent à [Digit:2digits ] % ou moins à chaque combat.",
     "p998871": "Réduit de [Digit:1digit Idx=\"1\" ] le nombre d'actions nécessaires pour lancer une capacité Duo quand les PV du lanceur tombent à [Digit:2digits ] % ou moins. Cet effet ne peut être activé qu'une fois par combat.",
     "p998870": "Le lanceur regagne à chaque combat environ [Digit:2digits Idx=\"1\" ] % de ses PV maximums la première fois que ses PV tombent à [Digit:2digits ] % ou moins à chaque combat.",
-    "p998869": "Augmente l'Attaque et l'Atq. Spé. du lanceur de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] la première fois que ses PV tombent à [Digit:2digits ] % ou moins à chaque combat."
+    "p998869": "Augmente l'Attaque et l'Atq. Spé. du lanceur de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] la première fois que ses PV tombent à [Digit:2digits ] % ou moins à chaque combat.",
+    "p998868": "Applique l'[Name:ReferencedMessageTag ] au lanceur lorsqu'il inflige un coup critique.",
+    "p998867": "Augmente la puissance des capacités et de la capacité Duo du lanceur quand la cible est ligotée.",
+    "p998866": "Protège tous les Duos alliés des dégâts infligés par la grêle.",
+    "p998865": "Augmente la puissance des capacités de tous les Duos alliés quand il grêle.",
+    "p998864": "Invoque la grêle quand le lanceur transforme la zone en une Zone Glace.",
+    "p998863": "Réduit les dégâts quand le lanceur subit une capacité offensive quand il grêle.",
+    "p998862": "Les altérations de statut ne peuvent pas être appliquées au lanceur quand il grêle.",
+    "p998861": "La grêle dure plus longtemps si la grêle est invoquée lorsque le lanceur est sur le terrain.",
+    "p998860": "[Digit:2digits Idx=\"1\" ] % de chances d'appliquer l'[Name:ReferencedMessageTag ] au côté allié quand le lanceur met un ennemi K.O. avec une capacité.",
+    "p998859": "Applique l'[Name:ReferencedMessageTag ] au côté allié quand le lanceur met un ennemi K.O. avec une capacité.",
+    "p998803": "Transforme la zone en une Zone Glace la première fois que le lanceur arrive au combat à chaque combat.",
+    "p998802": "(Une Zone Glace renforce les attaques de type Glace.)"
 }

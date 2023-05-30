@@ -668,5 +668,19 @@
     "17064800": "Initial Injured Damage Guard",
     "15012900": "Injured Propulsion",
     "11013400": "Initial Injured Recovery",
-    "18108500": "Initial Injured Ferocity"
+    "18108500": "Initial Injured Ferocity",
+    "13019100": "Trap and Buff [Name:PassiveSkillNameDigit ]",
+    "13019200": "Time Flows over Hisui",
+    "13019300": "Space Spreads over Hisui",
+    "19024800": "Watch for Ice",
+    "28011800": "Sinnoh Pride",
+    "28011900": "Sinnoh Spirit",
+    "13022000": "Winter Coat [Name:PassiveSkillNameDigit ]",
+    "17013000": "Hail Immunity",
+    "17064700": "Brawn Gain [Name:PassiveSkillNameDigit ]",
+    "19025100": "Arctic Arrival",
+    "19025200": "Hail Alert [Name:PassiveSkillNameDigit ]",
+    "19025300": "Ice Zone Extension [Name:PassiveSkillNameDigit ]",
+    "18108400": "Evasive Strike [Name:PassiveSkillNameDigit ]",
+    "19025400": "KO Opp: Allied Field MG → [Name:PassiveSkillNameDigit ]"
 }

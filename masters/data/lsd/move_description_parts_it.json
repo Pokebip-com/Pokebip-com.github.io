@@ -565,5 +565,21 @@
     "999372": "Aumenta [Name:ReferencedMessageTag Idx=\"5\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"6\" ] [IT:Qty Ref=\"6\" S=\"grado\" P=\"gradi\" ].",
     "999371": "Applica l'[Name:ReferencedMessageTag Idx=\"2\" ] a chi la usa quando il campo di lotta è un [Name:ReferencedMessageTag Idx=\"1\" ].",
     "999370": "Aggiunge [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"barretta\" P=\"barrette\" ] alla barra mosse di chi la usa quando la luce del sole è intensa.",
-    "999369": "Inoltre, aumenta [Name:ReferencedMessageTag Idx=\"2\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ] quando piove."
+    "999369": "Inoltre, aumenta [Name:ReferencedMessageTag Idx=\"2\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ] quando piove.",
+    "999368": "Colpisce fino a tre volte di seguito.\nQuesto attacco aumenta di potenza per ogni colpo.\n(La potenza del secondo attacco è il doppio di quella del primo, mentre la potenza del terzo attacco è il triplo di quella del primo.)",
+    "999367": "Dopo aver sferrato questa mossa, la potenza dell'attacco torna normale.",
+    "999366": "Quando chi la usa sferra qualsiasi mossa due volte.",
+    "999365": "Quando chi la usa ha tutti i PS.",
+    "999364": "Quando chi la usa non ha tutti i PS.",
+    "999363": "Abbassa di [Digit:1digit ] il numero di azioni necessarie a chi la usa per sferrare un'Unimossa per ogni colpo.",
+    "999362": "Aumenta [Name:ReferencedMessageTag Idx=\"1\" ] di chi la usa di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ] per ogni colpo.",
+    "999361": "Quando chi la usa sferra qualsiasi mossa una volta.",
+    "999360": "Riduce [Name:ReferencedMessageTag Idx=\"2\" ] del bersaglio di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ].",
+    "999359": "Inoltre, riduce [Name:ReferencedMessageTag Idx=\"4\" ] del bersaglio di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ] quando la luce del sole è intensa.",
+    "999358": "Quando inizia a grandinare.",
+    "999357": "Quando smette di grandinare.",
+    "999356": "Abbassa di [Digit:1digit Idx=\"4\" ] il numero di azioni necessarie a chi la usa per sferrare un'Unimossa quando la luce del sole è intensa.",
+    "999355": "Applica l'[Name:ReferencedMessageTag Idx=\"4\" ] a tutte le Unità alleate quando grandina.",
+    "999354": "Permette a Sceptile di megaevolversi. L'effetto svanisce al termine della lotta.",
+    "999347": "Trasforma la zona in una Zona Ghiaccio. (Una Zona Ghiaccio aumenta la potenza degli attacchi di tipo Ghiaccio.)"
 }

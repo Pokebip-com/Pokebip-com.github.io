@@ -668,5 +668,19 @@
     "17064800": "初ＨＰ６０％時次ダメージ防御",
     "15012900": "ＨＰ６０％時一度ＢＣ加速[Name:PassiveSkillNameDigit ]",
     "11013400": "初ＨＰ６０％時ＨＰ回復[Name:PassiveSkillNameDigit ]",
-    "18108500": "初ＨＰ６０％時攻撃特攻↑[Name:PassiveSkillNameDigit ]"
+    "18108500": "初ＨＰ６０％時攻撃特攻↑[Name:PassiveSkillNameDigit ]",
+    "13019100": "相手拘束時Ｐ技Ｂ技↑[Name:PassiveSkillNameDigit ]",
+    "13019200": "ヒスイに流れる時間",
+    "13019300": "ヒスイに広がる空間",
+    "19024800": "自身つららゾーン発生時あられ化",
+    "28011800": "シンオウの闘志",
+    "28011900": "シンオウの信念",
+    "13022000": "あられ時攻撃技軽減[Name:PassiveSkillNameDigit ]",
+    "17013000": "あられ時異常無効",
+    "17064700": "技後物理ブースト１付与[Name:PassiveSkillNameDigit ]",
+    "19025100": "初登場時つららゾーン化",
+    "19025200": "あられ時間延長[Name:PassiveSkillNameDigit ]",
+    "19025300": "つららゾーン時間延長[Name:PassiveSkillNameDigit ]",
+    "18108400": "命中時回避率アップ[Name:PassiveSkillNameDigit ]",
+    "19025400": "とどめ時場に技ゲージ加速[Name:PassiveSkillNameDigit ]"
 }

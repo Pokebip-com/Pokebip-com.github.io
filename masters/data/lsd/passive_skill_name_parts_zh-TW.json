@@ -668,5 +668,19 @@
     "17064800": "首次ＨＰ６０％時下次傷害防禦",
     "15012900": "ＨＰ６０％時計數加速至多一次[Name:PassiveSkillNameDigit ]",
     "11013400": "首次ＨＰ６０％時ＨＰ回復[Name:PassiveSkillNameDigit ]",
-    "18108500": "首次ＨＰ６０％時攻擊特攻提升[Name:PassiveSkillNameDigit ]"
+    "18108500": "首次ＨＰ６０％時攻擊特攻提升[Name:PassiveSkillNameDigit ]",
+    "13019100": "對手束縛時寶可夢招式及拍組招式↑[Name:PassiveSkillNameDigit ]",
+    "13019200": "洗翠流動的時間",
+    "13019300": "洗翠廣闊的空間",
+    "19024800": "自身引發冰柱領域時變成冰雹",
+    "28011800": "神奧的鬥志",
+    "28011900": "神奧的信念",
+    "13022000": "冰雹時攻擊招式威力↓[Name:PassiveSkillNameDigit ]",
+    "17013000": "冰雹時異常無效",
+    "17064700": "招式後賦予物理增強(１)[Name:PassiveSkillNameDigit ]",
+    "19025100": "首次上場時變成冰柱領域",
+    "19025200": "冰雹時間延長[Name:PassiveSkillNameDigit ]",
+    "19025300": "冰柱領域時間延長[Name:PassiveSkillNameDigit ]",
+    "18108400": "命中時閃避率提升[Name:PassiveSkillNameDigit ]",
+    "19025400": "打倒對手時場地招式計量槽加速[Name:PassiveSkillNameDigit ]"
 }

@@ -1,3 +1,5 @@
 {
-    "3": "Disponible une fois la mission [Digit:3digits ]\naccomplie."
+    "3": "Disponible une fois la mission [Digit:3digits ]\naccomplie.",
+    "4_1": "Se débloque dans [Digit:3digits ] jour(s).",
+    "4_2": "Se débloque dans [Name:DateTime ]."
 }

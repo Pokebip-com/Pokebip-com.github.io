@@ -565,5 +565,21 @@
     "999372": "Aumenta [Name:ReferencedMessageTag Idx=\"5\" ] de todos los compis aliados en [Digit:1digit Idx=\"6\" ] [ES:Qty Ref=\"6\" S=\"nivel\" P=\"niveles\" ].",
     "999371": "Aplica el [Name:ReferencedMessageTag Idx=\"2\" ] al usuario cuando hay un [Name:ReferencedMessageTag Idx=\"1\" ] activo.",
     "999370": "Llena [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"punto\" P=\"puntos\" ] la barra de movimientos del usuario cuando está soleado.",
-    "999369": "Además, aumenta [Name:ReferencedMessageTag Idx=\"2\" ] de todos los compis aliados en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ] cuando llueve."
+    "999369": "Además, aumenta [Name:ReferencedMessageTag Idx=\"2\" ] de todos los compis aliados en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ] cuando llueve.",
+    "999368": "Ataca hasta tres veces seguidas. \nLa potencia de este ataque aumenta con cada golpe. \n(El segundo ataque es el doble de potente que el primero, y el tercer ataque es el triple de potente que el primero).",
+    "999367": "Tras usar el movimiento, la potencia de este ataque vuelve a la normalidad.",
+    "999366": "Cuando el usuario usa algún movimiento dos veces.",
+    "999365": "Cuando el usuario tiene los PS al máximo.",
+    "999364": "Cuando el usuario no tiene los PS al máximo.",
+    "999363": "Se reduce en [Digit:1digit ] el contador de movimientos compi del usuario con cada golpe.",
+    "999362": "Aumenta [Name:ReferencedMessageTag Idx=\"1\" ] del usuario en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ] con cada golpe.",
+    "999361": "Cuando el usuario usa algún movimiento una vez.",
+    "999360": "Reduce [Name:ReferencedMessageTag Idx=\"2\" ] del objetivo en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ].",
+    "999359": "Además, reduce [Name:ReferencedMessageTag Idx=\"4\" ] del objetivo en [Digit:1digit Idx=\"5\" ] [ES:Qty Ref=\"5\" S=\"nivel\" P=\"niveles\" ] cuando está soleado.",
+    "999358": "Cuando graniza.",
+    "999357": "Cuando ya no graniza.",
+    "999356": "Se reduce en [Digit:1digit Idx=\"4\" ] el contador de movimientos compi del usuario cuando está soleado.",
+    "999355": "Aplica el [Name:ReferencedMessageTag Idx=\"4\" ] a todos los compis aliados cuando graniza.",
+    "999354": "Evoluciona a Mega-Sceptile. Vuelve a la normalidad tras terminar el combate.",
+    "999347": "Crea una Zona Hielo. (Una Zona Hielo potencia los ataques de tipo Hielo)."
 }

@@ -565,5 +565,21 @@
     "999372": "提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"5\" ][Digit:1digit Idx=\"6\" ]階段。",
     "999371": "當場地為[Name:ReferencedMessageTag Idx=\"1\" ]時，會讓自己變成[Name:ReferencedMessageTag Idx=\"2\" ]狀態。",
     "999370": "當天氣為日照強烈時，會幫自己增加[Digit:1digit Idx=\"2\" ]條招式計量槽。",
-    "999369": "當天氣為下雨時，還會再提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"2\" ][Digit:1digit Idx=\"3\" ]階段。"
+    "999369": "當天氣為下雨時，還會再提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"2\" ][Digit:1digit Idx=\"3\" ]階段。",
+    "999368": "最多連續攻擊３次。\n每次攻擊命中時，威力都會提高。\n（第２次的威力是第１次的２倍，第３次的威力是第１次的３倍）",
+    "999367": "在使出招式後，威力會恢復原狀。",
+    "999366": "自己使出２次招式時",
+    "999365": "自己的ＨＰ全滿時",
+    "999364": "自己的ＨＰ不是全滿時",
+    "999363": "每次攻擊命中時，自己發動拍組招式所需的行動數都會減少[Digit:1digit ]次。",
+    "999362": "每次攻擊命中時，都會提高自己的[Name:ReferencedMessageTag Idx=\"1\" ][Digit:1digit Idx=\"2\" ]階段。",
+    "999361": "自己使出１次招式時",
+    "999360": "降低對手的[Name:ReferencedMessageTag Idx=\"2\" ][Digit:1digit Idx=\"3\" ]階段。",
+    "999359": "當天氣為日照強烈時，還會再降低對手的[Name:ReferencedMessageTag Idx=\"4\" ][Digit:1digit Idx=\"5\" ]階段。",
+    "999358": "天氣變成冰雹時",
+    "999357": "冰雹被解除時",
+    "999356": "當天氣為日照強烈時，自己發動拍組招式所需的行動數會減少[Digit:1digit Idx=\"4\" ]次。",
+    "999355": "當天氣為冰雹時，讓我方全體拍組變成[Name:ReferencedMessageTag Idx=\"4\" ]狀態。",
+    "999354": "變成超級蜥蜴王直到對戰結束。",
+    "999347": "將領域變成冰柱領域。\n（冰柱領域會提高冰屬性的攻擊的威力。）"
 }

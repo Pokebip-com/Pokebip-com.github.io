@@ -668,5 +668,19 @@
     "17064800": "첫HP60%시차회데미지방어",
     "15012900": "HP60%시한번BC가속[Name:PassiveSkillNameDigit ]",
     "11013400": "첫HP60%시HP회복[Name:PassiveSkillNameDigit ]",
-    "18108500": "첫HP60%시공격특수공격↑[Name:PassiveSkillNameDigit ]"
+    "18108500": "첫HP60%시공격특수공격↑[Name:PassiveSkillNameDigit ]",
+    "13019100": "상대바인드시P기술B기술↑[Name:PassiveSkillNameDigit ]",
+    "13019200": "히스이로흘러가는시간",
+    "13019300": "히스이로팽창하는공간",
+    "19024800": "자기고드름존발생시싸라기눈화",
+    "28011800": "신오의투지",
+    "28011900": "신오의신념",
+    "13022000": "싸라기눈시공격기술경감[Name:PassiveSkillNameDigit ]",
+    "17013000": "싸라기눈시상태이상무효",
+    "17064700": "기술후물리부스트1부여[Name:PassiveSkillNameDigit ]",
+    "19025100": "첫등장시고드름존화",
+    "19025200": "싸라기눈시간연장[Name:PassiveSkillNameDigit ]",
+    "19025300": "고드름존시간연장[Name:PassiveSkillNameDigit ]",
+    "18108400": "명중시회피율업[Name:PassiveSkillNameDigit ]",
+    "19025400": "결정타시필드에기술게이지가속[Name:PassiveSkillNameDigit ]"
 }

@@ -1,3 +1,5 @@
 {
-    "3": "ミッション[Digit:3digits ]達成後に挑戦可能"
+    "3": "ミッション[Digit:3digits ]達成後に挑戦可能",
+    "4_1": "あと[Digit:3digits ]日で解放",
+    "4_2": "あと[Name:DateTime ]で解放"
 }

@@ -362,5 +362,15 @@
 { "missionGroupId": 2504100, "scheduleId": "5040_4W_Event_Happy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 504100, "itemSetId": "636", "bannerId": 1210005, "u9": 1, "u10": 0 },
 { "missionGroupId": 2504110, "scheduleId": "5040_4W_Event_AKU_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 504110, "itemSetId": "414", "bannerId": 5312011, "u9": 1, "u10": 0 },
 { "missionGroupId": 2504120, "scheduleId": "5040_4W_Event_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 504120, "itemSetId": "414", "bannerId": 5401005, "u9": 1, "u10": 0 },
-{ "missionGroupId": 2504130, "scheduleId": "5040_5W_Campaign_ActivitySupportMission", "u3": 0, "u4": 1, "u5": 0, "u6": 504130, "itemSetId": "2020155", "bannerId": 5303002, "u9": 1, "u10": 0 }
+{ "missionGroupId": 2504130, "scheduleId": "5040_5W_Campaign_ActivitySupportMission", "u3": 0, "u4": 1, "u5": 0, "u6": 504130, "itemSetId": "2020155", "bannerId": 5303002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2505010, "scheduleId": "5050_1W_Event_sekikai_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 505010, "itemSetId": "414", "bannerId": 1505001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2505020, "scheduleId": "5050_2W_Campaign_ActivitySupportMission", "u3": 0, "u4": 1, "u5": 0, "u6": 505020, "itemSetId": "2020155", "bannerId": 5303002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2505030, "scheduleId": "5050_2W_Event_Happy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 505030, "itemSetId": "636", "bannerId": 1210005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2505040, "scheduleId": "5050_2W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 505040, "itemSetId": "2010056", "bannerId": 1502013, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2505050, "scheduleId": "5050_2W_Event_matsuba_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 505050, "itemSetId": "414", "bannerId": 1404006, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2505060, "scheduleId": "5050_2W_Event_niowase_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 505060, "itemSetId": "414", "bannerId": 1505003, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2505070, "scheduleId": "5050_3W_Event_minakisilver_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 505070, "itemSetId": "414", "bannerId": 1505004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2505080, "scheduleId": "5050_4W_AKU_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 505080, "itemSetId": "414", "bannerId": 1407001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2505090, "scheduleId": "5050_4W_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 505090, "itemSetId": "414", "bannerId": 1407501, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2505100, "scheduleId": "5050_5W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 505100, "itemSetId": "2010056", "bannerId": 1210003, "u9": 1, "u10": 0 }
 ]}

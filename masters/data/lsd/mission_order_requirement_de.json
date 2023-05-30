@@ -1,3 +1,5 @@
 {
-    "3": "Verfügbar nach Abschluss von\nMission [Digit:3digits ]."
+    "3": "Verfügbar nach Abschluss von\nMission [Digit:3digits ].",
+    "4_1": "Wird in [Digit:3digits ] Tag[DE:Qty P=\"en\" ] freigeschaltet.",
+    "4_2": "Wird freigeschaltet in:\n[Name:DateTime ]"
 }

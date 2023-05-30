@@ -565,5 +565,21 @@
     "999372": "Erhöht [Name:ReferencedMessageTag Idx=\"5\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"6\" ].",
     "999371": "Verursacht beim Anwender den [Name:ReferencedMessageTag Idx=\"2\" ], wenn ein [Name:ReferencedMessageTag Idx=\"1\" ] aktiv ist.",
     "999370": "Füllt bei starkem Sonnenlicht die Attackenleiste deines Teams um [Digit:1digit Idx=\"2\" ] [DE:Qty Ref=\"2\" S=\"Segment\" P=\"Segmente\" ] auf.",
-    "999369": "Außerdem wird [Name:ReferencedMessageTag Idx=\"2\" ] aller verbündeten Gefährten bei Regen um [Digit:1digit Idx=\"3\" ] erhöht."
+    "999369": "Außerdem wird [Name:ReferencedMessageTag Idx=\"2\" ] aller verbündeten Gefährten bei Regen um [Digit:1digit Idx=\"3\" ] erhöht.",
+    "999368": "Greift bis zu dreimal hintereinander an. \nDie Stärke dieses Angriffs steigt pro Treffer. \n(Der zweite Angriff ist zweimal so stark wie der erste Angriff und der dritte Angriff ist dreimal so stark wie der erste Angriff.)",
+    "999367": "Setzt nach Einsatz dieser Attacke die Stärke des Angriffs auf den Ausgangswert zurück.",
+    "999366": "Wenn der Anwender Attacken zweimal einsetzt.",
+    "999365": "Wenn die KP des Anwenders voll sind.",
+    "999364": "Wenn die KP des Anwenders nicht voll sind.",
+    "999363": "Reduziert den Wert des Gefährtenattacken-\nCountdowns des Anwenders um [Digit:1digit ] pro Treffer.",
+    "999362": "Erhöht [Name:ReferencedMessageTag Idx=\"1\" ] des Anwenders um [Digit:1digit Idx=\"2\" ] pro Treffer.",
+    "999361": "Wenn der Anwender Attacken einmal einsetzt.",
+    "999360": "Senkt [Name:ReferencedMessageTag Idx=\"2\" ] des Zieles um [Digit:1digit Idx=\"3\" ].",
+    "999359": "Außerdem wird [Name:ReferencedMessageTag Idx=\"4\" ] des Zieles bei starkem Sonnenlicht um [Digit:1digit Idx=\"5\" ] gesenkt.",
+    "999358": "Wenn Hagel erzeugt wird.",
+    "999357": "Wenn die Wetterbedingung Hagel nicht mehr aktiv ist.",
+    "999356": "Reduziert bei starkem Sonnenlicht den Wert des Gefährtenattacken-\nCountdowns des Anwenders um [Digit:1digit Idx=\"4\" ].",
+    "999355": "Verursacht bei Hagel den [Name:ReferencedMessageTag Idx=\"4\" ] bei allen verbündeten Gefährten.",
+    "999354": "Löst bei Gewaldro bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Gewaldro aus.",
+    "999347": "Erzeugt einen Eis-Fokus. (Ein Eis-Fokus verstärkt Angriffe vom Typ Eis.)"
 }

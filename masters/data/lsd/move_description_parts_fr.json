@@ -565,5 +565,21 @@
     "999372": "Augmente [Name:ReferencedMessageTag Idx=\"5\" ] de tous les Duos alliés de [Digit:1digit Idx=\"6\" ] [FR:Qty Ref=\"6\" S=\"rang\" P=\"rangs\" ].",
     "999371": "Applique l'[Name:ReferencedMessageTag Idx=\"2\" ] au lanceur quand le champ est un [Name:ReferencedMessageTag Idx=\"1\" ].",
     "999370": "Remplit [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"segment\" P=\"segments\" ] de la Jauge Capacité du lanceur quand le soleil brille.",
-    "999369": "Augmente également [Name:ReferencedMessageTag Idx=\"2\" ] de tous les Duos alliés de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ] quand il pleut."
+    "999369": "Augmente également [Name:ReferencedMessageTag Idx=\"2\" ] de tous les Duos alliés de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ] quand il pleut.",
+    "999368": "Attaque jusqu'à trois fois d'affilée.\nLa puissance de l'attaque augmente à chaque coup.\n(La deuxième attaque est deux fois plus puissante que la première et la troisième trois fois plus puissante.)",
+    "999367": "Après l'utilisation de cette capacité, la puissance de l'attaque revient à la normale.",
+    "999366": "Quand le lanceur utilise deux fois n'importe quelle capacité.",
+    "999365": "Quand les PV du lanceur sont au maximum.",
+    "999364": "Quand les PV du lanceur ne sont pas au maximum.",
+    "999363": "Réduit de [Digit:1digit ] le nombre d'actions nécessaires pour lancer une capacité Duo à chaque coup.",
+    "999362": "Augmente [Name:ReferencedMessageTag Idx=\"1\" ] du lanceur de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ] à chaque coup.",
+    "999361": "Quand le lanceur utilise une fois n'importe quelle capacité.",
+    "999360": "Baisse [Name:ReferencedMessageTag Idx=\"2\" ] de la cible de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ].",
+    "999359": "Baisse également [Name:ReferencedMessageTag Idx=\"4\" ] de la cible de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ] quand le soleil brille.",
+    "999358": "Quand la grêle est invoquée.",
+    "999357": "Quand il ne grêle plus.",
+    "999356": "Réduit de [Digit:1digit Idx=\"4\" ] le nombre d'actions nécessaires pour lancer une capacité Duo quand le soleil brille.",
+    "999355": "Applique l'[Name:ReferencedMessageTag Idx=\"4\" ] à tous les Duos alliés quand il grêle.",
+    "999354": "Permet à Jungko de devenir Méga-Jungko jusqu'à la fin du combat.",
+    "999347": "Transforme la zone en une Zone Glace. (Une Zone Glace renforce les attaques de type Glace.)"
 }

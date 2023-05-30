@@ -1,3 +1,5 @@
 {
-    "3": "達成任務[Digit:3digits ]後即可挑戰"
+    "3": "達成任務[Digit:3digits ]後即可挑戰",
+    "4_1": "還剩[Digit:3digits ]天開放",
+    "4_2": "還剩[Name:DateTime ]開放"
 }

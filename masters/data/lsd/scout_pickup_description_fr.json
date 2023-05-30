@@ -462,5 +462,14 @@
     "event_5040_4W_FesPickup_02_1": "Cet ancien Maître d'Unys peut attaquer\nplusieurs ennemis à la fois et porter\nle coup de grâce avec Ultralaser !",
     "event_5040_4W_FesPickup_02_3": "Red a revêtu son Look Ultime !\nVainquez vos ennemis avec\nune Rafale Feu surpuissante !",
     "event_5040_4W_FesPickup_02_2": "Dans son Look Ultime, Blue renforce\ntous ses alliés offensivement\net défensivement !",
-    "event_5040_5W_FesPickup_03_1": "Vêtue de son second Look Ultime, Cynthia\npeut renforcer les attaques de type\nSpectre grâce à Souhait Spectre !"
+    "event_5040_5W_FesPickup_03_1": "Vêtue de son second Look Ultime, Cynthia\npeut renforcer les attaques de type\nSpectre grâce à Souhait Spectre !",
+    "event_5050_0W_FesPickup_01_1": "Cette Dresseuse talentueuse de Galar\npeut changer de type en plein\ncombat grâce à Déclic Fringale !",
+    "event_5050_1W_FesPickup_01_1": "Le Duo Tacticien du Chef du Clan Diamant\npeut attaquer et baisser la résilience\nPlante de tous les adversaires !",
+    "event_5050_1W_FesPickup_02_1": "Le Duo Tacticien de la Cheffe\ndu Clan Perle peut créer une Zone\nGlace et ainsi invoquer la grêle !",
+    "event_5050_2W_FesPickup_01_1": "Dans son Look Ultime, Mortimer\nsoutient tous ses alliés avec\nZénith, Potion et plus encore !",
+    "event_5050_3W_FesPickup_01_1": "Le Duo Attaquant de type Eau de ce mystérieux\njeune homme en quête de légendes peut attaquer\ntous les ennemis avec sa capacité Synchro !",
+    "event_5050_3W_FesPickup_02_1": "Vêtu de son Look Ultime, Silver fait partie\nd'un Duo Tacticien qui se spécialise en\naccélération du compteur des capacités Duo !",
+    "event_5050_4W_FesPickup_04_1": "Le leader de la Team Aqua est\nun Attaquant puissant qui fait tomber\nla pluie à son entrée au combat !",
+    "event_5050_4W_FesPickup_01_1": "Dans son Look Ultime, Flora, une\nTacticienne de type Feu, peut baisser\nle compteur des capacités Duo !",
+    "event_5050_5W_FesPickup_02_1": "Vêtu de son Look Ultime, N inflige\nd'énormes dégâts avec Éclair Gelé\net sa capacité Synchro !"
 }

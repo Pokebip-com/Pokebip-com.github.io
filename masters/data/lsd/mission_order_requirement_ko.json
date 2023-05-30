@@ -1,3 +1,5 @@
 {
-    "3": "미션 [Digit:3digits ] 달성 후에 도전 가능"
+    "3": "미션 [Digit:3digits ] 달성 후에 도전 가능",
+    "4_1": "앞으로 [Digit:3digits ]일 뒤에 해방",
+    "4_2": "앞으로 [Name:DateTime ] 뒤에 해방"
 }

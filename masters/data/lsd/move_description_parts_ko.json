@@ -565,5 +565,21 @@
     "999372": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"5\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"6\" ]단계 오른다",
     "999371": "필드가 [Name:ReferencedMessageTag Idx=\"1\" ]일 때는 자신을 [Name:ReferencedMessageTag Idx=\"2\" ] 상태로 만든다",
     "999370": "햇살이 강한 날씨일 때는 자신의 기술게이지를 [Digit:1digit Idx=\"2\" ] 추가한다",
-    "999369": "비가 오는 날씨일 때는 추가로 같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다"
+    "999369": "비가 오는 날씨일 때는 추가로 같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다",
+    "999368": "최대 3회 연속으로 공격한다\n공격이 명중할 때마다 위력이 오른다\n(2번째는 1번째 위력의 2배가 되며 3번째는 1번째 위력의 3배가 된다)",
+    "999367": "기술을 사용한 뒤 원래의 위력으로 돌아간다",
+    "999366": "자신이 기술을 2회 사용했을 때",
+    "999365": "자신의 HP가 꽉 찬 상태일 때",
+    "999364": "자신의 HP가 꽉 찬 상태가 아닐 때",
+    "999363": "공격이 명중할 때마다 자신의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 [Digit:1digit ] 줄인다",
+    "999362": "공격이 명중할 때마다 자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"2\" ]단계 오른다",
+    "999361": "자신이 기술을 1회 사용했을 때",
+    "999360": "상대의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"3\" ]단계 떨어뜨린다",
+    "999359": "햇살이 강한 날씨일 때는 추가로 상대의 [Name:ReferencedMessageTag Idx=\"4\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"5\" ]단계 떨어뜨린다",
+    "999358": "날씨가 싸라기눈이 되었을 때",
+    "999357": "싸라기눈이 해제되었을 때",
+    "999356": "햇살이 강한 날씨일 때는 자신의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 [Digit:1digit Idx=\"4\" ] 줄인다",
+    "999355": "날씨가 싸라기눈일 때는 같은 편 버디즈 전원을 [Name:ReferencedMessageTag Idx=\"4\" ] 상태로 만든다",
+    "999354": "배틀이 끝날 때까지 메가나무킹이 된다",
+    "999347": "존을 고드름존으로 만든다\n(고드름존은 얼음타입 공격의 위력이 오른다)"
 }

@@ -76,7 +76,7 @@ function getAbilitiesByTrainerID(data) {
 		r[a.trainerId].nbCells = r[a.trainerId].nbCells + 1 || 1;
 
 		let cellType = getCellType(a.ability);
-		
+
 		r[a.trainerId][cellType] = r[a.trainerId][cellType] || [];
 		r[a.trainerId][cellType].push(a);
 		return r;
@@ -143,7 +143,12 @@ function getByID(data) {
 }
 
 function setConditionsAndAbilities() {
+	console.log(abilities);
+	console.log(abilityPanelByTrainer);
 	abilityPanelByTrainer.forEach(abilityPanel => {
+		console.log(abilityPanel);
+
+
 		abilityPanel.ability = abilities[abilityPanel.abilityId][0];
 		
 		abilityPanel.conditionIds.forEach(condId => {

@@ -668,5 +668,19 @@
     "17064800": "Erst-KP↓-60%-F.-S.-Schutz",
     "15012900": "KP↓-60%-GA-Countd.↓ (1×)",
     "11013400": "Erst-KP↓-60%-Heilung",
-    "18108500": "Erst-KP↓-60%-Ang.+Sp.-Ang.↑"
+    "18108500": "Erst-KP↓-60%-Ang.+Sp.-Ang.↑",
+    "13019100": "Geg.-Umschlingung-P-Att.+GA↑ [Name:PassiveSkillNameDigit ]",
+    "13019200": "Der Zeitenfluss von Hisui",
+    "13019300": "Das Raumgefüge von Hisui",
+    "19024800": "Eis-Fokus-Hagelsturm",
+    "28011800": "Der Kampfgeist von Sinnoh",
+    "28011900": "Die Überzeugung von Sinnoh",
+    "13022000": "Hagel-Schaden↓ [Name:PassiveSkillNameDigit ]",
+    "17013000": "Hagel-Problemschutz",
+    "17064700": "Attacke-1×-Physisch-Boost [Name:PassiveSkillNameDigit ]",
+    "19025100": "Erstantritt-Eis-Fokus",
+    "19025200": "Hagel-Dauer↑ [Name:PassiveSkillNameDigit ]",
+    "19025300": "Eis-Fokus-Dauer↑ [Name:PassiveSkillNameDigit ]",
+    "18108400": "Treffer-Fluchtwert↑ [Name:PassiveSkillNameDigit ]",
+    "19025400": "K.O.-Treffer-Attackenleiste↑ T [Name:PassiveSkillNameDigit ]"
 }

@@ -1120,5 +1120,17 @@
     "p998873": "Applies the [Name:ReferencedMessageTag Idx=\"1\" ] to the user the first time its HP drops to [Digit:2digits ]% or below each battle.",
     "p998871": "Reduces the user’s sync move countdown by [Digit:1digit Idx=\"1\" ] when its HP drops to [Digit:2digits ]% or below. This effect can activate only once per battle.",
     "p998870": "Restores the user’s HP by approximately [Digit:2digits Idx=\"1\" ]% of its maximum HP the first time its HP drops to [Digit:2digits ]% or below each battle.",
-    "p998869": "Raises the user’s Attack and Sp. Atk by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] the first time its HP drops to [Digit:2digits ]% or below each battle."
+    "p998869": "Raises the user’s Attack and Sp. Atk by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] the first time its HP drops to [Digit:2digits ]% or below each battle.",
+    "p998868": "Applies the [Name:ReferencedMessageTag ] to the user when it lands a critical hit.",
+    "p998867": "Powers up the user’s moves and sync move when the target is trapped.",
+    "p998866": "Protects all allied sync pairs from damage from a hailstorm.",
+    "p998865": "Powers up the moves of all allied sync pairs during a hailstorm.",
+    "p998864": "Causes a hailstorm when the user turns the field of play’s zone into an Ice Zone.",
+    "p998863": "Reduces damage when the user is hit by an attack move during a hailstorm.",
+    "p998862": "Status conditions cannot be inflicted on the user during a hailstorm.",
+    "p998861": "Extends the duration of a hailstorm when a hailstorm is caused while the user is on the field.",
+    "p998860": "Has a chance ([Digit:2digits Idx=\"1\" ]%) of applying the [Name:ReferencedMessageTag ] to the allied field of play when the user knocks out an opponent with a move.",
+    "p998859": "Applies the [Name:ReferencedMessageTag ] to the allied field of play when the user knocks out an opponent with a move.",
+    "p998803": "Turns the field of play’s zone into an Ice Zone the first time the user enters a battle each battle.",
+    "p998802": "(An Ice Zone powers up Ice-type attacks.)"
 }

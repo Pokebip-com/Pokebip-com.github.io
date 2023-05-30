@@ -1,3 +1,5 @@
 {
-    "3": "Mission [Digit:3digits ] must first be completed."
+    "3": "Mission [Digit:3digits ] must first be completed.",
+    "4_1": "Unlocks in [Digit:3digits ] day(s)",
+    "4_2": "Unlocks in [Name:DateTime ]"
 }

@@ -565,5 +565,21 @@
     "999372": "Raises the [Name:ReferencedMessageTag Idx=\"5\" ] of all allied sync pairs by [Digit:1digit Idx=\"6\" ] stat [EN:Qty Ref=\"6\" S=\"rank\" P=\"ranks\" ].",
     "999371": "Applies the [Name:ReferencedMessageTag Idx=\"2\" ] to the user when the terrain is [Name:ReferencedMessageTag Idx=\"1\" ].",
     "999370": "Charges the user’s move gauge by [Digit:1digit Idx=\"2\" ] when the weather is sunny.",
-    "999369": "In addition, raises the [Name:ReferencedMessageTag Idx=\"2\" ] of all allied sync pairs by [Digit:1digit Idx=\"3\" ] stat [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ] when the weather is rainy."
+    "999369": "In addition, raises the [Name:ReferencedMessageTag Idx=\"2\" ] of all allied sync pairs by [Digit:1digit Idx=\"3\" ] stat [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ] when the weather is rainy.",
+    "999368": "Attacks up to three times in a row. \nThis attack’s power increases for each hit. \n(The second attack is twice as powerful as the first attack, and the third attack is three times as powerful as the first attack.)",
+    "999367": "After using this move, the attack’s power returns to normal.",
+    "999366": "When the user uses any moves twice.",
+    "999365": "When the user’s HP is full.",
+    "999364": "When the user’s HP is not full.",
+    "999363": "Reduces the user’s sync move countdown by [Digit:1digit ] for each hit.",
+    "999362": "Raises the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] for each hit.",
+    "999361": "When the user uses any move once.",
+    "999360": "Lowers the target’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] stat [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ].",
+    "999359": "In addition, lowers the target’s [Name:ReferencedMessageTag Idx=\"4\" ] by [Digit:1digit Idx=\"5\" ] stat [EN:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ] when the weather is sunny.",
+    "999358": "When a hailstorm is caused.",
+    "999357": "When the weather condition is no longer a hailstorm.",
+    "999356": "Reduces the user’s sync move countdown by [Digit:1digit Idx=\"4\" ] when the weather is sunny.",
+    "999355": "Applies the [Name:ReferencedMessageTag Idx=\"4\" ] to all allied sync pairs during a hailstorm.",
+    "999354": "Become Mega Sceptile until the end of battle.",
+    "999347": "Turns the field of play’s zone into an Ice Zone. (An Ice Zone powers up Ice-type attacks.)"
 }

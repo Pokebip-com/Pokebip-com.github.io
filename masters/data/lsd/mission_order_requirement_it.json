@@ -1,3 +1,5 @@
 {
-    "3": "Disponibile dopo aver completato\nla missione [Digit:3digits ]."
+    "3": "Disponibile dopo aver completato\nla missione [Digit:3digits ].",
+    "4_1": "Giorni mancanti allo sblocco: [Digit:3digits ]",
+    "4_2": "Tempo mancante allo sblocco:\n[Name:DateTime ]"
 }
