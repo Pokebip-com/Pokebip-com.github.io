@@ -1,0 +1,9 @@
+{
+    "1": "Più velocemente completi una lotta, più alto sarà\nil punteggio che potrai ottenere.",
+    "2": "Maggiore è la percentuale complessiva dei PS\nresidui di tutti gli alleati una volta completata\nuna lotta, più alto sarà il punteggio che potrai\nottenere.",
+    "3": "Maggiore è il numero totale di aumenti\ndelle statistiche degli alleati una volta completata\nuna lotta, più alto sarà il punteggio che potrai\nottenere. Se i PS di un'Unità vengono ridotti\na 0 durante la lotta, verrà conteggiato il numero\ndi aumenti delle statistiche fino al momento in\ncui i PS vengono ridotti a 0.",
+    "4": "Maggiore è il numero totale di riduzioni\ndelle statistiche degli avversari una volta\ncompletata una lotta, più alto sarà il punteggio\nche potrai ottenere. Se i PS di un'Unità vengono\nridotti a 0 durante la lotta, verrà conteggiato\nil numero di riduzioni delle statistiche fino\nal momento in cui i PS vengono ridotti a 0.",
+    "5": "Maggiori sono i danni massimi inflitti da\nuna qualsiasi delle Unità alleate, più alto sarà\nil punteggio che potrai ottenere.",
+    "6": "Maggiore è il numero di attacchi andati\na segno per tutte le Unità alleate, più alto\nsarà il punteggio che potrai ottenere.",
+    "7": "Minore è il numero di attacchi andati\na segno per tutte le Unità alleate, più alto\nsarà il punteggio che potrai ottenere."
+}

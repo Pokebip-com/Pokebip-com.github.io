@@ -10,5 +10,17 @@
     "champion_battle_rule_2080_010": "Quand un Duo est mis K.O., l'Attaque, la Défense,\nl'Attaque Spéciale, la Défense Spéciale et\nla Vitesse des Duos de l'équipe baissent.",
     "champion_battle_rule_2090_001": "Les effets sur le terrain déclenchés par\nles alliés et les ennemis durent tout le combat.",
     "champion_battle_rule_2090_002": "Les effets additionnels des capacités des alliés\net des ennemis ont plus de chances de se\ndéclencher.",
-    "champion_battle_rule_2090_003": "Les baisses de stats infligées aux alliés et aux\nennemis sont plus importantes que d'habitude."
+    "champion_battle_rule_2090_003": "Les baisses de stats infligées aux alliés et aux\nennemis sont plus importantes que d'habitude.",
+    "score_attack_battle_rule_5060_000": "Aucune règle spécifique.",
+    "score_attack_battle_rule_5060_001": "La quantité de PV restaurée aux alliés est de zéro.",
+    "score_attack_battle_rule_5060_002": "Réduit les dégâts que les alliés infligent\navec les capacités Duo de 80 %.",
+    "score_attack_battle_rule_5060_003": "Réduit les dégâts que les alliés infligent avec\nles capacités offensives physiques de 80 %.",
+    "score_attack_battle_rule_5060_004": "Réduit les dégâts que les alliés infligent avec\nles capacités offensives spéciales de 80 %.",
+    "score_attack_battle_rule_5060_005": "Réduit le nombre maximum de segments\nde la Jauge Capacité des alliés de 2.",
+    "score_attack_battle_rule_5060_006": "Les alliés ne peuvent pas altérer la météo,\nle champ ou la zone.",
+    "score_attack_battle_rule_5060_007": "Réduit de 3 le nombre maximum d'actions\nnécessaires aux ennemis pour lancer\nune capacité Duo.",
+    "score_attack_battle_rule_5060_008": "Baisse de 80 % l'Attaque, la Défense, l'Attaque\nSpéciale la Défense Spéciale et la Vitesse\ndes Duos Tacticiens alliés.",
+    "score_attack_battle_rule_5060_009": "Baisse de 80 % l'Attaque, la Défense, l'Attaque\nSpéciale la Défense Spéciale et la Vitesse\ndes Duos Attaquants alliés.",
+    "score_attack_battle_rule_5060_010": "Protège les ennemis des altérations de statut,\nde la peur, de la confusion, et du ligotage.",
+    "score_attack_battle_rule_5060_011": "Réduit les dégâts subis par les ennemis\nlorsqu'ils ne souffrent par d'une altération\nde statut ou d'un tourment de 80 %."
 }

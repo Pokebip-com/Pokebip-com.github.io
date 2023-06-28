@@ -581,5 +581,11 @@
     "999356": "Abbassa di [Digit:1digit Idx=\"4\" ] il numero di azioni necessarie a chi la usa per sferrare un'Unimossa quando la luce del sole è intensa.",
     "999355": "Applica l'[Name:ReferencedMessageTag Idx=\"4\" ] a tutte le Unità alleate quando grandina.",
     "999354": "Permette a Sceptile di megaevolversi. L'effetto svanisce al termine della lotta.",
+    "999353": "Quando la Difesa di chi la usa viene aumentata, applica al suo Attacco lo stesso aumento.",
+    "999352": "Aumenta [Name:ReferencedMessageTag Idx=\"6\" ] di chi la usa di [Digit:1digit Idx=\"7\" ] [IT:Qty Ref=\"7\" S=\"grado\" P=\"gradi\" ].",
+    "999351": "Abbassa di [Digit:1digit Idx=\"6\" ] il numero di azioni necessarie a chi la usa per sferrare un'Unimossa.",
+    "999350": "Causa una tempesta di sabbia.",
+    "999349": "Avvelena tutte le Unità avversarie.",
+    "999348": "Aumenta [Name:ReferencedMessageTag Idx=\"4\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ].",
     "999347": "Trasforma la zona in una Zona Ghiaccio. (Una Zona Ghiaccio aumenta la potenza degli attacchi di tipo Ghiaccio.)"
 }

@@ -372,5 +372,14 @@
 { "missionGroupId": 2505070, "scheduleId": "5050_3W_Event_minakisilver_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 505070, "itemSetId": "414", "bannerId": 1505004, "u9": 1, "u10": 0 },
 { "missionGroupId": 2505080, "scheduleId": "5050_4W_AKU_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 505080, "itemSetId": "414", "bannerId": 1407001, "u9": 1, "u10": 0 },
 { "missionGroupId": 2505090, "scheduleId": "5050_4W_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 505090, "itemSetId": "414", "bannerId": 1407501, "u9": 1, "u10": 0 },
-{ "missionGroupId": 2505100, "scheduleId": "5050_5W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 505100, "itemSetId": "2010056", "bannerId": 1210003, "u9": 1, "u10": 0 }
+{ "missionGroupId": 2505100, "scheduleId": "5050_5W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 505100, "itemSetId": "2010056", "bannerId": 1210003, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2506010, "scheduleId": "5060_1W_Event_summer_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 506010, "itemSetId": "414", "bannerId": 1506001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2506020, "scheduleId": "5060_1W_Event_summer_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 506020, "itemSetId": "414", "bannerId": 1406001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2506030, "scheduleId": "5060_2W_Event_AKU_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 506050, "itemSetId": "414", "bannerId": 1506004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2506040, "scheduleId": "5060_2W_Campaign_ActivitySupportMission", "u3": 0, "u4": 1, "u5": 0, "u6": 506030, "itemSetId": "2020155", "bannerId": 5303002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2506050, "scheduleId": "5060_2W_Event_Happy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 506040, "itemSetId": "636", "bannerId": 1210005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2506060, "scheduleId": "5060_3W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 506060, "itemSetId": "2010056", "bannerId": 1506007, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2506070, "scheduleId": "5060_3W_Event_TrainersFile_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 506070, "itemSetId": "414", "bannerId": 1506006, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2506090, "scheduleId": "5060_4W_Event_Mitsuru_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 506090, "itemSetId": "414", "bannerId": 1409002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2506100, "scheduleId": "5060_4W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 506100, "itemSetId": "2010056", "bannerId": 1206006, "u9": 1, "u10": 0 }
 ]}

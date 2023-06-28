@@ -31,5 +31,8 @@
     "legend_rule_3090_003": "Erholt sich d. Gegner v. Statusproblemen od.\nStörungen, steigt seine Resistenz dagegen.",
     "legend_rule_5020_001": "Erhöht die Stärke von Attacken und der\nGefährtenattacke des Gegners, wenn sein\nAngriff erhöht ist.",
     "legend_rule_5020_002": "Erhöht die Stärke von Attacken und der\nGefährtenattacke des Gegners, wenn sein\nSpezial-Angriff erhöht ist.",
-    "legend_rule_5020_003": "Ab der zweiten KP-Leiste des Gegners\nerleidet der Gegner weniger Schaden, wenn\nkein Feld-Effekt aktiv ist."
+    "legend_rule_5020_003": "Ab der zweiten KP-Leiste des Gegners\nerleidet der Gegner weniger Schaden, wenn\nkein Feld-Effekt aktiv ist.",
+    "legend_rule_5060_001": "Mehrere Gegner erscheinen.",
+    "legend_rule_5060_002": "Erhöht die Stärke von Attacken, der\nGefährtenattacke des Gegners oder von\nbeiden, wenn seine Initiative erhöht ist.",
+    "legend_rule_5060_003": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent."
 }

@@ -10,5 +10,17 @@
     "champion_battle_theme_2080_010": "어떤 상대와 싸우더라도\n같은 편이 최대한 쓰러지지 않도록 지키면서 싸워보자!",
     "champion_battle_theme_2090_001": "어떤 상대와 싸우더라도\n같은 편이 유리해지는 필드 효과를 사용해서 싸워보자!",
     "champion_battle_theme_2090_002": "어떤 상대와 싸우더라도\n추가 효과가 있는 기술을 활용해서 싸워보자!",
-    "champion_battle_theme_2090_003": "어떤 상대와 싸우더라도\n상대의 능력을 떨어뜨리며 싸워보자!"
+    "champion_battle_theme_2090_003": "어떤 상대와 싸우더라도\n상대의 능력을 떨어뜨리며 싸워보자!",
+    "score_attack_battle_theme_5060_000": "규칙 없음",
+    "score_attack_battle_theme_5060_001": "같은 편의\nHP가 회복되지 않음",
+    "score_attack_battle_theme_5060_002": "같은 편의 버디즈기술\n데미지가 대폭 감소",
+    "score_attack_battle_theme_5060_003": "같은 편의 물리공격\n데미지가 대폭 감소",
+    "score_attack_battle_theme_5060_004": "같은 편의 특수공격\n데미지가 대폭 감소",
+    "score_attack_battle_theme_5060_005": "같은 편의\n기술게이지 상한 -2",
+    "score_attack_battle_theme_5060_006": "같은 편은 날씨 등을\n바꿀 수 없음",
+    "score_attack_battle_theme_5060_007": "상대의 BC 상한 -3",
+    "score_attack_battle_theme_5060_008": "같은 편 테크니컬의\n능력 5종이 대폭 감소",
+    "score_attack_battle_theme_5060_009": "같은 편 어태커의\n능력 5종이 대폭 감소",
+    "score_attack_battle_theme_5060_010": "상대는 상태 이상과\n방해 상태를 무효화",
+    "score_attack_battle_theme_5060_011": "상대는 비상태이상방해시\n대폭 데미지 경감"
 }

@@ -10,5 +10,17 @@
     "champion_battle_rule_2080_010": "버디즈가 기절 상태가 되었을 때 그 버디즈와 같은 팀 전원의\n공격과 방어, 특수공격, 특수방어, 스피드가 떨어진다",
     "champion_battle_rule_2090_001": "같은 편과 상대 모두가 발동한\n필드 효과의 유지 시간이 영구 지속된다",
     "champion_battle_rule_2090_002": "같은 편과 상대 모두의\n기술의 추가 효과 확률이 오른다",
-    "champion_battle_rule_2090_003": "같은 편과 상대 모두는 능력이 떨어져 있을 때\n그 능력이 평소보다 대폭 감소한다"
+    "champion_battle_rule_2090_003": "같은 편과 상대 모두는 능력이 떨어져 있을 때\n그 능력이 평소보다 대폭 감소한다",
+    "score_attack_battle_rule_5060_000": "특수 규칙 없음",
+    "score_attack_battle_rule_5060_001": "같은 편의 HP회복량이 0이 된다",
+    "score_attack_battle_rule_5060_002": "같은 편이 버디즈기술로 주는 데미지가\n80% 감소한다",
+    "score_attack_battle_rule_5060_003": "같은 편이 물리공격으로 주는 데미지가\n80% 감소한다",
+    "score_attack_battle_rule_5060_004": "같은 편이 특수공격으로 주는 데미지가\n80% 감소한다",
+    "score_attack_battle_rule_5060_005": "같은 편의 기술게이지 상한이 2 줄어든다",
+    "score_attack_battle_rule_5060_006": "같은 편은 날씨나 필드, 존을\n변경할 수 없게 된다",
+    "score_attack_battle_rule_5060_007": "상대의 버디즈기술 발동 가능 상태가 되기까지의\n카운트 상한치가 3 줄어든다",
+    "score_attack_battle_rule_5060_008": "같은 편 테크니컬은 공격과 방어,\n특수공격, 특수방어, 스피드가 80% 떨어진다",
+    "score_attack_battle_rule_5060_009": "같은 편 어태커는 공격과 방어,\n특수공격, 특수방어, 스피드가 80% 떨어진다",
+    "score_attack_battle_rule_5060_010": "상대는 상태 이상이나 풀죽음 상태,\n혼란 상태, 바인드 상태가 되지 않는다",
+    "score_attack_battle_rule_5060_011": "상대는 상태 이상이나 방해 상태가 아닌 경우\n받는 데미지를 80% 약하게 한다"
 }

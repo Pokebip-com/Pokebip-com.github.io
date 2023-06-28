@@ -18,5 +18,6 @@
 { "u1": 17, "u2": 0, "passive1Id": 0, "passive2Id": 0, "passive3Id": 0, "passive4Id": 20010101 },
 { "u1": 18, "u2": 0, "passive1Id": 0, "passive2Id": 0, "passive3Id": 0, "passive4Id": 18020801 },
 { "u1": 20, "u2": 0, "passive1Id": 19040205, "passive2Id": 19040208, "passive3Id": 19040209, "passive4Id": 19030201 },
-{ "u1": 31, "u2": 0, "passive1Id": 19041305, "passive2Id": 19041308, "passive3Id": 19041309, "passive4Id": 19031301 }
+{ "u1": 31, "u2": 0, "passive1Id": 19041305, "passive2Id": 19041308, "passive3Id": 19041309, "passive4Id": 19031301 },
+{ "u1": 35, "u2": 0, "passive1Id": 19041705, "passive2Id": 19041708, "passive3Id": 19041709, "passive4Id": 19031701 }
 ]}

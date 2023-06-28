@@ -31,5 +31,8 @@
     "legend_rule_3090_003": "When the opponent recovers from a status\ncondition or interference, its resistance to\nthat condition or interference increases.",
     "legend_rule_5020_001": "Powers up the opponent’s moves and sync\nmove when its Attack is raised.",
     "legend_rule_5020_002": "Powers up the opponent’s moves and sync\nmove when its Sp. Atk is raised.",
-    "legend_rule_5020_003": "Starting from the opponent’s second HP bar,\nthe opponent takes less damage when it is\nnot affected by a field effect."
+    "legend_rule_5020_003": "Starting from the opponent’s second HP bar,\nthe opponent takes less damage when it is\nnot affected by a field effect.",
+    "legend_rule_5060_001": "Multiple opponents appear.",
+    "legend_rule_5060_002": "Powers up the opponent’s moves, sync\nmove, or both when their Speed is raised.",
+    "legend_rule_5060_003": "The opponent’s field effects are permanent."
 }

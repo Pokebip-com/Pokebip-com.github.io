@@ -10,5 +10,17 @@
     "champion_battle_rule_2080_010": "Se un'Unità va KO, Attacco, Difesa,\nAttacco Speciale, Difesa Speciale e Velocità\ndel resto della sua squadra diminuiscono.",
     "champion_battle_rule_2090_001": "Gli effetti sul campo attivati sia dagli alleati\nche dagli avversari durano più a lungo.",
     "champion_battle_rule_2090_002": "Gli effetti aggiuntivi delle mosse si attivano\npiù facilmente sia per gli alleati\nche per gli avversari.",
-    "champion_battle_rule_2090_003": "Le riduzioni delle statistiche sono molto più\ngrandi del normale sia per gli alleati\nche per gli avversari."
+    "champion_battle_rule_2090_003": "Le riduzioni delle statistiche sono molto più\ngrandi del normale sia per gli alleati\nche per gli avversari.",
+    "score_attack_battle_rule_5060_000": "Nessuna regola speciale.",
+    "score_attack_battle_rule_5060_001": "La quantità di PS recuperati dalle Unità alleate\ndiventa 0.",
+    "score_attack_battle_rule_5060_002": "I danni inflitti dalle Unità alleate usando\nUnimosse si abbassano dell'80%.",
+    "score_attack_battle_rule_5060_003": "I danni inflitti dalle Unità alleate usando\nattacchi fisici si abbassano dell'80%.",
+    "score_attack_battle_rule_5060_004": "I danni inflitti dalle Unità alleate usando\nattacchi speciali si abbassano dell'80%.",
+    "score_attack_battle_rule_5060_005": "Il numero massimo di barrette della barra mosse\ndelle Unità alleate diminuisce di 2.",
+    "score_attack_battle_rule_5060_006": "Le Unità alleate non possono cambiare\nle condizioni atmosferiche, né trasformare\nil campo di lotta o la zona.",
+    "score_attack_battle_rule_5060_007": "Il numero massimo di azioni necessarie\nalle Unità avversarie per sferrare un'Unimossa\nsi abbassa di 3.",
+    "score_attack_battle_rule_5060_008": "L'Attacco, la Difesa, l'Attacco Speciale, la Difesa\nSpeciale e la Velocità delle Unità Alleate\ncon il ruolo di Tecnico diminuiscono dell'80%.",
+    "score_attack_battle_rule_5060_009": "L'Attacco, la Difesa, l'Attacco Speciale, la Difesa\nSpeciale e la Velocità delle Unità alleate\ncon il ruolo di Attaccante diminuiscono dell'80%.",
+    "score_attack_battle_rule_5060_010": "Le Unità avversarie sono immuni ai problemi\ndi stato, al tentennamento, alla confusione\ne all'imprigionamento.",
+    "score_attack_battle_rule_5060_011": "Se non sono affetti da problemi di stato\no impedimenti, gli avversari subiscono\nl'80% di danni in meno."
 }

@@ -1,0 +1,8 @@
+{
+    "1": "[Name:TeamSkillTag ]\n[Digit:2digits ]對以上",
+    "2": "[Name:FieldEffectType ]\n[Digit:2digits ]次以上",
+    "3": "[Name:Role ]\n[Digit:2digits ]對以上",
+    "4": "★[Digit:2digits Idx=\"1\" ]拍組\n[Digit:2digits Idx=\"2\" ]對以上",
+    "5": "[Name:FieldEffectType ]",
+    "6": "[Name:TeamSkillTag Idx=\"1\" ]與\n[Name:TeamSkillTag Idx=\"2\" ]"
+}

@@ -406,7 +406,7 @@
     "999533": "Todos los compis aliados se curan de retroceso, confusión o ataduras.",
     "999532": "Llena [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"punto\" P=\"puntos\" ] la barra de movimientos del usuario.",
     "999531": "La potencia de este ataque aumenta cuando la zona es una Zona Siniestra.",
-    "999530": "Hace que el tiempo cambie a soleado.",
+    "999530": "Hace que el sol brille con fuerza.",
     "999529": "Aplica el efecto Siguiente Supereficaz ↑ a todos los compis aliados cuando hay condiciones atmosféricas activas.",
     "999528": "Crea una Zona Voladora. (Una Zona Voladora potencia los ataques de tipo Volador).",
     "999527": "Evoluciona a Mega-Latias. Vuelve a la normalidad tras terminar el combate.",
@@ -581,5 +581,11 @@
     "999356": "Se reduce en [Digit:1digit Idx=\"4\" ] el contador de movimientos compi del usuario cuando está soleado.",
     "999355": "Aplica el [Name:ReferencedMessageTag Idx=\"4\" ] a todos los compis aliados cuando graniza.",
     "999354": "Evoluciona a Mega-Sceptile. Vuelve a la normalidad tras terminar el combate.",
+    "999353": "Cuando la Defensa del usuario ha sido incrementada, su Ataque aumenta en igual medida.",
+    "999352": "Aumenta [Name:ReferencedMessageTag Idx=\"6\" ] del usuario en [Digit:1digit Idx=\"7\" ] [ES:Qty Ref=\"7\" S=\"nivel\" P=\"niveles\" ].",
+    "999351": "Se reduce en [Digit:1digit Idx=\"6\" ] el contador de movimientos compi del usuario.",
+    "999350": "Desata una tormenta de arena.",
+    "999349": "Envenena a todos los compis rivales.",
+    "999348": "Aumenta [Name:ReferencedMessageTag Idx=\"4\" ] de todos los compis aliados en [Digit:1digit Idx=\"5\" ] [ES:Qty Ref=\"5\" S=\"nivel\" P=\"niveles\" ].",
     "999347": "Crea una Zona Hielo. (Una Zona Hielo potencia los ataques de tipo Hielo)."
 }

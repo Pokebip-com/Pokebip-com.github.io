@@ -10,5 +10,17 @@
     "champion_battle_rule_2080_010": "Wird ein Gefährtengespann kampfunfähig, sinken\nder Angriff, die Verteidigung, der Spezial-Angriff,\ndie Spezial-Verteidigung und die Initiative aller\nGefährten des betroffenen Teams.",
     "champion_battle_rule_2090_001": "Von Mitstreitern und von Gegnern ausgelöste\nSeiten-Effekte wirken permanent.",
     "champion_battle_rule_2090_002": "Die Wahrscheinlichkeit, dass Zusatzeffekte von\nAttacken eintreten, steigt auf beiden Seiten.",
-    "champion_battle_rule_2090_003": "Die Senkung von Statuswerten hat auf beiden\nSeiten größere Auswirkungen als gewöhnlich."
+    "champion_battle_rule_2090_003": "Die Senkung von Statuswerten hat auf beiden\nSeiten größere Auswirkungen als gewöhnlich.",
+    "score_attack_battle_rule_5060_000": "Keine speziellen Regeln.",
+    "score_attack_battle_rule_5060_001": "Die Anzahl wiederhergestellter KP bei\nVerbündeten beträgt 0.",
+    "score_attack_battle_rule_5060_002": "Verbündete fügen mit Gefährtenattacken\n80 % weniger Schaden zu.",
+    "score_attack_battle_rule_5060_003": "Verbündete fügen mit physischen Angriffen\n80 % weniger Schaden zu.",
+    "score_attack_battle_rule_5060_004": "Verbündete fügen mit Spezial-Angriffen\n80 % weniger Schaden zu.",
+    "score_attack_battle_rule_5060_005": "Die Anzahl der Segmente in der Attackenleiste\nder Verbündeten wird um 2 verringert.",
+    "score_attack_battle_rule_5060_006": "Verbündete können weder Wetter noch Feld oder\nFokus ändern.",
+    "score_attack_battle_rule_5060_007": "Der Maximalwert des Countdowns der\nGefährtenattacke des Gegners sinkt um 3.",
+    "score_attack_battle_rule_5060_008": "Angriff, Verteidigung, Sp.-Ang., Sp.-Vert. und \nInitiative verbündeter Taktiker sind um 80 %\ngesenkt.",
+    "score_attack_battle_rule_5060_009": "Angriff, Verteidigung, Sp.-Ang., Sp.-Vert. und \nInitiative verbündeter Angreifer sind um 80 %\ngesenkt.",
+    "score_attack_battle_rule_5060_010": "Gegner sind immun gegen Statusprobleme,\nZurückschrecken, Verwirrung und Umschlingung.",
+    "score_attack_battle_rule_5060_011": "Gegner erleiden 80 % weniger Schaden, wenn\nsie nicht von Statusproblemen oder Störungen\nbetroffen sind."
 }

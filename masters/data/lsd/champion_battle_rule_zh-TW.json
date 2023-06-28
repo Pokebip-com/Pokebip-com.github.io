@@ -10,5 +10,17 @@
     "champion_battle_rule_2080_010": "當拍組陷入瀕死狀態時，會降低同隊中\n全體拍組的攻擊、防禦、特攻、特防和速度。",
     "champion_battle_rule_2090_001": "我方與對手發動的\n場地效果的效果時間會一直持續下去。",
     "champion_battle_rule_2090_002": "我方與對手的\n招式追加效果的成功率會提高。",
-    "champion_battle_rule_2090_003": "當我方與對手的能力下降時，\n該能力的下降幅度會比平常還要大。"
+    "champion_battle_rule_2090_003": "當我方與對手的能力下降時，\n該能力的下降幅度會比平常還要大。",
+    "score_attack_battle_rule_5060_000": "無特殊規則。",
+    "score_attack_battle_rule_5060_001": "我方的ＨＰ回復量變成０。",
+    "score_attack_battle_rule_5060_002": "我方用拍組招式給予的傷害會減少８０％。",
+    "score_attack_battle_rule_5060_003": "我方用物理攻擊給予的傷害\n會減少８０％。",
+    "score_attack_battle_rule_5060_004": "我方用特殊攻擊給予的傷害\n會減少８０％。",
+    "score_attack_battle_rule_5060_005": "我方的招式計量槽上限會減少２條。",
+    "score_attack_battle_rule_5060_006": "我方無法變更天氣、場地、領域。",
+    "score_attack_battle_rule_5060_007": "對手發動拍組招式所需的行動總數會減少３次。",
+    "score_attack_battle_rule_5060_008": "我方技術型拍組的\n攻擊、防禦、特攻、特防和速度會降低８０％。",
+    "score_attack_battle_rule_5060_009": "我方攻擊型拍組的\n攻擊、防禦、特攻、特防和速度會降低８０％。",
+    "score_attack_battle_rule_5060_010": "對手不會陷入異常狀態、畏縮狀態、混亂狀態\n和束縛狀態。",
+    "score_attack_battle_rule_5060_011": "當對手未陷入異常狀態或妨害狀態時，\n會減輕所受到的傷害８０％。"
 }

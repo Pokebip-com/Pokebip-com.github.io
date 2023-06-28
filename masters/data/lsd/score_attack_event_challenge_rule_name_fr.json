@@ -1,0 +1,8 @@
+{
+    "1": "[Digit:2digits ] [FR:Qty S=\"Duo\" P=\"Duos\" ] ou plus :\n[Name:TeamSkillTag ]",
+    "2": "[Name:FieldEffectType ] :\n[Digit:2digits ] fois ou plus",
+    "3": "[Digit:2digits ] [FR:Qty S=\"Duo\" P=\"Duos\" ] [Name:Role ][FR:Qty P=\"s\" ]\nou plus",
+    "4": "[Digit:2digits Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"Duo\" P=\"Duos\" ] [Digit:2digits Idx=\"1\" ]★ ou plus",
+    "5": "[Name:FieldEffectType ]",
+    "6": "[Name:TeamSkillTag Idx=\"1\" ]\net [Name:TeamSkillTag Idx=\"2\" ]"
+}

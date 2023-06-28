@@ -1,0 +1,8 @@
+{
+    "1": "Stelle ein Team aus [Digit:2digits ] oder mehr Gefährten\nmit dem folgenden Attribut zusammen:\n• [Name:TeamSkillTag ]",
+    "2": "Verursache folgende Statusprobleme oder\nStörungen bei deinem Gegner [Digit:2digits ] Mal oder öfter:\n• [Name:FieldEffectType ]",
+    "3": "Stelle ein Team aus [Digit:2digits ] oder mehr Gefährten\nzusammen, welche die folgende Rolle teilen:\n• [Name:Role ]",
+    "4": "Stelle ein Team aus [Digit:2digits Idx=\"2\" ] oder mehr Gefährten\nzusammen, deren ursprüngliche Anzahl an ★ [Digit:2digits Idx=\"1\" ] \nbeträgt.",
+    "5": "Aktiviere den folgenden Seiten-Effekt:\n• [Name:FieldEffectType ]",
+    "6": "Stelle ein Team aus [Digit:2digits ] oder mehr Gefährten\nzusammen, welche die folgenden Attribute teilen:\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]"
+}

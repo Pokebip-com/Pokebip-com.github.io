@@ -31,5 +31,8 @@
     "legend_rule_3090_003": "Quand l'ennemi se remet d'une altération\nde statut ou d'un tourment, sa résistance\nà cette altération ou ce tourment augmente.",
     "legend_rule_5020_001": "La puissance des capacités et des capacités\nDuo de l'ennemi augmente quand son\nAttaque est augmentée.",
     "legend_rule_5020_002": "La puissance des capacités et des capacités\nDuo de l'ennemi augmente quand son\nAttaque Spéciale est augmentée.",
-    "legend_rule_5020_003": "À sa 2e jauge de PV, l'ennemi subit\nmoins de dégâts s'il ne souffre pas\nd'un effet sur le terrain."
+    "legend_rule_5020_003": "À sa 2e jauge de PV, l'ennemi subit\nmoins de dégâts s'il ne souffre pas\nd'un effet sur le terrain.",
+    "legend_rule_5060_001": "L'ennemi combat avec plusieurs\nautres Pokémon.",
+    "legend_rule_5060_002": "La puissance des capacités et/ou de\nla capacité Duo de l'ennemi augmente\nquand sa Vitesse est augmentée.",
+    "legend_rule_5060_003": "Les effets sur le terrain déclenchés\npar l'ennemi durent tout le combat."
 }

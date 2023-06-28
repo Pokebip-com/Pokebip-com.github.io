@@ -10,5 +10,17 @@
     "champion_battle_theme_2080_010": "Try not to let any of your sync pairs faint!",
     "champion_battle_theme_2090_001": "Use field effects that give your team the upper hand!",
     "champion_battle_theme_2090_002": "Make use of moves with additional effects!",
-    "champion_battle_theme_2090_003": "Use stat-lowering effects on your opponents!"
+    "champion_battle_theme_2090_003": "Use stat-lowering effects on your opponents!",
+    "score_attack_battle_theme_5060_000": "No rules",
+    "score_attack_battle_theme_5060_001": "Allies can’t be healed",
+    "score_attack_battle_theme_5060_002": "Ally sync move damage\nsignificantly reduced",
+    "score_attack_battle_theme_5060_003": "Ally physical attack damage\nsignificantly reduced",
+    "score_attack_battle_theme_5060_004": "Ally special attack damage\nsignificantly reduced",
+    "score_attack_battle_theme_5060_005": "Ally move gauge\nmaximum −2",
+    "score_attack_battle_theme_5060_006": "Allies cannot change\nweather, etc.",
+    "score_attack_battle_theme_5060_007": "Opponent max sync\nmove countdown −3",
+    "score_attack_battle_theme_5060_008": "Five stats of allied tech\nsync pairs significantly\nreduced",
+    "score_attack_battle_theme_5060_009": "Five stats of allied strike\nsync pairs significantly\nreduced",
+    "score_attack_battle_theme_5060_010": "Opponents are immune\nto status conditions and\ninterference",
+    "score_attack_battle_theme_5060_011": "Damage taken by\nunaffected opponents\nis significantly reduced"
 }

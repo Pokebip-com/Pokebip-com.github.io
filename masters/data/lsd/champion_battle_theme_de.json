@@ -10,5 +10,17 @@
     "champion_battle_theme_2080_010": "Schütze deine Team-Mitglieder, damit sie nicht\nkampfunfähig werden!",
     "champion_battle_theme_2090_001": "Setze Seiten-Effekte ein, um deinem Team\ngegen jeden Gegner einen Vorteil zu\nverschaffen!",
     "champion_battle_theme_2090_002": "Setze Zusatzeffekte von Attacken gegen deine\nGegner ein!",
-    "champion_battle_theme_2090_003": "Senke die Statuswerte deiner Gegner!"
+    "champion_battle_theme_2090_003": "Senke die Statuswerte deiner Gegner!",
+    "score_attack_battle_theme_5060_000": "Keine Regeln",
+    "score_attack_battle_theme_5060_001": "Verbündete können nicht\ngeheilt werden",
+    "score_attack_battle_theme_5060_002": "Starke Schadensreduktion\nbei GAs von Mitstreitern",
+    "score_attack_battle_theme_5060_003": "Starke Schadensreduktion\nbei physischen Angriffen\nvon Mitstreitern",
+    "score_attack_battle_theme_5060_004": "Starke Schadensreduktion\nbei Spezial-Angriffen\nvon Mitstreitern",
+    "score_attack_battle_theme_5060_005": "Team-Att.-Leiste-Limit 2",
+    "score_attack_battle_theme_5060_006": "Kein Wetter/Fokus/Feld-\nWechsel durch Team",
+    "score_attack_battle_theme_5060_007": "Gegner-MAX-GA-\nCountdown↓3",
+    "score_attack_battle_theme_5060_008": "Fünf Statuswerte\nverbündeter Taktiker\nstark reduziert",
+    "score_attack_battle_theme_5060_009": "Fünf Statuswerte\nverbündeter Angreifer\nstark reduziert",
+    "score_attack_battle_theme_5060_010": "Gegner immun gegen\nStatusprobleme/Störung",
+    "score_attack_battle_theme_5060_011": "Problemfreie Gegner\nnehmen stark reduzierten\nSchaden"
 }

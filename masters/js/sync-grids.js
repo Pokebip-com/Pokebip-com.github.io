@@ -153,8 +153,8 @@ function getByID(data) {
 }
 
 function setConditionsAndAbilities() {
-	console.log(abilities);
-	console.log(abilityPanelByTrainer);
+	//console.log(abilities);
+	//console.log(abilityPanelByTrainer);
 	abilityPanelByTrainer.forEach(abilityPanel => {
 		//console.log(abilityPanel);
 
@@ -549,6 +549,10 @@ function getSkillMoveDescr(descr, id) {
 		}
 		else if(tagType === "Name" && tagValue === "MoveId") {
 			descr = descr.replace(substring, moveNames[idxValue].replace("\n", " "));
+			Idx.pop();
+		}
+		else if(tagType === "Name" && tagValue === "PassiveSkillId") {
+			descr = descr.replace(substring, passiveList[idxValue].name.replace("\n", " "));
 			Idx.pop();
 		}
 		else if(tags[tagType][tagValue].length > 0) {

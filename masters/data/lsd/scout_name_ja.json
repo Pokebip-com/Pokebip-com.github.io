@@ -107,5 +107,12 @@
     "event_5030_4W_MasterTicket_02": "シバ確定 バラエティＢサーチ",
     "event_5030_4W_SuperTicket_01": "スペコス 出現率アップＢサーチ",
     "event_5040_2W_MasterTicket_01": "キクコ確定 バラエティＢサーチ",
-    "event_5040_2W_MasterTicket_02": "ワタル確定 バラエティＢサーチ"
+    "event_5040_2W_MasterTicket_02": "ワタル確定 バラエティＢサーチ",
+    "event_5060_1W_SuperTicket_01": "フウ シーズン限定 出現率アップＢサーチ",
+    "event_5060_1W_MasterTicket_01": "フウ シーズン限定 確定Ｂサーチ",
+    "event_5060_1W_SuperTicket_02": "ラン シーズン限定 出現率アップＢサーチ",
+    "event_5060_1W_MasterTicket_02": "ラン シーズン限定 確定Ｂサーチ",
+    "event_5060_1W_SuperTicket_04": "シーズン限定 出現率アップＢサーチ",
+    "event_5060_3W_MasterTicket_01": "カキ確定 バラエティＢサーチ",
+    "event_5060_3W_MasterTicket_02": "マオ確定 バラエティＢサーチ"
 }

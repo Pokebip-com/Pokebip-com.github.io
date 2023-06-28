@@ -10,5 +10,17 @@
     "champion_battle_theme_2080_010": "¡Protege a tus compis para que el oponente no\nlos debilite!",
     "champion_battle_theme_2090_001": "¡Usa efectos de campo que beneficien a tu\nbando!",
     "champion_battle_theme_2090_002": "¡Acribilla a tus oponentes con movimientos que\ntengan efectos secundarios!",
-    "champion_battle_theme_2090_003": "¡Reduce las características de tus oponentes para ganar!"
+    "champion_battle_theme_2090_003": "¡Reduce las características de tus oponentes para ganar!",
+    "score_attack_battle_theme_5060_000": "Sin normas",
+    "score_attack_battle_theme_5060_001": "Sin curación para tu\nequipo",
+    "score_attack_battle_theme_5060_002": "Reducción de daño de\nlos movimientos compi\nde tu equipo",
+    "score_attack_battle_theme_5060_003": "Reducción de daño de\nlos ataques físicos de tu\nequipo",
+    "score_attack_battle_theme_5060_004": "Reducción de daño de\nlos ataques especiales\nde tu equipo",
+    "score_attack_battle_theme_5060_005": "Reducción de barra de\nmovimientos +2",
+    "score_attack_battle_theme_5060_006": "Sin cambios de tiempo,\nni de campo ni de zona\npara tu equipo",
+    "score_attack_battle_theme_5060_007": "Reducción del contador\ndel equipo rival +3",
+    "score_attack_battle_theme_5060_008": "Reducción de 5 caract.\npara compis de sabotaje\nde tu equipo",
+    "score_attack_battle_theme_5060_009": "Reducción de 5 caract.\npara compis de ataque\nde tu equipo",
+    "score_attack_battle_theme_5060_010": "Equipo rival inmune a\nproblemas de estado y\ncambios de estado",
+    "score_attack_battle_theme_5060_011": "Reducción de daño para\nequipo rival sin cambios\nni problemas de estado"
 }

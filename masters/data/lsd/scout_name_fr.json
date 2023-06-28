@@ -107,5 +107,12 @@
     "event_5030_4W_MasterTicket_02": "Appel Duo commun\ngaranti : Aldo !",
     "event_5030_4W_SuperTicket_01": "Appel Duo Look Spécial\ntaux ↑",
     "event_5040_2W_MasterTicket_01": "Appel Duo commun\ngaranti : Agatha !",
-    "event_5040_2W_MasterTicket_02": "Appel Duo commun\ngaranti : Peter !"
+    "event_5040_2W_MasterTicket_02": "Appel Duo commun\ngaranti : Peter !",
+    "event_5060_1W_SuperTicket_01": "Appel Duo saisonn.\ntaux ↑ : Lévy !",
+    "event_5060_1W_MasterTicket_01": "Appel Duo saisonn.\ngaranti : Lévy !",
+    "event_5060_1W_SuperTicket_02": "Appel Duo saisonn.\ntaux ↑ : Tatia !",
+    "event_5060_1W_MasterTicket_02": "Appel Duo saisonn.\ngaranti : Tatia !",
+    "event_5060_1W_SuperTicket_04": "Appel Duo\nsaisonnier taux ↑",
+    "event_5060_3W_MasterTicket_01": "Appel Duo commun\ngaranti : Kiawe !",
+    "event_5060_3W_MasterTicket_02": "Appel Duo commun\ngaranti : Barbara !"
 }

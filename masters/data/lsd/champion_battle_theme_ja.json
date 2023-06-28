@@ -10,5 +10,17 @@
     "champion_battle_theme_2080_010": "どんな相手に対しても　なるべく味方が\n倒れないように　守りながら戦おう！",
     "champion_battle_theme_2090_001": "どんな相手に対しても\n味方が有利になる　場の効果を使って戦おう！",
     "champion_battle_theme_2090_002": "どんな相手に対しても\n追加効果のある技を活用して戦おう！",
-    "champion_battle_theme_2090_003": "どんな相手に対しても\n相手の能力を下げて戦おう！"
+    "champion_battle_theme_2090_003": "どんな相手に対しても\n相手の能力を下げて戦おう！",
+    "score_attack_battle_theme_5060_000": "ルールなし",
+    "score_attack_battle_theme_5060_001": "味方のＨＰが回復しない",
+    "score_attack_battle_theme_5060_002": "味方のバディーズわざの\nダメージが大幅に減少する",
+    "score_attack_battle_theme_5060_003": "味方の物理攻撃の\nダメージが大幅に減少する",
+    "score_attack_battle_theme_5060_004": "味方の特殊攻撃の\nダメージが大幅に減少する",
+    "score_attack_battle_theme_5060_005": "味方のわざゲージ上限が\n-２される",
+    "score_attack_battle_theme_5060_006": "味方は天気などを\n変えることができない",
+    "score_attack_battle_theme_5060_007": "相手のＢＣ上限が\n-３される",
+    "score_attack_battle_theme_5060_008": "味方のテクニカルの\n能力５種が大幅に減少する",
+    "score_attack_battle_theme_5060_009": "味方のアタッカーの\n能力５種が大幅に減少する",
+    "score_attack_battle_theme_5060_010": "相手は状態異常と\n妨害状態を無効化する",
+    "score_attack_battle_theme_5060_011": "相手は非異常妨害時\nダメージを大幅に軽減する"
 }

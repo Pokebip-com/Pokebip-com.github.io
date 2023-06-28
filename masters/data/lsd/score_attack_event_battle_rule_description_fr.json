@@ -1,0 +1,9 @@
+{
+    "1": "Plus vous gagnez un combat rapidement,\nplus vous obtiendrez un score élevé.",
+    "2": "Plus le pourcentage total de PV de tous les Duos\nalliés est élevé à la fin d'un combat, plus vous\nobtiendrez un score élevé.",
+    "3": "Plus le nombre total de fois où les stats de tous\nles Duos alliés ont été augmentées est élevé\nà la fin d'un combat, plus vous obtiendrez\nun score élevé. Si les PV d'un Duo tombent à 0\nau cours de la partie, le nombre de fois où\nses stats ont été augmentées avant que ses PV\ntombent à 0 sera comptabilisé.",
+    "4": "Plus le nombre total de fois où les stats de tous\nles Duos alliés ont été réduites est élevé\nà la fin d'un combat, plus vous obtiendrez\nun score élevé. Si les PV d'un Duo tombent à 0\nau cours de la partie, le nombre de fois où\nses stats ont été réduites avant que ses PV\ntombent à 0 sera comptabilisé.",
+    "5": "Plus les dégâts maximum infligés par un allié\nsont élevés, plus vous obtiendrez un score élevé.",
+    "6": "Plus le nombre total de fois où tous les Duos\nalliés réussissent une attaque est élevé,\nplus vous obtiendrez un score élevé.",
+    "7": "Moins le nombre total de fois où tous les Duos\nalliés réussissent une attaque est élevé, plus\nvous obtiendrez un score élevé."
+}

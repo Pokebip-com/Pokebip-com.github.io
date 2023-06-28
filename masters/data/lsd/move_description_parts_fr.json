@@ -406,7 +406,7 @@
     "999533": "Soigne la peur, la confusion et le ligotage de tous les Duos alliés.",
     "999532": "Remplit [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"segment\" P=\"segments\" ] de la Jauge Capacité du lanceur.",
     "999531": "Augmente la puissance de l'attaque quand la zone est une zone Ténèbres.",
-    "999530": "Fait briller le soleil.",
+    "999530": "Intensifie les rayons du soleil.",
     "999529": "Applique l'effet Prochain super efficace ↑ à tous les Duos alliés lorsque les conditions météo sont actives.",
     "999528": "Transforme la zone en une zone Vol. (Une zone Vol renforce les attaques de type Vol.)",
     "999527": "Permet à Latias de devenir Méga-Latias jusqu'à la fin du combat.",
@@ -581,5 +581,11 @@
     "999356": "Réduit de [Digit:1digit Idx=\"4\" ] le nombre d'actions nécessaires pour lancer une capacité Duo quand le soleil brille.",
     "999355": "Applique l'[Name:ReferencedMessageTag Idx=\"4\" ] à tous les Duos alliés quand il grêle.",
     "999354": "Permet à Jungko de devenir Méga-Jungko jusqu'à la fin du combat.",
+    "999353": "Quand la Défense du lanceur a été augmentée, augmente également son Attaque de la même proportion.",
+    "999352": "Augmente [Name:ReferencedMessageTag Idx=\"6\" ] du lanceur de [Digit:1digit Idx=\"7\" ] [FR:Qty Ref=\"7\" S=\"rang\" P=\"rangs\" ].",
+    "999351": "Réduit de [Digit:1digit Idx=\"6\" ] le nombre d'actions nécessaires pour lancer une capacité Duo.",
+    "999350": "Provoque une tempête de sable.",
+    "999349": "Empoisonne tous les Duos ennemis.",
+    "999348": "Augmente [Name:ReferencedMessageTag Idx=\"4\" ] de tous les Duos alliés de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ].",
     "999347": "Transforme la zone en une Zone Glace. (Une Zone Glace renforce les attaques de type Glace.)"
 }

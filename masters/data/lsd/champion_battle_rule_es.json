@@ -10,5 +10,17 @@
     "champion_battle_rule_2080_010": "Cuando una pareja de compis se debilita,\nse reduce el Ataque, la Defensa, el Ataque\nEspecial, la Defensa Especial y la Velocidad de\nlos miembros de su bando.",
     "champion_battle_rule_2090_001": "Los efectos de campo activados por ambos\nbandos duran todo el combate.",
     "champion_battle_rule_2090_002": "Aumenta la probabilidad de que se activen los\nefectos secundarios de los movimientos usados\npor ambos bandos.",
-    "champion_battle_rule_2090_003": "Las características se reducen más de lo normal\nen ambos bandos."
+    "champion_battle_rule_2090_003": "Las características se reducen más de lo normal\nen ambos bandos.",
+    "score_attack_battle_rule_5060_000": "No hay normas especiales.",
+    "score_attack_battle_rule_5060_001": "No se recupera ningún PS al curar a tu equipo.",
+    "score_attack_battle_rule_5060_002": "Se reduce en un 80% el daño que inflige tu\nequipo con movimientos compi.",
+    "score_attack_battle_rule_5060_003": "Se reduce en un 80% el daño que inflige tu\nequipo con ataques físicos.",
+    "score_attack_battle_rule_5060_004": "Se reduce en un 80% el daño que inflige tu\nequipo con ataques especiales.",
+    "score_attack_battle_rule_5060_005": "Se reduce en 2 el máximo de la barra de\nmovimientos de tu equipo.",
+    "score_attack_battle_rule_5060_006": "Tu equipo no puede cambiar el tiempo\natmosférico, ni el campo ni la zona.",
+    "score_attack_battle_rule_5060_007": "Se reduce en 3 el máximo del contador de\nmovimientos compi del equipo rival.",
+    "score_attack_battle_rule_5060_008": "Se reducen en un 80% el Ataque, la Defensa,\nel Ataque Especial, la Defensa Especial y la\nVelocidad de los compis de sabotaje de tu\nequipo.",
+    "score_attack_battle_rule_5060_009": "Se reducen en un 80% el Ataque, la Defensa,\nel Ataque Especial, la Defensa Especial y la\nVelocidad de los compis de ataque de tu equipo.",
+    "score_attack_battle_rule_5060_010": "El equipo rival es inmune a los problemas de\nestado, al retroceso, a la confusión y a las\nataduras.",
+    "score_attack_battle_rule_5060_011": "El equipo rival recibe un 80% menos de daño\ncuando no le afecta ningún problema ni cambio\nde estado."
 }

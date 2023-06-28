@@ -31,5 +31,8 @@
     "legend_rule_3090_003": "Gli avversari resistono di più ai problemi\ndi stato e alle variazioni di stato\n(impedimenti) da cui guariscono.",
     "legend_rule_5020_001": "Se l'Attacco degli avversari è aumentato,\nla potenza delle loro mosse e Unimosse\naumenta.",
     "legend_rule_5020_002": "Se l'Attacco Speciale degli avversari è\naumentato, la potenza delle loro mosse\ne Unimosse aumenta.",
-    "legend_rule_5020_003": "A partire dalla 2ª barra PS, gli avversari\nsubiscono meno danni, se non sono presenti\neffetti sul campo avversario."
+    "legend_rule_5020_003": "A partire dalla 2ª barra PS, gli avversari\nsubiscono meno danni, se non sono presenti\neffetti sul campo avversario.",
+    "legend_rule_5060_001": "Diversi Pokémon appaiono come nemici.",
+    "legend_rule_5060_002": "Se la Velocità degli avversari è aumentata,\nle loro mosse o Unimosse, oppure sia le\nmosse che le Unimosse, vengono potenziate.",
+    "legend_rule_5060_003": "Gli effetti sul campo attivati dagli avversari\nsono permanenti."
 }

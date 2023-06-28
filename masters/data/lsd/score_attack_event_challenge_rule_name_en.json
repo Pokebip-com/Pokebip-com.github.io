@@ -1,0 +1,8 @@
+{
+    "1": "[Name:TeamSkillTag ]\n[Digit:2digits ] or more pairs:",
+    "2": "[Name:FieldEffectType ]:\n[Digit:2digits ] or more times",
+    "3": "Have [Digit:2digits ] or more\n[Name:Role ] sync pairs",
+    "4": "[Digit:2digits Idx=\"2\" ] or more\n[Digit:2digits Idx=\"1\" ]★ sync pairs",
+    "5": "[Name:FieldEffectType ]",
+    "6": "[Name:TeamSkillTag Idx=\"1\" ] and\n[Name:TeamSkillTag Idx=\"2\" ]"
+}

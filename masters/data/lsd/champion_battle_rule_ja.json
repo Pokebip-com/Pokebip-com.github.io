@@ -10,5 +10,17 @@
     "champion_battle_rule_2080_010": "バディーズがひんし状態になる時　同じチームの\n全員の攻撃と防御と特攻と特防と素早さがさがる",
     "champion_battle_rule_2090_001": "味方と相手　双方が発動した\n場の効果の継続時間が　永続になる",
     "champion_battle_rule_2090_002": "味方と相手　双方の\n技の追加効果の　成功率があがる",
-    "champion_battle_rule_2090_003": "味方と相手　双方は　ステータスがさがっている時\n通常より　大幅に　その能力が　低下する"
+    "champion_battle_rule_2090_003": "味方と相手　双方は　ステータスがさがっている時\n通常より　大幅に　その能力が　低下する",
+    "score_attack_battle_rule_5060_000": "特殊ルールなし",
+    "score_attack_battle_rule_5060_001": "味方のＨＰ回復量が０になる",
+    "score_attack_battle_rule_5060_002": "味方がバディーズわざで与えるダメージが\n８０％減少する",
+    "score_attack_battle_rule_5060_003": "味方が物理攻撃で与えるダメージが\n８０％減少する",
+    "score_attack_battle_rule_5060_004": "味方が特殊攻撃で与えるダメージが\n８０％減少する",
+    "score_attack_battle_rule_5060_005": "味方のわざゲージの上限が２減る",
+    "score_attack_battle_rule_5060_006": "味方は天気やフィールドやゾーンを\n変更できなくなる",
+    "score_attack_battle_rule_5060_007": "相手のバディーズわざ発動可能状態までの\nカウントの上限値が３減る",
+    "score_attack_battle_rule_5060_008": "味方のテクニカルは\n攻撃と防御と特攻と特防と素早さが８０％さがる",
+    "score_attack_battle_rule_5060_009": "味方のアタッカーは\n攻撃と防御と特攻と特防と素早さが８０％さがる",
+    "score_attack_battle_rule_5060_010": "相手は状態異常やひるみ状態やこんらん状態や\nバインド状態にならない",
+    "score_attack_battle_rule_5060_011": "相手は状態異常か妨害状態ではない場合\n受けるダメージを８０％軽減する"
 }

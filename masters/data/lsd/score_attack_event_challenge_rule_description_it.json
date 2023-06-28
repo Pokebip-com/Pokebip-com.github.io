@@ -1,0 +1,8 @@
+{
+    "1": "Forma una squadra con [Digit:2digits ] o più Unità\nappartenenti al seguente gruppo:\n• [Name:TeamSkillTag ]",
+    "2": "Infliggi il seguente problema di stato o\nimpedimento a un avversario [Digit:2digits ] o più volte:\n• [Name:FieldEffectType ]",
+    "3": "Forma una squadra con [Digit:2digits ] o più Unità\ncon il seguente ruolo:\n• [Name:Role ]",
+    "4": "Forma una squadra con [Digit:2digits Idx=\"2\" ] o più Unità \ncon [Digit:2digits Idx=\"1\" ]★ iniziali.",
+    "5": "Attiva il seguente effetto sul campo:\n• [Name:FieldEffectType ]",
+    "6": "Forma una squadra con [Digit:2digits ] o più Unità\nappartenenti a ciascuno dei seguenti gruppi:\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]"
+}
