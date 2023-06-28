@@ -49,15 +49,15 @@ function getCellType(ability) {
 		case 6:
 			//stat boosts
 			return abilityType[1];
-		
+
 		case 7:
 			//Passive
 			return abilityType[2];
-		
+
 		case 8:
 			//additional move effect
 			return abilityType[3];
-		
+
 		case 9:
 		case 10:
 			//move power/accuracy boost
@@ -70,16 +70,26 @@ function getCellType(ability) {
 }
 
 function getAbilitiesByTrainerID(data) {
-	return data.reduce(function (r, a) {
-		r[a.trainerId] = r[a.trainerId] || {};
+	return data.reduce(function (acc, val) {
+		acc[val.trainerId] = acc[val.trainerId] || {};
 
-		r[a.trainerId].nbCells = r[a.trainerId].nbCells + 1 || 1;
+		acc[val.trainerId].nbCells = acc[val.trainerId].nbCells + 1 || 1;
 
-		let cellType = getCellType(a.ability);
+		let cellType = getCellType(val.ability);
 
-		r[a.trainerId][cellType] = r[a.trainerId][cellType] || [];
-		r[a.trainerId][cellType].push(a);
-		return r;
+		acc[val.trainerId][cellType] = acc[val.trainerId][cellType] || {};
+
+		// Gestion de la version des cellules
+		if(acc[val.trainerId][cellType][val.cellId]) {
+			if (acc[val.trainerId][cellType][val.cellId].version < val.version) {
+				acc[val.trainerId][cellType][val.cellId] = val;
+			}
+		}
+		else {
+			acc[val.trainerId][cellType][val.cellId] = val;
+		}
+
+		return acc;
 	}, {});
 }
 
@@ -146,40 +156,40 @@ function setConditionsAndAbilities() {
 	console.log(abilities);
 	console.log(abilityPanelByTrainer);
 	abilityPanelByTrainer.forEach(abilityPanel => {
-		console.log(abilityPanel);
+		//console.log(abilityPanel);
 
 
 		abilityPanel.ability = abilities[abilityPanel.abilityId][0];
-		
+
 		abilityPanel.conditionIds.forEach(condId => {
 			if(condId >= 12 && condId <= 15)
 				abilityPanel.level = condLevel[condId];
 		});
-		
+
 		abilityPanel.level = abilityPanel.level || "1/5";
 	});
-	
+
 }
 
 function setPassiveList() {
-	
+
 	passiveList = {};
-	
+
 	setPassiveNames();
 	setPassiveDescriptions();
-	
+
 }
 
 function setPassiveNames() {
 	let idx = null;
 	const digitReplace = "[Name:PassiveSkillNameDigit ]";
-	
+
 	Object.keys(passiveSkillName).forEach( id => {
 		passiveList[id] = passiveList[id] || {};
-	
+
 		var re = /\[Name:PassiveSkillNameParts Idx="(\w+)" ]/gi;
 		idx = re.exec(passiveSkillName[id]);
-		
+
 		if(idx != null) {
 			idx = idx[1];
 			passiveList[id].name = passiveSkillNameParts[idx].replace(digitReplace, (id - idx) + "");
@@ -194,20 +204,20 @@ function setPassiveDescriptions() {
 	let idx = null;
 	let descr = "";
 	const idTagReplace = '[Name:PassiveSkillDescriptionPartsIdTag Idx=\"{ID}\" ]';
-	
+
 	Object.keys(passiveSkillDescription).forEach( id => {
 		passiveList[id] = passiveList[id] || {};
-		
+
 		var re = /\[Name:PassiveSkillDescriptionPartsIdTag Idx="(\w+)" ]/gi;
 		idx = re.exec(passiveSkillDescription[id]);
-		
+
 		if(idx != null) {
 			descr = passiveSkillDescription[id];
-			
+
 			do {
 				descr = descr.replace(idTagReplace.replace("{ID}", idx[1]), getSkillMoveDescr(passiveSkillDescriptionParts[idx[1]], id));
 			} while((idx = re.exec(descr)) !== null);
-			
+
 			passiveList[id].description = descr;
 		}
 		else {
@@ -257,13 +267,13 @@ async function getData() {
 		fetch("./data/lsd/trainer_name_fr.json")
 	])
 	.catch(error => console.log(error));
-	
+
 	abilityPanelByTrainer = await abilityPanelResponse.json();
 	abilityPanelByTrainer = abilityPanelByTrainer.entries;
-	
+
 	const abilityConditionsJSON = await abilityConditionsResponse.json();
 	abilityConditions = getByCondID(abilityConditionsJSON.entries);
-	
+
 	const moveInfosJSON = await moveResponse.json();
 	moveInfos = getByMoveID(moveInfosJSON.entries);
 
@@ -272,31 +282,31 @@ async function getData() {
 
 	const movePassiveSkillDigitJSON = await movePassiveSkillDigitResponse.json();
 	movePassiveDigit = getByID(movePassiveSkillDigitJSON.entries);
-	
+
 	passiveSkillDescription = await passiveSkillDescrResponse.json();
 	passiveSkillDescriptionParts = await passiveSDescrPartsResponse.json();
-	
+
 	passiveSkillName = await passiveSkillNameResponse.json();
 	passiveSkillNameParts = await passiveSNamePartsResponse.json();
-	
+
 	const abilitiesJSON = await abilitiesResponse.json();
 	abilities = getByAbilityID(abilitiesJSON.entries);
-	
+
 	const monstersJSON = await monsterResponse.json();
 	monsterInfos = getByMonsterID(monstersJSON.entries);
-	
+
 	const monstersBaseJSON = await monsterBaseResponse.json();
 	monsterBase = getByMonsterBaseID(monstersBaseJSON.entries);
 
 	const monsterEvolutionJSON = await monsterEvolutionResponse.json();
 	monsterEvolution = getEvolutionByTrainerId(monsterEvolutionJSON.entries);
-	
+
 	const trainersJSON = await trainerResponse.json();
 	trainerInfos = getByTrainerID(trainersJSON.entries);
-	
+
 	const trainersBaseJSON = await trainerBaseResponse.json();
 	trainerBase = getByID(trainersBaseJSON.entries);
-	
+
 	monsterNames = await monsterNameResponse.json();
 	trainerNames = await trainerNameResponse.json();
 }
@@ -318,7 +328,7 @@ async function getCustomJSON() {
 		fetch("./data/custom/table_bgcolor.json")
 	])
 	.catch(error => console.log(error));
-	
+
 	abilityName = await abilityNameResponse.json();
 	abilityType = await abilityTypeResponse.json();
 	abilityTypeTitle = await abilityTypeTitleResponse.json();
@@ -361,25 +371,25 @@ function populateSelect() {
 	while(trainerSelect.length > 0) {
 		trainerSelect.remove(0);
 	}
-	
+
 	let optionsArray = [];
 	updatedGridsSpan.innerText = "";
-	
+
 	Object.keys(abilityPanelByTrainer).forEach(trainer => {
 		let trainerName = getTrainerName(trainer);
 		let monsterName = getMonsterNameByTrainerId(trainer);
-		
+
 		let option = {};
 		option.value = trainer;
 		option.text = `${trainerName} & ${monsterName}`;
-		
+
 		optionsArray.push(option);
 
 		checkIfNew(trainer);
 	});
-	
+
 	optionsArray.sort((a, b) => a.text.localeCompare(b.text));
-	
+
 	optionsArray.forEach(opt => {
 		trainerSelect.add(new Option(opt.text, opt.value));
 	});
@@ -401,7 +411,7 @@ function getReplacedText(text, ability) {
 		text = text.replace("{passive}", passiveList[ability.passiveId].name);
 	if(ability.moveId !== 0)
 		text = text.replace("{move}", moveNames[ability.moveId].replace("\n", " "));
-		
+
 	return text;
 }
 
@@ -579,25 +589,34 @@ function outlineBrackets(descr) {
 }
 
 function appendCategory(trainer, category) {
-	
+
 	if(typeof trainer[category] === 'undefined') {
 		return;
 	}
-	
+
 	gridTable.innerHTML += "<tr><th style='background-color:" + bgColor[category] + ";' colspan=5>" + abilityTypeTitle[category] + "</th></tr>\n";
 	textarea.value += "\t[tr][th|bgcolor=" + bgColor[category] + "|colspan=5]" + abilityTypeTitle[category] + "[/th][/tr]\n"
 
-	trainer[category].forEach(cell => {
+	Object.keys(trainer[category]).sort((a, b) => {
+		if(trainer[category][a].level > trainer[category][b].level)
+			return 1;
+		if(trainer[category][a].level < trainer[category][b].level)
+			return -1;
+		if(a > b)
+			return 1;
+		return -1;
+	}).forEach(key => {
+		let cell = trainer[category][key];
 		let amelioration = getReplacedText(abilityName[cell.ability.type], cell.ability);
 		let passiveDescr = '-';
-		
+
 		if(cell.ability.passiveId !== 0) {
 			passiveDescr = passiveList[cell.ability.passiveId].description;
 		}
 
 		// console.log(`CellID - trainerID : ${cell.cellId-cell.trainerId/10}\noldNbCells : ${trainer.oldNbCells}\nIsBigger? ${((cell.cellId - cell.trainerId/10) >= trainer.oldNbCells) ? "true" : "false"}`);
 
-	
+
 		gridTable.innerHTML += `<tr${((cell.cellId - cell.trainerId/10) >= trainer.oldNbCells) ? " style='background-color:#7afa96;'" : " style=''"}>`
 			+ "<td>" + amelioration
 			+ `</td><td${(passiveDescr.includes("[") || passiveDescr.includes("]")) ? " style='background-color:#f2748e;'" : ""}>` + outlineBrackets(passiveDescr)
@@ -605,7 +624,7 @@ function appendCategory(trainer, category) {
 			+ "</td><td>" + cell.orbCost
 			+ "</td><td>" + cell.level
 			+ "</td></tr>\n";
-		
+
 		textarea.value += "\t[tr]\n\t[td]" + amelioration
 			+ "[/td]\n\t[td]" + passiveDescr
 			+ "[/td]\n\t[td]" + (cell.energyCost === 0 ? '-' : cell.energyCost)
@@ -624,17 +643,17 @@ function setUrlTID(value) {
 async function init() {
 	await getData();
 	await getCustomJSON();
-	
+
 	btnCopy = document.getElementById("btnCopy");
 	gridTable = document.getElementById("gridTable");
 	statsTable = document.getElementById("statsTable");
 	textarea = document.getElementById("area");
 	trainerSelect = document.getElementById("trainersList");
 	updatedGridsSpan = document.getElementById("updatedGrids");
-	
+
 	setPassiveList();
 	setConditionsAndAbilities();
-	
+
 	abilityPanelByTrainer = getAbilitiesByTrainerID(abilityPanelByTrainer);
 
 	Object.keys(abilityPanelByTrainer).forEach(trainerID => {
@@ -643,11 +662,11 @@ async function init() {
 
 	sortCells();
 	populateSelect();
-	
+
 	btnCopy.onclick = function() {
 		navigator.clipboard.writeText(textarea.value);
 	};
-	
+
 	trainerSelect.onchange = function() {
 		setUrlTID(trainerSelect.value);
 		setTrainer(trainerSelect.value);
