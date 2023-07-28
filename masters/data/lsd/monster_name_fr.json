@@ -64,6 +64,8 @@
     "20004700": "Parasect",
     "20004800": "Mimitoss",
     "20004900": "Aéromite",
+    "20005000": "Taupiqueur",
+    "20005100": "Triopikeur",
     "20005161": "Triopikeur",
     "20005200": "Miaouss",
     "20005261": "Miaouss",
@@ -611,6 +613,7 @@
     "2008110000": "Badabouin",
     "2008120000": "Gorythmic",
     "2008130000": "Flambino",
+    "2008150000": "Pyrobut",
     "2008180000": "Lézargus",
     "2008280000": "Roublenard",
     "2008300000": "Blancoton",
@@ -634,6 +637,7 @@
     "2008790000": "Pachyradjah",
     "2008820000": "Hydragon",
     "2008840000": "Duralugon",
+    "2008870000": "Lanssorien",
     "2008881200": "Zacian",
     "2008891200": "Zamazenta",
     "2008900000": "Éthernatos",
@@ -649,5 +653,7 @@
     "2001450031": "Électhor",
     "2001440031": "Artikodin",
     "20088400": "Ama-Ama",
-    "2008060000": "Pierroteknik"
+    "2008060000": "Pierroteknik",
+    "2008970000": "Spectreval",
+    "2009230000": "Pohmarmotte"
 }

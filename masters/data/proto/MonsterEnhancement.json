@@ -5,5 +5,6 @@
 { "monsterEnhancementId": "920140000000", "trainerId": "10140000000", "monsterIdCurrent": "20140000000", "monsterIdNext": "20140000001", "scheduleId": "update_3090_1W_3_FOREVER", "type": "1" },
 { "monsterEnhancementId": "920194000000", "trainerId": "10194000000", "monsterIdCurrent": "20194000000", "monsterIdNext": "20194000001", "scheduleId": "update_4010_3W_1", "type": "2" },
 { "monsterEnhancementId": "920195000000", "trainerId": "10195000000", "monsterIdCurrent": "20195000000", "monsterIdNext": "20195000001", "scheduleId": "4100_3W_Event_AKU_FOREVER", "type": "2" },
+{ "monsterEnhancementId": "920244000000", "trainerId": "10244000000", "monsterIdCurrent": "20244000000", "monsterIdNext": "20244000001", "scheduleId": "chara_5070_0731_FOREVER", "type": "2" },
 { "monsterEnhancementId": "928000120000", "trainerId": "18000120000", "monsterIdCurrent": "28000120000", "monsterIdNext": "28000120001", "scheduleId": "chara_5040_0512_FOREVER", "type": "2" }
 ]}

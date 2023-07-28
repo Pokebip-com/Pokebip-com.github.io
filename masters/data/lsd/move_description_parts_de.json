@@ -587,5 +587,11 @@
     "999350": "Erzeugt einen Sandsturm.",
     "999349": "Vergiftet alle gegnerischen Gefährten.",
     "999348": "Erhöht [Name:ReferencedMessageTag Idx=\"4\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"5\" ].",
-    "999347": "Erzeugt einen Eis-Fokus. (Ein Eis-Fokus verstärkt Angriffe vom Typ Eis.)"
+    "999347": "Erzeugt einen Eis-Fokus. (Ein Eis-Fokus verstärkt Angriffe vom Typ Eis.)",
+    "999346": "Wenn die Initiative des Anwenders erhöht ist.",
+    "999345": "Wenn die Initiative des Anwenders nicht erhöht ist.",
+    "999344": "Erhöht [Name:ReferencedMessageTag Idx=\"1\" ] eines Verbündeten um [Digit:1digit Idx=\"2\" ].",
+    "999343": "Erhöht [Name:ReferencedMessageTag Idx=\"2\" ] eines Verbündeten um [Digit:1digit Idx=\"3\" ].",
+    "999342": "Senkt [Name:ReferencedMessageTag ] aller gegnerischen Gefährten um [Digit:1digit Idx=\"1\" ].",
+    "999341": "Die Stärke dieses Angriffs steigt, wenn der Typwiderstand des Zieles gesenkt wurde."
 }

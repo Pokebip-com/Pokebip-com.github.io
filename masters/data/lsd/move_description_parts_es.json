@@ -587,5 +587,11 @@
     "999350": "Desata una tormenta de arena.",
     "999349": "Envenena a todos los compis rivales.",
     "999348": "Aumenta [Name:ReferencedMessageTag Idx=\"4\" ] de todos los compis aliados en [Digit:1digit Idx=\"5\" ] [ES:Qty Ref=\"5\" S=\"nivel\" P=\"niveles\" ].",
-    "999347": "Crea una Zona Hielo. (Una Zona Hielo potencia los ataques de tipo Hielo)."
+    "999347": "Crea una Zona Hielo. (Una Zona Hielo potencia los ataques de tipo Hielo).",
+    "999346": "Cuando ha aumentado la Velocidad del usuario.",
+    "999345": "Cuando no ha aumentado la Velocidad del usuario.",
+    "999344": "Aumenta [Name:ReferencedMessageTag Idx=\"1\" ] de un aliado en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
+    "999343": "Aumenta [Name:ReferencedMessageTag Idx=\"2\" ] de un aliado en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ].",
+    "999342": "Reduce [Name:ReferencedMessageTag ] de todos los compis rivales en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
+    "999341": "La potencia de este ataque aumenta cuando se reduce la resiliencia del tipo del objetivo."
 }

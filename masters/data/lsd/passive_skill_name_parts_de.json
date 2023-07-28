@@ -720,5 +720,20 @@
     "18109500": "G-D-Attacke-Gegner-Vert.↓ T [Name:PassiveSkillNameDigit ]",
     "18109600": "Brand-Gegner-Treffer-Angriff↓ [Name:PassiveSkillNameDigit ]",
     "18109700": "Umschl.-Geg.-Tref.-Initiative↓ [Name:PassiveSkillNameDigit ]",
-    "18109800": "Absorp.-Angriff-Sp.-Angriff↓ [Name:PassiveSkillNameDigit ]"
+    "18109800": "Absorp.-Angriff-Sp.-Angriff↓ [Name:PassiveSkillNameDigit ]",
+    "18109100": "P-Attacke-Werte↑ 2×",
+    "13061100": "Erst-GA-AEP-Füllung [Name:PassiveSkillNameDigit ]",
+    "11013600": "Treffer-Heilungschance [Name:PassiveSkillNameDigit ]",
+    "15013000": "Sofortangriff-GA-Countdown 2↓ [Name:PassiveSkillNameDigit ]",
+    "19025500": "Erstantritt-Geister-Fokus",
+    "99012400": "Passios Nummer Eins",
+    "18021800": "Sp.-Angriff↓-Schutz T",
+    "17065800": "Geg.-Fehl.-2×-Phys.-Boost [Name:PassiveSkillNameDigit ]",
+    "17065900": "Angriff-Folge-Effektiv.-Stärke↑ [Name:PassiveSkillNameDigit ]",
+    "18110300": "G-D-Attacke-Angriff↑ [Name:PassiveSkillNameDigit ]",
+    "18110400": "Gift-Gegner-Treffer-Werte↓ [Name:PassiveSkillNameDigit ]",
+    "17065600": "Brand-Geg.-Tr.F.-Eff.-Stärke↑ [Name:PassiveSkillNameDigit ]",
+    "17065700": "GA-2×-Phys.-Boost [Name:PassiveSkillNameDigit ]",
+    "18110100": "Brand-Gegner-Treffer-Werte↓ [Name:PassiveSkillNameDigit ]",
+    "18110200": "Paral.-G.-Tr.-Vert.+Sp.-Vert↓ [Name:PassiveSkillNameDigit ]"
 }

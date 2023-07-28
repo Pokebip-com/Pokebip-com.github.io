@@ -125,6 +125,8 @@
 { "monsterEvolutionId": "618000020697", "level": 45, "itemSetId": "61000210" },
 { "monsterEvolutionId": "618000020701", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000020702", "level": 45, "itemSetId": "61000210" },
+{ "monsterEvolutionId": "618000020712", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000020716", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000030031", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000030036", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000030051", "level": 30, "itemSetId": "61000110" },
@@ -251,6 +253,8 @@
 { "monsterEvolutionId": "618000030697", "level": 45, "itemSetId": "61000210" },
 { "monsterEvolutionId": "618000030701", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000030702", "level": 45, "itemSetId": "61000210" },
+{ "monsterEvolutionId": "618000030712", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000030716", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000040001", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000040002", "level": 45, "itemSetId": "61000210" },
 { "monsterEvolutionId": "618000040004", "level": 30, "itemSetId": "61000110" },
@@ -382,5 +386,7 @@
 { "monsterEvolutionId": "618000040696", "level": 30, "itemSetId": "61000110" },
 { "monsterEvolutionId": "618000040697", "level": 45, "itemSetId": "61000210" },
 { "monsterEvolutionId": "618000040701", "level": 30, "itemSetId": "61000110" },
-{ "monsterEvolutionId": "618000040702", "level": 45, "itemSetId": "61000210" }
+{ "monsterEvolutionId": "618000040702", "level": 45, "itemSetId": "61000210" },
+{ "monsterEvolutionId": "618000040712", "level": 30, "itemSetId": "61000110" },
+{ "monsterEvolutionId": "618000040716", "level": 30, "itemSetId": "61000110" }
 ]}

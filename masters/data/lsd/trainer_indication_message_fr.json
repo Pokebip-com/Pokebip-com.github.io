@@ -30,6 +30,7 @@
     "10127000000": "Magnifique !\nC'est monstrueusement\nélégant ! Sublimissime !",
     "10113000000": "Tu connais le type Acier ?\nTout dur... tout froid... tout\npiquant... et super fort !",
     "10128000000": "Je ne perdrai plus ! Pour\nmes Pokémon qui m'ont\ndonné force et courage !",
+    "10155000000": "Tu dois être [FR:Gen Ref=\"255\" M=\"valeureux\" F=\"valeureuse\" ]\npour être arrivé[FR:Gen Ref=\"255\" F=\"e\" ] jusqu'ici.\nJ'en suis folle de joie !",
     "10116000000": "Si nous unissons nos\nforces, notre équipe de\nrêve ne peut pas perdre !",
     "10170000000": "Oui, ressens l'inspiration !\nToi aussi, goûte à la beauté\ndes Pokémon Insecte !",
     "10048100000": "Ces crocs aiguisés nous\npermettront de remporter\nla victoire !",
@@ -198,5 +199,9 @@
     "10262000000": "Il n'y a pas une minute\nà perdre, encore moins\nune journée entière !\nNous devons agir\nimmédiatement !",
     "10263000000": "Je suis navrée,\nmais le président\nest très occupé.",
     "10149000001": "Impressionnant ! Et pour\najouter au spectacle...",
-    "10124000001": "... C'est ça ! Voici\nle plat du jour !"
+    "10124000001": "... C'est ça ! Voici\nle plat du jour !",
+    "10247800000": "Je t'attendais !\nJe savais que\ntu parviendrais\njusqu'ici !",
+    "10243810000": "Je suis là pour un vrai défi !\nJ'espère que tu es prêt[FR:Gen Ref=\"255\" F=\"e\" ] !",
+    "10289000000": "On sait jamais comment\nva finir un combat.\nC'est pour ça que\nje les adore !",
+    "10175000000": "Je sens... je SAIS ! Rien ne\nt'arrêtera. Ta force pourra\nmême déplacer les étoiles !"
 }

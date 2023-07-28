@@ -5,5 +5,9 @@
     "100": "Physical Strike",
     "101": "Special Strike",
     "102": "Tech",
-    "103": "Support"
+    "103": "Support",
+    "4": "Sprint",
+    "5": "Field",
+    "104": "Sprint",
+    "105": "Field"
 }

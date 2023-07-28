@@ -328,6 +328,7 @@
     "20074611": "Ha accompagnato generazioni di re. È in grado\ndi controllare e manipolare esseri umani e Pokémon\ncol suo potere spettrale.",
     "20074612": "Ha accompagnato generazioni di re. È in grado\ndi controllare e manipolare esseri umani e Pokémon\ncol suo potere spettrale.",
     "20074200": "Immobilizza il nemico avvolgendolo in filamenti bianchi,\ndolci e appiccicosi, simili a zucchero filato.",
+    "20071000": "È spietato e spruzza un liquido velenoso sui Pokémon ostili\nche gli si avvicinano. Per qualche strano motivo, va\nd'accordo solo con Dhelmise.",
     "20075700": "Assorbe acqua che comprime e rilascia in un getto con\nuna pressione tale da perforare anche spesse lastre\nd'acciaio.",
     "20073200": "Può produrre energia elettrica aprendo il collare. Un solo\nPokémon di questa specie sarebbe in grado di illuminare\nun intero grattacielo.",
     "20073900": "In passato abitava nelle terre più fredde. Si dice che\nquando emette il suo verso, nel cielo notturno compaia\nl'aurora boreale.",
@@ -448,6 +449,7 @@
     "2000780031": "È intrepido e orgoglioso. Corre leggiadro per i boschi\nconcentrando i suoi poteri psichici nella peluria\nall'estremità delle zampe.",
     "2008110000": "I Thwackey più rispettati dai propri simili sono quelli\nin grado di produrre un ritmo forsennato con le due\nbacchette.",
     "2008120000": "Controlla il potere del suo ceppo speciale usandolo\ncome un tamburo e lotta servendosi delle radici.",
+    "2008150000": "Crea un pallone da calcio infuocato palleggiando con\nun sasso e poi tira una cannonata contro il nemico per\nabbrustolirlo.",
     "2008180000": "Ha vari assi nella manica. Emette getti d'acqua\ndalle dita e si fa trasportare dal vento grazie\nalla membrana che ha sulla schiena.",
     "2008280000": "Marca di nascosto le prede interessanti, ne segue l'odore\nper rintracciarle e approfitta di una loro distrazione\nper rubare nelle loro tane.",
     "2008340000": "Ha una natura estremamente feroce e addenta\nle prede con la sua mascella, così potente da\npoter sbriciolare sbarre di ferro.",
@@ -467,6 +469,7 @@
     "2008771200": "L'elettricità contenuta nelle guance si è trasformata\nin energia di tipo Buio. La fame lo ha reso molto\naggressivo.",
     "2008790000": "Vive in gruppo. La stretta della sua proboscide è così forte\nda mandare in frantumi anche le rocce più grandi.",
     "2008840000": "Il suo corpo fatto di un metallo speciale è\nleggero e gli conferisce un'andatura impeccabile.\nVive nelle grotte perché odia la pioggia.",
+    "2008870000": "Vive assieme ai Dreepy, che ospita all'interno dei buchi\nsulle sue corna. Quando lotta li espelle alla velocità\ndel suono.",
     "2008881200": "Temuto e rispettato da nemici e alleati, è detto \"spada\ndel re folletto\" per la sua capacità di tranciare qualsiasi\ncosa.",
     "2008891200": "Quando assume questa forma, è detto \"scudo\ndel re lottatore\" in segno di timore e rispetto per\nla sua capacità di respingere qualsiasi attacco.",
     "2008900000": "È giunto dallo spazio dentro un meteorite caduto\n20.000 anni fa. Sembra essere in qualche modo\ncollegato al mistero del fenomeno Dynamax.",
@@ -476,5 +479,7 @@
     "2008920012": "Il suo credo è sconfiggere l'avversario a suon di colpi.\nSferra raffiche di attacchi che si abbattono sul nemico\ncome un flusso d'acqua continuo.",
     "2001440031": "È conosciuto con il nome di Articuno. Emette\nun raggio che limita i movimenti del bersaglio,\ncome se lo congelasse.",
     "2001450031": "Viene chiamato Zapdos per via del crepitio elettrico\ngenerato dallo sfregamento delle sue piume.",
-    "2001460031": "È conosciuto con il nome di Moltres. È avvolto da un'aura\nmaligna che arde come il fuoco."
+    "2001460031": "È conosciuto con il nome di Moltres. È avvolto da un'aura\nmaligna che arde come il fuoco.",
+    "2008970000": "Galoppa nelle notti buie assorbendo l'energia vitale\ndelle creature addormentate. Ama la solitudine e\nla quiete.",
+    "2009230000": "Di solito è piuttosto flemmatico, ma quando si trova\na lottare atterra il nemico con movimenti fulminei."
 }

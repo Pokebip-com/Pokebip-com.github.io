@@ -58,7 +58,7 @@
     "61": "Setze mit Gefährten eines\nbestimmten Typs eine sehr\neffektive Attacke ein",
     "62": "Schließe tägliche Missionen ab",
     "63": "Schließe Wochen-Missionsbingos\nab",
-    "64": "Schließe alle täglichen Missionen\nab",
+    "64": "Erhalte Boni für den Abschluss\ntäglicher Missionen.",
     "65": "Schließe alle Felder beim\nWochen-Missionsbingo ab",
     "66": "Vervollständige Reihen beim\nWochen-Missionsbingo",
     "68": "Setze im Kampf Stempel ein",
@@ -149,5 +149,12 @@
     "171": "Der verlorene Kindheitsfreund",
     "172": "Frische Malasadas gefällig?",
     "173": "Wie bereitet man Pokériegel zu?",
-    "174": "Erreiche im Highscore-Event den\nMeister-Rang."
+    "174": "Erreiche im Highscore-Event den\nMeister-Rang.",
+    "override_title_5070_1_01": "Ich will gegen viele verschiedene\nTrainer kämpfen! 1",
+    "override_title_5070_1_02": "Ich will gegen viele verschiedene\nTrainer kämpfen! 2",
+    "override_title_5070_1_03": "Ich will gegen viele verschiedene\nTrainer kämpfen! 3",
+    "override_title_5070_1_04": "Ich will gegen viele verschiedene\nTrainer kämpfen! 4",
+    "override_title_5070_1_05": "Ich will gegen viele verschiedene\nTrainer kämpfen! 5",
+    "override_title_5070_1_06": "Ich will gegen viele verschiedene\nTrainer kämpfen! 6",
+    "override_title_5070_1_07": "Du erinnerst mich an jemanden!"
 }

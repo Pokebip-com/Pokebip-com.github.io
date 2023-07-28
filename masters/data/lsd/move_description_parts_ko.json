@@ -587,5 +587,11 @@
     "999350": "날씨를 모래바람으로 만든다",
     "999349": "상대 버디즈 전원을 독 상태로 만든다",
     "999348": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"4\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"5\" ]단계 오른다",
-    "999347": "존을 고드름존으로 만든다\n(고드름존은 얼음타입 공격의 위력이 오른다)"
+    "999347": "존을 고드름존으로 만든다\n(고드름존은 얼음타입 공격의 위력이 오른다)",
+    "999346": "자신의 스피드가 올라가 있을 때",
+    "999345": "자신의 스피드가 올라가 있지 않을 때",
+    "999344": "같은 편의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"2\" ]단계 오른다",
+    "999343": "같은 편의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다",
+    "999342": "상대 버디즈 전원의 [Name:ReferencedMessageTag ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"1\" ]단계 떨어뜨린다",
+    "999341": "상대의 타입 저항이 떨어져 있을 때는 위력이 오른다"
 }

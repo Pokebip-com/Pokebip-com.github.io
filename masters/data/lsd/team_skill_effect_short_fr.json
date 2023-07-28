@@ -18,5 +18,6 @@
     "40020016": "Capacité (Ténèbres) :\nAtq. Atq. Spé. +[Digit:3digits ]",
     "40020017": "Capacité (Acier) :\nAtq. Atq. Spé. +[Digit:3digits ]",
     "40020018": "Capacité (Fée) :\nAtq. Atq. Spé. +[Digit:3digits ]",
-    "40030001": "Atq. Atq. Spé. +[Digit:3digits ]"
+    "40030001": "Atq. Atq. Spé. +[Digit:3digits ]",
+    "40040001": "Vitesse + [Digit:3digits ]"
 }

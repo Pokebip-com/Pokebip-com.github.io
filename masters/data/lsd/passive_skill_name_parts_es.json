@@ -720,5 +720,20 @@
     "18109500": "Mov. Compi D Defensa ↓ M +[Name:PassiveSkillNameDigit ]",
     "18109600": "Ataque Rival Quemado Ataque ↓ +[Name:PassiveSkillNameDigit ]",
     "18109700": "Ataque Rival Atado Velocidad ↓ +[Name:PassiveSkillNameDigit ]",
-    "18109800": "Ataque Absorción Ataque Especial ↓ +[Name:PassiveSkillNameDigit ]"
+    "18109800": "Ataque Absorción Ataque Especial ↓ +[Name:PassiveSkillNameDigit ]",
+    "18109100": "Acción Características ↑ ×2",
+    "13061100": "1.er Mov. Compi Rec. PM Mov. S +[Name:PassiveSkillNameDigit ]",
+    "11013600": "Ataque Curación Media +[Name:PassiveSkillNameDigit ]",
+    "15013000": "Efecto Ataque Rápido Furor Doble +[Name:PassiveSkillNameDigit ]",
+    "19025500": "1.ª Entrada Zona Fantasma",
+    "99012400": "As de Passio",
+    "18021800": "Inmunidad Ataque Especial ↓ M",
+    "17065800": "Fallo Rival Sig. Físico ↑ Doble +[Name:PassiveSkillNameDigit ]",
+    "17065900": "Daño Siguiente Supereficaz ↑ +[Name:PassiveSkillNameDigit ]",
+    "18110300": "Mov. Compi Dinamax Ataque ↑ +[Name:PassiveSkillNameDigit ]",
+    "18110400": "At. Rival Envenenado Caract. ↓ +[Name:PassiveSkillNameDigit ]",
+    "17065600": "Ataque Rival Quemado Sig. Supereficaz ↑ +[Name:PassiveSkillNameDigit ]",
+    "17065700": "Mov. Compi Sig. Físico ↑ Doble +[Name:PassiveSkillNameDigit ]",
+    "18110100": "Ataque Rival Quemado Caract. ↓ +[Name:PassiveSkillNameDigit ]",
+    "18110200": "At. Rival Paralizado Defensiva ↓ +[Name:PassiveSkillNameDigit ]"
 }

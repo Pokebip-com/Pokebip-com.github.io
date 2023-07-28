@@ -1,5 +1,5 @@
 {
-    "40010001": "Aumenta los PS máximos de los compis\ndel bando del usuario en [Digit:3digits ].",
+    "40010001": "Aumenta los PS máximos de todos los compis\naliados en [Digit:3digits ].",
     "40020001": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Normal.",
     "40020002": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Fuego.",
     "40020003": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Agua.",
@@ -18,5 +18,6 @@
     "40020016": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Siniestro.",
     "40020017": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Acero.",
     "40020018": "Aumenta el Ataque y Ataque Especial\nde los aliados en [Digit:3digits ] cuando usan ataques\nde tipo Hada.",
-    "40030001": "Aumenta el Ataque y el Ataque Especial de\nlos compis del bando del usuario en [Digit:3digits ]."
+    "40030001": "Aumenta el Ataque y el Ataque Especial\nde todos los compis aliados en [Digit:3digits ].",
+    "40040001": "Aumenta la Velocidad de todos los compis\naliados en [Digit:3digits ]."
 }

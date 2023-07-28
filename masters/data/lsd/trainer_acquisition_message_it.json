@@ -94,6 +94,7 @@
     "pvoice_ch0113_00_mikan/system001": "Sono Jasmine!\nE uso i Pokémon di... ta-daaaah!\nTipo A-Acciaio!",
     "pvoice_ch0128_00_mitsuru/system001": "Piacere, io sono Lino! Voglio crescere insieme\nai miei Pokémon, un po' alla volta.",
     "pvoice_ch0127_00_mikuri/system001": "Io sono Adriano e ti mostrerò tutte\nle mie illusioni d'acqua!",
+    "pvoice_ch0155_00_dracaena/system001": "Sono Lilia, una dei Superquattro di Kalos.\nDevo dire che tu e la tua squadra avete\nun carisma incredibile!",
     "pvoice_ch0133_00_shilver/system001": "Io sono Argento. Diventerò l’Allenatore\ndi Pokémon più forte del mondo!",
     "pvoice_ch0116_00_hikari/system001": "Io sono Lucinda!\nGrazie alla mia esperienza come Allenatrice,\nti farò da guida!",
     "pvoice_ch0170_00_arty/system001": "Ohilà! Io sono Artemisio.\nSono attratto fin da piccolo dalla\ngrazia dei Pokémon di tipo Coleottero.",
@@ -305,5 +306,11 @@
     "pvoice_ch0263_00_olea/system001": "Il mio nome è Olive. Faccio tutto il possibile\nper sostenere il presidente Rose come sua\nsegretaria personale.",
     "pvoice_ch0285_00_kai/system011": "Chi viaggia con una meta, mai si perderà...\nE infatti non mi sono persa!",
     "pvoice_ch0149_00_kaki/system011": "Pront[IT:Gen Ref=\"255\" M=\"o\" F=\"a\" ] per una sfida infuocata?",
-    "pvoice_ch0124_00_mao/system011": "Benvenut[IT:Gen Ref=\"255\" M=\"o\" F=\"a\" ]! E così ci si rivede!\nDevo dire che tu e il tuo Pokémon\navete stoffa da vendere!"
+    "pvoice_ch0124_00_mao/system011": "Benvenut[IT:Gen Ref=\"255\" M=\"o\" F=\"a\" ]! E così ci si rivede!\nDevo dire che tu e il tuo Pokémon\navete stoffa da vendere!",
+    "pvoice_ch0247_80_dande/system001": "Sono Dandel, dalla regione di Galar!\nMetto sempre tutto me stesso in ogni sfida\nche affronto!",
+    "pvoice_ch0243_81_yuri/system001": "Sono Gloria, una sfidante piena di\nentusiasmo che non si arrende di fronte\na nessuno!",
+    "pvoice_ch0289_00_nemo/system001": "Piacere di conoscerti, io sono Nemi!\nVado matta per le lotte Pokémon!\nSento già che saremo amic[IT:Gen Ref=\"255\" M=\"i\" F=\"he\" ] per la pelle!",
+    "pvoice_ch0175_00_gojika/system001": "Il futuro è deciso. Io, la Capopalestra Astra,\naprirò un nuovo cammino insieme a te.",
+    "pvoice_ch0003_00_calme/system011": "Ho come la sensazione che fare squadra\nassieme a te sia la strada più breve\nper diventare più forte... Continuiamo così!",
+    "pvoice_ch0242_00_masaru/system011": "Chi si rivede! Ho appena finito di preparare\nun piatto sfizioso... Ti andrebbe di mangiarlo\ninsieme a me?"
 }

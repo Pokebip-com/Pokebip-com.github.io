@@ -94,6 +94,7 @@
     "pvoice_ch0113_00_mikan/system001": "Je suis Jasmine, j'utilise des Pokémon\nqui font « ting ting » ! Euh... enfin...\ndes Pokémon Acier.",
     "pvoice_ch0128_00_mitsuru/system001": "Enchanté ! Je m'appelle Timmy. Je vais\ngagner ! Pour les Pokémon qui m'ont\ndonné courage et force !",
     "pvoice_ch0127_00_mikuri/system001": "Je m'appelle Marc. Je te montrerai mes\nplus belles illusions aquatiques, j'espère\nque tu apprécieras le spectacle !",
+    "pvoice_ch0155_00_dracaena/system001": "Mes aïeux, je suis Dracéna, membre du\nConseil 4 de Kalos ! Toi et ton Pokémon êtes\nvraiment à croquer !",
     "pvoice_ch0133_00_shilver/system001": "Moi, c'est Silver. Je vais devenir d'ici peu\nle plus grand Dresseur de Pokémon.",
     "pvoice_ch0116_00_hikari/system001": "Je m'appelle Aurore ! Je vais t'apprendre\ntout ce que je sais pour que tu puisses\nprofiter de ma longue expérience !",
     "pvoice_ch0170_00_arty/system001": "Oh, bonjour ! Je m'appelle Artie ! La beauté\ndes Pokémon Insecte a volé mon cœur !",
@@ -305,5 +306,11 @@
     "pvoice_ch0263_00_olea/system001": "Mon nom est Liv. Je suis entièrement\nconsacrée à mon rôle d'assistante\ndu président Shehroz.",
     "pvoice_ch0285_00_kai/system011": "Qui connaît son chemin, ne s'égare point...\nAlors y'a pas à hésiter !",
     "pvoice_ch0149_00_kaki/system011": "Je suppose que tu brûles d'impatience\nd'entamer un combat !",
-    "pvoice_ch0124_00_mao/system011": "Nom d'une louche, comme on se retrouve !\nTon Pokémon et toi mettez vraiment\nles p'tits plats dans les grands !"
+    "pvoice_ch0124_00_mao/system011": "Nom d'une louche, comme on se retrouve !\nTon Pokémon et toi mettez vraiment\nles p'tits plats dans les grands !",
+    "pvoice_ch0247_80_dande/system001": "Moi, c'est Tarak ! Je viens de Galar !\nQuand j'affronte quelqu'un, tu peux être\nsûr[FR:Gen Ref=\"255\" F=\"e\" ] que je le fais avec tout ce que j'ai !",
+    "pvoice_ch0243_81_yuri/system001": "Je m'appelle Gloria. Je suis une Challenger\npassionnée qui ne baisse jamais les bras,\npeu importe à qui j'ai affaire !",
+    "pvoice_ch0289_00_nemo/system001": "Moi, je m'appelle Menzi !\nJ'adore les combats Pokémon !\nJe sens déjà que je vais t'adorer !",
+    "pvoice_ch0175_00_gojika/system001": "Voici le Destin !\nAstera combattra et demeurera avec toi !",
+    "pvoice_ch0003_00_calme/system011": "Je sens qu'avec toi, je gagnerai en force\nencore plus vite. Je compte sur toi\npour m'y aider !",
+    "pvoice_ch0242_00_masaru/system011": "Content de te revoir ! Je viens de préparer\nun bon petit plat... Ça te dirait d'y goûter\navec moi ?"
 }

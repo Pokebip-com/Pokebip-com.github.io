@@ -58,7 +58,7 @@
     "61": "Utilisez des capacités super\nefficaces avec un Duo du\ntype spécifié.",
     "62": "Finissez une mission journalière.",
     "63": "Finissez une mission bingo\nhebdomadaire.",
-    "64": "Réussissez toutes les missions\njournalières.",
+    "64": "Obtenez des récompenses\nde missions journalières.",
     "65": "Remplissez toutes les cases d'une\nmission bingo hebdomadaire.",
     "66": "Complétez une ligne des missions\nbingo hebdomadaires.",
     "68": "Utilisez une icône de\ncommunication en combat.",
@@ -149,5 +149,12 @@
     "171": "Un ami d'enfance égaré",
     "172": "Des malasadas au goût\nauthentique",
     "173": "Comment confectionner\ndes Pokéblocs ?",
-    "174": "Atteignez le rang Master dans\nl'évènement meilleur score."
+    "174": "Atteignez le rang Master dans\nl'évènement meilleur score.",
+    "override_title_5070_1_01": "Je veux me battre contre\ntoutes sortes de Duos !",
+    "override_title_5070_1_02": "Je veux me battre contre\ntoutes sortes de Duos ! II",
+    "override_title_5070_1_03": "Je veux me battre contre\ntoutes sortes de Duos ! III",
+    "override_title_5070_1_04": "Je veux me battre contre\ntoutes sortes de Duos ! IV",
+    "override_title_5070_1_05": "Je veux me battre contre\ntoutes sortes de Duos ! V",
+    "override_title_5070_1_06": "Je veux me battre contre\ntoutes sortes de Duos ! VI",
+    "override_title_5070_1_07": "Tu me rappelles quelqu'un !"
 }

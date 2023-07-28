@@ -64,6 +64,8 @@
     "20004700": "Parasect",
     "20004800": "Venonat",
     "20004900": "Venomoth",
+    "20005000": "Diglett",
+    "20005100": "Dugtrio",
     "20005161": "Dugtrio",
     "20005200": "Meowth",
     "20005261": "Meowth",
@@ -611,6 +613,7 @@
     "2008110000": "Thwackey",
     "2008120000": "​Rillaboom",
     "2008130000": "Scorbunny",
+    "2008150000": "Cinderace",
     "2008180000": "Inteleon",
     "2008280000": "Thievul",
     "2008300000": "Eldegoss",
@@ -634,6 +637,7 @@
     "2008790000": "Copperajah",
     "2008820000": "Dracovish",
     "2008840000": "Duraludon",
+    "2008870000": "Dragapult",
     "2008881200": "Zacian",
     "2008891200": "Zamazenta",
     "2008900000": "Eternatus",
@@ -649,5 +653,7 @@
     "2001450031": "Zapdos",
     "2001440031": "Articuno",
     "20088400": "Stakataka",
-    "2008060000": "Blacephalon"
+    "2008060000": "Blacephalon",
+    "2008970000": "Spectrier",
+    "2009230000": "Pawmot"
 }

@@ -243,6 +243,7 @@
     "ch0082_00_kowai_10": "Igor (Tipaccio)",
     "ch0082_00_kowai_11": "Firmin (Tipaccio)",
     "ch0082_00_kowai_12": "Norbert (Tipaccio)",
+    "ch0082_00_kowai_13": "Ezio (Tipaccio)",
     "ch0083_00_badgirl_01": "Mia (Ribelle)",
     "ch0083_00_badgirl_02": "Roberta (Ribelle)",
     "ch0083_00_badgirl_03": "Jessica (Ribelle)",
@@ -325,5 +326,7 @@
     "ch0516_00_etherm_00": "Dipendente della Fondazione Æther",
     "ch0647_00_etherm_00": "Dipendente della Fondazione Æther",
     "ch0517_00_etherf_00": "Dipendente della Fondazione Æther",
-    "ch0648_00_etherf_00": "Dipendente della Fondazione Æther"
+    "ch0648_00_etherf_00": "Dipendente della Fondazione Æther",
+    "ch0280_00_yellm_00": "Recluta del Team Yell",
+    "ch0281_00_yellf_00": "Recluta del Team Yell"
 }

@@ -2,6 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+
+        <style>
+            li::before {
+                content: "› ";
+                font-size: 18px;
+                font-weight: bolder;
+            }
+        </style>
     </head>
     <link rel="stylesheet" href="../css/pokebip.css">
     <script src="./js/dist/FileSaver.min.js"></script>
@@ -19,14 +27,8 @@
         <table id="statsTable" style="text-align:center;" class="bipcode"></table>
 
         <br />
-        <p>Nombre de cases : <span id="nbCells"></span></p>
-        <div>
-        <ul class="listh-bipcode">
-        <li class="listh-no-style">
-        <table id="gridTable" style="text-align:center;" class="bipcode"></table>
-        </li>
-        </ul>
-        </div>
+        <h1>Scouts :</h1>
+        <div id="scoutsDiv" style="max-width: 600px"></div>
 
         <script src="./js/schedule.js"></script>
     </body>

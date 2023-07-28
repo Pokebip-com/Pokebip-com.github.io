@@ -218,5 +218,13 @@
     "10310002": "Champ (Helfer)",
     "19961002": "Maschinentüftler (Helfer)",
     "10403002": "Brillenträger (Helfer)",
-    "10404002": "Maskenträger (Helfer)"
+    "10404002": "Maskenträger (Helfer)",
+    "10104004": "Elektro (Initiator)",
+    "10114005": "Geist (Feldwandler)",
+    "10208005": "Galar (Feldwandler)",
+    "10301005": "Protagonist (Feldwandler)",
+    "10306004": "Rivale (Initiator)",
+    "10310004": "Champ (Initiator)",
+    "19964004": "Heißblütige Kämpfer (Initiator)",
+    "19980005": "Galar-Abenteurer (Feldwandler)"
 }

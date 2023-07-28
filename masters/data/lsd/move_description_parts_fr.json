@@ -587,5 +587,11 @@
     "999350": "Provoque une tempête de sable.",
     "999349": "Empoisonne tous les Duos ennemis.",
     "999348": "Augmente [Name:ReferencedMessageTag Idx=\"4\" ] de tous les Duos alliés de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ].",
-    "999347": "Transforme la zone en une Zone Glace. (Une Zone Glace renforce les attaques de type Glace.)"
+    "999347": "Transforme la zone en une Zone Glace. (Une Zone Glace renforce les attaques de type Glace.)",
+    "999346": "Quand la Vitesse du lanceur est augmentée.",
+    "999345": "Quand la Vitesse du lanceur n'est pas augmentée.",
+    "999344": "Augmente [Name:ReferencedMessageTag Idx=\"1\" ] d'un allié de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ].",
+    "999343": "Augmente [Name:ReferencedMessageTag Idx=\"2\" ] d'un allié de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ].",
+    "999342": "Baisse [Name:ReferencedMessageTag ] de tous les Duos ennemis de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
+    "999341": "Augmente la puissance de l'attaque quand la Résilience du type de la cible est baissée."
 }

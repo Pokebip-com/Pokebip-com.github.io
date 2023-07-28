@@ -720,5 +720,20 @@
     "18109500": "Max Move: Team Defense ↓ [Name:PassiveSkillNameDigit ]",
     "18109600": "Hit Burned Opp: Attack ↓ [Name:PassiveSkillNameDigit ]",
     "18109700": "Hit Trapped Opp: Speed ↓ [Name:PassiveSkillNameDigit ]",
-    "18109800": "“Absorbs” Hit: Sp. Atk ↓ [Name:PassiveSkillNameDigit ]"
+    "18109800": "“Absorbs” Hit: Sp. Atk ↓ [Name:PassiveSkillNameDigit ]",
+    "18109100": "P-Move Stat Raises ×2",
+    "13061100": "1st S-Move: Restore B-Move MP [Name:PassiveSkillNameDigit ]",
+    "11013600": "Hit: HP Recovery (M) [Name:PassiveSkillNameDigit ]",
+    "15013000": "“Quick Move”: Sync CD ↓2 [Name:PassiveSkillNameDigit ]",
+    "19025500": "Debut: Ghost Zone",
+    "99012400": "Pasio’s Ace",
+    "18021800": "Team Sp. Atk ↓ Immunity",
+    "17065800": "Opp Fail: Physical Boost ↑2 [Name:PassiveSkillNameDigit ]",
+    "17065900": "Take Hit: Supereffective ↑ Next [Name:PassiveSkillNameDigit ]",
+    "18110300": "Max Move: Attack ↑ [Name:PassiveSkillNameDigit ]",
+    "18110400": "Hit Poisoned Opp: Stat ↓ [Name:PassiveSkillNameDigit ]",
+    "17065600": "Hit Burned Opp: Supereffective ↑ Next [Name:PassiveSkillNameDigit ]",
+    "17065700": "S-Move: Physical Boost ↑2 [Name:PassiveSkillNameDigit ]",
+    "18110100": "Hit Burned Opp: Stat ↓ [Name:PassiveSkillNameDigit ]",
+    "18110200": "Hit Paralyzed Opp: Defense ↓ & Sp. Def ↓ [Name:PassiveSkillNameDigit ]"
 }

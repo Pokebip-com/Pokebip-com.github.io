@@ -58,7 +58,7 @@
     "61": "Manda a segno degli attacchi\nsuperefficaci con Unità del tipo\nindicato.",
     "62": "Completa delle missioni\ngiornaliere.",
     "63": "Completa delle missioni tris\nsettimanali.",
-    "64": "Completa tutte le missioni\ngiornaliere.",
+    "64": "Ottieni le ricompense\nper il completamento\ndelle missioni giornaliere.",
     "65": "Completa tutti i riquadri\ndelle missioni tris settimanali.",
     "66": "Fai tris nelle missioni tris\nsettimanali.",
     "68": "Usa gli adesivi durante le lotte.",
@@ -149,5 +149,12 @@
     "171": "L'amico d'infanzia smarrito",
     "172": "Per fare una malasada",
     "173": "Come si fanno le Pokémelle?",
-    "174": "Conquista il rango Master\nin un evento lotta a punti."
+    "174": "Conquista il rango Master\nin un evento lotta a punti.",
+    "override_title_5070_1_01": "Voglio sfidare tanti Allenatori! 1",
+    "override_title_5070_1_02": "Voglio sfidare tanti Allenatori! 2",
+    "override_title_5070_1_03": "Voglio sfidare tanti Allenatori! 3",
+    "override_title_5070_1_04": "Voglio sfidare tanti Allenatori! 4",
+    "override_title_5070_1_05": "Voglio sfidare tanti Allenatori! 5",
+    "override_title_5070_1_06": "Voglio sfidare tanti Allenatori! 6",
+    "override_title_5070_1_07": "Mi ricordi qualcuno...!"
 }

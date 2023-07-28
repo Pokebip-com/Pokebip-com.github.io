@@ -243,6 +243,7 @@
     "ch0082_00_kowai_10": "el Macarra Chechu",
     "ch0082_00_kowai_11": "el Macarra Kevin",
     "ch0082_00_kowai_12": "el Macarra Txelis",
+    "ch0082_00_kowai_13": "el Macarra Briel",
     "ch0083_00_badgirl_01": "la Chica Mala Aída",
     "ch0083_00_badgirl_02": "la Chica Mala Zulema",
     "ch0083_00_badgirl_03": "la Chica Mala Azahara",
@@ -325,5 +326,7 @@
     "ch0516_00_etherm_00": "el Empleado de la Fundación Æther",
     "ch0647_00_etherm_00": "el Empleado de la Fundación Æther",
     "ch0517_00_etherf_00": "la Empleada de la Fundación Æther",
-    "ch0648_00_etherf_00": "la Empleada de la Fundación Æther"
+    "ch0648_00_etherf_00": "la Empleada de la Fundación Æther",
+    "ch0280_00_yellm_00": "el Recluta del Team Yell",
+    "ch0281_00_yellf_00": "la Recluta del Team Yell"
 }

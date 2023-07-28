@@ -18,5 +18,6 @@
     "40020016": "Bei Unlicht-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
     "40020017": "Bei Stahl-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
     "40020018": "Bei Feen-Attacke\nAng. u. Sp.-Ang. +[Digit:3digits ]",
-    "40030001": "Ang. und\nSp.-Ang. +[Digit:3digits ]"
+    "40030001": "Ang. und\nSp.-Ang. +[Digit:3digits ]",
+    "40040001": "Initiative +[Digit:3digits ]"
 }

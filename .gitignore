@@ -4,6 +4,4 @@ images/File-list.txt
 images/copy/
 images/sprite_big/
 .idea/
-masters/js/schedule.js
-masters/programme.html
-masters/data/custom/version_release_dates.json
+masters/js/sync-grids.js

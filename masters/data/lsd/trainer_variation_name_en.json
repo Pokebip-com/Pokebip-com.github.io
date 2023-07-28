@@ -243,6 +243,7 @@
     "ch0082_00_kowai_10": "Street Thug Marshall",
     "ch0082_00_kowai_11": "Street Thug Duncan",
     "ch0082_00_kowai_12": "Street Thug Norbert",
+    "ch0082_00_kowai_13": "Street Thug Biff",
     "ch0083_00_badgirl_01": "Punk Girl Hazel",
     "ch0083_00_badgirl_02": "Punk Girl Violet",
     "ch0083_00_badgirl_03": "Punk Girl Ellen",
@@ -325,5 +326,7 @@
     "ch0516_00_etherm_00": "Aether Foundation Employee",
     "ch0647_00_etherm_00": "Aether Foundation Employee",
     "ch0517_00_etherf_00": "Aether Foundation Employee",
-    "ch0648_00_etherf_00": "Aether Foundation Employee"
+    "ch0648_00_etherf_00": "Aether Foundation Employee",
+    "ch0280_00_yellm_00": "Team Yell Grunt",
+    "ch0281_00_yellf_00": "Team Yell Grunt"
 }

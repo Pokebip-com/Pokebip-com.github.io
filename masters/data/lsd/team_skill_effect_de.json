@@ -18,5 +18,6 @@
     "40020016": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Unlicht einsetzt.",
     "40020017": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Stahl einsetzt.",
     "40020018": "Erhöht den Angriff und Spezial-Angriff\neines Gefährten im Team um [Digit:3digits ], solange\ner Attacken vom Typ Fee einsetzt.",
-    "40030001": "Erhöht den Angriff und den Spezial-Angriff\naller Gefährten im Team um [Digit:3digits ]."
+    "40030001": "Erhöht den Angriff und den Spezial-Angriff\naller Gefährten im Team um [Digit:3digits ].",
+    "40040001": "Erhöht die Initiative aller verbündeten\nGefährten um [Digit:3digits ]."
 }

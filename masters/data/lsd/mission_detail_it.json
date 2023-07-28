@@ -116,7 +116,7 @@
     "61_element": "• [Name:Type ].",
     "62": "Completa una missione giornaliera\n[Digit:3digits ] volt[IT:Qty S=\"a\" P=\"e\" ].",
     "63": "Completa [Digit:3digits ] riquadr[IT:Qty S=\"o\" P=\"i\" ] delle missioni\ntris settimanali.",
-    "64": "Completa tutte le missioni giornaliere\n[Digit:3digits ] volt[IT:Qty S=\"a\" P=\"e\" ].",
+    "64": "Ottieni le ricompense per\nil completamento delle missioni\ngiornaliere [Digit:3digits ] volt[IT:Qty S=\"a\" P=\"e\" ].",
     "65": "Completa tutti i riquadri delle missioni\ntris settimanali [Digit:3digits ] volt[IT:Qty S=\"a\" P=\"e\" ].",
     "66": "Fai tris su [Digit:3digits ] rig[IT:Qty S=\"a\" P=\"he\" ] nelle missioni tris\nsettimanali.",
     "68": "Usa gli adesivi [Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ] in totale\ndurante le lotte (gli adesivi usati\nvengono conteggiati solo in caso\ndi vittoria).",
@@ -158,7 +158,7 @@
     "106": "Completa in meno di [Digit:2digits Idx=\"2\" ]:[Digit:2digits Idx=\"3\" ] una\ndelle seguenti Guide area:\n• [Name:QuestTitle ]\n• [Name:QuestTitle ]\nDevi avere in squadra [Digit:2digits Idx=\"1\" ] o più Unità\nappartenenti al seguente gruppo:",
     "106_element": "• [Name:TeamSkillTag ]",
     "107": "Scambia strumenti [Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ] in:\n• [Name:EventName ]",
-    "108": "Completa la Lotta Leggendaria:\n• [Name:QuestTitle ]\nDevi far partire partire [Digit:2digits Idx=\"2\" ] Unità\no meno, e devi avere in squadra [Digit:2digits Idx=\"1\" ]\no più Unità appartenenti al seguente\ngruppo:",
+    "108": "Completa la Lotta Leggendaria:\n• [Name:QuestTitle ]\nDevi far partire [Digit:2digits Idx=\"2\" ] Unità o meno,\ne devi avere in squadra [Digit:2digits Idx=\"1\" ] o più\nUnità appartenenti al seguente\ngruppo:",
     "108_element": "• [Name:TeamSkillTag ]",
     "109": "Completa [Digit:6digits Idx=\"2\" ] volt[IT:Qty Ref=\"2\" S=\"a\" P=\"e\" ] in modalità\n[Name:QuestPlayType ]:\n• [Name:QuestTitle ]\nDevi avere in squadra [Digit:2digits Idx=\"1\" ] o più Unità\nappartenenti al seguente gruppo:",
     "109_element": "• [Name:TeamSkillTag ]",
@@ -229,5 +229,12 @@
     "171": "Un mio amico d'infanzia è andato\nin città a prendere suo fratello,\nma non è ancora tornato. Potresti\ncercarlo? Temo che sia finito da\ntutt'altra parte...\n\nIndossa un enorme mantello, quindi\ndovrebbe essere facile individuarlo\ndall'alto.",
     "172": "Ho preparato una specialità di Alola:\nle malasade! Vorrei farle assaggiare\na qualcuno che proviene da là per\nscoprire se hanno il sapore tipico\ndi quella regione.\n\nSe incontri qualcuno originario\ndi Alola potresti accompagnarlo\nal mio negozio in città?",
     "173": "Conosci le Pokémelle? Sono dolcetti\nche piacciono tantissimo ai Pokémon.\n\nNel mio negozio c'è una cucina...\nPotrei metterla a disposizione\ndi qualcuno che mi insegni a crearle.\nGli Allenatori di quale regione\npotrebbero mostrarmi come si fa?",
-    "174": "Conquista il rango Master\nnella classifica finale di\nun qualsiasi evento lotta a punti."
+    "174": "Conquista il rango Master\nnella classifica finale di\nun qualsiasi evento lotta a punti.",
+    "override_detail_5070_1_01": "Come Campionessa di Paldea,\nmi piacerebbe proprio affrontare\nAllenatori di Kanto, la regione dove\nsi trova la sede centrale della Lega\nPokémon... Ma devo dire che anche\nle appassionate lotte della Lega\nPokémon di Galar mi affascinano!\nVoglio sfidare Allenatori da entrambe\nle regioni!\n\nCompleta VS Nemi con in squadra\nalmeno un'Unità appartenente\na ciascuno dei seguenti gruppi:\n• Kanto\n• Galar",
+    "override_detail_5070_1_02": "In giro per il mondo, esistono luoghi\ndavvero unici in cui lottare! A Unima\nci si affronta su treni in corsa,\nmentre a Kalos dentro ai ristoranti!\nChi si allena da quelle parti deve\nessere tostissimo!\n\nCompleta VS Nemi 2 con in squadra\nalmeno un'Unità appartenente\na ciascuno dei seguenti gruppi:\n• Unima\n• Kalos",
+    "override_detail_5070_1_03": "Sapevi che esistono luoghi, come\nla Zona Lotta di Sinnoh e l'Albero\ndella Lotta di Alola, a cui possono\naccedere solo gli Allenatori più forti?\nChi proviene dalle regioni dove\nsi trovano questi luoghi deve proprio\nsapere il fatto suo!\n\nCompleta VS Nemi 3 con in squadra\nalmeno un'Unità appartenente\na ciascuno dei seguenti gruppi:\n• Sinnoh\n• Alola",
+    "override_detail_5070_1_04": "Tu preferisci allenarti in montagna o\nal mare? Chissà se si diventa più forti\nesercitandosi sul Monte Argento\ndi Johto o sulle vaste spiagge di\nHoenn... Mi piacerebbe sfidare\nAllenatori provenienti da queste\nregioni per scoprirlo!\n\nCompleta VS Nemi 4 con in squadra\nalmeno un'Unità appartenente\na ciascuno dei seguenti gruppi:\n• Johto\n• Hoenn",
+    "override_detail_5070_1_05": "A Paldea puoi sfidare la Supercapa\nsolo dopo aver sconfitto gli otto\nCapipalestra e i Superquattro.\nMi chiedo quanto siano forti\ni Capipalestra e i Superquattro\nche si trovano qui a Pasio!\n\nCompleta VS Nemi 5 con in squadra\nalmeno un'Unità appartenente\na ciascuno dei seguenti gruppi:\n• Capipalestra\n• Superquattro",
+    "override_detail_5070_1_06": "Chissà quante persone, qui a Pasio,\nhanno trovato come me un tesoro\nin dei rivali...\n\nComunque, posso dire che non\nmi basta? Voglio affrontare anche\ngli altri Campioni!\n\nCompleta VS Nemi 6 con in squadra\nalmeno un'Unità appartenente\na ciascuno dei seguenti gruppi:\n• Campioni\n• Rivali",
+    "override_detail_5070_1_07": "Mi ricordi molto una persona che ho\nincontrato a Paldea e che mi ha fatto\nda rivale... Non appena ha ottenuto\nil suo primo Pokémon ha iniziato a\nmigliorare a vista d'occhio... Cosa?!\nAnche tu conosci Allenatori simili?\nDimmi subito di chi si tratta!\n\nCompleta VS Nemi 7 con in squadra\nalmeno un'Unità appartenente\nal gruppo \"Protagonisti\"."
 }

@@ -18,5 +18,6 @@
     "40020016": "Attacchi Buio:\nAtt./Att. Sp. +[Digit:3digits ].",
     "40020017": "Attacchi Acciaio:\nAtt./Att. Sp. +[Digit:3digits ].",
     "40020018": "Attacchi Folletto:\nAtt./Att. Sp. +[Digit:3digits ].",
-    "40030001": "Attacco e Attacco\nSpeciale +[Digit:3digits ]."
+    "40030001": "Attacco e Attacco\nSpeciale +[Digit:3digits ].",
+    "40040001": "Velocità +[Digit:3digits ]."
 }

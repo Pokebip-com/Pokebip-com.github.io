@@ -116,7 +116,7 @@
     "61_element": "• [Name:Type ]",
     "62": "Complete a daily mission ×[Digit:3digits ]",
     "63": "Complete a square on a\nweekly mission bingo card ×[Digit:3digits ] ",
-    "64": "Complete all daily missions ×[Digit:3digits ]",
+    "64": "Obtain daily mission completion\nrewards ×[Digit:3digits ]",
     "65": "Achieve a blackout on a weekly\nmission bingo card ×[Digit:3digits ]",
     "66": "Get a bingo on a weekly\nmission bingo card ×[Digit:3digits ] ",
     "68": "Use emotes ×[Digit:6digits ] (counts only\nif the battle is completed)",
@@ -229,5 +229,12 @@
     "171": "My childhood friend went to town to\npick up his brother but hasn’t come\nback yet. Can you find him? I think\nhe’s in a completely different place.\n\nHe’s wearing a big cape, so you\nmight be able to find him if you\nlook from the sky.",
     "172": "I’ve made some malasadas—Alola’s\nlocal specialty. I want a Trainer from\nAlola to try them out and tell me if\nthey taste authentic.\n\nCan you bring the Trainer to my shop\nin the city?",
     "173": "Do you know what a Pokéblock is?\nIt’s a type of treat that Pokémon love.\n\nI have a kitchen in my shop in the\ncity. I could lend it to someone who\ncan teach me how to make\nPokéblocks. Which Trainers would\nknow how to make them?",
-    "174": "Reach Master Rank when the\nrankings are finalized in\nany High Score Event."
+    "174": "Reach Master Rank when the\nrankings are finalized in\nany High Score Event.",
+    "override_detail_5070_1_01": "As a Champion of the Paldea League,\nI’d like to go up against a Trainer\nfrom Kanto, where the Pokémon\nLeague HQ is. Although...the fierce\nbattles in the Galar League are also\nexciting! I wanna try both!\n\n(Complete Challenge Nemona: Part 1\nwith a team including at least one\nsync pair each with the Kanto and\nGalar themes.)",
+    "override_detail_5070_1_02": "There are unique facilities for\nPokémon battling all over the world!\nI hear in Unova, you battle on a\nrunning train, and in Kalos, you battle\nin restaurants! I bet Trainers who\ntrain in those regions are strong!\n\n(Complete Challenge Nemona: Part 2\nwith a team including at least one\nsync pair each with the Unova and\nKalos themes.)",
+    "override_detail_5070_1_03": "Did you know there are places in the\nworld where only strong Trainers can\ngo, like the Battle Zone in Sinnoh and\nthe Battle Tree in Alola? Sync pairs\nfrom regions with places like that\nare guaranteed to be strong, right?\n\n(Complete Challenge Nemona: Part 3\nwith a team including at least one\nsync pair each with the Sinnoh and\nAlola themes.)",
+    "override_detail_5070_1_04": "Would you prefer to train on a\nmountain or at the beach? And which\nwould be a better place to train at if\nI’m looking to get stronger—Mt. Silver\nin Johto or the wide beaches in\nHoenn? I wanna battle people from\nthose regions to find out!\n\n(Complete Challenge Nemona: Part 4\nwith a team including at least one\nsync pair each with the Johto and\nHoenn themes.)",
+    "override_detail_5070_1_05": "In Paldea, you can’t battle La Primera\nwithout beating the eight Gym\nLeaders and the Elite Four. I wonder\nhow strong other regions’ Gym\nLeaders and Elite Four members that\nI'll meet on Pasio are!\n\n(Complete Challenge Nemona: Part 5\nwith a team including at least one\nsync pair each with the Gym Leader\nand Elite Four themes.)",
+    "override_detail_5070_1_06": "I wonder how many people on Pasio\nhave found the same treasure as\nme, a rival.\n\nAlso, can I be a little greedy?\nI wanna battle other Champions!\n\n(Complete Challenge Nemona: Part 6\nwith a team including at least one\nsync pair each with the Rival and\nChampion themes.)",
+    "override_detail_5070_1_07": "You remind me of my rival, who I met\nin Paldea. They got strong so quickly\nafter getting their first Pokémon...\nWhat? You know other people like\nthat?! Tell me who!\n\n(Complete Challenge Nemona: Part 7\nwith a team including at least one\nsync pair with the Main\nCharacter theme.)"
 }

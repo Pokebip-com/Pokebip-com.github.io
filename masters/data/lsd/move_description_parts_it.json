@@ -587,5 +587,11 @@
     "999350": "Causa una tempesta di sabbia.",
     "999349": "Avvelena tutte le Unità avversarie.",
     "999348": "Aumenta [Name:ReferencedMessageTag Idx=\"4\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ].",
-    "999347": "Trasforma la zona in una Zona Ghiaccio. (Una Zona Ghiaccio aumenta la potenza degli attacchi di tipo Ghiaccio.)"
+    "999347": "Trasforma la zona in una Zona Ghiaccio. (Una Zona Ghiaccio aumenta la potenza degli attacchi di tipo Ghiaccio.)",
+    "999346": "Quando la Velocità di chi la usa viene aumentata.",
+    "999345": "Quando la Velocità di chi la usa non viene aumentata.",
+    "999344": "Aumenta [Name:ReferencedMessageTag Idx=\"1\" ] di un alleato di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
+    "999343": "Aumenta [Name:ReferencedMessageTag Idx=\"2\" ] di un alleato di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ].",
+    "999342": "Riduce [Name:ReferencedMessageTag ] di tutte le Unità avversarie di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
+    "999341": "Questo attacco aumenta di potenza quando la Protezione dal tipo del bersaglio viene ridotta."
 }

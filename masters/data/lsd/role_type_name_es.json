@@ -5,5 +5,9 @@
     "100": "Ataque",
     "101": "Ataque Especial",
     "102": "Sabotaje",
-    "103": "Apoyo"
+    "103": "Apoyo",
+    "4": "Velocidad",
+    "5": "Entorno",
+    "104": "Velocidad",
+    "105": "Entorno"
 }

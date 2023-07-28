@@ -243,6 +243,7 @@
     "ch0082_00_kowai_10": "Kenny la Terreur",
     "ch0082_00_kowai_11": "Thierry la Terreur",
     "ch0082_00_kowai_12": "Zack la Terreur",
+    "ch0082_00_kowai_13": "Vladislas la Terreur",
     "ch0083_00_badgirl_01": "Adriana la Vaurienne",
     "ch0083_00_badgirl_02": "Sandrine la Vaurienne",
     "ch0083_00_badgirl_03": "Valérie la Vaurienne",
@@ -325,5 +326,7 @@
     "ch0516_00_etherm_00": "Employé de la Fondation Æther",
     "ch0647_00_etherm_00": "Employé de la Fondation Æther",
     "ch0517_00_etherf_00": "Employée de la Fondation Æther",
-    "ch0648_00_etherf_00": "Employée de la Fondation Æther"
+    "ch0648_00_etherf_00": "Employée de la Fondation Æther",
+    "ch0280_00_yellm_00": "Sbire Team Yell",
+    "ch0281_00_yellf_00": "Sbire Team Yell"
 }

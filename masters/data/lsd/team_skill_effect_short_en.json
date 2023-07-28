@@ -18,5 +18,6 @@
     "40020016": "Dark-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
     "40020017": "Steel-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
     "40020018": "Fairy-type attacks:\nAtk & Sp. Atk +[Digit:3digits ]",
-    "40030001": "Attack &\nSp. Atk +[Digit:3digits ]"
+    "40030001": "Attack &\nSp. Atk +[Digit:3digits ]",
+    "40040001": "Speed +[Digit:3digits ]"
 }

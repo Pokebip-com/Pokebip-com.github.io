@@ -720,5 +720,20 @@
     "18109500": "拍組極巨化招式後防禦下降Ｇ[Name:PassiveSkillNameDigit ]",
     "18109600": "攻擊灼傷中的對手時攻擊下降[Name:PassiveSkillNameDigit ]",
     "18109700": "攻擊束縛中的對手時速度下降[Name:PassiveSkillNameDigit ]",
-    "18109800": "使用吸收招式攻擊時特攻↓[Name:PassiveSkillNameDigit ]"
+    "18109800": "使用吸收招式攻擊時特攻↓[Name:PassiveSkillNameDigit ]",
+    "18109100": "寶可夢招式能力提升效果２倍",
+    "13061100": "首次拍組招式後同步招式回復[Name:PassiveSkillNameDigit ]",
+    "11013600": "攻擊時ＨＰ中回復[Name:PassiveSkillNameDigit ]",
+    "15013000": "快攻招式後計數加速２次[Name:PassiveSkillNameDigit ]",
+    "19025500": "首次上場時變成妖怪領域",
+    "99012400": "帕希歐的王牌",
+    "18021800": "特攻下降無效Ｇ",
+    "17065800": "對手失敗時賦予物理增強(２)[Name:PassiveSkillNameDigit ]",
+    "17065900": "被攻擊時下次效果絕佳威力提升[Name:PassiveSkillNameDigit ]",
+    "18110300": "拍組極巨化招式後攻擊提升[Name:PassiveSkillNameDigit ]",
+    "18110400": "攻擊中毒中的對手時能力下降[Name:PassiveSkillNameDigit ]",
+    "17065600": "攻擊灼傷中的對手時下次效果絕佳威力提升[Name:PassiveSkillNameDigit ]",
+    "17065700": "拍組招式後賦予物理增強(２)[Name:PassiveSkillNameDigit ]",
+    "18110100": "攻擊灼傷中的對手時能力下降[Name:PassiveSkillNameDigit ]",
+    "18110200": "攻擊麻痺中的對手時防禦特防下降[Name:PassiveSkillNameDigit ]"
 }

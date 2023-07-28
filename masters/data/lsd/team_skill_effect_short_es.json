@@ -18,5 +18,6 @@
     "40020016": "Cuando at. Siniestro\nAt. y At. Esp. +[Digit:3digits ]",
     "40020017": "Cuando at. Acero\nAt. y At. Esp. +[Digit:3digits ]",
     "40020018": "Cuando at. Hada\nAt. y At. Esp. +[Digit:3digits ]",
-    "40030001": "At. y At. Esp. +[Digit:3digits ]"
+    "40030001": "At. y At. Esp. +[Digit:3digits ]",
+    "40040001": "Velocidad +[Digit:3digits ]"
 }

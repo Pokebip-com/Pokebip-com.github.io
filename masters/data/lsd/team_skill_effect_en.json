@@ -18,5 +18,6 @@
     "40020016": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Dark-type attacks.",
     "40020017": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Steel-type attacks.",
     "40020018": "Raises allies’ Attack and Sp. Atk by [Digit:3digits ]\nwhen using Fairy-type attacks.",
-    "40030001": "Raises the Attack and Sp. Atk of all allied sync pairs by [Digit:3digits ]."
+    "40030001": "Raises the Attack and Sp. Atk of all allied sync pairs by [Digit:3digits ].",
+    "40040001": "Raises the Speed of all allied sync pairs by [Digit:3digits ]."
 }

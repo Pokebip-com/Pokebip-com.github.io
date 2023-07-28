@@ -381,5 +381,12 @@
 { "missionGroupId": 2506060, "scheduleId": "5060_3W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 506060, "itemSetId": "2010056", "bannerId": 1506007, "u9": 1, "u10": 0 },
 { "missionGroupId": 2506070, "scheduleId": "5060_3W_Event_TrainersFile_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 506070, "itemSetId": "414", "bannerId": 1506006, "u9": 1, "u10": 0 },
 { "missionGroupId": 2506090, "scheduleId": "5060_4W_Event_Mitsuru_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 506090, "itemSetId": "414", "bannerId": 1409002, "u9": 1, "u10": 0 },
-{ "missionGroupId": 2506100, "scheduleId": "5060_4W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 506100, "itemSetId": "2010056", "bannerId": 1206006, "u9": 1, "u10": 0 }
+{ "missionGroupId": 2506100, "scheduleId": "5060_4W_LegendBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 506100, "itemSetId": "2010056", "bannerId": 1206006, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2507010, "scheduleId": "5070_1W_Event_AKU_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 507010, "itemSetId": "414", "bannerId": 1507001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2507020, "scheduleId": "5070_1W_Event_Egg_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 507020, "itemSetId": "206118", "bannerId": 1507004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2507030, "scheduleId": "5070_2W_Event_nemomoriage_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 507040, "itemSetId": "414", "bannerId": 1507005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2507040, "scheduleId": "5070_2W_Event_nemo_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 507030, "itemSetId": "414", "bannerId": 1507006, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2507050, "scheduleId": "NEVER", "u3": 0, "u4": 1, "u5": 0, "u6": 1000000, "itemSetId": "413", "bannerId": 5203001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2507060, "scheduleId": "5070_3W_Event_AKU_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 507060, "itemSetId": "414", "bannerId": 1404002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2507070, "scheduleId": "5070_3W_Event_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 507070, "itemSetId": "414", "bannerId": 1405001, "u9": 1, "u10": 0 }
 ]}

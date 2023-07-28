@@ -1,44 +1,48 @@
 {
   "versions": [
     {
+      "version": "2.35.0",
+      "releaseTimestamp": 1690437600
+    },
+    {
       "version": "2.34.0",
-      "releaseTimestamp": 1687939200000
+      "releaseTimestamp": 1687932000
     },
     {
       "version": "2.33.0",
-      "releaseTimestamp": 1685340000000
+      "releaseTimestamp": 1685340000
     },
     {
       "version": "2.32.0",
-      "releaseTimestamp": 1682402400000
+      "releaseTimestamp": 1682402400
     },
     {
       "version": "2.31.0",
-      "releaseTimestamp": 1680069600000
+      "releaseTimestamp": 1680069600
     },
     {
       "version": "2.30.0",
-      "releaseTimestamp": 1677218400000
+      "releaseTimestamp": 1677218400
     },
     {
       "version": "2.29.0",
-      "releaseTimestamp": 1674799200000
+      "releaseTimestamp": 1674799200
     },
     {
       "version": "2.28.0",
-      "releaseTimestamp": 1672034400000
+      "releaseTimestamp": 1672034400
     },
     {
       "version": "2.27.0",
-      "releaseTimestamp": 1669615200000
+      "releaseTimestamp": 1669615200
     },
     {
       "version": "2.26.0",
-      "releaseTimestamp": 1666850400000
+      "releaseTimestamp": 1666850400
     },
     {
       "version": "2.25.0",
-      "releaseTimestamp": 1664172000000
+      "releaseTimestamp": 1664172000
     }
   ]
 }

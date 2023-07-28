@@ -18,5 +18,6 @@
     "40020016": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Ténèbres.",
     "40020017": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Acier.",
     "40020018": "Augmente de [Digit:3digits ] l'Attaque et l'Attaque\nSpéciale des alliés uniquement s'ils\nutilisent des attaques de type Fée.",
-    "40030001": "Augmente de [Digit:3digits ] l'Attaque\net l'Attaque Spéciale de tous les alliés."
+    "40030001": "Augmente de [Digit:3digits ] l'Attaque\net l'Attaque Spéciale de tous les alliés.",
+    "40040001": "Augmente de [Digit:3digits ] la Vitesse de tous les alliés."
 }

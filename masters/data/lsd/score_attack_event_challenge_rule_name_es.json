@@ -1,8 +1,8 @@
 {
-    "1": "Al menos [Digit:2digits ] pareja[ES:Qty P=\"s\" ] de\ncompis: [Name:TeamSkillTag ]",
+    "1": "Al menos [Digit:2digits Idx=\"1\"] pareja[ES:Qty Ref=\"1\" P=\"s\" ] de\ncompis: [Name:TeamSkillTag ]",
     "2": "[Name:FieldEffectType ]\nal menos [Digit:2digits ] [ES:Qty S=\"vez\" P=\"veces\" ]",
-    "3": "Al menos [Digit:2digits ] pareja[ES:Qty P=\"s\" ] de\ncompis de [Name:Role ]",
-    "4": "Al menos [Digit:2digits Idx=\"2\" ] pareja[ES:Qty P=\"s\" ]\nde compis [Digit:2digits Idx=\"1\" ]★",
+    "3": "Al menos [Digit:2digits Idx=\"1\" ] pareja[ES:Qty Ref=\"1\" P=\"s\" ] de\ncompis de [Name:Role ]",
+    "4": "Al menos [Digit:2digits Idx=\"2\" ] pareja[ES:Qty Ref=\"2\" P=\"s\" ]\nde compis [Digit:2digits Idx=\"1\" ]★",
     "5": "[Name:FieldEffectType ]",
     "6": "[Name:TeamSkillTag Idx=\"1\" ] y\n[Name:TeamSkillTag Idx=\"2\" ]"
 }

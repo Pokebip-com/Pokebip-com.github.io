@@ -720,5 +720,20 @@
     "18109500": "BD기술후방어다운G[Name:PassiveSkillNameDigit ]",
     "18109600": "화상상대공격시공격↓[Name:PassiveSkillNameDigit ]",
     "18109700": "바인드상대공격시스피드↓[Name:PassiveSkillNameDigit ]",
-    "18109800": "흡수기술공격시특수공격↓[Name:PassiveSkillNameDigit ]"
+    "18109800": "흡수기술공격시특수공격↓[Name:PassiveSkillNameDigit ]",
+    "18109100": "P기술능력업효과2배",
+    "13061100": "첫B기술후S기술횟수회복[Name:PassiveSkillNameDigit ]",
+    "11013600": "공격시HP중회복[Name:PassiveSkillNameDigit ]",
+    "15013000": "속공기술후BC2가속[Name:PassiveSkillNameDigit ]",
+    "19025500": "첫등장시원령존화",
+    "99012400": "파시오의에이스",
+    "18021800": "특수공격다운무효G",
+    "17065800": "상대실패시물리부스트2부여[Name:PassiveSkillNameDigit ]",
+    "17065900": "피격시차회발군위력상승[Name:PassiveSkillNameDigit ]",
+    "18110300": "BD기술후공격업[Name:PassiveSkillNameDigit ]",
+    "18110400": "독상대공격시능력↓[Name:PassiveSkillNameDigit ]",
+    "17065600": "화상상대공격시차회발군위력상승[Name:PassiveSkillNameDigit ]",
+    "17065700": "B기술후물리부스트2부여[Name:PassiveSkillNameDigit ]",
+    "18110100": "화상상대공격시능력다운[Name:PassiveSkillNameDigit ]",
+    "18110200": "마비상대공격시방어특수방어다운[Name:PassiveSkillNameDigit ]"
 }

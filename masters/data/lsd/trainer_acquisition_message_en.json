@@ -94,6 +94,7 @@
     "pvoice_ch0113_00_mikan/system001": "I’m Jasmine, a Gym Leader.\nI use the...clang! Steel type!",
     "pvoice_ch0128_00_mitsuru/system001": "N-nice to meet you! I’m Wally.\nMy Pokémon and I are always moving\nforward together, little by little, day by day!",
     "pvoice_ch0127_00_mikuri/system001": "My name is Wallace. Sit back and fully\nabsorb the brilliance of my aquatic illusions!",
+    "pvoice_ch0155_00_dracaena/system001": "Hello to you! I’m Drasna, one of the Kalos\nElite Four. You and your Pokémon are\nsimply charming!",
     "pvoice_ch0133_00_shilver/system001": "My name’s Silver. I’m going to be the\nworld’s greatest Pokémon Trainer.",
     "pvoice_ch0116_00_hikari/system001": "Hi, I’m Dawn. I’ve got a bit more experience\nas a Trainer than you, so I can teach you\nsome things!",
     "pvoice_ch0170_00_arty/system001": "Oh, hellooo! I’m Burgh. I love creating\nworks of art that showcase the beauty\nof Bug-type Pokémon.",
@@ -305,5 +306,11 @@
     "pvoice_ch0263_00_olea/system001": "My name is Oleana. I have devoted myself\nto working as Chairman Rose’s secretary.",
     "pvoice_ch0285_00_kai/system011": "When you know your destination,\nno hesitation... And I didn’t hesitate!",
     "pvoice_ch0149_00_kaki/system011": "Would you like to burn in battle with me?",
-    "pvoice_ch0124_00_mao/system011": "Hey! Thanks for stopping by again! When it\ncomes to you and your Pokémon, the quality\nof the ingredients really does shine!"
+    "pvoice_ch0124_00_mao/system011": "Hey! Thanks for stopping by again! When it\ncomes to you and your Pokémon, the quality\nof the ingredients really does shine!",
+    "pvoice_ch0247_80_dande/system001": "I’m Leon from Galar! I’ll take on any\nopponent with everything I’ve got!",
+    "pvoice_ch0243_81_yuri/system001": "I’m Gloria, a passionate challenger who\nwon’t give up, no matter what I’m\nup against!",
+    "pvoice_ch0289_00_nemo/system001": "I’m Nemona! I absolutely love Pokémon\nbattling! Nice to meet you!",
+    "pvoice_ch0175_00_gojika/system001": "So the stars decree. Gym Leader Olympia\nshall fight by your side.",
+    "pvoice_ch0003_00_calme/system011": "Teaming up with you seems to be the\nquickest path to getting stronger.\nLet’s stick together.",
+    "pvoice_ch0242_00_masaru/system011": "Nice to see you again! I’ve just finished\ncooking something tasty... Would you like to\nhave some with me?"
 }

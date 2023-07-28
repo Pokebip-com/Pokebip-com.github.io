@@ -58,7 +58,7 @@
     "61": "Usa movimientos supereficaces\ncon compis del tipo indicado.",
     "62": "Completa una misión diaria.",
     "63": "Completa casillas del bingo de misiones semanal.",
-    "64": "Completa todas las misiones diarias.",
+    "64": "Consigue premios de las misiones\ndiarias.",
     "65": "Completa cartones del bingo de misiones semanal.",
     "66": "Completa líneas del bingo de misiones semanal.",
     "68": "Usa iconos en combate.",
@@ -149,5 +149,12 @@
     "171": "¿Dónde estará su amigo?",
     "172": "¡Malasadas de rechupete!",
     "173": "¿Cómo se hacen los Pokécubos?",
-    "174": "Alcanza el rango Master en un\nevento de puntuación máxima."
+    "174": "Alcanza el rango Master en un\nevento de puntuación máxima.",
+    "override_title_5070_1_01": "¡Quiero combatir contra todo tipo\nde Entrenadores!",
+    "override_title_5070_1_02": "¡Quiero combatir contra todo tipo\nde Entrenadores! (2)",
+    "override_title_5070_1_03": "¡Quiero combatir contra todo tipo\nde Entrenadores! (3)",
+    "override_title_5070_1_04": "¡Quiero combatir contra todo tipo\nde Entrenadores! (4)",
+    "override_title_5070_1_05": "¡Quiero combatir contra todo tipo\nde Entrenadores! (5)",
+    "override_title_5070_1_06": "¡Quiero combatir contra todo tipo\nde Entrenadores! (6)",
+    "override_title_5070_1_07": "¡Me recuerdas a alguien!"
 }

@@ -587,5 +587,11 @@
     "999350": "Causes a sandstorm.",
     "999349": "Leaves all opposing sync pairs poisoned.",
     "999348": "Raises the [Name:ReferencedMessageTag Idx=\"4\" ] of all allied sync pairs by [Digit:1digit Idx=\"5\" ] stat [EN:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ].",
-    "999347": "Turns the field of play’s zone into an Ice Zone. (An Ice Zone powers up Ice-type attacks.)"
+    "999347": "Turns the field of play’s zone into an Ice Zone. (An Ice Zone powers up Ice-type attacks.)",
+    "999346": "When the user’s Speed is raised.",
+    "999345": "When the user’s Speed is not raised.",
+    "999344": "Raises an ally’s [Name:ReferencedMessageTag Idx=\"1\" ] by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
+    "999343": "Raises an ally’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] stat [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ].",
+    "999342": "Lowers the [Name:ReferencedMessageTag ] of all opposing sync pairs by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "999341": "This attack’s power increases when the target’s Type Rebuff is lowered."
 }
