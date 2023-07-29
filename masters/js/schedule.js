@@ -1,11 +1,14 @@
 let banner;
+let eventQuestGroup;
 let schedule;
 let scout;
 let scoutPickup;
+let storyQuest;
 
 let versions;
 
 let bannerText;
+let eventName;
 let scoutPickupDescr;
 
 let monsterBase;
@@ -16,33 +19,39 @@ let trainerBase;
 let trainerInfos;
 let trainerNames;
 
-let scoutsDiv;
+let scheduleDiv;
 let versionSelect;
 
 async function getData() {
     const [
         bannerResponse,
+        eventQuestGroupResponse,
         monsterResponse,
         monsterBaseResponse,
         scheduleResponse,
         scoutResponse,
         scoutPickupResponse,
+        storyQuestResponse,
         trainerResponse,
         trainerBaseResponse,
         bannerTextResponse,
+        eventNameResponse,
         monsterNameResponse,
         scoutPickupDescrResponse,
         trainerNameResponse
     ] = await Promise.all([
         fetch("./data/proto/Banner.json"),
+        fetch("./data/proto/EventQuestGroup.json"),
         fetch("./data/proto/Monster.json"),
         fetch("./data/proto/MonsterBase.json"),
         fetch("./data/proto/Schedule.json"),
         fetch("./data/proto/Scout.json"),
         fetch("./data/proto/ScoutPickup.json"),
+        fetch("./data/proto/StoryQuest.json"),
         fetch("./data/proto/Trainer.json"),
         fetch("./data/proto/TrainerBase.json"),
         fetch("./data/lsd/banner_text_fr.json"),
+        fetch("./data/lsd/event_name_fr.json"),
         fetch("./data/lsd/monster_name_fr.json"),
         fetch("./data/lsd/scout_pickup_description_fr.json"),
         fetch("./data/lsd/trainer_name_fr.json")
@@ -51,6 +60,9 @@ async function getData() {
 
     banner = await bannerResponse.json();
     banner = banner.entries;
+
+    eventQuestGroup = await eventQuestGroupResponse.json();
+    eventQuestGroup = eventQuestGroup.entries;
 
     schedule = await scheduleResponse.json();
     schedule = schedule.entries;
@@ -61,7 +73,12 @@ async function getData() {
     scoutPickup = await scoutPickupResponse.json();
     scoutPickup = scoutPickup.entries;
 
+    storyQuest = await storyQuestResponse.json();
+    storyQuest = storyQuest.entries;
+
     bannerText = await bannerTextResponse.json();
+
+    eventName = await eventNameResponse.json();
 
     scoutPickupDescr = await scoutPickupDescrResponse.json();
 
@@ -141,19 +158,29 @@ function scheduleByVersion() {
     }
 
     let scoutIds = scout.map(s => s.scheduleId);
-
-    console.log(scout);
-    console.log(scoutPickup);
+    let eventIds = [...new Set(storyQuest.map(sq => sq.scheduleId))];
 
     for(let i = 0; i < versions.length; i++) {
         versions[i].schedule = schedule
-            .filter(s => scoutIds.includes(s.scheduleId) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
+            .filter(s => (scoutIds.includes(s.scheduleId) || eventIds.includes(s.scheduleId)) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
+            .map(s => {
+                if(scoutIds.includes(s.scheduleId)) {
+                    s.type = "scout";
+                }
+                else {
+                    s.type = "event";
+                }
+                return s;
+            })
             .sort((a, b) => {
                 if(a.startDate > b.startDate) return 1;
                 if(a.startDate < b.startDate) return -1;
 
                 if(a.endDate > b.endDate) return 1;
                 if(a.endDate < b.endDate) return -1;
+
+                if(a.type !== b.type && a.type === "scout") return 1;
+                if(a.type !== b.type && b.type === "scout") return -1;
 
                 return a.scheduleId.localeCompare(b.scheduleId);
             });
@@ -165,73 +192,118 @@ function scheduleByVersion() {
         option.text = `Version ${versions[i].version} (${date.toLocaleDateString('fr-fr', {year: 'numeric', month: 'short', day: 'numeric'})})`;
         versionSelect.add(new Option(option.text, option.value));
     }
-
-    console.log(versions);
 }
 
-function setVersionScouts(id) {
+function printScouts(schedule) {
+    let scheduleScouts = scout.filter(sc => sc.scheduleId === schedule.scheduleId);
+
+    if(scheduleScouts.length === 0)
+        return;
+
+    scheduleDiv.innerHTML += "<h2>Appel Duo</h2>";
+
+    scheduleScouts.forEach(schedScout => {
+        let scoutBanners = banner.filter(b => b.bannerId === schedScout.bannerId);
+
+        scoutBanners.forEach(sb => {
+            let h3 = `<h3>${bannerText[sb.text1Id]}`;
+
+            if(sb.text2Id > -1) {
+                h3 += ` ${bannerText[sb.text2Id]}`;
+            }
+
+            h3 += "</h3>";
+
+            scheduleDiv.innerHTML += h3;
+
+            if(sb.bannerIdString !== "") {
+                scheduleDiv.innerHTML += `<img src="./data/banner/scout/${sb.bannerIdString}.png" />\n`;
+            }
+        });
+
+        let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
+
+        if(sPickups.length > 0) {
+            scheduleDiv.innerHTML += `<h4>Duos à l'affiche</h4>\n<ul style='list-style-type: disc;'>\n`;
+
+
+            sPickups.forEach(sp => {
+                scheduleDiv.innerHTML += `<li>${getTrainerName(sp.trainerId)} & ${getMonsterNameByTrainerId(sp.trainerId)}</li>\n`;
+            });
+
+            scheduleDiv.innerHTML += "</ul>\n";
+        }
+    });
+}
+
+function printEvents(schedule) {
+    let scheduleQuests = storyQuest.filter(quest => quest.scheduleId === schedule.scheduleId);
+
+    if(scheduleQuests.length === 0)
+        return;
+
+    let questGroups = [...new Set(scheduleQuests.map(sq => sq.questGroupId))];
+
+    questGroups.forEach(qg => {
+        eventQuestGroup.filter(eventQG => eventQG.questGroupId === qg)
+            .forEach(eventQG => {
+
+                scheduleDiv.innerHTML += "<h2>Événement</h2>";
+
+                let eventBanners = banner.filter(b => b.bannerId === eventQG.bannerId);
+
+                eventBanners.forEach(eb => {
+                    let h3 = `<h3>${bannerText[eb.text1Id]}`;
+
+                    if(eb.text2Id > -1) {
+                        h3 += ` ${bannerText[eb.text2Id]}`;
+                    }
+
+                    h3 += "</h3>";
+
+                    scheduleDiv.innerHTML += h3;
+
+                    if(eb.bannerIdString !== "") {
+                        scheduleDiv.innerHTML += `<img src="./data/banner/event/${eb.bannerIdString}.png" />\n`;
+                    }
+                });
+            });
+    });
+}
+
+function setVersionInfos(id) {
     let version = versions.find(v => v.version === id);
 
     if(version === undefined)
         return;
 
-    let lastStart = 0;
+    scheduleDiv.innerHTML = "";
 
-    scoutsDiv.innerHTML = "";
+    let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
-    version.schedule.forEach(sched => {
-        scout.filter(sc => sc.scheduleId === sched.scheduleId)
-            .forEach(schedScout => {
-                let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
-                let scoutBanners = banner.filter(b => b.bannerId === schedScout.bannerId);
+    startDates.forEach(timestamp => {
 
-                if(sched.startDate > lastStart) {
-                    console.log("---------");
-                    lastStart = sched.startDate;
-                    let date = new Date(sched.startDate*1000);
-                    scoutsDiv.innerHTML += `<h1 style="margin-top: 50px">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'medium', timeStyle: 'short'}).format(date)}</h1>\n`;
-                }
+        let date = new Date(timestamp*1000);
+        scheduleDiv.innerHTML += `<h1 style="margin-top: 50px">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'medium', timeStyle: 'short'}).format(date)}</h1>\n`;
 
-                scoutBanners.forEach(sb => {
-                    let h2 = `<h2>${bannerText[sb.text1Id]}`;
+        version.schedule.filter(schedule => schedule.startDate === timestamp).forEach(sched => {
 
-                    if(sb.text2Id > -1) {
-                        h2 += `<br />${bannerText[sb.text2Id]}`;
-                    }
-
-                    h2 += "</h2>";
-
-                    scoutsDiv.innerHTML += h2;
-
-                    if(sb.bannerIdString !== "") {
-                        scoutsDiv.innerHTML += `<img src="./data/banner/scout/${sb.bannerIdString}.png" />\n`;
-                    }
-                })
-
-                if(sPickups.length > 0) {
-                    scoutsDiv.innerHTML += `<h3>Duos à l'affiche</h3>\n<ul style='list-style-type: disc;'>\n`;
-
-
-                    sPickups.forEach(sp => {
-                        scoutsDiv.innerHTML += `<li>${getTrainerName(sp.trainerId)} & ${getMonsterNameByTrainerId(sp.trainerId)}</li>\n`;
-                    });
-
-                    scoutsDiv.innerHTML += "</ul>\n";
-                }
-
-                console.log(sched);
-                console.log(schedScout);
-                console.log(sPickups);
-                console.log(scoutBanners);
-            })
-    })
+            switch(sched.type) {
+                case "scout":
+                    printScouts(sched);
+                    break;
+                case "event":
+                    printEvents(sched);
+                    break;
+            }
+        })
+    });
 }
 
 function setVersion(id, setUrl = true) {
     versionSelect.value = id;
 
-    setVersionScouts(id);
-    //setAnchors(id);
+    setVersionInfos(id);
     if(setUrl)
         setUrlEventID(versionSelect.value);
 }
@@ -245,9 +317,7 @@ function setUrlEventID(id) {
 
 async function init() {
     versionSelect = document.getElementById("versionSelect");
-    btnCopy = document.getElementById("btnCopy");
-    textarea = document.getElementById("area");
-    scoutsDiv = document.getElementById("scoutsDiv");
+    scheduleDiv = document.getElementById("scheduleDiv");
 
     await getData();
     await getCustomJSON();
@@ -258,10 +328,6 @@ async function init() {
         setVersion(versionSelect.value);
     };
 
-    btnCopy.onclick = function() {
-        navigator.clipboard.writeText(textarea.value);
-    };
-
     const url = new URL(window.location);
     const urlVersionId = url.searchParams.get('version');
 
@@ -270,24 +336,6 @@ async function init() {
     }
 
     setVersion(versionSelect.value);
-/*
-    gridTable = document.getElementById("gridTable");
-    statsTable = document.getElementById("statsTable");
-    updatedGridsSpan = document.getElementById("updatedGrids");
-
-    setPassiveList();
-    setConditionsAndAbilities();
-
-    abilityPanelByTrainer = getAbilitiesByTrainerID(abilityPanelByTrainer);
-
-    Object.keys(abilityPanelByTrainer).forEach(trainerID => {
-        abilityPanelByTrainer[trainerID].oldNbCells = lastUpdateGrids[trainerID] || 0;
-    });
-
-    sortCells();
-    populateSelect();
-
-    */
 }
 
 init();
