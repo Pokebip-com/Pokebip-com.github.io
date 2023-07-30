@@ -19,6 +19,8 @@ let trainerBase;
 let trainerInfos;
 let trainerNames;
 
+let treatedEvents;
+
 let scheduleDiv;
 let versionSelect;
 
@@ -172,18 +174,7 @@ function scheduleByVersion() {
                 }
                 return s;
             })
-            .sort((a, b) => {
-                if(a.startDate > b.startDate) return 1;
-                if(a.startDate < b.startDate) return -1;
-
-                if(a.endDate > b.endDate) return 1;
-                if(a.endDate < b.endDate) return -1;
-
-                if(a.type !== b.type && a.type === "scout") return 1;
-                if(a.type !== b.type && b.type === "scout") return -1;
-
-                return a.scheduleId.localeCompare(b.scheduleId);
-            });
+            .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.type.localeCompare(b.type)*(-1));
 
         let date = new Date(versions[i].releaseTimestamp*1000);
 
@@ -199,8 +190,6 @@ function printScouts(schedule) {
 
     if(scheduleScouts.length === 0)
         return;
-
-    scheduleDiv.innerHTML += "<h2>Appel Duo</h2>";
 
     scheduleScouts.forEach(schedScout => {
         let scoutBanners = banner.filter(b => b.bannerId === schedScout.bannerId);
@@ -245,10 +234,13 @@ function printEvents(schedule) {
     let questGroups = [...new Set(scheduleQuests.map(sq => sq.questGroupId))];
 
     questGroups.forEach(qg => {
+        if(treatedEvents.includes(qg))
+            return;
+        else
+            treatedEvents.push(qg);
+
         eventQuestGroup.filter(eventQG => eventQG.questGroupId === qg)
             .forEach(eventQG => {
-
-                scheduleDiv.innerHTML += "<h2>Événement</h2>";
 
                 let eventBanners = banner.filter(b => b.bannerId === eventQG.bannerId);
 
@@ -258,6 +250,10 @@ function printEvents(schedule) {
                     if(eb.text2Id > -1) {
                         h3 += ` ${bannerText[eb.text2Id]}`;
                     }
+
+                    console.log(bannerText[eb.text1Id] + " " + bannerText[eb.text2Id]);
+                    console.log(schedule);
+                    console.log(eventQG);
 
                     h3 += "</h3>";
 
@@ -279,9 +275,13 @@ function setVersionInfos(id) {
 
     scheduleDiv.innerHTML = "";
 
+    let scoutFlag, eventFlag;
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
     startDates.forEach(timestamp => {
+
+        scoutFlag = eventFlag = true;
+        treatedEvents = [];
 
         let date = new Date(timestamp*1000);
         scheduleDiv.innerHTML += `<h1 style="margin-top: 50px">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'medium', timeStyle: 'short'}).format(date)}</h1>\n`;
@@ -290,9 +290,18 @@ function setVersionInfos(id) {
 
             switch(sched.type) {
                 case "scout":
+                    if(scoutFlag) {
+                        scheduleDiv.innerHTML += "<h2>Appels Duo</h2>";
+                        scoutFlag = false;
+                    }
                     printScouts(sched);
                     break;
+
                 case "event":
+                    if(eventFlag) {
+                        scheduleDiv.innerHTML += "<h2>Événements</h2>";
+                        eventFlag = false;
+                    }
                     printEvents(sched);
                     break;
             }
