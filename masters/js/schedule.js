@@ -36,6 +36,7 @@ async function getData() {
         storyQuestResponse,
         trainerResponse,
         trainerBaseResponse,
+        villaQuestGroupResponse,
         bannerTextResponse,
         eventNameResponse,
         monsterNameResponse,
@@ -52,6 +53,7 @@ async function getData() {
         fetch("./data/proto/StoryQuest.json"),
         fetch("./data/proto/Trainer.json"),
         fetch("./data/proto/TrainerBase.json"),
+        fetch("./data/proto/VillaQuestGroup.json"),
         fetch("./data/lsd/banner_text_fr.json"),
         fetch("./data/lsd/event_name_fr.json"),
         fetch("./data/lsd/monster_name_fr.json"),
@@ -65,6 +67,10 @@ async function getData() {
 
     eventQuestGroup = await eventQuestGroupResponse.json();
     eventQuestGroup = eventQuestGroup.entries;
+
+    let villaQuestGroup = await villaQuestGroupResponse.json();
+    villaQuestGroup.entries.map(vqg => vqg.bannerId = 1202001);
+    eventQuestGroup.push(...villaQuestGroup.entries);
 
     schedule = await scheduleResponse.json();
     schedule = schedule.entries;
