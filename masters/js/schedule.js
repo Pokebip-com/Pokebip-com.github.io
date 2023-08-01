@@ -191,6 +191,11 @@ function scheduleByVersion() {
     }
 }
 
+function printEndDate(timestamp) {
+    let endDate = new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(new Date(timestamp*1000-1));
+    scheduleDiv.innerHTML += `<br /><br /><strong>Date de fin : </strong> ${endDate}`;
+}
+
 function printScouts(schedule) {
     let scheduleScouts = scout.filter(sc => sc.scheduleId === schedule.scheduleId);
 
@@ -215,6 +220,8 @@ function printScouts(schedule) {
                 scheduleDiv.innerHTML += `<img src="./data/banner/scout/${sb.bannerIdString}.png" />\n`;
             }
         });
+
+        printEndDate(schedule.endDate);
 
         let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
 
@@ -257,10 +264,6 @@ function printEvents(schedule) {
                         h3 += ` ${bannerText[eb.text2Id]}`;
                     }
 
-                    console.log(bannerText[eb.text1Id] + " " + bannerText[eb.text2Id]);
-                    console.log(schedule);
-                    console.log(eventQG);
-
                     h3 += "</h3>";
 
                     scheduleDiv.innerHTML += h3;
@@ -269,6 +272,8 @@ function printEvents(schedule) {
                         scheduleDiv.innerHTML += `<img src="./data/banner/event/${eb.bannerIdString}.png" />\n`;
                     }
                 });
+
+                printEndDate(schedule.endDate);
             });
     });
 }
@@ -290,7 +295,7 @@ function setVersionInfos(id) {
         treatedEvents = [];
 
         let date = new Date(timestamp*1000);
-        scheduleDiv.innerHTML += `<h1 style="margin-top: 50px">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'medium', timeStyle: 'short'}).format(date)}</h1>\n`;
+        scheduleDiv.innerHTML += `<h1 style="margin-top: 50px">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(date)}</h1>\n`;
 
         version.schedule.filter(schedule => schedule.startDate === timestamp).forEach(sched => {
 
