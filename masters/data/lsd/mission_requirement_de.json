@@ -10,7 +10,7 @@
     "11": "Verstärke Ausrüstung",
     "12": "Nutze Item-Tausch",
     "15": "Schließe ein bestimmtes Gebiet\nmit dem vorgegebenen Team ab",
-    "17": "Verstärke Gefährten",
+    "17": "Erhöhe den Level von Gefährten",
     "18": "Erhalte Münzen",
     "19": "Schließe Abenteuer ab (Multi)",
     "20": "Entwickle Pokémon",
@@ -156,5 +156,10 @@
     "override_title_5070_1_04": "Ich will gegen viele verschiedene\nTrainer kämpfen! 4",
     "override_title_5070_1_05": "Ich will gegen viele verschiedene\nTrainer kämpfen! 5",
     "override_title_5070_1_06": "Ich will gegen viele verschiedene\nTrainer kämpfen! 6",
-    "override_title_5070_1_07": "Du erinnerst mich an jemanden!"
+    "override_title_5070_1_07": "Du erinnerst mich an jemanden!",
+    "175": "Schließe eines von mehreren\nbestimmten Gebieten ab",
+    "override_title_5080_1_01": "Schließe eines von mehreren\nTrainingsgebieten ab",
+    "override_title_5080_1_02": "Schließe das Gefährtendropsgebiet\nab",
+    "override_title_5080_1_03": "Schließe die täglichen\nRegionskämpfe ab",
+    "override_title_5080_1_04": "Schließe einen der Passio\nSpezialkämpfe ab"
 }

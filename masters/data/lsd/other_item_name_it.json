@@ -37,5 +37,11 @@
     "13401": "Conversacarica",
     "80000000101": "Pass bonus Punti Lotta",
     "580000000004": "Gettone Caramella mossa (arancione)",
-    "580000000005": "Gettone Caramella mossa (viola)"
+    "580000000005": "Gettone Caramella mossa (viola)",
+    "600000000001": "Gettone Panruoletto (rosso)",
+    "600000000002": "Gettone Panruoletto (verde)",
+    "600000000003": "Gettone Panruoletto (blu)",
+    "600000000004": "Gettone Panruoletto (arancione)",
+    "600000000005": "Gettone Panruoletto (viola)",
+    "450000000063": "Biglietto giornaliero"
 }

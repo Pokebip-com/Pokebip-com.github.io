@@ -446,5 +446,11 @@
 { "itemId": "750000000491", "descriptionId": 600000, "imageId": "i075_0019_00", "u4": 0, "storyQuestId": "610457", "trainerId": "-1", "scheduleId": "5070_4W_Event_sakaki_get_Exchange" },
 { "itemId": "750000000492", "descriptionId": 600000, "imageId": "i075_0005_00", "u4": 0, "storyQuestId": "610458", "trainerId": "-1", "scheduleId": "5070_4W_Event_kasumi_get_Exchange" },
 { "itemId": "750000000493", "descriptionId": 600000, "imageId": "i075_0007_00", "u4": 0, "storyQuestId": "610459", "trainerId": "-1", "scheduleId": "5070_4W_Event_green_get_Exchange" },
-{ "itemId": "750000000494", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "610460", "trainerId": "-1", "scheduleId": "5070_4W_Event_PokemasDay_Exchange" }
+{ "itemId": "750000000494", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "610460", "trainerId": "-1", "scheduleId": "5070_4W_Event_PokemasDay_Exchange" },
+{ "itemId": "750000000495", "descriptionId": 600000, "imageId": "i075_0009_00", "u4": 0, "storyQuestId": "610470", "trainerId": "-1", "scheduleId": "5080_1W_Event_Anniversary_Exchange" },
+{ "itemId": "750000000496", "descriptionId": 600000, "imageId": "i075_0003_00", "u4": 0, "storyQuestId": "610474", "trainerId": "-1", "scheduleId": "5080_2W_Event_Spcos_Exchange" },
+{ "itemId": "750000000497", "descriptionId": 600000, "imageId": "i075_0019_00", "u4": 0, "storyQuestId": "610477", "trainerId": "-1", "scheduleId": "5080_2W_Event_kurokei_Exchange" },
+{ "itemId": "750000000498", "descriptionId": 600000, "imageId": "i075_0004_00", "u4": 0, "storyQuestId": "610478", "trainerId": "-1", "scheduleId": "5080_3W_Event_Equipment_Exchange" },
+{ "itemId": "750000000499", "descriptionId": 600003, "imageId": "i075_1000_01", "u4": 0, "storyQuestId": "610479", "trainerId": "-1", "scheduleId": "5080_3W_Event_Rival_Exchange" },
+{ "itemId": "750000000500", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "610480", "trainerId": "-1", "scheduleId": "5080_4W_Event_PokemasDay_Exchange" }
 ]}

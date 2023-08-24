@@ -162,6 +162,8 @@
     "20014200": "Aerodactyl",
     "20014251": "Mega-Aerodactyl",
     "20014300": "Relaxo",
+    "20014400": "Arktos",
+    "20014500": "Zapdos",
     "20014600": "Lavados",
     "20014700": "Dratini",
     "20014800": "Dragonir",
@@ -309,6 +311,8 @@
     "20037600": "Metagross",
     "20037651": "Mega-Metagross",
     "20037700": "Regirock",
+    "20037800": "Regice",
+    "20037900": "Registeel",
     "20038000": "Latias",
     "20038051": "Mega-Latias",
     "20038100": "Latios",
@@ -386,6 +390,7 @@
     "20048200": "Tobutz",
     "20048300": "Dialga",
     "20048400": "Palkia",
+    "20048600": "Regigigas",
     "20048711": "Giratina",
     "20048800": "Cresselia",
     "20049100": "Darkrai",
@@ -655,5 +660,9 @@
     "20088400": "Muramura",
     "2008060000": "Kopplosio",
     "2008970000": "Phantoross",
-    "2009230000": "Pamomamo"
+    "2009230000": "Pamomamo",
+    "2007451300": "Wolwerock",
+    "2009060000": "Felori",
+    "2009090000": "Krokel",
+    "2009120000": "Kwaks"
 }

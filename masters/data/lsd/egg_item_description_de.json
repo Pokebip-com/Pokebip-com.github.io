@@ -20,6 +20,7 @@
     "27": "Fukano-Ei",
     "28": "Onix-Ei",
     "29": "Pinsir-Ei",
+    "30": "Schlurp-Ei",
     "31": "Pokémon-Eier (Typ Elektro und Stahl)",
     "32": "Pichu-Ei",
     "33": "Elekid-Ei",
@@ -84,5 +85,9 @@
     "97": "Taubsi-Ei",
     "98": "Pokémon-Eier (Typ Feuer und Psycho)",
     "99": "Ponita-Ei",
-    "100": "Flegmon-Ei"
+    "100": "Flegmon-Ei",
+    "101": "Krokel-Ei",
+    "102": "Felori-Ei",
+    "103": "Kwaks-Ei",
+    "104": "Pokémon-Ei (Krokel, Felori oder Kwaks)"
 }

@@ -50,5 +50,6 @@
 { "questGroupId": "700048", "scheduleId": "5050_2W_BattleVilla", "u3": "Event_2100_4W_2", "itemSetId": "21000048" },
 { "questGroupId": "700049", "scheduleId": "5060_1W_BattleVilla", "u3": "Event_2100_4W_2", "itemSetId": "21000048" },
 { "questGroupId": "700050", "scheduleId": "5070_2W_BattleVilla", "u3": "Event_2100_4W_2", "itemSetId": "21000048" },
+{ "questGroupId": "700051", "scheduleId": "5080_1W_BattleVilla", "u3": "Event_2100_4W_2", "itemSetId": "21000048" },
 { "questGroupId": "999999999", "scheduleId": "NEVER", "u3": "", "itemSetId": "0" }
 ]}

@@ -11,7 +11,7 @@
     "12": "Ottieni [Digit:6digits ] strument[IT:Qty S=\"o\" P=\"i\" ] tramite scambio.",
     "15": "Completa \"[Name:QuestTitle ]\" [Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ] con in squadra le seguenti Unità:",
     "16": "Completa \"[Name:QuestTitle ]\" [Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ] con una squadra dei seguenti tipi:",
-    "17": "Rinforza delle Unità [Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ].",
+    "17": "Fai salire di livello un'Unità utilizzando\ndegli strumenti [Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ].",
     "18": "Ottieni [Digit:9digits ] monet[IT:Qty S=\"a\" P=\"e\" ].",
     "19": "Completa [Digit:6digits ] avventur[IT:Qty S=\"a\" P=\"e\" ]\nin modalità multigiocatore.",
     "20": "Fai evolvere [Digit:6digits ] Pokémon.",
@@ -236,5 +236,15 @@
     "override_detail_5070_1_04": "Tu preferisci allenarti in montagna o\nal mare? Chissà se si diventa più forti\nesercitandosi sul Monte Argento\ndi Johto o sulle vaste spiagge di\nHoenn... Mi piacerebbe sfidare\nAllenatori provenienti da queste\nregioni per scoprirlo!\n\nCompleta VS Nemi 4 con in squadra\nalmeno un'Unità appartenente\na ciascuno dei seguenti gruppi:\n• Johto\n• Hoenn",
     "override_detail_5070_1_05": "A Paldea puoi sfidare la Supercapa\nsolo dopo aver sconfitto gli otto\nCapipalestra e i Superquattro.\nMi chiedo quanto siano forti\ni Capipalestra e i Superquattro\nche si trovano qui a Pasio!\n\nCompleta VS Nemi 5 con in squadra\nalmeno un'Unità appartenente\na ciascuno dei seguenti gruppi:\n• Capipalestra\n• Superquattro",
     "override_detail_5070_1_06": "Chissà quante persone, qui a Pasio,\nhanno trovato come me un tesoro\nin dei rivali...\n\nComunque, posso dire che non\nmi basta? Voglio affrontare anche\ngli altri Campioni!\n\nCompleta VS Nemi 6 con in squadra\nalmeno un'Unità appartenente\na ciascuno dei seguenti gruppi:\n• Campioni\n• Rivali",
-    "override_detail_5070_1_07": "Mi ricordi molto una persona che ho\nincontrato a Paldea e che mi ha fatto\nda rivale... Non appena ha ottenuto\nil suo primo Pokémon ha iniziato a\nmigliorare a vista d'occhio... Cosa?!\nAnche tu conosci Allenatori simili?\nDimmi subito di chi si tratta!\n\nCompleta VS Nemi 7 con in squadra\nalmeno un'Unità appartenente\nal gruppo \"Protagonisti\"."
+    "override_detail_5070_1_07": "Mi ricordi molto una persona che ho\nincontrato a Paldea e che mi ha fatto\nda rivale... Non appena ha ottenuto\nil suo primo Pokémon ha iniziato a\nmigliorare a vista d'occhio... Cosa?!\nAnche tu conosci Allenatori simili?\nDimmi subito di chi si tratta!\n\nCompleta VS Nemi 7 con in squadra\nalmeno un'Unità appartenente\nal gruppo \"Protagonisti\".",
+    "175": "Completa [Digit:6digits ] Guid[IT:Qty S=\"a\" P=\"e\" ] area\ntra le seguenti:",
+    "175_element": "• [Name:QuestGroupTitle ]\nin modalità [Name:QuestPlayType ]",
+    "override_detail_5080_1_01": "Completa una delle lotte regionali\ngiornaliere.",
+    "override_detail_5080_1_02": "Completa una delle seguenti lotte\ndi \"Una sfida speciale a Pasio\":\n• VS Koga\n• VS Frida\n• VS Mirton\n• VS Tapso",
+    "override_detail_5080_1_03": "Completa \"Si vola!\", il capitolo 5\ndella storia \"Il WPM\", in difficoltà\n\"Normale\".",
+    "override_detail_5080_1_04": "Completa \"Un motivo per lottare\",\nil capitolo 10 della storia \"Il WPM\",\nin difficoltà \"Normale\".",
+    "override_detail_5080_1_05": "Completa \"La richiesta di Oak\"\nin \"Nuovi Campioni - Tre mentori,\ntre metodi\".",
+    "override_detail_5080_1_06": "Completa \"Divertiamoci con le lotte!\"\nin \"Nuovi Campioni - Tre mentori,\ntre metodi\".",
+    "override_detail_5080_1_07": "Completa \"VS Giovanni\" nel capitolo\nconclusivo della storia \"I gruppi\nmalvagi\" in difficoltà \"Difficile\".",
+    "override_detail_5080_1_08": "Completa tre lotte regionali\ngiornaliere."
 }

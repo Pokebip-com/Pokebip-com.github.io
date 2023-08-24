@@ -20,6 +20,7 @@
     "27": "Un Uovo di Growlithe.",
     "28": "Un Uovo di Onix.",
     "29": "Un Uovo di Pinsir.",
+    "30": "Un Uovo di Lickitung.",
     "31": "Un Uovo di Pokémon di tipo Elettro\no Acciaio.",
     "32": "Un Uovo di Pichu.",
     "33": "Un Uovo di Elekid.",
@@ -84,5 +85,9 @@
     "97": "Un Uovo di Pidgey.",
     "98": "Un Uovo di Pokémon di tipo Fuoco o Psico.",
     "99": "Un Uovo di Ponyta.",
-    "100": "Un Uovo di Slowpoke."
+    "100": "Un Uovo di Slowpoke.",
+    "101": "Un Uovo di Fuecoco.",
+    "102": "Un Uovo di Sprigatito.",
+    "103": "Un Uovo di Quaxly.",
+    "104": "Un Uovo di Fuecoco, Sprigatito o Quaxly."
 }

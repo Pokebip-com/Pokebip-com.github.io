@@ -11,7 +11,7 @@
     "12": "Obtenez [Digit:6digits ] objet[FR:Qty P=\"s\" ] par échange.",
     "15": "Finissez « [Name:QuestTitle ] » [Digit:6digits ] fois avec l'équipe suivante :",
     "16": "Finissez « [Name:QuestTitle ] » [Digit:6digits ] fois en utilisant une équipe du type suivant :",
-    "17": "Renforcez des Duos [Digit:6digits ] fois.",
+    "17": "Faites monter le niveau d'un Duo\nà l'aide d'un ou plusieurs objets\n[Digit:6digits ] fois.",
     "18": "Obtenez [Digit:9digits ] Pièces.",
     "19": "Finissez une aventure en coop\n[Digit:6digits ] fois.",
     "20": "Faites évoluer des Pokémon [Digit:6digits ] fois.",
@@ -236,5 +236,15 @@
     "override_detail_5070_1_04": "Tu préfères t'entraîner à la plage\nou à la montagne ? Je me demande\nce qui serait le mieux pour devenir\nplus forte entre le Mont Argenté\nde Johto et les plages de Hoenn...\nJe veux combattre des Dresseurs\nde ces régions pour le savoir !\n\n(Utilisez 1 Duo avec le mot-clé\n« Johto » et 1 Duo avec le mot-clé\n« Hoenn » pour terminer :\nCombat : Menzi IV)",
     "override_detail_5070_1_05": "À Paldea, il faut vaincre les huit\nChampions d'Arène et le Conseil 4\navant de pouvoir affronter la Cheffe.\nDu coup, je me demande ce que\nvalent les Champions et les membres\ndu Conseil 4 des autres régions !\n\n(Utilisez 1 Duo avec le mot-clé\n« Champions » et 1 Duo avec\nle mot-clé « Conseil 4 »\npour terminer :\nCombat : Menzi V)",
     "override_detail_5070_1_06": "Je me demande qui d'autre à Passio\na trouvé le même trésor que moi...\nC'est-à-dire, toi !\n[FR:Gen Ref=\"255\" M=\"Un rival\" F=\"Une rivale\" ] à mon niveau contre qui\nje peux tout donner en combat !\n\nEst-ce que je peux me permettre une\nrequête un tout petit peu égoïste ?\nJe veux combattre les autres Maîtres !\n\n(Utilisez 1 Duo ou plus avec\nles mots-clés « Rivaux »\net « Maîtres » pour terminer :\nCombat : Menzi VI)",
-    "override_detail_5070_1_07": "Tu me rappelles quelqu'un que j'ai\nrencontré à Paldea... Cette personne\ns'est améliorée tellement vite après\navoir obtenu son premier Pokémon !\nQuoi ?! Toi aussi, tu connais des gens\ncomme ça ? Dis-moi qui !\n\n(Utilisez 1 Duo ou plus avec\nle mot-clé « Protagonistes »\npour terminer :\nCombat : Menzi VII)"
+    "override_detail_5070_1_07": "Tu me rappelles quelqu'un que j'ai\nrencontré à Paldea... Cette personne\ns'est améliorée tellement vite après\navoir obtenu son premier Pokémon !\nQuoi ?! Toi aussi, tu connais des gens\ncomme ça ? Dis-moi qui !\n\n(Utilisez 1 Duo ou plus avec\nle mot-clé « Protagonistes »\npour terminer :\nCombat : Menzi VII)",
+    "175": "Terminez [Digit:6digits ] zones\nparmi les suivantes :",
+    "175_element": "• [Name:QuestGroupTitle ]\nen [Name:QuestPlayType ]",
+    "override_detail_5080_1_01": "Terminez un combat\nrégional quotidien.",
+    "override_detail_5080_1_02": "Terminez un des combats suivants\nlors du match spécial de Passio :\n• Koga\n• Glacia\n• Pieris\n• Molène",
+    "override_detail_5080_1_03": "Terminez une fois le chapitre 5 du\nWPM « C'est l'heure du décollage ! »\nen difficulté « Normal » dans\nle scénario principal.",
+    "override_detail_5080_1_04": "Terminez une fois le chapitre 10\ndu WPM « La raison du combat »\nen difficulté « Normal » dans\nle scénario principal.",
+    "override_detail_5080_1_05": "Terminez une fois « La requête\ndu Professeur Chen » dans\n« Les Néo-Maîtres : Trois Dresseurs,\ntrois stratégies ».",
+    "override_detail_5080_1_06": "Terminez une fois « S'amuser au\ncombat ! » dans « Les Néo-Maîtres :\nTrois Dresseurs, trois stratégies ».",
+    "override_detail_5080_1_07": "Terminez une fois « Combat :\nGiovanni » en difficulté « Difficile »\ndans le chapitre final du scénario\nprincipal.",
+    "override_detail_5080_1_08": "Terminez le combat régional\nquotidien trois fois."
 }

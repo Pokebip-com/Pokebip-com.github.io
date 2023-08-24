@@ -10,7 +10,7 @@
     "11": "Rinforza degli accessori.",
     "12": "Scambia degli strumenti.",
     "15": "Completa la Guida area indicata\ncon la squadra indicata.",
-    "17": "Rinforza delle Unità.",
+    "17": "Fai salire di livello delle Unità.",
     "18": "Ottieni delle monete.",
     "19": "Completa delle avventure\ncon altri giocatori.",
     "20": "Fai evolvere i Pokémon.",
@@ -156,5 +156,10 @@
     "override_title_5070_1_04": "Voglio sfidare tanti Allenatori! 4",
     "override_title_5070_1_05": "Voglio sfidare tanti Allenatori! 5",
     "override_title_5070_1_06": "Voglio sfidare tanti Allenatori! 6",
-    "override_title_5070_1_07": "Mi ricordi qualcuno...!"
+    "override_title_5070_1_07": "Mi ricordi qualcuno...!",
+    "175": "Completa le Guide area indicate.",
+    "override_title_5080_1_01": "Completa un'area allenamento.",
+    "override_title_5080_1_02": "Completa un'area Uniciondoli.",
+    "override_title_5080_1_03": "Completa una delle lotte\nregionali giornaliere.",
+    "override_title_5080_1_04": "Completa una delle lotte di\n\"Una sfida speciale a Pasio\"."
 }

@@ -63,7 +63,7 @@
     "inventory_campaign_3060_nobokuda": "Login-Bonus: Alles einsteigen!",
     "inventory_campaign_3070_solo": "Login-Bonus: Lyer hat die Lösung",
     "inventory_campaign_3070_2ndAniv": "Login-Bonus: 2 Jahre-Vorfeier",
-    "inventory_campaign_3070_free10BSearch": "L.-Bonus: 10 Tage lang G-Suchetickets x10",
+    "inventory_campaign_3070_free10BSearch": "L.-Bonus: 10 Tage lang G-Suchetickets × 10",
     "inventory_campaign_3060_bidoof": "Login-Bonus: Ein Hoch auf Bidiza!",
     "inventory_campaign_3080_2ndAnniversary": "Login-Bonus: 2 Jahre-Jubiläum",
     "inventory_campaign_3085_Kanto": "Login-Bonus: Schatten aus Kanto",
@@ -78,7 +78,7 @@
     "inventory_campaign_3100_pday": "Login-Bonus: Funkelndes Geschenk",
     "inventory_campaign_3120_Sinnoh": "Login-Bonus: Gefühlskalte Träume",
     "inventory_campaign_3120_Newyear": "Login-Bonus: Neujahr",
-    "inventory_campaign_4010_free10BSearch": "L.-Bonus: 10 Tage lang G-Suchetickets x10",
+    "inventory_campaign_4010_free10BSearch": "L.-Bonus: 10 Tage lang G-Suchetickets × 10",
     "inventory_campaign_4010_Anniversary": "Login-Bonus: 2,5 Jahre-Vorfeier",
     "inventory_campaign_4010_episode": "Login-Bonus: Ein süßer Plan",
     "inventory_campaign_4010_scout_ticket": "Garant. 5★-G-Suche \nx30 (alle Regionen)",
@@ -137,5 +137,9 @@
     "inventory_campaign_5070_nemo": "Login-Bonus: Lasst\nuns kämpfen!",
     "inventory_campaign_5070_4ndAnniversary": "Login-Bonus:\n4-Jahre-Vorfeier",
     "inventory_campaign_5070_free10BSearch": "L.-Bonus: 10 Tage lang G-Suchetickets × 10",
-    "inventory_campaign_5070_field": "Login-Bonus: Neue\nRolle „Feldwandler“"
+    "inventory_campaign_5070_field": "Login-Bonus: Neue\nRolle „Feldwandler“",
+    "inventory_campaign_5080_4ndAnniversary": "Login-Bonus:\n4-Jahre-Jubiläum",
+    "inventory_campaign_5080_mainstory": "L.-Bonus zur Feier: Finale\ndes Schurken-Events",
+    "inventory_campaign_5080_rocket": "Login-Bonus: Stoppt\ndas böse Genie!",
+    "inventory_campaign_5080_kurotsugu": "Login-Bonus:\nKampfkoloss & Saaldiva"
 }

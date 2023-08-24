@@ -11,7 +11,7 @@
     "12": "Consigue [Digit:6digits ] objeto[ES:Qty P=\"s\" ] mediante\ncanjes.",
     "15": "Completa [Digit:6digits ] ve[ES:Qty S=\"z\" P=\"ces\" ] la ubicación \"[Name:QuestTitle ]\" con el siguiente equipo:",
     "16": "Completa la ubicación\n\"[Name:QuestTitle ]\"\n[Digit:6digits ] ve[ES:Qty S=\"z\" P=\"ces\" ] usando el siguiente tipo:",
-    "17": "Fortalece a tus compis [Digit:6digits ] ve[ES:Qty S=\"z\" P=\"ces\" ].",
+    "17": "Aumenta el nivel de tus compis\nusando objetos [Digit:6digits ] ve[ES:Qty S=\"z\" P=\"ces\" ].",
     "18": "Consigue [Digit:9digits ] monedas.",
     "19": "Completa ubicaciones en modo\nmultijugador [Digit:6digits ] ve[ES:Qty S=\"z\" P=\"ces\" ].",
     "20": "Evoluciona Pokémon [Digit:6digits ] ve[ES:Qty S=\"z\" P=\"ces\" ].",
@@ -236,5 +236,15 @@
     "override_detail_5070_1_04": "¿A ti qué te va más: la montaña o la\nplaya? No tengo muy claro qué lugar\ntiene más potencial para ayudarme\ncon mi entrenamiento: si el Monte\nPlateado de Johto o las extensas\nplayas de Hoenn.\n¡Ojalá pudiera enfrentarme a gente\nde ambas regiones para preguntarles!\n\nNota: Completa \"VS. Mencía (4) con\nun equipo que incluya al menos a\nuna pareja de compis de Johto y otra\nde Hoenn.",
     "override_detail_5070_1_05": "En Paldea, para poder enfrentarte a\nla súper, primero tienes que derrotar\na todos los Líderes de Gimnasio y al\nAlto Mando. ¡Me pregunto cómo de\nfuertes son los Líderes de Gimnasio y\nlos miembros del Alto Mando que hay\nen Passio!\n\nNota: Completa \"VS. Mencía (5)\" con\nun equipo que incluya al menos a un\nLíder de Gimnasio y a un miembro del\nAlto Mando.",
     "override_detail_5070_1_06": "Me pregunto cuánta gente habrá\nencontrado su tesoro aquí en Passio.\nYa sabes, un rival, igual que yo.\n\nLo mismo me paso de ambiciosa,\npero... ¡quiero combatir contra otros\nCampeones!\n\nNota: Completa \"VS. Mencía (6)\" con\nun equipo que incluya al menos a un\nCampeón y un rival.",
-    "override_detail_5070_1_07": "Me recuerdas mucho a alguien de\nPaldea, mi rival. Nada más conseguir\nsu primer Pokémon, empezó a mejorar\npero rapidísimo... ¡¿Cómo dices?!\n¡¿Que conoces a más gente así?!\n¡Pues me los tienes que presentar!\n\nNota: Completa \"VS. Mencía (7) con\nun equipo que incluya al menos a un\nprotagonista."
+    "override_detail_5070_1_07": "Me recuerdas mucho a alguien de\nPaldea, mi rival. Nada más conseguir\nsu primer Pokémon, empezó a mejorar\npero rapidísimo... ¡¿Cómo dices?!\n¡¿Que conoces a más gente así?!\n¡Pues me los tienes que presentar!\n\nNota: Completa \"VS. Mencía (7) con\nun equipo que incluya al menos a un\nprotagonista.",
+    "175": "Completa cualquiera de las siguientes ubicaciones [Digit:6digits ] [ES:Qty S=\"vez\" P=\"veces\" ]:",
+    "175_element": "• [Name:QuestGroupTitle ] en modo [Name:QuestPlayType ]",
+    "override_detail_5080_1_01": "Completa los combates diarios por\nregiones una vez.",
+    "override_detail_5080_1_02": "Completa cualquiera de los siguientes\ncombates especiales de Passio:\n• VS. Koga\n• VS. Nívea\n• VS. Aza\n• VS. Lario",
+    "override_detail_5080_1_03": "Completa la ubicación \"¡Hora del\ndespegue!\" (Normal) del capítulo 5\nde la trama del WPM de la historia\nprincipal una vez.",
+    "override_detail_5080_1_04": "Completa la ubicación \"Motivaciones\npara luchar\" (Normal) del capítulo 10\nde la trama del WPM de la historia\nprincipal una vez.",
+    "override_detail_5080_1_05": "Completa la ubicación \"La petición\ndel Profesor Oak\" del evento\n\"Neocampeones: Triunvirato\nlegendario\" una vez.",
+    "override_detail_5080_1_06": "Completa la ubicación \"¡A disfrutar\ndel combate!\" del evento\n\"Neocampeones: Triunvirato\nlegendario\" una vez.",
+    "override_detail_5080_1_07": "Completa la ubicación \"VS. Giovanni\"\n(Difícil) del capítulo final de la trama\nequipo villano de la historia principal\nuna vez.",
+    "override_detail_5080_1_08": "Completa los combates diarios por\nregiones tres veces."
 }

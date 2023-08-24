@@ -4,5 +4,6 @@
     "3": "編制[Digit:2digits ]對以上為下列體系的拍組\n・[Name:Role ]",
     "4": "編制[Digit:2digits Idx=\"2\" ]對以上初始★數為★[Digit:2digits Idx=\"1\" ]的拍組",
     "5": "使下列場地效果生效\n・[Name:FieldEffectType ]",
-    "6": "分別編制[Digit:2digits ]對以上擁有下列標籤的拍組\n・[Name:TeamSkillTag Idx=\"1\" ]\n・[Name:TeamSkillTag Idx=\"2\" ]"
+    "6": "分別編制[Digit:2digits ]對以上擁有下列標籤的拍組\n・[Name:TeamSkillTag Idx=\"1\" ]\n・[Name:TeamSkillTag Idx=\"2\" ]",
+    "7": "任意編制[Digit:2digits ]對以上擁有下列標籤的拍組\n・[Name:TeamSkillTag Idx=\"1\" ]\n・[Name:TeamSkillTag Idx=\"2\" ]"
 }

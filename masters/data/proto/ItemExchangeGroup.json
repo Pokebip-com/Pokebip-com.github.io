@@ -269,5 +269,10 @@
 { "itemExchangeGroupId": 2507060, "u2": 1, "scheduleId": "5070_4W_Event_sakaki_get_Exchange", "bannerId": 1407503, "u5": 0 },
 { "itemExchangeGroupId": 2507070, "u2": 1, "scheduleId": "5070_4W_Event_kasumi_get_Exchange", "bannerId": 1308005, "u5": 0 },
 { "itemExchangeGroupId": 2507080, "u2": 1, "scheduleId": "5070_4W_Event_green_get_Exchange", "bannerId": 5401007, "u5": 0 },
-{ "itemExchangeGroupId": 2507090, "u2": 1, "scheduleId": "5070_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 }
+{ "itemExchangeGroupId": 2507090, "u2": 1, "scheduleId": "5070_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 },
+{ "itemExchangeGroupId": 2508010, "u2": 1, "scheduleId": "5080_1W_Event_Anniversary_Exchange", "bannerId": 1508001, "u5": 0 },
+{ "itemExchangeGroupId": 2508020, "u2": 1, "scheduleId": "5080_2W_Event_Spcos_Exchange", "bannerId": 1508014, "u5": 0 },
+{ "itemExchangeGroupId": 2508030, "u2": 1, "scheduleId": "5080_2W_Event_kurokei_Exchange", "bannerId": 1508008, "u5": 0 },
+{ "itemExchangeGroupId": 2508040, "u2": 1, "scheduleId": "5080_3W_Event_Equipment_Exchange", "bannerId": 1508010, "u5": 0 },
+{ "itemExchangeGroupId": 2508050, "u2": 1, "scheduleId": "5080_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 }
 ]}

@@ -4,5 +4,6 @@
     "3": "Formez une équipe avec [Digit:2digits Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"Duo\" P=\"Duos\" ] ou plus\navec le rôle suivant :\n• [Name:Role ]",
     "4": "Formez une équipe avec [Digit:2digits Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"Duo\" P=\"Duos\" ] ou plus\navec un potentiel initial de [Digit:2digits Idx=\"1\" ]★.",
     "5": "Activez l'effet sur le terrain suivant :\n• [Name:FieldEffectType ]",
-    "6": "Formez une équipe avec [Digit:2digits Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"Duo\" P=\"Duos\" ] ou plus qui ont\ntous les mot-clés suivants en commun :\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]"
+    "6": "Formez une équipe avec [Digit:2digits Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"Duo\" P=\"Duos\" ] ou plus qui ont\ntous les mot-clés suivants en commun :\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]",
+    "7": "Formez une équipe avec [Digit:2digits ] [FR:Qty S=\"Duo\" P=\"Duos\" ] ou plus qui ont\ntous les mots-clés suivants en commun :\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]"
 }

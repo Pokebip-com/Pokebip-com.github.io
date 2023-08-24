@@ -4,5 +4,6 @@
     "3": "以下のロールのバディーズを[Digit:2digits ]組以上編成する\n・[Name:Role ]",
     "4": "元の★の数が★[Digit:2digits Idx=\"1\" ]のバディーズを\n[Digit:2digits Idx=\"2\" ]組以上編成する",
     "5": "以下の場の効果を発生させる\n・[Name:FieldEffectType ]",
-    "6": "以下のタグを持つバディーズをそれぞれ[Digit:2digits ]組以上編成する\n・[Name:TeamSkillTag Idx=\"1\" ]\n・[Name:TeamSkillTag Idx=\"2\" ]"
+    "6": "以下のタグを持つバディーズをそれぞれ[Digit:2digits ]組以上編成する\n・[Name:TeamSkillTag Idx=\"1\" ]\n・[Name:TeamSkillTag Idx=\"2\" ]",
+    "7": "以下のタグを持つバディーズのいずれかを[Digit:2digits ]組以上編成する\n・[Name:TeamSkillTag Idx=\"1\" ]\n・[Name:TeamSkillTag Idx=\"2\" ]"
 }

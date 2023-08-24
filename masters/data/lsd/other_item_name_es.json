@@ -37,5 +37,11 @@
     "13401": "Número de conversaciones",
     "80000000101": "Pase Extra de Puntos de Combate",
     "580000000004": "Moneda Movicaramelo Velocidad",
-    "580000000005": "Moneda Movicaramelo Entorno"
+    "580000000005": "Moneda Movicaramelo Entorno",
+    "600000000001": "Moneda Bizcocho Función Ataque",
+    "600000000002": "Moneda Bizcocho Función Sabotaje",
+    "600000000003": "Moneda Bizcocho Función Apoyo",
+    "600000000004": "Moneda Bizcocho Función Velocidad",
+    "600000000005": "Moneda Bizcocho Función Entorno",
+    "450000000063": "Billete Diario"
 }

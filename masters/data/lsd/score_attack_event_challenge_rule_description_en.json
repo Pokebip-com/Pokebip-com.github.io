@@ -4,5 +4,6 @@
     "3": "Form a team with [Digit:2digits ] or more sync pairs with the\nfollowing role:\n• [Name:Role ]",
     "4": "Form a team with [Digit:2digits Idx=\"2\" ] or more sync pairs with an\ninitial potential of [Digit:2digits Idx=\"1\" ]★.",
     "5": "Activate the following field effect:\n• [Name:FieldEffectType ]",
-    "6": "Form a team with [Digit:2digits ] or more sync pairs with\neach of the following themes:\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]"
+    "6": "Form a team with [Digit:2digits ] or more sync pairs with\neach of the following themes:\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]",
+    "7": "Form a team with [Digit:2digits ] or more sync pairs with\neither of the following themes:\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]"
 }

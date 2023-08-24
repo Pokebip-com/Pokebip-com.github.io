@@ -11,7 +11,7 @@
     "12": "Erhalte [Digit:6digits ] Mal Items durch\nItem-Tausch!",
     "15": "Schließe mit diesem Team [Digit:6digits ]  Mal „[Name:QuestTitle ]“ ab:",
     "16": "Schließe mit einem Team dieses Typs [Digit:6digits ] Mal „[Name:QuestTitle ]“ ab:",
-    "17": "Erhöhe [Digit:6digits ] Mal den Level von Gefährten!",
+    "17": "Erhöhe [Digit:6digits ] Mal den Level von\nGefährten durch den Einsatz von\nItems!",
     "18": "Erhalte [Digit:9digits ] Münzen!",
     "19": "Schließe [Digit:6digits ] Mal ein Abenteuer\nim Multimodus ab!",
     "20": "Entwickle [Digit:6digits ] Mal ein Pokémon!",
@@ -236,5 +236,15 @@
     "override_detail_5070_1_04": "Trainierst du lieber in den Bergen\noder am Strand? Ich frage mich,\nwelche Kulisse sich wohl besser für\nmein Training eignen würde:\nDer Silberberg in Johto oder die\nweitläufigen Strände Hoenns? Am\nliebsten will ich mich mit Trainern von\ndort messen, um es herauszufinden!\n\nHinweis: Schließe „Vs. Nemila 4“ mit\neinem Team ab, in dem mindestens\nein Gefährtengespann mit dem\nAttribut „Johto“ und ein weiteres mit\ndem Attribut „Hoenn“ vertreten ist.",
     "override_detail_5070_1_05": "In Paldea kannst du nicht gegen den\nTop-Champ antreten, ohne vorher die\nacht Arenaleiter sowie die Top Vier\nbesiegt zu haben. Ich frage mich, wie\nstark wohl die Arenaleiter und\nTop Vier anderer Regionen sind!\n\nHinweis: Schließe „Vs. Nemila 5“ mit\neinem Team ab, in dem mindestens\nein Gefährtengespann mit dem\nAttribut „Arenaleiter“ und ein weiteres\nmit dem Attribut „Top Vier“ vertreten\nist.",
     "override_detail_5070_1_06": "Ich frage mich, wie viele Leute auf\nPassio ihren Schatz gefunden haben,\nso wie ich. Einen gleichwertigen\nRivalen...\n\nDarf ich einen ambitionierten Wunsch\näußern? Ich will gegen andere\nChamps antreten!\n\nHinweis: Schließe „Vs. Nemila 6“ mit\neinem Team ab, in dem mindestens\nein Gefährtengespann mit dem\nAttribut „Rivale“ und ein weiteres mit\ndem Attribut „Champ“ vertreten ist.",
-    "override_detail_5070_1_07": "Du erinnerst mich an eine Person, die\nich in Paldea getroffen habe. Das\nTalent war selbst direkt nach dem\nErhalt des ersten Pokémon\nunverkennbar... Wie bitte?! Du kennst\nnoch weitere Trainer mit so viel\nPotenzial?! Sag mir, wer es ist!\n\nHinweis: Schließe „Vs. Nemila 7“ mit\neinem Team ab, in dem mindestens\nein Gefährtengespann mit dem\nAttribut „Protagonist“ vertreten ist."
+    "override_detail_5070_1_07": "Du erinnerst mich an eine Person, die\nich in Paldea getroffen habe. Das\nTalent war selbst direkt nach dem\nErhalt des ersten Pokémon\nunverkennbar... Wie bitte?! Du kennst\nnoch weitere Trainer mit so viel\nPotenzial?! Sag mir, wer es ist!\n\nHinweis: Schließe „Vs. Nemila 7“ mit\neinem Team ab, in dem mindestens\nein Gefährtengespann mit dem\nAttribut „Protagonist“ vertreten ist.",
+    "175": "Schließe eines der folgenden Gebiete\n[Digit:6digits ] Mal ab:",
+    "175_element": "• [Name:QuestGroupTitle ]\nim [Name:QuestPlayType ]",
+    "override_detail_5080_1_01": "Schließe die tägliche Regionskämpfe\neinmal ab.",
+    "override_detail_5080_1_02": "Schließe einen der folgenden Passio\nSpezialkämpfe ab:\n• Vs. Koga\n• Vs. Frosina\n• Vs. Astor\n• Vs. Marlon",
+    "override_detail_5080_1_03": "Schließe „Abflug!“ in Kapitel 5 des\nWPM-Handlungsbogens der\nHauptgeschichte einmal auf dem\nSchwierigkeitsgrad Normal ab.",
+    "override_detail_5080_1_04": "Schließe „Ein Grund zu kämpfen“ in\nKapitel 10 des WPM-Handlungsbogens\nder Hauptgeschichte einmal auf dem\nSchwierigkeitsgrad Normal ab.",
+    "override_detail_5080_1_05": "Schließe „Professor Eichs Bitte“ in\n„Neo-Champs: Drei Trainer, drei\nStrategien“ einmal ab.",
+    "override_detail_5080_1_06": "Schließe „Auf einen spaßigen Kampf!“\nin „Neo-Champs: Drei Trainer, drei\nStrategien“ einmal ab.",
+    "override_detail_5080_1_07": "Schließe „Vs. Giovanni“ im finalen\nKapitel des Schurken-Events der\nHauptgeschichte einmal auf dem\nSchwierigkeitsgrad Schwer ab.",
+    "override_detail_5080_1_08": "Schließe die täglichen Regionskämpfe \ndreimal ab."
 }

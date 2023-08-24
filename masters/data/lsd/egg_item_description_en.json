@@ -20,6 +20,7 @@
     "27": "Growlithe Egg",
     "28": "Onix Egg",
     "29": "Pinsir Egg",
+    "30": "Lickitung Egg",
     "31": "Electric- or Steel-type Pokémon Egg",
     "32": "Pichu Egg",
     "33": "Elekid Egg",
@@ -84,5 +85,9 @@
     "97": "Pidgey Egg",
     "98": "Fire- or Psychic-type Pokémon Egg",
     "99": "Ponyta Egg",
-    "100": "Slowpoke Egg"
+    "100": "Slowpoke Egg",
+    "101": "Fuecoco Egg",
+    "102": "Sprigatito Egg",
+    "103": "Quaxly Egg",
+    "104": "Fuecoco, Sprigatito, or Quaxly Egg"
 }

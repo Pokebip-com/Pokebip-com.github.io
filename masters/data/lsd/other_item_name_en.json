@@ -37,5 +37,11 @@
     "13401": "Interaction Count",
     "80000000101": "Battle Point Boost Pass",
     "580000000004": "Sprint Move Candy Coin",
-    "580000000005": "Field Move Candy Coin"
+    "580000000005": "Field Move Candy Coin",
+    "600000000001": "Strike Roll Cake Coin",
+    "600000000002": "Tech Roll Cake Coin",
+    "600000000003": "Support Roll Cake Coin",
+    "600000000004": "Sprint Roll Cake Coin",
+    "600000000005": "Field Roll Cake Coin",
+    "450000000063": "Daily Ticket"
 }

@@ -3,6 +3,7 @@ let eventQuestGroup;
 let schedule;
 let scout;
 let scoutPickup;
+let specialChampionBattle;
 let storyQuest;
 
 let versions;
@@ -23,6 +24,8 @@ let treatedEvents;
 
 let scheduleDiv;
 let versionSelect;
+
+const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
 
 async function getData() {
     const [
@@ -108,12 +111,15 @@ async function getData() {
 
 async function getCustomJSON() {
     const [
+        specialChampionBattleResponse,
         versionsResponse
     ] = await Promise.all([
+        fetch("./data/custom/special_champion_battle.json"),
         fetch("./data/custom/version_release_dates.json")
     ])
         .catch(error => console.log(error));
 
+    specialChampionBattle = await specialChampionBattleResponse.json();
     versions = await versionsResponse.json().then(orderByVersion);
 }
 
@@ -225,17 +231,37 @@ function printScouts(schedule) {
 
         let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
 
+
         if(sPickups.length > 0) {
             scheduleDiv.innerHTML += `<h4>Duos à l'affiche</h4>\n<ul style='list-style-type: disc;'>\n`;
 
 
             sPickups.forEach(sp => {
-                scheduleDiv.innerHTML += `<li>${getTrainerName(sp.trainerId)} & ${getMonsterNameByTrainerId(sp.trainerId)}</li>\n`;
+                var rarity = trainerInfos[sp.trainerId][0].rarity;
+                scheduleDiv.innerHTML += `<li><span style="color: ${starsHex[rarity-1]}; -webkit-text-stroke-color: black; -webkit-text-stroke-width: 1px;">${"★".repeat(rarity)}</span> ${getTrainerName(sp.trainerId)} & ${getMonsterNameByTrainerId(sp.trainerId)}</li>\n`;
             });
 
             scheduleDiv.innerHTML += "</ul>\n";
         }
     });
+}
+
+function printEventBanner(eventBanner, eventSchedule) {
+    let h3 = `<h3>${bannerText[eventBanner.text1Id]}`;
+
+    if(eventBanner.text2Id > -1) {
+        h3 += ` ${bannerText[eventBanner.text2Id]}`;
+    }
+
+    h3 += "</h3>";
+
+    scheduleDiv.innerHTML += h3;
+
+    if(eventBanner.bannerIdString !== "") {
+        scheduleDiv.innerHTML += `<img src="./data/banner/event/${eventBanner.bannerIdString}.png" />\n`;
+    }
+
+    printEndDate(eventSchedule.endDate);
 }
 
 function printEvents(schedule) {
@@ -252,28 +278,22 @@ function printEvents(schedule) {
         else
             treatedEvents.push(qg);
 
+        if(schedule.scheduleId.endsWith("_Event_ChampionBattle")) {
+            console.log(scheduleQuests);
+            console.log("YES !!!!");
+            if(schedule.scheduleId in specialChampionBattle) {
+                printEventBanner(specialChampionBattle[schedule.scheduleId].Banner, schedule);
+            }
+
+            return;
+        }
+
         eventQuestGroup.filter(eventQG => eventQG.questGroupId === qg)
             .forEach(eventQG => {
 
                 let eventBanners = banner.filter(b => b.bannerId === eventQG.bannerId);
 
-                eventBanners.forEach(eb => {
-                    let h3 = `<h3>${bannerText[eb.text1Id]}`;
-
-                    if(eb.text2Id > -1) {
-                        h3 += ` ${bannerText[eb.text2Id]}`;
-                    }
-
-                    h3 += "</h3>";
-
-                    scheduleDiv.innerHTML += h3;
-
-                    if(eb.bannerIdString !== "") {
-                        scheduleDiv.innerHTML += `<img src="./data/banner/event/${eb.bannerIdString}.png" />\n`;
-                    }
-                });
-
-                printEndDate(schedule.endDate);
+                eventBanners.forEach(eb => printEventBanner(eb, schedule));
             });
     });
 }

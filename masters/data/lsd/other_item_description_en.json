@@ -24,5 +24,10 @@
     "13401": "Restores interactions.",
     "811": "Temporarily increases the battle points that\ncan be acquired from region rotation\nbattle events.",
     "5804": "Can be exchanged for\n5★ Sprint Move Candy.",
-    "5805": "Can be exchanged for\n5★ Field Move Candy."
+    "5805": "Can be exchanged for\n5★ Field Move Candy.",
+    "6001": "Can be exchanged for Strike Roll Cake.",
+    "6002": "Can be exchanged for Tech Roll Cake.",
+    "6003": "Can be exchanged for Support Roll Cake.",
+    "6004": "Can be exchanged for Sprint Roll Cake.",
+    "6005": "Can be exchanged for Field Roll Cake."
 }

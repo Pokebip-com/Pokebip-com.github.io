@@ -11,7 +11,7 @@
     "12": "Obtain items through exchange ×[Digit:6digits ]",
     "15": "Complete: [Name:QuestTitle ] ×[Digit:6digits ]\nwith the lineup below:",
     "16": "Complete: [Name:QuestTitle ] ×[Digit:6digits ] with\na team of the specified type(s):",
-    "17": "Level up a sync pair ×[Digit:6digits ]",
+    "17": "Level up a sync pair using items ×[Digit:6digits ]",
     "18": "Obtain coins ×[Digit:9digits ]",
     "19": "Complete a co-op battle ×[Digit:6digits ]",
     "20": "Evolve a Pokémon ×[Digit:6digits ]",
@@ -236,5 +236,15 @@
     "override_detail_5070_1_04": "Would you prefer to train on a\nmountain or at the beach? And which\nwould be a better place to train at if\nI’m looking to get stronger—Mt. Silver\nin Johto or the wide beaches in\nHoenn? I wanna battle people from\nthose regions to find out!\n\n(Complete Challenge Nemona: Part 4\nwith a team including at least one\nsync pair each with the Johto and\nHoenn themes.)",
     "override_detail_5070_1_05": "In Paldea, you can’t battle La Primera\nwithout beating the eight Gym\nLeaders and the Elite Four. I wonder\nhow strong other regions’ Gym\nLeaders and Elite Four members that\nI'll meet on Pasio are!\n\n(Complete Challenge Nemona: Part 5\nwith a team including at least one\nsync pair each with the Gym Leader\nand Elite Four themes.)",
     "override_detail_5070_1_06": "I wonder how many people on Pasio\nhave found the same treasure as\nme, a rival.\n\nAlso, can I be a little greedy?\nI wanna battle other Champions!\n\n(Complete Challenge Nemona: Part 6\nwith a team including at least one\nsync pair each with the Rival and\nChampion themes.)",
-    "override_detail_5070_1_07": "You remind me of my rival, who I met\nin Paldea. They got strong so quickly\nafter getting their first Pokémon...\nWhat? You know other people like\nthat?! Tell me who!\n\n(Complete Challenge Nemona: Part 7\nwith a team including at least one\nsync pair with the Main\nCharacter theme.)"
+    "override_detail_5070_1_07": "You remind me of my rival, who I met\nin Paldea. They got strong so quickly\nafter getting their first Pokémon...\nWhat? You know other people like\nthat?! Tell me who!\n\n(Complete Challenge Nemona: Part 7\nwith a team including at least one\nsync pair with the Main\nCharacter theme.)",
+    "175": "Complete any of the following a total\nof [Digit:6digits ] [EN:Qty S=\"time\" P=\"times\" ]:",
+    "175_element": "[Name:QuestGroupTitle ]: [Name:QuestPlayType ]",
+    "override_detail_5080_1_01": "Complete Daily Region Rotation\none time",
+    "override_detail_5080_1_02": "Complete any of the following in the\nPasio Special Stadium:\n• Koga\n• Glacia\n• Grimsley\n• Molayne",
+    "override_detail_5080_1_03": "Complete Chapter 5: Prepare for\nTakeoff! in the PML arc of the\nmain story on Normal ×1",
+    "override_detail_5080_1_04": "Complete Chapter 10: A Reason to\nBattle in the PML arc of the main\nstory on Normal ×1",
+    "override_detail_5080_1_05": "Complete “Professor Oak’s Request”\nin “Neo Champions: Three Trainers,\nThree Minds” ×1",
+    "override_detail_5080_1_06": "Complete “A Fun Battle!” in “Neo\nChampions: Three Trainers,\nThree Minds” ×1",
+    "override_detail_5080_1_07": "Complete “Challenge Giovanni” in the\nfinal chapter of the main story’s\nvillain arc on Hard ×1",
+    "override_detail_5080_1_08": "Complete the Daily Region Rotation ×3"
 }

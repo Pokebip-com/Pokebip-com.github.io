@@ -20,6 +20,7 @@
     "27": "Œuf de Caninos",
     "28": "Œuf d'Onix",
     "29": "Œuf de Scarabrute",
+    "30": "Œuf d'Excelangue",
     "31": "Œuf de Pokémon (Électrik, Acier)",
     "32": "Œuf de Pichu",
     "33": "Œuf d'Élekid",
@@ -84,5 +85,9 @@
     "97": "Œuf de Roucool",
     "98": "Œuf de Pokémon (Feu, Psy)",
     "99": "Œuf de Ponyta",
-    "100": "Œuf de Ramoloss"
+    "100": "Œuf de Ramoloss",
+    "101": "Œuf de Chochodile",
+    "102": "Œuf de Poussacha",
+    "103": "Œuf de Coiffeton",
+    "104": "Œuf de Pokémon (Chochodile, Poussacha, Coiffeton)"
 }

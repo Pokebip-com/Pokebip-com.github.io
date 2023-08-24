@@ -1,6 +1,6 @@
 {
     "890000000001": "5★-Garantie-G-Sucheticket",
-    "890000000003": "G-Suchetickets x10",
+    "890000000003": "G-Sucheticket × 10",
     "890000000004": "5★-Ticket (Kanto)",
     "890000000005": "5★-Ticket (Johto)",
     "890000000006": "5★-Ticket (Hoenn)",
@@ -10,12 +10,14 @@
     "890000000010": "5★-Ticket (Alola)",
     "890000000011": "5★-Ticket (Galar)",
     "890000000012": "Neujahrs-Ticket",
-    "890000000013": "G-Suchetickets x10",
+    "890000000013": "G-Sucheticket × 10",
     "890000000014": "5★-Wahl-Ticket (1 Mal)",
     "890000000015": "10 + 5★-Wahl-Ticket",
-    "890000000016": "G-Suchetickets × 10",
+    "890000000016": "G-Sucheticket × 10",
     "890000000017": "Neujahrs-Ticket",
-    "890000000018": "G-Suchetickets × 10",
+    "890000000018": "G-Sucheticket × 10",
     "890000000019": "5★-Champ-Wahl-Ticket",
-    "890000000020": "G-Sucheticket × 10"
+    "890000000020": "G-Sucheticket × 10",
+    "890000000021": "Rocket-Vorstand-Ticket",
+    "890000000022": "Festival-5★-Wahl-Ticket"
 }

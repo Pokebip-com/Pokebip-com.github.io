@@ -10,7 +10,7 @@
     "11": "Mejora accesorios.",
     "12": "Canjea objetos.",
     "15": "Completa la ubicación indicada\ncon el equipo indicado.",
-    "17": "Fortalece a tus compis.",
+    "17": "Aumenta el nivel de tus compis.",
     "18": "Consigue monedas.",
     "19": "Completa ubicaciones en modo\nmultijugador.",
     "20": "Evoluciona Pokémon.",
@@ -156,5 +156,10 @@
     "override_title_5070_1_04": "¡Quiero combatir contra todo tipo\nde Entrenadores! (4)",
     "override_title_5070_1_05": "¡Quiero combatir contra todo tipo\nde Entrenadores! (5)",
     "override_title_5070_1_06": "¡Quiero combatir contra todo tipo\nde Entrenadores! (6)",
-    "override_title_5070_1_07": "¡Me recuerdas a alguien!"
+    "override_title_5070_1_07": "¡Me recuerdas a alguien!",
+    "175": "Completa cualquiera de las\nubicaciones indicadas.",
+    "override_title_5080_1_01": "Completa cualquiera de las áreas\nde entrenamiento.",
+    "override_title_5080_1_02": "Completa el área de Orbes\nCompi.",
+    "override_title_5080_1_03": "Completa los combates diarios por\nregiones.",
+    "override_title_5080_1_04": "Completa cualquiera de los\ncombates especiales de Passio."
 }

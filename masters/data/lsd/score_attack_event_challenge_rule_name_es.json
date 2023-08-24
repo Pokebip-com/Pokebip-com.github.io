@@ -4,5 +4,6 @@
     "3": "Al menos [Digit:2digits Idx=\"1\" ] pareja[ES:Qty Ref=\"1\" P=\"s\" ] de\ncompis de [Name:Role ]",
     "4": "Al menos [Digit:2digits Idx=\"2\" ] pareja[ES:Qty Ref=\"2\" P=\"s\" ]\nde compis [Digit:2digits Idx=\"1\" ]★",
     "5": "[Name:FieldEffectType ]",
-    "6": "[Name:TeamSkillTag Idx=\"1\" ] y\n[Name:TeamSkillTag Idx=\"2\" ]"
+    "6": "[Name:TeamSkillTag Idx=\"1\" ] y\n[Name:TeamSkillTag Idx=\"2\" ]",
+    "7": "[Name:TeamSkillTag Idx=\"1\" ] o\n[Name:TeamSkillTag Idx=\"2\" ]"
 }

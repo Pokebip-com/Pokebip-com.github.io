@@ -4,5 +4,6 @@
     "3": "[Digit:2digits Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"Duo\" P=\"Duos\" ] [Name:Role ][FR:Qty Ref=\"1\" P=\"s\" ]\nou plus",
     "4": "[Digit:2digits Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"Duo\" P=\"Duos\" ] [Digit:2digits Idx=\"1\" ]★ ou plus",
     "5": "[Name:FieldEffectType ]",
-    "6": "[Name:TeamSkillTag Idx=\"1\" ]\net [Name:TeamSkillTag Idx=\"2\" ]"
+    "6": "[Name:TeamSkillTag Idx=\"1\" ]\net [Name:TeamSkillTag Idx=\"2\" ]",
+    "7": "[Name:TeamSkillTag Idx=\"1\" ]\nou [Name:TeamSkillTag Idx=\"2\" ]"
 }

@@ -20,6 +20,7 @@
     "27": "Huevo de Growlithe.",
     "28": "Huevo de Onix.",
     "29": "Huevo de Pinsir.",
+    "30": "Huevo de Lickitung.",
     "31": "Huevo Pokémon (Eléctrico o Acero).",
     "32": "Huevo de Pichu.",
     "33": "Huevo de Elekid.",
@@ -84,5 +85,9 @@
     "97": "Huevo de Pidgey.",
     "98": "Huevo Pokémon (Fuego o Psíquico).",
     "99": "Huevo de Ponyta.",
-    "100": "Huevo de Slowpoke."
+    "100": "Huevo de Slowpoke.",
+    "101": "Huevo de Fuecoco.",
+    "102": "Huevo de Sprigatito.",
+    "103": "Huevo de Quaxly.",
+    "104": "Huevo de Fuecoco, Sprigatito o Quaxly."
 }

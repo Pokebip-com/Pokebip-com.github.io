@@ -1,6 +1,10 @@
 {
   "versions": [
     {
+      "version": "2.36.0",
+      "releaseTimestamp": 1692856800
+    },
+    {
       "version": "2.35.0",
       "releaseTimestamp": 1690437600
     },

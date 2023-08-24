@@ -4,5 +4,6 @@
     "3": "[Name:Role ]\n[Digit:2digits ]組以上",
     "4": "★[Digit:2digits Idx=\"1\" ]バディーズ\n[Digit:2digits Idx=\"2\" ]組以上",
     "5": "[Name:FieldEffectType ]",
-    "6": "[Name:TeamSkillTag Idx=\"1\" ]と\n[Name:TeamSkillTag Idx=\"2\" ]"
+    "6": "[Name:TeamSkillTag Idx=\"1\" ]と\n[Name:TeamSkillTag Idx=\"2\" ]",
+    "7": "[Name:TeamSkillTag Idx=\"1\" ]か\n[Name:TeamSkillTag Idx=\"2\" ]"
 }
