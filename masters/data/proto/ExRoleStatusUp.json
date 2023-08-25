@@ -1,0 +1,8 @@
+{"entries": [
+{ "roleId": 0, "hp": 60, "atk": 40, "spa": 40, "def": 0, "spd": 0, "spe": 0 },
+{ "roleId": 1, "hp": 60, "atk": 40, "spa": 40, "def": 0, "spd": 0, "spe": 0 },
+{ "roleId": 2, "hp": 60, "atk": 0, "spa": 0, "def": 40, "spd": 40, "spe": 0 },
+{ "roleId": 3, "hp": 60, "atk": 20, "spa": 20, "def": 20, "spd": 20, "spe": 0 },
+{ "roleId": 4, "hp": 60, "atk": 20, "spa": 20, "def": 0, "spd": 0, "spe": 40 },
+{ "roleId": 5, "hp": 60, "atk": 0, "spa": 0, "def": 20, "spd": 20, "spe": 40 }
+]}

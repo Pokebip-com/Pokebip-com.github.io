@@ -1,0 +1,14 @@
+{"entries": [
+{ "trainerId": "10000900000", "role": 3, "scheduleId": "chara_5080_0828_FOREVER", "u4": "" },
+{ "trainerId": "10017900000", "role": 2, "scheduleId": "chara_5080_0830_FOREVER", "u4": "" },
+{ "trainerId": "10021900001", "role": 1, "scheduleId": "chara_5080_0901_FOREVER", "u4": "" },
+{ "trainerId": "10064010000", "role": 2, "scheduleId": "chara_5080_0904_FOREVER", "u4": "" },
+{ "trainerId": "10130100000", "role": 2, "scheduleId": "chara_5080_0925_FOREVER", "u4": "" },
+{ "trainerId": "10134000000", "role": 3, "scheduleId": "chara_5080_0916_FOREVER", "u4": "" },
+{ "trainerId": "10140000001", "role": 0, "scheduleId": "chara_5080_0906_FOREVER", "u4": "" },
+{ "trainerId": "10141000000", "role": 3, "scheduleId": "chara_5080_0906_FOREVER", "u4": "" },
+{ "trainerId": "10142000000", "role": 0, "scheduleId": "chara_5080_0906_FOREVER", "u4": "" },
+{ "trainerId": "10143000000", "role": 2, "scheduleId": "chara_5080_0906_FOREVER", "u4": "" },
+{ "trainerId": "10144000000", "role": 3, "scheduleId": "chara_5080_0906_FOREVER", "u4": "" },
+{ "trainerId": "10203000000", "role": 3, "scheduleId": "chara_5080_0918_FOREVER", "u4": "" }
+]}

@@ -3,7 +3,6 @@ let eventQuestGroup;
 let schedule;
 let scout;
 let scoutPickup;
-let specialChampionBattle;
 let storyQuest;
 
 let versions;
@@ -27,10 +26,17 @@ let versionSelect;
 
 const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
 
+// Textes des bannières du Combat de Maître Spécial
+const CBEText1Id = 17503026;
+const CBEText2Id = 27503027;
+
 async function getData() {
     const [
         bannerResponse,
+        championBattleEventResponse,
+        championBattleEventQuestGroupResponse,
         eventQuestGroupResponse,
+        itemSetResponse,
         monsterResponse,
         monsterBaseResponse,
         scheduleResponse,
@@ -44,10 +50,14 @@ async function getData() {
         eventNameResponse,
         monsterNameResponse,
         scoutPickupDescrResponse,
-        trainerNameResponse
+        trainerNameResponse,
+
     ] = await Promise.all([
         fetch("./data/proto/Banner.json"),
+        fetch("./data/proto/ChampionBattleEvent.json"),
+        fetch("./data/proto/ChampionBattleEventQuestGroup.json"),
         fetch("./data/proto/EventQuestGroup.json"),
+        fetch("./data/proto/ItemSet.json"),
         fetch("./data/proto/Monster.json"),
         fetch("./data/proto/MonsterBase.json"),
         fetch("./data/proto/Schedule.json"),
@@ -74,6 +84,24 @@ async function getData() {
     let villaQuestGroup = await villaQuestGroupResponse.json();
     villaQuestGroup.entries.map(vqg => vqg.bannerId = 1202001);
     eventQuestGroup.push(...villaQuestGroup.entries);
+
+    let champBattleEvent = await championBattleEventResponse.json();
+    let champBattleEventQuestGroup = await championBattleEventQuestGroupResponse.json();
+
+    champBattleEventQuestGroup.entries.map(cbeqg => {
+        cbeqg.bannerId = champBattleEvent.entries.find(cbe => cbe.championBattleEventId === cbeqg.championBattleEventId).bannerId;
+
+        banner.map(ban => {
+            if(ban.bannerId === cbeqg.bannerId) {
+                if(ban.text1Id == -1)
+                    ban.text1Id = CBEText1Id;
+
+                if(ban.text2Id == -1)
+                    ban.text2Id = CBEText2Id;
+            }
+        });
+    });
+    eventQuestGroup.push(...champBattleEventQuestGroup.entries);
 
     schedule = await scheduleResponse.json();
     schedule = schedule.entries;
@@ -107,19 +135,21 @@ async function getData() {
 
     monsterNames = await monsterNameResponse.json();
     trainerNames = await trainerNameResponse.json();
+
+    const itemSetJSON = await itemSetResponse.json();
+    itemSet = getBySpecificID(itemSetJSON.entries, "itemSetId");
+
+
 }
 
 async function getCustomJSON() {
     const [
-        specialChampionBattleResponse,
         versionsResponse
     ] = await Promise.all([
-        fetch("./data/custom/special_champion_battle.json"),
         fetch("./data/custom/version_release_dates.json")
     ])
         .catch(error => console.log(error));
 
-    specialChampionBattle = await specialChampionBattleResponse.json();
     versions = await versionsResponse.json().then(orderByVersion);
 }
 
@@ -235,10 +265,9 @@ function printScouts(schedule) {
         if(sPickups.length > 0) {
             scheduleDiv.innerHTML += `<h4>Duos à l'affiche</h4>\n<ul style='list-style-type: disc;'>\n`;
 
-
             sPickups.forEach(sp => {
                 var rarity = trainerInfos[sp.trainerId][0].rarity;
-                scheduleDiv.innerHTML += `<li><span style="color: ${starsHex[rarity-1]}; -webkit-text-stroke-color: black; -webkit-text-stroke-width: 1px;">${"★".repeat(rarity)}</span> ${getTrainerName(sp.trainerId)} & ${getMonsterNameByTrainerId(sp.trainerId)}</li>\n`;
+                scheduleDiv.innerHTML += `<li><span style="color: ${starsHex[rarity-1]}; -webkit-text-stroke-color: black; -webkit-text-stroke-width: 0.5px;">${"★".repeat(rarity)}</span> ${getTrainerName(sp.trainerId)} & ${getMonsterNameByTrainerId(sp.trainerId)}</li>\n`;
             });
 
             scheduleDiv.innerHTML += "</ul>\n";
@@ -278,19 +307,8 @@ function printEvents(schedule) {
         else
             treatedEvents.push(qg);
 
-        if(schedule.scheduleId.endsWith("_Event_ChampionBattle")) {
-            console.log(scheduleQuests);
-            console.log("YES !!!!");
-            if(schedule.scheduleId in specialChampionBattle) {
-                printEventBanner(specialChampionBattle[schedule.scheduleId].Banner, schedule);
-            }
-
-            return;
-        }
-
-        eventQuestGroup.filter(eventQG => eventQG.questGroupId === qg)
+        eventQuestGroup.filter(eventQG => eventQG.questGroupId == qg)
             .forEach(eventQG => {
-
                 let eventBanners = banner.filter(b => b.bannerId === eventQG.bannerId);
 
                 eventBanners.forEach(eb => printEventBanner(eb, schedule));
