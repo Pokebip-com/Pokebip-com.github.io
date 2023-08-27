@@ -1,0 +1,45 @@
+<style>
+    div#headerBody {
+        font-size: 28px;
+    }
+
+    div#headerBody ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    div#headerBody li {
+        float: left;
+    }
+
+    div#headerBody li:before {
+        content: '';
+    }
+
+    div#headerBody li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    div#headerBody li a:hover {
+        background-color: #111;
+    }
+
+    div#headerBody .active {
+        background-color: #1f5c9b;
+    }
+</style>
+
+<ul>
+    <li data-page="programme.html"><a href="programme.html">Programme</a></li>
+    <li data-page="ex-role.html"><a href="ex-role.html">Rôles EX</a></li>
+</ul>

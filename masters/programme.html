@@ -4,25 +4,33 @@
         <meta charset="UTF-8" />
 
         <style>
-            li::before {
+            div#contentDiv li:before {
                 content: "› ";
                 font-size: 18px;
                 font-weight: bolder;
             }
         </style>
+
     </head>
     <link rel="stylesheet" href="../css/pokebip.css">
     <script src="./js/dist/FileSaver.min.js"></script>
     <script src="./js/dist/jszip.min.js"></script>
-    <body style="padding:10px;">
-        <select id="versionSelect"></select>
+    <body style="margin-top: 0">
+        <div id="headerBody" include-html="header.html"></div>
+        <div id="contentDiv" style="padding:10px; margin-top:40px">
 
-        <br />
-        <br />
-        <h1>PROGRAMME :</h1>
-        <div id="scheduleDiv" style="max-width: 600px; margin: 0 auto;"></div>
+            <br />
+            <br />
+            <label for="versionSelect"><b>Changer de version :</b></label> <select id="versionSelect"></select>
+
+            <br />
+            <br />
+            <h1>PROGRAMME :</h1>
+            <div id="scheduleDiv" style="max-width: 600px; margin: 0 auto;"></div>
+        </div>
 
         <script src="./js/schedule.js"></script>
+        <script src="./js/include-html.js"></script>
     </body>
 
 </html>

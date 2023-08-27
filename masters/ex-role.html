@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <style>
+      div#contentDiv li::before {
+      content: "› ";
+      font-size: 18px;
+      font-weight: bolder;
+      }
+    </style>
+  </head>
+  <link rel="stylesheet" href="../css/pokebip.css">
+  <body style="margin-top: 0px">
+    <div id="headerBody" include-html="header.html"></div>
+    <div id="contentDiv" style="padding:10px; max-width: 600px; margin: 0 auto; margin-top:60px">
+      <h1>Rôles EX :</h1>
+      <div id="exRoleDiv"></div>
+    </div>
+
+    <script src="./js/ex-role.js"></script>
+    <script src="./js/include-html.js"></script>
+  </body>
+
+</html>

@@ -1,3 +1,4 @@
+let abilityPanel;
 let banner;
 let eventQuestGroup;
 let schedule;
@@ -16,8 +17,11 @@ let monsterInfos;
 let monsterNames;
 
 let trainerBase;
+let trainerExRole;
 let trainerInfos;
+let trainerInfosArray;
 let trainerNames;
+let trainerVerboseNames;
 
 let treatedEvents;
 
@@ -29,9 +33,11 @@ const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
 // Textes des bannières du Combat de Maître Spécial
 const CBEText1Id = 17503026;
 const CBEText2Id = 27503027;
+const role_names = ["Attaquant", "Attaquant", "Tacticien", "Soutien", "Accélérateur", "Régisseur"];
 
 async function getData() {
     const [
+        abilityPanelResponse,
         bannerResponse,
         championBattleEventResponse,
         championBattleEventQuestGroupResponse,
@@ -45,14 +51,16 @@ async function getData() {
         storyQuestResponse,
         trainerResponse,
         trainerBaseResponse,
+        trainerExRoleResponse,
         villaQuestGroupResponse,
         bannerTextResponse,
         eventNameResponse,
         monsterNameResponse,
         scoutPickupDescrResponse,
         trainerNameResponse,
-
+        trainerVerboseNameResponse,
     ] = await Promise.all([
+        fetch("./data/proto/AbilityPanel.json"),
         fetch("./data/proto/Banner.json"),
         fetch("./data/proto/ChampionBattleEvent.json"),
         fetch("./data/proto/ChampionBattleEventQuestGroup.json"),
@@ -66,14 +74,19 @@ async function getData() {
         fetch("./data/proto/StoryQuest.json"),
         fetch("./data/proto/Trainer.json"),
         fetch("./data/proto/TrainerBase.json"),
+        fetch("./data/proto/TrainerExRole.json"),
         fetch("./data/proto/VillaQuestGroup.json"),
         fetch("./data/lsd/banner_text_fr.json"),
         fetch("./data/lsd/event_name_fr.json"),
         fetch("./data/lsd/monster_name_fr.json"),
         fetch("./data/lsd/scout_pickup_description_fr.json"),
-        fetch("./data/lsd/trainer_name_fr.json")
+        fetch("./data/lsd/trainer_name_fr.json"),
+        fetch("./data/lsd/trainer_verbose_name_fr.json")
     ])
         .catch(error => console.log(error));
+
+    abilityPanel = await abilityPanelResponse.json();
+    abilityPanel = abilityPanel.entries;
 
     banner = await bannerResponse.json();
     banner = banner.entries;
@@ -127,14 +140,19 @@ async function getData() {
     const monstersBaseJSON = await monsterBaseResponse.json();
     monsterBase = getBySpecificID(monstersBaseJSON.entries, "monsterBaseId");
 
-    const trainersJSON = await trainerResponse.json();
-    trainerInfos = getBySpecificID(trainersJSON.entries, "trainerId");
+    trainerInfosArray = await trainerResponse.json();
+    trainerInfosArray = trainerInfosArray.entries;
+    trainerInfos = getBySpecificID(trainerInfosArray, "trainerId");
 
     const trainersBaseJSON = await trainerBaseResponse.json();
     trainerBase = getBySpecificID(trainersBaseJSON.entries, "id");
 
+    trainerExRole = await trainerExRoleResponse.json();
+    trainerExRole = trainerExRole.entries;
+
     monsterNames = await monsterNameResponse.json();
     trainerNames = await trainerNameResponse.json();
+    trainerVerboseNames = await trainerVerboseNameResponse.json();
 
     const itemSetJSON = await itemSetResponse.json();
     itemSet = getBySpecificID(itemSetJSON.entries, "itemSetId");
@@ -171,8 +189,18 @@ function getBySpecificID(data, id) {
     }, {});
 }
 
+function getPairPrettyPrint(trainerId) {
+    return `${getStarsRarityString(trainerId)} ${getTrainerName(trainerId)} & ${getMonsterNameByTrainerId(trainerId)}`;
+}
+
+function getStarsRarityString(trainerId) {
+    var rarity = trainerInfos[trainerId][0].rarity;
+
+    return `<span style="color: ${starsHex[rarity-1]}; -webkit-text-stroke-color: black; -webkit-text-stroke-width: 0.5px;">${"★".repeat(rarity)}</span>`;
+}
+
 function getTrainerName(id) {
-    return trainerNames[trainerBase[trainerInfos[id][0].trainerBaseId][0].trainerNameId] || "Dresseur (Scottie/Bettie)";
+    return trainerVerboseNames[id] || trainerNames[trainerBase[trainerInfos[id][0].trainerBaseId][0].trainerNameId] || "Dresseur (Scottie/Bettie)";
 }
 
 function getMonsterNameByTrainerId(id) {
@@ -206,10 +234,13 @@ function scheduleByVersion() {
 
     for(let i = 0; i < versions.length; i++) {
         versions[i].schedule = schedule
-            .filter(s => (scoutIds.includes(s.scheduleId) || eventIds.includes(s.scheduleId)) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
+            .filter(s => (scoutIds.includes(s.scheduleId) || eventIds.includes(s.scheduleId) || s.scheduleId.startsWith("chara_")) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
             .map(s => {
                 if(scoutIds.includes(s.scheduleId)) {
                     s.type = "scout";
+                }
+                else if(s.scheduleId.startsWith("chara_")) {
+                    s.type = "chara";
                 }
                 else {
                     s.type = "event";
@@ -266,8 +297,7 @@ function printScouts(schedule) {
             scheduleDiv.innerHTML += `<h4>Duos à l'affiche</h4>\n<ul style='list-style-type: disc;'>\n`;
 
             sPickups.forEach(sp => {
-                var rarity = trainerInfos[sp.trainerId][0].rarity;
-                scheduleDiv.innerHTML += `<li><span style="color: ${starsHex[rarity-1]}; -webkit-text-stroke-color: black; -webkit-text-stroke-width: 0.5px;">${"★".repeat(rarity)}</span> ${getTrainerName(sp.trainerId)} & ${getMonsterNameByTrainerId(sp.trainerId)}</li>\n`;
+                scheduleDiv.innerHTML += `<li>${getPairPrettyPrint(sp.trainerId)}</li>\n`;
             });
 
             scheduleDiv.innerHTML += "</ul>\n";
@@ -316,6 +346,43 @@ function printEvents(schedule) {
     });
 }
 
+function printPairChanges(scheduleId) {
+
+    // Ajout de cases dans le plateau
+    let panelChanges = [...new Set(abilityPanel.filter(ap => ap.scheduleId === scheduleId).map(ap => ap.trainerId))].map(tid => { return {"trainerId" : tid, "type": "panel", "text" : "Ajout de cases dans le plateau duo-gemme."}; });
+
+    // Sortie de duo
+    let trainerRelease = [...new Set(trainerInfosArray.filter(ti => ti.scheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : "Ajout du duo dans le jeu."}; });
+
+    // Sortie du 6EX
+    let trainerExRelease = [...new Set(trainerInfosArray.filter(ti => ti.exScheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "ex", "text" : "Ajout du 6★ EX."}; });
+
+    // Sortie du Rôle EX
+    let ExRoleRelease = [...new Set(trainerExRole.filter(ti => ti.scheduleId === scheduleId).map(ti => { return {"trainerId" : ti.trainerId, "role" : role_names[ti.role] }; }))].map(exRole => { return {"trainerId" : exRole.trainerId, "type" : "exRole", "text" : `Ajout du Rôle EX (${exRole.role}).`}; });
+
+    let changes = trainerRelease.concat(trainerExRelease, ExRoleRelease, panelChanges).sort((a, b) => getTrainerName(a.trainerId).localeCompare(getTrainerName(b.trainerId)));
+
+    let lastTID = "";
+
+    scheduleDiv.innerHTML += "<ul>";
+
+    for(let index in changes) {
+        if(lastTID !== changes[index].trainerId) {
+            if(lastTID !== "") {
+                scheduleDiv.innerHTML += "<br />";
+            }
+
+            lastTID = changes[index].trainerId;
+
+        }
+
+        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrint(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
+    }
+
+
+
+}
+
 function setVersionInfos(id) {
     let version = versions.find(v => v.version === id);
 
@@ -324,12 +391,12 @@ function setVersionInfos(id) {
 
     scheduleDiv.innerHTML = "";
 
-    let scoutFlag, eventFlag;
+    let scoutFlag, eventFlag, charaFlag;
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
     startDates.forEach(timestamp => {
 
-        scoutFlag = eventFlag = true;
+        scoutFlag = eventFlag = charaFlag = true;
         treatedEvents = [];
 
         let date = new Date(timestamp*1000);
@@ -353,6 +420,13 @@ function setVersionInfos(id) {
                     }
                     printEvents(sched);
                     break;
+
+                case "chara":
+                    if(charaFlag) {
+                        scheduleDiv.innerHTML += "<h2>Ajouts/Modif. de Duos</h2>";
+                        charaFlag = false;
+                    }
+                    printPairChanges(sched.scheduleId);
             }
         })
     });
