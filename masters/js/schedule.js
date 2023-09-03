@@ -33,7 +33,7 @@ const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
 // Textes des bannières du Combat de Maître Spécial
 const CBEText1Id = 17503026;
 const CBEText2Id = 27503027;
-const role_names = ["Attaquant", "Attaquant", "Tacticien", "Soutien", "Accélérateur", "Régisseur"];
+const role_names = ["Attaquant", "Attaquant", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
 
 async function getData() {
     const [
@@ -196,7 +196,7 @@ function getPairPrettyPrint(trainerId) {
 function getStarsRarityString(trainerId) {
     var rarity = trainerInfos[trainerId][0].rarity;
 
-    return `<span style="color: ${starsHex[rarity-1]}; -webkit-text-stroke-color: black; -webkit-text-stroke-width: 0.5px;">${"★".repeat(rarity)}</span>`;
+    return `<span style="color: ${starsHex[rarity-1]}; -webkit-text-stroke: thin black;">${"★".repeat(rarity)}</span>`;
 }
 
 function getTrainerName(id) {

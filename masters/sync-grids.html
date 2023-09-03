@@ -4,37 +4,41 @@
 		<meta charset="UTF-8" />
 	</head>
 		<link rel="stylesheet" href="../css/pokebip.css">
+		<link rel="stylesheet" href="../css/header.css">
 		<script src="./js/dist/FileSaver.min.js"></script>
 		<script src="./js/dist/jszip.min.js"></script>
-	<body style="padding:10px;">
-		<select id="trainersList"></select>
-		<textarea id="area"></textarea>
-		<button id="btnCopy">Copier le code</button>
-		<button id="btnSave">Télécharger les données en ZIP</button>
-		<span id="dlCount"></span>
-		<br /><br />
-		<span id="updatedGrids"></span>
+	<body style="margin-top: 0px">
+		<div id="contentDiv" style="padding:10px; margin: 0 auto; margin-top:60px">
+			<select id="trainersList"></select>
+			<textarea id="area"></textarea>
+			<button id="btnCopy">Copier le code</button>
+			<button id="btnSave">Télécharger les données en ZIP</button>
+			<span id="dlCount"></span>
+			<br /><br />
+			<span id="updatedGrids"></span>
 
-		<br />
-		<table id="statsTable" style="text-align:center;" class="bipcode"></table>
+			<br />
+			<table id="statsTable" style="text-align:center;" class="bipcode"></table>
 
-		<br />
-		<table id="passivesTable" style="text-align:center;" class="bipcode"></table>
+			<br />
+			<table id="passivesTable" style="text-align:center;" class="bipcode"></table>
 
-		<br />
-		<table id="movesTable" style="text-align:center;" class="bipcode"></table>
+			<br />
+			<table id="movesTable" style="text-align:center;" class="bipcode"></table>
 
-		<br />
-		<p>Nombre de cases : <span id="nbCells"></span></p>
-		<div>
-			<ul class="listh-bipcode">
-				<li class="listh-no-style">
-					<table id="gridTable" style="text-align:center;" class="bipcode"></table>
-				</li>
-			</ul>
+			<br />
+			<p>Nombre de cases : <span id="nbCells"></span></p>
+			<div>
+				<ul class="listh-bipcode">
+					<li class="listh-no-style">
+						<table id="gridTable" style="text-align:center;" class="bipcode"></table>
+					</li>
+				</ul>
+			</div>
 		</div>
 
 		<script src="./js/sync-grids.js"></script>
+		<script src="./js/header.js"></script>
 	</body>
 
 </html>

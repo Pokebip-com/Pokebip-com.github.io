@@ -10,7 +10,7 @@ let trainerInfos;
 let trainerNames;
 let trainerVerboseNames;
 
-const role_names = ["Attaquant (Physique)", "Attaquant (Spécial)", "Tacticien", "Soutien", "Accélérateur", "Régisseur"];
+const role_names = ["Attaquant (Physique)", "Attaquant (Spécial)", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
 
 async function getData() {
     const [
