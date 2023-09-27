@@ -1,7 +1,7 @@
 {
-    "1": "[Name:TeamSkillTag ]\n[Digit:2digits ] 이상",
+    "1": "[Name:TeamSkillTag ]\n[Digit:2digits Idx=\"1\" ] 이상",
     "2": "[Name:FieldEffectType ]\n[Digit:2digits ]회 이상",
-    "3": "[Name:Role ]\n[Digit:2digits ] 이상",
+    "3": "[Name:Role ]\n[Digit:2digits Idx=\"1\" ] 이상",
     "4": "★[Digit:2digits Idx=\"1\" ] 버디즈\n[Digit:2digits Idx=\"2\" ] 이상",
     "5": "[Name:FieldEffectType ]",
     "6": "[Name:TeamSkillTag Idx=\"1\" ][Kor:Particle char=\"to\" ]\n[Name:TeamSkillTag Idx=\"2\" ]",

@@ -1,7 +1,7 @@
 {
-    "1": "[Digit:2digits ] o più Unità:\n[Name:TeamSkillTag ]",
+    "1": "[Digit:2digits Idx=\"1\" ] o più Unità:\n[Name:TeamSkillTag ]",
     "2": "[Name:FieldEffectType ]:\n[Digit:2digits ] o più volte",
-    "3": "Schiera [Digit:2digits ] o più Unità\ncol ruolo di [Name:Role ]",
+    "3": "Schiera [Digit:2digits Idx=\"1\" ] o più Unità\ncol ruolo di [Name:Role ]",
     "4": "[Digit:2digits Idx=\"2\" ] o più Unità\n[Digit:2digits Idx=\"1\" ]★",
     "5": "[Name:FieldEffectType ]",
     "6": "[Name:TeamSkillTag Idx=\"1\" ] e\n[Name:TeamSkillTag Idx=\"2\" ]",

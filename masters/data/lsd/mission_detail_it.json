@@ -32,7 +32,7 @@
     "26": "Fai imparare [Digit:3digits ] moss[IT:Qty S=\"a\" P=\"e\" ] alle seguenti\nUnità:",
     "27": "Fai imparare [Digit:3digits ] abilità passiv[IT:Qty S=\"a\" P=\"e\" ]\nalle seguenti Unità:",
     "28": "Sblocca un nuovo livello massimo\n[Digit:3digits ] volt[IT:Qty S=\"a\" P=\"e\" ] per le seguenti Unità:",
-    "32": "Completa [Digit:6digits ] Guid[IT:Qty S=\"a\" P=\"e\" ] area\ndel [Name:QuestGroupTitle ] in modalità [Name:QuestPlayType ].",
+    "32": "Completa [Digit:6digits ] Guid[IT:Qty S=\"a\" P=\"e\" ] area in:\n[Name:QuestGroupTitle ]\nDevi giocare in modalità\n[Name:QuestPlayType ].",
     "34": "Crea [Digit:3digits ] squadr[IT:Qty S=\"a\" P=\"e\" ].",
     "35": "Cambia la tua Unità preferita\n[Digit:3digits ] volt[IT:Qty S=\"a\" P=\"e\" ].",
     "36": "Parla con le Unità al Centro Pokémon\n[Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ] in totale.",

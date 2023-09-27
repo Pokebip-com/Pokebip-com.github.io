@@ -34,5 +34,8 @@
     "legend_rule_5020_003": "A partire dalla 2ª barra PS, gli avversari\nsubiscono meno danni, se non sono presenti\neffetti sul campo avversario.",
     "legend_rule_5060_001": "Diversi Pokémon appaiono come nemici.",
     "legend_rule_5060_002": "Se la Velocità degli avversari è aumentata,\nle loro mosse o Unimosse, oppure sia le\nmosse che le Unimosse, vengono potenziate.",
-    "legend_rule_5060_003": "Gli effetti sul campo attivati dagli avversari\nsono permanenti."
+    "legend_rule_5060_003": "Gli effetti sul campo attivati dagli avversari\nsono permanenti.",
+    "legend_rule_5090_001": "I danni subiti dagli avversari vengono\nridotti se la loro Difesa o Difesa Speciale\nè aumentata.",
+    "legend_rule_5090_002": "Aumentano le variazioni dei danni dovute\nalle modifiche a Difesa o Difesa Speciale.",
+    "legend_rule_5090_003": "Gli effetti sul campo attivati dagli avversari\nsono permanenti."
 }

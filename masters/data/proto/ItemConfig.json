@@ -19,6 +19,9 @@
 { "itemConfigId": "item_set_id_at_duplication.750000000224", "value": "4010105" },
 { "itemConfigId": "money.upper_limit_of_id", "value": "999999999" },
 { "itemConfigId": "move_level_up_item.upper_limit_of_id", "value": "999999" },
+{ "itemConfigId": "skill_deck_item.upper_limit", "value": "500" },
+{ "itemConfigId": "skill_deck_item_tutorial_skill_deck_item_id", "value": "810007010000" },
+{ "itemConfigId": "skill_deck_item_tutorial_skill_feather_item_id", "value": "930000201000" },
 { "itemConfigId": "stock_item.upper_limit_of_id", "value": "999999" },
 { "itemConfigId": "trainer_build_up_item.upper_limit_of_id", "value": "999999" },
 { "itemConfigId": "villa_item.upper_limit_of_id", "value": "999999" }

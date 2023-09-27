@@ -117,5 +117,13 @@
     "event_5060_3W_MasterTicket_02": "마오 확정 버라이어티 B서치",
     "event_5070_1W_MasterTicket_03": "고지카 확정 버디즈서치",
     "event_5070_1W_MasterTicket_04": "드라세나 확정 버디즈서치",
-    "event_5080_1W_GuaranteeRarity5_014": "로켓단 ★5 확정 티켓 전용 B서치"
+    "event_5080_1W_GuaranteeRarity5_014": "로켓단 ★5 확정 티켓 전용 B서치",
+    "event_5090_1W_MasterTicket_04": "수철 확정 버라이어티 B서치",
+    "event_5090_1W_MasterTicket_05": "다투라 확정 버라이어티 B서치",
+    "event_5090_2W_SuperTicket_03": "회연 시즌 한정 출현율업 B서치",
+    "event_5090_2W_MasterTicket_03": "회연 시즌 한정 확정 B서치",
+    "event_5090_2W_SuperTicket_04": "원규 시즌 한정 출현율업 B서치",
+    "event_5090_2W_MasterTicket_04": "원규 시즌 한정 확정 B서치",
+    "event_5090_2W_MasterTicket_05": "알로에 확정 버디즈서치",
+    "event_5090_3W_SuperTicket_02": "시즌 한정 출현율업 B서치"
 }

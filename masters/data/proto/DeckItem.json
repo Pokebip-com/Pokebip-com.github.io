@@ -153,5 +153,8 @@
 { "itemId": "810003030314", "itemSubtypeId": 8100, "imageId": "i081_0050_02", "equipmentType": "Pin", "u5": 3, "Type": 14, "rarity": 3, "deckItemParamId": 201, "u9": 206 },
 { "itemId": "810003030315", "itemSubtypeId": 8100, "imageId": "i081_0051_02", "equipmentType": "Pin", "u5": 3, "Type": 15, "rarity": 3, "deckItemParamId": 201, "u9": 206 },
 { "itemId": "810003030316", "itemSubtypeId": 8100, "imageId": "i081_0052_02", "equipmentType": "Pin", "u5": 3, "Type": 16, "rarity": 3, "deckItemParamId": 201, "u9": 206 },
-{ "itemId": "810003030318", "itemSubtypeId": 8100, "imageId": "i081_0054_02", "equipmentType": "Pin", "u5": 3, "Type": 18, "rarity": 3, "deckItemParamId": 201, "u9": 206 }
+{ "itemId": "810003030318", "itemSubtypeId": 8100, "imageId": "i081_0054_02", "equipmentType": "Pin", "u5": 3, "Type": 18, "rarity": 3, "deckItemParamId": 201, "u9": 206 },
+{ "itemId": "810007010000", "itemSubtypeId": 8700, "imageId": "i081_0101_00", "equipmentType": "Bracelet", "u5": 2, "Type": 0, "rarity": -1, "deckItemParamId": -1, "u9": -1 },
+{ "itemId": "810007020000", "itemSubtypeId": 8700, "imageId": "i081_0100_00", "equipmentType": "Bandana", "u5": 1, "Type": 0, "rarity": -1, "deckItemParamId": -1, "u9": -1 },
+{ "itemId": "810007030000", "itemSubtypeId": 8700, "imageId": "i081_0102_00", "equipmentType": "Pin", "u5": 3, "Type": 0, "rarity": -1, "deckItemParamId": -1, "u9": -1 }
 ]}

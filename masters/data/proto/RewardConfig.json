@@ -67,6 +67,7 @@
 { "rewardConfigId": "item_set_id.duplicate_jukebox_music_key_item", "value": "4010105" },
 { "rewardConfigId": "item_set_id.duplicate_monster_enhancement", "value": "4010105" },
 { "rewardConfigId": "item_set_id.tutorial_jukebox", "value": "4010242" },
+{ "rewardConfigId": "item_set_id.tutorial_skill_deck_item_release_skill", "value": "5090002" },
 { "rewardConfigId": "lottery_announcement.event_2020_1W_FesPickup_01.Scout_2020_2W_1", "value": "1" },
 { "rewardConfigId": "lottery_announcement.event_2020_4W_Normal_02.Scout_2020_4W_2", "value": "1" },
 { "rewardConfigId": "present_box.deck_item.start_time_of_upper_limit", "value": "1625036400" },

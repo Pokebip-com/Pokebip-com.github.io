@@ -34,5 +34,8 @@
     "legend_rule_5020_003": "Starting from the opponent’s second HP bar,\nthe opponent takes less damage when it is\nnot affected by a field effect.",
     "legend_rule_5060_001": "Multiple opponents appear.",
     "legend_rule_5060_002": "Powers up the opponent’s moves, sync\nmove, or both when their Speed is raised.",
-    "legend_rule_5060_003": "The opponent’s field effects are permanent."
+    "legend_rule_5060_003": "The opponent’s field effects are permanent.",
+    "legend_rule_5090_001": "The opponent takes less damage when its\nDefense or Sp. Def is raised.",
+    "legend_rule_5090_002": "Stat changes to Defense and Sp. Def have a\ngreater effect on damage output.",
+    "legend_rule_5090_003": "The opponent’s field effects are permanent."
 }

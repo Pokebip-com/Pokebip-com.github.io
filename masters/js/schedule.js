@@ -1,6 +1,9 @@
 let abilityPanel;
 let banner;
+let eventBannerList;
 let eventQuestGroup;
+let legendQuestGroup;
+let legendQuestGroupSchedule;
 let schedule;
 let scout;
 let scoutPickup;
@@ -15,6 +18,8 @@ let scoutPickupDescr;
 let monsterBase;
 let monsterInfos;
 let monsterNames;
+
+let salonGuests;
 
 let trainerBase;
 let trainerExRole;
@@ -41,10 +46,14 @@ async function getData() {
         bannerResponse,
         championBattleEventResponse,
         championBattleEventQuestGroupResponse,
+        eventBannerResponse,
         eventQuestGroupResponse,
         itemSetResponse,
+        legendQuestGroupResponse,
+        legendQuestGroupScheduleResponse,
         monsterResponse,
         monsterBaseResponse,
+        salonGuestResponse,
         scheduleResponse,
         scoutResponse,
         scoutPickupResponse,
@@ -64,10 +73,14 @@ async function getData() {
         fetch("./data/proto/Banner.json"),
         fetch("./data/proto/ChampionBattleEvent.json"),
         fetch("./data/proto/ChampionBattleEventQuestGroup.json"),
+        fetch("./data/proto/EventBanner.json"),
         fetch("./data/proto/EventQuestGroup.json"),
         fetch("./data/proto/ItemSet.json"),
+        fetch("./data/proto/LegendQuestGroup.json"),
+        fetch("./data/proto/LegendQuestGroupSchedule.json"),
         fetch("./data/proto/Monster.json"),
         fetch("./data/proto/MonsterBase.json"),
+        fetch("./data/proto/SalonGuest.json"),
         fetch("./data/proto/Schedule.json"),
         fetch("./data/proto/Scout.json"),
         fetch("./data/proto/ScoutPickup.json"),
@@ -130,6 +143,9 @@ async function getData() {
 
     bannerText = await bannerTextResponse.json();
 
+    const eventBannerJSON = await eventBannerResponse.json();
+    eventBannerList = eventBannerJSON.entries;
+
     eventName = await eventNameResponse.json();
 
     scoutPickupDescr = await scoutPickupDescrResponse.json();
@@ -139,6 +155,9 @@ async function getData() {
 
     const monstersBaseJSON = await monsterBaseResponse.json();
     monsterBase = getBySpecificID(monstersBaseJSON.entries, "monsterBaseId");
+
+    const salonGuestJSON = await salonGuestResponse.json();
+    salonGuests = salonGuestJSON.entries;
 
     trainerInfosArray = await trainerResponse.json();
     trainerInfosArray = trainerInfosArray.entries;
@@ -157,7 +176,11 @@ async function getData() {
     const itemSetJSON = await itemSetResponse.json();
     itemSet = getBySpecificID(itemSetJSON.entries, "itemSetId");
 
+    const legendsQuestGroupJSON = await legendQuestGroupResponse.json();
+    legendQuestGroup = getBySpecificID(legendsQuestGroupJSON.entries, "questGroupId");
 
+    const legendsQuestGroupScheduleJSON = await legendQuestGroupScheduleResponse.json();
+    legendQuestGroupSchedule = getBySpecificID(legendsQuestGroupScheduleJSON.entries, "scheduleId");
 }
 
 async function getCustomJSON() {
@@ -196,7 +219,7 @@ function getPairPrettyPrint(trainerId) {
 function getStarsRarityString(trainerId) {
     var rarity = trainerInfos[trainerId][0].rarity;
 
-    return `<span style="color: ${starsHex[rarity-1]}; -webkit-text-stroke: thin black;">${"★".repeat(rarity)}</span>`;
+    return `<span style="color: ${starsHex[rarity-1]}; -webkit-text-stroke: thin black;"><b>${"★".repeat(rarity)}</b></span>`;
 }
 
 function getTrainerName(id) {
@@ -231,23 +254,37 @@ function scheduleByVersion() {
 
     let scoutIds = scout.map(s => s.scheduleId);
     let eventIds = [...new Set(storyQuest.map(sq => sq.scheduleId))];
+    let legendaryBattleIds = [...new Set(Object.keys(legendQuestGroupSchedule))];
+    let salonGuestsUpdate = [...new Set(salonGuests.map(sg => sg.scheduleId))];
 
     for(let i = 0; i < versions.length; i++) {
         versions[i].schedule = schedule
-            .filter(s => (scoutIds.includes(s.scheduleId) || eventIds.includes(s.scheduleId) || s.scheduleId.startsWith("chara_")) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
+            .filter(s => (scoutIds.includes(s.scheduleId) || eventIds.includes(s.scheduleId) || legendaryBattleIds.includes(s.scheduleId) || salonGuestsUpdate.includes(s.scheduleId) || s.scheduleId.startsWith("chara_") || s.scheduleId.endsWith("_Shop_otoku")) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
             .map(s => {
+                s.isLegendaryBattle = false;
+
                 if(scoutIds.includes(s.scheduleId)) {
-                    s.type = "scout";
+                    s.type = { "name" : "scout", "priority": "10" };
+                }
+                else if(salonGuestsUpdate.includes(s.scheduleId)) {
+                    s.type = { "name" : "salon", "priority": "30" };
                 }
                 else if(s.scheduleId.startsWith("chara_")) {
-                    s.type = "chara";
+                    s.type = { "name" : "chara", "priority": "40" };
+                }
+                else if(s.scheduleId.endsWith("_Shop_otoku")) {
+                    s.type = { "name" : "shop", "priority": "50" };
                 }
                 else {
-                    s.type = "event";
+                    s.type = { "name" : "event", "priority": "20" };
+
+                    if(legendaryBattleIds.includes(s.scheduleId)) {
+                        s.isLegendaryBattle = true;
+                    }
                 }
                 return s;
             })
-            .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.type.localeCompare(b.type)*(-1));
+            .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.type.priority.localeCompare(b.type.priority));
 
         let date = new Date(versions[i].releaseTimestamp*1000);
 
@@ -383,6 +420,45 @@ function printPairChanges(scheduleId) {
 
 }
 
+function printSalonGuest(scheduleId) {
+    let salonGuestList = [...new Set(salonGuests.filter(sg => sg.scheduleId === scheduleId).map(sg => sg.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : "Ajout au Salon des Dresseurs"}; });
+
+    let lastTID = "";
+
+    scheduleDiv.innerHTML += "<ul>";
+
+    for(let index in salonGuestList) {
+        if(lastTID !== salonGuestList[index].trainerId) {
+            if(lastTID !== "") {
+                scheduleDiv.innerHTML += "<br />";
+            }
+
+            lastTID = salonGuestList[index].trainerId;
+
+        }
+
+        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrint(salonGuestList[index].trainerId)} : </b> ${salonGuestList[index].text}</li>`;
+    }
+}
+
+function printShopOffers(schedule) {
+    let eventBanners = eventBannerList.filter(eb => eb.scheduleId === schedule.scheduleId);
+
+    if(eventBanners.length === 0)
+        return;
+
+    eventBanners.forEach(eb => {
+        let banners = banner.filter(b => b.bannerId === eb.bannerId);
+
+        banners.forEach(ban => printEventBanner(ban, schedule));
+    });
+}
+
+function printLegBat(schedule) {
+    let banners = banner.filter(b => b.bannerId === legendQuestGroup[legendQuestGroupSchedule[schedule.scheduleId][0].questGroupId][0].bannerId);
+    banners.forEach(ban => printEventBanner(ban, schedule));
+}
+
 function setVersionInfos(id) {
     let version = versions.find(v => v.version === id);
 
@@ -391,12 +467,12 @@ function setVersionInfos(id) {
 
     scheduleDiv.innerHTML = "";
 
-    let scoutFlag, eventFlag, charaFlag;
+    let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag;
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
     startDates.forEach(timestamp => {
 
-        scoutFlag = eventFlag = charaFlag = true;
+        scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = true;
         treatedEvents = [];
 
         let date = new Date(timestamp*1000);
@@ -404,7 +480,7 @@ function setVersionInfos(id) {
 
         version.schedule.filter(schedule => schedule.startDate === timestamp).forEach(sched => {
 
-            switch(sched.type) {
+            switch(sched.type.name) {
                 case "scout":
                     if(scoutFlag) {
                         scheduleDiv.innerHTML += "<h2>Appels Duo</h2>";
@@ -418,7 +494,29 @@ function setVersionInfos(id) {
                         scheduleDiv.innerHTML += "<h2>Événements</h2>";
                         eventFlag = false;
                     }
+
+                    if(sched.isLegendaryBattle) {
+                        printLegBat(sched);
+                        break;
+                    }
+
                     printEvents(sched);
+                    break;
+
+                case "shop":
+                    if(shopFlag) {
+                        scheduleDiv.innerHTML += "<h2>Offres de diamants</h2>";
+                        shopFlag = false;
+                    }
+                    printShopOffers(sched);
+                    break;
+
+                case "salon":
+                    if(salonFlag) {
+                        scheduleDiv.innerHTML += "<h2>Salon des Dresseurs</h2>";
+                        salonFlag = false;
+                    }
+                    printSalonGuest(sched.scheduleId);
                     break;
 
                 case "chara":
@@ -468,6 +566,9 @@ async function init() {
     }
 
     setVersion(versionSelect.value);
+
+    const leftSchedule = schedule.filter(s => s.startDate >= versions[0].releaseTimestamp && !versions[0].schedule.includes(s));
+    console.log(leftSchedule);
 }
 
 init();

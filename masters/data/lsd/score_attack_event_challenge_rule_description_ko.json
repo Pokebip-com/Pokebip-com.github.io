@@ -1,9 +1,9 @@
 {
-    "1": "아래 태그를 가진 버디즈를 [Digit:2digits ] 이상 편성한다\n・[Name:TeamSkillTag ]",
+    "1": "아래 태그를 가진 버디즈를 [Digit:2digits Idx=\"1\" ] 이상 편성한다\n・[Name:TeamSkillTag ]",
     "2": "상대를 [Digit:2digits ]회 이상\n아래 상태 이상/방해 상태로 만든다\n・[Name:FieldEffectType ]",
-    "3": "아래 롤인 버디즈를 [Digit:2digits ] 이상 편성한다\n・[Name:Role ]",
+    "3": "아래 롤인 버디즈를 [Digit:2digits Idx=\"1\" ] 이상 편성한다\n・[Name:Role ]",
     "4": "원래 ★의 수가 ★[Digit:2digits Idx=\"1\" ]인 버디즈를\n[Digit:2digits Idx=\"2\" ] 이상 편성한다",
     "5": "아래의 필드 효과를 발생시킨다\n・[Name:FieldEffectType ]",
-    "6": "아래 태그를 가진 버디즈를 각각 [Digit:2digits ] 이상 편성한다\n・[Name:TeamSkillTag Idx=\"1\" ]\n・[Name:TeamSkillTag Idx=\"2\" ]",
+    "6": "아래 태그를 가진 버디즈를 각각 [Digit:2digits Idx=\"3\" ] 이상 편성한다\n・[Name:TeamSkillTag Idx=\"1\" ]\n・[Name:TeamSkillTag Idx=\"2\" ]",
     "7": "아래 태그를 가진 버디즈를 [Digit:2digits ] 이상 편성한다\n・[Name:TeamSkillTag Idx=\"1\" ]\n・[Name:TeamSkillTag Idx=\"2\" ]"
 }

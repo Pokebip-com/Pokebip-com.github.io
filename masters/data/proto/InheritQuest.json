@@ -159,6 +159,9 @@
 { "storyQuestId": "1030450700301010", "maxPairs": 0 },
 { "storyQuestId": "1030450700302010", "maxPairs": 0 },
 { "storyQuestId": "1030450700303010", "maxPairs": 0 },
+{ "storyQuestId": "1030450900301010", "maxPairs": 0 },
+{ "storyQuestId": "1030450900302010", "maxPairs": 0 },
+{ "storyQuestId": "1030450900303010", "maxPairs": 0 },
 { "storyQuestId": "1030501000608060", "maxPairs": 9 },
 { "storyQuestId": "1030501000608070", "maxPairs": 9 },
 { "storyQuestId": "1030502000604080", "maxPairs": 9 },
@@ -168,5 +171,8 @@
 { "storyQuestId": "1030503010701021", "maxPairs": 30 },
 { "storyQuestId": "1030503020701031", "maxPairs": 30 },
 { "storyQuestId": "1030504000608200", "maxPairs": 9 },
-{ "storyQuestId": "1030504000608210", "maxPairs": 9 }
+{ "storyQuestId": "1030504000608210", "maxPairs": 9 },
+{ "storyQuestId": "1030506000701011", "maxPairs": 30 },
+{ "storyQuestId": "1030506010701021", "maxPairs": 30 },
+{ "storyQuestId": "1030506020701031", "maxPairs": 30 }
 ]}

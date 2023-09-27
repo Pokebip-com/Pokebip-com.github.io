@@ -32,5 +32,6 @@
 { "boxSearchId": 412001, "scheduleId": "4120_4W_Event_Rival_BoxSearch", "itemId": "750000000380", "bannerId": 1405003, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 10 },
 { "boxSearchId": 501001, "scheduleId": "5010_4W_Event_swordshield_BoxSearch", "itemId": "750000000396", "bannerId": 1501009, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 10 },
 { "boxSearchId": 506001, "scheduleId": "5060_4W_Event_Mitsuru_Boxsearch", "itemId": "750000000483", "bannerId": 1409002, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 10 },
-{ "boxSearchId": 508001, "scheduleId": "5080_3W_Event_Rival_Exchange", "itemId": "750000000499", "bannerId": 1405003, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 10 }
+{ "boxSearchId": 508001, "scheduleId": "5080_3W_Event_Rival_Exchange", "itemId": "750000000499", "bannerId": 1405003, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 10 },
+{ "boxSearchId": 509001, "scheduleId": "5090_2W_Event_Halloween2023_Boxsearch", "itemId": "750000000503", "bannerId": 1509005, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 10 }
 ]}

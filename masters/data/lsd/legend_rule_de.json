@@ -34,5 +34,8 @@
     "legend_rule_5020_003": "Ab der zweiten KP-Leiste des Gegners\nerleidet der Gegner weniger Schaden, wenn\nkein Feld-Effekt aktiv ist.",
     "legend_rule_5060_001": "Mehrere Gegner erscheinen.",
     "legend_rule_5060_002": "Erhöht die Stärke von Attacken, der\nGefährtenattacke des Gegners oder von\nbeiden, wenn seine Initiative erhöht ist.",
-    "legend_rule_5060_003": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent."
+    "legend_rule_5060_003": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
+    "legend_rule_5090_001": "Der Gegner erleidet weniger Schaden, wenn\nseine Vert. und Sp.-Vert. erhöht sind.",
+    "legend_rule_5090_002": "Veränderungen der Vert. und Sp.-Vert.\nwirken sich stärker auf den Schaden aus.",
+    "legend_rule_5090_003": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent."
 }

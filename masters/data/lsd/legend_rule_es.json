@@ -34,5 +34,8 @@
     "legend_rule_5020_003": "Cuando alcanza la 2.ª barra de PS, el rival\nsufre menos daño si no hay efectos de campo.",
     "legend_rule_5060_001": "El rival comienza con varios Pokémon.",
     "legend_rule_5060_002": "Cuando aumenta la Velocidad del rival, se\npotencian sus movimientos, sus movimientos\ncompi o ambos.",
-    "legend_rule_5060_003": "Los efectos de campo activados por el rival\nduran todo el combate."
+    "legend_rule_5060_003": "Los efectos de campo activados por el rival\nduran todo el combate.",
+    "legend_rule_5090_001": "Se mitiga el daño que recibe el rival cuando\naumenta su Defensa o su Defensa Especial.",
+    "legend_rule_5090_002": "Los cambios en la Defensa y la Defensa\nEspecial afectan al daño más de lo normal.",
+    "legend_rule_5090_003": "Los efectos de campo activados por el rival\nduran todo el combate."
 }

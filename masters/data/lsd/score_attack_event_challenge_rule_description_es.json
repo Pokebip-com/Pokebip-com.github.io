@@ -4,6 +4,6 @@
     "3": "Forma un equipo de al menos [Digit:2digits Idx=\"1\" ] pareja[ES:Qty Ref=\"1\" P=\"s\" ] de\ncompis con la siguiente función:\n• [Name:Role ]",
     "4": "Forma un equipo de al menos [Digit:2digits Idx=\"2\" ] pareja[ES:Qty Ref=\"2\" P=\"s\" ] de\ncompis cuyo número de ★ original sea [Digit:2digits Idx=\"1\" ]★.",
     "5": "Activa el siguiente efecto de entorno:\n• [Name:FieldEffectType ]",
-    "6": "Forma un equipo de al menos [Digit:2digits ] pareja[ES:Qty P=\"s\" ] de\ncompis con los siguientes distintivos:\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]",
+    "6": "Forma un equipo de al menos [Digit:2digits Idx=\"3\" ] pareja[ES:Qty P=\"s\" ] de\ncompis con los siguientes distintivos:\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]",
     "7": "Forma un equipo de al menos [Digit:2digits ] pareja[ES:Qty P=\"s\" ] de\ncompis con uno de los siguientes distintivos:\n• [Name:TeamSkillTag Idx=\"1\" ]\n• [Name:TeamSkillTag Idx=\"2\" ]"
 }

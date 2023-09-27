@@ -1,7 +1,7 @@
 {
-    "1": "[Digit:2digits ] oder mehr Gefährten\nmit dem Attribut: [Name:TeamSkillTag ]",
+    "1": "[Digit:2digits Idx=\"1\" ] oder mehr Gefährten\nmit dem Attribut: [Name:TeamSkillTag ]",
     "2": "Setze [Name:FieldEffectType ] ein:\n[Digit:2digits ] mal oder öfter",
-    "3": "[Digit:2digits ] oder mehr [Name:Role ]-\nGefährten im Team",
+    "3": "[Digit:2digits Idx=\"1\" ] oder mehr [Name:Role ]-\nGefährten im Team",
     "4": "[Digit:2digits Idx=\"2\" ] oder mehr \n[Digit:2digits Idx=\"1\" ]★-Gefährten im Team",
     "5": "[Name:FieldEffectType ]",
     "6": "[Name:TeamSkillTag Idx=\"1\" ] und\n[Name:TeamSkillTag Idx=\"2\" ]",
