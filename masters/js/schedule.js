@@ -2,6 +2,7 @@ let abilityPanel;
 let banner;
 let eventBannerList;
 let eventQuestGroup;
+let homeEventAppeal;
 let legendQuestGroup;
 let legendQuestGroupSchedule;
 let schedule;
@@ -48,6 +49,7 @@ async function getData() {
         championBattleEventQuestGroupResponse,
         eventBannerResponse,
         eventQuestGroupResponse,
+        homeEventAppealResponse,
         itemSetResponse,
         legendQuestGroupResponse,
         legendQuestGroupScheduleResponse,
@@ -75,6 +77,7 @@ async function getData() {
         fetch("./data/proto/ChampionBattleEventQuestGroup.json"),
         fetch("./data/proto/EventBanner.json"),
         fetch("./data/proto/EventQuestGroup.json"),
+        fetch("./data/proto/HomeEventAppeal.json"),
         fetch("./data/proto/ItemSet.json"),
         fetch("./data/proto/LegendQuestGroup.json"),
         fetch("./data/proto/LegendQuestGroupSchedule.json"),
@@ -147,6 +150,9 @@ async function getData() {
     eventBannerList = eventBannerJSON.entries;
 
     eventName = await eventNameResponse.json();
+
+    const homeEventAppealJSON = await homeEventAppealResponse.json();
+    homeEventAppeal = homeEventAppealJSON.entries;
 
     scoutPickupDescr = await scoutPickupDescrResponse.json();
 
@@ -256,12 +262,14 @@ function scheduleByVersion() {
     let eventIds = [...new Set(storyQuest.map(sq => sq.scheduleId))];
     let legendaryBattleIds = [...new Set(Object.keys(legendQuestGroupSchedule))];
     let salonGuestsUpdate = [...new Set(salonGuests.map(sg => sg.scheduleId))];
+    let trainingAreaUpdate = [...new Set(storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
 
     for(let i = 0; i < versions.length; i++) {
         versions[i].schedule = schedule
-            .filter(s => (scoutIds.includes(s.scheduleId) || eventIds.includes(s.scheduleId) || legendaryBattleIds.includes(s.scheduleId) || salonGuestsUpdate.includes(s.scheduleId) || s.scheduleId.startsWith("chara_") || s.scheduleId.endsWith("_Shop_otoku")) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
+            .filter(s => (scoutIds.includes(s.scheduleId) || eventIds.includes(s.scheduleId) || legendaryBattleIds.includes(s.scheduleId) || trainingAreaUpdate.includes(s.scheduleId) || salonGuestsUpdate.includes(s.scheduleId) || s.scheduleId.startsWith("chara_") || s.scheduleId.endsWith("_Shop_otoku")) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
             .map(s => {
                 s.isLegendaryBattle = false;
+                s.isHomeAppeal = false;
 
                 if(scoutIds.includes(s.scheduleId)) {
                     s.type = { "name" : "scout", "priority": "10" };
@@ -280,6 +288,9 @@ function scheduleByVersion() {
 
                     if(legendaryBattleIds.includes(s.scheduleId)) {
                         s.isLegendaryBattle = true;
+                    }
+                    if(trainingAreaUpdate.includes(s.scheduleId)) {
+                        s.isHomeAppeal = true;
                     }
                 }
                 return s;
@@ -454,6 +465,16 @@ function printShopOffers(schedule) {
     });
 }
 
+function printHomeAppealEvent(schedule) {
+    const eventAppeal = homeEventAppeal.filter(hea => hea.bannerScheduleId === schedule.scheduleId);
+
+    eventAppeal.forEach(ea => {
+        let banners = banner.filter(b => b.bannerId === ea.bannerId);
+
+        banners.forEach(ban => printEventBanner(ban, schedule));
+    })
+}
+
 function printLegBat(schedule) {
     let banners = banner.filter(b => b.bannerId === legendQuestGroup[legendQuestGroupSchedule[schedule.scheduleId][0].questGroupId][0].bannerId);
     banners.forEach(ban => printEventBanner(ban, schedule));
@@ -497,6 +518,11 @@ function setVersionInfos(id) {
 
                     if(sched.isLegendaryBattle) {
                         printLegBat(sched);
+                        break;
+                    }
+
+                    if(sched.isHomeAppeal) {
+                        printHomeAppealEvent(sched)
                         break;
                     }
 
@@ -567,8 +593,8 @@ async function init() {
 
     setVersion(versionSelect.value);
 
-    const leftSchedule = schedule.filter(s => s.startDate >= versions[0].releaseTimestamp && !versions[0].schedule.includes(s));
-    console.log(leftSchedule);
+    //const leftSchedule = schedule.filter(s => s.startDate >= versions[0].releaseTimestamp && !versions[0].schedule.includes(s));
+    //console.log(leftSchedule);
 }
 
 init();
