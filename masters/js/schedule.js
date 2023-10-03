@@ -35,6 +35,7 @@ let scheduleDiv;
 let versionSelect;
 
 const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
+const salonBannerPath = `./data/banner/event/update_4090_0W_Regular_01.png`;
 
 // Textes des bannières du Combat de Maître Spécial
 const CBEText1Id = 17503026;
@@ -540,6 +541,7 @@ function setVersionInfos(id) {
                 case "salon":
                     if(salonFlag) {
                         scheduleDiv.innerHTML += "<h2>Salon des Dresseurs</h2>";
+                        scheduleDiv.innerHTML += `<img src="${salonBannerPath}" />`;
                         salonFlag = false;
                     }
                     printSalonGuest(sched.scheduleId);
