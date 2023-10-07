@@ -5,15 +5,52 @@
         <meta charset="UTF-8" />
 
         <style>
-        div#contentDiv li:before {
+        div#scheduleDiv li:before {
             content: "› ";
             font-size: 18px;
             font-weight: bolder;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a#scrollTop {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 99;
+            align-items: center;
+            justify-content: center;
+            display: inline-flex;
+            background-color: #dc143c;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s ease-out;
+        }
+
+        a#scrollTop span {
+            color: #fff;
+            font-size: 3rem;
+            transition: 0.2s ease-out;
+            text-shadow: #91222a 0px 2px;
+        }
+
+        a#scrollTop:hover {
+            background-color: #be1a3b;
+        }
+
+        a#scrollTop:hover span {
+            transform: translateY(-4px);
+            text-shadow: #91222a 0px 5px;
         }
         </style>
 
         <link rel="stylesheet" href="../css/pokebip.css">
         <link rel="stylesheet" href="../css/header.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="./js/dist/FileSaver.min.js"></script>
         <script src="./js/dist/jszip.min.js"></script>
     </head>
@@ -23,10 +60,12 @@
             <label for="versionSelect"><b>Changer de version :</b></label> <select id="versionSelect"></select>
             <br />
             <br />
-            <h1>PROGRAMME :</h1>
+            <h1>CALENDRIER :</h1>
+            <div id="calendar" style="margin: 0 auto; text-align: center;"></div>
             <div id="scheduleDiv" style="max-width: 600px; margin: 0 auto;"></div>
         </div>
 
+        <a href="#" id="scrollTop"><span class="material-icons">arrow_upward</span></a>
         <script src="./js/schedule.js"></script>
         <script src="./js/header.js"></script>
     </body>

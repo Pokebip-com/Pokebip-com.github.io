@@ -33,6 +33,7 @@ let treatedEvents;
 
 let scheduleDiv;
 let versionSelect;
+const scrollTopBtn = document.getElementById('scrollTop');
 
 const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
 const salonBannerPath = `./data/banner/event/update_4090_0W_Regular_01.png`;
@@ -481,6 +482,110 @@ function printLegBat(schedule) {
     banners.forEach(ban => printEventBanner(ban, schedule));
 }
 
+function getMonday(d) {
+    d = new Date(d);
+    let day = d.getDay(),
+        diff = d.getDate() - day + (day === 0 ? -6 : 1);
+
+    return new Date(d.setDate(diff));
+}
+
+function printCalendars(startDates) {
+
+    let date = getMonday(startDates[0]);
+    let endDate = startDates[startDates.length-1];
+    let lastPrintMonth = -1;
+    let calendarDiv = document.getElementById("calendar");
+    calendarDiv.innerHTML = "";
+
+    let calTable;
+    let calUl = document.createElement("ul");
+    calUl.classList.add("listh-bipcode");
+
+    calendarDiv.appendChild(calUl);
+
+    do {
+        if(lastPrintMonth !== date.getMonth()) {
+
+            let calLi = document.createElement("li");
+            calTable = document.createElement("table");
+            let calThead = document.createElement("thead");
+            let calTrMonth = document.createElement("tr");
+            let calThMonth = document.createElement("th");
+
+            calLi.classList.add("listh-no-style");
+            calTable.classList.add("bipcode");
+
+            calThMonth.innerText = date.toLocaleString("default", {month: 'long'});
+            calThMonth.innerText = calThMonth.innerText.replace(/^./, calThMonth.innerText[0].toUpperCase());
+            calThMonth.colSpan = 7;
+
+            calTrMonth.appendChild(calThMonth);
+            calThead.appendChild(calTrMonth);
+
+            let calTrDays = document.createElement("tr");
+
+            let calThMon = document.createElement("th");
+            calThMon.innerText = "Lun.";
+            calTrDays.appendChild(calThMon);
+
+            let calThTue = document.createElement("th");
+            calThTue.innerText = "Mar.";
+            calTrDays.appendChild(calThTue);
+
+            let calThWed = document.createElement("th");
+            calThWed.innerText = "Mer.";
+            calTrDays.appendChild(calThWed);
+
+            let calThThu = document.createElement("th");
+            calThThu.innerText = "Jeu.";
+            calTrDays.appendChild(calThThu);
+
+            let calThFri = document.createElement("th");
+            calThFri.innerText = "Ven.";
+            calTrDays.appendChild(calThFri);
+
+            let calThSat = document.createElement("th");
+            calThSat.innerText = "Sam.";
+            calTrDays.appendChild(calThSat);
+
+            let calThSun = document.createElement("th");
+            calThSun.innerText = "Dim.";
+            calTrDays.appendChild(calThSun);
+
+            calThead.appendChild(calTrDays);
+
+            calTable.appendChild(calThead);
+
+            calLi.appendChild(calTable)
+            calUl.appendChild(calLi);
+
+            lastPrintMonth = date.getMonth();
+        }
+
+        let calDaysTr = document.createElement("tr");
+
+        for(let i = 0; i < 7; i++) {
+            let calDay = document.createElement("td");
+
+            if(date.getMonth() === lastPrintMonth && (date.getDay()+6)%7 === i) {
+                if(startDates.map(sd => sd.getTime()).includes(date.getTime())) {
+                    calDay.innerHTML = `<b><a href="#${date.getFullYear()}${date.getMonth()}${date.getDate()}">${date.getDate().toString()}</a></b>`
+                }
+                else {
+                    calDay.innerText = date.getDate().toString();
+                }
+                date.setDate(date.getDate() + 1);
+            }
+
+            calDaysTr.appendChild(calDay);
+        }
+
+        calTable.appendChild(calDaysTr);
+
+    } while(date.getMonth() <= endDate.getMonth());
+}
+
 function setVersionInfos(id) {
     let version = versions.find(v => v.version === id);
 
@@ -492,13 +597,15 @@ function setVersionInfos(id) {
     let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag;
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
+    printCalendars(startDates.map(t => new Date(t*1000)));
+
     startDates.forEach(timestamp => {
 
         scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = true;
         treatedEvents = [];
 
         let date = new Date(timestamp*1000);
-        scheduleDiv.innerHTML += `<h1 style="margin-top: 50px">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(date)}</h1>\n`;
+        scheduleDiv.innerHTML += `<h1 id="${date.getFullYear()}${date.getMonth()}${date.getDate()}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(date)}</h1>\n`;
 
         version.schedule.filter(schedule => schedule.startDate === timestamp).forEach(sched => {
 
@@ -598,5 +705,10 @@ async function init() {
     //const leftSchedule = schedule.filter(s => s.startDate >= versions[0].releaseTimestamp && !versions[0].schedule.includes(s));
     //console.log(leftSchedule);
 }
+
+scrollTopBtn.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+})
 
 init();
