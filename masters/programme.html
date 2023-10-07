@@ -15,7 +15,7 @@
             scroll-behavior: smooth;
         }
 
-        a#scrollTop {
+        div#buttons {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
@@ -23,34 +23,51 @@
             align-items: center;
             justify-content: center;
             display: inline-flex;
-            background-color: #dc143c;
+        }
+
+        div#buttons a {
             padding: 0.5rem;
             border-radius: 0.5rem;
             cursor: pointer;
             text-decoration: none;
             transition: 0.2s ease-out;
+            height: 100% !important;
         }
 
-        a#scrollTop span {
-            color: #fff;
-            font-size: 3rem;
-            transition: 0.2s ease-out;
-            text-shadow: #91222a 0px 2px;
+        a#nextContent {
+            background-color: #009933;
+            margin-right: 4px;
+            display: none;
+        }
+
+        a#nextContent:hover {
+            background-color: #009900;
+        }
+
+        a#scrollTop {
+            background-color: #dc143c;
         }
 
         a#scrollTop:hover {
             background-color: #be1a3b;
         }
 
-        a#scrollTop:hover span {
+        div#buttons a span {
+            color: #fff;
+            font-size: 3rem;
+            transition: 0.2s ease-out;
+            text-shadow: #00000050 0px 2px;
+        }
+
+        div#buttons a:hover span {
             transform: translateY(-4px);
-            text-shadow: #91222a 0px 5px;
+            text-shadow: 0px 5px #00000050;
         }
         </style>
 
         <link rel="stylesheet" href="../css/pokebip.css">
         <link rel="stylesheet" href="../css/header.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
         <script src="./js/dist/FileSaver.min.js"></script>
         <script src="./js/dist/jszip.min.js"></script>
     </head>
@@ -65,7 +82,10 @@
             <div id="scheduleDiv" style="max-width: 600px; margin: 0 auto;"></div>
         </div>
 
-        <a href="#" id="scrollTop"><span class="material-icons">arrow_upward</span></a>
+        <div id="buttons">
+            <a href="#" id="nextContent"><span class="material-symbols-outlined">event_upcoming</span></a>
+            <a href="#" id="scrollTop"><span class="material-symbols-outlined">arrow_upward</span></a>
+        </div>
         <script src="./js/schedule.js"></script>
         <script src="./js/header.js"></script>
     </body>

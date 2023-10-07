@@ -34,6 +34,7 @@ let treatedEvents;
 let scheduleDiv;
 let versionSelect;
 const scrollTopBtn = document.getElementById('scrollTop');
+const nextContentBtn = document.getElementById('nextContent');
 
 const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
 const salonBannerPath = `./data/banner/event/update_4090_0W_Regular_01.png`;
@@ -497,6 +498,7 @@ function printCalendars(startDates) {
     let lastPrintMonth = -1;
     let calendarDiv = document.getElementById("calendar");
     calendarDiv.innerHTML = "";
+    const today = new Date();
 
     let calTable;
     let calUl = document.createElement("ul");
@@ -571,6 +573,11 @@ function printCalendars(startDates) {
             if(date.getMonth() === lastPrintMonth && (date.getDay()+6)%7 === i) {
                 if(startDates.map(sd => sd.getTime()).includes(date.getTime())) {
                     calDay.innerHTML = `<b><a href="#${date.getFullYear()}${date.getMonth()}${date.getDate()}">${date.getDate().toString()}</a></b>`
+
+                    if(nextContentBtn.getAttribute("href") === "#" && today < date) {
+                        nextContentBtn.href = `#${date.getFullYear()}${date.getMonth()}${date.getDate()}`;
+                        nextContentBtn.style.display = "inline-flex";
+                    }
                 }
                 else {
                     calDay.innerText = date.getDate().toString();
@@ -667,6 +674,8 @@ function setVersionInfos(id) {
 
 function setVersion(id, setUrl = true) {
     versionSelect.value = id;
+    nextContentBtn.href = "#"
+    nextContentBtn.style.display = "none";
 
     setVersionInfos(id);
     if(setUrl)
