@@ -678,8 +678,17 @@ function setVersion(id, setUrl = true) {
     nextContentBtn.style.display = "none";
 
     setVersionInfos(id);
+
     if(setUrl)
         setUrlEventID(versionSelect.value);
+
+    if(window.location.hash !== "" && window.location.hash !== "#") {
+        setTimeout(function () {
+            let tmp = document.createElement("a");
+            tmp.href = window.location.hash;
+            tmp.click();
+        }, 1000);
+    }
 }
 
 function setUrlEventID(id) {
