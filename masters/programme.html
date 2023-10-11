@@ -5,64 +5,102 @@
         <meta charset="UTF-8" />
 
         <style>
-        div#scheduleDiv li:before {
-            content: "› ";
-            font-size: 18px;
-            font-weight: bolder;
-        }
+            html {
+                scroll-behavior: smooth;
+            }
 
-        html {
-            scroll-behavior: smooth;
-        }
+            table.bipcode .calClick {
+                cursor: pointer;
+                text-shadow: #00000050 1px 1px;
+                background-color: #bed77b;
+            }
 
-        div#buttons {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 99;
-            align-items: center;
-            justify-content: center;
-            display: inline-flex;
-        }
+            table.bipcode tr:hover .calClick {
+                background-color: #c6e181;
+            }
 
-        div#buttons a {
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            text-decoration: none;
-            transition: 0.2s ease-out;
-            height: 100% !important;
-        }
+            table.bipcode .calClick a:hover {
+                color: #970e0e
+            }
 
-        a#nextContent {
-            background-color: #009933;
-            margin-right: 4px;
-            display: none;
-        }
+            table.bipcode .calClick a {
+                color: #1f1c1c;
+            }
 
-        a#nextContent:hover {
-            background-color: #009900;
-        }
+            table.bipcode .calClick.calToday {
+                background-color: #89a939;
+            }
 
-        a#scrollTop {
-            background-color: #dc143c;
-        }
+            table.bipcode tr:hover .calClick.calToday {
+                background-color: #9bbd43;
+            }
 
-        a#scrollTop:hover {
-            background-color: #be1a3b;
-        }
+            table.bipcode .calToday a:hover {
+                color: #970e0e
+            }
 
-        div#buttons a span {
-            color: #fff;
-            font-size: 3rem;
-            transition: 0.2s ease-out;
-            text-shadow: #00000050 0px 2px;
-        }
+            table.bipcode .calToday {
+                background-color: #facfd1;
+            }
 
-        div#buttons a:hover span {
-            transform: translateY(-4px);
-            text-shadow: 0px 5px #00000050;
-        }
+            table.bipcode tr:hover .calToday {
+                background-color: #ffddde;
+            }
+
+            div#scheduleDiv li:before {
+                content: "› ";
+                font-size: 18px;
+                font-weight: bolder;
+            }
+
+            div#buttons {
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+                z-index: 99;
+                align-items: center;
+                justify-content: center;
+                display: inline-flex;
+            }
+
+            div#buttons a {
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                text-decoration: none;
+                transition: 0.2s ease-out;
+                height: 100% !important;
+            }
+
+            a#nextContent {
+                background-color: #009933;
+                margin-right: 4px;
+                display: none;
+            }
+
+            a#nextContent:hover {
+                background-color: #009900;
+            }
+
+            a#scrollTop {
+                background-color: #dc143c;
+            }
+
+            a#scrollTop:hover {
+                background-color: #be1a3b;
+            }
+
+            div#buttons a span {
+                color: #fff;
+                font-size: 3rem;
+                transition: 0.2s ease-out;
+                text-shadow: #00000050 0px 2px;
+            }
+
+            div#buttons a:hover span {
+                transform: translateY(-4px);
+                text-shadow: 0px 5px #00000050;
+            }
         </style>
 
         <link rel="stylesheet" href="../css/pokebip.css">
@@ -74,11 +112,26 @@
 
     <body style="margin-top: 0">
         <div id="contentDiv" style="padding:10px; margin-top:60px">
-            <label for="versionSelect"><b>Changer de version :</b></label> <select id="versionSelect"></select>
+            <div id="tools">
+                <label for="versionSelect"><b>Changer de version :</b></label> <select id="versionSelect"></select>
+                <fieldset id="adminTools" style="display: none; margin-top: 10px; line-height: 1.6rem; width: fit-content; border-radius: 8px;">
+                    <legend><b>Télécharger les données</b></legend>
+                    <p style="display: table-row;">
+                        <label for="startDate" style="display: table-cell; text-align: right;"><b>Début :</b></label> <input type="date" id="startDate" style="display: table-cell; margin-left: 5px;" />
+                    </p>
+                    <p style="display: table-row;">
+                        <label for="endDate" style="display: table-cell; text-align: right;"><b>Fin :</b></label> <input type="date" id="endDate" style="display: table-cell; margin-left: 5px;" />
+                    </p>
+                    <p style="display: table-row;">
+                        <label for="downloadData" style="display: table-cell; text-align: right;"></label> <button id="downloadData" style="display: table-cell; margin-left: 5px;">Télécharger</button>
+                    </p>
+                </fieldset>
+            </div>
             <br />
-            <br />
-            <h1>CALENDRIER :</h1>
-            <div id="calendar" style="margin: 0 auto; text-align: center;"></div>
+            <div id="calendarDiv">
+                <h1>CALENDRIER :</h1>
+                <div id="calendar" style="margin: 0 auto; text-align: center;"></div>
+            </div>
             <div id="scheduleDiv" style="max-width: 600px; margin: 0 auto;"></div>
         </div>
 

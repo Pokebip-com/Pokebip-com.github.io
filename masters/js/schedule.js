@@ -33,6 +33,11 @@ let treatedEvents;
 
 let scheduleDiv;
 let versionSelect;
+let toolsDiv;
+let startDateInput;
+let endDateInput;
+let downloadButton;
+
 const scrollTopBtn = document.getElementById('scrollTop');
 const nextContentBtn = document.getElementById('nextContent');
 
@@ -254,6 +259,107 @@ function orderByVersion(data) {
         if(verA.patch > verB.patch) return -1;
         if(verA.patch < verB.patch) return 1;
     });
+}
+
+function downloadData() {
+    let version = versions.find(v => v.version === versionSelect.value);
+    if(version === undefined)
+        return;
+
+    let newsText = "";
+    let startDate = new Date(`${startDateInput.value}T06:00:00Z`);
+    let endDate = new Date(`${endDateInput.value}T05:59:59Z`);
+    let endDay = endDate.toLocaleDateString('fr-fr', {day: 'numeric'});
+
+    // -------- INTRODUCTION -------- //
+    newsText += "[h2]Programme[/h2]\n" +
+        "Cet article liste les évènements de Pokémon Masters EX annoncés officiellement pour cette semaine. " +
+        "Nous le complèterons au fur et à mesure des annonces ou de l'arrivée des évènements en jeu jusqu'au " +
+        `${endDay}`;
+
+    // "jusqu'au 1er"
+    if(endDay === "1") {
+        newsText += "er";
+    }
+
+    newsText += ` ${endDate.toLocaleDateString('fr-fr', {month: 'long'})}.\n\n` +
+        "Cliquez sur les dates en rouge dans le calendrier ci-dessous pour accéder rapidement au contenu prévu. " +
+        `Les débuts d'évènements se font à ` +
+        `${startDate.toLocaleTimeString('fr-fr', {hour: 'numeric', minute: '2-digit'}).replace(":", "h")} ` +
+        `et les fins à ` +
+        `${endDate.toLocaleTimeString('fr-fr', {hour: 'numeric', minute: '2-digit'}).replace(":", "h")} ` +
+        `aux dates indiquées.\n\n`;
+
+    startDate.setHours(0, 0, 0);
+    endDate.setHours(23, 59, 59);
+
+    let startDates = [...new Set(version.schedule.map(s => s.startDate))]
+        .sort()
+        .map(t => new Date(t*1000))
+        .filter(sd => sd >= startDate && sd <= endDate);
+
+    // -------- CALENDRIER -------- //
+    newsText += "[listh]\n";
+
+    let date = getMonday(startDates[0]);
+    let lastPrintMonth = -1;
+
+    do {
+        if(lastPrintMonth !== date.getMonth()) {
+            if(lastPrintMonth !== -1) {
+                newsText += "[/table][/item]\n\n";
+            }
+
+            let monthName = date.toLocaleString("default", {month: 'long'});
+            monthName = monthName.replace(/^./, monthName[0].toUpperCase());
+
+            newsText += "[item|nostyle][table]\n" +
+                `\t[tr][th|colspan=7]${monthName}[/th][/tr]\n` +
+                "\t[tr][th]Lun.[/th][th]Mar.[/th][th]Mer.[/th][th]Jeu.[/th][th]Ven.[/th][th]Sam.[/th][th]Dim.[/th][/tr]\n";
+
+            lastPrintMonth = date.getMonth();
+        }
+
+        newsText += "\t[tr|color=grey]";
+
+        for(let i = 0; i < 7; i++) {
+            newsText += "[td]";
+
+            if(date.getMonth() === lastPrintMonth && (date.getDay()+6)%7 === i) {
+
+                if(startDates.map(sd => sd.getTime()).includes(date.getTime())) {
+                    newsText += `[b][url=#${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}]` +
+                        `${date.getDate().toString()}[/url][/b]`;
+                }
+                else {
+                    newsText += `${date.getDate().toString()}`;
+                }
+                date.setDate(date.getDate() + 1);
+            }
+            else {
+                newsText += " ";
+            }
+
+            newsText += "[/td]";
+        }
+
+        newsText += "[/tr]\n";
+
+    } while(date.getMonth() <= endDate.getMonth() && date.getDate() <= endDate.getDate());
+
+    // -------- DIAMANTS RESTANTS -------- //
+    newsText += "[/table][/item]\n" +
+        "[/listh]\n\n" +
+        "[h2]Diamants encore obtenables[/h2]\n" +
+        "Le tableau ci-dessous indique les Diamants encore obtenables des évènements et autres offres déjà sorties.\n\n" +
+        "[listh]\n" +
+        "[item|nostyle|width=400px][table]\n" +
+        "[tr][th]Période[/th][th]Évènements[/th][th|colspan=3]Diamants[/th][/tr]\n" +
+        "[tr][td]JJ/MM[br]JJ/MM[/td][td]<\NOM>[/td][td]1234[/td][/tr]\n" +
+        "[/table][/item]\n" +
+        "[/listh]\n\n";
+
+    console.log(newsText);
 }
 
 function scheduleByVersion() {
@@ -500,6 +606,19 @@ function printCalendars(startDates) {
     calendarDiv.innerHTML = "";
     const today = new Date();
 
+    if(isAdminMode) {
+        const startDateString = `${startDates[0].getFullYear()}-${(startDates[0].getMonth()+1).toString().padStart(2, '0')}-${startDates[0].getDate().toString().padStart(2, '0')}`;
+        const endDateString = `${endDate.getFullYear()}-${(endDate.getMonth()+1).toString().padStart(2, '0')}-${endDate.getDate().toString().padStart(2, '0')}`;
+
+        startDateInput.setAttribute("value", startDateString);
+        startDateInput.setAttribute("min", startDateString);
+        startDateInput.setAttribute("max", endDateString);
+
+        endDateInput.setAttribute("value", endDateString);
+        endDateInput.setAttribute("min", startDateString);
+        endDateInput.setAttribute("max", endDateString);
+    }
+
     let calTable;
     let calUl = document.createElement("ul");
     calUl.classList.add("listh-bipcode");
@@ -571,8 +690,19 @@ function printCalendars(startDates) {
             let calDay = document.createElement("td");
 
             if(date.getMonth() === lastPrintMonth && (date.getDay()+6)%7 === i) {
+
+                if(today.getDate() === date.getDate() && today.getMonth() === date.getMonth() && today.getFullYear() === date.getFullYear()) {
+                    calDay.classList.add("calToday");
+                }
+
                 if(startDates.map(sd => sd.getTime()).includes(date.getTime())) {
-                    calDay.innerHTML = `<b><a href="#${date.getFullYear()}${date.getMonth()}${date.getDate()}">${date.getDate().toString()}</a></b>`
+                    let link = document.createElement("a");
+                    link.href = `#${date.getFullYear()}${date.getMonth()}${date.getDate()}`;
+                    link.innerHTML = `<b>${date.getDate().toString()}</b>`;
+
+                    calDay.classList.add("calClick");
+                    calDay.onclick = () => link.click();
+                    calDay.appendChild(link);
 
                     if(nextContentBtn.getAttribute("href") === "#" && today < date) {
                         nextContentBtn.href = `#${date.getFullYear()}${date.getMonth()}${date.getDate()}`;
@@ -701,9 +831,20 @@ function setUrlEventID(id) {
 async function init() {
     versionSelect = document.getElementById("versionSelect");
     scheduleDiv = document.getElementById("scheduleDiv");
+    toolsDiv = document.getElementById('adminTools');
 
     await getData();
     await getCustomJSON();
+
+    if(isAdminMode) {
+        toolsDiv.style.display = "table";
+
+        startDateInput = document.getElementById("startDate");
+        endDateInput = document.getElementById("endDate");
+
+        downloadButton = document.getElementById("downloadData");
+        downloadButton.onclick = downloadData;
+    }
 
     scheduleByVersion();
 
@@ -719,6 +860,8 @@ async function init() {
     }
 
     setVersion(versionSelect.value);
+
+    //downloadData()
 
     //const leftSchedule = schedule.filter(s => s.startDate >= versions[0].releaseTimestamp && !versions[0].schedule.includes(s));
     //console.log(leftSchedule);
