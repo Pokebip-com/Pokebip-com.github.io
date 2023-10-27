@@ -208,6 +208,7 @@
     "20021400": "Heracross",
     "20021500": "Sneasel",
     "20021800": "Slugma",
+    "20021900": "Magcargo",
     "20022400": "Octillery",
     "20022500": "Delibird",
     "20022700": "Skarmory",
@@ -631,6 +632,8 @@
     "2008350000": "Yamper",
     "2008390000": "Coalossal",
     "2008420000": "Appletun",
+    "2008491100": "Toxtricity",
+    "2008491200": "Toxtricity",
     "2008530000": "Grapploct",
     "2008541100": "Sinistea",
     "2008551100": "Polteageist",
@@ -672,5 +675,6 @@
     "2009090000": "Fuecoco",
     "2009120000": "Quaxly",
     "2005030041": "Samurott",
-    "2007240041": "Decidueye"
+    "2007240041": "Decidueye",
+    "20013301": "Eevee"
 }

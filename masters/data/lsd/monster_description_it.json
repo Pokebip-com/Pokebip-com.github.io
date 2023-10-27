@@ -118,6 +118,7 @@
     "20018700": "Hoppip fluttua nell'aria trasportato dal vento.\nSe percepisce l'avvicinarsi di una forte corrente, Hoppip\nunisce le foglie con quelle dei suoi simili per non essere\nspazzato via.",
     "20018800": "Il fiore di Skiploom sboccia quando la temperatura sale\noltre i 18 °C. L'apertura del fiore dipende dalla\ntemperatura. Per questo motivo il Pokémon è usato anche\ncome termometro.",
     "20018900": "Jumpluff si affida alle correnti d'aria calda per\nattraversare il mare e volare verso terre lontane.\nQuesto Pokémon ridiscende a terra quando incontra\nuna corrente fredda mentre fluttua.",
+    "20019600": "Inizialmente non aveva particolari abilità, ma in seguito\nha sviluppato delle capacità premonitrici per difendersi.",
     "20019700": "È un Pokémon notturno. Le sue grandi pupille gli\npermettono di vedere chiaramente le prede anche\nnell'oscurità più profonda.",
     "20020300": "La testa posteriore di Girafarig è dotata di un cervello\npiccolissimo. Attacca soltanto in risposta agli odori\ne ai suoni. Avvicinando questo Pokémon da dietro\nsussiste il pericolo di essere morsi dalla testa posteriore.",
     "20020801": "Steelix è noto per i suoi scavi in profondità, a distanze\nmaggiori rispetto a Onix. Sono stati riportati record\ndi profondità pari a 1 km sottoterra.",
@@ -472,6 +473,8 @@
     "2008350000": "Quando corre produce elettricità dalla base\ndella coda. A Galar è apprezzato soprattutto\nper l'aiuto che fornisce ai pastori nei pascoli.",
     "2008390000": "Quando lotta, la montagna di carbone brucia con bagliori\nrossastri e sparge scintille che anneriscono tutta l'area\ncircostante.\n",
     "2008420000": "È ricoperto di una specie di sciroppo. La buccia sulla sua\nschiena, particolarmente dolce, una volta veniva data\nai bambini per merenda.",
+    "2008491100": "Quando produce energia elettrica strofinando\nle protuberanze che ha sul petto, tutt'intorno\nriverbera un suono simile a quello di una chitarra.",
+    "2008491200": "Quando produce elettricità dagli organi che ha nel petto,\nsi sente un suono simile a quello di un basso elettrico.",
     "2008530000": "Il suo corpo è un ammasso di muscoli. È in grado\ndi stritolare con una potenza formidabile grazie\nai suoi tentacoli.",
     "2008551100": "Ha un gusto e un profumo molto particolari. Se si fida\ndel suo Allenatore, gli concede un piccolo assaggio.",
     "2008580000": "Tiene alla larga gli esseri viventi che si trovano\nnei paraggi emettendo onde psichiche così forti da far\nvenire il mal di testa.",
@@ -501,5 +504,6 @@
     "2009230000": "Di solito è piuttosto flemmatico, ma quando si trova\na lottare atterra il nemico con movimenti fulminei.",
     "2007451300": "Un Lycanroc speciale, evolutosi alla luce del tramonto.\nSotto l'apparente calma, nasconde un impetuoso spirito\ncombattivo.",
     "2005030041": "Abile spadaccino dal carattere spietato, attacca\ncon una sequela di colpi simili a mille burrascosi flutti.\nDi raro sembiante, frutto dell'evoluzione a Hisui.",
-    "2007240041": "Resiste all'algido clima di Hisui grazie all'aria trattenuta\nnel rachide delle sue piume. Un chiaro esempio\nd'evoluzione cagionata dall'ambiente."
+    "2007240041": "Resiste all'algido clima di Hisui grazie all'aria trattenuta\nnel rachide delle sue piume. Un chiaro esempio\nd'evoluzione cagionata dall'ambiente.",
+    "20013301": "Non si conosce ancora il motivo per cui Eevee sia\nl'unico Pokémon a possedere un corredo genetico\ncosì instabile."
 }

@@ -67,6 +67,7 @@
     "ch0071_00_otona_19": "Beauty Valerie",
     "ch0071_00_otona_20": "Beauty Johanna",
     "ch0071_00_otona_21": "Beauty Anais",
+    "ch0071_00_otona_22": "Beauty Melissa",
     "ch0071_00_otona_99": "Rose’s Supporter",
     "ch0072_00_kaipan_01": "Swimmer Stanley",
     "ch0072_00_kaipan_02": "Swimmer Wiley",
@@ -165,6 +166,7 @@
     "ch0077_00_daisukim_13": "Poké Fan Brandon",
     "ch0077_00_daisukim_14": "Poké Fan William",
     "ch0077_00_daisukim_15": "Poké Fan Derek",
+    "ch0077_00_daisukim_16": "Poké Fan Colin",
     "ch0078_00_rangerf_01": "Pokémon Ranger Shirley",
     "ch0078_00_rangerf_02": "Pokémon Ranger Penelope",
     "ch0078_00_rangerf_03": "Pokémon Ranger Victoria",
@@ -329,5 +331,6 @@
     "ch0517_00_etherf_00": "Aether Foundation Employee",
     "ch0648_00_etherf_00": "Aether Foundation Employee",
     "ch0280_00_yellm_00": "Team Yell Grunt",
-    "ch0281_00_yellf_00": "Team Yell Grunt"
+    "ch0281_00_yellf_00": "Team Yell Grunt",
+    "ch0654_00_pokekidf_01": "Poké Kid Dromena"
 }

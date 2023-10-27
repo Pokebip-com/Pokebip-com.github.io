@@ -37,5 +37,8 @@
     "legend_rule_5060_003": "Gli effetti sul campo attivati dagli avversari\nsono permanenti.",
     "legend_rule_5090_001": "I danni subiti dagli avversari vengono\nridotti se la loro Difesa o Difesa Speciale\nè aumentata.",
     "legend_rule_5090_002": "Aumentano le variazioni dei danni dovute\nalle modifiche a Difesa o Difesa Speciale.",
-    "legend_rule_5090_003": "Gli effetti sul campo attivati dagli avversari\nsono permanenti."
+    "legend_rule_5090_003": "Gli effetti sul campo attivati dagli avversari\nsono permanenti.",
+    "legend_rule_5100_001": "I PS di Entei rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
+    "legend_rule_5100_002": "Gli effetti sul campo attivati dagli avversari\nsono permanenti.",
+    "legend_rule_5100_003": "I danni subiti da Entei diminuiscono\nin proporzione al totale delle modifiche\nalle sue statistiche."
 }

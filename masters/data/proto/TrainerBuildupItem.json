@@ -436,5 +436,18 @@
 { "itemId": "555090050005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10169000000" },
 { "itemId": "555090060005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10140000002" },
 { "itemId": "555090070005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10041000001" },
-{ "itemId": "555090080005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10046000001" }
+{ "itemId": "555090080005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10046000001" },
+{ "itemId": "555100001005", "trainerBuildupConfigId": 5, "scheduleId": "5100_1W_Updata_nobishiro", "u4": "", "trainerId": "-1" },
+{ "itemId": "555100010005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10269000000" },
+{ "itemId": "555100020005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10293000000" },
+{ "itemId": "555100030005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10011100000" },
+{ "itemId": "555100040005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10256100000" },
+{ "itemId": "555100050005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10190000000" },
+{ "itemId": "555100060005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10122000001" },
+{ "itemId": "555100070005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10123000001" },
+{ "itemId": "555100080005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10656000000" },
+{ "itemId": "555100090005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10119000001" },
+{ "itemId": "555100100005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10000800001" },
+{ "itemId": "555100120003", "trainerBuildupConfigId": 3, "scheduleId": "FOREVER", "u4": "", "trainerId": "10656000000" },
+{ "itemId": "555100130004", "trainerBuildupConfigId": 4, "scheduleId": "FOREVER", "u4": "", "trainerId": "10656000000" }
 ]}

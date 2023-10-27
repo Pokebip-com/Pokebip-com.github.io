@@ -48,7 +48,7 @@ async function getData() {
     trainerBase = getBySpecificID(trainersBaseJSON.entries, "id");
 
     const trainerExRoleJSON = await trainerExRoleResponse.json();
-    trainerExRole = getBySpecificID(trainerExRoleJSON.entries, "trainerId");
+    trainerExRole = trainerExRoleJSON.entries.sort((a, b) => b.scheduleId.localeCompare(a.scheduleId));
 
     monsterNames = await monsterNameResponse.json();
     trainerNames = await trainerNameResponse.json();
@@ -75,10 +75,10 @@ getData().then(() => {
     exRoleDiv = document.getElementById("exRoleDiv");
 
     exRoleDiv.innerHTML += "<ul>";
-    for(let trainerId in trainerExRole) {
-        var role = role_names[trainerExRole[trainerId][0].role];
+    for(let entry in trainerExRole) {
+        let role = role_names[trainerExRole[entry].role];
 
-        exRoleDiv.innerHTML += `<li><b>${getTrainerName(trainerId)} & ${getMonsterNameByTrainerId(trainerId)} :</b> ${role}</li>`;
+        exRoleDiv.innerHTML += `<li><b>${getTrainerName(trainerExRole[entry].trainerId)} & ${getMonsterNameByTrainerId(trainerExRole[entry].trainerId)} :</b> ${role}</li>`;
     }
     exRoleDiv.innerHTML += "</ul>";
 });

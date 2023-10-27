@@ -628,5 +628,17 @@
     "999309": "Quand [Name:ReferencedMessageTag ] du lanceur n'est pas augmenté(e) jusqu'à son rang maximum.",
     "999308": "Quand l'Attaque du lanceur est augmentée.",
     "999307": "Quand l'Attaque du lanceur n'est pas augmentée.",
-    "999282": "Si une autre capacité est utilisée par le Pokémon du lanceur, la puissance de cette capacité revient à la normale."
+    "999306": "S'il subit une capacité physique pendant sa préparation, le lanceur abandonne cette posture puis attaque tous les Duos ennemis.",
+    "999305": "Augmente l'effet Prochain boost capacité physique ou l'effet Prochain boost capacité spéciale de tous les Duos alliés de [Digit:1digit Idx=\"4\" ] [FR:Qty Ref=\"4\" S=\"rang\" P=\"rangs\" ].",
+    "999304": "(Le même type d'effet est augmenté pour tous les Duos alliés.)",
+    "999303": "Quand au moins 1 Pokémon souffrant d'une altération de statut se trouve du côté ennemi.",
+    "999302": "Quand plus aucun Pokémon souffrant d'une altération de statut ne se trouve du côté ennemi.",
+    "999301": "Augmente la puissance de l'attaque de 50 % quand le champ est un [Name:ReferencedMessageTag Idx=\"3\" ].",
+    "999300": "Empoisonne ou paralyse tous les Duos ennemis.",
+    "999299": "Baisse de [Digit:1digit Idx=\"1\" ] le nombre de segments de Jauge Capacité requis pour utiliser la capacité quand la zone est une [Name:ReferencedMessageTag ].",
+    "999298": "Augmente la puissance de l'attaque de 20 % quand la cible souffre d'une altération de statut.",
+    "999297": "Augmente l'Atq. Spé. et le taux de critiques du lanceur de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ].",
+    "999296": "Plus [Name:ReferencedMessageTag ] du lanceur a été augmentée, plus cette attaque est puissante.",
+    "999282": "Si une autre capacité est utilisée par le Pokémon du lanceur, la puissance de cette capacité revient à la normale.",
+    "999267": "Annule les augmentations de stats de la cible, augmente les mêmes stats du lanceur de la même proportion, puis attaque."
 }

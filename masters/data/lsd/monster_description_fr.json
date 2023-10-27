@@ -118,6 +118,7 @@
     "20018700": "Ce Pokémon flotte à la dérive, porté par le vent.\nS'il sent qu'un vent très fort approche, Granivol\nattache ses feuilles aux autres Granivol pour ne\npas être emporté par la bourrasque.",
     "20018800": "La fleur de Floravol éclot lorsque la température atteint\n18 °C. L'ouverture de la fleur change en fonction de\nla température. Certaines personnes se servent de\nce Pokémon comme d'un thermomètre.",
     "20018900": "Cotovol traverse la mer, porté par les vents, pour\ndécouvrir de nouveaux territoires. Ce Pokémon se\nrapproche du sol quand le vent est trop froid.",
+    "20019600": "À l'origine, il n'était doté d'aucune compétence\nparticulière, mais il a développé un don de\nprescience pour se défendre.",
     "20019700": "Les larges pupilles de ce Pokémon nocturne\nlui permettent de distinguer parfaitement ses\nproies même dans l'obscurité la plus profonde.",
     "20020300": "La tête à l'arrière de Girafarig a aussi un cerveau,\nmais il est plus petit. Elle attaque en réponse aux\nsons et aux odeurs. Si on approche de ce Pokémon\npar derrière, cette petite tête peut tout à coup jaillir\net mordre.",
     "20020801": "Steelix vit sous terre, encore plus profondément\nqu'Onix. On dit que ce Pokémon creuse vers le\ncentre de la planète. On a déjà vu ce Pokémon\ndescendre à plus d'un kilomètre de profondeur.",
@@ -472,6 +473,8 @@
     "2008350000": "Lorsqu'il court, on peut voir de l'électricité\nse former à la base de sa queue. Ce Pokémon\nest très populaire auprès des bergers de Galar.",
     "2008390000": "Lorsqu'il s'engage dans un combat, son tas de charbon\nbrûle et vire au rouge, ce qui répand de petites étincelles\nqui calcinent ce qui l'entoure.",
     "2008420000": "Son corps est recouvert de nectar. La peau de son dos, \nparticulièrement sucrée, constituait jadis le goûter\ndes enfants.",
+    "2008491100": "Lorsqu'il gratte l'excroissance sur son ventre\npour produire de l'électricité, on peut entendre\nun son similaire à celui d'une guitare.",
+    "2008491200": "Son organe générant de l'électricité se trouve\nsur son torse. Quand il est actif, il émet un son\nsemblable à celui d'une basse.",
     "2008530000": "Son corps est un amas de muscles. La puissance\ndes prises d'étranglement qu'il exécute avec\nses tentacules est saisissante.",
     "2008551100": "Son goût et son parfum sont très particuliers.\nSeuls les Dresseurs en lesquels il a entièrement\nconfiance sont autorisés à en boire une gorgée.",
     "2008580000": "Il éloigne les autres êtres vivants en émettant\ndes ondes psychiques pouvant donner\ndes maux de tête épouvantables.",
@@ -501,5 +504,6 @@
     "2009230000": "D'ordinaire, ce Pokémon est plutôt calme, mais lorsqu'il\nse bat, il élimine ses adversaires avec des mouvements\nrapides comme l'éclair.",
     "2007451300": "Ce Lougaroc a subi une évolution spéciale en\nétant irradié par les rayons du soleil couchant.\nSon calme cache une combativité hors norme.",
     "2005030041": "Cette fine lame au tempérament impitoyable\nest une évolution rare qui ne se produit\nqu'à Hisui. Ses attaques sont aussi\nravageuses que les vagues déferlantes.",
-    "2007240041": "Les plumes d'Archéduc le protègent de la froideur\nglaciale de Hisui grâce à l'air logé dans leur tige.\nVoici une preuve que l'environnement agit\nsur l'évolution des Pokémon."
+    "2007240041": "Les plumes d'Archéduc le protègent de la froideur\nglaciale de Hisui grâce à l'air logé dans leur tige.\nVoici une preuve que l'environnement agit\nsur l'évolution des Pokémon.",
+    "20013301": "À ce jour, nul ne sait pourquoi Évoli est le seul\nPokémon dont l'ADN est instable."
 }

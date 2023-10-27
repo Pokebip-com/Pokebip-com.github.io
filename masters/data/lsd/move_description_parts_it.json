@@ -184,7 +184,7 @@
     "999755": "Aumenta l'Attacco, l'Attacco Speciale e la precisione di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999754": "Aggiunge barrette alla barra mosse di chi la usa pari al livello mosse attuale.",
     "999753": "Aumenta l'Attacco, la Difesa, l'Attacco Speciale, la Difesa Speciale, la Velocità e la precisione di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
-    "999752": "Ripristina [Digit:1digit ] [IT:Qty S=\"utilizzo\" P=\"utilizzi\" ] delle mosse definite \"attacco veloce\" alla voce \"Effetti\" per chi la usa.",
+    "999752": "Ripristina [Digit:1digit ] [IT:Qty S=\"utilizzo\" P=\"utilizzi\" ] delle mosse definite \"Attacco veloce\" alla voce \"Effetti\" per chi la usa.",
     "999751": "Aumenta l'Attacco di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
     "999750": "Se Metagross di chi la usa si megaevolve, applica a chi la usa anche l'effetto \"Resistenza a colpo micidiale\".",
     "999749": "Chi la usa guarisce dalla confusione, dal tentennamento e dall'imprigionamento.",
@@ -628,5 +628,17 @@
     "999309": "Quando [Name:ReferencedMessageTag ] di chi la usa non aumenta fino al grado massimo.",
     "999308": "Quando l'Attacco di chi la usa viene aumentato.",
     "999307": "Quando l'Attacco di chi la usa non viene aumentato.",
-    "999282": "Se il Pokémon di chi la usa sferra un mossa diversa, la potenza di questa mossa torna normale."
+    "999306": "Se chi la usa subisce un attacco semplice fisico mentre è in uno stato di attesa per contrattacco, lo stato di attesa termina e l'Unità attacca tutte le Unità avversarie.",
+    "999305": "Aumenta l'effetto \"Prossima mossa fisica ↑\" o l'effetto \"Prossima mossa speciale ↑\" di tutte le Unità alleate di [Digit:1digit Idx=\"4\" ] [IT:Qty Ref=\"4\" S=\"grado\" P=\"gradi\" ].",
+    "999304": "(Viene aumentato lo stesso tipo di effetto per tutte le Unità alleate.)",
+    "999303": "Quando c'è almeno 1 Pokémon affetto da un problema di stato nel campo avversario.",
+    "999302": "Quando non ci sono più Pokémon affetti da problemi di stato nel campo avversario.",
+    "999301": "Questo attacco aumenta di potenza del 50% quando il campo di lotta è un [Name:ReferencedMessageTag Idx=\"3\" ].",
+    "999300": "Avvelena o paralizza tutte le Unità avversarie.",
+    "999299": "Questa mossa consuma [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"barretta\" P=\"barrette\" ] della barra mosse in meno in presenza di una [Name:ReferencedMessageTag ].",
+    "999298": "Questo attacco aumenta di potenza del 20% quando il bersaglio è affetto da problemi di stato.",
+    "999297": "Aumenta l'Attacco Speciale e la probabilità di mandare a segno brutti colpi di chi la usa di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
+    "999296": "Aumenta la potenza di questo attacco in proporzione all'aumento del[Name:ReferencedMessageTag ] di chi la usa.",
+    "999282": "Se il Pokémon di chi la usa sferra un mossa diversa, la potenza di questa mossa torna normale.",
+    "999267": "Annulla gli aumenti delle statistiche del bersaglio, aumenta le stesse statistiche di chi la usa in egual misura e attacca."
 }

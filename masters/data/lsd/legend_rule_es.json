@@ -37,5 +37,8 @@
     "legend_rule_5060_003": "Los efectos de campo activados por el rival\nduran todo el combate.",
     "legend_rule_5090_001": "Se mitiga el daño que recibe el rival cuando\naumenta su Defensa o su Defensa Especial.",
     "legend_rule_5090_002": "Los cambios en la Defensa y la Defensa\nEspecial afectan al daño más de lo normal.",
-    "legend_rule_5090_003": "Los efectos de campo activados por el rival\nduran todo el combate."
+    "legend_rule_5090_003": "Los efectos de campo activados por el rival\nduran todo el combate.",
+    "legend_rule_5100_001": "La primera vez que los PS de Entei bajan al\n60% o menos, se quedan a ese porcentaje.",
+    "legend_rule_5100_002": "Los efectos de campo activados por el rival\nduran todo el combate.",
+    "legend_rule_5100_003": "Cuanto más aumentan las características de\nEntei, más se reduce el daño que recibe."
 }

@@ -95,7 +95,7 @@
     "999844": "Si el movimiento era un movimiento de ataque físico, reduce el Ataque del rival que lo usó en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
     "999843": "Si el objetivo está envenenado o gravemente envenenado, reduce su Ataque, Ataque Especial y Velocidad en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
     "999842": "En caso contrario, este movimiento fallará.",
-    "999841": "Si el usuario recibe un movimiento de ataque mientras está en guardia, baja la guardia y contraataca.",
+    "999841": "Si el usuario recibe un movimiento de ataque mientras está en guardia, baja la guardia y ataca.",
     "999840": "Si el movimiento era un movimiento de ataque físico, quema al atacante.",
     "999839": "Duplica la potencia de este ataque cuando el movimiento anterior del usuario ha fallado.",
     "999838": "Aumenta el Ataque, el Ataque Especial y la Velocidad de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ]. Cuando está soleado, en su lugar estas características aumentan en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
@@ -628,5 +628,17 @@
     "999309": "Cuando no ha aumentado [Name:ReferencedMessageTag ] del usuario al máximo nivel.",
     "999308": "Cuando ha aumentado el Ataque del usuario.",
     "999307": "Cuando no ha aumentado el Ataque del usuario.",
-    "999282": "Si el Pokémon del usuario usa un movimiento diferente, la potencia de este movimiento vuelve a la normalidad."
+    "999306": "Si el usuario recibe un movimiento de ataque físico mientras está en guardia, baja la guardia y ataca a todos los compis rivales.",
+    "999305": "Aumenta el efecto Siguiente Físico ↑ o el efecto Siguiente Especial ↑ de todos los compis aliados en [Digit:1digit Idx=\"4\" ] [ES:Qty Ref=\"4\" S=\"nivel\" P=\"niveles\" ].",
+    "999304": "(El mismo tipo de efecto aumenta para todos los compis aliados).",
+    "999303": "Cuando hay al menos 1 Pokémon que sufre problemas de estado en el bando rival.",
+    "999302": "Cuando no quede ningún Pokémon que sufra problemas de estado en el bando rival.",
+    "999301": "La potencia de este ataque aumenta un 50% cuando hay un [Name:ReferencedMessageTag Idx=\"3\" ] activo.",
+    "999300": "Envenena o paraliza a todos los compis rivales.",
+    "999299": "El movimiento consume [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"punto\" P=\"puntos\" ] menos de la barra de movimientos cuando la zona es [Name:ReferencedMessageTag ].",
+    "999298": "La potencia de este ataque aumenta un 20% cuando el objetivo sufre algún problema de estado.",
+    "999297": "Aumenta el Ataque Especial y la probabilidad del usuario de asestar golpes críticos en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
+    "999296": "Cuanto más haya aumentado [Name:ReferencedMessageTag ] del usuario, más aumenta la potencia de este ataque.",
+    "999282": "Si el Pokémon del usuario usa un movimiento diferente, la potencia de este movimiento vuelve a la normalidad.",
+    "999267": "Anula los aumentos en las características del objetivo, aumenta las mismas características del usuario en igual medida y luego ataca."
 }

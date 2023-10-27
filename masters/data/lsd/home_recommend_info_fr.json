@@ -77,7 +77,7 @@
     "50800004": "Le Combat de Néo-Maître est disponible !",
     "50800005": "Un Combat de Maître spécial est disponible !",
     "50800006": "Un nouvel évènement avec des combats en équipes prédéfinies est en cours !",
-    "50800007": "Un évènement durant lequel vous pouvez participer à des combats Multi en équipes est en cours !",
+    "50800007": "Un évènement durant lequel vous pouvez participer à des combats en coop est en cours !",
     "50800008": "Une visite organisée par Écho, l'ambassadrice touristique !",
     "50800009": "Vous pouvez obtenir des Œufs de la région de Paldea !",
     "50800010": "L'évènement meilleur score est en cours !",
@@ -97,5 +97,18 @@
     "50900008": "Relevez le défi avec des Duos d'Unys !",
     "50900009": "Relevez le défi avec des Duos d'Unys !",
     "50900010": "Joyeuse Journée Pokémon Masters !",
-    "50900011": "Quel Pokémon sortira de l'Œuf ?"
+    "50900011": "Quel Pokémon sortira de l'Œuf ?",
+    "51000001": "Le chapitre « Roches Mystérieuses » a été ajouté !",
+    "51000002": "L'évènement « Qui sera le top du top ? » est en cours !",
+    "51000003": "L'évènement « L'étoile-dragon de Passio » est en cours !",
+    "51000004": "L'évènement meilleur score est en cours !",
+    "51000005": "L'évènement « Les évolutions d'Évoli à Passio ! » est en cours !",
+    "51000006": "Vous pouvez obtenir de l'équipement en unissant vos forces !",
+    "51000007": "L'évènement « Partons à sa recherche ! Let’s Go ! » est en cours !",
+    "51000008": "L'évènement « Histoires d'Évoli » est en cours !",
+    "51000009": "L'évènement « Tellement de possibilités » est en cours !",
+    "51000010": "L'évènement « Combat avec des amis de Kalos » est en cours !",
+    "51000011": "L'évènement « En avant, Team Flare ! » est en cours !",
+    "51000014": "Joyeuse Journée Pokémon Masters !",
+    "51000015": "Un combat ultime est disponible !"
 }

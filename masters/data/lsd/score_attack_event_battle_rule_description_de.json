@@ -2,7 +2,7 @@
     "1": "Je schneller du einen Kampf abschließt, desto\nmehr Punkte kannst du erzielen.",
     "2": "Je höher der verbleibende Gesamtanteil der\nKP-Leisten aller verbündeten Gefährten nach\nAbschluss des Kampfes ist, desto mehr Punkte\nkannst du erzielen.",
     "3": "Je höher die Gesamtzahl der\nStatuswerterhöhungen aller verbündeten\nGefährten am Ende des Kampfes, desto mehr\nPunkte kannst du erzielen. Sollten die KP eines\nGefährten während des Kampfes auf 0 sinken,\nwerden sämtliche Werterhöhungen dieses\nGefährten angerechnet, die bis zu jenem\nZeitpunkt wirksam wurden.",
-    "4": "Je höher die Gesamtzahl der\nStatuswertsenkungen aller verbündeten Gefährten\nam Ende des Kampfes, desto mehr Punkte kannst\ndu erzielen. Sollten die KP eines Gefährten\nwährend des Kampfes auf 0 sinken, werden\nsämtliche Wertsenkungen dieses Gefährten\nangerechnet, die bis zu jenem Zeitpunkt wirksam\nwurden.",
+    "4": "Je höher die Gesamtzahl der\nStatuswertsenkungen aller gegnerischen\nGefährten am Ende des Kampfes, desto mehr\nPunkte kannst du erzielen. Sollten die KP eines\nGefährten während des Kampfes auf 0 sinken,\nwerden sämtliche Wertsenkungen dieses\nGefährten angerechnet, die bis zu jenem\nZeitpunkt wirksam wurden.",
     "5": "Je höher der größte verursachte Schaden eines\nbeliebigen verbündeten Gefährten ausfällt, desto\nmehr Punkte kannst du erzielen.",
     "6": "Je höher die Anzahl an Angriffen aller\nverbündeten Gefährten, die ihr Ziel treffen, desto\nmehr Punkte kannst du erzielen.",
     "7": "Je niedriger die Anzahl an Angriffen aller\nverbündeten Gefährten, die ihr Ziel treffen, desto\nmehr Punkte kannst du erzielen."

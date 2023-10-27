@@ -208,6 +208,7 @@
     "20021400": "Scarhino",
     "20021500": "Farfuret",
     "20021800": "Limagma",
+    "20021900": "Volcaropod",
     "20022400": "Octillery",
     "20022500": "Cadoizo",
     "20022700": "Airmure",
@@ -631,6 +632,8 @@
     "2008350000": "Voltoutou",
     "2008390000": "Monthracite",
     "2008420000": "Dratatin",
+    "2008491100": "Salarsen",
+    "2008491200": "Salarsen",
     "2008530000": "Krakos",
     "2008541100": "Théffroi",
     "2008551100": "Polthégeist",
@@ -672,5 +675,6 @@
     "2009090000": "Chochodile",
     "2009120000": "Coiffeton",
     "2005030041": "Clamiral",
-    "2007240041": "Archéduc"
+    "2007240041": "Archéduc",
+    "20013301": "Évoli"
 }

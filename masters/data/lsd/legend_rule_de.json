@@ -37,5 +37,8 @@
     "legend_rule_5060_003": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
     "legend_rule_5090_001": "Der Gegner erleidet weniger Schaden, wenn\nseine Vert. und Sp.-Vert. erhöht sind.",
     "legend_rule_5090_002": "Veränderungen der Vert. und Sp.-Vert.\nwirken sich stärker auf den Schaden aus.",
-    "legend_rule_5090_003": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent."
+    "legend_rule_5090_003": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
+    "legend_rule_5100_001": "Fallen Enteis KP das erste Mal auf 60 %, hält\nes mit dieser Anzahl an KP durch.",
+    "legend_rule_5100_002": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
+    "legend_rule_5100_003": "Der Schaden von Entei sinkt abhängig von\nder Summe der erhöhten Statuswerte."
 }

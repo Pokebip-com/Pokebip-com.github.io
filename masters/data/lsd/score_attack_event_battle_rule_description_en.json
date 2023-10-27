@@ -2,7 +2,7 @@
     "1": "The faster you complete a battle, the higher score\nyou can obtain.",
     "2": "The higher the total percentage of all allied sync\npairs’ remaining HP when you complete a battle,\nthe higher score you can obtain.",
     "3": "The more times all allied sync pairs’ stats have\nbeen raised in total when you complete a battle,\nthe higher score you can obtain. If a sync pair’s\nHP drops to 0 during battle, their number of stat\nincreases when their HP reaches 0 will\nbe counted.",
-    "4": "The more times all allied sync pairs’ stats have\nbeen lowered in total when you complete a\nbattle, the higher score you can obtain. If a sync\npair’s HP drops to 0 during battle, their number of\nstat decreases when their HP reaches 0 will\nbe counted.",
+    "4": "The more times all opposing sync pairs' stats have\nbeen lowered in total when you complete a\nbattle, the higher score you can obtain. If a sync\npair's HP drops to 0 during battle, their number of\nstat decreases when their HP reaches 0 will\nbe counted.",
     "5": "The higher the maximum damage dealt by any\nally, the higher score you can obtain.",
     "6": "The more total times all allied sync pairs land\nattacks, the higher score you can obtain.",
     "7": "The fewer total times all allied sync pairs land\nattacks, the higher score you can obtain."

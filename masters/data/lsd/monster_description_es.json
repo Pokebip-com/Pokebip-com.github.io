@@ -118,6 +118,7 @@
     "20018700": "Este Pokémon flota en el aire y se deja llevar. Cuando\npercibe que el viento va a cambiar a fuerte, Hoppip\nentrelaza sus hojas con otros Hoppip para hacer\nresistencia y evitar salir volando por la fuerza de la\ncorriente.",
     "20018800": "Skiploom florece cuando la temperatura llega a 18 °C.\nLa apertura de los pétalos varía según la temperatura\nque haga. Por este motivo, la gente lo usa a veces a\nmodo de termómetro.",
     "20018900": "Jumpluff se vale de los cálidos vientos del sur para volar\na tierras lejanas. Si llega a zonas de aire frío en pleno\nvuelo, descenderá y tomará tierra.",
+    "20019600": "Originariamente, carecía de habilidades especiales, pero\nterminó desarrollando facultades premonitorias para\nprotegerse.",
     "20019700": "Un Pokémon de hábitos nocturnos. Sus grandes pupilas\nle permiten distinguir con total claridad a sus presas en\nla más densa oscuridad.",
     "20020300": "Girafarig tiene un cerebro también en la cabeza de la\ncola que reacciona atacando ante olores y sonidos.\nCuando alguien se acerca a este Pokémon por la\nespalda, puede provocar que la cabeza trasera se\nabalance y lo muerda.",
     "20020801": "Steelix vive a mayor profundidad aún que Onix. Se le\nconoce por su tendencia a excavar hacia el interior del\nplaneta. Hay datos que muestran que este Pokémon ha\nllegado a alcanzar 1 km de profundidad.",
@@ -472,6 +473,8 @@
     "2008350000": "Al correr, genera electricidad por la base de la cola.\nEs muy popular entre los pastores de Galar.",
     "2008390000": "Cuando se enzarza en un combate, la montaña de carbón\narde al rojo vivo y esparce chispas que calcinan todo lo\nque le rodea.",
     "2008420000": "Su cuerpo está recubierto de néctar. La piel de la espalda\nes tan dulce que los niños de antaño solían tomarla como\nmerienda.",
+    "2008491100": "Cuando rasga las protuberancias del pecho para generar\nenergía eléctrica, emite un sonido similar al de una\nguitarra, que reverbera en el entorno.",
+    "2008491200": "Posee un órgano en el pecho que genera electricidad.\nAl hacerlo, emite un sonido que recuerda al de un bajo\neléctrico.",
     "2008530000": "Todo su cuerpo es una mole de puro músculo. Utiliza los\ntentáculos para ejecutar técnicas de estrangulamiento con\nuna formidable potencia.",
     "2008551100": "Tiene un sabor y un aroma sumamente singulares.\nSi su Entrenador se hace pleno merecedor de su\nconfianza, le permite catarlo ligeramente.",
     "2008580000": "Para mantener alejados a los demás seres vivos, emana\na su alrededor ondas psíquicas cuya potencia es capaz\nde provocar jaquecas.",
@@ -501,5 +504,6 @@
     "2009230000": "Este Pokémon es normalmente bastante calmado, pero,\nuna vez en combate, derriba a sus rivales con\nmovimientos de una velocidad vertiginosa.",
     "2007451300": "Lycanroc evoluciona a esta forma especial cuando se\nexpone al sol del atardecer. Parece pacífico, pero posee \nun gran espíritu combativo.",
     "2005030041": "De actitud indiferente y muy hábil con la espada, propina\nincesantes y violentos ataques cual maremoto. Se trata de\nuna forma poco común que solo se da en Hisui.",
-    "2007240041": "Almacena aire en el raquis de las plumas, lo que le\npermite aguantar las gélidas temperaturas de Hisui. Un\nclaro ejemplo de cómo el entorno puede influir en la\nevolución de los Pokémon."
+    "2007240041": "Almacena aire en el raquis de las plumas, lo que le\npermite aguantar las gélidas temperaturas de Hisui. Un\nclaro ejemplo de cómo el entorno puede influir en la\nevolución de los Pokémon.",
+    "20013301": "Todavía no se ha esclarecido el motivo por el que es\nel único Pokémon que presenta un código genético\ninestable."
 }

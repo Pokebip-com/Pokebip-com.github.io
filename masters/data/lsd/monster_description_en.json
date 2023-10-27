@@ -118,6 +118,7 @@
     "20018700": "This Pokémon drifts and floats with the wind. If it senses the approach of strong winds, Hoppip links its leaves with other Hoppip to prepare against being blown away.",
     "20018800": "Skiploom’s flower blossoms when the temperature rises above 64 degrees Fahrenheit. How much the flower opens depends on the temperature. For that reason, this Pokémon is sometimes used as a thermometer.",
     "20018900": "Jumpluff rides warm southern winds to cross the sea and fly to foreign lands. The Pokémon descends to the ground when it encounters cold air while it is floating.",
+    "20019600": "Although it originally had no powers at all, people say its precognitive faculties were awakened by its need to protect itself.",
     "20019700": "This Pokémon is nocturnal. Even in total darkness, its large eyes can spot its prey clearly!",
     "20020300": "Girafarig’s rear head also has a brain, but it is small. The rear head attacks in response to smells and sounds. Approaching this Pokémon from behind can cause the rear head to suddenly lash out and bite.",
     "20020801": "Steelix lives even further underground than Onix. This Pokémon is known to dig toward the earth’s core. There are records of this Pokémon reaching a depth of over six-tenths of a mile underground.",
@@ -472,6 +473,8 @@
     "2008350000": "This Pokémon is very popular as a herding dog in the\nGalar region. As it runs, it generates electricity from the\nbase of its tail.",
     "2008390000": "While it’s engaged in battle, its mountain of coal will burn bright red, sending off sparks that scorch the surrounding area.",
     "2008420000": "Its body is covered in sweet nectar, and the skin on its back is especially yummy. Children used to have it as a snack.",
+    "2008491100": "When this Pokémon sounds as if it’s strumming a guitar, it's actually clawing at the protrusions on its chest to generate electricity.",
+    "2008491200": "It has an electrical organ on its chest. While generating electricity, it fills its surroundings with what sounds like the strumming of a bass guitar.",
     "2008530000": "A body made up of nothing but muscle makes the grappling moves this Pokémon performs with its tentacles tremendously powerful.",
     "2008551100": "Trainers Polteageist trusts will be allowed to experience its distinctive flavor and aroma firsthand by sampling just a tiny bit of its tea.",
     "2008580000": "It emits psychic power strong enough to cause headaches as a deterrent to the approach of others.",
@@ -501,5 +504,6 @@
     "2009230000": "This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements.",
     "2007451300": "Bathed in the setting sun of evening, Lycanroc has undergone a special kind of evolution. An intense fighting spirit underlies its calmness.",
     "2005030041": "Hard of heart and deft of blade, this rare form of Samurott is a product of the Pokémon’s evolution in the region of Hisui. Its turbulent blows crash into foes like ceaseless pounding waves.",
-    "2007240041": "The air stored inside the rachises of Decidueye’s feathers insulates the Pokémon against Hisui’s extreme cold. This is firm proof that evolution can be influenced by environment."
+    "2007240041": "The air stored inside the rachises of Decidueye’s feathers insulates the Pokémon against Hisui’s extreme cold. This is firm proof that evolution can be influenced by environment.",
+    "20013301": "The question of why only Eevee has such unstable genes has still not been solved."
 }

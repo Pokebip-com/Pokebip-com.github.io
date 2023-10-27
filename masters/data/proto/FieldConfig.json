@@ -33,6 +33,7 @@
 { "fieldConfigId": "main_story.part_2.release_time", "value": "1632981600" },
 { "fieldConfigId": "main_story.part_3.recommended_level", "value": "30" },
 { "fieldConfigId": "main_story.part_3.release_condition_quest_id", "value": "1030100000010500" },
+{ "fieldConfigId": "main_story.part_4.release_condition_quest_id", "value": "1030100000010500" },
 { "fieldConfigId": "play_count_control_item_set_id", "value": "650000000001" },
 { "fieldConfigId": "quest_session_version", "value": "4" },
 { "fieldConfigId": "random_quest_make_level_max", "value": "230" },

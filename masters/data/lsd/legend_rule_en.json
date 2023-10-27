@@ -37,5 +37,8 @@
     "legend_rule_5060_003": "The opponent’s field effects are permanent.",
     "legend_rule_5090_001": "The opponent takes less damage when its\nDefense or Sp. Def is raised.",
     "legend_rule_5090_002": "Stat changes to Defense and Sp. Def have a\ngreater effect on damage output.",
-    "legend_rule_5090_003": "The opponent’s field effects are permanent."
+    "legend_rule_5090_003": "The opponent’s field effects are permanent.",
+    "legend_rule_5100_001": "The first time Entei’s HP reaches 60% or\nlower, it endures with that HP.",
+    "legend_rule_5100_002": "The opponent’s field effects are permanent.",
+    "legend_rule_5100_003": "Entei gains more damage reduction the\nmore its stats have been raised in total."
 }

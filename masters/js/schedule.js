@@ -20,6 +20,8 @@ let monsterBase;
 let monsterInfos;
 let monsterNames;
 
+let motifTypeName;
+
 let salonGuests;
 
 let trainerBase;
@@ -53,6 +55,7 @@ async function getData() {
     const [
         abilityPanelResponse,
         bannerResponse,
+        challengeToStrongTrainerQuestGroupResponse,
         championBattleEventResponse,
         championBattleEventQuestGroupResponse,
         eventBannerResponse,
@@ -75,12 +78,14 @@ async function getData() {
         bannerTextResponse,
         eventNameResponse,
         monsterNameResponse,
+        motifTypeNameResponse,
         scoutPickupDescrResponse,
         trainerNameResponse,
         trainerVerboseNameResponse,
     ] = await Promise.all([
         fetch("./data/proto/AbilityPanel.json"),
         fetch("./data/proto/Banner.json"),
+        fetch("./data/proto/ChallengeToStrongTrainerQuestGroup.json"),
         fetch("./data/proto/ChampionBattleEvent.json"),
         fetch("./data/proto/ChampionBattleEventQuestGroup.json"),
         fetch("./data/proto/EventBanner.json"),
@@ -103,6 +108,7 @@ async function getData() {
         fetch("./data/lsd/banner_text_fr.json"),
         fetch("./data/lsd/event_name_fr.json"),
         fetch("./data/lsd/monster_name_fr.json"),
+        fetch("./data/lsd/motif_type_name_fr.json"),
         fetch("./data/lsd/scout_pickup_description_fr.json"),
         fetch("./data/lsd/trainer_name_fr.json"),
         fetch("./data/lsd/trainer_verbose_name_fr.json")
@@ -139,6 +145,9 @@ async function getData() {
         });
     });
     eventQuestGroup.push(...champBattleEventQuestGroup.entries);
+
+    let challengeToStrongTrainerQuestGroup = await challengeToStrongTrainerQuestGroupResponse.json();
+    eventQuestGroup.push(...challengeToStrongTrainerQuestGroup.entries);
 
     schedule = await scheduleResponse.json();
     schedule = schedule.entries;
@@ -182,6 +191,8 @@ async function getData() {
 
     trainerExRole = await trainerExRoleResponse.json();
     trainerExRole = trainerExRole.entries;
+
+    motifTypeName = await motifTypeNameResponse.json();
 
     monsterNames = await monsterNameResponse.json();
     trainerNames = await trainerNameResponse.json();
@@ -231,9 +242,7 @@ function getPairPrettyPrint(trainerId) {
 }
 
 function getStarsRarityString(trainerId) {
-    var rarity = trainerInfos[trainerId][0].rarity;
-
-    return `<span style="color: ${starsHex[rarity-1]}; -webkit-text-stroke: thin black;"><b>${"★".repeat(rarity)}</b></span>`;
+    return `<span style="color: ${starsHex[getTrainerRarity(trainerId)-1]}; -webkit-text-stroke: thin black;"><b>${"★".repeat(getTrainerRarity(trainerId))}</b></span>`;
 }
 
 function getTrainerName(id) {
@@ -242,6 +251,55 @@ function getTrainerName(id) {
 
 function getMonsterNameByTrainerId(id) {
     return monsterNames[monsterBase[monsterInfos[trainerInfos[id][0].monsterId][0].monsterBaseId][0].monsterNameId];
+}
+
+function getRoleByTrainerId(id) {
+    const role = trainerInfos[id][0].role;
+
+    switch(role) {
+        case 0:
+            return "Attaquant Physique";
+
+        case 1:
+            return "Attaquant Spécial";
+
+        default:
+            return role_names[trainerInfos[id][0].role];
+    }
+
+}
+
+function getTrainerTypeName(id) {
+    return motifTypeName[trainerInfos[id][0].type];
+}
+
+function getTrainerRarity(id) {
+    return trainerInfos[id][0].rarity;
+}
+
+function hasExUnlocked(id) {
+    return trainerInfos[id][0].exScheduleId !== "NEVER";
+}
+
+function getExRole(id) {
+    const ter = trainerExRole.find(ter => ter.trainerId === id);
+
+    if(ter)
+        return role_names[ter.role]
+
+    return null;
+}
+
+function getTrainerNumber(id) {
+    return Math.trunc(trainerInfos[id][0].number/100);
+}
+
+function getAbilityPanelQty(id) {
+    return abilityPanel.filter(ap => ap.trainerId === id && ap.version === 0).length || 0;
+}
+
+function removeAccents(string) {
+    return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
 function orderByVersion(data) {
@@ -261,6 +319,112 @@ function orderByVersion(data) {
     });
 }
 
+function getDayMonthDate(date) {
+    let dmDate = date.toLocaleDateString('fr-fr', {day: "numeric"});
+
+    if(dmDate === "1") {
+        dmDate += "er";
+    }
+
+    return dmDate + ` ${date.toLocaleDateString('fr-fr', {month: "long"})}`;
+}
+
+function getScoutNewsText(schedule) {
+    let scheduleScouts = scout.filter(sc => sc.scheduleId === schedule.scheduleId);
+
+    if(scheduleScouts.length === 0)
+        return;
+
+    let newsText = "";
+
+    scheduleScouts.forEach(schedScout => {
+        let scoutBanners = banner.filter(b => b.bannerId === schedScout.bannerId);
+
+        scoutBanners.forEach(sb => {
+            newsText += `[h3]${bannerText[sb.text1Id].replaceAll("\n", " ")}`;
+
+            if(sb.text2Id > -1) {
+                newsText += ` ${bannerText[sb.text2Id].replaceAll("\n", " ")}`;
+            }
+
+            newsText += "[/h3]\n\n";
+        });
+
+        //newsText += "[center][img]-[/img][/center]\n\n";
+
+        let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
+
+        if(sPickups.length > 0) {
+            newsText += "[listh]\n" +
+                "[item|nostyle][table]\n" +
+                "\t[tr][th|colspan=3]Duos à l'affiche[/th][th]Rôles[/th][th]Type[/th][th]Potentiel[/th][th]Plateau[/th][/tr]\n";
+
+            sPickups.forEach(sp => {
+                newsText += "\t[tr]\n" +
+                    `\t\t[td]${getTrainerNumber(sp.trainerId)}[/td]\n` +
+                    `\t\t[td][url=/page/jeuxvideo/pokemon-masters/duos/LIEN-DU-DUO]` +
+                    //`[img|w=80]/pages/jeuxvideo/pokemon-masters/images/personnages/bustes/PERSO.png[/img]\n` +
+                    `\t\t[b]${getTrainerName(sp.trainerId).replaceAll("\n", "[br]")}[/b][/url][/td]\n` +
+                    `\t\t[td]` +
+                    //`[img|w=80]/pages/icones/poke/MX/NUMERO.png[/img]\n` +
+                    `\t\t[b]${getMonsterNameByTrainerId(sp.trainerId)}[/b][/td]\n` +
+                    `\t\t[td][type=${removeAccents(getRoleByTrainerId(sp.trainerId).toLowerCase()).replace(" ", "-")}|MX]`;
+
+                let exRole = getExRole(sp.trainerId);
+
+                if(exRole !== null) {
+                    newsText += `[br][type=${removeAccents(exRole.toLowerCase())}-ex|MX]`;
+                }
+
+                newsText += `[/td]\n` +
+                    `\t\t[td][type=${removeAccents(getTrainerTypeName(sp.trainerId).toLowerCase())}|MX][/td]\n` +
+                    `\t\t[td]${"★".repeat(getTrainerRarity(sp.trainerId))}`;
+
+                if(hasExUnlocked(sp.trainerId)) {
+                    newsText += `[br][type=ex|MX]`;
+                }
+
+                newsText += `[/td]\n` +
+                    `\t\t[td]${getAbilityPanelQty(sp.trainerId)} cases[/td]\n` +
+                    `\t[/tr]\n`;
+            });
+
+            newsText += "[/table][/item]\n\n" +
+                "[item|nostyle][table]\n" +
+                "\t[tr][th]Fin de l'affiche[/th][/tr]\n" +
+                `\t[tr][td]${getDayMonthDate(new Date(schedule.endDate*1000-1))}[/td][/tr]\n` +
+                "[/table][/item]\n" +
+                "[/listh]\n\n";
+        }
+    });
+
+    return newsText;
+}
+
+function getLegBatNewsText(schedule) {
+
+}
+
+function getHomeAppealEventNewsText(schedule) {
+
+}
+
+function getEventText(schedule) {
+
+}
+
+function getShopOffersNewsText(schedule) {
+
+}
+
+function getSalonGuestNewsText(schedule) {
+
+}
+
+function getPairChangesNewsText(schedule) {
+
+}
+
 function downloadData() {
     let version = versions.find(v => v.version === versionSelect.value);
     if(version === undefined)
@@ -269,20 +433,12 @@ function downloadData() {
     let newsText = "";
     let startDate = new Date(`${startDateInput.value}T06:00:00Z`);
     let endDate = new Date(`${endDateInput.value}T05:59:59Z`);
-    let endDay = endDate.toLocaleDateString('fr-fr', {day: 'numeric'});
 
     // -------- INTRODUCTION -------- //
     newsText += "[h2]Programme[/h2]\n" +
         "Cet article liste les évènements de Pokémon Masters EX annoncés officiellement pour cette semaine. " +
         "Nous le complèterons au fur et à mesure des annonces ou de l'arrivée des évènements en jeu jusqu'au " +
-        `${endDay}`;
-
-    // "jusqu'au 1er"
-    if(endDay === "1") {
-        newsText += "er";
-    }
-
-    newsText += ` ${endDate.toLocaleDateString('fr-fr', {month: 'long'})}.\n\n` +
+        `${getDayMonthDate(endDate)}.\n\n` +
         "Cliquez sur les dates en rouge dans le calendrier ci-dessous pour accéder rapidement au contenu prévu. " +
         `Les débuts d'évènements se font à ` +
         `${startDate.toLocaleTimeString('fr-fr', {hour: 'numeric', minute: '2-digit'}).replace(":", "h")} ` +
@@ -293,10 +449,10 @@ function downloadData() {
     startDate.setHours(0, 0, 0);
     endDate.setHours(23, 59, 59);
 
-    let startDates = [...new Set(version.schedule.map(s => s.startDate))]
+    let schedule = version.schedule.sort().filter(sched => sched.startDate*1000 >= startDate.getTime() && sched.startDate*1000 <= endDate.getTime());
+    let startDates = [...new Set(schedule.map(s => s.startDate))]
         .sort()
-        .map(t => new Date(t*1000))
-        .filter(sd => sd >= startDate && sd <= endDate);
+        .map(t => new Date(t*1000));
 
     // -------- CALENDRIER -------- //
     newsText += "[listh]\n";
@@ -358,6 +514,52 @@ function downloadData() {
         "[tr][td]JJ/MM[br]JJ/MM[/td][td]<\NOM>[/td][td]1234[/td][/tr]\n" +
         "[/table][/item]\n" +
         "[/listh]\n\n";
+
+    // -------- ÉVÉNEMENTS ET SCOUTS -------- //
+
+    startDates.forEach(timestamp => {
+        treatedEvents = [];
+
+        let date = new Date(timestamp);
+
+        newsText += `[ancre=${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}][h2]${getDayMonthDate(date)}[/h2]\n`;
+
+        schedule.filter(s => s.startDate*1000 === timestamp.getTime()).forEach(sched => {
+
+            switch(sched.type.name) {
+                case "scout":
+
+                    newsText += getScoutNewsText(sched);
+                    break;
+
+                case "event":
+                    if(sched.isLegendaryBattle) {
+                        getLegBatNewsText(sched);
+                        break;
+                    }
+
+                    if(sched.isHomeAppeal) {
+                        getHomeAppealEventNewsText(sched)
+                        break;
+                    }
+
+                    getEventText(sched);
+                    break;
+
+                case "shop":
+                    getShopOffersNewsText(sched);
+                    break;
+
+                case "salon":
+                    getSalonGuestNewsText(sched);
+                    break;
+
+                case "chara":
+                    getPairChangesNewsText(sched);
+                    break;
+            }
+        });
+    });
 
     console.log(newsText);
 }
@@ -597,6 +799,10 @@ function getMonday(d) {
     return new Date(d.setDate(diff));
 }
 
+function getYMDDate(date) {
+    return `${date.getFullYear()}${date.getMonth()}${date.getDate()}`;
+}
+
 function printCalendars(startDates) {
 
     let date = getMonday(startDates[0]);
@@ -695,9 +901,9 @@ function printCalendars(startDates) {
                     calDay.classList.add("calToday");
                 }
 
-                if(startDates.map(sd => sd.getTime()).includes(date.getTime())) {
+                if(startDates.map(sd => getYMDDate(sd)).includes(getYMDDate(date))) {
                     let link = document.createElement("a");
-                    link.href = `#${date.getFullYear()}${date.getMonth()}${date.getDate()}`;
+                    link.href = `#${getYMDDate(date)}`;
                     link.innerHTML = `<b>${date.getDate().toString()}</b>`;
 
                     calDay.classList.add("calClick");
@@ -705,7 +911,7 @@ function printCalendars(startDates) {
                     calDay.appendChild(link);
 
                     if(nextContentBtn.getAttribute("href") === "#" && today < date) {
-                        nextContentBtn.href = `#${date.getFullYear()}${date.getMonth()}${date.getDate()}`;
+                        nextContentBtn.href = `#${getYMDDate(date)}`;
                         nextContentBtn.style.display = "inline-flex";
                     }
                 }
@@ -742,7 +948,7 @@ function setVersionInfos(id) {
         treatedEvents = [];
 
         let date = new Date(timestamp*1000);
-        scheduleDiv.innerHTML += `<h1 id="${date.getFullYear()}${date.getMonth()}${date.getDate()}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(date)}</h1>\n`;
+        scheduleDiv.innerHTML += `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(date)}</h1>\n`;
 
         version.schedule.filter(schedule => schedule.startDate === timestamp).forEach(sched => {
 
@@ -798,7 +1004,7 @@ function setVersionInfos(id) {
                     }
                     printPairChanges(sched.scheduleId);
             }
-        })
+        });
     });
 }
 
