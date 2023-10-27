@@ -573,11 +573,19 @@ function scheduleByVersion() {
     let eventIds = [...new Set(storyQuest.map(sq => sq.scheduleId))];
     let legendaryBattleIds = [...new Set(Object.keys(legendQuestGroupSchedule))];
     let salonGuestsUpdate = [...new Set(salonGuests.map(sg => sg.scheduleId))];
+    let mainStoryUpdate = [...new Set(storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
     let trainingAreaUpdate = [...new Set(storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
 
     for(let i = 0; i < versions.length; i++) {
         versions[i].schedule = schedule
-            .filter(s => (scoutIds.includes(s.scheduleId) || eventIds.includes(s.scheduleId) || legendaryBattleIds.includes(s.scheduleId) || trainingAreaUpdate.includes(s.scheduleId) || salonGuestsUpdate.includes(s.scheduleId) || s.scheduleId.startsWith("chara_") || s.scheduleId.endsWith("_Shop_otoku")) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
+            .filter(s => (scoutIds.includes(s.scheduleId)
+                || eventIds.includes(s.scheduleId)
+                || legendaryBattleIds.includes(s.scheduleId)
+                || mainStoryUpdate.includes(s.scheduleId)
+                || trainingAreaUpdate.includes(s.scheduleId)
+                || salonGuestsUpdate.includes(s.scheduleId)
+                || s.scheduleId.startsWith("chara_")
+                || s.scheduleId.endsWith("_Shop_otoku")) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
             .map(s => {
                 s.isLegendaryBattle = false;
                 s.isHomeAppeal = false;
@@ -600,7 +608,7 @@ function scheduleByVersion() {
                     if(legendaryBattleIds.includes(s.scheduleId)) {
                         s.isLegendaryBattle = true;
                     }
-                    if(trainingAreaUpdate.includes(s.scheduleId)) {
+                    if(trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId)) {
                         s.isHomeAppeal = true;
                     }
                 }
@@ -618,7 +626,7 @@ function scheduleByVersion() {
 }
 
 function printEndDate(timestamp) {
-    let endDate = new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(new Date(timestamp*1000-1));
+    let endDate = timestamp === '32503680000' ? "Permanent" : new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(new Date(timestamp*1000-1));
     scheduleDiv.innerHTML += `<br /><br /><strong>Date de fin : </strong> ${endDate}`;
 }
 
