@@ -126,5 +126,10 @@
     "event_5090_2W_MasterTicket_04": "Roxanne Seasonal\nGuaranteed Ticket Scout",
     "event_5090_2W_MasterTicket_05": "Lenora\nGuaranteed Ticket Scout",
     "event_5090_3W_SuperTicket_02": "Seasonal Featured\nTicket Scout",
-    "event_5100_1W_MasterTicket_04": "Ryuki\nGuaranteed Ticket Scout"
+    "event_5100_1W_MasterTicket_04": "Ryuki\nGuaranteed Ticket Scout",
+    "event_5110_2W_SuperTicket_01": "Viola Seasonal\nFeatured Ticket Scout",
+    "event_5110_2W_MasterTicket_01": "Viola Seasonal\nGuaranteed Ticket Scout",
+    "event_5110_2W_SuperTicket_02": "Sycamore Seasonal\nFeatured Ticket Scout",
+    "event_5110_2W_MasterTicket_02": "Sycamore Seasonal\nGuaranteed Ticket Scout",
+    "event_5110_3W_SuperTicket_02": "Seasonal Featured\nTicket Scout"
 }

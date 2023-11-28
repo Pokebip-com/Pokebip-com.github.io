@@ -126,5 +126,10 @@
     "event_5090_2W_MasterTicket_04": "Reclutamiento garantizado\nde temporada: Petra",
     "event_5090_2W_MasterTicket_05": "Reclutamiento\ngarantizado: Aloe",
     "event_5090_3W_SuperTicket_02": "Reclutamiento favorable\nde compis de temporada",
-    "event_5100_1W_MasterTicket_04": "Reclutamiento\ngarantizado: Olano"
+    "event_5100_1W_MasterTicket_04": "Reclutamiento\ngarantizado: Olano",
+    "event_5110_2W_SuperTicket_01": "Reclutamiento favorable\nde temporada: Violeta",
+    "event_5110_2W_MasterTicket_01": "Reclutamiento garantizado\nde temporada: Violeta",
+    "event_5110_2W_SuperTicket_02": "Reclutamiento favorable\nde temporada: Ciprés",
+    "event_5110_2W_MasterTicket_02": "Reclutamiento garantizado\nde temporada: Ciprés",
+    "event_5110_3W_SuperTicket_02": "Reclutamiento favorable\nde compis de temporada"
 }

@@ -414,5 +414,13 @@
 { "missionGroupId": 2510050, "scheduleId": "5100_4W_Event_EV_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 510050, "itemSetId": "414", "bannerId": 1510007, "u9": 1, "u10": 0 },
 { "missionGroupId": 2510060, "scheduleId": "5100_4W_Event_Egg_Vs_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 510060, "itemSetId": "206118", "bannerId": 1510008, "u9": 1, "u10": 0 },
 { "missionGroupId": 2510070, "scheduleId": "5100_4W_Event_AKU_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 510070, "itemSetId": "414", "bannerId": 1412005, "u9": 1, "u10": 0 },
-{ "missionGroupId": 2510080, "scheduleId": "5100_4W_Event_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 510080, "itemSetId": "414", "bannerId": 1501004, "u9": 1, "u10": 0 }
+{ "missionGroupId": 2510080, "scheduleId": "5100_4W_Event_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 510080, "itemSetId": "414", "bannerId": 1501004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2511010, "scheduleId": "5110_1W_Event_Kyohei_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 511010, "itemSetId": "414", "bannerId": 1511001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2511020, "scheduleId": "5110_1W_Event_AKU_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 511020, "itemSetId": "414", "bannerId": 1504001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2511030, "scheduleId": "5110_1W_Event_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 511030, "itemSetId": "414", "bannerId": 1504005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2511040, "scheduleId": "5110_1W_Event_timeattack_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 511040, "itemSetId": "414", "bannerId": 1504004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2511050, "scheduleId": "5110_2W_Event_Christmas2023_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 511050, "itemSetId": "414", "bannerId": 1511006, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2511060, "scheduleId": "5110_3W_Event_Christmas2022_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 511060, "itemSetId": "414", "bannerId": 1511008, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2511070, "scheduleId": "5110_4W_Event_Mei_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 511070, "itemSetId": "414", "bannerId": 1511011, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2511080, "scheduleId": "5110_4W_Event_Egg_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 511080, "itemSetId": "206118", "bannerId": 1511014, "u9": 1, "u10": 0 }
 ]}

@@ -40,5 +40,8 @@
     "legend_rule_5090_003": "Les effets sur le terrain déclenchés\npar l'ennemi durent tout le combat.",
     "legend_rule_5100_001": "Les PV d'Entei restent à 60 % la première\nfois que ses PV chutent à 60 % ou moins.",
     "legend_rule_5100_002": "Les effets sur le terrain déclenchés\npar l'ennemi durent tout le combat.",
-    "legend_rule_5100_003": "Plus les stats d'Entei sont augmentées,\nplus les dégâts qu'il subit sont réduits."
+    "legend_rule_5100_003": "Plus les stats d'Entei sont augmentées,\nplus les dégâts qu'il subit sont réduits.",
+    "legend_rule_5110_001": "Les PV d'Artikodin restent à 60 %\nla première fois que ses PV\nchutent à 60 % ou moins.",
+    "legend_rule_5110_002": "Quand Artikodin entre en combat, sa Déf.\nest triplée. Lorsque ses PV chutent à 60 %\nou moins, c'est sa Déf. Spé. qui est triplée.",
+    "legend_rule_5110_003": "Lorsque l'adversaire ne souffre pas\nd'un changement de statut négatif,\nsa Défense et sa Déf. Spé. sont triplées."
 }

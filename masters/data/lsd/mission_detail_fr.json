@@ -1,5 +1,5 @@
 {
-    "1": "Connectez-vous une fois par jour pendant [Digit:3digits ] jour[FR:Qty P=\"s\" ].",
+    "1": "Connectez-vous pendant [Digit:3digits ] jours.",
     "2": "Obtenez [Digit:3digits ] Duo[FR:Qty P=\"s différents\" ].",
     "3": "Obtenez : [Name:Item ]",
     "4": "Ayez une équipe de Force [Digit:6digits ] ou plus.",

@@ -2,5 +2,6 @@
 { "championBattleEventOpeningId": 150300001, "championBattleEventId": 10000002, "scheduleId": "5030_2W_Event_ChampionBattle" },
 { "championBattleEventOpeningId": 150500001, "championBattleEventId": 10000004, "scheduleId": "5050_5W_Event_ChampionBattle" },
 { "championBattleEventOpeningId": 150800001, "championBattleEventId": 10000005, "scheduleId": "5080_1W_Event_ChampionBattle" },
-{ "championBattleEventOpeningId": 150800002, "championBattleEventId": 10000006, "scheduleId": "5080_3W_Event_ChampionBattle" }
+{ "championBattleEventOpeningId": 150800002, "championBattleEventId": 10000006, "scheduleId": "5080_3W_Event_ChampionBattle" },
+{ "championBattleEventOpeningId": 151100001, "championBattleEventId": 10000007, "scheduleId": "5110_3W_Event_ChampionBattle" }
 ]}

@@ -126,5 +126,10 @@
     "event_5090_2W_MasterTicket_04": "Unicerca festiva con\nUnità garantita: Petra",
     "event_5090_2W_MasterTicket_05": "Unicerca con Unità\ngarantita: Aloé",
     "event_5090_3W_SuperTicket_02": "Unicerca festiva con\nUnità in evidenza",
-    "event_5100_1W_MasterTicket_04": "Unicerca con Unità\ngarantita: Morel"
+    "event_5100_1W_MasterTicket_04": "Unicerca con Unità\ngarantita: Morel",
+    "event_5110_2W_SuperTicket_01": "Unicerca festiva:\nVioletta in evidenza",
+    "event_5110_2W_MasterTicket_01": "Unicerca festiva con\nUnità garantita: Violetta",
+    "event_5110_2W_SuperTicket_02": "Unicerca festiva:\nPlatan in evidenza",
+    "event_5110_2W_MasterTicket_02": "Unicerca festiva con\nUnità garantita: Platan",
+    "event_5110_3W_SuperTicket_02": "Unicerca festiva con\nUnità in evidenza"
 }

@@ -94,5 +94,8 @@
 { "questGroupId": 2146646690, "days": 30, "u3": 3 },
 { "questGroupId": -1948322606, "days": 30, "u3": 3 },
 { "questGroupId": -1948321606, "days": 30, "u3": 3 },
-{ "questGroupId": -1948320606, "days": 30, "u3": 3 }
+{ "questGroupId": -1948320606, "days": 30, "u3": 3 },
+{ "questGroupId": -1748522606, "days": 30, "u3": 3 },
+{ "questGroupId": -1748521606, "days": 30, "u3": 3 },
+{ "questGroupId": -1748520606, "days": 30, "u3": 3 }
 ]}

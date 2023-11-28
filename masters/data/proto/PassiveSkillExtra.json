@@ -226,6 +226,16 @@
 { "passiveId": 17064801, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 17066701, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 17067401, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17068401, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17068402, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17068403, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17068404, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17068405, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17068406, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17068407, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17068408, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17068409, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 17068501, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 18041401, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 18041402, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 18041403, "u2": 0, "u3": 1, "type": -1 },
@@ -373,6 +383,7 @@
 { "passiveId": 28011801, "u2": 0, "u3": 0, "type": -1 },
 { "passiveId": 28011901, "u2": 0, "u3": 0, "type": -1 },
 { "passiveId": 28012001, "u2": 0, "u3": 0, "type": -1 },
+{ "passiveId": 28012101, "u2": 0, "u3": 0, "type": -1 },
 { "passiveId": 28020101, "u2": 0, "u3": 0, "type": -1 },
 { "passiveId": 28020201, "u2": 0, "u3": 0, "type": -1 },
 { "passiveId": 28020301, "u2": 0, "u3": 0, "type": -1 },
@@ -1058,5 +1069,7 @@
 { "passiveId": 99011401, "u2": 0, "u3": 1, "type": -1 },
 { "passiveId": 99011701, "u2": 0, "u3": 0, "type": -1 },
 { "passiveId": 99013401, "u2": 0, "u3": 1, "type": -1 },
-{ "passiveId": 99013701, "u2": 0, "u3": 1, "type": -1 }
+{ "passiveId": 99013701, "u2": 0, "u3": 1, "type": -1 },
+{ "passiveId": 99014501, "u2": 0, "u3": 0, "type": 11 },
+{ "passiveId": 99014502, "u2": 0, "u3": 0, "type": 7 }
 ]}

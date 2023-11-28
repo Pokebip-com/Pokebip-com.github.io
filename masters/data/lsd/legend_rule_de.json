@@ -40,5 +40,8 @@
     "legend_rule_5090_003": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
     "legend_rule_5100_001": "Fallen Enteis KP das erste Mal auf 60 %, hält\nes mit dieser Anzahl an KP durch.",
     "legend_rule_5100_002": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
-    "legend_rule_5100_003": "Der Schaden von Entei sinkt abhängig von\nder Summe der erhöhten Statuswerte."
+    "legend_rule_5100_003": "Der Schaden von Entei sinkt abhängig von\nder Summe der erhöhten Statuswerte.",
+    "legend_rule_5110_001": "Fallen Arktos’ KP das erste Mal auf 60 %,\nhält es mit dieser Anzahl an KP durch.",
+    "legend_rule_5110_002": "Betritt Arktos den Kampf, wird seine Vert.\nverdreifacht. Fallen seine KP auf 60 %, wird\nder Vert.-Wert mit Sp.-Vert. getauscht.",
+    "legend_rule_5110_003": "Wenn der Gegner nicht von einer negativen\nStatusveränderung betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht."
 }

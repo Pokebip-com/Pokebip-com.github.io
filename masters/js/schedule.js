@@ -2,10 +2,20 @@ let abilityPanel;
 let banner;
 let eventBannerList;
 let eventQuestGroup;
+let itemExchange;
 let homeEventAppeal;
 let legendQuestGroup;
 let legendQuestGroupSchedule;
+
 let schedule;
+let scoutIds;
+let eventIds;
+let loginBonusIds;
+let legendaryBattleIds;
+let salonGuestsUpdate;
+let mainStoryUpdate;
+let trainingAreaUpdate;
+
 let scout;
 let scoutPickup;
 let storyQuest;
@@ -14,6 +24,11 @@ let versions;
 
 let bannerText;
 let eventName;
+let itemSet;
+let loginBonus;
+let loginBonusReward;
+let loginBonusName;
+let jukeboxMusicName;
 let scoutPickupDescr;
 
 let monsterBase;
@@ -61,9 +76,12 @@ async function getData() {
         eventBannerResponse,
         eventQuestGroupResponse,
         homeEventAppealResponse,
+        itemExchangeResponse,
         itemSetResponse,
         legendQuestGroupResponse,
         legendQuestGroupScheduleResponse,
+        loginBonusResponse,
+        loginBonusRewardResponse,
         monsterResponse,
         monsterBaseResponse,
         salonGuestResponse,
@@ -77,6 +95,8 @@ async function getData() {
         villaQuestGroupResponse,
         bannerTextResponse,
         eventNameResponse,
+        jukeboxMusicNameResponse,
+        loginBonusNameResponse,
         monsterNameResponse,
         motifTypeNameResponse,
         scoutPickupDescrResponse,
@@ -91,9 +111,12 @@ async function getData() {
         fetch("./data/proto/EventBanner.json"),
         fetch("./data/proto/EventQuestGroup.json"),
         fetch("./data/proto/HomeEventAppeal.json"),
+        fetch("./data/proto/ItemExchange.json"),
         fetch("./data/proto/ItemSet.json"),
         fetch("./data/proto/LegendQuestGroup.json"),
         fetch("./data/proto/LegendQuestGroupSchedule.json"),
+        fetch("./data/proto/LoginBonus.json"),
+        fetch("./data/proto/LoginBonusReward.json"),
         fetch("./data/proto/Monster.json"),
         fetch("./data/proto/MonsterBase.json"),
         fetch("./data/proto/SalonGuest.json"),
@@ -107,6 +130,8 @@ async function getData() {
         fetch("./data/proto/VillaQuestGroup.json"),
         fetch("./data/lsd/banner_text_fr.json"),
         fetch("./data/lsd/event_name_fr.json"),
+        fetch("./data/lsd/jukebox_music_name_fr.json"),
+        fetch("./data/lsd/login_bonus_name_fr.json"),
         fetch("./data/lsd/monster_name_fr.json"),
         fetch("./data/lsd/motif_type_name_fr.json"),
         fetch("./data/lsd/scout_pickup_description_fr.json"),
@@ -149,9 +174,6 @@ async function getData() {
     let challengeToStrongTrainerQuestGroup = await challengeToStrongTrainerQuestGroupResponse.json();
     eventQuestGroup.push(...challengeToStrongTrainerQuestGroup.entries);
 
-    schedule = await scheduleResponse.json();
-    schedule = schedule.entries;
-
     scout = await scoutResponse.json();
     scout = scout.entries;
 
@@ -161,12 +183,48 @@ async function getData() {
     storyQuest = await storyQuestResponse.json();
     storyQuest = storyQuest.entries;
 
+    const salonGuestJSON = await salonGuestResponse.json();
+    salonGuests = salonGuestJSON.entries;
+
+    const legendsQuestGroupJSON = await legendQuestGroupResponse.json();
+    legendQuestGroup = getBySpecificID(legendsQuestGroupJSON.entries, "questGroupId");
+
+    const legendsQuestGroupScheduleJSON = await legendQuestGroupScheduleResponse.json();
+    legendQuestGroupSchedule = getBySpecificID(legendsQuestGroupScheduleJSON.entries, "scheduleId");
+
+    schedule = await scheduleResponse.json();
+    getSchedule();
+
     bannerText = await bannerTextResponse.json();
 
     const eventBannerJSON = await eventBannerResponse.json();
     eventBannerList = eventBannerJSON.entries;
 
     eventName = await eventNameResponse.json();
+
+    const itemExchangeJSON = await itemExchangeResponse.json();
+    itemExchange = itemExchangeJSON.entries;
+
+    const lastScheduleStartDate = Math.max(...new Set(schedule.map(s => s.startDate*1)));
+
+    const loginBonusJSON = await loginBonusResponse.json();
+    loginBonus = loginBonusJSON.entries.filter(lb => lb.startDate <= lastScheduleStartDate).map(lb => {
+        lb.scheduleId = lb.loginBonusId;
+        lb.startDate = lb.startDate.toString();
+        lb.endDate = lb.endDate.toString();
+        return lb;
+    });
+
+    loginBonusIds = loginBonus.map(lb => lb.loginBonusId);
+
+    loginBonusName = await loginBonusNameResponse.json();
+
+    schedule.push(...loginBonus);
+
+    const loginBonusRewardJSON = await loginBonusRewardResponse.json();
+    loginBonusReward = loginBonusRewardJSON.entries;
+
+    jukeboxMusicName = await jukeboxMusicNameResponse.json();
 
     const homeEventAppealJSON = await homeEventAppealResponse.json();
     homeEventAppeal = homeEventAppealJSON.entries;
@@ -178,9 +236,6 @@ async function getData() {
 
     const monstersBaseJSON = await monsterBaseResponse.json();
     monsterBase = getBySpecificID(monstersBaseJSON.entries, "monsterBaseId");
-
-    const salonGuestJSON = await salonGuestResponse.json();
-    salonGuests = salonGuestJSON.entries;
 
     trainerInfosArray = await trainerResponse.json();
     trainerInfosArray = trainerInfosArray.entries;
@@ -199,13 +254,7 @@ async function getData() {
     trainerVerboseNames = await trainerVerboseNameResponse.json();
 
     const itemSetJSON = await itemSetResponse.json();
-    itemSet = getBySpecificID(itemSetJSON.entries, "itemSetId");
-
-    const legendsQuestGroupJSON = await legendQuestGroupResponse.json();
-    legendQuestGroup = getBySpecificID(legendsQuestGroupJSON.entries, "questGroupId");
-
-    const legendsQuestGroupScheduleJSON = await legendQuestGroupScheduleResponse.json();
-    legendQuestGroupSchedule = getBySpecificID(legendsQuestGroupScheduleJSON.entries, "scheduleId");
+    itemSet = itemSetJSON.entries;
 }
 
 async function getCustomJSON() {
@@ -217,6 +266,28 @@ async function getCustomJSON() {
         .catch(error => console.log(error));
 
     versions = await versionsResponse.json().then(orderByVersion);
+}
+
+function getSchedule() {
+
+    scoutIds = scout.map(s => s.scheduleId);
+    eventIds = [...new Set(storyQuest.map(sq => sq.scheduleId))];
+    legendaryBattleIds = [...new Set(Object.keys(legendQuestGroupSchedule))];
+    salonGuestsUpdate = [...new Set(salonGuests.map(sg => sg.scheduleId))];
+    mainStoryUpdate = [...new Set(storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
+    trainingAreaUpdate = [...new Set(storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
+
+    schedule = schedule.entries.filter(s =>
+        scoutIds.includes(s.scheduleId)
+        || eventIds.includes(s.scheduleId)
+        || legendaryBattleIds.includes(s.scheduleId)
+        || mainStoryUpdate.includes(s.scheduleId)
+        || trainingAreaUpdate.includes(s.scheduleId)
+        || salonGuestsUpdate.includes(s.scheduleId)
+        || s.scheduleId.startsWith("chara_")
+        || s.scheduleId.endsWith("_Shop_otoku")
+        || s.scheduleId.endsWith("_musiccoin_FOREVER")
+    );
 }
 
 class Version {
@@ -350,7 +421,7 @@ function getScoutNewsText(schedule) {
             newsText += "[/h3]\n\n";
         });
 
-        //newsText += "[center][img]-[/img][/center]\n\n";
+        newsText += "[center][img]-[/img][/center]\n\n";
 
         let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
 
@@ -363,10 +434,10 @@ function getScoutNewsText(schedule) {
                 newsText += "\t[tr]\n" +
                     `\t\t[td]${getTrainerNumber(sp.trainerId)}[/td]\n` +
                     `\t\t[td][url=/page/jeuxvideo/pokemon-masters/duos/LIEN-DU-DUO]` +
-                    //`[img|w=80]/pages/jeuxvideo/pokemon-masters/images/personnages/bustes/PERSO.png[/img]\n` +
+                    `[img|w=80]/pages/jeuxvideo/pokemon-masters/images/personnages/bustes/PERSO.png[/img]\n` +
                     `\t\t[b]${getTrainerName(sp.trainerId).replaceAll("\n", "[br]")}[/b][/url][/td]\n` +
                     `\t\t[td]` +
-                    //`[img|w=80]/pages/icones/poke/MX/NUMERO.png[/img]\n` +
+                    `[img|w=80]/pages/icones/poke/MX/NUMERO.png[/img]\n` +
                     `\t\t[b]${getMonsterNameByTrainerId(sp.trainerId)}[/b][/td]\n` +
                     `\t\t[td][type=${removeAccents(getRoleByTrainerId(sp.trainerId).toLowerCase()).replace(" ", "-")}|MX]`;
 
@@ -409,7 +480,7 @@ function getHomeAppealEventNewsText(schedule) {
 
 }
 
-function getEventText(schedule) {
+function getEventNewsText(schedule) {
 
 }
 
@@ -422,6 +493,10 @@ function getSalonGuestNewsText(schedule) {
 }
 
 function getPairChangesNewsText(schedule) {
+
+}
+
+function getLoginBonusNewsText(schedule) {
 
 }
 
@@ -501,7 +576,7 @@ function downloadData() {
 
         newsText += "[/tr]\n";
 
-    } while(date.getMonth() <= endDate.getMonth() && date.getDate() <= endDate.getDate());
+    } while(date <= endDate);
 
     // -------- DIAMANTS RESTANTS -------- //
     newsText += "[/table][/item]\n" +
@@ -526,7 +601,7 @@ function downloadData() {
 
         schedule.filter(s => s.startDate*1000 === timestamp.getTime()).forEach(sched => {
 
-            switch(sched.type.name) {
+            switch(sched.scheduleType.name) {
                 case "scout":
 
                     newsText += getScoutNewsText(sched);
@@ -543,7 +618,7 @@ function downloadData() {
                         break;
                     }
 
-                    getEventText(sched);
+                    getEventNewsText(sched);
                     break;
 
                 case "shop":
@@ -557,9 +632,22 @@ function downloadData() {
                 case "chara":
                     getPairChangesNewsText(sched);
                     break;
+
+                case "loginBonus":
+                    getLoginBonusNewsText(sched);
+                    break;
             }
         });
     });
+
+    // -------- FOOTER -------- //
+    newsText += `\n\n` +
+        `[h2]Liens utiles[/h2]\n` +
+        `[b][>>] [url=/page/jeuxvideo/pokemon-masters/accueil]Dossier Pokémon Masters EX[/url][/b]\n` +
+        `[b][>>] [url=/page/jeuxvideo/pokemon-masters/archive-events]Archive des événements[/url][/b]\n\n` +
+        `[color=grey]Sources : Annonces officielles et datamine de Pokémon Masters EX\n` +
+        `Discord et Reddit : r/PokemonMasters\n` +
+        `Twitter : Absol-utely (@absolutelypm)[/color]`
 
     console.log(newsText);
 }
@@ -569,41 +657,35 @@ function scheduleByVersion() {
         versionSelect.remove(0);
     }
 
-    let scoutIds = scout.map(s => s.scheduleId);
-    let eventIds = [...new Set(storyQuest.map(sq => sq.scheduleId))];
-    let legendaryBattleIds = [...new Set(Object.keys(legendQuestGroupSchedule))];
-    let salonGuestsUpdate = [...new Set(salonGuests.map(sg => sg.scheduleId))];
-    let mainStoryUpdate = [...new Set(storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
-    let trainingAreaUpdate = [...new Set(storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
-
     for(let i = 0; i < versions.length; i++) {
-        versions[i].schedule = schedule
-            .filter(s => (scoutIds.includes(s.scheduleId)
-                || eventIds.includes(s.scheduleId)
-                || legendaryBattleIds.includes(s.scheduleId)
-                || mainStoryUpdate.includes(s.scheduleId)
-                || trainingAreaUpdate.includes(s.scheduleId)
-                || salonGuestsUpdate.includes(s.scheduleId)
-                || s.scheduleId.startsWith("chara_")
-                || s.scheduleId.endsWith("_Shop_otoku")) && s.startDate >= versions[i].releaseTimestamp && (i === 0 || s.startDate < versions[i-1].releaseTimestamp))
+        versions[i].schedule = schedule.filter(s =>
+                s.startDate >= versions[i].releaseTimestamp
+                && (i === 0 || s.startDate < versions[i-1].releaseTimestamp)
+            )
             .map(s => {
                 s.isLegendaryBattle = false;
                 s.isHomeAppeal = false;
 
                 if(scoutIds.includes(s.scheduleId)) {
-                    s.type = { "name" : "scout", "priority": "10" };
+                    s.scheduleType = { "name" : "scout", "priority": "10" };
                 }
                 else if(salonGuestsUpdate.includes(s.scheduleId)) {
-                    s.type = { "name" : "salon", "priority": "30" };
+                    s.scheduleType = { "name" : "salon", "priority": "30" };
                 }
                 else if(s.scheduleId.startsWith("chara_")) {
-                    s.type = { "name" : "chara", "priority": "40" };
+                    s.scheduleType = { "name" : "chara", "priority": "40" };
                 }
                 else if(s.scheduleId.endsWith("_Shop_otoku")) {
-                    s.type = { "name" : "shop", "priority": "50" };
+                    s.scheduleType = { "name" : "shop", "priority": "50" };
+                }
+                else if(s.scheduleId.endsWith("_musiccoin_FOREVER")) {
+                    s.scheduleType = { "name" : "music", "priority": "60" };
+                }
+                else if(loginBonusIds.includes(s.scheduleId)) {
+                    s.scheduleType = { "name" : "loginBonus", "priority": "70" };
                 }
                 else {
-                    s.type = { "name" : "event", "priority": "20" };
+                    s.scheduleType = { "name" : "event", "priority": "20" };
 
                     if(legendaryBattleIds.includes(s.scheduleId)) {
                         s.isLegendaryBattle = true;
@@ -614,7 +696,7 @@ function scheduleByVersion() {
                 }
                 return s;
             })
-            .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.type.priority.localeCompare(b.type.priority));
+            .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.scheduleType.priority.localeCompare(b.scheduleType.priority));
 
         let date = new Date(versions[i].releaseTimestamp*1000);
 
@@ -713,7 +795,7 @@ function printEvents(schedule) {
     });
 }
 
-function printPairChanges(scheduleId) {
+async function printPairChanges(scheduleId) {
 
     // Ajout de cases dans le plateau
     let panelChanges = [...new Set(abilityPanel.filter(ap => ap.scheduleId === scheduleId).map(ap => ap.trainerId))].map(tid => { return {"trainerId" : tid, "type": "panel", "text" : "Ajout de cases dans le plateau duo-gemme."}; });
@@ -745,9 +827,6 @@ function printPairChanges(scheduleId) {
 
         scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrint(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
     }
-
-
-
 }
 
 function printSalonGuest(scheduleId) {
@@ -797,6 +876,90 @@ function printHomeAppealEvent(schedule) {
 function printLegBat(schedule) {
     let banners = banner.filter(b => b.bannerId === legendQuestGroup[legendQuestGroupSchedule[schedule.scheduleId][0].questGroupId][0].bannerId);
     banners.forEach(ban => printEventBanner(ban, schedule));
+}
+
+function printNewMusics(scheduleId) {
+    let itemIds = itemExchange.filter(ie => ie.scheduleId === scheduleId).map(ie => ie.itemId);
+
+    scheduleDiv.innerHTML += "<b>Ajout de musiques dans le Jukebox :</b>";
+    scheduleDiv.innerHTML += "<ul>";
+
+    itemIds.forEach(itemId => {
+        scheduleDiv.innerHTML += `<li>${jukeboxMusicName[itemId]}</li>`;
+    });
+
+    scheduleDiv.innerHTML += "</ul>";
+}
+
+function printLoginBonus(loginBonus) {
+
+    if(loginBonus.bannerId > -1) {
+        let lbBanner = banner.filter(b => b.bannerId === loginBonus.bannerId);
+
+        lbBanner.forEach(ban => printEventBanner(ban, loginBonus));
+    }
+
+    else {
+        let entryStr = `<h3>`;
+
+        switch (loginBonus.type) {
+            // General Log-In Bonus
+            case 0:
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Bonus de connexion standard";
+                entryStr += "</h3>\n";
+                entryStr += "Réinitialisation du bonus de connexion normal.\n";
+                break;
+
+            // Other Log-In Bonus
+            case 1:
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Bonus de connexion spécial";
+                entryStr += "</h3>\n";
+                entryStr += "Autre bonus de connexion, non-identifié.\n";
+                break;
+
+            // Compensation
+            case 2:
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Compensation";
+                entryStr += "</h3>\n";
+                entryStr += "Compensation pour un problème.\n";
+                break;
+
+            // Bonus Retour
+            case 3:
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Bonus Retour";
+                entryStr += "</h3>\n";
+                entryStr += "Campagne de retour.\n";
+                break;
+
+            // Packs Diamants Journaliers
+            case 4:
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Pack de Diamants journaliers";
+                entryStr += "</h3>\n";
+                entryStr += "Pack de diamants journaliers.\n";
+                break;
+
+            // Journée Pokémon Masters
+            case 5:
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Bonus de connexion JPM";
+                entryStr += "</h3>\n";
+                entryStr += "Bonus de connexion pour la Journée Pokémon Masters.\n";
+                break;
+        }
+
+        scheduleDiv.innerHTML += entryStr;
+        printEndDate(loginBonus.endDate);
+    }
+
+    // scheduleDiv.innerHTML += "<br><br><b>RÉCOMPENSES:</b>";
+    // loginBonusReward.filter(lbr => lbr.rewardId === loginBonus.rewardId).sort((a, b) => a.day - b.day).forEach(lbr => {
+    //     scheduleDiv.innerHTML += `<br><b>Jour ${lbr.day}:</b> `;
+    //     let sets = itemSet.filter(is => is.itemSetId === lbr.itemSetId)[0];
+    //     let i = 1;
+    //     while(sets[`item${i}`] && sets[`item${i}`] !== "0") {
+    //         scheduleDiv.innerHTML += `${sets[`item${i}`]} x${sets[`item${i}Quantity`]}`;
+    //         i++;
+    //     }
+    // });
 }
 
 function getMonday(d) {
@@ -934,7 +1097,7 @@ function printCalendars(startDates) {
 
         calTable.appendChild(calDaysTr);
 
-    } while(date.getMonth() <= endDate.getMonth());
+    } while(date.getMonth() <= endDate.getMonth() && date.getFullYear() <= endDate.getFullYear());
 }
 
 function setVersionInfos(id) {
@@ -945,22 +1108,21 @@ function setVersionInfos(id) {
 
     scheduleDiv.innerHTML = "";
 
-    let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag;
+    let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag, musicFlag, loginBonusFlag;
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
     printCalendars(startDates.map(t => new Date(t*1000)));
 
     startDates.forEach(timestamp => {
 
-        scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = true;
+        scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = musicFlag = loginBonusFlag = true;
         treatedEvents = [];
 
         let date = new Date(timestamp*1000);
         scheduleDiv.innerHTML += `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(date)}</h1>\n`;
 
         version.schedule.filter(schedule => schedule.startDate === timestamp).forEach(sched => {
-
-            switch(sched.type.name) {
+            switch(sched.scheduleType.name) {
                 case "scout":
                     if(scoutFlag) {
                         scheduleDiv.innerHTML += "<h2>Appels Duo</h2>";
@@ -1011,6 +1173,23 @@ function setVersionInfos(id) {
                         charaFlag = false;
                     }
                     printPairChanges(sched.scheduleId);
+                    break;
+
+                case "music":
+                    if(musicFlag) {
+                        scheduleDiv.innerHTML += "<h2>Jukebox</h2>";
+                        musicFlag = false;
+                    }
+                    printNewMusics(sched.scheduleId);
+                    break;
+
+                case "loginBonus":
+                    if(loginBonusFlag) {
+                        scheduleDiv.innerHTML += "<h2>Bonus de connexion</h2>";
+                        loginBonusFlag = false;
+                    }
+                    printLoginBonus(sched);
+                    break;
             }
         });
     });
@@ -1062,6 +1241,7 @@ async function init() {
 
     scheduleByVersion();
 
+
     versionSelect.onchange = function() {
         setVersion(versionSelect.value);
     };
@@ -1077,13 +1257,15 @@ async function init() {
 
     //downloadData()
 
-    //const leftSchedule = schedule.filter(s => s.startDate >= versions[0].releaseTimestamp && !versions[0].schedule.includes(s));
-    //console.log(leftSchedule);
+    // const leftSchedule = schedule
+    //     .filter(s => s.startDate >= versions[0].releaseTimestamp && !versions[0].schedule.includes(s))
+    //     .sort((a, b) => a.startDate.localeCompare(b.startDate));
+    // console.log(leftSchedule);
 }
 
 scrollTopBtn.addEventListener('click', () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-})
+});
 
 init();

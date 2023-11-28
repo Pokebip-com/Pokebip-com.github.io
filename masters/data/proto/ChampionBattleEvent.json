@@ -2,5 +2,6 @@
 { "championBattleEventId": 10000002, "region": "champion_region_group_1000001", "bannerId": 1503009, "u4": 100, "bgmName": "bgm_field_victoryroad" },
 { "championBattleEventId": 10000004, "region": "champion_region_group_1000001", "bannerId": 1505007, "u4": 100, "bgmName": "bgm_field_victoryroad" },
 { "championBattleEventId": 10000005, "region": "champion_region_group_1000001", "bannerId": 1508012, "u4": 100, "bgmName": "bgm_field_victoryroad" },
-{ "championBattleEventId": 10000006, "region": "champion_region_group_1000001", "bannerId": 1508013, "u4": 100, "bgmName": "bgm_field_victoryroad" }
+{ "championBattleEventId": 10000006, "region": "champion_region_group_1000001", "bannerId": 1508013, "u4": 100, "bgmName": "bgm_field_victoryroad" },
+{ "championBattleEventId": 10000007, "region": "champion_region_group_1000001", "bannerId": 1511010, "u4": 100, "bgmName": "bgm_field_victoryroad" }
 ]}

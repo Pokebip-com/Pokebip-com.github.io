@@ -126,5 +126,10 @@
     "event_5090_2W_MasterTicket_04": "원규 시즌 한정 확정 B서치",
     "event_5090_2W_MasterTicket_05": "알로에 확정 버디즈서치",
     "event_5090_3W_SuperTicket_02": "시즌 한정 출현율업 B서치",
-    "event_5100_1W_MasterTicket_04": "용규 확정 버디즈서치"
+    "event_5100_1W_MasterTicket_04": "용규 확정 버디즈서치",
+    "event_5110_2W_SuperTicket_01": "비올라 시즌 한정 출현율업 B서치",
+    "event_5110_2W_MasterTicket_01": "비올라 시즌 한정 확정 B서치",
+    "event_5110_2W_SuperTicket_02": "플라타느 시즌 한정 출현율업 B서치",
+    "event_5110_2W_MasterTicket_02": "플라타느 시즌 한정 확정 B서치",
+    "event_5110_3W_SuperTicket_02": "시즌 한정 출현율업 B서치"
 }

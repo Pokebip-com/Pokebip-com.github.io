@@ -126,5 +126,10 @@
     "event_5090_2W_MasterTicket_04": "Appel Duo saisonn.\ngaranti : Roxanne !",
     "event_5090_2W_MasterTicket_05": "Appel Duo garanti :\nAloé !",
     "event_5090_3W_SuperTicket_02": "Appel Duo\nsaisonnier taux ↑",
-    "event_5100_1W_MasterTicket_04": "Appel Duo garanti :\nSolane !"
+    "event_5100_1W_MasterTicket_04": "Appel Duo garanti :\nSolane !",
+    "event_5110_2W_SuperTicket_01": "Appel Duo saisonn.\ntaux ↑ : Violette !",
+    "event_5110_2W_MasterTicket_01": "Appel Duo saisonn.\ngaranti : Violette !",
+    "event_5110_2W_SuperTicket_02": "Appel Duo saisonn.\ntaux ↑ : Platane !",
+    "event_5110_2W_MasterTicket_02": "Appel Duo saisonn.\ngaranti : Platane !",
+    "event_5110_3W_SuperTicket_02": "Appel Duo\nsaisonnier taux ↑"
 }

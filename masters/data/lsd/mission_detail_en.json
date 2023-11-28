@@ -1,5 +1,5 @@
 {
-    "1": "Log in ×[Digit:3digits ] (once per day)",
+    "1": "Log in [Digit:3digits ] [EN:Qty S=\"day\" P=\"days\" ]",
     "2": "Befriend different sync pairs ×[Digit:3digits ]",
     "3": "Obtain: [Name:Item ]",
     "4": "Achieve team strength of [Digit:6digits ] or higher",
