@@ -110,7 +110,7 @@ function populateSelect() {
     while(syncPairSelect.length > 0) {
         syncPairSelect.remove(0);
     }
-    let optionData = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY").map(t => {
+    let optionData = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER").map(t => {
         let data = {};
         data.value = t.trainerId;
         data.text = getPairName(t.trainerId);
