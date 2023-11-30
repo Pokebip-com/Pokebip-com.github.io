@@ -1,16 +1,14 @@
 let exRoleDiv;
 
 let monsterBase;
-let monsterInfos;
+let monster;
 let monsterNames;
 
 let trainerBase;
 let trainerExRole;
-let trainerInfos;
+let trainer;
 let trainerNames;
 let trainerVerboseNames;
-
-const role_names = ["Attaquant (Physique)", "Attaquant (Spécial)", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
 
 async function getData() {
     const [
@@ -36,16 +34,16 @@ async function getData() {
         .catch(error => console.log(error));
 
     const monstersJSON = await monsterResponse.json();
-    monsterInfos = getBySpecificID(monstersJSON.entries, "monsterId");
+    monster = monstersJSON.entries;
 
     const monstersBaseJSON = await monsterBaseResponse.json();
-    monsterBase = getBySpecificID(monstersBaseJSON.entries, "monsterBaseId");
+    monsterBase = monstersBaseJSON.entries;
 
     const trainersJSON = await trainerResponse.json();
-    trainerInfos = getBySpecificID(trainersJSON.entries, "trainerId");
+    trainer = trainersJSON.entries;
 
     const trainersBaseJSON = await trainerBaseResponse.json();
-    trainerBase = getBySpecificID(trainersBaseJSON.entries, "id");
+    trainerBase = trainersBaseJSON.entries;
 
     const trainerExRoleJSON = await trainerExRoleResponse.json();
     trainerExRole = trainerExRoleJSON.entries.sort((a, b) => b.scheduleId.localeCompare(a.scheduleId));
@@ -53,22 +51,6 @@ async function getData() {
     monsterNames = await monsterNameResponse.json();
     trainerNames = await trainerNameResponse.json();
     trainerVerboseNames = await trainerVerboseNameResponse.json();
-}
-
-function getBySpecificID(data, id) {
-    return data.reduce(function (r, a) {
-        r[a[id]] = r[a[id]] || [];
-        r[a[id]].push(a);
-        return r;
-    }, {});
-}
-
-function getTrainerName(id) {
-    return trainerVerboseNames[id] || trainerNames[trainerBase[trainerInfos[id][0].trainerBaseId][0].trainerNameId] || "Dresseur (Scottie/Bettie)";
-}
-
-function getMonsterNameByTrainerId(id) {
-    return monsterNames[monsterBase[monsterInfos[trainerInfos[id][0].monsterId][0].monsterBaseId][0].monsterNameId];
 }
 
 getData().then(() => {

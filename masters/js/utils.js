@@ -38,7 +38,7 @@ let treatItemName;
 let villaItemName;
 
 const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
-const role_names = ["Attaquant", "Attaquant", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
+const role_names = ["Attaquant (Physique)", "Attaquant (Spécial)", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
 
 function getPairPrettyPrint(trainerId) {
     return `${getStarsRarityString(trainerId)} ${getPairName(trainerId)}`;
