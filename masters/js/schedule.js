@@ -32,7 +32,7 @@ let jukeboxMusicName;
 let scoutPickupDescr;
 
 let monsterBase;
-let monsterInfos;
+let monster;
 let monsterNames;
 
 let motifTypeName;
@@ -41,7 +41,7 @@ let salonGuests;
 
 let trainerBase;
 let trainerExRole;
-let trainerInfos;
+let trainer;
 let trainerInfosArray;
 let trainerNames;
 let trainerVerboseNames;
@@ -58,13 +58,11 @@ let downloadButton;
 const scrollTopBtn = document.getElementById('scrollTop');
 const nextContentBtn = document.getElementById('nextContent');
 
-const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
 const salonBannerPath = `./data/banner/event/update_4090_0W_Regular_01.png`;
 
 // Textes des bannières du Combat de Maître Spécial
 const CBEText1Id = 17503026;
 const CBEText2Id = 27503027;
-const role_names = ["Attaquant", "Attaquant", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
 
 async function getData() {
     const [
@@ -232,17 +230,16 @@ async function getData() {
     scoutPickupDescr = await scoutPickupDescrResponse.json();
 
     const monstersJSON = await monsterResponse.json();
-    monsterInfos = getBySpecificID(monstersJSON.entries, "monsterId");
+    monster = monstersJSON.entries;
 
     const monstersBaseJSON = await monsterBaseResponse.json();
-    monsterBase = getBySpecificID(monstersBaseJSON.entries, "monsterBaseId");
+    monsterBase = monstersBaseJSON.entries;
 
-    trainerInfosArray = await trainerResponse.json();
-    trainerInfosArray = trainerInfosArray.entries;
-    trainerInfos = getBySpecificID(trainerInfosArray, "trainerId");
+    const trainerJSON = await trainerResponse.json();
+    trainer = trainerJSON.entries;
 
     const trainersBaseJSON = await trainerBaseResponse.json();
-    trainerBase = getBySpecificID(trainersBaseJSON.entries, "id");
+    trainerBase = trainersBaseJSON.entries;
 
     trainerExRole = await trainerExRoleResponse.json();
     trainerExRole = trainerExRole.entries;
@@ -290,16 +287,6 @@ function getSchedule() {
     );
 }
 
-class Version {
-    constructor(version) {
-        let expl = version.split(".");
-
-        this.major = parseInt(expl[0]);
-        this.minor = parseInt(expl[1]) || 0;
-        this.patch = parseInt(expl[2]) || 0;
-    }
-}
-
 function getBySpecificID(data, id) {
     return data.reduce(function (r, a) {
         r[a[id]] = r[a[id]] || [];
@@ -308,97 +295,7 @@ function getBySpecificID(data, id) {
     }, {});
 }
 
-function getPairPrettyPrint(trainerId) {
-    return `${getStarsRarityString(trainerId)} ${getTrainerName(trainerId)} & ${getMonsterNameByTrainerId(trainerId)}`;
-}
 
-function getStarsRarityString(trainerId) {
-    return `<span style="color: ${starsHex[getTrainerRarity(trainerId)-1]}; -webkit-text-stroke: thin black;"><b>${"★".repeat(getTrainerRarity(trainerId))}</b></span>`;
-}
-
-function getTrainerName(id) {
-    return trainerVerboseNames[id] || trainerNames[trainerBase[trainerInfos[id][0].trainerBaseId][0].trainerNameId] || "Dresseur (Scottie/Bettie)";
-}
-
-function getMonsterNameByTrainerId(id) {
-    return monsterNames[monsterBase[monsterInfos[trainerInfos[id][0].monsterId][0].monsterBaseId][0].monsterNameId];
-}
-
-function getRoleByTrainerId(id) {
-    const role = trainerInfos[id][0].role;
-
-    switch(role) {
-        case 0:
-            return "Attaquant Physique";
-
-        case 1:
-            return "Attaquant Spécial";
-
-        default:
-            return role_names[trainerInfos[id][0].role];
-    }
-
-}
-
-function getTrainerTypeName(id) {
-    return motifTypeName[trainerInfos[id][0].type];
-}
-
-function getTrainerRarity(id) {
-    return trainerInfos[id][0].rarity;
-}
-
-function hasExUnlocked(id) {
-    return trainerInfos[id][0].exScheduleId !== "NEVER";
-}
-
-function getExRole(id) {
-    const ter = trainerExRole.find(ter => ter.trainerId === id);
-
-    if(ter)
-        return role_names[ter.role]
-
-    return null;
-}
-
-function getTrainerNumber(id) {
-    return Math.trunc(trainerInfos[id][0].number/100);
-}
-
-function getAbilityPanelQty(id) {
-    return abilityPanel.filter(ap => ap.trainerId === id && ap.version === 0).length || 0;
-}
-
-function removeAccents(string) {
-    return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
-
-function orderByVersion(data) {
-
-    return data.versions.sort((a, b) => {
-        const verA = new Version(a.version);
-        const verB = new Version(b.version);
-
-        if(verA.major > verB.major) return -1;
-        if(verA.major < verB.major) return 1;
-
-        if(verA.minor > verB.minor) return -1;
-        if(verA.minor < verB.minor) return 1;
-
-        if(verA.patch > verB.patch) return -1;
-        if(verA.patch < verB.patch) return 1;
-    });
-}
-
-function getDayMonthDate(date) {
-    let dmDate = date.toLocaleDateString('fr-fr', {day: "numeric"});
-
-    if(dmDate === "1") {
-        dmDate += "er";
-    }
-
-    return dmDate + ` ${date.toLocaleDateString('fr-fr', {month: "long"})}`;
-}
 
 function getScoutNewsText(schedule) {
     let scheduleScouts = scout.filter(sc => sc.scheduleId === schedule.scheduleId);
@@ -801,10 +698,10 @@ async function printPairChanges(scheduleId) {
     let panelChanges = [...new Set(abilityPanel.filter(ap => ap.scheduleId === scheduleId).map(ap => ap.trainerId))].map(tid => { return {"trainerId" : tid, "type": "panel", "text" : "Ajout de cases dans le plateau duo-gemme."}; });
 
     // Sortie de duo
-    let trainerRelease = [...new Set(trainerInfosArray.filter(ti => ti.scheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : "Ajout du duo dans le jeu."}; });
+    let trainerRelease = [...new Set(trainer.filter(ti => ti.scheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : "Ajout du duo dans le jeu."}; });
 
     // Sortie du 6EX
-    let trainerExRelease = [...new Set(trainerInfosArray.filter(ti => ti.exScheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "ex", "text" : "Ajout du 6★ EX."}; });
+    let trainerExRelease = [...new Set(trainer.filter(ti => ti.exScheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "ex", "text" : "Ajout du 6★ EX."}; });
 
     // Sortie du Rôle EX
     let ExRoleRelease = [...new Set(trainerExRole.filter(ti => ti.scheduleId === scheduleId).map(ti => { return {"trainerId" : ti.trainerId, "role" : role_names[ti.role] }; }))].map(exRole => { return {"trainerId" : exRole.trainerId, "type" : "exRole", "text" : `Ajout du Rôle EX (${exRole.role}).`}; });
@@ -960,18 +857,6 @@ function printLoginBonus(loginBonus) {
     //         i++;
     //     }
     // });
-}
-
-function getMonday(d) {
-    d = new Date(d);
-    let day = d.getDay(),
-        diff = d.getDate() - day + (day === 0 ? -6 : 1);
-
-    return new Date(d.setDate(diff));
-}
-
-function getYMDDate(date) {
-    return `${date.getFullYear()}${date.getMonth()}${date.getDate()}`;
 }
 
 function printCalendars(startDates) {

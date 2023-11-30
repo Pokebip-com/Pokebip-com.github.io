@@ -22,17 +22,18 @@ let headerData = [
 
 let adminHeaderData = [
     { "title" : "Plateaux Duo-Gemme", "url": "sync-grids.html" },
+    { "title" : "Duos", "url": "duo.html" },
 ];
 
 const currentUrl = window.location.pathname.split("/").pop();
-var isAdminMode = getCookie("admin");
+let isAdminMode = getCookie("admin");
 
 if(!isAdminMode) {
     const url = new URL(window.location);
     isAdminMode = url.searchParams.get("admin");
 
     if (isAdminMode !== null || adminHeaderData.filter(ahd => ahd.url === currentUrl).length > 0) {
-        document.cookie = "admin=true; expries Fri, 31 Dec 9999 21:10:10 GMT";
+        document.cookie = "admin=true; expires Fri, 31 Dec 9999 21:10:10 GMT";
         isAdminMode = true;
     }
 }

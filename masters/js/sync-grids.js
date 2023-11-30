@@ -3,15 +3,16 @@ let abilities;
 let abilityConditions;
 let monsterBase;
 let monsterEvolution;
-let monsterInfos;
+let monster;
 let monsterNames;
 let moveInfos;
 let moveNames;
 let movePassiveDigit;
 let tagNames;
 let trainerBase;
-let trainerInfos;
+let trainer;
 let trainerNames;
+let trainerVerboseNames;
 let lastUpdateGrids;
 let passiveSkillDescription;
 let passiveSkillDescriptionParts;
@@ -247,7 +248,8 @@ async function getData() {
         passiveSkillNameResponse,
         passiveSNamePartsResponse,
         tagNameResponse,
-        trainerNameResponse
+        trainerNameResponse,
+        trainerVerboseNameResponse
     ] = await Promise.all([
         fetch("./data/proto/Ability.json"),
         fetch("./data/proto/AbilityPanel.json"),
@@ -267,7 +269,8 @@ async function getData() {
         fetch("./data/lsd/passive_skill_name_fr.json"),
         fetch("./data/lsd/passive_skill_name_parts_fr.json"),
         fetch("./data/lsd/tag_name_with_prepositions_fr.json"),
-        fetch("./data/lsd/trainer_name_fr.json")
+        fetch("./data/lsd/trainer_name_fr.json"),
+        fetch("./data/lsd/trainer_verbose_name_fr.json")
     ])
         .catch(error => console.log(error));
 
@@ -297,22 +300,23 @@ async function getData() {
     abilities = getByAbilityID(abilitiesJSON.entries);
 
     const monstersJSON = await monsterResponse.json();
-    monsterInfos = getByMonsterID(monstersJSON.entries);
+    monster = monstersJSON.entries;
 
     const monstersBaseJSON = await monsterBaseResponse.json();
-    monsterBase = getByMonsterBaseID(monstersBaseJSON.entries);
+    monsterBase = monstersBaseJSON.entries;
 
     const monsterEvolutionJSON = await monsterEvolutionResponse.json();
     monsterEvolution = getEvolutionByTrainerId(monsterEvolutionJSON.entries);
 
     const trainersJSON = await trainerResponse.json();
-    trainerInfos = getByTrainerID(trainersJSON.entries);
+    trainer = trainersJSON.entries;
 
     const trainersBaseJSON = await trainerBaseResponse.json();
-    trainerBase = getByID(trainersBaseJSON.entries);
+    trainerBase = trainersBaseJSON.entries;
 
     monsterNames = await monsterNameResponse.json();
     trainerNames = await trainerNameResponse.json();
+    trainerVerboseNames = await trainerVerboseNameResponse.json();
 }
 
 async function getCustomJSON() {
@@ -361,14 +365,6 @@ function checkIfNew(trainerId) {
         updatedGridsSpan.appendChild(document.createElement("br"));
         updatedGridsSpan.appendChild(anchor);
     }
-}
-
-function getTrainerName(id) {
-    return trainerNames[trainerBase[trainerInfos[id].trainerBaseId].trainerNameId] || "Dresseur (Scottie/Bettie)";
-}
-
-function getMonsterNameByTrainerId(id) {
-    return monsterNames[monsterBase[monsterInfos[trainerInfos[id].monsterId].monsterBaseId].monsterNameId];
 }
 
 function populateSelect() {
@@ -421,12 +417,12 @@ function getReplacedText(text, ability) {
 
 function setStats(id) {
     statsTable.innerHTML = "";
-    console.log(trainerInfos[id]);
-    console.log(monsterInfos[trainerInfos[id].monsterId]);
+    console.log(trainer[id]);
+    console.log(monster[trainer[id].monsterId]);
     console.log(monsterEvolution);
     console.log(id);
-    console.log(monsterEvolution[id][trainerInfos[id].monsterId]);
-    console.log(monsterInfos[monsterEvolution[id][trainerInfos[id].monsterId].monsterIdNext]);
+    console.log(monsterEvolution[id][trainer[id].monsterId]);
+    console.log(monster[monsterEvolution[id][trainer[id].monsterId].monsterIdNext]);
 
 }
 
@@ -592,12 +588,6 @@ function getSkillMoveDescr(descr, id) {
     }
 
     return descr;
-}
-
-function outlineBrackets(descr) {
-    // Met les balises restantes en gras souligné sur l'aperçu
-    return descr.replaceAll(/\[/gi, "<span style='color:yellowgreen;'><strong><u>[")
-        .replaceAll(/]/gi, "]</u></strong></span>");
 }
 
 function appendCategory(trainer, category) {
