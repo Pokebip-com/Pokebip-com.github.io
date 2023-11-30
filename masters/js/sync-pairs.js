@@ -1,4 +1,5 @@
 let abilityPanel;
+let exRoleStatusUp;
 let monster;
 let monsterBase;
 let monsterEvolution;
@@ -24,6 +25,7 @@ let toolsDiv;
 async function getData() {
     const [
         abilityPanelResponse,
+        exRoleStatusUpResponse,
         monsterResponse,
         monsterBaseResponse,
         monsterEvolutionResponse,
@@ -41,6 +43,7 @@ async function getData() {
         trainerVerboseNameResponse,
     ] = await Promise.all([
         fetch("./data/proto/AbilityPanel.json"),
+        fetch("./data/proto/ExRoleStatusUp.json"),
         fetch("./data/proto/Monster.json"),
         fetch("./data/proto/MonsterBase.json"),
         fetch("./data/proto/MonsterEvolution.json"),
@@ -61,6 +64,9 @@ async function getData() {
 
     abilityPanel = await abilityPanelResponse.json();
     abilityPanel = abilityPanel.entries;
+
+    exRoleStatusUp = await exRoleStatusUpResponse.json();
+    exRoleStatusUp = exRoleStatusUp.entries;
 
     schedule = await scheduleResponse.json();
     schedule = schedule.entries.filter(s => s.scheduleId.startsWith("chara_"));
@@ -141,10 +147,10 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
     table.style.textAlign = "center";
     table.style.maxWidth = "512px";
 
-    trainerName.colSpan = 2;
+    trainerName.colSpan = 5;
     trainerName.innerText = getTrainerName(syncPairSelect.value);
 
-    pokemonName.colSpan = 2;
+    pokemonName.colSpan = 5;
     pokemonName.innerText = monsterName;
 
     firstRow.appendChild(trainerName);
@@ -167,8 +173,8 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
 
     pokemonImageCell.appendChild(pokemonImg);
 
-    trainerImageCell.colSpan = 2;
-    pokemonImageCell.colSpan = 2;
+    trainerImageCell.colSpan = 5;
+    pokemonImageCell.colSpan = 5;
     secondRow.appendChild(trainerImageCell);
     secondRow.appendChild(pokemonImageCell);
     table.appendChild(secondRow);
@@ -180,7 +186,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
         exTitleRow = document.createElement("tr");
         let exTitle = document.createElement("th");
         exTitle.innerText = "Tenue 6★ EX";
-        exTitle.colSpan = 2;
+        exTitle.colSpan = 5;
         exTitleRow.appendChild(exTitle);
 
         exImageRow = document.createElement("tr");
@@ -190,7 +196,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
         exImageCell.style.backgroundPosition = "center";
         exImageCell.style.backgroundSize = "cover";
         exImageCell.style.backgroundRepeat = "no-repeat";
-        exImageCell.colSpan = 2;
+        exImageCell.colSpan = 5;
 
         let exImg = document.createElement("img");
 
@@ -207,17 +213,26 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
     let infosTitleRow = document.createElement("tr");
     let roleTitle = document.createElement("th");
     roleTitle.innerText = "Rôle";
+    roleTitle.colSpan = 2;
+
+    let exRoleTitle = document.createElement("th");
+    exRoleTitle.innerText = "Rôle EX";
+    exRoleTitle.colSpan = 2;
 
     let potentielTitle = document.createElement("th");
     potentielTitle.innerText = "Potentiel\n(Base)";
+    potentielTitle.colSpan = 2;
 
     let typeTitle = document.createElement("th");
     typeTitle.innerText = "Type";
+    typeTitle.colSpan = 2;
 
     let weaknessTitle = document.createElement("th");
     weaknessTitle.innerText = "Faiblesse";
+    weaknessTitle.colSpan = 2;
 
     infosTitleRow.appendChild(roleTitle);
+    infosTitleRow.appendChild(exRoleTitle);
     infosTitleRow.appendChild(potentielTitle);
     infosTitleRow.appendChild(typeTitle);
     infosTitleRow.appendChild(weaknessTitle);
@@ -227,17 +242,26 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
 
     let roleCell = document.createElement("td");
     roleCell.innerText = getRoleByTrainerId(syncPairSelect.value);
+    roleCell.colSpan = 2;
+
+    let exRoleCell = document.createElement("td");
+    exRoleCell.innerText = getExRoleText(syncPairSelect.value);
+    exRoleCell.colSpan = 2;
 
     let potentielCell = document.createElement("td");
     potentielCell.innerHTML = getStarsRarityString(syncPairSelect.value);
+    potentielCell.colSpan = 2;
 
     let typeCell = document.createElement("td");
     typeCell.innerText = getTrainerTypeName(syncPairSelect.value);
+    typeCell.colSpan = 2;
 
     let weaknessCell = document.createElement("td");
     weaknessCell.innerText = getTrainerWeaknessName(syncPairSelect.value);
+    weaknessCell.colSpan = 2;
 
     infosRow.appendChild(roleCell);
+    infosRow.appendChild(exRoleCell);
     infosRow.appendChild(potentielCell);
     infosRow.appendChild(typeCell);
     infosRow.appendChild(weaknessCell);
@@ -246,7 +270,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
     let descrTitleRow = document.createElement("tr");
     let descrTitle = document.createElement("th");
     descrTitle.innerText = "Descriptions";
-    descrTitle.colSpan = 4;
+    descrTitle.colSpan = 10;
     descrTitleRow.appendChild(descrTitle);
     table.appendChild(descrTitleRow);
 
@@ -256,7 +280,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
         let descrTrainerRow = document.createElement("tr");
         let descrTrainer = document.createElement("td");
         descrTrainer.innerText = descrTrainerTxt.replaceAll("\n", " ");
-        descrTrainer.colSpan = 4;
+        descrTrainer.colSpan = 10;
         descrTrainerRow.appendChild(descrTrainer);
         table.appendChild(descrTrainerRow);
     }
@@ -267,7 +291,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
         let descrMonsterRow = document.createElement("tr");
         let descrMonster = document.createElement("td");
         descrMonster.innerText = descrMonsterTxt.replaceAll("\n", " ");
-        descrMonster.colSpan = 4;
+        descrMonster.colSpan = 10;
         descrMonsterRow.appendChild(descrMonster);
         table.appendChild(descrMonsterRow);
     }
@@ -275,7 +299,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
     contentDiv.appendChild(table);
 }
 
-function getStatRow(name, statValues, rarity, level, scale = 1) {
+function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
     const breakPointLevels = [1, 30, 45, 100, 120, 140, 200];
 
     let tr = document.createElement("tr");
@@ -294,6 +318,8 @@ function getStatRow(name, statValues, rarity, level, scale = 1) {
             statValue += 20*(i-rarity)*(name === "PV" ? 2 : 1);
         else
             statValue += 20*(i-rarity)*(name === "PV" ? 5 : 2);
+
+        statValue += exRoleBonus;
 
         statValue = Math.trunc(statValue*scale);
 
@@ -316,13 +342,15 @@ function getStatRow(name, statValues, rarity, level, scale = 1) {
     return tr;
 }
 
-function setStatsTable(input, statsDiv, monsterData, variation = null) {
+function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole = false) {
     if(input.value === "")
         return;
 
     statsDiv.innerHTML = "";
 
     let rarity = getTrainerRarity(syncPairSelect.value);
+    let exRoleCheckbox = document.getElementById("exRoleCheckbox");
+    let exRoleStats = hasExRole && exRoleCheckbox && exRoleCheckbox.checked;
 
     let table = document.createElement("table");
     table.classList.add("bipcode");
@@ -340,19 +368,37 @@ function setStatsTable(input, statsDiv, monsterData, variation = null) {
         headRow.appendChild(th);
     }
 
+    let exRoleBonus = {"hp" : 0, "atk": 0, "spa": 0, "def": 0, "spd": 0, "spe": 0 };
+
+    if(exRoleStats) {
+        exRoleBonus = exRoleStatusUp.find(ersu => ersu.roleId === getExRoleId(syncPairSelect.value));
+    }
+
     table.appendChild(headRow);
-    table.appendChild(getStatRow("PV", monsterData.hpValues, rarity, input.value));
-    table.appendChild(getStatRow("Attaque", monsterData.atkValues, rarity, input.value, (variation ? variation.atkScale/100 : 1)));
-    table.appendChild(getStatRow("Défense", monsterData.defValues, rarity, input.value, (variation ? variation.defScale/100 : 1)));
-    table.appendChild(getStatRow("Atq. Spé.", monsterData.spaValues, rarity, input.value, (variation ? variation.spaScale/100 : 1)));
-    table.appendChild(getStatRow("Déf. Spé.", monsterData.spdValues, rarity, input.value, (variation ? variation.spdScale/100 : 1)));
-    table.appendChild(getStatRow("Vitesse", monsterData.speValues, rarity, input.value, (variation ? variation.speScale/100 : 1)));
+    table.appendChild(getStatRow("PV", monsterData.hpValues, rarity, input.value, exRoleBonus.hp));
+    table.appendChild(getStatRow("Attaque", monsterData.atkValues, rarity, input.value, exRoleBonus.atk, (variation ? variation.atkScale/100 : 1)));
+    table.appendChild(getStatRow("Défense", monsterData.defValues, rarity, input.value, exRoleBonus.def, (variation ? variation.defScale/100 : 1)));
+    table.appendChild(getStatRow("Atq. Spé.", monsterData.spaValues, rarity, input.value, exRoleBonus.spa, (variation ? variation.spaScale/100 : 1)));
+    table.appendChild(getStatRow("Déf. Spé.", monsterData.spdValues, rarity, input.value, exRoleBonus.spd, (variation ? variation.spdScale/100 : 1)));
+    table.appendChild(getStatRow("Vitesse", monsterData.speValues, rarity, input.value, exRoleBonus.spe, (variation ? variation.speScale/100 : 1)));
     statsDiv.appendChild(table);
 }
 
 function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
 
     let monsterData = getMonsterById(monsterId);
+
+    let statContainer = document.createElement("div");
+    statContainer.style.textAlign = "center";
+
+    let toolFieldset = document.createElement("fieldset");
+    toolFieldset.style.width = "fit-content";
+    toolFieldset.style.borderRadius = "8px";
+    toolFieldset.style.lineHeight = "1.6rem";
+    toolFieldset.style.display = "inline-block";
+    toolFieldset.style.verticalAlign = "middle";
+    toolFieldset.style.margin = "5px";
+    toolFieldset.innerHTML = "<legend><b>Options</b></legend>"
 
     let defaultLevels = document.createElement("dataList");
     defaultLevels.id = "defaultLevels";
@@ -364,22 +410,63 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
     defaultLevels.appendChild(new Option("", "135"));
     defaultLevels.appendChild(new Option("", "140"));
     defaultLevels.appendChild(new Option("", "150"));
+    toolFieldset.appendChild(defaultLevels);
+
+    let lvlP = document.createElement("p");
+    lvlP.style.display = "table-row";
+
+    let lvlLabel = document.createElement("label");
+    lvlLabel.setAttribute("for", "levelInput");
+    lvlLabel.innerHTML = "<b>Niveau : </b>";
+    lvlLabel.style.display = "table-cell";
+    lvlLabel.style.textAlign = "right";
+    lvlP.appendChild(lvlLabel);
 
     let lvlInput = document.createElement("input");
     lvlInput.type = "number";
     lvlInput.value = "150";
     lvlInput.min = "1";
     lvlInput.max = "150";
+    lvlInput.id = "levelInput";
+    lvlInput.style.display = "table-cell";
+    lvlInput.style.marginLeft = "5px";
     lvlInput.setAttribute("list", "defaultLevels");
+    lvlP.appendChild(lvlInput);
+    toolFieldset.appendChild(lvlP);
+
+    if(hasExRoleUnlocked(syncPairSelect.value)) {
+        let exRoleP = document.createElement("p");
+        exRoleP.style.display = "table-row";
+
+        let exRoleLabel = document.createElement("label");
+        exRoleLabel.setAttribute("for", "exRoleCheckbox");
+        exRoleLabel.style.display = "table-cell";
+        exRoleLabel.style.textAlign = "right";
+        exRoleLabel.innerHTML = "<b>Rôle Ex débloqué : </b>";
+        exRoleP.appendChild(exRoleLabel)
+
+
+        let exRoleCheckbox = document.createElement("input");
+        exRoleCheckbox.type = "checkbox";
+        exRoleCheckbox.id = "exRoleCheckbox";
+        exRoleCheckbox.style.display = "table-cell";
+        exRoleCheckbox.style.marginLeft = "5px";
+        exRoleCheckbox.addEventListener("change", (e) => setStatsTable(lvlInput, statsDiv, monsterData, variation, hasExRoleUnlocked(syncPairSelect.value)));
+        exRoleP.appendChild(exRoleCheckbox)
+        toolFieldset.appendChild(exRoleP);
+    }
 
     let statsDiv = document.createElement("div");
     statsDiv.id = "statsDiv";
+    statsDiv.style.display = "inline-block";
+    statsDiv.style.verticalAlign = "middle";
+    statsDiv.style.margin = "5px";
 
-    contentDiv.appendChild(defaultLevels);
-    contentDiv.appendChild(lvlInput);
-    contentDiv.appendChild(statsDiv);
+    statContainer.appendChild(toolFieldset);
+    statContainer.appendChild(statsDiv);
+    contentDiv.appendChild(statContainer)
 
-    lvlInput.addEventListener("change", (e) => setStatsTable(e.currentTarget, statsDiv, monsterData, variation));
+    lvlInput.addEventListener("change", (e) => setStatsTable(e.currentTarget, statsDiv, monsterData, variation, hasExRoleUnlocked(syncPairSelect.value)));
     setStatsTable(lvlInput, statsDiv, monsterData, variation);
 }
 

@@ -338,7 +338,7 @@ function getScoutNewsText(schedule) {
                     `\t\t[b]${getMonsterNameByTrainerId(sp.trainerId)}[/b][/td]\n` +
                     `\t\t[td][type=${removeAccents(getRoleByTrainerId(sp.trainerId).toLowerCase()).replace(" ", "-")}|MX]`;
 
-                let exRole = getExRole(sp.trainerId);
+                let exRole = getExRoleText(sp.trainerId);
 
                 if(exRole !== null) {
                     newsText += `[br][type=${removeAccents(exRole.toLowerCase())}-ex|MX]`;

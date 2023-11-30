@@ -143,13 +143,23 @@ function hasExUnlocked(id) {
     return trainer.find(t => t.trainerId === id).exScheduleId !== "NEVER";
 }
 
-function getExRole(id) {
+function hasExRoleUnlocked(id) {
+    return trainerExRole.find(t => t.trainerId === id) !== undefined;
+}
+
+function getExRoleText(id) {
     const ter = trainerExRole.find(ter => ter.trainerId === id);
 
     if(ter)
         return role_names[ter.role]
 
-    return null;
+    return "-";
+}
+
+function getExRoleId(id) {
+    const ter = trainerExRole.find(ter => ter.trainerId === id);
+
+    return ter ? ter.role : -1;
 }
 
 function getTrainerNumber(id) {
