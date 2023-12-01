@@ -994,7 +994,7 @@ function setLatestPairs() {
         .sort((a, b) => a.scheduleId.localeCompare(b.scheduleId));
 
     let h2 = document.createElement("h2");
-    h2.innerText = "Dresseurs ajoutés dans la dernière mise à jour";
+    h2.innerText = "Duos ajoutés dans la dernière MàJ";
     lastReleasePairsDiv.appendChild(h2);
 
     let ul = document.createElement("ul");
