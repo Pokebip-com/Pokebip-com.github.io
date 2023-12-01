@@ -54,6 +54,12 @@
             from {opacity: 0;}
             to {opacity: 1;}
         }
+
+        div#lastReleasedPairs li:before {
+            content: "› ";
+            font-size: 18px;
+            font-weight: bolder;
+        }
     </style>
 
     <link rel="stylesheet" href="../css/pokebip.css">
@@ -65,6 +71,8 @@
 <div id="contentDiv" style="padding:10px; margin-top:60px">
     <div id="tools">
         <label for="syncPairSelect"><b>Changer de Duo :</b></label> <select id="syncPairSelect"></select>
+        <br />
+        <div id="lastReleasedPairs"></div>
         <fieldset id="adminTools" style="display: none; margin-top: 10px; line-height: 1.6rem; width: fit-content; border-radius: 8px;">
             <legend><b>Télécharger les données</b></legend>
             <p style="display: table-row;">

@@ -209,10 +209,6 @@ function orderByVersion(data) {
     });
 }
 
-function getItemData() {
-
-}
-
 function getItemName(itemId) {
     let subCategory; // = items.filter(i => i.itemId === itemId)[0].subCategory || -1;
     switch(subCategory) {

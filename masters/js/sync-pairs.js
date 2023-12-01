@@ -20,6 +20,7 @@ let trainerDescriptions;
 let trainerNames;
 let trainerVerboseNames;
 
+let lastReleasePairsDiv;
 let syncPairSelect;
 let syncPairDiv;
 let toolsDiv;
@@ -37,6 +38,7 @@ async function getData() {
         trainerResponse,
         trainerBaseResponse,
         trainerExRoleResponse,
+        versionResponse,
         monsterDescriptionResponse,
         monsterFormResponse,
         monsterNameResponse,
@@ -57,6 +59,7 @@ async function getData() {
         fetch("./data/proto/Trainer.json"),
         fetch("./data/proto/TrainerBase.json"),
         fetch("./data/proto/TrainerExRole.json"),
+        fetch("./data/custom/version_release_dates.json"),
         fetch("./data/lsd/monster_description_fr.json"),
         fetch("./data/lsd/monster_form_fr.json"),
         fetch("./data/lsd/monster_name_fr.json"),
@@ -74,8 +77,10 @@ async function getData() {
     exRoleStatusUp = await exRoleStatusUpResponse.json();
     exRoleStatusUp = exRoleStatusUp.entries;
 
+    versions = await versionResponse.json().then(orderByVersion);
+
     schedule = await scheduleResponse.json();
-    schedule = schedule.entries.filter(s => s.scheduleId.startsWith("chara_"));
+    schedule = schedule.entries.filter(s => s.scheduleId.startsWith("chara_") && s.startDate >= versions[0].releaseTimestamp);
 
     const monstersJSON = await monsterResponse.json();
     monster = monstersJSON.entries;
@@ -981,6 +986,49 @@ function setUrlMonsterInfos(monsterId, baseId, formId) {
     window.history.pushState(null, '', url.toString());
 }
 
+function setLatestPairs() {
+    console.log(schedule);
+    lastReleasePairsDiv = document.getElementById('lastReleasedPairs');
+    let newTrainers = trainer
+        .filter(t => schedule.map(s => s.scheduleId).includes(t.scheduleId))
+        .sort((a, b) => a.scheduleId.localeCompare(b.scheduleId));
+
+    let h2 = document.createElement("h2");
+    h2.innerText = "Dresseurs ajoutés dans la dernière mise à jour";
+    lastReleasePairsDiv.appendChild(h2);
+
+    let ul = document.createElement("ul");
+
+    newTrainers.forEach(tr => {
+        let li = document.createElement("li");
+        let b = document.createElement("b");
+        let anchor = document.createElement("a");
+        anchor.href = '#';
+        anchor.textContent = getPairName(tr.trainerId);
+        anchor.addEventListener("click", () => {
+            syncPairSelect.value = tr.trainerId;
+            selectChange();
+        });
+
+        b.appendChild(anchor);
+        li.appendChild(b);
+        ul.appendChild(li);
+    });
+
+    lastReleasePairsDiv.appendChild(ul);
+
+    console.log(newTrainers);
+}
+
+function selectChange() {
+    const url = new URL(window.location);
+    url.searchParams.delete('monsterId');
+    url.searchParams.delete('baseId');
+    url.searchParams.delete('formId');
+
+    setPair(syncPairSelect.value);
+}
+
 async function init() {
     syncPairSelect = document.getElementById("syncPairSelect");
     syncPairDiv = document.getElementById("syncPairDiv");
@@ -989,22 +1037,17 @@ async function init() {
     await getData();
     await getCustomJSON();
 
-    if(isAdminMode) {
-        toolsDiv.style.display = "table";
+    // if(isAdminMode) {
+    //     toolsDiv.style.display = "table";
+    //
+    //     downloadButton = document.getElementById("downloadData");
+    //     downloadButton.onclick = downloadData;
+    // }
 
-        downloadButton = document.getElementById("downloadData");
-        downloadButton.onclick = downloadData;
-    }
+    populateSelect();
+    setLatestPairs();
 
-    populateSelect()
-
-    syncPairSelect.onchange = function() {
-        url.searchParams.delete('monsterId');
-        url.searchParams.delete('baseId');
-        url.searchParams.delete('formId');
-
-        setPair(syncPairSelect.value);
-    };
+    syncPairSelect.onchange = selectChange;
 
     const url = new URL(window.location);
     const urlPairId = url.searchParams.get('pair');
