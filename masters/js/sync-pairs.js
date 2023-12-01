@@ -5,6 +5,7 @@ let monsterBase;
 let monsterEvolution;
 let monsterVariation;
 let schedule;
+let teamSkill;
 let trainer;
 let trainerBase;
 let trainerExRole;
@@ -14,6 +15,7 @@ let monsterDescriptions;
 let monsterForms;
 let monsterNames;
 let motifTypeName;
+let teamSkillTag;
 let trainerDescriptions;
 let trainerNames;
 let trainerVerboseNames;
@@ -31,6 +33,7 @@ async function getData() {
         monsterEvolutionResponse,
         monsterVariationResponse,
         scheduleResponse,
+        teamSkillResponse,
         trainerResponse,
         trainerBaseResponse,
         trainerExRoleResponse,
@@ -38,6 +41,7 @@ async function getData() {
         monsterFormResponse,
         monsterNameResponse,
         motifTypeNameResponse,
+        teamSkillTagResponse,
         trainerDescriptionResponse,
         trainerNameResponse,
         trainerVerboseNameResponse,
@@ -49,6 +53,7 @@ async function getData() {
         fetch("./data/proto/MonsterEvolution.json"),
         fetch("./data/proto/MonsterVariation.json"),
         fetch("./data/proto/Schedule.json"),
+        fetch("./data/proto/TeamSkill.json"),
         fetch("./data/proto/Trainer.json"),
         fetch("./data/proto/TrainerBase.json"),
         fetch("./data/proto/TrainerExRole.json"),
@@ -56,6 +61,7 @@ async function getData() {
         fetch("./data/lsd/monster_form_fr.json"),
         fetch("./data/lsd/monster_name_fr.json"),
         fetch("./data/lsd/motif_type_name_fr.json"),
+        fetch("./data/lsd/team_skill_tag_fr.json"),
         fetch("./data/lsd/trainer_description_fr.json"),
         fetch("./data/lsd/trainer_name_fr.json"),
         fetch("./data/lsd/trainer_verbose_name_fr.json")
@@ -83,6 +89,9 @@ async function getData() {
     const monsterVariationJSON = await monsterVariationResponse.json();
     monsterVariation = monsterVariationJSON.entries;
 
+    teamSkill = await teamSkillResponse.json();
+    teamSkill = teamSkill.entries;
+
     trainer = await trainerResponse.json();
     trainer = trainer.entries;
 
@@ -96,6 +105,7 @@ async function getData() {
     monsterForms = await monsterFormResponse.json();
     monsterNames = await monsterNameResponse.json();
     motifTypeName = await motifTypeNameResponse.json();
+    teamSkillTag = await teamSkillTagResponse.json();
     trainerDescriptions = await trainerDescriptionResponse.json();
     trainerNames = await trainerNameResponse.json();
     trainerVerboseNames = await trainerVerboseNameResponse.json();
@@ -137,7 +147,7 @@ function switchTab(monsterId, monsterBaseId, formId) {
     document.getElementById(`btn-${monsterId}-${monsterBaseId}-${formId}`).classList.add("active");
 }
 
-function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
+function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation = null) {
     let table = document.createElement("table");
     let firstRow = document.createElement("tr");
     let trainerName = document.createElement("th");
@@ -253,11 +263,11 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId) {
     potentielCell.colSpan = 2;
 
     let typeCell = document.createElement("td");
-    typeCell.innerText = getTrainerTypeName(syncPairSelect.value);
+    typeCell.innerText = variation && variation.type > 0 ? motifTypeName[variation.type] : getTrainerTypeName(syncPairSelect.value);
     typeCell.colSpan = 2;
 
     let weaknessCell = document.createElement("td");
-    weaknessCell.innerText = getTrainerWeaknessName(syncPairSelect.value);
+    weaknessCell.innerText = variation && variation.weakness > 0 ? motifTypeName[variation.weakness] : getTrainerWeaknessName(syncPairSelect.value);
     weaknessCell.colSpan = 2;
 
     infosRow.appendChild(roleCell);
@@ -388,6 +398,10 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
 
     let monsterData = getMonsterById(monsterId);
 
+    let statsH2 = document.createElement("h2");
+    statsH2.innerText = "Statistiques";
+    contentDiv.appendChild(statsH2);
+
     let statContainer = document.createElement("div");
     statContainer.style.textAlign = "center";
 
@@ -470,9 +484,96 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
     setStatsTable(lvlInput, statsDiv, monsterData, variation);
 }
 
+function setPairPassives(contentDiv, variation = null) {
+    let tr = trainer.find(t => t.trainerId === syncPairSelect.value);
+
+    let passivesH2 = document.createElement("h2");
+    passivesH2.innerText = "Talents";
+    contentDiv.appendChild(passivesH2);
+
+    let table = document.createElement("table");
+    table.classList.add("bipcode");
+    table.style.textAlign = "center";
+
+    let headRow = document.createElement("tr");
+    let headTitle = document.createElement("th");
+    headTitle.colSpan = 2;
+    headTitle.innerText = "Talents passifs";
+    headRow.appendChild(headTitle);
+    table.appendChild(headRow);
+
+    let titleRow = document.createElement("tr");
+    let nameTitle = document.createElement("th");
+    nameTitle.innerText = "Nom";
+    titleRow.appendChild(nameTitle);
+
+    let descrTitle = document.createElement("th");
+    descrTitle.innerText = "Description";
+    titleRow.appendChild(descrTitle);
+
+    table.appendChild(titleRow);
+
+    for(let i = 1; i <= 4; i++) {
+        const passiveId = variation && variation[`passive${i}Id`] > 0 ? variation[`passive${i}Id`] : tr[`passive${i}Id`];
+
+        if(passiveId === 0)
+            continue;
+
+        let row = document.createElement("tr");
+
+        let nameCell = document.createElement("td");
+        nameCell.innerText = getPassiveSkillName(passiveId);
+        row.appendChild(nameCell);
+
+        let descrCell = document.createElement("td");
+        descrCell.innerText = getPassiveSkillDescr(passiveId);
+        row.appendChild(descrCell);
+
+        table.appendChild(row);
+    }
+
+    contentDiv.appendChild(table);
+}
+
+function setPairTeamSkills(contentDiv) {
+    let tr = trainer.find(t => t.trainerId === syncPairSelect.value);
+
+    let table = document.createElement("table");
+    table.classList.add("bipcode");
+    table.style.textAlign = "center";
+
+    let titleRow = document.createElement("tr");
+    let titleCell = document.createElement("th");
+    titleCell.innerText = "Talents d'équipe";
+
+    let row = document.createElement("tr");
+
+    for(let i = 1; i <= 5; i++) {
+        let ts = teamSkill.find(tsk => tsk.teamSkillId == tr[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 1);
+
+        if(!ts)
+            continue;
+
+        let td = document.createElement("td");
+        td.innerText = teamSkillTag[ts.teamSkillPropValue];
+        row.appendChild(td);
+
+        titleCell.colSpan++;
+    }
+
+    titleRow.appendChild(titleCell);
+    table.appendChild(titleRow);
+    table.appendChild(row);
+
+    contentDiv.appendChild(document.createElement("br"));
+    contentDiv.appendChild(table);
+}
+
 function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
-    setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId);
+    setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation);
     setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
+    setPairPassives(contentDiv, variation);
+    setPairTeamSkills(contentDiv);
 }
 
 function createTab(monsterId, monTabs, tabContentDiv, isDefault = false, variation = null) {
