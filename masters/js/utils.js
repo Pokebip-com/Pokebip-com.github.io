@@ -1,44 +1,30 @@
 
-let abilityItems;
-let eggItems;
-let items;
-let missionItems;
-let monsterEnhancement;
-let monsterEvolutions;
-let moveLevelUpItems;
-let salonPhotoCustomItems;
-let salonPhotoItems;
-let storyQuests;
-let trainerBuildupItems;
-let trainers;
-
-let bardgeItemName;
-let breakthroughItemName;
-let deckItemLvupItemName;
-let deckItemName;
-let eventItemName;
-let expeditionBoostItemName;
-let exroleReleaseItemName;
-let jukeboxMusicKeyItemName;
-let otherItemName;
-let packedItemName;
-let potentialItemName;
-let salonExchangeItemName;
-let salonFriendshipLevelItemName;
-let salonGoodsItemName;
-let salonHelpItemName;
-let salonPresentItemName;
-let scoutServerTicketItemName;
-let scoutTicketItemName;
-let skillDeckItemSkillFeatherItemName;
-let skillDeckItemUnchangedPinItemName;
-let trainerRarityUpItemName;
-let trainingItemName;
-let treatItemName;
-let villaItemName;
-
 const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
 const role_names = ["Attaquant (Physique)", "Attaquant (Spécial)", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
+const targetToId = {
+    "AllySingle" : 0,
+    "AllyAll" : 1,
+    "OpponentSingle" : 2,
+    "OpponentAll" : 3,
+    "Self" : 4,
+    "AllyField" : 7,
+    "OpponentField" : 8,
+    "EntireField" : 9,
+};
+const categoryToFR = {
+    "Physical" : "Physique",
+    "Special" : "Spéciale",
+    "Status" : "Statut",
+};
+const exSyncEffect = [
+    "Cible tous les ennemis.",
+    "Cible tous les ennemis.",
+    "Augmente la détermination de deux rangs la première fois qu'une capacité Duo est utilisée.",
+    "La puissance des capacités Duo est augmentée de 50 %.",
+    "La première fois que le lanceur utilise une capacité Duo, le nombre d'actions nécessaires pour lancer une capacité Duo est réduit de trois.",
+    "Implémente un effet de terrain juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet.",
+];
+
 
 function getPairPrettyPrint(trainerId) {
     return `${getStarsRarityString(trainerId)} ${getPairName(trainerId)}`;

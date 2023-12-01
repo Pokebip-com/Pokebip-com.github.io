@@ -487,9 +487,9 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
 function setPairPassives(contentDiv, variation = null) {
     let tr = trainer.find(t => t.trainerId === syncPairSelect.value);
 
-    let passivesH2 = document.createElement("h2");
-    passivesH2.innerText = "Talents";
-    contentDiv.appendChild(passivesH2);
+    let skillsH2 = document.createElement("h2");
+    skillsH2.innerText = "Talents";
+    contentDiv.appendChild(skillsH2);
 
     let table = document.createElement("table");
     table.classList.add("bipcode");
@@ -569,11 +569,319 @@ function setPairTeamSkills(contentDiv) {
     contentDiv.appendChild(table);
 }
 
+function getMoveRow(moveId) {
+    let mov = move.find(m => m.moveId == moveId);
+
+    let tr = document.createElement("tr");
+
+    let nameCell = document.createElement("td");
+    nameCell.innerText = moveNames[moveId];
+    tr.appendChild(nameCell);
+
+    let typeCell = document.createElement("td");
+    typeCell.innerText = motifTypeName[mov.type];
+    tr.appendChild(typeCell);
+
+    let categoryCell = document.createElement("td");
+    categoryCell.innerText = categoryToFR[mov.category];
+    tr.appendChild(categoryCell);
+
+    let powerCell = document.createElement("td");
+    powerCell.innerText = mov.power || "–";
+    tr.appendChild(powerCell);
+
+    let accuracyCell = document.createElement("td");
+    accuracyCell.innerText = mov.accuracy || "–";
+    tr.appendChild(accuracyCell);
+
+    let gaugeCell = document.createElement("td");
+    gaugeCell.innerText = mov.gaugeDrain || "–";
+    tr.appendChild(gaugeCell);
+
+    let targetCell = document.createElement("td");
+    targetCell.innerText = moveTargetType[targetToId[mov.target]] || "–";
+    tr.appendChild(targetCell);
+
+    let descrCell = document.createElement("td");
+    descrCell.innerText = getMoveDescr(moveId);
+    tr.appendChild(descrCell);
+
+    let limitCell = document.createElement("td");
+    limitCell.innerText = mov.uses || "–";
+    tr.appendChild(limitCell);
+
+    return tr;
+}
+
+function getGMaxMoveRow(moveId) {
+    let mov = move.find(m => m.moveId == moveId);
+
+    let tr = document.createElement("tr");
+
+    let nameCell = document.createElement("td");
+    nameCell.innerText = moveNames[moveId];
+    tr.appendChild(nameCell);
+
+    let typeCell = document.createElement("td");
+    typeCell.innerText = motifTypeName[mov.type];
+    tr.appendChild(typeCell);
+
+    let categoryCell = document.createElement("td");
+    categoryCell.innerText = categoryToFR[mov.category];
+    tr.appendChild(categoryCell);
+
+    let powerCell = document.createElement("td");
+    powerCell.innerText = mov.power || "–";
+    tr.appendChild(powerCell);
+
+    let targetCell = document.createElement("td");
+    targetCell.innerText = moveTargetType[targetToId[mov.target]] || "–";
+    tr.appendChild(targetCell);
+
+    let descrCell = document.createElement("td");
+    descrCell.innerText = getMoveDescr(moveId);
+    tr.appendChild(descrCell);
+
+    return tr;
+}
+
+function getSyncMoveRow(syncMoveId, tr) {
+    let row = document.createElement("tr");
+    let mov = move.find(m => m.moveId === syncMoveId);
+    console.log(mov);
+
+    let nameCell = document.createElement("td");
+    nameCell.innerText = moveNames[syncMoveId];
+    row.appendChild(nameCell);
+
+    let typeCell = document.createElement("td");
+    typeCell.innerText = motifTypeName[mov.type];
+    row.appendChild(typeCell);
+
+    let categoryCell = document.createElement("td");
+    categoryCell.innerText = categoryToFR[mov.category];
+    row.appendChild(categoryCell);
+
+    let powerCell = document.createElement("td");
+    powerCell.innerText = mov.power || "–";
+    row.appendChild(powerCell);
+
+    let effectCell = document.createElement("td");
+    effectCell.innerText = getMoveDescr(syncMoveId);
+    row.appendChild(effectCell);
+
+    if(hasExUnlocked(tr.trainerId)) {
+        let exEffectCell = document.createElement("td");
+        exEffectCell.innerText = exSyncEffect[tr.role];
+        row.appendChild(exEffectCell);
+    }
+
+    if(hasExRoleUnlocked(tr.trainerId)) {
+        let exRoleEffectCell = document.createElement("td");
+        exRoleEffectCell.innerText = exSyncEffect[getExRoleId(tr.trainerId)];
+        row.appendChild(exRoleEffectCell);
+    }
+
+    return row;
+}
+
+function setPairMoves(contentDiv, monsterId, variation = null) {
+    let table = document.createElement("table");
+    table.classList.add("bipcode");
+    table.style.textAlign = "center";
+
+    let movesH2 = document.createElement("h2");
+    movesH2.innerText = "Capacités";
+    contentDiv.appendChild(movesH2);
+
+    let headRow = document.createElement("tr");
+    let headTitle = document.createElement("th");
+    headTitle.innerText = "Capacités";
+    headTitle.colSpan = 9;
+    headRow.appendChild(headTitle);
+    table.appendChild(headRow);
+
+    let titleRow = document.createElement("tr");
+
+    let titleName = document.createElement("th");
+    titleName.innerText = "Nom";
+    titleRow.appendChild(titleName);
+
+    let titleType = document.createElement("th");
+    titleType.innerText = "Type";
+    titleRow.appendChild(titleType);
+
+    let titleCategory = document.createElement("th");
+    titleCategory.innerText = "Catégorie";
+    titleRow.appendChild(titleCategory);
+
+    let titlePower = document.createElement("th");
+    titlePower.innerText = "Puissance";
+    titleRow.appendChild(titlePower);
+
+    let titleAccuracy = document.createElement("th");
+    titleAccuracy.innerText = "Précision";
+    titleRow.appendChild(titleAccuracy);
+
+    let titleGauge = document.createElement("th");
+    titleGauge.innerText = "Jauge";
+    titleRow.appendChild(titleGauge);
+
+    let titleTarget = document.createElement("th");
+    titleTarget.innerText = "Cible";
+    titleRow.appendChild(titleTarget);
+
+    let titleEffect = document.createElement("th");
+    titleEffect.innerText = "Effet";
+    titleRow.appendChild(titleEffect);
+
+    let titleLimit = document.createElement("th");
+    titleLimit.innerText = "Limite";
+    titleRow.appendChild(titleLimit);
+
+    table.appendChild(titleRow);
+
+    let tr = trainer.find(t => t.trainerId === syncPairSelect.value);
+    let mon = monster.find(m => m.monsterId === monsterId);
+
+    for(let i = 1; i < 5; i++) {
+        let moveId;
+
+        if(variation && variation[`move${i}Id`] > -1) {
+            moveId = variation[`move${i}Id`]
+        }
+        else if(mon && mon[`move${i}ChangeId`] > -1) {
+            moveId = mon[`move${i}ChangeId`];
+        }
+        else {
+            moveId = tr[`move${i}Id`];
+        }
+
+        if(moveId > -1) {
+            table.appendChild(getMoveRow(moveId));
+        }
+    }
+
+    contentDiv.appendChild(table);
+
+    // Capacités Duo Dynamax
+
+    let gmaxVar = monsterVariation.find(mv => mv.monsterId === monsterId && mv.form === 4);
+
+    if(gmaxVar) {
+        contentDiv.appendChild(document.createElement("br"));
+
+        let table = document.createElement("table");
+        table.classList.add("bipcode");
+        table.style.textAlign = "center";
+
+        let titleRow = document.createElement("tr");
+
+        let titleDynamax = document.createElement("th");
+        titleDynamax.innerText = "Capacités Duo Dynamax";
+        titleDynamax.colSpan = 6;
+        titleRow.appendChild(titleDynamax);
+        table.appendChild(titleRow);
+
+        let headRow = document.createElement("tr");
+
+        let headName = document.createElement("th");
+        headName.innerText = "Nom";
+        headRow.appendChild(headName);
+
+        let headType = document.createElement("th");
+        headType.innerText = "Type";
+        headRow.appendChild(headType);
+
+        let headCategory = document.createElement("th");
+        headCategory.innerText = "Catégorie";
+        headRow.appendChild(headCategory);
+
+        let headPower = document.createElement("th");
+        headPower.innerText = "Puissance";
+        headRow.appendChild(headPower);
+
+        let headTarget = document.createElement("th");
+        headTarget.innerText = "Cible";
+        headRow.appendChild(headTarget);
+
+        let headEffect = document.createElement("th");
+        headEffect.innerText = "Effet";
+        headRow.appendChild(headEffect);
+
+        table.appendChild(headRow);
+
+        for(let i = 1; i < 5; i++) {
+            let moveId = gmaxVar[`moveDynamax${i}Id`];
+
+            if(moveId > -1) {
+                table.appendChild(getGMaxMoveRow(moveId));
+            }
+        }
+
+        contentDiv.appendChild(table);
+    }
+
+    contentDiv.appendChild(document.createElement("br"));
+
+    table = document.createElement("table");
+    table.classList.add("bipcode");
+    table.style.textAlign = "center";
+
+    titleRow = document.createElement("tr");
+
+    let titleSync = document.createElement("th");
+    titleSync.innerText = "Capacité Duo";
+    titleSync.colSpan = 5 + hasExUnlocked(syncPairSelect.value) + hasExRoleUnlocked(syncPairSelect.value);
+    titleRow.appendChild(titleSync);
+    table.appendChild(titleRow);
+
+    headRow = document.createElement("tr");
+
+    let syncHeadName = document.createElement("th");
+    syncHeadName.innerText = "Nom";
+    headRow.appendChild(syncHeadName);
+
+    let syncHeadType = document.createElement("th");
+    syncHeadType.innerText = "Type";
+    headRow.appendChild(syncHeadType);
+
+    let syncHeadCategory = document.createElement("th");
+    syncHeadCategory.innerText = "Catégorie";
+    headRow.appendChild(syncHeadCategory);
+
+    let syncHeadPower = document.createElement("th");
+    syncHeadPower.innerText = "Puissance";
+    headRow.appendChild(syncHeadPower);
+
+    let syncHeadEffect = document.createElement("th");
+    syncHeadEffect.innerText = "Effet";
+    headRow.appendChild(syncHeadEffect);
+
+    if(hasExUnlocked(syncPairSelect.value)) {
+        let syncHeadExEffect = document.createElement("th");
+        syncHeadExEffect.innerText = "Effet (EX)";
+        headRow.appendChild(syncHeadExEffect);
+    }
+
+    if(hasExRoleUnlocked(syncPairSelect.value)) {
+        let syncHeadExRoleEffect = document.createElement("th");
+        syncHeadExRoleEffect.innerText = "Role EX";
+        headRow.appendChild(syncHeadExRoleEffect);
+    }
+
+    table.appendChild(headRow);
+    table.appendChild(getSyncMoveRow(mon.syncMoveId, tr));
+
+    contentDiv.appendChild(table);
+}
+
 function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
     setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation);
     setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
     setPairPassives(contentDiv, variation);
     setPairTeamSkills(contentDiv);
+    setPairMoves(contentDiv, monsterId, variation);
 }
 
 function createTab(monsterId, monTabs, tabContentDiv, isDefault = false, variation = null) {

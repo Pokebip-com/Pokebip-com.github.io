@@ -4,6 +4,7 @@ let moveAndPassiveSkillDigit;
 let moveDescription;
 let moveDescriptionParts;
 let moveNames;
+let moveTargetType;
 let passiveSkillAndMoveNumber;
 let passiveSkillDescription;
 let passiveSkillDescriptionParts;
@@ -18,6 +19,7 @@ async function getData() {
         moveDescriptionResponse,
         moveDescriptionPartsResponse,
         moveNamesResponse,
+        moveTargetTypeResponse,
         passiveSkillAndMoveNumberResponse,
         passiveSkillDescriptionResponse,
         passiveSkillDescriptionPartsResponse,
@@ -30,6 +32,7 @@ async function getData() {
         fetch("./data/lsd/move_description_fr.json"),
         fetch("./data/lsd/move_description_parts_fr.json"),
         fetch("./data/lsd/move_name_fr.json"),
+        fetch("./data/lsd/move_target_type_fr.json"),
         fetch("./data/lsd/passive_skill_and_move_number_fr.json"),
         fetch("./data/lsd/passive_skill_description_fr.json"),
         fetch("./data/lsd/passive_skill_description_parts_fr.json"),
@@ -48,6 +51,7 @@ async function getData() {
     moveDescription = await moveDescriptionResponse.json();
     moveDescriptionParts = await moveDescriptionPartsResponse.json();
     moveNames = await moveNamesResponse.json();
+    moveTargetType = await moveTargetTypeResponse.json();
     passiveSkillAndMoveNumber = await passiveSkillAndMoveNumberResponse.json();
     passiveSkillDescription = await passiveSkillDescriptionResponse.json();
     passiveSkillDescriptionParts = await passiveSkillDescriptionPartsResponse.json();
