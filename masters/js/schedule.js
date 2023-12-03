@@ -670,7 +670,7 @@ function printScouts(schedule) {
             scheduleDiv.innerHTML += `<h4>Duos à l'affiche</h4>\n<ul style='list-style-type: disc;'>\n`;
 
             sPickups.forEach(sp => {
-                scheduleDiv.innerHTML += `<li>${getPairPrettyPrintWithUrl(sp.trainerId)}</li>\n`;
+                scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(sp.trainerId)}</b></li>\n`;
             });
 
             scheduleDiv.innerHTML += "</ul>\n";
