@@ -1,5 +1,7 @@
 let abilityPanel;
 let banner;
+let championBattleRegion;
+let championBattleRegionOpeningSchedule;
 let eventBannerList;
 let eventQuestGroup;
 let itemExchange;
@@ -9,6 +11,7 @@ let legendQuestGroupSchedule;
 
 let schedule;
 let scoutIds;
+let championBattleAllPeriod;
 let eventIds;
 let loginBonusIds;
 let legendaryBattleIds;
@@ -71,6 +74,8 @@ async function getData() {
         challengeToStrongTrainerQuestGroupResponse,
         championBattleEventResponse,
         championBattleEventQuestGroupResponse,
+        championBattleRegionResponse,
+        championBattleRegionOpeningScheduleResponse,
         eventBannerResponse,
         eventQuestGroupResponse,
         homeEventAppealResponse,
@@ -106,6 +111,8 @@ async function getData() {
         fetch("./data/proto/ChallengeToStrongTrainerQuestGroup.json"),
         fetch("./data/proto/ChampionBattleEvent.json"),
         fetch("./data/proto/ChampionBattleEventQuestGroup.json"),
+        fetch("./data/proto/ChampionBattleRegion.json"),
+        fetch("./data/proto/ChampionBattleRegionOpeningSchedule.json"),
         fetch("./data/proto/EventBanner.json"),
         fetch("./data/proto/EventQuestGroup.json"),
         fetch("./data/proto/HomeEventAppeal.json"),
@@ -168,6 +175,12 @@ async function getData() {
         });
     });
     eventQuestGroup.push(...champBattleEventQuestGroup.entries);
+
+    let championBattleRegionJSON = await championBattleRegionResponse.json();
+    championBattleRegion = championBattleRegionJSON.entries;
+
+    let championBattleRegionOpeningScheduleJSON = await championBattleRegionOpeningScheduleResponse.json();
+    championBattleRegionOpeningSchedule = championBattleRegionOpeningScheduleJSON.entries;
 
     let challengeToStrongTrainerQuestGroup = await challengeToStrongTrainerQuestGroupResponse.json();
     eventQuestGroup.push(...challengeToStrongTrainerQuestGroup.entries);
@@ -268,11 +281,14 @@ async function getCustomJSON() {
 function getSchedule() {
 
     scoutIds = scout.map(s => s.scheduleId);
-    eventIds = [...new Set(storyQuest.map(sq => sq.scheduleId))];
+    eventIds = [...new Set(storyQuest.filter(sq => !sq.scheduleId.includes("_ChampionBattle_")).map(sq => sq.scheduleId))];
     legendaryBattleIds = [...new Set(Object.keys(legendQuestGroupSchedule))];
     salonGuestsUpdate = [...new Set(salonGuests.map(sg => sg.scheduleId))];
     mainStoryUpdate = [...new Set(storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
     trainingAreaUpdate = [...new Set(storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
+    championBattleAllPeriod = [...new Set(schedule.entries.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
+    console.log(championBattleAllPeriod);
+
 
     schedule = schedule.entries.filter(s =>
         scoutIds.includes(s.scheduleId)
@@ -284,7 +300,15 @@ function getSchedule() {
         || s.scheduleId.startsWith("chara_")
         || s.scheduleId.endsWith("_Shop_otoku")
         || s.scheduleId.endsWith("_musiccoin_FOREVER")
+        || (s.scheduleId.includes("_ChampionBattle_")
+            && !(s.scheduleId.endsWith("_AllPeriod")
+                || s.scheduleId.endsWith("_Emblem")
+                || s.scheduleId.endsWith("FOREVER")
+                || s.scheduleId.endsWith("_option")
+            ))
     );
+    console.log(schedule);
+    console.log(schedule.filter(s => s.scheduleId.includes("_ChampionBattle_")));
 }
 
 function getBySpecificID(data, id) {
@@ -581,6 +605,9 @@ function scheduleByVersion() {
                 else if(loginBonusIds.includes(s.scheduleId)) {
                     s.scheduleType = { "name" : "loginBonus", "priority": "70" };
                 }
+                else if(s.scheduleId.includes("_ChampionBattle_")) {
+                    s.scheduleType = { "name" : "championBattle", "priority": "17" };
+                }
                 else {
                     s.scheduleType = { "name" : "event", "priority": "20" };
 
@@ -643,7 +670,7 @@ function printScouts(schedule) {
             scheduleDiv.innerHTML += `<h4>Duos à l'affiche</h4>\n<ul style='list-style-type: disc;'>\n`;
 
             sPickups.forEach(sp => {
-                scheduleDiv.innerHTML += `<li>${getPairPrettyPrint(sp.trainerId)}</li>\n`;
+                scheduleDiv.innerHTML += `<li>${getPairPrettyPrintWithUrl(sp.trainerId)}</li>\n`;
             });
 
             scheduleDiv.innerHTML += "</ul>\n";
@@ -722,7 +749,7 @@ async function printPairChanges(scheduleId) {
 
         }
 
-        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrint(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
+        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
     }
 }
 
@@ -743,7 +770,7 @@ function printSalonGuest(scheduleId) {
 
         }
 
-        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrint(salonGuestList[index].trainerId)} : </b> ${salonGuestList[index].text}</li>`;
+        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(salonGuestList[index].trainerId)} : </b> ${salonGuestList[index].text}</li>`;
     }
 }
 
@@ -758,6 +785,15 @@ function printShopOffers(schedule) {
 
         banners.forEach(ban => printEventBanner(ban, schedule));
     });
+}
+
+function printChampionBattle(sched) {
+    let period = championBattleAllPeriod.find(cbap => sched.startDate >= cbap.startDate && sched.startDate < cbap.endDate);
+    let openingSchedule = championBattleRegionOpeningSchedule.find(cbros => cbros.scheduleId === period.scheduleId);
+    let cbr = championBattleRegion.find(cbr => cbr.championBattleRegionId === openingSchedule.championBattleId);
+    let ban = banner.find(b => b.bannerId === cbr.bannerId);
+
+    printEventBanner(ban, sched);
 }
 
 function printHomeAppealEvent(schedule) {
@@ -993,14 +1029,14 @@ function setVersionInfos(id) {
 
     scheduleDiv.innerHTML = "";
 
-    let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag, musicFlag, loginBonusFlag;
+    let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag, musicFlag, loginBonusFlag, championBattleFlag;
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
     printCalendars(startDates.map(t => new Date(t*1000)));
 
     startDates.forEach(timestamp => {
 
-        scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = musicFlag = loginBonusFlag = true;
+        scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = musicFlag = loginBonusFlag = championBattleFlag = true;
         treatedEvents = [];
 
         let date = new Date(timestamp*1000);
@@ -1016,6 +1052,14 @@ function setVersionInfos(id) {
                     printScouts(sched);
                     break;
 
+                case "championBattle":
+                    if(championBattleFlag) {
+                        scheduleDiv.innerHTML += "<h2>Combat de Maître</h2>";
+                        championBattleFlag = false;
+                    }
+                    printChampionBattle(sched);
+                    break;
+
                 case "event":
                     if(eventFlag) {
                         scheduleDiv.innerHTML += "<h2>Événements</h2>";
@@ -1028,7 +1072,7 @@ function setVersionInfos(id) {
                     }
 
                     if(sched.isHomeAppeal) {
-                        printHomeAppealEvent(sched)
+                        printHomeAppealEvent(sched);
                         break;
                     }
 
@@ -1111,8 +1155,8 @@ async function init() {
     scheduleDiv = document.getElementById("scheduleDiv");
     toolsDiv = document.getElementById('adminTools');
 
-    await getData();
     await getCustomJSON();
+    await getData();
 
     if(isAdminMode) {
         toolsDiv.style.display = "table";
@@ -1138,7 +1182,7 @@ async function init() {
         versionSelect.value = urlVersionId;
     }
 
-    setVersion(versionSelect.value);
+    setVersion(versionSelect.value, false);
 
     //downloadData()
 

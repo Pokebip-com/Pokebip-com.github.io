@@ -1,0 +1,9 @@
+{"entries": [
+{ "championBattleRegionId": 900001, "u1": "", "nameId": "champion_region_group_900001", "bannerId": 7304001, "u2": 10, "u3": "", "bgmName": "bgm_field_champion_01" },
+{ "championBattleRegionId": 900002, "u1": "", "nameId": "champion_region_group_900002", "bannerId": 7212001, "u2": 30, "u3": "", "bgmName": "bgm_field_champion_02" },
+{ "championBattleRegionId": 900003, "u1": "", "nameId": "champion_region_group_900003", "bannerId": 7303001, "u2": 40, "u3": "", "bgmName": "bgm_field_champion_03" },
+{ "championBattleRegionId": 900004, "u1": "", "nameId": "champion_region_group_900004", "bannerId": 7309001, "u2": 50, "u3": "", "bgmName": "bgm_field_champion_04" },
+{ "championBattleRegionId": 900005, "u1": "", "nameId": "champion_region_group_900005", "bannerId": 7404003, "u2": 60, "u3": "", "bgmName": "bgm_field_champion_05" },
+{ "championBattleRegionId": 900006, "u1": "", "nameId": "champion_region_group_900006", "bannerId": 7407002, "u2": 70, "u3": "", "bgmName": "bgm_field_champion_06" },
+{ "championBattleRegionId": 900007, "u1": "", "nameId": "champion_region_group_900007", "bannerId": 7501003, "u2": 80, "u3": "", "bgmName": "bgm_field_champion_07" }
+]}

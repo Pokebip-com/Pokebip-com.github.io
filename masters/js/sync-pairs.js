@@ -143,8 +143,8 @@ function populateSelect() {
     });
 }
 
-function switchTab(monsterId, monsterBaseId, formId) {
-    setUrlMonsterInfos(monsterId, monsterBaseId, formId);
+function switchTab(monsterId, monsterBaseId, formId, pushstate = true) {
+    setUrlMonsterInfos(monsterId, monsterBaseId, formId, pushstate);
 
     [...document.getElementsByClassName("tabContent")].forEach(tc => tc.style.display = "none");
     [...document.getElementsByClassName("tabLinks")].forEach(tl => tl.classList.remove("active"));
@@ -653,7 +653,6 @@ function getGMaxMoveRow(moveId) {
 function getSyncMoveRow(syncMoveId, tr) {
     let row = document.createElement("tr");
     let mov = move.find(m => m.moveId === syncMoveId);
-    console.log(mov);
 
     let nameCell = document.createElement("td");
     nameCell.innerText = moveNames[syncMoveId];
@@ -881,12 +880,29 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     contentDiv.appendChild(table);
 }
 
+function setSyncGrid() {
+    let syncGridDiv = document.getElementById("syncGrid");
+    let abilityPanels = abilityPanel.filter(ap => ap.trainerId === syncPairSelect.value);
+    let i = 0;
+
+    abilityPanels.forEach(ap => {
+        let panelDiv = document.createElement("div");
+        panelDiv.classList.add("hex");
+        panelDiv.innerText = ++i + "";
+
+        syncPairDiv.appendChild(panelDiv);
+    });
+
+    //console.log(abilityPanels);
+}
+
 function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
     setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation);
     setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
     setPairPassives(contentDiv, variation);
     setPairTeamSkills(contentDiv);
     setPairMoves(contentDiv, monsterId, variation);
+    //setSyncGrid();
 }
 
 function createTab(monsterId, monTabs, tabContentDiv, isDefault = false, variation = null) {
@@ -920,7 +936,7 @@ function createTab(monsterId, monTabs, tabContentDiv, isDefault = false, variati
     tabContentDiv.appendChild(contentDiv);
 
     if(isDefault) {
-        switchTab(monsterId, monsterBaseId, formId);
+        switchTab(monsterId, monsterBaseId, formId, false);
     }
 }
 
@@ -971,7 +987,7 @@ function setPair(id) {
     setPairInfos(id);
 }
 
-function setUrlMonsterInfos(monsterId, baseId, formId) {
+function setUrlMonsterInfos(monsterId, baseId, formId, pushstate) {
 
     const url = new URL(window.location);
 
@@ -983,11 +999,11 @@ function setUrlMonsterInfos(monsterId, baseId, formId) {
     url.searchParams.set('baseId', baseId);
     url.searchParams.set('formId', formId);
 
-    window.history.pushState(null, '', url.toString());
+    if(pushstate)
+        window.history.pushState(null, '', url.toString());
 }
 
 function setLatestPairs() {
-    console.log(schedule);
     lastReleasePairsDiv = document.getElementById('lastReleasedPairs');
     let newTrainers = trainer
         .filter(t => schedule.map(s => s.scheduleId).includes(t.scheduleId))
@@ -1016,8 +1032,6 @@ function setLatestPairs() {
     });
 
     lastReleasePairsDiv.appendChild(ul);
-
-    console.log(newTrainers);
 }
 
 function selectChange() {

@@ -38,6 +38,10 @@ function getStarsRarityString(trainerId) {
     return `<span style="color: ${starsHex[getTrainerRarity(trainerId)-1]}; -webkit-text-stroke: thin black;"><b>${"★".repeat(getTrainerRarity(trainerId))}</b></span>`;
 }
 
+function getPairPrettyPrintWithUrl(trainerId) {
+    return `<a href="./duo.html?pair=${trainerId}">${getPairPrettyPrint(trainerId)}</a>`;
+}
+
 function getTrainerName(id) {
     let tr = trainer.find(t => t.trainerId === id) || {};
     let tb = trainerBase.find(tba => tba.id === tr.trainerBaseId.toString()) || {};
