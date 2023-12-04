@@ -25,6 +25,35 @@ const exSyncEffect = [
     "Implémente un effet de terrain juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet.",
 ];
 
+function getAbilityType(ability) {
+    switch(ability.type) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            //stat boosts
+            return abilityType[1];
+
+        case 7:
+            //Passive
+            return abilityType[2];
+
+        case 8:
+            //additional move effect
+            return abilityType[3];
+
+        case 9:
+        case 10:
+            //move power/accuracy boost
+            if(move.find(m => m.moveId === ability.moveId).group === "Sync") {
+                return abilityType[5];
+            }
+
+            return abilityType[4];
+    }
+}
 
 function getPairPrettyPrint(trainerId) {
     return `${getStarsRarityString(trainerId)} ${getPairName(trainerId)}`;

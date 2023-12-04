@@ -1,3 +1,4 @@
+let ability;
 let abilityPanel;
 let exRoleStatusUp;
 let monster;
@@ -9,6 +10,11 @@ let teamSkill;
 let trainer;
 let trainerBase;
 let trainerExRole;
+
+let abilityName;
+let abilityType;
+let abilityTypeBGColor;
+let abilityTypeTitle;
 let versions;
 
 let monsterDescriptions;
@@ -27,6 +33,7 @@ let toolsDiv;
 
 async function getData() {
     const [
+        abilityResponse,
         abilityPanelResponse,
         exRoleStatusUpResponse,
         monsterResponse,
@@ -48,6 +55,7 @@ async function getData() {
         trainerNameResponse,
         trainerVerboseNameResponse,
     ] = await Promise.all([
+        fetch("./data/proto/Ability.json"),
         fetch("./data/proto/AbilityPanel.json"),
         fetch("./data/proto/ExRoleStatusUp.json"),
         fetch("./data/proto/Monster.json"),
@@ -70,6 +78,9 @@ async function getData() {
         fetch("./data/lsd/trainer_verbose_name_fr.json")
     ])
         .catch(error => console.log(error));
+
+    ability = await abilityResponse.json();
+    ability = ability.entries;
 
     abilityPanel = await abilityPanelResponse.json();
     abilityPanel = abilityPanel.entries;
@@ -118,12 +129,25 @@ async function getData() {
 
 async function getCustomJSON() {
     const [
-        versionsResponse
+        abilityNameResponse,
+        abilityTypeResponse,
+        abilityTypeBGColorResponse,
+        abilityTypeTitleResponse,
+        versionsResponse,
     ] = await Promise.all([
-        fetch("./data/custom/version_release_dates.json")
+        fetch("./data/custom/ability_name.json"),
+        fetch("./data/custom/ability_type.json"),
+        fetch("./data/custom/table_bgcolor.json"),
+        fetch("./data/custom/ability_type_title.json"),
+        fetch("./data/custom/version_release_dates.json"),
     ])
         .catch(error => console.log(error));
 
+
+    abilityName = await abilityNameResponse.json();
+    abilityType = await abilityTypeResponse.json();
+    abilityTypeBGColor = await abilityTypeBGColorResponse.json();
+    abilityTypeTitle = await abilityTypeTitleResponse.json();
     versions = await versionsResponse.json().then(orderByVersion);
 }
 
@@ -880,20 +904,109 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     contentDiv.appendChild(table);
 }
 
-function setSyncGrid() {
-    let syncGridDiv = document.getElementById("syncGrid");
-    let abilityPanels = abilityPanel.filter(ap => ap.trainerId === syncPairSelect.value);
-    let i = 0;
+function appendGridCategory(table, panels, category) {
+    panels = panels.filter(p => p.type === category)
+                    .sort((a, b) => a.level - b.level || a.cellId - b.cellId);
 
-    abilityPanels.forEach(ap => {
-        let panelDiv = document.createElement("div");
-        panelDiv.classList.add("hex");
-        panelDiv.innerText = ++i + "";
+    let headRow = document.createElement("tr");
 
-        syncPairDiv.appendChild(panelDiv);
+    let categoryName = document.createElement("th");
+    categoryName.style.backgroundColor = abilityTypeBGColor[category];
+    categoryName.colSpan = 5;
+    categoryName.innerText = abilityTypeTitle[category];
+    headRow.appendChild(categoryName);
+    table.appendChild(headRow);
+
+    panels.forEach(p => {
+        let tr = document.createElement("tr");
+
+        if(p.isNew) {
+            tr.style.backgroundColor = "#7afa96";
+        }
+
+        let amelioration = abilityName[p.ability.type];
+        amelioration = amelioration.replace("{val}", p.ability.value);
+
+        if(p.ability.passiveId) {
+            amelioration = amelioration.replace("{passive}", getPassiveSkillName(p.ability.passiveId));
+        }
+        if(p.ability.moveId) {
+            amelioration = amelioration.replace("{move}", moveNames[p.ability.moveId].replace("\n", " "));
+        }
+
+        let ameliorationCell = document.createElement("td");
+        ameliorationCell.innerText = amelioration;
+        tr.appendChild(ameliorationCell);
+
+        let effectCell = document.createElement("td");
+        effectCell.innerText = p.ability.passiveId ? getPassiveSkillDescr(p.ability.passiveId) : "–";
+        tr.appendChild(effectCell);
+
+        let energyCell = document.createElement("td");
+        energyCell.innerText = p.energyCost || "–";
+        tr.appendChild(energyCell);
+
+        let orbCostCell = document.createElement("td");
+        orbCostCell.innerText = p.orbCost;
+        tr.appendChild(orbCostCell);
+
+        let levelCell = document.createElement("td");
+        levelCell.innerText = `${p.level}/5`;
+        tr.appendChild(levelCell);
+
+        table.appendChild(tr);
     });
+}
 
-    //console.log(abilityPanels);
+function setSyncGrid() {
+    let syncPairDiv = document.getElementById("syncPairDiv");
+    let syncGridDiv = document.createElement("div");
+    syncGridDiv.innerHTML = "<br /><h2>Plateau Duo-Gemme</h2>";
+
+    syncPairDiv.appendChild(syncGridDiv);
+
+    let charaScheduleId = schedule.map(s => s.scheduleId);
+    let ap = abilityPanel.filter(ap => ap.trainerId === syncPairSelect.value)
+        .map(ap => {
+            ap.ability = ability.find(a => a.abilityId === ap.abilityId);
+            ap.level = 1;
+            ap.conditionIds.forEach(cid => (cid >= 12 && cid <= 15) ? ap.level = cid-10 : "");
+            ap.type = getAbilityType(ap.ability);
+            ap.isNew = charaScheduleId.includes(ap.scheduleId);
+            return ap;
+        });
+
+    let table = document.createElement("table");
+    table.classList.add("bipcode");
+    table.style.textAlign = "center";
+
+    let headRow = document.createElement("tr");
+
+    let upgradeTitle = document.createElement("th");
+    upgradeTitle.innerText = "Amélioration";
+    headRow.appendChild(upgradeTitle);
+
+    let effectTitle = document.createElement("th");
+    effectTitle.innerText = "Effet";
+    headRow.appendChild(effectTitle);
+
+    let energyTitle = document.createElement("th");
+    energyTitle.innerText = "Énergie requise";
+    headRow.appendChild(energyTitle);
+
+    let spheresTitle = document.createElement("th");
+    spheresTitle.innerText = "Duo-Sphères requises";
+    headRow.appendChild(spheresTitle);
+
+    let trainerLevelTitle = document.createElement("th");
+    trainerLevelTitle.innerText = "Niveau des capacités requis";
+    headRow.appendChild(trainerLevelTitle);
+
+    table.appendChild(headRow);
+
+    Object.keys(abilityType).forEach(key => appendGridCategory(table, ap, abilityType[key]));
+
+    syncGridDiv.appendChild(table);
 }
 
 function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
@@ -902,10 +1015,9 @@ function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId
     setPairPassives(contentDiv, variation);
     setPairTeamSkills(contentDiv);
     setPairMoves(contentDiv, monsterId, variation);
-    //setSyncGrid();
 }
 
-function createTab(monsterId, monTabs, tabContentDiv, isDefault = false, variation = null) {
+function createTab(monsterId, monTabs, tabContentDiv, pushState = false, isDefault = false, variation = null) {
     let monsterBaseId = 0;
     let formId = 0;
     let monsterName;
@@ -936,11 +1048,11 @@ function createTab(monsterId, monTabs, tabContentDiv, isDefault = false, variati
     tabContentDiv.appendChild(contentDiv);
 
     if(isDefault) {
-        switchTab(monsterId, monsterBaseId, formId, false);
+        switchTab(monsterId, monsterBaseId, formId, pushState);
     }
 }
 
-function setPairInfos(id) {
+function setPairInfos(id, pushState = false) {
     let pairEvolutions = monsterEvolution.filter(me => me.trainerId === id);
     let monsterIds = [];
     let pairVariations = {};
@@ -964,10 +1076,10 @@ function setPairInfos(id) {
 
     for(let i = 0; i < monsterIds.length; i++) {
         if(i === (monsterIds.length - 1)) {
-            createTab(monsterIds[i], monTabs, tabContentDiv, true);
+            createTab(monsterIds[i], monTabs, tabContentDiv, pushState, true);
         }
         else {
-            createTab(monsterIds[i], monTabs, tabContentDiv);
+            createTab(monsterIds[i], monTabs, tabContentDiv, pushState);
         }
 
         let variations = monsterVariation.filter(mv => mv.monsterId === monsterIds[i]);
@@ -976,18 +1088,15 @@ function setPairInfos(id) {
 
             variations.forEach(v => {
                 if(v.form !== 4)    // Ne pas inclure les Gigamax
-                    createTab(monsterIds[i], monTabs, tabContentDiv, false, v)
+                    createTab(monsterIds[i], monTabs, tabContentDiv, pushState, false, v)
             });
         }
     }
+
+    setSyncGrid();
 }
 
-function setPair(id) {
-    syncPairSelect.value = id;
-    setPairInfos(id);
-}
-
-function setUrlMonsterInfos(monsterId, baseId, formId, pushstate) {
+function setUrlMonsterInfos(monsterId, baseId, formId, pushState) {
 
     const url = new URL(window.location);
 
@@ -999,7 +1108,7 @@ function setUrlMonsterInfos(monsterId, baseId, formId, pushstate) {
     url.searchParams.set('baseId', baseId);
     url.searchParams.set('formId', formId);
 
-    if(pushstate)
+    if(pushState)
         window.history.pushState(null, '', url.toString());
 }
 
@@ -1010,8 +1119,12 @@ function setLatestPairs() {
         .sort((a, b) => a.scheduleId.localeCompare(b.scheduleId));
 
     let h2 = document.createElement("h2");
-    h2.innerText = "Duos ajoutés dans la dernière MàJ";
+    h2.innerText = "Dernière mise à jour";
     lastReleasePairsDiv.appendChild(h2);
+
+    let addedH3 = document.createElement("h3");
+    addedH3.innerText = "Duos ajoutés";
+    lastReleasePairsDiv.appendChild(addedH3);
 
     let ul = document.createElement("ul");
 
@@ -1032,6 +1145,37 @@ function setLatestPairs() {
     });
 
     lastReleasePairsDiv.appendChild(ul);
+
+    let gridH3 = document.createElement("h3");
+    gridH3.innerText = "Plateaux étendus";
+    lastReleasePairsDiv.appendChild(gridH3);
+
+    let updatedGridTrainer = [...new Set(abilityPanel.filter(ap => schedule.map(s => s.scheduleId).includes(ap.scheduleId)).map(ap => ap.trainerId))]
+
+    updatedGridTrainer = updatedGridTrainer.map(tid => {
+        let trainerPanels = abilityPanel.filter(ap => ap.trainerId === tid);
+        return {"trainerId" : tid, "new" : trainerPanels.length, "old" : trainerPanels.filter(tp => !schedule.map(s => s.scheduleId).includes(tp.scheduleId)).length };
+    });
+
+    ul = document.createElement("ul");
+
+    updatedGridTrainer.forEach(ugt => {
+        let li = document.createElement("li");
+        let b = document.createElement("b");
+        let anchor = document.createElement("a");
+        anchor.href = '#';
+        anchor.innerText = `${getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})`;
+        anchor.addEventListener("click", () => {
+            syncPairSelect.value = ugt.trainerId;
+            selectChange();
+        });
+
+        b.appendChild(anchor);
+        li.appendChild(b);
+        ul.appendChild(li);
+    });
+
+    lastReleasePairsDiv.appendChild(ul);
 }
 
 function selectChange() {
@@ -1039,8 +1183,30 @@ function selectChange() {
     url.searchParams.delete('monsterId');
     url.searchParams.delete('baseId');
     url.searchParams.delete('formId');
+    url.searchParams.set('pair', syncPairSelect.value);
 
-    setPair(syncPairSelect.value);
+    window.history.pushState(null, '', url.toString());
+
+    setPairInfos(syncPairSelect.value, false);
+}
+
+function urlStateChange() {
+    const url = new URL(window.location);
+    const urlPairId = url.searchParams.get('pair');
+
+    if(urlPairId !== null) {
+        syncPairSelect.value = urlPairId;
+    }
+
+    setPairInfos(syncPairSelect.value);
+
+    const monsterId = url.searchParams.get('monsterId');
+    const baseId = url.searchParams.get('baseId');
+    const formId = url.searchParams.get('formId');
+
+    if(monsterId && baseId && formId) {
+        switchTab(monsterId, baseId, formId, false);
+    }
 }
 
 async function init() {
@@ -1061,24 +1227,10 @@ async function init() {
     populateSelect();
     setLatestPairs();
 
-    syncPairSelect.onchange = selectChange;
+    syncPairSelect.addEventListener('change', selectChange);
 
-    const url = new URL(window.location);
-    const urlPairId = url.searchParams.get('pair');
-
-    if(urlPairId !== null) {
-        syncPairSelect.value = urlPairId;
-    }
-
-    setPairInfos(syncPairSelect.value);
-
-    const monsterId = url.searchParams.get('monsterId');
-    const baseId = url.searchParams.get('baseId');
-    const formId = url.searchParams.get('formId');
-
-    if(monsterId && baseId && formId) {
-        switchTab(monsterId, baseId, formId);
-    }
+    urlStateChange();
+    window.addEventListener('popstate', urlStateChange);
 }
 
 init().then();
