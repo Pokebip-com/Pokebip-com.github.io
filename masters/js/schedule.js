@@ -56,7 +56,7 @@ let versionSelect;
 let toolsDiv;
 let startDateInput;
 let endDateInput;
-let downloadButton;
+let downloadAll;
 
 const scrollTopBtn = document.getElementById('scrollTop');
 const nextContentBtn = document.getElementById('nextContent');
@@ -1164,8 +1164,8 @@ async function init() {
         startDateInput = document.getElementById("startDate");
         endDateInput = document.getElementById("endDate");
 
-        downloadButton = document.getElementById("downloadData");
-        downloadButton.onclick = downloadData;
+        downloadAll = document.getElementById("downloadData");
+        downloadAll.onclick = downloadData;
     }
 
     scheduleByVersion();

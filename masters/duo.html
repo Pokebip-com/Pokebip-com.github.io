@@ -93,6 +93,8 @@
     <link rel="stylesheet" href="../css/pokebip.css">
     <link rel="stylesheet" href="../css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="./js/dist/FileSaver.min.js"></script>
+    <script src="./js/dist/jszip.min.js"></script>
 </head>
 
 <body style="margin-top: 0">
@@ -104,7 +106,13 @@
         <fieldset id="adminTools" style="display: none; margin-top: 10px; line-height: 1.6rem; width: fit-content; border-radius: 8px;">
             <legend><b>Télécharger les données</b></legend>
             <p style="display: table-row;">
-                <label for="downloadData" style="display: table-cell; text-align: right;"></label> <button id="downloadData" style="display: table-cell; margin-left: 5px;">Télécharger</button>
+                <label for="downloadOne" style="display: table-cell; text-align: right;"></label> <button id="downloadOne" style="display: table-cell; margin-left: 5px;">Télécharger la fiche</button>
+            </p>
+            <p style="display: table-row;">
+                <label for="downloadAll" style="display: table-cell; text-align: right;"></label> <button id="downloadAll" style="display: table-cell; margin-left: 5px;">Tout télécharger (ZIP)</button>
+            </p>
+            <p id="dlCountRow" style="display: none;">
+                <label for="downloadAll" style="display: table-cell; text-align: right;"></label> <span id="dlCount" style="display: table-cell; margin-left: 5px;"></span>
             </p>
         </fieldset>
     </div>

@@ -1,6 +1,7 @@
 
 const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
 const role_names = ["Attaquant (Physique)", "Attaquant (Spécial)", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
+const role_name_standard = ["Attaquant", "Attaquant", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
 const targetToId = {
     "AllySingle" : 0,
     "AllyAll" : 1,
@@ -60,7 +61,7 @@ function getPairPrettyPrint(trainerId) {
 }
 
 function getPairName(trainerId) {
-    return `${getTrainerName(trainerId)} & ${getMonsterNameByTrainerId(trainerId)}`;
+    return `${getTrainerName(trainerId).replace("\n", "")} & ${getMonsterNameByTrainerId(trainerId)}`;
 }
 
 function getStarsRarityString(trainerId) {
@@ -122,6 +123,10 @@ function getMonsterBaseIdFromActorId(actorId) {
     return monsterBase.find(mb => mb.actorId === actorId).monsterBaseId || -1;
 }
 
+function getPokemonNumberFromMonsterBaseId(monsterBaseId) {
+    return monsterBase.find(mb => mb.monsterBaseId === monsterBaseId).actorNumber;
+}
+
 function getMonsterActorIdFromBaseId(baseId) {
     return monsterBase.find(mb => mb.monsterBaseId === baseId).actorId;
 }
@@ -130,20 +135,27 @@ function getMonsterById(monsterId) {
     return monster.find(m => m.monsterId === monsterId);
 }
 
-function getRoleByTrainerId(id) {
+function getRoleByTrainerId(id, standard = false) {
+    const role = trainer.find(t => t.trainerId === id).role;
+
+    return standard ? role_name_standard[role] : role_names[role];
+}
+
+function getRoleUrlByTrainerId(id, specification = true) {
     const role = trainer.find(t => t.trainerId === id).role;
 
     switch(role) {
         case 0:
-            return "Attaquant Physique";
-
         case 1:
-            return "Attaquant Spécial";
-
+            if(!specification)
+                return "attaquant";
+        case 0:
+            return "attaquant-physique";
+        case 1:
+            return "attaquant-special";
         default:
-            return role_names[role];
+            return removeAccents(role_names[role].toLowerCase());
     }
-
 }
 
 function getTrainerTypeName(id) {

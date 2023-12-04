@@ -21,6 +21,7 @@ let monsterDescriptions;
 let monsterForms;
 let monsterNames;
 let motifTypeName;
+let teamSkillEffect;
 let teamSkillTag;
 let trainerDescriptions;
 let trainerNames;
@@ -50,6 +51,7 @@ async function getData() {
         monsterFormResponse,
         monsterNameResponse,
         motifTypeNameResponse,
+        teamSkillEffectResponse,
         teamSkillTagResponse,
         trainerDescriptionResponse,
         trainerNameResponse,
@@ -72,6 +74,7 @@ async function getData() {
         fetch("./data/lsd/monster_form_fr.json"),
         fetch("./data/lsd/monster_name_fr.json"),
         fetch("./data/lsd/motif_type_name_fr.json"),
+        fetch("./data/lsd/team_skill_effect_fr.json"),
         fetch("./data/lsd/team_skill_tag_fr.json"),
         fetch("./data/lsd/trainer_description_fr.json"),
         fetch("./data/lsd/trainer_name_fr.json"),
@@ -122,6 +125,7 @@ async function getData() {
     monsterNames = await monsterNameResponse.json();
     motifTypeName = await motifTypeNameResponse.json();
     teamSkillTag = await teamSkillTagResponse.json();
+    teamSkillEffect = await teamSkillEffectResponse.json();
     trainerDescriptions = await trainerDescriptionResponse.json();
     trainerNames = await trainerNameResponse.json();
     trainerVerboseNames = await trainerVerboseNameResponse.json();
@@ -1232,12 +1236,15 @@ async function init() {
     await getData();
     await getCustomJSON();
 
-    // if(isAdminMode) {
-    //     toolsDiv.style.display = "table";
-    //
-    //     downloadButton = document.getElementById("downloadData");
-    //     downloadButton.onclick = downloadData;
-    // }
+    if(isAdminMode) {
+        toolsDiv.style.display = "table";
+
+        let downloadAllBtn = document.getElementById("downloadAll");
+        downloadAllBtn.onclick = downloadAll;
+
+        let downloadOneBtn = document.getElementById("downloadOne");
+        downloadOneBtn.onclick = downloadData;
+    }
 
     populateSelect();
     setLatestPairs();
@@ -1246,6 +1253,463 @@ async function init() {
 
     urlStateChange();
     window.addEventListener('popstate', urlStateChange);
+}
+function getPairStatsRowBipCode(name, statValues, rarity, scale = 1) {
+    const breakPointLevels = [1, 30, 45, 100, 120, 140, 200];
+
+    let string = `\t\t[tr][th]${name}[/th]`;
+
+    let level = 150;
+    let pointBIdx = breakPointLevels.findIndex((a) => a > level);
+    let pointAIdx = pointBIdx - 1;
+
+    for(let i = rarity; i <= 6; i++) {
+        let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx])*(statValues[pointBIdx] - statValues[pointAIdx])/(breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
+
+        if(i < 6)
+            statValue += 20*(i-rarity)*(name === "PV" ? 2 : 1);
+        else
+            statValue += 20*(i-rarity)*(name === "PV" ? 5 : 2);
+
+        statValue = Math.trunc(statValue*scale);
+
+        string += `[td]`;
+
+        if(scale > 1) {
+            string += `[b][color=green]${statValue}[/color][/b]`;
+        }
+        else if(scale < 1) {
+            string += `[b][color=red]${statValue}[/color][/b]`;
+        }
+        else {
+            string += statValue;
+        }
+
+        string += `[/td]`;
+    }
+
+    string += `[/tr]\n`;
+    return string;
+}
+
+function getMonsterStatsBipCode(m, rarity, v = null) {
+    let string = `\t[item|nostyle][table]\n`
+        + `\t\t[tr][th|colspan=${rarity+1}]${(v ? v.monsterName : getMonsterNameByMonsterId(m.monsterId))}[/th][/tr]\n`
+        + `\t\t[tr][th]Stats max[/th]`;
+
+    for(let i = rarity; i <= 6; i++) {
+        string += `[th|width=50px]${i === 6 ? "5+" : i}★[/th]`;
+    }
+
+    string += `[/tr]\n`;
+    string += getPairStatsRowBipCode("PV", m.hpValues, rarity);
+    string += getPairStatsRowBipCode("Attaque", m.atkValues, rarity, (v ? v.atkScale/100 : 1));
+    string += getPairStatsRowBipCode("Défense", m.defValues, rarity, (v ? v.defScale/100 : 1));
+    string += getPairStatsRowBipCode("Atq. Spé.", m.spaValues, rarity, (v ? v.spaScale/100 : 1));
+    string += getPairStatsRowBipCode("Déf. Spé.", m.spdValues, rarity, (v ? v.spdScale/100 : 1));
+    string += getPairStatsRowBipCode("Vitesse", m.speValues, rarity, (v ? v.speScale/100 : 1));
+
+    string += `\t[/table][/item]\n`;
+
+    return string;
+}
+
+function getPassiveSkillBipCode(t, v = null) {
+    let string = `[center][table]\n`
+        + `\t[tr][th|colspan=2]Talents passifs[/th][/tr]\n`
+        + `\t[tr][th|width=200px]Nom[/th][th|width=400px]Effet[/th][/tr]\n`;
+
+    for(let i = 1; i <= 4; i++) {
+        const passiveId = v && v[`passive${i}Id`] > 0 ? v[`passive${i}Id`] : t[`passive${i}Id`];
+
+        if(passiveId === 0)
+            continue;
+
+        string += `\t[tr][td]${getPassiveSkillName(passiveId)}[/td][td]${getPassiveSkillDescr(passiveId)}[/td][/tr]\n`;
+    }
+
+    string += `[/table][/center]\n\n`;
+    return string;
+}
+
+function getMoveBipCode(t, m, v = null) {
+    let string = `[center][table]\n`
+        + `\t[tr][th|colspan=9]Capacités[/th][/tr]\n`
+        + `\t[tr][th|width=100px]Nom[/th][th|width=80px]Type[/th][th|width=80px]Catég.[/th][th|width=50px]Puis.[/th][th]Précis.[/th][th]Jauge[/th][th|width=80px]Cible[/th]\n`
+        + `\t[th|width=350]Effet[/th][th|width=80px]Limite[/th][/tr]\n`;
+
+    for(let i = 1; i < 5; i++) {
+        let moveId;
+
+        if(v && v[`move${i}Id`] > -1) {
+            moveId = v[`move${i}Id`]
+        }
+        else if(m && m[`move${i}ChangeId`] > -1) {
+            moveId = m[`move${i}ChangeId`];
+        }
+        else {
+            moveId = t[`move${i}Id`];
+        }
+
+        if(moveId > -1) {
+            let mov = move.find(m => m.moveId == moveId);
+            string += `\t[tr]\n`
+                + `\t\t[td]${moveNames[moveId].replace("\n", " ")}[/td]\n`
+                + `\t\t[td]${mov.type ? `[type=${removeAccents(motifTypeName[mov.type].toLowerCase())}|MX]` : "–"}[/td]\n`
+                + `\t\t[td][type=${removeAccents(categoryToFR[mov.category].toLowerCase())}|MX][/td]\n`
+                + `\t\t[td]${mov.power ? `${mov.power}-${Math.trunc(mov.power*1.2)}` : "–"}[/td]\n`
+                + `\t\t[td]${mov.accuracy || "–"}[/td]\n`
+                + `\t\t[td]${mov.gaugeDrain ? `[img]/pages/jeuxvideo/pokemon-masters/images/jauge-capa-${mov.gaugeDrain}.png[/img]` : "–"}[/td]\n`
+                + `\t\t[td]${moveTargetType[targetToId[mov.target]] || "–"}[/td]\n`
+                + `\t\t[td]${getMoveDescr(moveId)}[/td]\n`
+                + `\t\t[td]${mov.uses ? `${mov.uses} fois par combat` : "–"}[/td]\n`
+                + `\t[/tr]\n`
+        }
+    }
+
+    string += `[/table][/center]\n`;
+    return string;
+}
+
+function appendGridCategoryBipCode(panels, category) {
+    panels = panels.filter(p => p.type === category)
+        .reduce((acc, curr) => {
+            let cell = acc.find(a => a.cellId === curr.cellId);
+
+            if(cell) {
+                if(cell.version < curr.version) {
+                    acc = acc.filter(a => a.cellId !== curr.cellId);
+                    acc.push(curr);
+                }
+
+                return acc;
+            }
+
+            acc = acc.concat(curr);
+            return acc;
+        },[])
+        .sort((a, b) => a.level - b.level || a.cellId - b.cellId);
+
+    let string = `\t[tr][th|bgcolor=${abilityTypeBGColor[category]}|colspan=5]${abilityTypeTitle[category]}[/th][/tr]\n`;
+
+    panels.forEach(p => {
+        let amelioration = abilityName[p.ability.type];
+        amelioration = amelioration.replace("{val}", p.ability.value);
+
+        if(p.ability.passiveId) {
+            amelioration = amelioration.replace("{passive}", getPassiveSkillName(p.ability.passiveId));
+        }
+        if(p.ability.moveId) {
+            amelioration = amelioration.replace("{move}", moveNames[p.ability.moveId].replace("\n", " "));
+        }
+
+        string += `\t[tr]\n`
+            + `\t\t[td]${amelioration}[/td]\n`
+            + `\t\t[td]${p.ability.passiveId ? getPassiveSkillDescr(p.ability.passiveId) : "–"}[/td]\n`
+            + `\t\t[td]${p.energyCost || "–"}[/td]\n`
+            + `\t\t[td]${p.orbCost} [img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/duo-sphere.png[/img][/td]\n`
+            + `\t\t[td][img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/niveau-capacites-${p.level}.png[/img][/td]\n`
+            + `\t[/tr]\n`;
+    });
+
+    return string;
+}
+
+function getPairBipCode(trainerId) {
+    let string = `[title]Pokémon Masters EX > ${getPairName(trainerId)}[/title]\n`
+        + `[nav]jeuxvideo/pokemon-masters/navigation[/nav]\n`
+        + `[h1]Pokémon Masters EX\nDuos Dex\n${getPairName(trainerId)}[/h1]\n`
+        + `[include=jeuxvideo/pokemon-masters/duos/0-menu-deroulant]\n`
+        + `[include=jeuxvideo/pokemon-masters/duos/menus-deroulants/A_MODIFIER]\n\n`
+        + `[include=jeuxvideo/pokemon-masters/duos/0-sommaire-duo]\n\n`;
+
+    let t = trainer.find(t => t.trainerId === trainerId);
+    let pairEvolutions = monsterEvolution.filter(me => me.trainerId === trainerId);
+    let monsterIds = [];
+    let monsters = [];
+    let pairVariations = {};
+    monsterIds.push(t.monsterId);
+    pairEvolutions.forEach(pe => monsterIds.push(pe.monsterIdNext));
+
+    for(let i = 0; i < monsterIds.length; i++) {
+        pairVariations[monsterIds[i]] = null;
+        let variations = monsterVariation.filter(mv => mv.monsterId === monsterIds[i] && mv.form !== 4);
+        if(variations.length > 0) {
+            pairVariations[monsterIds[i]] = variations.map(v => {
+                v.monsterBaseId = getMonsterBaseIdFromActorId(v.actorId);
+                v.monsterName = getNameByMonsterBaseId(v.monsterBaseId, v.formId);
+                return v;
+            });
+        }
+
+        monsters.push(monster.find(m => m.monsterId === monsterIds[i]));
+    }
+
+    string += `[center][table]\n`
+        + `\t[tr][th|width=430px|colspan=4]${getTrainerName(trainerId).replace("\n", "")}[/th][th|colspan=2|width=230px]`;
+
+    for(let i = 0; i < monsters.length; i++) {
+        if(i > 0)
+            string += ", ";
+
+        string += getMonsterNameByMonsterId(monsters[i].monsterId);
+
+        if(pairVariations[monsterIds[i]])
+            pairVariations[monsterIds[i]].forEach(v => {
+                string += `, ${v.monsterName}`
+            });
+    }
+
+    string += "[/th][/tr]\n"
+        + "\t[tr]\n";
+
+    string += `\t[td${hasExUnlocked(trainerId) ? "|rowspan=3" : ""}|colspan=4][img]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER.png[/img][/td]\n`
+        + `\t[td|colspan=2]`;
+
+    for(let i = 0; i < monsters.length; i++) {
+        string += `[pokeimg=${getPokemonNumberFromMonsterBaseId(monsters[i].monsterBaseId)}|MX]`;
+
+        if(pairVariations[monsterIds[i]])
+            pairVariations[monsterIds[i]].forEach(v => {
+                string += `[pokeimg=${getPokemonNumberFromMonsterBaseId(monsters[i].monsterBaseId)}A_MODIFIER|MX]`;
+            });
+    }
+
+    string += `[/td]\n\t[/tr]\n`;
+
+    if(hasExUnlocked(trainerId)) {
+        string += `\t[tr][th|colspan=2]Tenue 6★ EX[/th][/tr]\n`
+            + `\t[tr][td|colspan=2][img|w=230]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER-ex.png[/img][/td][/tr]\n`;
+    }
+
+    string += `\t[tr][th]Rôle[/th][th]Potentiel (Base)[/th][th]Type[/th][th]Faiblesse[/th][th]Origine[/th][th]Tenue[/th][/tr]\n`
+        + `\t[tr]\n`
+        + `\t[td|width=100px][img]/pages/jeuxvideo/pokemon-masters/images/roles/${getRoleUrlByTrainerId(trainerId)}.png[/img][br]${getRoleByTrainerId(trainerId)}[/td]\n`
+        + `\t[td|width=100px]${"★".repeat(getTrainerRarity(trainerId))}[/td]\n`
+        + `\t[td|width=100px][type=${removeAccents(motifTypeName[t.type].toLowerCase())}|MX][/td]\n`
+        + `\t[td|width=100px][type=${removeAccents(motifTypeName[t.weakness].toLowerCase())}|MX][/td]\n`
+        + `\t[td|width=200px]Pokémon A_MODIFIER[/td]\n`
+        + `\t[td|width=200px]Pokémon A_MODIFIER[/td]\n`
+        + `\t[/tr]\n`
+        + `\t[tr][th|colspan=6]Descriptions[/th][/tr]\n`;
+
+    if(trainerDescriptions[trainerId])
+        string += `\t[tr][td|colspan=6]${trainerDescriptions[trainerId].replaceAll("\n", " ") }[/td][/tr]\n`;
+
+    monsters.map(m => m.monsterBaseId).forEach(mbId => {
+            if (monsterDescriptions[mbId])
+                string += `\t[tr][td|colspan=6]${monsterDescriptions[mbId].replaceAll("\n", " ")}[/td][/tr]\n`;
+        }
+    );
+
+    string += "[/table][/center]\n\n";
+
+    string += `[ancre=analyse][h2]Analyse du Duo[/h2]\n`
+        + `[i]Aucune pour le moment ![/i]\n\n`;
+
+    string += `[ancre=stats][h2]Statistiques[/h2]\n`
+        + `[listh]\n`;
+
+    monsters.forEach(m => {
+        string += getMonsterStatsBipCode(m, t.rarity);
+
+        if(pairVariations[m.monsterId])
+            pairVariations[m.monsterId].forEach(v => string += getMonsterStatsBipCode(m, t.rarity, v));
+    });
+
+    if(hasExRoleUnlocked(trainerId)) {
+        string += `\t[include=jeuxvideo/pokemon-masters/duos/include/role-ex-${getRoleUrlByTrainerId(trainerId)}]\n`;
+    }
+
+    string += `[/listh]\n\n`;
+
+    string += `[ancre=talents][h2]Talents[/h2]\n`;
+
+    string += `[h3]${getMonsterNameByMonsterId(monsterIds[monsterIds.length - 1])}[/h3]\n`;
+    string += getPassiveSkillBipCode(t);
+
+    monsterIds.forEach(mId => {
+        if(pairVariations[mId]) {
+            pairVariations[mId].forEach(v => {
+                string += `[h3]${v.monsterName}[/h3]\n`;
+                string += getPassiveSkillBipCode(t, v);
+            });
+        }
+    });
+
+    string += `[center][table]\n`
+        + `\t[tr][th|colspan=2]Talents d'équipe (Niv. 1 à 4)[/th][/tr]\n`
+        + `\t[tr][td|colspan=2]Créez une équipe avec au moins deux Duos qui partagent un même mot-clé pour activer son effet.[/td][/tr]\n`
+        + `\t[tr][th|width=200px]Nom[/th][th|width=400px]Effet (${getRoleByTrainerId(trainerId, true)})[/th][/tr]\n`;
+
+    for(let i = 1; i <= 5; i++) {
+        let ts = teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 1);
+        let descr = []
+        descr.push(teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 3));
+        descr.push(teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 4));
+
+        if(!ts)
+            continue;
+
+        string += `\t[tr][td]${teamSkillTag[ts.teamSkillPropValue]}[/td][td]`;
+
+        let include= `[include=/jeuxvideo/pokemon-masters/duos/talents/mots-cles-${getRoleUrlByTrainerId(trainerId, false)}]`;
+        if(i === 1) {
+            include = `[include=/jeuxvideo/pokemon-masters/duos/talents/type-${getRoleUrlByTrainerId(trainerId, false)}]`;
+        }
+
+        const digitBlock = "[Digit:3digits ]";
+
+        for(let i = 0; i < descr.length; i++) {
+            if(descr[i]) {
+                let d = teamSkillEffect[descr[i].teamSkillPropValue].replace("\n", " ");
+                let index = d.indexOf(digitBlock);
+                d = d.replace(digitBlock, "X");
+
+                if(i > 0)
+                    string += " ";
+
+                string += `[tooltip=${d.substring(0, index + 1)}]${include}[/tooltip]${d.substring(index + 1)}`;
+            }
+
+        }
+
+        string += "[/td][/tr]\n";
+    }
+
+    string += `[/table][/center]\n\n`;
+
+    string += `[ancre=capacites][h2]Capacités[/h2]\n`
+
+    string += `[h3]${getMonsterNameByMonsterId(monsterIds[monsterIds.length - 1])}[/h3]\n`;
+    string += getMoveBipCode(t, monsters[monsters.length - 1]);
+
+    monsters.forEach(m => {
+        if(pairVariations[m.monsterId]) {
+            pairVariations[m.monsterId].forEach(v => {
+                string += `\n[h3]${v.monsterName}[/h3]\n`;
+                string += getMoveBipCode(t, m, v);
+            });
+        }
+    });
+
+    let gmaxVar = monsterVariation.find(mv => mv.monsterId === monsterIds[monsterIds.length - 1] && mv.form === 4);
+
+    if(gmaxVar) {
+
+        string += `\n[center][table]\n`
+            + `\t[tr][th|colspan=6|width=1000px][img|w=32]/pages/jeuxvideo/pokemon-masters/images/icones-combat/capacite-duo-dynamax.png[/img] Capacités Duo Dynamax[/th][/tr]\n`
+            + `\t[tr][th|width=100px]Nom[/th][th|width=80px]Type[/th][th|width=80px]Catég.[/th][th|width=50px]Puis.[/th][th|width=80px]Cible[/th][th]Effet[/th][/tr]\n`;
+
+        for(let i = 1; i < 5; i++) {
+            let moveId = gmaxVar[`moveDynamax${i}Id`];
+
+            if(moveId > -1) {
+                let mov = move.find(m => m.moveId == moveId);
+                string += `\t[tr]\n`
+                    + `\t\t[td]${moveNames[moveId].replace("\n", " ")}[/td]\n`
+                    + `\t\t[td]${mov.type ? `[type=${removeAccents(motifTypeName[mov.type].toLowerCase())}|MX]` : "–"}[/td]\n`
+                    + `\t\t[td][type=${removeAccents(categoryToFR[mov.category].toLowerCase())}|MX][/td]\n`
+                    + `\t\t[td]${mov.power ? `${mov.power}-${Math.trunc(mov.power*1.2)}` : "–"}[/td]\n`
+                    + `\t\t[td]${moveTargetType[targetToId[mov.target]] || "–"}[/td]\n`
+                    + `\t\t[td]${getMoveDescr(moveId)}[/td]\n`
+                    + `\t[/tr]\n`
+            }
+        }
+
+        string += `[/table][/center]\n`;
+    }
+
+    let syncMove = move.find(mov => mov.moveId === monsters[monsters.length - 1].syncMoveId);
+
+    string += "\n[center][table]\n"
+        + `\t[tr][th|colspan=${6+hasExUnlocked(trainerId)+hasExRoleUnlocked(trainerId)}|width=1000px][img|w=32]/pages/jeuxvideo/pokemon-masters/images/icones-combat/capacite-duo.png[/img] Capacité Duo[/th][/tr]\n`
+        + `\t[tr][th|width=100px]Nom[/th][th|width=80px]Type[/th][th|width=80px]Catég.[/th][th|width=50px]Puis.[/th][th|width=200px]Effet[/th]`;
+
+    if(hasExUnlocked(trainerId)) {
+        string += `[th|width=150px]Effet (EX)[/th]`;
+    }
+    if(hasExRoleUnlocked(trainerId)) {
+        string += `[th|width=150px]Rôle EX[/th]`;
+    }
+
+    string += `[/tr]\n`
+        + `\t[tr]\n`
+        + `\t\t[td]${moveNames[syncMove.moveId]}[/td]\n`
+        + `\t\t[td]${syncMove.type ? `[type=${removeAccents(motifTypeName[syncMove.type].toLowerCase())}|MX]` : "–"}[/td]\n`
+        + `\t\t[td][type=${removeAccents(categoryToFR[syncMove.category].toLowerCase())}|MX][/td]\n`
+        + `\t\t[td]${syncMove.power ? `${syncMove.power}-${Math.trunc(syncMove.power*1.2)}` : "–"}[/td]\n`
+        + `\t\t[td]${getMoveDescr(syncMove.moveId)}[/td]\n`;
+
+    if(hasExUnlocked(trainerId)) {
+        string += `\t\t[td]${exSyncEffect[t.role]}[/td]\n`;
+    }
+    if(hasExRoleUnlocked(trainerId)) {
+        string += `\t\t[td]${exSyncEffect[getExRoleId(trainerId)]}[/td]\n`;
+    }
+
+    string += `\t[/tr]\n`
+        + `[/table][/center]\n\n`;
+
+    string += `[ancre=plateau][h2]Plateau Duo-Gemme[/h2]\n`
+        + `[center][table]\n`
+        + `\t[tr][th|width=250px]Amélioration[/th][th|width=300px]Effet[/th][th|width=100px]Énergie requise[/th][th|width=100px]Duo-Sphères requises[/th][th|width=100px]Niveau des Capacités requis[/th][/tr]\n`;
+
+    let ap = abilityPanel.filter(ap => ap.trainerId === trainerId)
+        .map(ap => {
+            ap.ability = ability.find(a => a.abilityId === ap.abilityId);
+            ap.level = 1;
+            ap.conditionIds.forEach(cid => (cid >= 12 && cid <= 15) ? ap.level = cid-10 : "");
+            ap.type = getAbilityType(ap.ability);
+            return ap;
+        });
+
+    Object.keys(abilityType).forEach(key => string += appendGridCategoryBipCode(ap, abilityType[key]));
+
+    string += `[/table][/center]\n\n`;
+
+    string += `[hr][center][b][url=/page/jeuxvideo/pokemon-masters/duos/accueil][fa=list] Retour à l'accueil du Duos Dex[/url]\n`
+        + `[url=/page/jeuxvideo/pokemon-masters/accueil][fa-lg=home] Retour à l'accueil du dossier[/url][/b][/center]`;
+
+    return string;
+}
+
+function downloadData() {
+    let e = document.createElement('a');
+    e.href = window.URL.createObjectURL(
+        new Blob([getPairBipCode(syncPairSelect.value)], { "type": "text/plain" })
+    );
+    e.setAttribute('download', removeAccents(getPairName(syncPairSelect.value)));
+    e.style.display = 'none';
+
+    document.body.appendChild(e);
+    e.click();
+    document.body.removeChild(e);
+}
+
+function downloadAll() {
+    let zip = new JSZip();
+    let trainerIds = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER")
+        .map(t => t.trainerId);
+    let dlCountRow = document.getElementById("dlCountRow");
+    let dlCount = document.getElementById("dlCount");
+    let i = 1;
+
+    dlCountRow.style.display = "table-row";
+    trainerIds.forEach(tid => {
+        dlCount.innerText = `Génération du fichier no ${i}/${trainerIds.length}...`;
+        let filename = removeAccents(getPairName(tid)).replace("/", "-") + '.txt';
+        zip.file(filename, getPairBipCode(tid));
+        i++;
+    });
+
+    dlCount.innerText = `Génération du zip...`;
+
+    zip.generateAsync({ type: 'blob' })
+        .then(function(content) {
+            saveAs(content, "Duos.zip");
+            dlCount.innerText = '';
+        });
 }
 
 init().then();
