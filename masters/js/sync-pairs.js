@@ -906,7 +906,22 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
 
 function appendGridCategory(table, panels, category) {
     panels = panels.filter(p => p.type === category)
-                    .sort((a, b) => a.level - b.level || a.cellId - b.cellId);
+        .reduce((acc, curr) => {
+            let cell = acc.find(a => a.cellId === curr.cellId);
+
+            if(cell) {
+                if(cell.version < curr.version) {
+                    acc = acc.filter(a => a.cellId !== curr.cellId);
+                    acc.push(curr);
+                }
+
+                return acc;
+            }
+
+            acc = acc.concat(curr);
+            return acc;
+        },[])
+        .sort((a, b) => a.level - b.level || a.cellId - b.cellId);
 
     let headRow = document.createElement("tr");
 
