@@ -106,13 +106,10 @@
         <fieldset id="adminTools" style="display: none; margin-top: 10px; line-height: 1.6rem; width: fit-content; border-radius: 8px;">
             <legend><b>Télécharger les données</b></legend>
             <p style="display: table-row;">
-                <label for="downloadOne" style="display: table-cell; text-align: right;"></label> <button id="downloadOne" style="display: table-cell; margin-left: 5px;">Télécharger la fiche</button>
+                <span style="display: table-cell; text-align: center;"><button id="downloadOne" >Télécharger la fiche</button></span> <button id="downloadAll" style="display: table-cell; margin-left: 10px;">Tout télécharger (ZIP)</button>
             </p>
             <p style="display: table-row;">
-                <label for="downloadAll" style="display: table-cell; text-align: right;"></label> <button id="downloadAll" style="display: table-cell; margin-left: 5px;">Tout télécharger (ZIP)</button>
-            </p>
-            <p id="dlCountRow" style="display: none;">
-                <label for="downloadAll" style="display: table-cell; text-align: right;"></label> <span id="dlCount" style="display: table-cell; margin-left: 5px;"></span>
+                <span style="display: table-cell; text-align: center; vertical-align: middle"><textarea style="margin-top: 10px;" id="dataArea"></textarea></span><button id="copyBtn" style="display: table-cell; margin-left: 10px; margin-top: 15px; vertical-align: middle;">Copier le code</button>
             </p>
         </fieldset>
     </div>

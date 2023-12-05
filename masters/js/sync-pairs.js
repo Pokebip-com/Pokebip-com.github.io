@@ -27,6 +27,7 @@ let trainerDescriptions;
 let trainerNames;
 let trainerVerboseNames;
 
+let dataArea;
 let lastReleasePairsDiv;
 let syncPairSelect;
 let syncPairDiv;
@@ -1113,6 +1114,10 @@ function setPairInfos(id, pushState = false) {
     }
 
     setSyncGrid();
+
+    if(isAdminMode) {
+        dataArea.value = getPairBipCode(syncPairSelect.value);
+    }
 }
 
 function setUrlMonsterInfos(monsterId, baseId, formId, pushState) {
@@ -1237,6 +1242,8 @@ async function init() {
     await getCustomJSON();
 
     if(isAdminMode) {
+        dataArea = document.getElementById("dataArea");
+
         toolsDiv.style.display = "table";
 
         let downloadAllBtn = document.getElementById("downloadAll");
@@ -1244,6 +1251,9 @@ async function init() {
 
         let downloadOneBtn = document.getElementById("downloadOne");
         downloadOneBtn.onclick = downloadData;
+
+        let copyBtn = document.getElementById("copyBtn");
+        copyBtn.addEventListener('click', () => navigator.clipboard.writeText(dataArea.value));
     }
 
     populateSelect();
@@ -1691,24 +1701,15 @@ function downloadAll() {
     let zip = new JSZip();
     let trainerIds = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER")
         .map(t => t.trainerId);
-    let dlCountRow = document.getElementById("dlCountRow");
-    let dlCount = document.getElementById("dlCount");
-    let i = 1;
 
-    dlCountRow.style.display = "table-row";
     trainerIds.forEach(tid => {
-        dlCount.innerText = `Génération du fichier no ${i}/${trainerIds.length}...`;
         let filename = removeAccents(getPairName(tid)).replace("/", "-") + '.txt';
         zip.file(filename, getPairBipCode(tid));
-        i++;
     });
-
-    dlCount.innerText = `Génération du zip...`;
 
     zip.generateAsync({ type: 'blob' })
         .then(function(content) {
             saveAs(content, "Duos.zip");
-            dlCount.innerText = '';
         });
 }
 
