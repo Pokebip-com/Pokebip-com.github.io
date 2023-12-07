@@ -79,14 +79,29 @@
             position: relative;
         }
 
-        .hex:after {
-            content: "";
-            width: 0;
+        .tooltip {
+            background-color: rgba(0, 0, 0, 100%);
+            color: #fff;
+            width: 300px;
             position: absolute;
-            bottom: -30px;
-            border-top: 30px solid #6C6;
-            border-left: 52px solid transparent;
-            border-right: 52px solid transparent;
+            padding: 10px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+        }
+
+        .tooltip:after {
+            content:"";
+            display: inline-block;
+            border-style: solid;
+            border-width: 10px 10px 0;
+            border-color: #000 transparent;
+            position: absolute;
+            bottom: -10px;
+            left: 150px;
+        }
+
+        svg {
+            overflow: hidden;
         }
     </style>
 
@@ -115,6 +130,9 @@
     </div>
     <br />
     <div id="syncPairDiv"></div>
+    <div id="syncGridDiv" style="position: relative">
+        <div id="syncGridContainer"></div>
+    </div>
 </div>
 
 <script src="./js/utils.js"></script>

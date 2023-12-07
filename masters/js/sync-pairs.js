@@ -911,21 +911,6 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
 
 function appendGridCategory(table, panels, category) {
     panels = panels.filter(p => p.type === category)
-        .reduce((acc, curr) => {
-            let cell = acc.find(a => a.cellId === curr.cellId);
-
-            if(cell) {
-                if(cell.version < curr.version) {
-                    acc = acc.filter(a => a.cellId !== curr.cellId);
-                    acc.push(curr);
-                }
-
-                return acc;
-            }
-
-            acc = acc.concat(curr);
-            return acc;
-        },[])
         .sort((a, b) => a.level - b.level || a.cellId - b.cellId);
 
     let headRow = document.createElement("tr");
@@ -978,12 +963,194 @@ function appendGridCategory(table, panels, category) {
     });
 }
 
-function setSyncGrid() {
-    let syncPairDiv = document.getElementById("syncPairDiv");
-    let syncGridDiv = document.createElement("div");
-    syncGridDiv.innerHTML = "<br /><h2>Plateau Duo-Gemme</h2>";
+function setTileBackground(div) {
 
-    syncPairDiv.appendChild(syncGridDiv);
+    let tileIcon = div.getAttribute("data-category");
+
+    if(div.getAttribute("data-type") !== null) {
+        tileIcon += `-${div.getAttribute("data-type")}`;
+    }
+
+    if(div.getAttribute("selected") !== null) {
+        div.style.backgroundImage = `url('./data/sync-grids/selected-overlay.png'), url('./data/sync-grids/icons/${tileIcon}-selected.png'), url('./data/sync-grids/${div.getAttribute("data-category")}-selected.png')`;
+        div.style.backgroundRepeat = "no-repeat, no-repeat, no-repeat";
+        div.style.backgroundSize = "contain, contain, contain";
+        return;
+    }
+
+    div.style.backgroundImage = `url('./data/sync-grids/icons/${tileIcon}.png'), url('./data/sync-grids/${div.getAttribute("data-category")}.png')`;
+    div.style.backgroundRepeat = "no-repeat, no-repeat";
+    div.style.backgroundSize = "contain, contain";
+
+}
+
+function changeSelection(div) {
+    if(div.getAttribute("selected") !== null) {
+        div.removeAttribute("selected");
+    }
+    else {
+        div.setAttribute("selected", '');
+    }
+
+    setTileBackground(div);
+}
+
+function setGridPicker(ap, gridPickerDiv) {
+    let gridDiv = document.createElement("div");
+    let pickerDiv = document.createElement("div");
+
+    gridPickerDiv.appendChild(gridDiv);
+    gridPickerDiv.appendChild(pickerDiv);
+
+    let maxX = 0, maxY = 0, maxZ = 0, minX = 0, minY = 0, minZ = 0;
+
+    ap.forEach(panel => {
+        if (panel.x > maxX)
+            maxX = panel.x;
+
+        if (panel.x < minX)
+            minX = panel.x;
+
+        if (panel.y > maxY)
+            maxY = panel.y;
+
+        if (panel.y < minY)
+            minY = panel.y;
+
+        if (panel.z > maxZ)
+            maxZ = panel.z;
+
+        if (panel.z < minZ)
+            minZ = panel.z;
+    });
+
+    let center = document.createElement("div");
+    center.style.width = "69px";
+    center.style.height = "60px";
+    center.style.bottom = `${((maxY-minZ-minY+maxZ)/2-1)*30}px`;
+    center.style.left = `${(maxX-minX)/2*51}px`;
+    center.style.position = "absolute";
+    center.style.backgroundImage = `url('./data/sync-grids/center.png')`;
+    center.style.backgroundSize = "contain";
+    center.style.backgroundRepeat = "no-repeat";
+
+    gridDiv.appendChild(center);
+
+    ap.forEach(panel => {
+        let amelioration = abilityName[panel.ability.type];
+        amelioration = amelioration.replace("{val}", panel.ability.value);
+
+        if(panel.ability.passiveId) {
+            amelioration = amelioration.replace("{passive}", getPassiveSkillName(panel.ability.passiveId));
+        }
+        if(panel.ability.moveId) {
+            amelioration = amelioration.replace("{move}", moveNames[panel.ability.moveId].replace("\n", " "));
+        }
+
+        let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("height", "60");
+        svg.setAttribute("width", "69");
+        svg.style.left = `${panel.x*51 + (maxX-minX)/2*51}px`;
+        svg.style.bottom = `${(panel.y - panel.z - 1)*30 + (maxY-minZ-minY+maxZ)/2*30}px`;
+        svg.style.position = "absolute";
+        svg.style.cursor = "pointer";
+        svg.style.pointerEvents = "none";
+
+        let tooltip = document.createElement("div");
+        tooltip.classList.add("tooltip");
+
+        tooltip.style.bottom = parseInt(svg.style.bottom) + 70 + "px";
+        tooltip.style.left = parseInt(svg.style.left) - 125 + "px";
+        tooltip.style.zIndex = "100";
+        tooltip.style.display = "none";
+        tooltip.innerHTML = `<p style="text-align: center"><b>${amelioration}</b></p>\n`;
+
+        if(panel.ability.passiveId) {
+            tooltip.innerHTML += `<p><b>Effet :</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
+        }
+
+        tooltip.innerHTML += `<p><b>Duo-Sphères :</b> ${panel.orbCost} - <b>Énergie :</b> ${panel.energyCost}</p>`;
+
+        let polygon = document.createElementNS("http://www.w3.org/2000/svg","polygon");
+        polygon.setAttribute("points", "17,00 0,30 0,31 17,60 52,60 69,31 69,30 52,0");
+        polygon.setAttribute("style", "fill: white;");
+        polygon.setAttribute("fill-opacity", "0");
+
+        polygon.addEventListener("click", () => changeSelection(svg));
+
+        polygon.addEventListener("mouseenter", () => {
+            polygon.setAttribute("fill-opacity", "0.25");
+            tooltip.style.display = "inline-block";
+
+        });
+
+        polygon.addEventListener("mouseleave", () => {
+            polygon.setAttribute("fill-opacity", "0");
+            tooltip.style.display = "none";
+        });
+
+        polygon.style.pointerEvents = "auto";
+
+        svg.appendChild(polygon);
+
+        svg.setAttribute("data-level", panel.level);
+        // svg.setAttribute("data-name", amelioration);
+        // svg.setAttribute("data-energy", panel.energyCost);
+        // svg.setAttribute("data-orbs", panel.orbCost);
+        // svg.setAttribute("data-effect", panel.ability.passiveId ? getPassiveSkillDescr(panel.ability.passiveId) : '');
+
+        switch(panel.ability.type) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                //stat boosts
+                svg.setAttribute("data-category", "statsup");
+                break;
+
+            case 7:
+                //Passive
+                svg.setAttribute("data-category", "passiveskill");
+                break;
+
+            case 8:
+                //additional move effect
+                svg.setAttribute("data-category", "moveeffect");
+                break;
+
+            case 9:
+            case 10:
+                //move power/accuracy boost
+                let m = move.find(m => m.moveId === panel.ability.moveId);
+                if(m.group === "Sync") {
+                    svg.setAttribute("data-category", "syncmove");
+                }
+                else if(m.group === "Maxmove") {
+                    svg.setAttribute("data-category", "maxmove");
+                }
+                else {
+                    svg.setAttribute("data-type", m.type.toString());
+                    svg.setAttribute("data-category", "movepowerup");
+                }
+                break;
+        }
+
+        setTileBackground(svg);
+        gridDiv.appendChild(svg);
+        gridDiv.appendChild(tooltip);
+        console.log(tooltip.getBoundingClientRect());
+    })
+
+    gridDiv.style.height = (maxY-minZ)*60 + "px";
+    gridDiv.style.width = (maxX - minX)*62.5 + "px";
+    gridDiv.style.position = "relative";
+    gridDiv.style.display = "inline-block";
+    gridDiv.style.verticalAlign = "middle";
+}
+
+function setSyncGrid() {
 
     let charaScheduleId = schedule.map(s => s.scheduleId);
     let ap = abilityPanel.filter(ap => ap.trainerId === syncPairSelect.value)
@@ -994,7 +1161,32 @@ function setSyncGrid() {
             ap.type = getAbilityType(ap.ability);
             ap.isNew = charaScheduleId.includes(ap.scheduleId);
             return ap;
-        });
+        })
+        .reduce((acc, curr) => {
+            let cell = acc.find(a => a.cellId === curr.cellId);
+
+            if(cell) {
+                if(cell.version < curr.version) {
+                    acc = acc.filter(a => cellId !== curr.cellId);
+                    acc.push(curr);
+                }
+
+                return acc;
+            }
+
+            acc = acc.concat(curr);
+            return acc;
+        }, []);
+
+    let container = document.getElementById("syncGridContainer");
+    let gridPickerDiv = document.createElement("div");
+    gridPickerDiv.style.textAlign = "center";
+
+    setGridPicker(ap, gridPickerDiv);
+
+    container.innerHTML = "<br /><h2>Plateau Duo-Gemme</h2>";
+    container.appendChild(gridPickerDiv);
+    container.appendChild(document.createElement("br"));
 
     let table = document.createElement("table");
     table.classList.add("bipcode");
@@ -1026,7 +1218,7 @@ function setSyncGrid() {
 
     Object.keys(abilityType).forEach(key => appendGridCategory(table, ap, abilityType[key]));
 
-    syncGridDiv.appendChild(table);
+    container.appendChild(table);
 }
 
 function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
