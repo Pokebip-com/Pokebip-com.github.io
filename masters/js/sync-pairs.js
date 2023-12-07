@@ -1027,7 +1027,7 @@ function setGridPicker(ap, gridPickerDiv) {
     let center = document.createElement("div");
     center.style.width = "69px";
     center.style.height = "60px";
-    center.style.bottom = `${((maxY-minZ-minY+maxZ)/2-1)*30}px`;
+    center.style.bottom = `${((maxY-minZ-minY+maxZ)/2)*30}px`;
     center.style.left = `${(maxX-minX)/2*51}px`;
     center.style.position = "absolute";
     center.style.backgroundImage = `url('./data/sync-grids/center.png')`;
@@ -1051,7 +1051,7 @@ function setGridPicker(ap, gridPickerDiv) {
         svg.setAttribute("height", "60");
         svg.setAttribute("width", "69");
         svg.style.left = `${panel.x*51 + (maxX-minX)/2*51}px`;
-        svg.style.bottom = `${(panel.y - panel.z - 1)*30 + (maxY-minZ-minY+maxZ)/2*30}px`;
+        svg.style.bottom = `${(panel.y - panel.z)*30 + (maxY-minZ-minY+maxZ)/2*30}px`;
         svg.style.position = "absolute";
         svg.style.cursor = "pointer";
         svg.style.pointerEvents = "none";
@@ -1094,10 +1094,6 @@ function setGridPicker(ap, gridPickerDiv) {
         svg.appendChild(polygon);
 
         svg.setAttribute("data-level", panel.level);
-        // svg.setAttribute("data-name", amelioration);
-        // svg.setAttribute("data-energy", panel.energyCost);
-        // svg.setAttribute("data-orbs", panel.orbCost);
-        // svg.setAttribute("data-effect", panel.ability.passiveId ? getPassiveSkillDescr(panel.ability.passiveId) : '');
 
         switch(panel.ability.type) {
             case 1:
@@ -1143,7 +1139,7 @@ function setGridPicker(ap, gridPickerDiv) {
         console.log(tooltip.getBoundingClientRect());
     })
 
-    gridDiv.style.height = (maxY-minZ)*60 + "px";
+    gridDiv.style.height = (maxY-minZ+1)*60 + "px";
     gridDiv.style.width = (maxX - minX)*62.5 + "px";
     gridDiv.style.position = "relative";
     gridDiv.style.display = "inline-block";
