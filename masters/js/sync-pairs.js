@@ -33,6 +33,9 @@ let syncPairSelect;
 let syncPairDiv;
 let toolsDiv;
 
+let syncLevel = 5;
+const maxEnergy = 60;
+
 async function getData() {
     const [
         abilityResponse,
@@ -963,12 +966,40 @@ function appendGridCategory(table, panels, category) {
     });
 }
 
+function suppressCellData(cell) {
+    let orbCell = document.getElementById("orbCell");
+    let energyCell = document.getElementById("energyCell");
+    let cellId = cell.getAttribute("data-cellId");
+    let tileDiv = document.getElementById(`tile-${cellId}`);
+
+    cell.removeAttribute("selected");
+
+    orbCell.innerText = (parseInt(orbCell.innerText) - parseInt(cell.getAttribute("data-orbs"))).toString();
+    energyCell.innerText = (parseInt(energyCell.innerText) + parseInt(cell.getAttribute("data-energy"))).toString();
+    tileDiv.remove();
+}
+
 function setTileBackground(div) {
 
-    let tileIcon = div.getAttribute("data-category");
+    let tileIcon;
+    let dataLevel = div.getAttribute("data-level");
+    let polygon = div.firstChild;
 
-    if(div.getAttribute("data-type") !== null) {
-        tileIcon += `-${div.getAttribute("data-type")}`;
+    if(dataLevel && dataLevel > syncLevel) {
+        tileIcon = `locked-${dataLevel}`;
+        polygon.style.pointerEvents = "none";
+
+        if(div.getAttribute("selected") !== null) {
+            suppressCellData(div)
+        }
+    }
+    else {
+        tileIcon = div.getAttribute("data-category");
+        polygon.style.pointerEvents = "auto";
+
+        if(div.getAttribute("data-type") !== null) {
+            tileIcon += `-${div.getAttribute("data-type")}`;
+        }
     }
 
     if(div.getAttribute("selected") !== null) {
@@ -985,11 +1016,27 @@ function setTileBackground(div) {
 }
 
 function changeSelection(div) {
+
     if(div.getAttribute("selected") !== null) {
-        div.removeAttribute("selected");
+        suppressCellData(div);
     }
     else {
+        let orbCell = document.getElementById("orbCell");
+        let energyCell = document.getElementById("energyCell");
+        let cellId = div.getAttribute("data-cellId");
+        let tilesCell = document.getElementById("tilesCell");
+        let tileDiv = document.createElement("div");
+        tileDiv.id = `tile-${cellId}`;
+        tileDiv.innerText = div.getAttribute("data-tileName");
+        tileDiv.style.background = "rgba(0, 0, 0, 0.1)";
+        tileDiv.style.margin = "3px auto";
+
         div.setAttribute("selected", '');
+
+        orbCell.innerText = (parseInt(orbCell.innerText) + parseInt(div.getAttribute("data-orbs"))).toString();
+        energyCell.innerText = (parseInt(energyCell.innerText) - parseInt(div.getAttribute("data-energy"))).toString();
+        tilesCell.appendChild(tileDiv);
+
     }
 
     setTileBackground(div);
@@ -998,6 +1045,12 @@ function changeSelection(div) {
 function setGridPicker(ap, gridPickerDiv) {
     let gridDiv = document.createElement("div");
     let pickerDiv = document.createElement("div");
+
+    gridPickerDiv.style.display = "flex";
+    gridPickerDiv.style.justifyContent = "center";
+
+    gridDiv.style.margin = "auto 25px";
+    pickerDiv.style.margin = "auto 25px";
 
     gridPickerDiv.appendChild(gridDiv);
     gridPickerDiv.appendChild(pickerDiv);
@@ -1093,7 +1146,8 @@ function setGridPicker(ap, gridPickerDiv) {
 
         svg.appendChild(polygon);
 
-        svg.setAttribute("data-level", panel.level);
+        if(panel.level > 1)
+            svg.setAttribute("data-level", panel.level);
 
         switch(panel.ability.type) {
             case 1:
@@ -1133,10 +1187,14 @@ function setGridPicker(ap, gridPickerDiv) {
                 break;
         }
 
+        svg.setAttribute("data-energy", panel.energyCost);
+        svg.setAttribute("data-orbs", panel.orbCost);
+        svg.setAttribute("data-cellId", panel.cellId);
+        svg.setAttribute("data-tileName", amelioration);
+
         setTileBackground(svg);
         gridDiv.appendChild(svg);
         gridDiv.appendChild(tooltip);
-        console.log(tooltip.getBoundingClientRect());
     })
 
     gridDiv.style.height = (maxY-minZ+1)*60 + "px";
@@ -1144,6 +1202,104 @@ function setGridPicker(ap, gridPickerDiv) {
     gridDiv.style.position = "relative";
     gridDiv.style.display = "inline-block";
     gridDiv.style.verticalAlign = "middle";
+
+    let controlTbl = document.createElement("table");
+    controlTbl.classList.add("bipcode");
+    controlTbl.style.textAlign = "center";
+    controlTbl.style.width = "250px";
+
+    let tr = document.createElement("tr");
+    let capaTitle = document.createElement("th");
+    capaTitle.innerText = "Niveau des capacités";
+    capaTitle.colSpan = 2;
+
+    tr.appendChild(capaTitle);
+    controlTbl.appendChild(tr);
+
+    tr = document.createElement("tr");
+    let capaCell = document.createElement("td");
+    capaCell.colSpan = 2;
+
+    let levelContainer = document.createElement("span");
+    levelContainer.style.display = "flex";
+    levelContainer.style.justifyContent = "space-around";
+
+    for(let i = 1; i < 6; i++) {
+        let levelDiv = document.createElement("div");
+        levelDiv.style.backgroundImage = `url("./data/sync-grids/icons/level${i > syncLevel ? "-off" : ""}.png")`;
+        levelDiv.style.backgroundRepeat = "no-repeat";
+        levelDiv.style.backgroundSize = "contain";
+        levelDiv.style.cursor = "pointer";
+        levelDiv.style.width = "30px";
+        levelDiv.style.height = "27px";
+        levelDiv.style.order = i.toString();
+        levelDiv.setAttribute("data-sync-level", `${i}`);
+        levelDiv.id = `syncLevel${i}`
+
+        levelDiv.addEventListener("click", () => {
+            syncLevel = i;
+
+            for(let j = 1; j < 6; j++) {
+                document.getElementById(`syncLevel${j}`).style.backgroundImage = `url("./data/sync-grids/icons/level${j > syncLevel ? "-off" : ""}.png")`;
+            }
+
+            let tiles = document.querySelectorAll(`[data-level]`);
+
+            tiles.forEach(setTileBackground);
+        });
+
+        levelContainer.appendChild(levelDiv);
+    }
+
+    capaCell.appendChild(levelContainer);
+    tr.appendChild(capaCell);
+    controlTbl.appendChild(tr);
+
+    tr = document.createElement("tr");
+    let orbTitle = document.createElement("th");
+    orbTitle.innerText = "Duo-Sphères";
+
+    let energyTitle = document.createElement("th");
+    energyTitle.innerText = "Énergie";
+
+    tr.appendChild(orbTitle);
+    tr.appendChild(energyTitle);
+    controlTbl.appendChild(tr);
+
+    tr = document.createElement("tr");
+    let orbCell = document.createElement("td");
+    orbCell.id = "orbCell";
+    orbCell.innerText = "0";
+    orbCell.style.fontWeight = "bold";
+
+    let energyCell = document.createElement("td");
+    energyCell.id = "energyCell";
+    energyCell.innerText = maxEnergy.toString();
+    energyCell.style.fontWeight = "bold";
+
+    tr.appendChild(orbCell);
+    tr.appendChild(energyCell);
+    controlTbl.appendChild(tr);
+
+    tr = document.createElement("tr");
+    let tilesTitle = document.createElement("th");
+    tilesTitle.innerText = "Cases sélectionnées";
+    tilesTitle.colSpan = 2;
+
+    tr.appendChild(tilesTitle);
+    controlTbl.appendChild(tr);
+
+    tr = document.createElement("tr");
+    let tilesCell = document.createElement("td");
+    tilesCell.id = "tilesCell";
+    tilesCell.colSpan = 2;
+    tilesCell.style.fontWeight = "bold";
+
+    tr.appendChild(tilesCell);
+    controlTbl.appendChild(tr);
+
+    pickerDiv.appendChild(controlTbl);
+
 }
 
 function setSyncGrid() {
