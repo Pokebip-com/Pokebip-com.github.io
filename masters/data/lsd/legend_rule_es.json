@@ -43,5 +43,8 @@
     "legend_rule_5100_003": "Cuanto más aumentan las características de\nEntei, más se reduce el daño que recibe.",
     "legend_rule_5110_001": "La primera vez que los PS de Articuno bajan\nal 60% o menos, se quedan a ese\nporcentaje.",
     "legend_rule_5110_002": "Se triplica la Def. de Articuno al entrar en\ncombate. La primera vez que sus PS bajan\nal 60% o menos, pasa a triplicar la Def. Esp.",
-    "legend_rule_5110_003": "Cuando el rival no sufre efectos negativos,\nse triplican su Defensa y su Defensa Esp."
+    "legend_rule_5110_003": "Cuando el rival no sufre efectos negativos,\nse triplican su Defensa y su Defensa Esp.",
+    "legend_rule_5120_001": "La primera vez que los PS de Staraptor\nbajan al 40% o menos, se quedan a ese\nporcentaje.",
+    "legend_rule_5120_002": "La primera vez que los PS de Staraptor\nbajan al 40% o menos, se vuelve inmune a\nlos campos daño de cualquier tipo.",
+    "legend_rule_5120_003": "Cuando el rival no está afectado por efectos\nde campo, se triplican su Defensa y su\nDefensa Especial."
 }

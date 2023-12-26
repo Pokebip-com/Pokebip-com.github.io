@@ -654,5 +654,19 @@
     "999283": "상대의 공격과 방어, 특수공격, 특수방어, 스피드,\n명중률, 회피율을 [Digit:1digit Idx=\"1\" ]단계 떨어뜨린다",
     "999282": "포켓몬이 다른 기술을 사용하면 원래의 위력으로 돌아간다",
     "999281": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"7\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"8\" ]단계 오른다",
-    "999267": "상대의 올라간 능력을 원래대로 되돌리고 그만큼 자신의 능력을 올린 뒤 공격한다"
+    "999280": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 0~10단계 중 하나만큼 오른다\n(부스트 단계가 클수록 오를 확률은 낮아진다)",
+    "999279": "자신의 방어가 올라가 있을 때",
+    "999278": "자신의 방어가 올라가 있지 않을 때",
+    "999277": "이 기술을 다시 사용하면 방어 상태를 해제하고 공격한다",
+    "999276": "방어 상태인 동안 자신 또는 같은 편 전원을 대상으로 하는 기술로 공격을 받으면 그 공격을 무효로 만들고 방어 상태를 해제하며 2배의 위력으로 공격한다",
+    "999275": "공격한 상대의 공격과 특수공격을 [Digit:1digit ]단계 떨어뜨린다",
+    "999274": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 이상일 때",
+    "999273": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"2\" ]단계 이하일 때",
+    "999272": "[Digit:2digits Idx=\"5\" ]% 확률로 상대를 풀죽음 상태로 만든다",
+    "999271": "상대의 [Name:ReferencedMessageTag Idx=\"3\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"4\" ]단계 떨어뜨린다",
+    "999270": "상대의 회피율이 떨어져 있는 만큼 위력이 오른다",
+    "999269": "같은 편 버디즈 전원의 특수 기술이나 특수 버디즈기술의 위력이 [Digit:2digits ]% 오른다\n같은 편 버디즈 전원의 특수 기술이나 특수 버디즈기술로 공격받았을 때의 데미지를 [Digit:1digit Idx=\"1\" ]% 약하게 한다\n이 효과는 같은 편 전원의 필드에 [Name:ReferencedMessageTag Idx=\"2\" ]를 가진 버디즈가 많을수록 추가로 상승한다\n(버디즈가 하나 늘어날 때마다 위력 상승 +[Digit:2digits Idx=\"3\" ]% 데미지경감 +[Digit:1digit Idx=\"4\" ]%)\n(최대 위력 상승 [Digit:2digits Idx=\"5\" ]% 데미지경감 [Digit:2digits Idx=\"6\" ]%)",
+    "999268": "같은 편 버디즈 전원을 버티기 상태로 만든다",
+    "999267": "상대의 올라간 능력을 원래대로 되돌리고 그만큼 자신의 능력을 올린 뒤 공격한다",
+    "999237": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다"
 }

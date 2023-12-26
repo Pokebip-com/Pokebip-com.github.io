@@ -107,8 +107,17 @@ function getNameByMonsterBaseId(id, formId = 0) {
 
 function getTrainerActorId(trainerId) {
     let trainerBaseId = trainer.find(t => t.trainerId === trainerId).trainerBaseId;
+    let actorId = trainerBase.find(tb => tb.id === trainerBaseId.toString()).actorId;
 
-    return trainerBase.find(tb => tb.id === trainerBaseId.toString()).actorId;
+    if(actorId) {
+        let rak = replaceActorKeyword.find(rak => rak.replacedActorId === actorId);
+
+        if(rak) {
+            actorId = rak.replacingActorId;
+        }
+    }
+
+    return actorId;
 }
 
 function getFormIdFromActorId(actorId) {

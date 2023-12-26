@@ -5,6 +5,7 @@ let monster;
 let monsterBase;
 let monsterEvolution;
 let monsterVariation;
+let replaceActorKeyword;
 let schedule;
 let teamSkill;
 let trainer;
@@ -45,6 +46,7 @@ async function getData() {
         monsterBaseResponse,
         monsterEvolutionResponse,
         monsterVariationResponse,
+        replaceActorKeywordResponse,
         scheduleResponse,
         teamSkillResponse,
         trainerResponse,
@@ -68,6 +70,7 @@ async function getData() {
         fetch("./data/proto/MonsterBase.json"),
         fetch("./data/proto/MonsterEvolution.json"),
         fetch("./data/proto/MonsterVariation.json"),
+        fetch("./data/proto/ReplaceActorKeyword.json"),
         fetch("./data/proto/Schedule.json"),
         fetch("./data/proto/TeamSkill.json"),
         fetch("./data/proto/Trainer.json"),
@@ -111,6 +114,9 @@ async function getData() {
 
     const monsterVariationJSON = await monsterVariationResponse.json();
     monsterVariation = monsterVariationJSON.entries;
+
+    const replaceActorKeywordJSON = await replaceActorKeywordResponse.json();
+    replaceActorKeyword = replaceActorKeywordJSON.entries;
 
     teamSkill = await teamSkillResponse.json();
     teamSkill = teamSkill.entries;

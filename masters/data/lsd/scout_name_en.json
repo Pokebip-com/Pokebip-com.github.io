@@ -131,5 +131,10 @@
     "event_5110_2W_MasterTicket_01": "Viola Seasonal\nGuaranteed Ticket Scout",
     "event_5110_2W_SuperTicket_02": "Sycamore Seasonal\nFeatured Ticket Scout",
     "event_5110_2W_MasterTicket_02": "Sycamore Seasonal\nGuaranteed Ticket Scout",
-    "event_5110_3W_SuperTicket_02": "Seasonal Featured\nTicket Scout"
+    "event_5110_3W_SuperTicket_02": "Seasonal Featured\nTicket Scout",
+    "event_5120_1W_SuperTicket_08": "Clair Seasonal\nFeatured Ticket Scout",
+    "event_5120_1W_MasterTicket_08": "Clair Seasonal\nGuaranteed Ticket Scout",
+    "event_5120_1W_SuperTicket_09": "Wallace Seasonal\nFeatured Ticket Scout",
+    "event_5120_1W_MasterTicket_09": "Wallace Seasonal\nGuaranteed Ticket Scout",
+    "event_5120_1W_SuperTicket_018": "Seasonal Featured\nTicket Scout"
 }

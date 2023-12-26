@@ -418,6 +418,7 @@
     "20051400": "Simisear",
     "20051600": "Simipour",
     "20051800": "Musharna",
+    "20052101": "Unfezant",
     "20052300": "Zebstrika",
     "20052400": "Roggenrola",
     "20052500": "Boldore",
@@ -502,6 +503,7 @@
     "20074611": "Aegislash",
     "20074612": "Aegislash",
     "20074200": "Swirlix",
+    "20074300": "Slurpuff",
     "20074800": "Barbaracle",
     "20071000": "Dragalge",
     "20075700": "Clawitzer",
@@ -560,6 +562,7 @@
     "20085800": "Togedemaru",
     "20081911": "Mimikyu",
     "20081912": "Mimikyu",
+    "20085600": "Drampa",
     "20081800": "Kommo-o",
     "20083000": "Tapu Koko",
     "20083100": "Tapu Lele",
@@ -634,6 +637,7 @@
     "2008150000": "Cinderace",
     "2008160000": "Sobble",
     "2008180000": "Inteleon",
+    "2008200000": "Greedent",
     "2008280000": "Thievul",
     "2008300000": "Eldegoss",
     "2008340000": "Drednaw",
@@ -684,5 +688,9 @@
     "2009120000": "Quaxly",
     "2005030041": "Samurott",
     "2007240041": "Decidueye",
-    "20013301": "Eevee"
+    "20013301": "Eevee",
+    "2009750000": "Cetitan",
+    "2009390000": "Bellibolt",
+    "2005551131": "Darmanitan",
+    "2005551231": "Darmanitan"
 }

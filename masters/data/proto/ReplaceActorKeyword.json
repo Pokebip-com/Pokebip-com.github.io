@@ -1,0 +1,19 @@
+{"entries": [
+{ "replacedActorId": "ch0064_01_rival", "replacingActorId": "ch0064_00_rival", "u3": 1, "u4": 1, "u5": 0 },
+{ "replacedActorId": "ch0064_01_rival_01", "replacingActorId": "ch0064_00_rival_01", "u3": 1, "u4": 1, "u5": 0 },
+{ "replacedActorId": "ch0066_01_boss", "replacingActorId": "ch0066_00_boss", "u3": 0, "u4": 0, "u5": 0 },
+{ "replacedActorId": "ch0066_01_boss_01", "replacingActorId": "ch0066_00_boss_01", "u3": 0, "u4": 0, "u5": 0 },
+{ "replacedActorId": "ch0067_01_leader1", "replacingActorId": "ch0067_00_leader1", "u3": 0, "u4": 0, "u5": 0 },
+{ "replacedActorId": "ch0068_01_leader2", "replacingActorId": "ch0068_00_leader2", "u3": 0, "u4": 0, "u5": 0 },
+{ "replacedActorId": "ch0105_01_rival2", "replacingActorId": "ch0105_00_rival2", "u3": 1, "u4": 1, "u5": 0 },
+{ "replacedActorId": "ch0105_01_rival2_01", "replacingActorId": "ch0105_00_rival2_01", "u3": 1, "u4": 1, "u5": 0 },
+{ "replacedActorId": "ch0264_01_voicechangesatoshi", "replacingActorId": "ch0264_00_satoshi", "u3": 0, "u4": 0, "u5": 0 },
+{ "replacedActorId": "ch0266_00_shadowtriad2", "replacingActorId": "ch0265_00_shadowtriad1", "u3": 1, "u4": 1, "u5": 0 },
+{ "replacedActorId": "ch0267_00_shadowtriad3", "replacingActorId": "ch0265_00_shadowtriad1", "u3": 1, "u4": 1, "u5": 0 },
+{ "replacedActorId": "ch0651_78_nanase", "replacingActorId": "ch0531_70_sightseerf", "u3": 0, "u4": 0, "u5": 0 },
+{ "replacedActorId": "ch0652_68_sayoko", "replacingActorId": "ch0521_60_hexmaniac", "u3": 1, "u4": 0, "u5": 0 },
+{ "replacedActorId": "ch0653_68_kirika", "replacingActorId": "ch0610_60_furisodegirl", "u3": 1, "u4": 0, "u5": 0 },
+{ "replacedActorId": "ch0656_00_ibu", "replacingActorId": "ch0654_00_pokekidf", "u3": 1, "u4": 0, "u5": 0 },
+{ "replacedActorId": "ch0658_00_karen", "replacingActorId": "ch0659_00_furisodegirl", "u3": 1, "u4": 0, "u5": 0 },
+{ "replacedActorId": "pm0025_02_pikachu", "replacingActorId": "pm0025_00_pikachu", "u3": 0, "u4": 0, "u5": 0 }
+]}

@@ -131,5 +131,10 @@
     "event_5110_2W_MasterTicket_01": "비올라 시즌 한정 확정 B서치",
     "event_5110_2W_SuperTicket_02": "플라타느 시즌 한정 출현율업 B서치",
     "event_5110_2W_MasterTicket_02": "플라타느 시즌 한정 확정 B서치",
-    "event_5110_3W_SuperTicket_02": "시즌 한정 출현율업 B서치"
+    "event_5110_3W_SuperTicket_02": "시즌 한정 출현율업 B서치",
+    "event_5120_1W_SuperTicket_08": "이향 시즌 한정 출현율업 B서치",
+    "event_5120_1W_MasterTicket_08": "이향 시즌 한정 확정 B서치",
+    "event_5120_1W_SuperTicket_09": "윤진 시즌 한정 출현율업 B서치",
+    "event_5120_1W_MasterTicket_09": "윤진 시즌 한정 확정 B서치",
+    "event_5120_1W_SuperTicket_018": "시즌 한정 출현율업 B서치"
 }

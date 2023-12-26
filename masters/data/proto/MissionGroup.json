@@ -422,5 +422,14 @@
 { "missionGroupId": 2511050, "scheduleId": "5110_2W_Event_Christmas2023_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 511050, "itemSetId": "414", "bannerId": 1511006, "u9": 1, "u10": 0 },
 { "missionGroupId": 2511060, "scheduleId": "5110_3W_Event_Christmas2022_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 511060, "itemSetId": "414", "bannerId": 1511008, "u9": 1, "u10": 0 },
 { "missionGroupId": 2511070, "scheduleId": "5110_4W_Event_Mei_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 511070, "itemSetId": "414", "bannerId": 1511011, "u9": 1, "u10": 0 },
-{ "missionGroupId": 2511080, "scheduleId": "5110_4W_Event_Egg_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 511080, "itemSetId": "206118", "bannerId": 1511014, "u9": 1, "u10": 0 }
+{ "missionGroupId": 2511080, "scheduleId": "5110_4W_Event_Egg_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 511080, "itemSetId": "206118", "bannerId": 1511014, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2512010, "scheduleId": "5120_1W_Event_shogatsu_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 512010, "itemSetId": "414", "bannerId": 1512001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2512020, "scheduleId": "5120_1W_Event_shogatsu_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 512020, "itemSetId": "414", "bannerId": 1412003, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2512040, "scheduleId": "5120_1W_Event_Happy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 512040, "itemSetId": "636", "bannerId": 1210005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2512050, "scheduleId": "5120_2W_Event_na_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 512050, "itemSetId": "414", "bannerId": 1512007, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2512060, "scheduleId": "5120_2W_Event_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 512060, "itemSetId": "636", "bannerId": 1512008, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2512070, "scheduleId": "5120_3W_Event_AKU_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 512070, "itemSetId": "414", "bannerId": 5312011, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2512080, "scheduleId": "5120_3W_Event_AKU_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 512080, "itemSetId": "414", "bannerId": 5401005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2512090, "scheduleId": "5120_4W_Event_gu_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 512090, "itemSetId": "414", "bannerId": 1512009, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2512110, "scheduleId": "5120_4W_Event_Mypace_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 512110, "itemSetId": "414", "bannerId": 1405007, "u9": 1, "u10": 0 }
 ]}

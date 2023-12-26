@@ -418,6 +418,7 @@
     "20051400": "Grillchita",
     "20051600": "Sodachita",
     "20051800": "Somnivora",
+    "20052101": "Fasasnob",
     "20052300": "Zebritz",
     "20052400": "Kiesling",
     "20052500": "Sedimantur",
@@ -502,6 +503,7 @@
     "20074611": "Durengard",
     "20074612": "Durengard",
     "20074200": "Flauschling",
+    "20074300": "Sabbaione",
     "20074800": "Thanathora",
     "20071000": "Tandrak",
     "20075700": "Wummer",
@@ -560,6 +562,7 @@
     "20085800": "Togedemaru",
     "20081911": "Mimigma",
     "20081912": "Mimigma",
+    "20085600": "Sen-Long",
     "20081800": "Grandiras",
     "20083000": "Kapu-Riki",
     "20083100": "Kapu-Fala",
@@ -634,6 +637,7 @@
     "2008150000": "Liberlo",
     "2008160000": "Memmeon",
     "2008180000": "Intelleon",
+    "2008200000": "Schlaraffel",
     "2008280000": "Gaunux",
     "2008300000": "Cottomi",
     "2008340000": "Kamalm",
@@ -684,5 +688,9 @@
     "2009120000": "Kwaks",
     "2005030041": "Admurai",
     "2007240041": "Silvarro",
-    "20013301": "Evoli"
+    "20013301": "Evoli",
+    "2009750000": "Kolowal",
+    "2009390000": "Wampitz",
+    "2005551131": "Flampivian",
+    "2005551231": "Flampivian"
 }

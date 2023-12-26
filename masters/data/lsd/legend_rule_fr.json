@@ -43,5 +43,8 @@
     "legend_rule_5100_003": "Plus les stats d'Entei sont augmentées,\nplus les dégâts qu'il subit sont réduits.",
     "legend_rule_5110_001": "Les PV d'Artikodin restent à 60 %\nla première fois que ses PV\nchutent à 60 % ou moins.",
     "legend_rule_5110_002": "Quand Artikodin entre en combat, sa Déf.\nest triplée. Lorsque ses PV chutent à 60 %\nou moins, c'est sa Déf. Spé. qui est triplée.",
-    "legend_rule_5110_003": "Lorsque l'adversaire ne souffre pas\nd'un changement de statut négatif,\nsa Défense et sa Déf. Spé. sont triplées."
+    "legend_rule_5110_003": "Lorsque l'adversaire ne souffre pas\nd'un changement de statut négatif,\nsa Défense et sa Déf. Spé. sont triplées.",
+    "legend_rule_5120_001": "Les PV d'Étouraptor restent à 40 %\nla première fois que ses PV\nchutent à 40 % ou moins.",
+    "legend_rule_5120_002": "Quand les PV d'Étouraptor chutent à 40 %\nou moins, il ne subit aucun dégât\ndes Aires Dégâts, quel que soit le type.",
+    "legend_rule_5120_003": "Quand l'ennemi n'est pas affecté par un effet\nsur le terrain, sa Déf. et sa Déf. Spé. sont triplées."
 }

@@ -418,6 +418,7 @@
     "20051400": "Flamoutan",
     "20051600": "Flotoutan",
     "20051800": "Mushana",
+    "20052101": "Déflaisan",
     "20052300": "Zéblitz",
     "20052400": "Nodulithe",
     "20052500": "Géolithe",
@@ -502,6 +503,7 @@
     "20074611": "Exagide",
     "20074612": "Exagide",
     "20074200": "Sucroquin",
+    "20074300": "Cupcanaille",
     "20074800": "Golgopathe",
     "20071000": "Kravarech",
     "20075700": "Gamblast",
@@ -560,6 +562,7 @@
     "20085800": "Togedemaru",
     "20081911": "Mimiqui",
     "20081912": "Mimiqui",
+    "20085600": "Draïeul",
     "20081800": "Ékaïser",
     "20083000": "Tokorico",
     "20083100": "Tokopiyon",
@@ -634,6 +637,7 @@
     "2008150000": "Pyrobut",
     "2008160000": "Larméléon",
     "2008180000": "Lézargus",
+    "2008200000": "Rongrigou",
     "2008280000": "Roublenard",
     "2008300000": "Blancoton",
     "2008340000": "Torgamord",
@@ -684,5 +688,9 @@
     "2009120000": "Coiffeton",
     "2005030041": "Clamiral",
     "2007240041": "Archéduc",
-    "20013301": "Évoli"
+    "20013301": "Évoli",
+    "2009750000": "Balbalèze",
+    "2009390000": "Ampibidou",
+    "2005551131": "Darumacho",
+    "2005551231": "Darumacho"
 }

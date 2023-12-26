@@ -19,7 +19,7 @@
     "legend_rule_3010_003": "Nach jeder Umschlingung des Gegners steigt\nseine Resistenz gegen Umschlingung.",
     "legend_rule_3020_001": "Der Gegner ändert ein Mal pro Kampf seine\nTypenschwäche.",
     "legend_rule_3020_002": "Mehrere Gegner erscheinen.",
-    "legend_rule_3020_003": "Der Schaden sinkt abhängig von der Summe\nder gesenkten gegnerischen Statuswerte.",
+    "legend_rule_3020_003": "Der Schaden des Gegners sinkt abhängig\nvon der Summe der erhöhten Statuswerte.",
     "legend_rule_3030_001": "Der Gegner ändert sein Verhalten, wenn er\nparalysiert ist.",
     "legend_rule_3030_002": "Während der Gegner paralysiert ist, werden\neinige seiner Passivfähigkeiten deaktiviert.",
     "legend_rule_3030_003": "Wird der Gegner von einer Störung geheilt,\nsteigt seine Störungsresistenz.",
@@ -43,5 +43,8 @@
     "legend_rule_5100_003": "Der Schaden von Entei sinkt abhängig von\nder Summe der erhöhten Statuswerte.",
     "legend_rule_5110_001": "Fallen Arktos’ KP das erste Mal auf 60 %,\nhält es mit dieser Anzahl an KP durch.",
     "legend_rule_5110_002": "Betritt Arktos den Kampf, wird seine Vert.\nverdreifacht. Fallen seine KP auf 60 %, wird\nder Vert.-Wert mit Sp.-Vert. getauscht.",
-    "legend_rule_5110_003": "Wenn der Gegner nicht von einer negativen\nStatusveränderung betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht."
+    "legend_rule_5110_003": "Wenn der Gegner nicht von einer negativen\nStatusveränderung betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
+    "legend_rule_5120_001": "Fallen Staraptors KP das erste Mal auf 40 %,\nhält es mit dieser Anzahl an KP durch.",
+    "legend_rule_5120_002": "Fallen Staraptors KP auf 40 %, erleidet es\nkeinen Schaden durch Schadenfelder.",
+    "legend_rule_5120_003": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht."
 }

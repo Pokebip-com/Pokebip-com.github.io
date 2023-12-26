@@ -90,9 +90,9 @@
     "10310003": "Tacticien (Maîtres)",
     "10311001": "Attaquant (Organisation maléfique)",
     "10311003": "Tacticien (Organisation maléfique)",
-    "10401001": "Attaquant (Look Ultime)",
-    "10401002": "Soutien (Look Ultime)",
-    "10401003": "Tacticien (Look Ultime)",
+    "10401001": "Attaquant (Looks Ultimes)",
+    "10401002": "Soutien (Looks Ultimes)",
+    "10401003": "Tacticien (Looks Ultimes)",
     "10402001": "Attaquant (Lunettes de soleil)",
     "10402002": "Soutien (Lunettes de soleil)",
     "10402003": "Tacticien (Lunettes de soleil)",
@@ -256,5 +256,8 @@
     "10206005": "Régisseur (Kalos)",
     "10304005": "Régisseur (Champions d'Arène)",
     "10411005": "Régisseur (Looks Saisonniers)",
-    "19958005": "Régisseur (Milieu artistique)"
+    "19958005": "Régisseur (Milieu artistique)",
+    "10102005": "Régisseur (Feu)",
+    "10203005": "Régisseur (Hoenn)",
+    "19937005": "Régisseur (Concours)"
 }

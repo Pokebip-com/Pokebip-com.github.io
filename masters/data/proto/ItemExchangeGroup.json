@@ -296,5 +296,14 @@
 { "itemExchangeGroupId": 2511050, "u2": 1, "scheduleId": "5110_2W_Event_Equipment_Exchange", "bannerId": 1511007, "u5": 0 },
 { "itemExchangeGroupId": 2511060, "u2": 1, "scheduleId": "5110_3W_Event_Christmas2022_Boxsearch", "bannerId": 1511008, "u5": 0 },
 { "itemExchangeGroupId": 2511070, "u2": 1, "scheduleId": "5110_4W_Event_Mei_Exchange", "bannerId": 1511011, "u5": 0 },
-{ "itemExchangeGroupId": 2511080, "u2": 1, "scheduleId": "5110_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 }
+{ "itemExchangeGroupId": 2511080, "u2": 1, "scheduleId": "5110_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 },
+{ "itemExchangeGroupId": 2512010, "u2": 1, "scheduleId": "5120_1W_Event_shogatsu_Exchange_1", "bannerId": 1512001, "u5": 0 },
+{ "itemExchangeGroupId": 2512020, "u2": 1, "scheduleId": "5120_1W_Event_shogatsu_Exchange_2", "bannerId": 1412003, "u5": 0 },
+{ "itemExchangeGroupId": 2512030, "u2": 1, "scheduleId": "5120_1W_Event_Happy_Exchange", "bannerId": 1210005, "u5": 0 },
+{ "itemExchangeGroupId": 2512040, "u2": 1, "scheduleId": "5120_2W_Event_na_Exchange", "bannerId": 1512007, "u5": 0 },
+{ "itemExchangeGroupId": 2512050, "u2": 1, "scheduleId": "5120_3W_Event_AKU_Exchange_1", "bannerId": 5312011, "u5": 0 },
+{ "itemExchangeGroupId": 2512060, "u2": 1, "scheduleId": "5120_3W_Event_AKU_Exchange_2", "bannerId": 5401005, "u5": 0 },
+{ "itemExchangeGroupId": 2512070, "u2": 1, "scheduleId": "5120_4W_Event_gu_Exchange", "bannerId": 1512009, "u5": 0 },
+{ "itemExchangeGroupId": 2512080, "u2": 1, "scheduleId": "5120_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 },
+{ "itemExchangeGroupId": 2512090, "u2": 1, "scheduleId": "5120_4W_Event_Mypace_Exchange", "bannerId": 1405007, "u5": 0 }
 ]}
