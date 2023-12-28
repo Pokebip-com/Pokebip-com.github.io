@@ -23,6 +23,9 @@ let scout;
 let scoutPickup;
 let storyQuest;
 
+let shopPurchasableItem;
+let shopTierPrices;
+
 let versions;
 
 let bannerText;
@@ -91,6 +94,7 @@ async function getData() {
         scheduleResponse,
         scoutResponse,
         scoutPickupResponse,
+        shopPurchasableItemResponse,
         storyQuestResponse,
         trainerResponse,
         trainerBaseResponse,
@@ -128,6 +132,7 @@ async function getData() {
         fetch("./data/proto/Schedule.json"),
         fetch("./data/proto/Scout.json"),
         fetch("./data/proto/ScoutPickup.json"),
+        fetch("./data/proto/ShopPurchasableItem.json"),
         fetch("./data/proto/StoryQuest.json"),
         fetch("./data/proto/Trainer.json"),
         fetch("./data/proto/TrainerBase.json"),
@@ -145,14 +150,11 @@ async function getData() {
     ])
         .catch(error => console.log(error));
 
-    abilityPanel = await abilityPanelResponse.json();
-    abilityPanel = abilityPanel.entries;
+    abilityPanel = (await abilityPanelResponse.json()).entries;
 
-    banner = await bannerResponse.json();
-    banner = banner.entries;
+    banner = (await bannerResponse.json()).entries;
 
-    eventQuestGroup = await eventQuestGroupResponse.json();
-    eventQuestGroup = eventQuestGroup.entries;
+    eventQuestGroup = (await eventQuestGroupResponse.json()).entries;
 
     let villaQuestGroup = await villaQuestGroupResponse.json();
     villaQuestGroup.entries.map(vqg => vqg.bannerId = 1202001);
@@ -176,50 +178,33 @@ async function getData() {
     });
     eventQuestGroup.push(...champBattleEventQuestGroup.entries);
 
-    let championBattleRegionJSON = await championBattleRegionResponse.json();
-    championBattleRegion = championBattleRegionJSON.entries;
+    championBattleRegion = (await championBattleRegionResponse.json()).entries;
+    championBattleRegionOpeningSchedule = (await championBattleRegionOpeningScheduleResponse.json()).entries;
 
-    let championBattleRegionOpeningScheduleJSON = await championBattleRegionOpeningScheduleResponse.json();
-    championBattleRegionOpeningSchedule = championBattleRegionOpeningScheduleJSON.entries;
+    eventQuestGroup.push(...(await challengeToStrongTrainerQuestGroupResponse.json()).entries);
 
-    let challengeToStrongTrainerQuestGroup = await challengeToStrongTrainerQuestGroupResponse.json();
-    eventQuestGroup.push(...challengeToStrongTrainerQuestGroup.entries);
+    scout = (await scoutResponse.json()).entries;
 
-    scout = await scoutResponse.json();
-    scout = scout.entries;
+    scoutPickup = (await scoutPickupResponse.json()).entries;
+    storyQuest = (await storyQuestResponse.json()).entries;
 
-    scoutPickup = await scoutPickupResponse.json();
-    scoutPickup = scoutPickup.entries;
+    salonGuests = (await salonGuestResponse.json()).entries;
 
-    storyQuest = await storyQuestResponse.json();
-    storyQuest = storyQuest.entries;
-
-    const salonGuestJSON = await salonGuestResponse.json();
-    salonGuests = salonGuestJSON.entries;
-
-    const legendsQuestGroupJSON = await legendQuestGroupResponse.json();
-    legendQuestGroup = getBySpecificID(legendsQuestGroupJSON.entries, "questGroupId");
-
-    const legendsQuestGroupScheduleJSON = await legendQuestGroupScheduleResponse.json();
-    legendQuestGroupSchedule = getBySpecificID(legendsQuestGroupScheduleJSON.entries, "scheduleId");
+    legendQuestGroup = getBySpecificID((await legendQuestGroupResponse.json()).entries, "questGroupId");
+    legendQuestGroupSchedule = getBySpecificID((await legendQuestGroupScheduleResponse.json()).entries, "scheduleId");
 
     schedule = await scheduleResponse.json();
     getSchedule();
 
     bannerText = await bannerTextResponse.json();
-
-    const eventBannerJSON = await eventBannerResponse.json();
-    eventBannerList = eventBannerJSON.entries;
-
+    eventBannerList = (await eventBannerResponse.json()).entries;
     eventName = await eventNameResponse.json();
 
-    const itemExchangeJSON = await itemExchangeResponse.json();
-    itemExchange = itemExchangeJSON.entries;
+    itemExchange = (await itemExchangeResponse.json()).entries;
 
     const lastScheduleStartDate = Math.max(...new Set(schedule.map(s => s.startDate*1)));
 
-    const loginBonusJSON = await loginBonusResponse.json();
-    loginBonus = loginBonusJSON.entries.filter(lb => lb.startDate <= lastScheduleStartDate).map(lb => {
+    loginBonus = (await loginBonusResponse.json()).entries.filter(lb => lb.startDate <= lastScheduleStartDate).map(lb => {
         lb.scheduleId = lb.loginBonusId;
         lb.startDate = lb.startDate.toString();
         lb.endDate = lb.endDate.toString();
@@ -232,30 +217,22 @@ async function getData() {
 
     schedule.push(...loginBonus);
 
-    const loginBonusRewardJSON = await loginBonusRewardResponse.json();
-    loginBonusReward = loginBonusRewardJSON.entries;
+    shopPurchasableItem = (await shopPurchasableItemResponse.json()).entries;
+
+    loginBonusReward = (await loginBonusRewardResponse.json()).entries;
 
     jukeboxMusicName = await jukeboxMusicNameResponse.json();
 
-    const homeEventAppealJSON = await homeEventAppealResponse.json();
-    homeEventAppeal = homeEventAppealJSON.entries;
+    homeEventAppeal = (await homeEventAppealResponse.json()).entries;
 
     scoutPickupDescr = await scoutPickupDescrResponse.json();
 
-    const monstersJSON = await monsterResponse.json();
-    monster = monstersJSON.entries;
+    monster = (await monsterResponse.json()).entries;
+    monsterBase = (await monsterBaseResponse.json()).entries;
 
-    const monstersBaseJSON = await monsterBaseResponse.json();
-    monsterBase = monstersBaseJSON.entries;
-
-    const trainerJSON = await trainerResponse.json();
-    trainer = trainerJSON.entries;
-
-    const trainersBaseJSON = await trainerBaseResponse.json();
-    trainerBase = trainersBaseJSON.entries;
-
-    trainerExRole = await trainerExRoleResponse.json();
-    trainerExRole = trainerExRole.entries;
+    trainer = (await trainerResponse.json()).entries;
+    trainerBase = (await trainerBaseResponse.json()).entries;
+    trainerExRole = (await trainerExRoleResponse.json()).entries;
 
     motifTypeName = await motifTypeNameResponse.json();
 
@@ -263,17 +240,20 @@ async function getData() {
     trainerNames = await trainerNameResponse.json();
     trainerVerboseNames = await trainerVerboseNameResponse.json();
 
-    const itemSetJSON = await itemSetResponse.json();
-    itemSet = itemSetJSON.entries;
+    itemSet = (await itemSetResponse.json()).entries;
 }
 
 async function getCustomJSON() {
     const [
+        shopTierPricesResponse,
         versionsResponse
     ] = await Promise.all([
+        fetch("./data/custom/shop_tier_prices.json"),
         fetch("./data/custom/version_release_dates.json")
     ])
         .catch(error => console.log(error));
+
+    shopTierPrices = (await shopTierPricesResponse.json()).entries;
 
     versions = await versionsResponse.json().then(orderByVersion);
 }
@@ -287,7 +267,6 @@ function getSchedule() {
     mainStoryUpdate = [...new Set(storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
     trainingAreaUpdate = [...new Set(storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
     championBattleAllPeriod = [...new Set(schedule.entries.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
-    console.log(championBattleAllPeriod);
 
 
     schedule = schedule.entries.filter(s =>
@@ -298,7 +277,7 @@ function getSchedule() {
         || trainingAreaUpdate.includes(s.scheduleId)
         || salonGuestsUpdate.includes(s.scheduleId)
         || s.scheduleId.startsWith("chara_")
-        || s.scheduleId.endsWith("_Shop_otoku")
+        || s.scheduleId.includes("_Shop_otoku")
         || s.scheduleId.endsWith("_musiccoin_FOREVER")
         || (s.scheduleId.includes("_ChampionBattle_")
             && !(s.scheduleId.endsWith("_AllPeriod")
@@ -307,8 +286,6 @@ function getSchedule() {
                 || s.scheduleId.endsWith("_option")
             ))
     );
-    console.log(schedule);
-    console.log(schedule.filter(s => s.scheduleId.includes("_ChampionBattle_")));
 }
 
 function getBySpecificID(data, id) {
@@ -596,7 +573,7 @@ function scheduleByVersion() {
                 else if(s.scheduleId.startsWith("chara_")) {
                     s.scheduleType = { "name" : "chara", "priority": "40" };
                 }
-                else if(s.scheduleId.endsWith("_Shop_otoku")) {
+                else if(s.scheduleId.includes("_Shop_otoku")) {
                     s.scheduleType = { "name" : "shop", "priority": "50" };
                 }
                 else if(s.scheduleId.endsWith("_musiccoin_FOREVER")) {
@@ -676,6 +653,42 @@ function printScouts(schedule) {
             scheduleDiv.innerHTML += "</ul>\n";
         }
     });
+}
+
+function printShopBanner(banner, schedule) {
+    let h3 = `<h3>${bannerText[banner.text1Id]}`;
+
+    if(banner.text2Id > -1) {
+        h3 += ` ${bannerText[banner.text2Id]}`;
+    }
+
+    h3 += "</h3>";
+
+    scheduleDiv.innerHTML += h3;
+
+    if(banner.bannerIdString !== "") {
+        scheduleDiv.innerHTML += `<img src="./data/banner/event/${banner.bannerIdString}.png" />\n`;
+    }
+
+    let purchasableItems = shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId);
+
+    if(purchasableItems.length > 0) {
+
+        scheduleDiv.innerHTML += `<h4>PACKS DISPONIBLES</h4>\n<ul>\n`;
+
+        purchasableItems.forEach(pi => {
+            let matches = pi.internalName.match(/paidvc_[a-zA-Z]+([0-9]+)_([0-9]+)/i);
+            let price = shopTierPrices.find(stp => stp.tier.toString() === matches[1]);
+
+            price = price.euros || "??.??";
+
+            scheduleDiv.innerHTML += `<li><b>${matches[2]} Diamants :</b> ${price}€ (${pi.limit}x)</li>\n`;
+        });
+
+        scheduleDiv.innerHTML += `</ul>\n`;
+    }
+
+    printEndDate(schedule.endDate);
 }
 
 function printEventBanner(eventBanner, eventSchedule) {
@@ -783,7 +796,7 @@ function printShopOffers(schedule) {
     eventBanners.forEach(eb => {
         let banners = banner.filter(b => b.bannerId === eb.bannerId);
 
-        banners.forEach(ban => printEventBanner(ban, schedule));
+        banners.forEach(ban => printShopBanner(ban, schedule));
     });
 }
 

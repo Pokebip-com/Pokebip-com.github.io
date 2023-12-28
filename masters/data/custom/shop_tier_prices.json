@@ -1,0 +1,19 @@
+{"entries" : [
+{ "tier" : 1, "yens" : 120, "euros" : 0.99 },
+{ "tier" : 2, "yens" : 250, "euros" : 1.99 },
+{ "tier" : 4, "yens" : 490, "euros" : 3.49 },
+{ "tier" : 5, "yens" : 610, "euros" : 4.99 },
+{ "tier" : 6, "yens" : -1, "euros" : 5.99 },
+{ "tier" : 8, "yens" : 980, "euros" : 7.99 },
+{ "tier" : 13, "yens" : 1600, "euros" : 12.99 },
+{ "tier" : 15, "yens" : 1840, "euros" : 14.99 },
+{ "tier" : 20, "yens" : -1, "euros" : 19.99 },
+{ "tier" : 24, "yens" : 2980, "euros" : 23.99 },
+{ "tier" : 27, "yens" : 3300, "euros" : 26.99 },
+{ "tier" : 28, "yens" : 3480, "euros" : 27.99 },
+{ "tier" : 29, "yens" : 3540, "euros" : 28.99 },
+{ "tier" : 32, "yens" : 3980, "euros" : 28.99 },
+{ "tier" : 49, "yens" : 5980, "euros" : 48.99 },
+{ "tier" : 51, "yens" : 7000, "euros" : 54.99 },
+{ "tier" : 56, "yens" : 10000, "euros" : 79.99 }
+]}
