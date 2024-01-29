@@ -136,5 +136,11 @@
     "event_5120_1W_MasterTicket_08": "이향 시즌 한정 확정 B서치",
     "event_5120_1W_SuperTicket_09": "윤진 시즌 한정 출현율업 B서치",
     "event_5120_1W_MasterTicket_09": "윤진 시즌 한정 확정 B서치",
-    "event_5120_1W_SuperTicket_018": "시즌 한정 출현율업 B서치"
+    "event_5120_1W_SuperTicket_018": "시즌 한정 출현율업 B서치",
+    "event_6010_2W_MasterTicket_01": "비상 확정 버라이어티 B서치",
+    "event_6010_2W_SuperTicket_02": "승재 시즌 한정 출현율업 B서치",
+    "event_6010_2W_MasterTicket_02": "승재 시즌 한정 확정 B서치",
+    "event_6010_2W_SuperTicket_03": "무청 시즌 한정 출현율업 B서치",
+    "event_6010_2W_MasterTicket_03": "무청 시즌 한정 확정 B서치",
+    "event_6010_3W_SuperTicket_02": "시즌 한정 출현율업 B서치"
 }

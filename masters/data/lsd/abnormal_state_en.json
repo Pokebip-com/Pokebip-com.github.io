@@ -112,6 +112,7 @@
     "359": "Dark Damage Field",
     "360": "Steel Damage Field",
     "362": "No Stat Increases",
+    "364": "Kanto Circle (Special)",
     "370": "Hoenn Circle (Special)",
     "375": "Unova Circle (Physical)",
     "5000": "Bonus for This Battle",
@@ -238,6 +239,7 @@
     "5122": "Mega Evolution",
     "5123": "Max Moves",
     "5124": "Buddy Moves",
+    "5126": "Kanto Circle (Special)",
     "5132": "Hoenn Circle (Special)",
     "5137": "Unova Circle (Physical)",
     "9014": "Sync Buff",
@@ -264,5 +266,13 @@
     "9037": "Dragon Type Rebuff",
     "9038": "Dark Type Rebuff",
     "9039": "Steel Type Rebuff",
-    "9040": "Fairy Type Rebuff"
+    "9040": "Fairy Type Rebuff",
+    "10001": "Attack",
+    "10002": "Defense",
+    "10003": "Sp. Atk",
+    "10004": "Sp. Def",
+    "10005": "Speed",
+    "10006": "Accuracy",
+    "10007": "Evasiveness",
+    "10008": "Critical-hit rate"
 }

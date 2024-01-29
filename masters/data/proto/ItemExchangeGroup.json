@@ -7,6 +7,7 @@
 { "itemExchangeGroupId": 6, "u2": 6, "scheduleId": "", "bannerId": -1, "u5": 0 },
 { "itemExchangeGroupId": 7, "u2": 7, "scheduleId": "", "bannerId": -1, "u5": 0 },
 { "itemExchangeGroupId": 8, "u2": 8, "scheduleId": "", "bannerId": -1, "u5": 0 },
+{ "itemExchangeGroupId": 9, "u2": 9, "scheduleId": "", "bannerId": -1, "u5": 0 },
 { "itemExchangeGroupId": 100, "u2": 100, "scheduleId": "", "bannerId": -1, "u5": 0 },
 { "itemExchangeGroupId": 101, "u2": 101, "scheduleId": "", "bannerId": -1, "u5": 0 },
 { "itemExchangeGroupId": 102, "u2": 102, "scheduleId": "", "bannerId": -1, "u5": 0 },
@@ -305,5 +306,15 @@
 { "itemExchangeGroupId": 2512060, "u2": 1, "scheduleId": "5120_3W_Event_AKU_Exchange_2", "bannerId": 5401005, "u5": 0 },
 { "itemExchangeGroupId": 2512070, "u2": 1, "scheduleId": "5120_4W_Event_gu_Exchange", "bannerId": 1512009, "u5": 0 },
 { "itemExchangeGroupId": 2512080, "u2": 1, "scheduleId": "5120_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 },
-{ "itemExchangeGroupId": 2512090, "u2": 1, "scheduleId": "5120_4W_Event_Mypace_Exchange", "bannerId": 1405007, "u5": 0 }
+{ "itemExchangeGroupId": 2512090, "u2": 1, "scheduleId": "5120_4W_Event_Mypace_Exchange", "bannerId": 1405007, "u5": 0 },
+{ "itemExchangeGroupId": 2601010, "u2": 1, "scheduleId": "6010_1W_Event_GetTrainer_Exchange", "bannerId": 1601002, "u5": 0 },
+{ "itemExchangeGroupId": 2601020, "u2": 1, "scheduleId": "6010_2W_Event_TrainersFile_Exchange", "bannerId": 1601004, "u5": 0 },
+{ "itemExchangeGroupId": 2601030, "u2": 1, "scheduleId": "6010_2W_Event_ThanksDay_Exchange", "bannerId": 1601005, "u5": 0 },
+{ "itemExchangeGroupId": 2601040, "u2": 1, "scheduleId": "6010_3W_Event_ThanksDay_Exchange", "bannerId": 1501003, "u5": 0 },
+{ "itemExchangeGroupId": 2601050, "u2": 1, "scheduleId": "6010_3W_Event_GetTrainer_Exchange", "bannerId": 1601006, "u5": 0 },
+{ "itemExchangeGroupId": 2601060, "u2": 1, "scheduleId": "6010_3W_Event_Equipment_Exchange", "bannerId": 1601007, "u5": 0 },
+{ "itemExchangeGroupId": 2601070, "u2": 1, "scheduleId": "6010_4W_Event_GetTrainer_Exchange", "bannerId": 1601010, "u5": 0 },
+{ "itemExchangeGroupId": 2601080, "u2": 1, "scheduleId": "6010_4W_Event_Gladion_Exchange", "bannerId": 1601011, "u5": 0 },
+{ "itemExchangeGroupId": 2601090, "u2": 1, "scheduleId": "6010_4W_Event_Lillie_Exchange", "bannerId": 1601013, "u5": 0 },
+{ "itemExchangeGroupId": 2601100, "u2": 1, "scheduleId": "6010_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 }
 ]}

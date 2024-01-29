@@ -112,6 +112,7 @@
     "359": "Campo Daño Siniestro",
     "360": "Campo Daño Acero",
     "362": "Aumento imposible",
+    "364": "Círculo de Kanto (Especial)",
     "370": "Círculo de Hoenn (Especial)",
     "375": "Círculo de Teselia (Físico)",
     "5000": "Con bonus durante este combate",
@@ -238,6 +239,7 @@
     "5122": "Megaevolución",
     "5123": "Mov. compi Dinamax",
     "5124": "Movimientos sincro",
+    "5126": "Círculo de Kanto (Especial)",
     "5132": "Círculo de Hoenn (Especial)",
     "5137": "Círculo de Teselia (Físico)",
     "9014": "Determinación",
@@ -264,5 +266,13 @@
     "9037": "Resiliencia Dragón",
     "9038": "Resiliencia Siniestro",
     "9039": "Resiliencia Acero",
-    "9040": "Resiliencia Hada"
+    "9040": "Resiliencia Hada",
+    "10001": "Ataque",
+    "10002": "Defensa",
+    "10003": "Ataque Especial",
+    "10004": "Defensa Especial",
+    "10005": "Velocidad",
+    "10006": "Precisión",
+    "10007": "Evasión",
+    "10008": "Prob. de golpe crítico"
 }

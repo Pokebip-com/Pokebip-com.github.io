@@ -1,5 +1,6 @@
 {"entries": [
 { "questGroupId": "1100000", "u2": "", "bannerId": 1510009, "u4": 51000010, "u5": 51000010, "scheduleId": "5100_3W_UltimateBattle_update", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 },
 { "questGroupId": "1100001", "u2": "", "bannerId": 1511015, "u4": 51100010, "u5": 51100010, "scheduleId": "5110_1W_Updata_UltimateBattle", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 },
-{ "questGroupId": "1100002", "u2": "", "bannerId": 1512005, "u4": 51200010, "u5": 51200010, "scheduleId": "5120_2W_UltimateBattle_update", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 }
+{ "questGroupId": "1100002", "u2": "", "bannerId": 1512005, "u4": 51200010, "u5": 51200010, "scheduleId": "5120_2W_UltimateBattle_update", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 },
+{ "questGroupId": "1100003", "u2": "", "bannerId": 1601009, "u4": 60100010, "u5": 60100010, "scheduleId": "6010_3W_UltimateBattle_update_FOREVER", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 }
 ]}

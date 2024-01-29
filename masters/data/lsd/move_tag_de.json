@@ -14,5 +14,6 @@
     "524288": "Schemenkraft",
     "2097152": "Phantomkraft",
     "4194304": "Sprungfeder",
-    "16777216": "K.O.-Schlag"
+    "16777216": "K.O.-Schlag",
+    "33554432": "Beere"
 }

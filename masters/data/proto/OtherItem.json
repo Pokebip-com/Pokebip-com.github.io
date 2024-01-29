@@ -1,5 +1,7 @@
 {"entries": [
 { "otherItemNameId": "13401", "otherItemDescriptionId": 13401, "imageId": "i134_0001_00", "u4": 0, "u5": -1 },
+{ "otherItemNameId": "78000001", "otherItemDescriptionId": -1, "imageId": "i170_0001_00", "u4": 0, "u5": -1 },
+{ "otherItemNameId": "79000001", "otherItemDescriptionId": 7901, "imageId": "i170_0002_00", "u4": 0, "u5": -1 },
 { "otherItemNameId": "60000000001", "otherItemDescriptionId": 601, "imageId": "i006_0001_00", "u4": 0, "u5": -1 },
 { "otherItemNameId": "70000000001", "otherItemDescriptionId": 701, "imageId": "i007_0001_00", "u4": 0, "u5": -1 },
 { "otherItemNameId": "70000000002", "otherItemDescriptionId": 701, "imageId": "i007_0001_00", "u4": 0, "u5": -1 },
@@ -22,6 +24,7 @@
 { "otherItemNameId": "450000000061", "otherItemDescriptionId": 4501, "imageId": "i075_0009_00", "u4": 0, "u5": 1605065408 },
 { "otherItemNameId": "450000000062", "otherItemDescriptionId": 4504, "imageId": "i075_7000_01", "u4": 0, "u5": -1 },
 { "otherItemNameId": "450000000063", "otherItemDescriptionId": 4501, "imageId": "i045_0013_00", "u4": 0, "u5": -1 },
+{ "otherItemNameId": "450000000064", "otherItemDescriptionId": 4505, "imageId": "i045_0014_00", "u4": 0, "u5": -1 },
 { "otherItemNameId": "450000000075", "otherItemDescriptionId": 4501, "imageId": "i045_0011_01", "u4": 0, "u5": -1 },
 { "otherItemNameId": "450000000100", "otherItemDescriptionId": 4500, "imageId": "i045_0001_00", "u4": 2, "u5": -1 },
 { "otherItemNameId": "450000000200", "otherItemDescriptionId": 4500, "imageId": "i045_0002_00", "u4": 3, "u5": -1 },

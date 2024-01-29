@@ -221,7 +221,7 @@
     "163": "¡Combatir en las vías del tren de la\ncima de la montaña ha sido muy\ndivertido! ¡La próxima vez me\ngustaría librar un combate así de\ninteresante en el bosque!\n\nPero, primero, necesito dos parejas de\ncompis que me ayuden: ¡una que\npueda perforar las rocas y otra que\npueda transportar los escombros!",
     "164": "Hay un niño en la plaza que parece\nestar muy triste. ¿Se te ocurre algún\nmovimiento que le pueda levantar el\nánimo? ¿Quizás de alguien que haya\nnacido para esto?",
     "165": "¡He visto una sirena temperamental\nsurcando el mar en un Pokémon con\nforma de estrella! Me pregunto si\npodré volver a verla si me quedo\nesperando en la orilla...",
-    "166": "Esta noche vamos a reunirnos en el\nbosque para desentrañar los misterios\nde lo sobrenatural....\n\nOye... ¿Por qué no traes a algún\namigo al que le pueda interesar?\n¡Únete a la oscuridad junto a mí y\nHaunter! ¡Conviértete en Bruj[ES:Gen Ref=\"255\" M=\"o\" F=\"a\" ]!",
+    "166": "Esta noche vamos a reunirnos en el\nbosque para desentrañar los misterios\nde lo sobrenatural...\n\nOye... ¿Por qué no traes a algún\namigo al que le pueda interesar?\n¡Únete a la oscuridad junto a mí y\nHaunter! ¡Conviértete en Bruj[ES:Gen Ref=\"255\" M=\"o\" F=\"a\" ]!",
     "167": "¡En Alola tenemos un ritual llamado\nel recorrido insular que está repleto\nde pruebas especiales!\n\nNo hay nada así en Passio, pero el\nmar siempre me recuerda a Alola.\n¡Estaría genial poder superar una\nprueba en la costa!",
     "168": "Uf, he estado recogiendo bayas del\nbosque y creo que he comido\ndemasiadas; estoy que exploto. Pero\nme gustaría comerme las demás\nluego... ¿Podrías congelarlas con\nalgún movimiento?",
     "169": "Suelo ir a la plaza a dibujar, pero\nnecesito un cambio de aires.\n\nQuiero aprender cómo se expresan\nlos demás artísticamente, para\ninspirarme.",
@@ -246,5 +246,6 @@
     "override_detail_5080_1_05": "Completa la ubicación \"La petición\ndel Profesor Oak\" del evento\n\"Neocampeones: Triunvirato\nlegendario\" una vez.",
     "override_detail_5080_1_06": "Completa la ubicación \"¡A disfrutar\ndel combate!\" del evento\n\"Neocampeones: Triunvirato\nlegendario\" una vez.",
     "override_detail_5080_1_07": "Completa la ubicación \"VS. Giovanni\"\n(Difícil) del capítulo final de la trama\nequipo villano de la historia principal\nuna vez.",
-    "override_detail_5080_1_08": "Completa los combates diarios por\nregiones tres veces."
+    "override_detail_5080_1_08": "Completa los combates diarios por\nregiones tres veces.",
+    "200": "Completa la Yincana de Combates."
 }

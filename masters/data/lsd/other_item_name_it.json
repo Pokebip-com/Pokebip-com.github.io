@@ -44,5 +44,10 @@
     "600000000004": "Gettone Panruoletto (arancione)",
     "600000000005": "Gettone Panruoletto (viola)",
     "450000000063": "Biglietto giornaliero",
-    "950000000001": "Pietra misteriosa"
+    "950000000001": "Pietra misteriosa",
+    "77000001": "Pass Tour di lotta",
+    "77000002": "Pass Tour di lotta a tempo",
+    "78000001": "Punti Tour di lotta",
+    "79000001": "Coccarda Tour di lotta",
+    "450000000064": "Coupon gettone panruoletto"
 }

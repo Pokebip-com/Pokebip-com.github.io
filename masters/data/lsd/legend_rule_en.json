@@ -46,5 +46,14 @@
     "legend_rule_5110_003": "When the opponent is not affected by a\nnegative status change, its Defense and\nSp. Def are tripled.",
     "legend_rule_5120_001": "The first time Staraptor's HP reaches 40% or\nlower, it endures with that HP.",
     "legend_rule_5120_002": "When Staraptor's HP reaches 40% or lower,\nit won't take damage from Damage Fields\nof any type.",
-    "legend_rule_5120_003": "When the opponent is not affected by a\nfield effect, its Defense and Sp. Def\nare tripled."
+    "legend_rule_5120_003": "When the opponent is not affected by a\nfield effect, its Defense and Sp. Def\nare tripled.",
+    "legend_rule_6010_001": "The first time Suicune’s HP reaches 50% or\nlower, it endures with that HP.",
+    "legend_rule_6010_002": "The opponent’s field effects are permanent.",
+    "legend_rule_6010_003": "When the opponent is not affected by a\nnegative status change, its Defense and\nSp. Def are tripled.",
+    "legend_rule_6010_011": "Each time the opponent uses a sync move,\nits sync buff is raised by three ranks.",
+    "legend_rule_6010_012": "Except in certain circumstances, the\nopponent’s successful attacks become\ncritical hits.",
+    "legend_rule_6010_013": "The opponent’s field effects are permanent.",
+    "legend_rule_6010_021": "The first time Seviper’s HP reaches 80% and\n40% or lower, it endures with that HP.",
+    "legend_rule_6010_022": "Powers up the opponent’s moves and sync move\nwhen allies are poisoned or badly poisoned.",
+    "legend_rule_6010_023": "Powers up the opponent’s moves, sync\nmove, or both when their Speed is raised."
 }

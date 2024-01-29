@@ -112,6 +112,7 @@
     "359": "Aire Dégâts Ténèbres",
     "360": "Aire Dégâts Acier",
     "362": "Pas d'augmentation\nde stats",
+    "364": "Cercle de Kanto Spécial",
     "370": "Cercle de Hoenn Spécial",
     "375": "Cercle d'Unys Physique",
     "5000": "En vedette",
@@ -238,6 +239,7 @@
     "5122": "Méga-Évolution",
     "5123": "Capacité Duo Dynamax",
     "5124": "Capacité Synchro",
+    "5126": "Cercle de Kanto Spécial",
     "5132": "Cercle de Hoenn Spécial",
     "5137": "Cercle d'Unys Physique",
     "9014": "Détermination",
@@ -264,5 +266,13 @@
     "9037": "Résilience Dragon",
     "9038": "Résilience Ténèbres",
     "9039": "Résilience Acier",
-    "9040": "Résilience Fée"
+    "9040": "Résilience Fée",
+    "10001": "Attaque",
+    "10002": "Défense",
+    "10003": "Attaque Spéciale",
+    "10004": "Défense Spéciale",
+    "10005": "Vitesse",
+    "10006": "Précision",
+    "10007": "Esquive",
+    "10008": "Taux de critiques"
 }

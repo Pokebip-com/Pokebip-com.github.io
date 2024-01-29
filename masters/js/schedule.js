@@ -863,11 +863,11 @@ function printLoginBonus(loginBonus) {
                 entryStr += "Autre bonus de connexion, non-identifié.\n";
                 break;
 
-            // Compensation
+            // Compensation/Cadeau de Rallye
             case 2:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Compensation";
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Cadeau/Compensation";
                 entryStr += "</h3>\n";
-                entryStr += "Compensation pour un problème.\n";
+                entryStr += "Cadeau (Rallye, événement, ...) ou Compensation pour un problème\n";
                 break;
 
             // Bonus Retour

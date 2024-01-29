@@ -112,6 +112,7 @@
     "359": "Campodanno Buio",
     "360": "Campodanno Acciaio",
     "362": "No aumenti statistiche",
+    "364": "Cerchia di Kanto (danni speciali)",
     "370": "Cerchia di Hoenn (danni speciali)",
     "375": "Cerchia di Unima (danni fisici)",
     "5000": "Unità che attivano effetti bonus in questa lotta",
@@ -238,6 +239,7 @@
     "5122": "Megaevoluzioni",
     "5123": "Mosse UniDynamax",
     "5124": "Sincromosse",
+    "5126": "Cerchia di Kanto (danni speciali)",
     "5132": "Cerchia di Hoenn (danni speciali)",
     "5137": "Cerchia di Unima (danni fisici)",
     "9014": "Tensione",
@@ -264,5 +266,13 @@
     "9037": "Protezione Drago",
     "9038": "Protezione Buio",
     "9039": "Protezione Acciaio",
-    "9040": "Protezione Folletto"
+    "9040": "Protezione Folletto",
+    "10001": "Attacco",
+    "10002": "Difesa",
+    "10003": "Attacco Speciale",
+    "10004": "Difesa Speciale",
+    "10005": "Velocità",
+    "10006": "Precisione",
+    "10007": "Elusione",
+    "10008": "Probabilità brutti colpi"
 }

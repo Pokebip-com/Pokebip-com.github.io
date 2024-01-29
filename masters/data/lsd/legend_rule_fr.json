@@ -31,7 +31,7 @@
     "legend_rule_3090_003": "Quand l'ennemi se remet d'une altération\nde statut ou d'un tourment, sa résistance\nà cette altération ou ce tourment augmente.",
     "legend_rule_5020_001": "La puissance des capacités et des capacités\nDuo de l'ennemi augmente quand son\nAttaque est augmentée.",
     "legend_rule_5020_002": "La puissance des capacités et des capacités\nDuo de l'ennemi augmente quand son\nAttaque Spéciale est augmentée.",
-    "legend_rule_5020_003": "À sa 2e jauge de PV, l'ennemi subit\nmoins de dégâts s'il ne souffre pas\nd'un effet sur le terrain.",
+    "legend_rule_5020_003": "À sa 2e jauge de PV, l'ennemi subit\nmoins de dégâts s'il n'est pas affecté\npar un effet sur le terrain.",
     "legend_rule_5060_001": "L'ennemi combat avec plusieurs\nautres Pokémon.",
     "legend_rule_5060_002": "La puissance des capacités et/ou de\nla capacité Duo de l'ennemi augmente\nquand sa Vitesse est augmentée.",
     "legend_rule_5060_003": "Les effets sur le terrain déclenchés\npar l'ennemi durent tout le combat.",
@@ -43,8 +43,17 @@
     "legend_rule_5100_003": "Plus les stats d'Entei sont augmentées,\nplus les dégâts qu'il subit sont réduits.",
     "legend_rule_5110_001": "Les PV d'Artikodin restent à 60 %\nla première fois que ses PV\nchutent à 60 % ou moins.",
     "legend_rule_5110_002": "Quand Artikodin entre en combat, sa Déf.\nest triplée. Lorsque ses PV chutent à 60 %\nou moins, c'est sa Déf. Spé. qui est triplée.",
-    "legend_rule_5110_003": "Lorsque l'adversaire ne souffre pas\nd'un changement de statut négatif,\nsa Défense et sa Déf. Spé. sont triplées.",
+    "legend_rule_5110_003": "Quand l'ennemi ne souffre pas\nd'un changement de statut négatif,\nsa Défense et sa Déf. Spé. sont triplées.",
     "legend_rule_5120_001": "Les PV d'Étouraptor restent à 40 %\nla première fois que ses PV\nchutent à 40 % ou moins.",
     "legend_rule_5120_002": "Quand les PV d'Étouraptor chutent à 40 %\nou moins, il ne subit aucun dégât\ndes Aires Dégâts, quel que soit le type.",
-    "legend_rule_5120_003": "Quand l'ennemi n'est pas affecté par un effet\nsur le terrain, sa Déf. et sa Déf. Spé. sont triplées."
+    "legend_rule_5120_003": "Quand l'ennemi n'est pas affecté par un effet\nsur le terrain, sa Déf. et sa Déf. Spé. sont triplées.",
+    "legend_rule_6010_001": "Les PV de Suicune restent à 50 %\nla première fois que ses PV chutent\nà 50 % ou moins.",
+    "legend_rule_6010_002": "Les effets sur le terrain déclenchés\npar l'ennemi durent tout le combat.",
+    "legend_rule_6010_003": "Lorsque l'adversaire ne souffre pas\nd'un changement de statut négatif,\nsa Défense et sa Déf. Spé. sont triplées.",
+    "legend_rule_6010_011": "À chaque fois que l'ennemi utilise\nune capacité Duo, sa détermination\naugmente de trois rangs.",
+    "legend_rule_6010_012": "L'ennemi inflige un coup critique si l'attaque\natteint sa cible (sauf dans certains cas).",
+    "legend_rule_6010_013": "Les effets sur le terrain déclenchés\npar l'ennemi durent tout le combat.",
+    "legend_rule_6010_021": "Les PV de Séviper restent à 80 % et 40 %\nla première fois que ses PV chutent\nà 80 % et 40 % ou moins.",
+    "legend_rule_6010_022": "Augmente la puissance des capacités et de la\ncapa. Duo de l'ennemi quand les alliés sont\nempoisonnés ou gravement empoisonnés.",
+    "legend_rule_6010_023": "La puissance des capacités et de la capacité\nDuo de l'ennemi augmente quand sa Vitesse\nest augmentée."
 }

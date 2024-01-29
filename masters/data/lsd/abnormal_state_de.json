@@ -112,6 +112,7 @@
     "359": "Unlichtschadenfeld",
     "360": "Stahlschadenfeld",
     "362": "Werterhöhung\nunmöglich",
+    "364": "Kantos Freundeskreis (Spezial)",
     "370": "Hoenns Freundeskreis (Spezial)",
     "375": "Einalls Freundeskreis (Physisch)",
     "5000": "Bonus für diesen Kampf",
@@ -238,6 +239,7 @@
     "5122": "Mega-Entwicklung",
     "5123": "G-D-Attacke",
     "5124": "Sync-Attacke",
+    "5126": "Kantos Freundeskreis (Spezial)",
     "5132": "Hoenns Freundeskreis (Spezial)",
     "5137": "Einalls Freundeskreis (Physisch)",
     "9014": "Die Spannung steigt",
@@ -264,5 +266,13 @@
     "9037": "Drachenwiderstand",
     "9038": "Unlichtwiderstand",
     "9039": "Stahlwiderstand",
-    "9040": "Feenwiderstand"
+    "9040": "Feenwiderstand",
+    "10001": "Angriff",
+    "10002": "Verteidigung",
+    "10003": "Spezial-Angriff",
+    "10004": "Spezial-Verteidigung",
+    "10005": "Initiative",
+    "10006": "Genauigkeit",
+    "10007": "Fluchtwert",
+    "10008": "Volltrefferquote"
 }

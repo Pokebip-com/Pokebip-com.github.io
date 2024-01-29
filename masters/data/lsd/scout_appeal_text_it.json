@@ -211,7 +211,7 @@
     "event_5030_4W_FesPickup_01": "Torna Samina Costumax\nin un'Unità master! Dopo\nla sua Unimossa, i suoi attacchi\npossono colpire tutte le Unità\navversarie in una volta!",
     "event_5040_0W_FesPickup_01": "Torna Laburno! È l'occasione\nper fare squadra con le Unità\ndegli Allenatori che possono\nessere invitati al Salotto Allenatori!",
     "event_5040_1W_FesPickup_01": "Arriva Hau Costumax, pronto\nper diventare 6★ EX! Grazie a\nun'abilità passiva, alla sua prima\nentrata in campo può generare\nun Campo Elettrico!",
-    "event_5040_1W_FesPickup_03": "Arriva Rika Costumax, pronta\nper diventare 6★ EX! Grazie a\nun'abilità passiva, alla sua prima\nentrata in campo può generare\nuna Zona Folletto!",
+    "event_5040_1W_FesPickup_03": "Arriva Rika Costumax, pronta\nper diventare 6★ EX! Grazie a\nun'abilità passiva, alla sua prima\nentrata in campo può attivare\nla Zona Folletto!",
     "event_5040_1W_Normal_06": "La prima Unicerca ×11 può essere\neffettuata con la metà del normale\nnumero di gemme! Puoi anche\nottenere regali come Essenze\ndei Campioni e Uniticket 5★!",
     "event_5040_2W_VarietyPickup_01": "Arriva Agatha con un nuovo\nPokémon, pronta a diventare\n6★ EX! Puoi ricevere regali\neffettuando l'Unicerca VIP\n(massimo tre volte)!",
     "event_5040_2W_VarietyPickup_02": "Arriva Lance con un nuovo\nPokémon, pronto a diventare\n6★ EX! Puoi ricevere regali\neffettuando l'Unicerca VIP\n(massimo tre volte)!",
@@ -303,5 +303,15 @@
     "event_5120_3W_FesPickup_01": "È in corso l'Unicerca a tre VIP!\nÈ la tua occasione per ottenere\ntre Unità Masterparty!",
     "event_5120_4W_FesPickup_01": "Arriva Grusha! Questa Unità\ndi tipo Ghiaccio con il ruolo\ndi Aiutante può attivare\nla Zona Ghiaccio!",
     "event_5120_4W_FesPickup_04": "Torna Dandel in un'Unità master!\nPuoi ricevere un regalo\neffettuando l'Unicerca VIP\ncon gemme a pagamento!",
-    "event_5120_4W_Normal_06": "La prima Unicerca ×11 può essere\neffettuata con la metà del normale\nnumero di gemme! Puoi anche\nottenere regali come Essenze\ndei Campioni e Uniticket 5★!"
+    "event_5120_4W_Normal_06": "La prima Unicerca ×11 può essere\neffettuata con la metà del normale\nnumero di gemme! Puoi anche\nottenere regali come Essenze\ndei Campioni e Uniticket 5★!",
+    "event_6010_1W_FesPickup_01": "Arriva Chase! Aiuta gli alleati\ncon la sua Analisi di Kanto!",
+    "event_6010_1W_FesPickup_03": "È in corso l'Unicerca a tre VIP!\nÈ la tua occasione per ottenere\ntre Unità Masterparty!",
+    "event_6010_2W_VarietyPickup_01": "Arriva Valerio, con un nuovo\nPokémon! Puoi ricevere regali con\nl'Unicerca VIP (massimo tre volte),\ndove puoi ottenere un ticket\nUnicerca con Unità garantità!",
+    "event_6010_2W_SeasonPickup_02": "Victor indossa un grembiule!\nPuoi ottenere dei regali fantastici,\ntra cui un ticket Unicerca con\nUnità garantita, nella Scalacerca!",
+    "event_6010_2W_SeasonPickup_03": "Bianca indossa un grembiule!\nPuoi ottenere dei regali fantastici,\ntra cui un ticket Unicerca con\nUnità garantita, nella Scalacerca!",
+    "event_6010_3W_SeasonPickup_01": "Tornano le Unità festive! È anche\ndisponibile una Scalacerca!",
+    "event_6010_4W_FesPickup_02": "Arriva Iridio Costumax in un'Unità\nmaster! Puoi ricevere un regalo\neffettuando l'Unicerca VIP\ncon gemme a pagamento!",
+    "event_6010_4W_FesPickup_04": "Torna Lylia con indosso un abito\nelegante! Puoi ricevere un regalo\neffettuando l'Unicerca VIP\ncon gemme a pagamento!",
+    "event_6010_4W_FesPickup_06": "Torna Samina Costumax in un'Unità\nmaster! Puoi ricevere un regalo\neffettuando l'Unicerca VIP\ncon gemme a pagamento!",
+    "event_6010_4W_FesPickup_010": "Torna Rocco Costumax, con nuove\ncaselle per le Unità Masterparty\nnella sua Teca Pietra Unità!"
 }

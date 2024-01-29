@@ -46,5 +46,14 @@
     "legend_rule_5110_003": "Wenn der Gegner nicht von einer negativen\nStatusveränderung betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
     "legend_rule_5120_001": "Fallen Staraptors KP das erste Mal auf 40 %,\nhält es mit dieser Anzahl an KP durch.",
     "legend_rule_5120_002": "Fallen Staraptors KP auf 40 %, erleidet es\nkeinen Schaden durch Schadenfelder.",
-    "legend_rule_5120_003": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht."
+    "legend_rule_5120_003": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
+    "legend_rule_6010_001": "Fallen Suicunes KP das erste Mal auf 50 %,\nhält es mit dieser Anzahl an KP durch.",
+    "legend_rule_6010_002": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
+    "legend_rule_6010_003": "Wenn der Gegner nicht von einer negativen\nStatusveränderung betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
+    "legend_rule_6010_011": "Jedes Mal, wenn der Gegner eine\nGefährtenattacke einsetzt, erhöht sie die\nSpannung um drei Ränge.",
+    "legend_rule_6010_012": "Außer unter besonderen Umständen werden\ngegnerische Angriffe garantiert Volltreffer,\nsofern sie treffen.",
+    "legend_rule_6010_013": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
+    "legend_rule_6010_021": "Fallen Vipitis’ KP das erste Mal auf 80 %\noder 40 %, hält es mit dieser Anzahl an KP\ndurch.",
+    "legend_rule_6010_022": "Erhöht die Stärke von Attacken und der\nGA des Gegners, wenn Mitstreiter vergiftet\noder schwer vergiftet sind.",
+    "legend_rule_6010_023": "Erhöht die Stärke von Attacken und der\nGefährtenattacke des Gegners, wenn seine\nInitiative erhöht ist."
 }
