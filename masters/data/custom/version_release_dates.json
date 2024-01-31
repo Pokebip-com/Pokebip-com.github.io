@@ -67,6 +67,194 @@
     {
       "version": "2.25.0",
       "releaseTimestamp": 1664172000
+    },
+    {
+      "version": "2.24.0",
+      "releaseTimestamp": 1661407200
+    },
+    {
+      "version": "2.23.5",
+      "releaseTimestamp": 1659938400
+    },
+    {
+      "version": "2.23.0",
+      "releaseTimestamp": 1658901600
+    },
+    {
+      "version": "2.22.0",
+      "releaseTimestamp": 1656396000
+    },
+    {
+      "version": "2.21.0",
+      "releaseTimestamp": 1653544800
+    },
+    {
+      "version": "2.20.0",
+      "releaseTimestamp": 1651039200
+    },
+    {
+      "version": "2.19.0",
+      "releaseTimestamp": 1648533600
+    },
+    {
+      "version": "2.18.5",
+      "releaseTimestamp": 1647324000
+    },
+    {
+      "version": "2.18.0",
+      "releaseTimestamp": 1645682400
+    },
+    {
+      "version": "2.17.0",
+      "releaseTimestamp": 1643263200
+    },
+    {
+      "version": "2.16.0",
+      "releaseTimestamp": 1640066400
+    },
+    {
+      "version": "2.15.0",
+      "releaseTimestamp": 1637733600
+    },
+    {
+      "version": "2.14.0",
+      "releaseTimestamp": 1635314400
+    },
+    {
+      "version": "2.13.0",
+      "releaseTimestamp": 1632808800
+    },
+    {
+      "version": "2.12.5",
+      "releaseTimestamp": 1631599200
+    },
+    {
+      "version": "2.12.0",
+      "releaseTimestamp": 1629957600
+    },
+    {
+      "version": "2.11.0",
+      "releaseTimestamp": 1627452000
+    },
+    {
+      "version": "2.10.0",
+      "releaseTimestamp": 1624860000
+    },
+    {
+      "version": "2.9.0",
+      "releaseTimestamp": 1622095200
+    },
+    {
+      "version": "2.8.0",
+      "releaseTimestamp": 1619416800
+    },
+    {
+      "version": "2.7.0",
+      "releaseTimestamp": 1616997600
+    },
+    {
+      "version": "2.6.0",
+      "releaseTimestamp": 1614146400
+    },
+    {
+      "version": "2.5.0",
+      "releaseTimestamp": 1611640800
+    },
+    {
+      "version": "2.4.0",
+      "releaseTimestamp": 1608530400
+    },
+    {
+      "version": "2.3.0",
+      "releaseTimestamp": 1606370400
+    },
+    {
+      "version": "2.2.5",
+      "releaseTimestamp": 1604469600
+    },
+    {
+      "version": "2.2.0",
+      "releaseTimestamp": 1603864800
+    },
+    {
+      "version": "2.1.0",
+      "releaseTimestamp": 1601272800
+    },
+    {
+      "version": "2.0.5",
+      "releaseTimestamp": 1599458400
+    },
+    {
+      "version": "2.0.0",
+      "releaseTimestamp": 1598421600
+    },
+    {
+      "version": "1.12.0",
+      "releaseTimestamp": 1596002400
+    },
+    {
+      "version": "1.11.0",
+      "releaseTimestamp": 1593064800
+    },
+    {
+      "version": "1.10.5",
+      "releaseTimestamp": 1591596000
+    },
+    {
+      "version": "1.10.0",
+      "releaseTimestamp": 1590386400
+    },
+    {
+      "version": "1.9.0",
+      "releaseTimestamp": 1587967200
+    },
+    {
+      "version": "1.8.5",
+      "releaseTimestamp": 1586325600
+    },
+    {
+      "version": "1.8.0",
+      "releaseTimestamp": 1584943200
+    },
+    {
+      "version": "1.7.0",
+      "releaseTimestamp": 1582178400
+    },
+    {
+      "version": "1.6.5",
+      "releaseTimestamp": 1581314400
+    },
+    {
+      "version": "1.6.0",
+      "releaseTimestamp": 1580104800
+    },
+    {
+      "version": "1.5.5",
+      "releaseTimestamp": 1579068000
+    },
+    {
+      "version": "1.5.0",
+      "releaseTimestamp": 1577080800
+    },
+    {
+      "version": "1.4.0",
+      "releaseTimestamp": 1574661600
+    },
+    {
+      "version": "1.3.0",
+      "releaseTimestamp": 1572242400
+    },
+    {
+      "version": "1.2.0",
+      "releaseTimestamp": 1569391200
+    },
+    {
+      "version": "1.1.0",
+      "releaseTimestamp": 1567058400
+    },
+    {
+      "version": "1.0.0",
+      "releaseTimestamp": 1564034400
     }
   ]
 }

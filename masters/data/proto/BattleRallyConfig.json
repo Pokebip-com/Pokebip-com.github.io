@@ -1,0 +1,12 @@
+{"entries": [
+{ "configId": "1", "configName": "lucky_area_rate", "value": "20", "u1": "100", "u2": "100" },
+{ "configId": "2", "configName": "start_battle_rally_point", "value": "500", "u1": "100", "u2": "100" },
+{ "configId": "3", "configName": "coin_ratio_clear", "value": "100", "u1": "100", "u2": "100" },
+{ "configId": "4", "configName": "coin_ratio_retire", "value": "20", "u1": "100", "u2": "100" },
+{ "configId": "5", "configName": "role_bonus_ratio", "value": "50", "u1": "100", "u2": "100" },
+{ "configId": "6", "configName": "enable_deck_edit_item", "value": "0", "u1": "100", "u2": "100" },
+{ "configId": "7", "configName": "shop_item_discount_num", "value": "1", "u1": "100", "u2": "100" },
+{ "configId": "8", "configName": "shop_item_discount_ratio", "value": "25", "u1": "100", "u2": "100" },
+{ "configId": "9", "configName": "lucky_presentation_rate", "value": "10", "u1": "100", "u2": "100" },
+{ "configId": "10", "configName": "max_area_count", "value": "10", "u1": "100", "u2": "100" }
+]}

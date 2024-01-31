@@ -1,0 +1,17 @@
+{"entries": [
+{ "battleRallyShopItemConditionId": "item_76000001", "u1": 1, "value": [ 76000001 ] },
+{ "battleRallyShopItemConditionId": "item_76000002", "u1": 1, "value": [ 76000002 ] },
+{ "battleRallyShopItemConditionId": "item_76000003", "u1": 1, "value": [ 76000003 ] },
+{ "battleRallyShopItemConditionId": "item_76000004", "u1": 5, "value": [ 5, 6 ] },
+{ "battleRallyShopItemConditionId": "item_76000005", "u1": 1, "value": [ 76000005 ] },
+{ "battleRallyShopItemConditionId": "item_76000006", "u1": 1, "value": [ 76000006 ] },
+{ "battleRallyShopItemConditionId": "item_category_b", "u1": 2, "value": [ 2 ] },
+{ "battleRallyShopItemConditionId": "item_category_b_100", "u1": 3, "value": [ 2 ] },
+{ "battleRallyShopItemConditionId": "item_category_bc_100", "u1": 3, "value": [ 2, 3 ] },
+{ "battleRallyShopItemConditionId": "item_category_c", "u1": 2, "value": [ 3 ] },
+{ "battleRallyShopItemConditionId": "item_category_c_100", "u1": 3, "value": [ 3 ] },
+{ "battleRallyShopItemConditionId": "item_category_d", "u1": 2, "value": [ 4 ] },
+{ "battleRallyShopItemConditionId": "item_category_defg", "u1": 4, "value": [ 7, 4, 5, 6 ] },
+{ "battleRallyShopItemConditionId": "item_category_dg", "u1": 4, "value": [ 7, 4 ] },
+{ "battleRallyShopItemConditionId": "item_category_ef", "u1": 2, "value": [ 5, 6 ] }
+]}

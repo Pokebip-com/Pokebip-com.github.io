@@ -16,13 +16,14 @@ function getCookie(cname) {
 
 let body = document.getElementsByTagName("body")[0];
 let headerData = [
-    { "title": "Programme", "url": "programme.html" },
-    { "title" : "Duos", "url": "duo.html" },
-    { "title": "Rôles EX", "url": "ex-role.html" },
+    { "title": "Programme", "url": "/masters/programme.html" },
+    { "title" : "Duos", "url": "/masters/duo.html" },
+    { "title": "Rôles EX", "url": "/masters/ex-role.html" },
+    { "title": "Sets rôles Rallye", "url": "/masters/rally/role-set.html" },
 ];
 
 let adminHeaderData = [
-    { "title" : "Plateaux Duo-Gemme", "url": "sync-grids.html" },
+    { "title" : "Plateaux Duo-Gemme", "url": "/masters/sync-grids.html" },
 ];
 
 const currentUrl = window.location.pathname.split("/").pop();
@@ -50,11 +51,11 @@ let ul = document.createElement('ul');
 headerData.forEach(hd => {
     var li = document.createElement('li');
 
-    if(hd.url === currentUrl)
+    if(hd.url.split("/").pop() === currentUrl)
         li.classList.add("active");
 
     var a = document.createElement('a');
-    a.setAttribute("href", `./${hd.url}`);
+    a.setAttribute("href", `${hd.url}`);
     a.innerText = hd.title;
 
     li.appendChild(a);

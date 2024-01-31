@@ -1,0 +1,21 @@
+{"entries": [
+{ "multipleParameterBoostId": "1", "hpBoostRatio": "0", "atkBoostRatio": "100", "defBoostRatio": "100", "spaBoostRatio": "100", "spdBoostRatio": "100", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "2", "hpBoostRatio": "0", "atkBoostRatio": "500", "defBoostRatio": "500", "spaBoostRatio": "500", "spdBoostRatio": "500", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "3", "hpBoostRatio": "0", "atkBoostRatio": "200", "defBoostRatio": "0", "spaBoostRatio": "0", "spdBoostRatio": "0", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "4", "hpBoostRatio": "0", "atkBoostRatio": "0", "defBoostRatio": "200", "spaBoostRatio": "0", "spdBoostRatio": "0", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "5", "hpBoostRatio": "0", "atkBoostRatio": "0", "defBoostRatio": "0", "spaBoostRatio": "200", "spdBoostRatio": "0", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "6", "hpBoostRatio": "0", "atkBoostRatio": "0", "defBoostRatio": "0", "spaBoostRatio": "0", "spdBoostRatio": "200", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "7", "hpBoostRatio": "0", "atkBoostRatio": "0", "defBoostRatio": "0", "spaBoostRatio": "0", "spdBoostRatio": "0", "speBoostRatio": "200" },
+{ "multipleParameterBoostId": "8", "hpBoostRatio": "0", "atkBoostRatio": "300", "defBoostRatio": "300", "spaBoostRatio": "300", "spdBoostRatio": "300", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100001", "hpBoostRatio": "0", "atkBoostRatio": "0", "defBoostRatio": "0", "spaBoostRatio": "0", "spdBoostRatio": "0", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100002", "hpBoostRatio": "0", "atkBoostRatio": "100", "defBoostRatio": "100", "spaBoostRatio": "100", "spdBoostRatio": "100", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100003", "hpBoostRatio": "0", "atkBoostRatio": "200", "defBoostRatio": "200", "spaBoostRatio": "200", "spdBoostRatio": "200", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100004", "hpBoostRatio": "0", "atkBoostRatio": "300", "defBoostRatio": "300", "spaBoostRatio": "300", "spdBoostRatio": "300", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100005", "hpBoostRatio": "0", "atkBoostRatio": "400", "defBoostRatio": "400", "spaBoostRatio": "400", "spdBoostRatio": "400", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100006", "hpBoostRatio": "0", "atkBoostRatio": "500", "defBoostRatio": "500", "spaBoostRatio": "500", "spdBoostRatio": "500", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100007", "hpBoostRatio": "0", "atkBoostRatio": "600", "defBoostRatio": "600", "spaBoostRatio": "600", "spdBoostRatio": "600", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100008", "hpBoostRatio": "0", "atkBoostRatio": "700", "defBoostRatio": "700", "spaBoostRatio": "700", "spdBoostRatio": "700", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100009", "hpBoostRatio": "0", "atkBoostRatio": "800", "defBoostRatio": "800", "spaBoostRatio": "800", "spdBoostRatio": "800", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100010", "hpBoostRatio": "0", "atkBoostRatio": "100", "defBoostRatio": "100", "spaBoostRatio": "100", "spdBoostRatio": "100", "speBoostRatio": "0" },
+{ "multipleParameterBoostId": "100011", "hpBoostRatio": "0", "atkBoostRatio": "0", "defBoostRatio": "0", "spaBoostRatio": "0", "spdBoostRatio": "0", "speBoostRatio": "0" }
+]}
