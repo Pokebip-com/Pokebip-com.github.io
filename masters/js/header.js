@@ -17,9 +17,11 @@ function getCookie(cname) {
 let body = document.getElementsByTagName("body")[0];
 let headerData = [
     { "title": "Programme", "url": "/masters/programme.html", "drop": [] },
-    { "title" : "Duos", "url": "/masters/duo.html", "drop": [] },
-    { "title": "Rôles EX", "url": "/masters/ex-role.html", "drop": [] },
-    { "title": "Rallye", "url": "/masters/rally/role-set.html", "drop": [
+    { "title" : "Duos", "url": "", "drop": [
+            { "title" : "Fiches", "url" : "/masters/duo.html" },
+            { "title": "Rôles EX", "url": "/masters/ex-role.html" }
+        ] },
+    { "title": "Rallye", "url": "", "drop": [
             { "title": "Sets de rôles", "url": "/masters/rally/role-set.html" }
         ] },
 ];
