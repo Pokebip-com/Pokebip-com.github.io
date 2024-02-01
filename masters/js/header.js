@@ -16,10 +16,12 @@ function getCookie(cname) {
 
 let body = document.getElementsByTagName("body")[0];
 let headerData = [
-    { "title": "Programme", "url": "/masters/programme.html" },
-    { "title" : "Duos", "url": "/masters/duo.html" },
-    { "title": "Rôles EX", "url": "/masters/ex-role.html" },
-    { "title": "Sets rôles Rallye", "url": "/masters/rally/role-set.html" },
+    { "title": "Programme", "url": "/masters/programme.html", "drop": [] },
+    { "title" : "Duos", "url": "/masters/duo.html", "drop": [] },
+    { "title": "Rôles EX", "url": "/masters/ex-role.html", "drop": [] },
+    { "title": "Rallye", "url": "/masters/rally/role-set.html", "drop": [
+            { "title": "Sets de rôles", "url": "/masters/rally/role-set.html" }
+        ] },
 ];
 
 let adminHeaderData = [
@@ -45,22 +47,69 @@ if(isAdminMode !== null) {
 
 let headerBody = document.createElement('div');
 headerBody.setAttribute('id', 'headerBody');
+headerBody.classList.add("navbar");
 
 let ul = document.createElement('ul');
 
-headerData.forEach(hd => {
-    var li = document.createElement('li');
+function createNavEntry(url, title) {
+    let a = document.createElement("a");
+    a.href = url;
+    a.innerText = title;
 
-    if(hd.url.split("/").pop() === currentUrl)
-        li.classList.add("active");
+    if(url.split("/").pop() === currentUrl) {
+        a.classList.add("active");
+    }
 
-    var a = document.createElement('a');
-    a.setAttribute("href", `${hd.url}`);
-    a.innerText = hd.title;
+    return a;
+}
 
-    li.appendChild(a);
-    ul.appendChild(li);
-});
+function getSubnav(data) {
+    if(data["drop"].length === 0) {
+        return createNavEntry(data.url, data.title);
+    }
 
-headerBody.appendChild(ul);
+    let subnav = document.createElement('div');
+    subnav.classList.add("subnav");
+
+    let subnavBtn = document.createElement("button");
+    subnavBtn.classList.add("subnavbtn")
+    subnavBtn.innerHTML = `${data["title"]} <span class="material-symbols-outlined">arrow_drop_down</span>`;
+    subnav.appendChild(subnavBtn);
+
+    let subnavContent = document.createElement('div');
+    subnavContent.classList.add("subnav-content");
+
+    for(let i = 0; i < data["drop"].length; i++) {
+        let a = createNavEntry(data["drop"][i].url, data["drop"][i].title);
+
+        if(a.classList.contains("active")) {
+            subnav.classList.add("active");
+        }
+
+        subnavContent.appendChild(a);
+    }
+
+    subnav.appendChild(subnavContent);
+
+    return subnav;
+
+}
+
+headerData.forEach(hd => headerBody.appendChild(getSubnav(hd))
+// {
+//     let li = document.createElement('li');
+//
+//     if(hd.url.split("/").pop() === currentUrl)
+//         li.classList.add("active");
+//
+//     var a = document.createElement('a');
+//     a.setAttribute("href", `${hd.url}`);
+//     a.innerText = hd.title;
+//
+//     li.appendChild(a);
+//     ul.appendChild(li);
+// }
+);
+
+// headerBody.appendChild(ul);
 body.appendChild(headerBody);

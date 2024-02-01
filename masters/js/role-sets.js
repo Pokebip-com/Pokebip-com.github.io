@@ -18,6 +18,9 @@ async function getData() {
 getData().then(() => {
     roleSetsDiv = document.getElementById("roleSetsDiv");
 
+    let mainUl = document.createElement("ul");
+    mainUl.classList.add("listh-bipcode");
+
     for(let set = 1;;set++) {
         let setData = brRoleBonusSet.filter(brrbs => brrbs.setId === set);
 
@@ -27,13 +30,41 @@ getData().then(() => {
 
         setData.sort(sd => sd.floor);
 
-        roleSetsDiv.innerHTML += `<h2>Set ${set}</h2>\n<ul>`;
+        let mainLi = document.createElement("li");
+        mainLi.classList.add("listh-no-style");
+        mainLi.style.width = "270px";
+        mainLi.style.textAlign = "left";
+
+        let table = document.createElement("table");
+        table.classList.add("bipcode");
+        table.style.width = "100%";
+
+        let h1 = document.createElement("h1");
+        h1.innerText = `SET ${set}`;
+        h1.style.margin = "0";
+        mainLi.appendChild(h1);
 
         for(let i = 0; i < setData.length; i++) {
-            roleSetsDiv.innerHTML += `\n<li><b>Étage ${setData[i].floor} :</b> ${role_name_standard[setData[i].roleA]} + ${role_name_standard[setData[i].roleB]}</li>`;
+            let tr = document.createElement("tr");
+
+            let floor = document.createElement("td");
+            floor.innerHTML = `<b>Étage ${setData[i].floor}</b>`;
+            tr.appendChild(floor);
+
+            let roleA = document.createElement("td");
+            roleA.innerText = `${role_name_standard[setData[i].roleA]}`;
+            tr.appendChild(roleA);
+
+            let roleB = document.createElement("td");
+            roleB.innerText = `${role_name_standard[setData[i].roleB]}`;
+            tr.appendChild(roleB);
+
+            table.appendChild(tr);
         }
 
-        roleSetsDiv.innerHTML += `\n</ul>\n`;
-
+        mainLi.appendChild(table);
+        mainUl.appendChild(mainLi);
     }
+
+    roleSetsDiv.appendChild(mainUl);
 });
