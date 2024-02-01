@@ -1,23 +1,18 @@
 let roleSetsDiv;
 
 let brRoleBonusSet;
-let roleTypeName;
 
 async function getData() {
     const [
         brRoleBonusSetResponse,
-        roleTypeNameResponse
 
     ] = await Promise.all([
         fetch("../data/proto/BattleRallyRoleBonusSet.json"),
-        fetch("../data/lsd/role_type_name_fr.json")
     ])
         .catch(error => console.log(error));
 
     const brRoleBonusSetJSON = await brRoleBonusSetResponse.json();
     brRoleBonusSet = brRoleBonusSetJSON.entries;
-
-    roleTypeName = await roleTypeNameResponse.json();
 }
 
 getData().then(() => {
@@ -35,7 +30,7 @@ getData().then(() => {
         roleSetsDiv.innerHTML += `<h2>Set ${set}</h2>\n<ul>`;
 
         for(let i = 0; i < setData.length; i++) {
-            roleSetsDiv.innerHTML += `\n<li><b>Étage ${setData[i].floor} :</b> ${roleTypeName[setData[i].roleA]} + ${roleTypeName[setData[i].roleB]}</li>`;
+            roleSetsDiv.innerHTML += `\n<li><b>Étage ${setData[i].floor} :</b> ${role_name_standard[setData[i].roleA]} + ${role_name_standard[setData[i].roleB]}</li>`;
         }
 
         roleSetsDiv.innerHTML += `\n</ul>\n`;
