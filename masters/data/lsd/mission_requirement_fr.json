@@ -162,5 +162,12 @@
     "override_title_5080_1_02": "Finissez la zone Duo-Sphères.",
     "override_title_5080_1_03": "Finissez le combat régional\nquotidien.",
     "override_title_5080_1_04": "Finissez un des combats du\nmatch spécial de Passio.",
-    "200": "Finissez le rallye de combats."
+    "200": "Finissez le rallye de combats.",
+    "188": "Sélectionnez une photo de profil.",
+    "189": "Utilisez le mode photo aléatoire.",
+    "190": "Sélectionnez des hashtags\nde profil.",
+    "191": "Sélectionnez des hashtags\nlibres.",
+    "192": "Sélectionnez un titre.",
+    "193": "Envoyez un like.",
+    "194": "Augmentez le niveau d'amitié\nde l'invité(e) désigné(e)\njusqu'à [Digit:7digits ]."
 }

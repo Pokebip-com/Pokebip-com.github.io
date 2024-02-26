@@ -142,5 +142,11 @@
     "event_6010_2W_MasterTicket_02": "승재 시즌 한정 확정 B서치",
     "event_6010_2W_SuperTicket_03": "무청 시즌 한정 출현율업 B서치",
     "event_6010_2W_MasterTicket_03": "무청 시즌 한정 확정 B서치",
-    "event_6010_3W_SuperTicket_02": "시즌 한정 출현율업 B서치"
+    "event_6010_3W_SuperTicket_02": "시즌 한정 출현율업 B서치",
+    "event_6020_2W_SuperTicket_05": "스페셜 코스튬 출현율업 B서치",
+    "event_6020_3W_SuperTicket_01": "찬석 스페셜 코스튬 출현율업 B서치",
+    "event_6020_3W_MasterTicket_01": "찬석 스페셜 코스튬 확정 B서치",
+    "event_6020_3W_SuperTicket_02": "주혜 스페셜 코스튬 출현율업 B서치",
+    "event_6020_3W_MasterTicket_02": "주혜 스페셜 코스튬 확정 B서치",
+    "event_6020_3W_MasterTicket_03": "티에르노 확정 버디즈서치"
 }

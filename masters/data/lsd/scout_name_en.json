@@ -142,5 +142,11 @@
     "event_6010_2W_MasterTicket_02": "Victor Seasonal\nGuaranteed Ticket Scout",
     "event_6010_2W_SuperTicket_03": "Candice Seasonal\nFeatured Ticket Scout",
     "event_6010_2W_MasterTicket_03": "Candice Seasonal\nGuaranteed Ticket Scout",
-    "event_6010_3W_SuperTicket_02": "Seasonal Featured\nTicket Scout"
+    "event_6010_3W_SuperTicket_02": "Seasonal Featured\nTicket Scout",
+    "event_6020_2W_SuperTicket_05": "Costume\nFeatured Ticket Scout",
+    "event_6020_3W_SuperTicket_01": "Adaman Costume\nFeatured Ticket Scout",
+    "event_6020_3W_MasterTicket_01": "Adaman Costume\nGuaranteed Ticket Scout",
+    "event_6020_3W_SuperTicket_02": "Irida Costume\nFeatured Ticket Scout",
+    "event_6020_3W_MasterTicket_02": "Irida Costume\nGuaranteed Ticket Scout",
+    "event_6020_3W_MasterTicket_03": "Tierno\nGuaranteed Ticket Scout"
 }

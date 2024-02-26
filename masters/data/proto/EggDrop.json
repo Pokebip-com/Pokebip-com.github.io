@@ -234,6 +234,10 @@
 { "eggDropId": 46010102, "rate": 0, "u3": "250", "u4": 46010101, "isRegular": true },
 { "eggDropId": 46010103, "rate": 0, "u3": "350", "u4": 46010101, "isRegular": true },
 { "eggDropId": 46010104, "rate": 0, "u3": "450", "u4": 46010101, "isRegular": true },
+{ "eggDropId": 46020101, "rate": 0, "u3": "250", "u4": 46020101, "isRegular": true },
+{ "eggDropId": 46020102, "rate": 0, "u3": "300", "u4": 46020101, "isRegular": true },
+{ "eggDropId": 46020103, "rate": 0, "u3": "400", "u4": 46020101, "isRegular": true },
+{ "eggDropId": 46020104, "rate": 0, "u3": "500", "u4": 46020101, "isRegular": true },
 { "eggDropId": 50101001, "rate": 0, "u3": "250", "u4": 50101006, "isRegular": true },
 { "eggDropId": 50101001, "rate": 0, "u3": "250", "u4": 50101001, "isRegular": true },
 { "eggDropId": 50101001, "rate": 0, "u3": "250", "u4": 50101003, "isRegular": true },
@@ -310,5 +314,6 @@
 { "eggDropId": 50601001, "rate": 0, "u3": "150", "u4": 50601002, "isRegular": true },
 { "eggDropId": 50601001, "rate": 0, "u3": "150", "u4": 50601004, "isRegular": true },
 { "eggDropId": 50601001, "rate": 0, "u3": "150", "u4": 50601005, "isRegular": true },
-{ "eggDropId": 50701001, "rate": 0, "u3": "150", "u4": 50701006, "isRegular": true }
+{ "eggDropId": 50701001, "rate": 0, "u3": "150", "u4": 50701006, "isRegular": true },
+{ "eggDropId": 50801001, "rate": 0, "u3": "150", "u4": 50801006, "isRegular": true }
 ]}

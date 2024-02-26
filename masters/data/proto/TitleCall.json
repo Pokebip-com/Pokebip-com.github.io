@@ -23,5 +23,7 @@
 { "scheduleId": "5110_4W_TitleCall", "u2": 0, "actorId": "ch0101_90_mei", "u4": "10" },
 { "scheduleId": "5120_2W_TitleCall", "u2": 0, "actorId": "ch0296_00_nanjamo", "u4": "11" },
 { "scheduleId": "5120_4W_TitleCall", "u2": 0, "actorId": "ch0294_00_grusha", "u4": "12" },
-{ "scheduleId": "5120_4W_TitleCall", "u2": 0, "actorId": "ch0296_00_nanjamo", "u4": "12" }
+{ "scheduleId": "5120_4W_TitleCall", "u2": 0, "actorId": "ch0296_00_nanjamo", "u4": "12" },
+{ "scheduleId": "6020_1W_TitleCall", "u2": 0, "actorId": "ch0133_90_shilver", "u4": "13" },
+{ "scheduleId": "6020_1W_TitleCall", "u2": 0, "actorId": "ch0295_00_omodaka", "u4": "13" }
 ]}

@@ -316,5 +316,15 @@
 { "itemExchangeGroupId": 2601070, "u2": 1, "scheduleId": "6010_4W_Event_GetTrainer_Exchange", "bannerId": 1601010, "u5": 0 },
 { "itemExchangeGroupId": 2601080, "u2": 1, "scheduleId": "6010_4W_Event_Gladion_Exchange", "bannerId": 1601011, "u5": 0 },
 { "itemExchangeGroupId": 2601090, "u2": 1, "scheduleId": "6010_4W_Event_Lillie_Exchange", "bannerId": 1601013, "u5": 0 },
-{ "itemExchangeGroupId": 2601100, "u2": 1, "scheduleId": "6010_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 }
+{ "itemExchangeGroupId": 2601100, "u2": 1, "scheduleId": "6010_4W_Event_PokemasDay_Exchange", "bannerId": 1310008, "u5": 0 },
+{ "itemExchangeGroupId": 2602010, "u2": 1, "scheduleId": "6020_1W_Event_omodaka_Exchange", "bannerId": 1602002, "u5": 0 },
+{ "itemExchangeGroupId": 2602020, "u2": 1, "scheduleId": "6020_1W_Event_SerenaKarumu_Exchange", "bannerId": 1602014, "u5": 0 },
+{ "itemExchangeGroupId": 2602030, "u2": 1, "scheduleId": "6020_2W_Event_spcosTanteiKaito1_Exchange", "bannerId": 1602010, "u5": 0 },
+{ "itemExchangeGroupId": 2602040, "u2": 1, "scheduleId": "6020_2W_Event_spcosTanteiKaito2_Exchange", "bannerId": 1602011, "u5": 0 },
+{ "itemExchangeGroupId": 2602050, "u2": 1, "scheduleId": "6020_3W_Event_spcosDance_Exchange", "bannerId": 1602012, "u5": 0 },
+{ "itemExchangeGroupId": 2602060, "u2": 1, "scheduleId": "6020_3W_Event_AKU_Exchange_1", "bannerId": 1506004, "u5": 0 },
+{ "itemExchangeGroupId": 2602070, "u2": 1, "scheduleId": "6020_3W_Event_AKU_Exchange_2", "bannerId": 1507001, "u5": 0 },
+{ "itemExchangeGroupId": 2602080, "u2": 1, "scheduleId": "6020_4W_Event_TsukushiStrike_Exchange_1", "bannerId": 1306011, "u5": 0 },
+{ "itemExchangeGroupId": 2602090, "u2": 1, "scheduleId": "6020_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 },
+{ "itemExchangeGroupId": 2602100, "u2": 1, "scheduleId": "6020_4W_Event_Atsuki_Exchange", "bannerId": 1602013, "u5": 0 }
 ]}

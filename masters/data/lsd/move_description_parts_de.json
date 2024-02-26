@@ -682,5 +682,18 @@
     "999255": "Erhöht zufällig einen der folgenden Statuswerte aller verbündeten Gefährten um [Digit:1digit Idx=\"1\" ]: Angriff, Verteidigung, Spezial-Angriff, Spezial-Verteidigung, Initiative, Genauigkeit oder Fluchtwert.",
     "999253": "Erhöht den [Name:ReferencedMessageTag Idx=\"4\" ] des Anwenders um [Digit:1digit Idx=\"5\" ].",
     "999252": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders um [Digit:1digit Idx=\"2\" ].",
+    "999250": "Befreit die Anwender-Seite von einem Schadensfeld.",
+    "999249": "Befreit den Anwender von Umschlingung.",
+    "999248": "Wenn die Gefährten deines Teams eine Gefährtenattacke [Digit:1digit ]-mal einsetzen.",
+    "999247": "Wenn der Anwender an Verbrennungen leidet.",
+    "999246": "Wenn der Anwender nicht an Verbrennungen leidet.",
+    "999245": "Je niedriger der verbleibende Anteil der KP-Leiste des Anwenders ist, desto mehr wird die Stärke dieses Angriffs erhöht.",
+    "999244": "Wenn beliebige Verbündete Attacken insgesamt [Digit:1digit ]-mal einsetzen.",
+    "999243": "Die Stärke dieses Angriffs wird gegen Ziele verdoppelt, die an Statusproblemen leiden, zurückgeschreckt, verwirrt oder in einer Umschlingung gefangen sind.",
+    "999242": "Erzeugt Regen.",
+    "999241": "Löst bei Sandstürmen zusätzlich alle folgenden Effekte aus:",
+    "999240": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] eines Verbündeten um [Digit:1digit Idx=\"2\" ].",
+    "999239": "Löst bei Despotar bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Despotar aus.",
+    "999238": "Die Stärke dieses Angriffs steigt, wenn Wetterbedingungen, ein Feld oder ein Fokus aktiv sind.",
     "999237": "Erhöht den [Name:ReferencedMessageTag Idx=\"2\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"3\" ]."
 }

@@ -682,5 +682,18 @@
     "999255": "Aumenta a caso di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ] una delle seguenti statistiche di tutte le Unità alleate: Attacco, Difesa, Attacco Speciale, Difesa Speciale, Velocità, precisione o elusione.",
     "999253": "Aumenta l'[Name:ReferencedMessageTag Idx=\"4\" ] di chi la usa di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ].",
     "999252": "Aumenta la Difesa e la Difesa Speciale di chi la usa di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
+    "999250": "Rimuove un Campodanno dal campo alleato.",
+    "999249": "Chi la usa guarisce dall'imprigionamento.",
+    "999248": "Quando l'Unità nella tua squadra sferra un'Unimossa [Digit:1digit ] [IT:Qty S=\"volta\" P=\"volte\" ].",
+    "999247": "Quando chi la usa è scottato.",
+    "999246": "Quando chi la usa non è scottato.",
+    "999245": "Aumenta la potenza di questo attacco in proporzione inversa rispetto alla percentuale di PS residui di chi la usa.",
+    "999244": "Quando qualsiasi alleato sferra mosse per un totale di [Digit:1digit ] [IT:Qty S=\"volta\" P=\"volte\" ].",
+    "999243": "Raddoppia la potenza di questo attacco contro i bersagli che sono affetti da problemi di stato, tentennano, sono confusi o sono imprigionati.",
+    "999242": "Provoca una forte pioggia.",
+    "999241": "Inoltre, conferisce tutti gli effetti seguenti durante le tempeste di sabbia:",
+    "999240": "Aumenta l'[Name:ReferencedMessageTag Idx=\"1\" ] di un alleato di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
+    "999239": "Permette a Tyranitar di megaevolversi. L'effetto svanisce al termine della lotta.",
+    "999238": "Questo attacco aumenta di potenza quando ci sono condizioni atmosferiche attive o se il campo di lotta o una zona sono stati trasformati.",
     "999237": "Aumenta l'[Name:ReferencedMessageTag Idx=\"2\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ]."
 }

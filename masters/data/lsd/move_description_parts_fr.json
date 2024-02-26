@@ -682,5 +682,18 @@
     "999255": "Augmente aléatoirement une des stats suivantes des Duos alliés de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] : Attaque, Défense, Atq. Spé., Déf. Spé., Vitesse, Précision ou Esquive.",
     "999253": "Augmente l'[Name:ReferencedMessageTag Idx=\"4\" ] du lanceur de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ].",
     "999252": "Augmente la Défense et la Déf. Spé. du lanceur de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ].",
+    "999250": "Annule une Aire Dégâts du côté allié.",
+    "999249": "Soigne l'altération Ligotage du lanceur.",
+    "999248": "Quand le Duo de votre équipe utilise une capacité Duo [Digit:1digit ] fois.",
+    "999247": "Quand le lanceur est brûlé.",
+    "999246": "Quand le lanceur n'est pas brûlé.",
+    "999245": "Plus les PV restants du lanceur sont bas, plus cette attaque est puissante.",
+    "999244": "Quand des alliés utilisent des capacités un total de [Digit:1digit ] fois.",
+    "999243": "Cette attaque est deux fois plus puissante contre les cibles qui souffrent d'une altération de statut, qui sont apeurées, confuses ou ligotées.",
+    "999242": "Invoque la pluie.",
+    "999241": "Tous les effets suivants s'appliquent également pendant une tempête de sable :",
+    "999240": "Augmente l'[Name:ReferencedMessageTag Idx=\"1\" ] d'un allié de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ].",
+    "999239": "Permet à Tyranocif de devenir Méga-Tyranocif jusqu'à la fin du combat.",
+    "999238": "Augmente la puissance de l'attaque quand les conditions météo, un champ ou une zone sont actifs.",
     "999237": "Augmente l'[Name:ReferencedMessageTag Idx=\"2\" ] de tous les Duos alliés de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ]."
 }

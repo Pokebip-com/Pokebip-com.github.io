@@ -682,5 +682,18 @@
     "999255": "Aumenta en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ] una de las siguientes características de todos los compis aliados al azar: Ataque, Defensa, Ataque Especial, Defensa Especial, Velocidad, Precisión o Evasión.",
     "999253": "Aumenta el [Name:ReferencedMessageTag Idx=\"4\" ] del usuario en [Digit:1digit Idx=\"5\" ] [ES:Qty Ref=\"5\" S=\"nivel\" P=\"niveles\" ].",
     "999252": "Aumenta la Defensa y la Defensa Especial del usuario en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
+    "999250": "Elimina un campo daño del bando del usuario.",
+    "999249": "Libra de las ataduras al usuario.",
+    "999248": "Cuando los compis de tu equipo usan un movimiento compi [Digit:1digit ] [ES:Qty S=\"vez\" P=\"veces\" ].",
+    "999247": "Cuando el usuario está quemado.",
+    "999246": "Cuando el usuario no está quemado.",
+    "999245": "Cuantos menos PS tenga el usuario, más aumenta la potencia de este ataque.",
+    "999244": "Cuando algún aliado usa movimientos un total de [Digit:1digit ] [ES:Qty S=\"vez\" P=\"veces\" ].",
+    "999243": "Duplica la potencia de este ataque contra objetivos que sufren problemas de estado, están confundidos, bajo ataduras o han retrocedido.",
+    "999242": "Genera una fuerte lluvia.",
+    "999241": "Además, otorga todos los efectos siguientes cuando hay una tormenta de arena:",
+    "999240": "Aumenta el [Name:ReferencedMessageTag Idx=\"1\" ] de un aliado en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
+    "999239": "Evoluciona a Mega-Tyranitar. Vuelve a la normalidad tras terminar el combate.",
+    "999238": "La potencia de este ataque aumenta cuando hay efectos de cambios atmosféricos, campo o zona activos.",
     "999237": "Aumenta el [Name:ReferencedMessageTag Idx=\"2\" ] de todos los compis aliados en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ]."
 }

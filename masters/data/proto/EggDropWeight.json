@@ -348,6 +348,7 @@
 { "eggDropId": 45110103, "itemId": "850051100003", "rate": 62 },
 { "eggDropId": 45110104, "itemId": "850051100003", "rate": 100 },
 { "eggDropId": 46010101, "itemId": "850060100001", "rate": 100 },
+{ "eggDropId": 46020101, "itemId": "850060200001", "rate": 100 },
 { "eggDropId": 50101001, "itemId": "850000000003", "rate": 100 },
 { "eggDropId": 50101002, "itemId": "850000000012", "rate": 100 },
 { "eggDropId": 50101003, "itemId": "850000000022", "rate": 100 },
@@ -440,5 +441,6 @@
 { "eggDropId": 50601004, "itemId": "850000000032", "rate": 100 },
 { "eggDropId": 50601005, "itemId": "850040100009", "rate": 100 },
 { "eggDropId": 50601006, "itemId": "850050100004", "rate": 100 },
-{ "eggDropId": 50701006, "itemId": "850050100004", "rate": 100 }
+{ "eggDropId": 50701006, "itemId": "850050100004", "rate": 100 },
+{ "eggDropId": 50801006, "itemId": "850050100004", "rate": 100 }
 ]}

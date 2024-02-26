@@ -682,5 +682,18 @@
     "999255": "Raises one of the following stats of all allied sync pairs by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] at random: Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness.",
     "999253": "Increases the user’s [Name:ReferencedMessageTag Idx=\"4\" ] by [Digit:1digit Idx=\"5\" ] [EN:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ].",
     "999252": "Raises the user’s Defense and Sp. Def by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
+    "999250": "Removes a damage field from the allied field of play.",
+    "999249": "Removes the trapped condition from the user.",
+    "999248": "When your team’s sync pair uses a sync move [Digit:1digit ] [EN:Qty S=\"time\" P=\"times\" ].",
+    "999247": "When the user is burned.",
+    "999246": "When the user is not burned.",
+    "999245": "The smaller the user’s percentage of remaining HP, the greater the power of this attack.",
+    "999244": "When any allies use moves a total of [Digit:1digit ] [EN:Qty S=\"time\" P=\"times\" ].",
+    "999243": "This attack’s power is doubled against targets that are affected by a status condition, flinching, confused, or trapped.",
+    "999242": "Makes the weather rainy.",
+    "999241": "In addition, grants all of the following effects during a sandstorm:",
+    "999240": "Increases the [Name:ReferencedMessageTag Idx=\"1\" ] of an ally by [Digit:1digit Idx=\"2\" ] [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
+    "999239": "Become Mega Tyranitar until the end of battle.",
+    "999238": "This attack’s power increases when weather conditions, a terrain, or a zone are in effect.",
     "999237": "Increases the [Name:ReferencedMessageTag Idx=\"2\" ] of all allied sync pairs by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ]."
 }

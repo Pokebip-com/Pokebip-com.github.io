@@ -142,5 +142,11 @@
     "event_6010_2W_MasterTicket_02": "Saisonale Garantierte\nG-Suche: Victor",
     "event_6010_2W_SuperTicket_03": "Saisonale Fokus-\nG-Suche: Frida",
     "event_6010_2W_MasterTicket_03": "Saisonale Garantierte\nG-Suche: Frida",
-    "event_6010_3W_SuperTicket_02": "Saisonale\nFokus-G-Suche"
+    "event_6010_3W_SuperTicket_02": "Saisonale\nFokus-G-Suche",
+    "event_6020_2W_SuperTicket_05": "Fokus-\nKostüm-G-Suche",
+    "event_6020_3W_SuperTicket_01": "Fokus-G-Suche:\nDiam (Kostüm)",
+    "event_6020_3W_MasterTicket_01": "Garantierte G-Suche:\nDiam (Kostüm)",
+    "event_6020_3W_SuperTicket_02": "Fokus-G-Suche:\nPerla (Kostüm)",
+    "event_6020_3W_MasterTicket_02": "Garantierte G-Suche:\nPerla (Kostüm)",
+    "event_6020_3W_MasterTicket_03": "Garantierte G-Suche:\nTierno"
 }

@@ -157,6 +157,7 @@
     "20026800": "Panekon baut seinen schützenden Kokon, indem es seinen\nKörper mit feiner Seide einwickelt, die aus seinem Mund\naustritt. Wenn sein Körper mit Seide bedeckt ist, wird\ndiese hart. Im Kokon wartet es auf seine Entwicklung.",
     "20026900": "Pudox wird instinktiv vom Licht angezogen. In hell\nerleuchteten Städten kann man Scharen dieser Pokémon\ndabei beobachten, wie sie großen Schaden anrichten,\nindem sie die Blätter von Bäumen abfressen.",
     "20027100": "Lombrero liebt die Nacht und wird bei Einbruch\nder Dunkelheit aktiv. Es spielt auch gerne Streiche.\nWenn es Angler sieht, zieht es unter Wasser an ihren\nAngelschnüren und erfreut sich an ihrer Entrüstung.",
+    "20027201": "Kappalores fängt sofort zu tanzen an, wenn es\nstimmungsvolle, feierliche Musik vernimmt.\nDieses Pokémon erscheint angeblich, wenn es\nKinder auf Wanderausflügen singen hört.",
     "20027400": "Blanas lebt in dichten Wäldern. Manchmal wagt es sich\naus dem Wald heraus, um Menschen zu erschrecken.\nDieses Pokémon mag es überhaupt nicht, wenn man\nseine lange Nase zwickt.",
     "20027700": "Dieses Pokémon taucht in einem steilen Winkel ab, sobald\nes Beute wahrgenommen hat. Es packt seine Beute mit\nseinen Krallen und lässt sie nicht mehr entkommen.",
     "20027900": "In seinem riesigen Schnabel transportiert es kleine\nPokémon. Niemand weiß, wohin es sie bringt.",
@@ -187,6 +188,7 @@
     "20033600": "Vipitis lebt seit Generationen in Fehde mit Sengo.\nDie Narben auf seinem Körper sind Zeugen grausamer\nKämpfe. Dieses Pokémon greift seine Gegner mit seinem\nscharfkantigen Schweif an.",
     "20033700": "Lunastein wurde in der Nähe eines Meteoritenkraters\nentdeckt. Daher nehmen einige Menschen an, dass dieses\nPokémon aus dem Weltall stammt. Diese Theorie konnte\nallerdings bisher noch nicht belegt werden.",
     "20033800": "Sonnfel ist eine neue Pokémon-Art, die angeblich aus\ndem Weltall kam. Es gleitet durch die Luft und bewegt\nsich leise. Im Kampf setzt dieses Pokémon sehr helles\nLicht ein.",
+    "20034200": "Es ist ungestüm und liebt Kämpfe, doch sobald es seine\nScheren verliert, wird es mutlos. Bis sie nachgewachsen\nsind, zittert es vor Angst.",
     "20034600": "Es lebte für gewöhnlich an seichten Stellen im Meer.\nBei Ebbe kam es an Land, um nach Beute zu suchen.",
     "20035001": "Es soll das schönste Pokémon sein, aber Trainer,\ndie Barschwa trainiert haben, weil sie es mögen,\nsollen nicht so begeistert sein.",
     "20035400": "Einst als Plüschpuppe weggeworfen, ist dieses hasserfüllte\nPokémon auf der Suche nach dem Täter, um sich an ihm\nzu rächen.",
@@ -276,6 +278,7 @@
     "20050900": "Es lenkt die Menschen durch sein süßes Verhalten ab,\num sie zu bestehlen. Ist es wütend, kratzt es gern mal.",
     "20051000": "Sein anmutiges Auftreten verdankt es den Muskeln, die es\nentwickelt hat. Es prescht lautlos durch die Nacht.",
     "20051800": "Der Dunst, der aus seiner Stirn tritt, enthält die Träume\nunzähliger Menschen und Pokémon.",
+    "20052101": "Männchen schrecken Gegner ab, indem sie ihren\nKopfschmuck schütteln. Weibchen verfügen über\nbessere Flugfertigkeiten.",
     "20052300": "Ein stürmischer Geselle. Wenn es wütend ist, feuert es\nüber seine Mähne in alle Richtungen Stromsalven ab.",
     "20052400": "Das sechseckige Loch dient ihm als Ohr. Tief darin liegt\nsein Energiekern versteckt. Wenn jemand hineingreift,\nwird es wütend.",
     "20052500": "Energie, die aus seinem Körper austrat, hat sich\nzu orangefarbenen, harten Kristallen verfestigt.\nSie können sogar Diamanten zersplittern.",
@@ -527,5 +530,8 @@
     "2008691353": "Es macht einem Trainer, dem es vertraut, mit Beeren samt\nSahnedekoration eine Freude.",
     "2008691565": "Es macht einem Trainer, dem es vertraut, mit Beeren samt\nSahnedekoration eine Freude.",
     "2008691676": "Es macht einem Trainer, dem es vertraut, mit Beeren samt\nSahnedekoration eine Freude.",
-    "2008691444": "Es macht einem Trainer, dem es vertraut, mit Beeren samt\nSahnedekoration eine Freude."
+    "2008691444": "Es macht einem Trainer, dem es vertraut, mit Beeren samt\nSahnedekoration eine Freude.",
+    "2009700000": "Erkennt es Gefahr, öffnet es seine kristallenen\nBlütenblätter, um aus seinem kegelförmigen Körper\nStrahlen abzufeuern.",
+    "2009010000": "Vermutlich ist das sumpfige Gelände Hisuis der Grund für\nseine robuste Statur sowie die neu errungene Fähigkeit,\nTorf nach Belieben manipulieren zu können.",
+    "2005710041": "Durch die zerzauste weiße Mähne gleicht es Gevatter Tod.\nGetrieben von bitterem Groll, von dem es selbst zerfressen\nwird, streckt es Feinde ohne Rücksicht auf das eigene\nLeben nieder."
 }
