@@ -3,7 +3,7 @@ body {
 }
 
 #contentDiv {
-    margin-top: 70px;
+    margin: 70px auto 0;
     padding: 20px;
 }
 
