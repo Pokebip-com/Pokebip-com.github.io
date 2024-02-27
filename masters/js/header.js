@@ -27,7 +27,7 @@ let headerData = [
 ];
 
 let adminHeaderData = [
-    { "title" : "Plateaux Duo-Gemme", "url": "/masters/sync-grids.html" },
+    { "title" : "Plateaux Duo-Gemme", "url": "/masters/sync-grids.html", "drop": [] },
 ];
 
 const currentUrl = window.location.pathname.split("/").pop();
@@ -97,21 +97,6 @@ function getSubnav(data) {
 
 }
 
-headerData.forEach(hd => headerBody.appendChild(getSubnav(hd))
-// {
-//     let li = document.createElement('li');
-//
-//     if(hd.url.split("/").pop() === currentUrl)
-//         li.classList.add("active");
-//
-//     var a = document.createElement('a');
-//     a.setAttribute("href", `${hd.url}`);
-//     a.innerText = hd.title;
-//
-//     li.appendChild(a);
-//     ul.appendChild(li);
-// }
-);
+headerData.forEach(hd => headerBody.appendChild(getSubnav(hd)));
 
-// headerBody.appendChild(ul);
 body.appendChild(headerBody);

@@ -35,7 +35,7 @@ let syncPairDiv;
 let toolsDiv;
 
 let syncLevel = 5;
-const maxEnergy = 60;
+let maxEnergy = 60;
 
 async function getData() {
     const [
@@ -1259,6 +1259,68 @@ function setGridPicker(ap, gridPickerDiv) {
 
     capaCell.appendChild(levelContainer);
     tr.appendChild(capaCell);
+    controlTbl.appendChild(tr);
+
+    tr = document.createElement("tr");
+    let energyLimitTitle = document.createElement("th");
+    energyLimitTitle.innerText = "Niveau d'énergie max";
+    energyLimitTitle.colSpan = 2;
+
+    tr.appendChild(energyLimitTitle);
+    controlTbl.appendChild(tr);
+
+    tr = document.createElement("tr");
+    let energyLimitCell = document.createElement("td");
+    energyLimitCell.colSpan = 2;
+
+    let energyContainer = document.createElement("div");
+    energyContainer.classList.add("radio-container");
+
+    let radioTileGroup = document.createElement("div");
+    radioTileGroup.classList.add("radio-tile-group");
+
+    for(let i = 0; i < 6; i++) {
+        let inputContainer = document.createElement("div");
+        inputContainer.classList.add("input-container");
+
+        let input = document.createElement("input");
+        input.id = `energy-${60+(i*2)}`;
+        input.classList.add("radio-button");
+        input.type = "radio";
+        input.name = "energy-radio";
+
+        input.addEventListener("click", () => {
+            let oldMax = maxEnergy;
+            maxEnergy = 60+(i*2);
+
+            let energyCell = document.getElementById("energyCell");
+            energyCell.innerText = (parseInt(energyCell.innerText) + maxEnergy - oldMax).toString();
+        })
+
+        if(i === 0) {
+            input.checked = true;
+        }
+
+        let radioTile = document.createElement("div");
+        radioTile.classList.add("radio-tile");
+
+        let radioLabel = document.createElement("label");
+        radioLabel.setAttribute("for", `energy-${60+(i*2)}`);
+        radioLabel.classList.add("radio-tile-label");
+        radioLabel.innerText = `${60+(i*2)}`
+
+        radioTile.appendChild(radioLabel);
+
+        inputContainer.appendChild(input);
+        inputContainer.appendChild(radioTile);
+
+        radioTileGroup.appendChild(inputContainer);
+    }
+
+    energyContainer.appendChild(radioTileGroup);
+
+    energyLimitCell.appendChild(energyContainer);
+    tr.appendChild(energyLimitCell);
     controlTbl.appendChild(tr);
 
     tr = document.createElement("tr");
