@@ -1299,6 +1299,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
         if(i === 0) {
             input.checked = true;
+            maxEnergy = 60;
         }
 
         let radioTile = document.createElement("div");
