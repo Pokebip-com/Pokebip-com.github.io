@@ -18,6 +18,7 @@ let legendaryBattleIds;
 let salonGuestsUpdate;
 let mainStoryUpdate;
 let trainingAreaUpdate;
+let trainerRarityupBonusUpdate;
 
 let scout;
 let scoutPickup;
@@ -50,6 +51,7 @@ let trainerExRole;
 let trainer;
 let trainerInfosArray;
 let trainerNames;
+let trainerRarityupBonus;
 let trainerVerboseNames;
 
 let treatedEvents;
@@ -99,6 +101,7 @@ async function getData() {
         trainerResponse,
         trainerBaseResponse,
         trainerExRoleResponse,
+        trainerRarityupBonusResponse,
         villaQuestGroupResponse,
         bannerTextResponse,
         eventNameResponse,
@@ -137,6 +140,7 @@ async function getData() {
         fetch("./data/proto/Trainer.json"),
         fetch("./data/proto/TrainerBase.json"),
         fetch("./data/proto/TrainerExRole.json"),
+        fetch("./data/proto/TrainerRarityupBonus.json"),
         fetch("./data/proto/VillaQuestGroup.json"),
         fetch("./data/lsd/banner_text_fr.json"),
         fetch("./data/lsd/event_name_fr.json"),
@@ -192,6 +196,8 @@ async function getData() {
 
     legendQuestGroup = getBySpecificID((await legendQuestGroupResponse.json()).entries, "questGroupId");
     legendQuestGroupSchedule = getBySpecificID((await legendQuestGroupScheduleResponse.json()).entries, "scheduleId");
+
+    trainerRarityupBonus = (await trainerRarityupBonusResponse.json()).entries;
 
     schedule = await scheduleResponse.json();
     getSchedule();
@@ -267,6 +273,7 @@ function getSchedule() {
     mainStoryUpdate = [...new Set(storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
     trainingAreaUpdate = [...new Set(storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
     championBattleAllPeriod = [...new Set(schedule.entries.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
+    trainerRarityupBonusUpdate = [...new Set(trainerRarityupBonus.map(trb => trb.scheduleId))];
 
 
     schedule = schedule.entries.filter(s =>
@@ -275,6 +282,7 @@ function getSchedule() {
         || legendaryBattleIds.includes(s.scheduleId)
         || mainStoryUpdate.includes(s.scheduleId)
         || trainingAreaUpdate.includes(s.scheduleId)
+        || trainerRarityupBonusUpdate.includes(s.scheduleId)
         || salonGuestsUpdate.includes(s.scheduleId)
         || s.scheduleId.startsWith("chara_")
         || s.scheduleId.includes("_Shop_otoku")
@@ -732,7 +740,9 @@ function printEvents(schedule) {
     });
 }
 
-async function printPairChanges(scheduleId) {
+async function printPairChanges(sched) {
+
+    const scheduleId = sched.scheduleId;
 
     // Ajout de cases dans le plateau
     let panelChanges = [...new Set(abilityPanel.filter(ap => ap.scheduleId === scheduleId).map(ap => ap.trainerId))].map(tid => { return {"trainerId" : tid, "type": "panel", "text" : "Ajout de cases dans le plateau duo-gemme."}; });
@@ -743,10 +753,29 @@ async function printPairChanges(scheduleId) {
     // Sortie du 6EX
     let trainerExRelease = [...new Set(trainer.filter(ti => ti.exScheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "ex", "text" : "Ajout du 6★ EX."}; });
 
+    // Musique offerte au 6EX
+    const musicReleases = schedule.filter(s => trainerRarityupBonusUpdate.includes(s.scheduleId) && s.startDate === sched.startDate);
+    let trainerExMusicRelease = [...new Set(trainerRarityupBonus.filter(trb => musicReleases.map(mr => mr.scheduleId).includes(trb.scheduleId)).map(trb => {
+        let itSet = itemSet.find(is => is.itemSetId === trb.itemSetId);
+        if(!itSet)
+            return null;
+
+        let music;
+
+        for(let i = 1; i <= 10; i++) {
+            if(itSet[`item${i}`] === "0" || itSet[`item${i}Quantity`] === 0)
+                continue;
+
+            music = jukeboxMusicName[itSet[`item${i}`]];
+            break;
+        }
+        return { "trainerId" : trb.trainerId, "type" : "exMusic", "text" : `Musique au passage en 6★ EX : <i>${music}</i>.` };
+    }))];
+
     // Sortie du Rôle EX
     let ExRoleRelease = [...new Set(trainerExRole.filter(ti => ti.scheduleId === scheduleId).map(ti => { return {"trainerId" : ti.trainerId, "role" : role_names[ti.role] }; }))].map(exRole => { return {"trainerId" : exRole.trainerId, "type" : "exRole", "text" : `Ajout du Rôle EX (${exRole.role}).`}; });
 
-    let changes = trainerRelease.concat(trainerExRelease, ExRoleRelease, panelChanges).sort((a, b) => getTrainerName(a.trainerId).localeCompare(getTrainerName(b.trainerId)));
+    let changes = trainerRelease.concat(trainerExRelease, trainerExMusicRelease, ExRoleRelease, panelChanges).sort((a, b) => getTrainerName(a.trainerId).localeCompare(getTrainerName(b.trainerId)));
 
     let lastTID = "";
 
@@ -1114,7 +1143,7 @@ function setVersionInfos(id) {
                         scheduleDiv.innerHTML += "<h2>Ajouts/Modif. de Duos</h2>";
                         charaFlag = false;
                     }
-                    printPairChanges(sched.scheduleId);
+                    printPairChanges(sched);
                     break;
 
                 case "music":

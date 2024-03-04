@@ -129,7 +129,13 @@ function setMainUL() {
             break;
         }
 
-        setData.sort(sd => sd.floor);
+        setData.sort((a, b) => {
+            if(a.floor < b.floor)
+                return -1;
+            if(a.floor > b.floor)
+                return 1;
+            return 0;
+        });
 
         let mainLi = document.createElement("li");
         mainLi.classList.add("listh-no-style");
