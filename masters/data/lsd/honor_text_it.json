@@ -4,9 +4,9 @@
     "100010001": "Unità alle prime armi",
     "100010002": "Unità provetta",
     "100010003": "Unità veterana",
-    "100010004": "Un anno a Pasio",
-    "100010005": "Due anni a Pasio",
-    "100010006": "Tre anni a Pasio",
+    "100010004": "Nuovo arrivo a Pasio",
+    "100010005": "Un anno a Pasio",
+    "100010006": "Due anni a Pasio",
     "100010007": "Sulla via della vittoria",
     "100010008": "Ingresso nella Sala d'Onore",
     "100010009": "Fama leggendaria",
@@ -70,8 +70,8 @@
     "100030051": "Ricerca sulle piume",
     "100030052": "Lotte a non finire",
     "secret_aquired": "Non puoi visualizzare i requisiti\nper sbloccare i titoli segreti.",
-    "100010017": "Quattro anni a Pasio",
-    "100010018": "Cinque anni a Pasio",
+    "100010017": "Tre anni a Pasio",
+    "100010018": "Quattro anni a Pasio",
     "default_aquired": "Hai già sbloccato questo titolo.",
     "900010003": "Fan di Vacanziera",
     "900010004": "Superfan di Vacanziera",
@@ -83,5 +83,6 @@
     "900010010": "Superfan di Poké Bimba",
     "900010011": "Fan di Poké Bimbo",
     "900010012": "Superfan di Poké Bimbo",
-    "100020002": "I maestri del tipo Psico"
+    "100020002": "I maestri del tipo Psico",
+    "100020003": "Sfida Leggendaria,\n[Digit:6digits ]ª edizione"
 }

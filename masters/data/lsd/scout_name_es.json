@@ -148,5 +148,10 @@
     "event_6020_3W_MasterTicket_01": "Reclutamiento garantizado\nde trajes esp.: Adamas",
     "event_6020_3W_SuperTicket_02": "Reclutamiento favorable\nde trajes esp.: Nákara",
     "event_6020_3W_MasterTicket_02": "Reclutamiento garantizado\nde trajes esp.: Nákara",
-    "event_6020_3W_MasterTicket_03": "Reclutamiento\ngarantizado: Beni"
+    "event_6020_3W_MasterTicket_03": "Reclutamiento\ngarantizado: Beni",
+    "event_6030_2W_SuperTicket_01": "Reclutamiento favorable\nde trajes esp.: Israel",
+    "event_6030_2W_MasterTicket_01": "Reclutamiento garantizado\nde trajes esp.: Israel",
+    "event_6030_2W_SuperTicket_02": "Reclutamiento favorable\nde trajes esp.: Selene",
+    "event_6030_2W_MasterTicket_02": "Reclutamiento garantizado\nde trajes esp.: Selene",
+    "event_6030_3W_SuperTicket_01": "Reclutamiento favorable\nde compis varios"
 }

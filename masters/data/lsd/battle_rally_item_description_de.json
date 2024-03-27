@@ -21,7 +21,7 @@
     "112": "Füllt die Attackenleiste deines Teams um\n2 Segmente auf, wenn die Attacke des\nAnwenders Erfolg hat.",
     "113": "Stellt zirka 6 % der maximalen KP\nvon Gefährten wieder her, wenn\nihre Attacke Erfolg hat.",
     "114": "Erhöht den Angriff, die Verteidigung, den\nSp.-Ang., die Sp.-Vert., die Initiative, die\nGenauigkeit oder den Fluchtwert von\nGefährten um 1, wenn ihre Attacke\nErfolg hat.",
-    "115": "Senkt den Angriff, die Verteidigung, den\nSp.-Ang., die Sp.-Vert., die Initiative, die\nGenauigkeit oder den Fluchtwert des Gegners\num 1, wenn die Attacke des Anwenders Erfolg\nhat.",
+    "115": "Senkt den Angriff, die Verteidigung, den\nSp.-Ang., die Sp.-Vert., die Initiative, die\nGenauigkeit oder den Fluchtwert des Gegners\num 1, wenn die Attacke des Anwenders, die\nauf einen Gegner abzielt, Erfolg hat.",
     "116": "Erhöht den Effekt Folge-Phys.-Attacke↑ von\nGefährten um 1, wenn ihre Attacke Erfolg hat.",
     "117": "Erhöht den Effekt Folge-Sp.-Attacke↑ von\nGefährten um 1, wenn ihre Attacke Erfolg hat.",
     "118": "Verringert den durch physische Angriffe\nerlittenen Schaden um 50 %.",

@@ -4,9 +4,9 @@
     "100010001": "Compis noveles",
     "100010002": "Compis capaces",
     "100010003": "Compis ilustres",
-    "100010004": "1 año en\nPokémon Masters EX",
-    "100010005": "2 años en\nPokémon Masters EX",
-    "100010006": "3 años en\nPokémon Masters EX",
+    "100010004": "Primer año en\nPokémon Masters EX",
+    "100010005": "Segundo año en\nPokémon Masters EX",
+    "100010006": "Tercer año en\nPokémon Masters EX",
     "100010007": "Senda a la victoria",
     "100010008": "Hall de la Fama",
     "100010009": "Contrincante de leyenda",
@@ -70,8 +70,8 @@
     "100030051": "Estudiaplumas",
     "100030052": "Innumerables combates",
     "secret_aquired": "Los requisitos para obtener los\ntítulos secretos no se muestran.",
-    "100010017": "4 años en\nPokémon Masters EX",
-    "100010018": "5 años en\nPokémon Masters EX",
+    "100010017": "Cuarto año en\nPokémon Masters EX",
+    "100010018": "Quinto año en\nPokémon Masters EX",
     "default_aquired": "Ya tienes este título.",
     "900010003": "Fan de las Veraneantes",
     "900010004": "Superfán de las Veraneantes",
@@ -83,5 +83,6 @@
     "900010010": "Superfán de las Pokéchicas",
     "900010011": "Fan de los Pokéchicos",
     "900010012": "Superfán de los Pokéchicos",
-    "100020002": "Maestría del tipo Psíquico"
+    "100020002": "Maestría del tipo Psíquico",
+    "100020003": "N.º [Digit:6digits ] en la Aventura Legendaria"
 }

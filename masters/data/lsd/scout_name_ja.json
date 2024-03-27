@@ -148,5 +148,10 @@
     "event_6020_3W_MasterTicket_01": "セキ スペコス 確定Ｂサーチ",
     "event_6020_3W_SuperTicket_02": "カイ スペコス 出現率アップＢサーチ",
     "event_6020_3W_MasterTicket_02": "カイ スペコス 確定Ｂサーチ",
-    "event_6020_3W_MasterTicket_03": "ティエルノ確定 バディーズサーチ"
+    "event_6020_3W_MasterTicket_03": "ティエルノ確定 バディーズサーチ",
+    "event_6030_2W_SuperTicket_01": "ジュン スペコス 出現率アップＢサーチ",
+    "event_6030_2W_MasterTicket_01": "ジュン スペコス 確定Ｂサーチ",
+    "event_6030_2W_SuperTicket_02": "ミヅキ スペコス 出現率アップＢサーチ",
+    "event_6030_2W_MasterTicket_02": "ミヅキ スペコス 確定Ｂサーチ",
+    "event_6030_3W_SuperTicket_01": "バラエティ 出現率アップＢサーチ"
 }

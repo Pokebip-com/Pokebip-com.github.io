@@ -21,7 +21,7 @@
     "112": "Quand l'équipe utilise avec succès\nune capacité, la Jauge Capacité\nse remplit de 2 segments.",
     "113": "Restaure environ 6 % des PV\nmaximums du Duo quand il utilise\navec succès une capacité.",
     "114": "Quand un Duo utilise avec succès\nune capacité, l'une des stats suivantes\nest augmentée d'un rang : Attaque,\nDéfense, Atq. Spé., Déf. Spé., Vitesse,\nPrécision ou Esquive.",
-    "115": "Quand l'équipe utilise avec succès\nune capacité, l'une des stats suivantes\nde l'ennemi est baissée d'un rang :\nAttaque,  Défense, Atq. Spé., Déf. Spé.,\nVitesse, Précision ou Esquive.",
+    "115": "Quand l'équipe utilise avec succès une\ncapacité qui vise un ennemi, l'une des\nstats suivantes de l'ennemi est baissée\nd'un rang : Attaque, Défense, Atq. Spé.,\nDéf. Spé., Vitesse, Précision ou Esquive.",
     "116": "L'effet Prochain boost capacité physique des\nDuos qui utilisent avec succès une capacité\nest augmenté d'un rang.",
     "117": "L'effet Prochain boost capacité spéciale des\nDuos qui utilisent avec succès une capacité\nest augmenté d'un rang.",
     "118": "Réduit les dégâts subis par les capacités\noffensives physiques de 50 %.",

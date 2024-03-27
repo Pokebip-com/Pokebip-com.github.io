@@ -21,7 +21,7 @@
     "112": "Quando una mossa va a segno, aggiunge due\nbarrette alla barra mosse.",
     "113": "Le Unità che mandano a segno una mossa\nrecuperano circa il 6% dei loro PS massimi.",
     "114": "Aumenta di un grado una statistica tra\nAttacco, Difesa, Attacco Speciale,\nDifesa Speciale, Velocità, precisione\ned elusione per le Unità che\nmandano a segno una mossa.",
-    "115": "Quando una mossa va a segno, riduce di\nun grado una statistica tra Attacco, Difesa,\nAttacco Speciale, Difesa Speciale, Velocità,\nprecisione ed elusione del bersaglio.",
+    "115": "Quando una mossa che ha come bersaglio\nun avversario va a segno, riduce di un grado\nuna statistica tra Attacco, Difesa, Attacco\nSpeciale, Difesa Speciale, Velocità, precisione\ned elusione del bersaglio.",
     "116": "Aumenta l'effetto \"Prossima mossa fisica ↑\"\ndi un grado per le Unità che mandano\na segno una mossa.",
     "117": "Aumenta l'effetto \"Prossima mossa speciale ↑\"\ndi un grado per le Unità che mandano\na segno una mossa.",
     "118": "Riduce del 50% i danni subiti dagli attacchi fisici.",

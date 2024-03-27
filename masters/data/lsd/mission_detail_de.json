@@ -247,6 +247,7 @@
     "override_detail_5080_1_06": "Schließe „Auf einen spaßigen Kampf!“\nin „Neo-Champs: Drei Trainer, drei\nStrategien“ einmal ab.",
     "override_detail_5080_1_07": "Schließe „Vs. Giovanni“ im finalen\nKapitel des Schurken-Events der\nHauptgeschichte einmal auf dem\nSchwierigkeitsgrad Schwer ab.",
     "override_detail_5080_1_08": "Schließe die täglichen Regionskämpfe \ndreimal ab.",
+    "176": "Erreiche einen bestimmten Rang im\nRahmen der Ranglistenergebnisse\ndes Legenden-Turniers Nr. [Digit:6digits ].",
     "177": "Erreiche einen bestimmten Rang im\nRahmen der Ranglistenergebnisse des\nzutreffenden Highscore-Events.",
     "178": "Setze [Digit:6digits ] [DE:Qty S=\"Einheit\" P=\"Einheiten\" ] Ausdauer mit\nden folgenden Gefährten in deinem\nTeam ein:",
     "178_element": "• [Name:TrainerName ]",

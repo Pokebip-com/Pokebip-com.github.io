@@ -695,5 +695,19 @@
     "999240": "같은 편의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"2\" ]단계 오른다",
     "999239": "배틀이 끝날 때까지 메가마기라스가 된다",
     "999238": "날씨나 필드, 존이 바뀌어 있을 때만 위력이 오른다",
-    "999237": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다"
+    "999237": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다",
+    "999236": "(일부를 제외하고 \"[Name:MoveId Idx=\"118\" ]\" 이외의 다른 기술을 사용한다)",
+    "999235": "같은 편 버디즈 전원의 차회물리기술위력부스트와 차회특수기술위력부스트가 각각 [Digit:1digit ]단계 오른다",
+    "999234": "자신의 올라간 능력이 총 10단계 이상일 때",
+    "999233": "자신의 올라간 능력이 총 [Digit:1digit ]단계 이하일 때",
+    "999232": "자신의 올라간 능력을 모두 소비한다",
+    "999231": "봉인 상태인 동안 자신이 기술 공격을 [Digit:1digit ]회 명중시켰을 때",
+    "999230": "추가로 자신이 메가핫삼이 되어있을 때는 자신의 싱크로기술횟수를 [Digit:1digit Idx=\"1\" ] 회복한다",
+    "999229": "같은 편 버디즈 전원의 차회물리기술위력부스트와 차회특수기술위력부스트가 각각 [Digit:1digit Idx=\"7\" ]단계 오른다",
+    "999228": "같은 편 버디즈 전원의 기술이나 버디즈기술의 위력이 [Digit:1digit ]% 오른다\n같은 편 버디즈 전원의 기술이나 버디즈기술로 공격받았을 때의 데미지를 [Digit:2digits Idx=\"1\" ]% 약하게 한다\n이 효과는 같은 편 전원의 필드에 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"wo\" ] 가진 버디즈가 많을수록 추가로 상승한다\n(버디즈가 하나 늘어날 때마다 위력 상승 +[Digit:1digit Idx=\"3\" ]% 데미지경감 +[Digit:1digit Idx=\"4\" ]%)\n(최대 위력 상승 [Digit:2digits Idx=\"5\" ]% 데미지경감 [Digit:2digits Idx=\"6\" ]%)",
+    "999227": "자신을 [Name:ReferencedMessageTag Idx=\"5\" ] 상태로 만든다",
+    "999226": "같은 편의 공격과 급소율이 [Digit:1digit ]단계 오른다",
+    "999225": "날씨가 모래바람일 때는 추가로 자신의 [Name:ReferencedMessageTag Idx=\"4\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"5\" ]단계 오른다",
+    "999224": "배틀이 끝날 때까지 메가헤라크로스가 된다",
+    "999223": "배틀이 끝날 때까지 메가핫삼이 된다"
 }

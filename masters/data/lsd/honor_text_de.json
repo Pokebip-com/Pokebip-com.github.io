@@ -4,9 +4,9 @@
     "100010001": "Gefährten-Neuling",
     "100010002": "Gefährten-Amateur",
     "100010003": "Gefährten-Profi",
-    "100010004": "1 Jahr auf Passio",
-    "100010005": "2 Jahre auf Passio",
-    "100010006": "3 Jahre auf Passio",
+    "100010004": "1. Jahr auf Passio",
+    "100010005": "2. Jahr auf Passio",
+    "100010006": "3. Jahr auf Passio",
     "100010007": "Auf dem Weg zum Sieg",
     "100010008": "Einzug in die Ruhmeshalle",
     "100010009": "Legendäre Herausforderung",
@@ -70,8 +70,8 @@
     "100030051": "Feder-Forschung",
     "100030052": "Passionierter Kämpfer",
     "secret_aquired": "Die Bedingungen für den Erhalt\nvon Geheim-Titeln werden nicht\nangezeigt.",
-    "100010017": "4 Jahre auf Passio",
-    "100010018": "5 Jahre auf Passio",
+    "100010017": "4. Jahr auf Passio",
+    "100010018": "5. Jahr auf Passio",
     "default_aquired": "Du hast diesen Titel bereits\nfreigeschaltet.",
     "900010003": "Fan von Urlaubern",
     "900010004": "Super-Fan von Urlaubern",
@@ -83,5 +83,6 @@
     "900010010": "Super-Fan von Poké-Kindern",
     "900010011": "Fan von Poké-Kindern",
     "900010012": "Super-Fan von Poké-Kindern",
-    "100020002": "Psycho-Meister"
+    "100020002": "Psycho-Meister",
+    "100020003": "Legenden-Turnier Nr. [Digit:6digits ]"
 }

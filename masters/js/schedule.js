@@ -1081,6 +1081,8 @@ function setVersionInfos(id) {
         scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = musicFlag = loginBonusFlag = championBattleFlag = true;
         treatedEvents = [];
 
+        console.log(timestamp);
+
         let date = new Date(timestamp*1000);
         scheduleDiv.innerHTML += `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(date)}</h1>\n`;
 

@@ -695,5 +695,19 @@
     "999240": "Increases the [Name:ReferencedMessageTag Idx=\"1\" ] of an ally by [Digit:1digit Idx=\"2\" ] [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
     "999239": "Become Mega Tyranitar until the end of battle.",
     "999238": "This attack’s power increases when weather conditions, a terrain, or a zone are in effect.",
-    "999237": "Increases the [Name:ReferencedMessageTag Idx=\"2\" ] of all allied sync pairs by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ]."
+    "999237": "Increases the [Name:ReferencedMessageTag Idx=\"2\" ] of all allied sync pairs by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ].",
+    "999236": "(With some exceptions, the user will use a move other than [Name:MoveId Idx=\"118\" ].)",
+    "999235": "Increases the Physical Moves ↑ Next effect and Special Moves ↑ Next effect of all allied sync pairs by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "999234": "When the user’s stats are raised by a total of ten stat ranks or more.",
+    "999233": "When the user’s stats are raised by a total of [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] or less.",
+    "999232": "Removes all of the user’s stat increases.",
+    "999231": "When any of the user’s attack moves hit a total of [Digit:1digit ] [EN:Qty S=\"time\" P=\"times\" ] while this move is deactivated.",
+    "999230": "If the user’s Scizor has Mega Evolved, also restores [Digit:1digit Idx=\"1\" ] MP of its buddy move.",
+    "999229": "Increases the Physical Moves ↑ Next effect and Special Moves ↑ Next effect of all allied sync pairs by [Digit:1digit Idx=\"7\" ] [EN:Qty Ref=\"7\" S=\"rank\" P=\"ranks\" ].",
+    "999228": "Powers up the moves and sync moves of all allied sync pairs by [Digit:1digit ]%. Reduces attack move and sync move damage taken by all allied sync pairs by [Digit:2digits Idx=\"1\" ]%. The more sync pairs with [Name:ReferencedMessageTag Idx=\"2\" ] that are on the allied field of play, the higher these percentages are. (Each additional sync pair powers up moves and sync moves by [Digit:1digit Idx=\"3\" ]% and reduces damage by [Digit:1digit Idx=\"4\" ]%. The maximum power-up is [Digit:2digits Idx=\"5\" ]%, and the maximum damage reduction is [Digit:2digits Idx=\"6\" ]%.)",
+    "999227": "Applies the [Name:ReferencedMessageTag Idx=\"5\" ] to the user.",
+    "999226": "Raises an ally’s Attack and critical-hit rate by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "999225": "In addition, raises the user’s [Name:ReferencedMessageTag Idx=\"4\" ] by [Digit:1digit Idx=\"5\" ] stat [EN:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ] during a sandstorm.",
+    "999224": "Become Mega Heracross until the end of battle.",
+    "999223": "Become Mega Scizor until the end of battle."
 }

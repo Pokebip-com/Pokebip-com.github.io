@@ -21,7 +21,7 @@
     "112": "When the user’s move is successful, charges\nthe user’s move gauge by two.",
     "113": "Sync pairs that use a move successfully\nrecover about 6% of their total HP.",
     "114": "Either the Attack, Defense, Sp. Atk, Sp. Def,\nSpeed, accuracy, or evasiveness of sync pairs\nthat use a move successfully is raised by\none rank.",
-    "115": "When the user’s move is successful, either the\nopponent’s Attack, Defense, Sp. Atk, Sp. Def,\nSpeed, accuracy, or evasiveness is lowered by\none rank.",
+    "115": "When the user’s move targeting an opponent\nis successful, either the opponent’s Attack,\nDefense, Sp. Atk, Sp. Def, Speed, accuracy, or\nevasiveness is lowered by one rank.",
     "116": "The Physical Moves ↑ Next effect of sync\npairs that use a move successfully is\nraised by one rank.",
     "117": "The Special Moves ↑ Next effect of sync pairs\nthat use a move successfully is raised by\none rank.",
     "118": "Reduces damage taken from physical attacks\nby 50%.",

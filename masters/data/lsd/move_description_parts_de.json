@@ -695,5 +695,19 @@
     "999240": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] eines Verbündeten um [Digit:1digit Idx=\"2\" ].",
     "999239": "Löst bei Despotar bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Despotar aus.",
     "999238": "Die Stärke dieses Angriffs steigt, wenn Wetterbedingungen, ein Feld oder ein Fokus aktiv sind.",
-    "999237": "Erhöht den [Name:ReferencedMessageTag Idx=\"2\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"3\" ]."
+    "999237": "Erhöht den [Name:ReferencedMessageTag Idx=\"2\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"3\" ].",
+    "999236": "(Bis auf einige Ausnahmen wird der Anwender eine andere Attacke als [Name:MoveId Idx=\"118\" ] einsetzen.)",
+    "999235": "Erhöht die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ aller verbündeten Gefährten um [Digit:1digit ].",
+    "999234": "Wenn die Statuswerte des Anwenders um insgesamt 10 oder mehr erhöht wurden.",
+    "999233": "Wenn die Statuswerte des Anwenders um insgesamt [Digit:1digit ] oder weniger erhöht wurden.",
+    "999232": "Entfernt alle erhöhten Statuswerte des Anwenders.",
+    "999231": "Wenn beliebige Angriffe mit Attacken des Anwenders insgesamt [Digit:1digit ]-mal treffen, während diese Attacke deaktiviert ist.",
+    "999230": "Wenn das Scherox des Anwenders die Mega-Entwicklung erreicht hat, werden auch die Attackeneinsatzpunkte (AEP) seiner Sync-Attacke um [Digit:1digit Idx=\"1\" ] [DE:Qty Ref=\"1\" S=\"Attackeneinsatzpunkt\" P=\"Attackeneinsatzpunkte\" ] (AEP) aufgefüllt.",
+    "999229": "Erhöht die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ aller verbündeten Gefährten um [Digit:1digit Idx=\"7\" ].",
+    "999228": "Erhöht die Stärke der Attacken und Gefährtenattacken aller verbündeten Gefährten um [Digit:1digit ] %. Verringert den durch Angriffe mit Attacken und Gefährtenattacken erlittenen Schaden aller verbündeten Gefährten um [Digit:2digits Idx=\"1\" ] %. Je mehr Gefährten auf der Anwender-Seite [Name:ReferencedMessageTag Idx=\"2\" ] haben, desto mehr steigt die Effektivität. (Jedes zusätzliche Gefährtengespann steigert die Stärke der Attacken und Gefährtenattacken um [Digit:1digit Idx=\"3\" ] % und verringert den erlittenen Schaden um [Digit:1digit Idx=\"4\" ] %. Die Stärke der Attacken und Gefährtenattacken kann um maximal [Digit:2digits Idx=\"5\" ] % erhöht und der Schaden um maximal [Digit:2digits Idx=\"6\" ] % verringert werden.)",
+    "999227": "Verursacht beim Anwender den [Name:ReferencedMessageTag Idx=\"5\" ].",
+    "999226": "Erhöht den Angriff und die Volltrefferquote eines Verbündeten um [Digit:1digit ].",
+    "999225": "Erhöht bei Sandstürmen zusätzlich [Name:ReferencedMessageTag Idx=\"4\" ] des Anwenders um [Digit:1digit Idx=\"5\" ].",
+    "999224": "Löst bei Skaraborn bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Skaraborn aus.",
+    "999223": "Löst bei Scherox bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Scherox aus."
 }

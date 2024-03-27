@@ -4,9 +4,9 @@
     "100010001": "Duo néophyte",
     "100010002": "Duo expérimenté",
     "100010003": "Duo vétéran",
-    "100010004": "1 an sur\nPokémon Masters EX",
-    "100010005": "2 ans sur\nPokémon Masters EX",
-    "100010006": "3 ans sur\nPokémon Masters EX",
+    "100010004": "1re année sur\nPokémon Masters EX",
+    "100010005": "2e année sur\nPokémon Masters EX",
+    "100010006": "3e année sur\nPokémon Masters EX",
     "100010007": "La route vers la victoire",
     "100010008": "Entrée au Panthéon",
     "100010009": "Triomphe Légendaire",
@@ -70,8 +70,8 @@
     "100030051": "Spécialiste des talents",
     "100030052": "Passion des combats",
     "secret_aquired": "Les conditions à remplir\npour obtenir des titres\nsecrets ne seront pas\naffichées.",
-    "100010017": "4 ans sur\nPokémon Masters EX",
-    "100010018": "5 ans sur\nPokémon Masters EX",
+    "100010017": "4e année sur\nPokémon Masters EX",
+    "100010018": "5e année sur\nPokémon Masters EX",
     "default_aquired": "Vous possédez déjà ce titre.",
     "900010003": "Mon modèle : Vacancière",
     "900010004": "Mon idole : Vacancière",
@@ -83,5 +83,6 @@
     "900010010": "Mon idole : Poké Enfant",
     "900010011": "Mon modèle : Poké Enfant",
     "900010012": "Mon idole : Poké Enfant",
-    "100020002": "À l'assaut du type Psy !"
+    "100020002": "À l'assaut du type Psy !",
+    "100020003": "Aventure Légendaire\nnº [Digit:6digits ]"
 }

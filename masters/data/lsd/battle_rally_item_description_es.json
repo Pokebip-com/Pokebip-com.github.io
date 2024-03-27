@@ -21,7 +21,7 @@
     "112": "Llena 2 puntos la barra de movimientos del\nusuario cuando sus movimientos aciertan.",
     "113": "Recupera aproximadamente un 6% de los PS máximos de los compis cuando sus movimientos aciertan.",
     "114": "Aumenta el Ataque, la Defensa, el Ataque Especial, la Defensa Especial, la Velocidad, la Precisión o la Evasión de los compis cuando sus movimientos aciertan.",
-    "115": "Reduce el Ataque, la Defensa, el Ataque Especial, la Defensa Especial, la Velocidad, la Precisión o la Evasión del rival en 1 nivel cuando los movimientos del usuario aciertan.",
+    "115": "Reduce el Ataque, la Defensa, el Ataque Especial, la Defensa Especial, la Velocidad, la Precisión o la Evasión del objetivo en 1 nivel cuando los movimientos del usuario dirigidos a ese rival aciertan.",
     "116": "Aumenta el efecto Siguiente Físico ↑ de los\ncompis en 1 nivel cuando sus movimientos\naciertan.",
     "117": "Aumenta el efecto Siguiente Especial ↑ de los\ncompis en 1 nivel cuando sus movimientos\naciertan.",
     "118": "Mitiga el daño recibido de ataques físicos en un 50%.",

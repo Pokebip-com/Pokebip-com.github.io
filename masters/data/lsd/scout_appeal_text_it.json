@@ -143,7 +143,7 @@
     "event_4080_3W_SeasonPickup_01": "Arriva Rina con un costume\nspeciale, pronta a diventare\n6★ EX! Puoi ottenere dei regali\nfantastici nella Scalacerca!",
     "event_4080_5W_FesPickup_01": "Tornano Kelian, Chette e Ravi!\nHai un'altra occasione per fare\nsquadra con queste tre Unità,\ndisponibili per un periodo limitato!",
     "event_4080_4W_FesPickup_02": "Tornano Camilla Costumax, Nardo\ne Rosso Costumax! Hai un'altra\noccasione per fare squadra\ncon queste tre Unità, disponibili\nper un periodo limitato!",
-    "event_4080_2W_SeasonPickup_01": "Tornano delle Unità con costumi\nspeciali! Puoi ottenere dei regali\nfantastici nella Scalacerca!",
+    "event_4080_2W_SeasonPickup_01": "Tornano delle Unita con costumi\nspeciali! È anche disponibile\nuna Scalacerca!",
     "event_4090_0W_FesPickup_01": "È l'occasione per fare squadra\ncon le Unità degli Allenatori\nche possono essere invitati\nal Salotto Allenatori!",
     "event_4090_1W_FesPickup_01": "Arriva Lino Costumax, pronto per\ndiventare 6★ EX!\nPuò rinforzare i Pokémon di tipo\nFolletto usando Volontà Folletto!",
     "event_4090_2W_Normal_01": "Arriva Milo, pronto a diventare\n6★ EX! Puoi ricevere dei regali\neffettuando l'Unicerca VIP\n(massimo tre volte)!",
@@ -323,5 +323,14 @@
     "event_6020_3W_Normal_03": "Arriva Tierno! Rinforza\ngli attacchi di tutti gli alleati\ne riduce la Difesa avversaria!",
     "event_6020_3W_FesPickup_04": "Arriva Dalia! I suoi attacchi\nriducono la Difesa o la Difesa\nSpeciale degli avversari!",
     "event_6020_3W_FesPickup_05": "È in corso l'Unicerca a due VIP!\nÈ la tua occasione per ottenere\ndue Unità Masterparty!",
-    "event_6020_4W_FesPickup_03": "Torna Camilla Costumax in\nun'Unità master! Puoi ricevere un\nregalo effettuando l'Unicerca VIP\ncon gemme a pagamento!"
+    "event_6020_4W_FesPickup_03": "Torna Camilla Costumax in\nun'Unità master! Puoi ricevere un\nregalo effettuando l'Unicerca VIP\ncon gemme a pagamento!",
+    "event_6030_0W_Monthly_01": "Gloria è in evidenza! È l'occasione\nper fare squadra con un'Unità\nla cui Allenatrice può essere\ninvitata al Salotto Allenatori!",
+    "event_6030_1W_PokeFes_01": "Arriva Ethelo! Può rinforzare tutti\ngli alleati grazie a Cerchia\ndi Sinnoh (difensiva)!",
+    "event_6030_1W_PokeFes_02": "Arriva Zim! Può potenziare\nla sua sincromossa e infliggere\ndanni ingenti!",
+    "event_6030_1W_PokeFes_04": "È in corso l'Unicerca a tre VIP!\nÈ la tua occasione per ottenere\ntre Unità Masterparty!",
+    "event_6030_1W_PokeFes_05": "È in corso l'Unicerca a tre VIP!\nÈ la tua occasione per ottenere\ntre Unità Masterparty!",
+    "event_6030_2W_SpecialCos_01": "Arriva Barry con un abito speciale!\nPuoi ottenere dei regali fantastici\nnella Scalacerca!",
+    "event_6030_2W_SpecialCos_02": "Arriva Selene con un abito\nspeciale! Puoi ottenere dei regali\nfantastici nella Scalacerca!",
+    "event_6030_3W_Variety_01": "Tornano le Unità varietà! È anche\ndisponibile una Scalacerca!",
+    "event_6030_4W_MasterFes_02": "Torna Ivan in un'Unità master!\nPuoi ricevere un regalo\neffettuando l'Unicerca VIP\ncon gemme a pagamento!"
 }

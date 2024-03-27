@@ -695,5 +695,19 @@
     "999240": "Aumenta el [Name:ReferencedMessageTag Idx=\"1\" ] de un aliado en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
     "999239": "Evoluciona a Mega-Tyranitar. Vuelve a la normalidad tras terminar el combate.",
     "999238": "La potencia de este ataque aumenta cuando hay efectos de cambios atmosféricos, campo o zona activos.",
-    "999237": "Aumenta el [Name:ReferencedMessageTag Idx=\"2\" ] de todos los compis aliados en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ]."
+    "999237": "Aumenta el [Name:ReferencedMessageTag Idx=\"2\" ] de todos los compis aliados en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ].",
+    "999236": "(Salvo en algunos casos, el usuario usará un movimiento que no sea [Name:MoveId Idx=\"118\" ].)",
+    "999235": "Aumenta el efecto Siguiente Físico ↑ y el efecto Siguiente Especial ↑ de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+    "999234": "Cuando aumentan las características del usuario en un total de 10 niveles o más.",
+    "999233": "Cuando aumentan las características del usuario en un total de [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ] o menos.",
+    "999232": "Elimina todos los aumentos de características del usuario.",
+    "999231": "Cuando un movimiento de ataque del usuario golpea un total de [Digit:1digit ] [ES:Qty S=\"vez\" P=\"veces\" ] mientras este movimiento está desactivado.",
+    "999230": "Si el Scizor del usuario ha megaevolucionado, también recupera [Digit:1digit Idx=\"1\" ] PM de su movimiento sincro.",
+    "999229": "Aumenta el efecto Siguiente Físico ↑ y el efecto Siguiente Especial ↑ de todos los compis aliados en [Digit:1digit Idx=\"7\" ] [ES:Qty Ref=\"7\" S=\"nivel\" P=\"niveles\" ].",
+    "999228": "Aumenta la potencia de los movimientos y los movimientos compi de todos los compis aliados en un [Digit:1digit ]%. Mitiga el daño por movimientos de ataque y movimientos compi que reciben todos los compis aliados en un [Digit:2digits Idx=\"1\" ]%. Cuantos más compis con [Name:ReferencedMessageTag Idx=\"2\" ] estén en el bando del usuario, más efectiva será esta habilidad. Cada pareja de compis aumenta la potencia de los movimientos y los movimientos compi en un [Digit:1digit Idx=\"3\" ]% adicional (hasta un total máximo del [Digit:2digits Idx=\"5\" ]%), y mitiga el daño recibido en un [Digit:1digit Idx=\"4\" ]% adicional (hasta un total máximo del [Digit:2digits Idx=\"6\" ]%).",
+    "999227": "Aplica el [Name:ReferencedMessageTag Idx=\"5\" ] al usuario.",
+    "999226": "Aumenta el Ataque y la probabilidad de asestar golpes críticos de un aliado en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+    "999225": "Además, aumenta [Name:ReferencedMessageTag Idx=\"4\" ] del usuario en [Digit:1digit Idx=\"5\" ] [ES:Qty Ref=\"5\" S=\"nivel\" P=\"niveles\" ] cuando hay una tormenta de arena.",
+    "999224": "Evoluciona a Mega-Heracross. Vuelve a la normalidad tras terminar el combate.",
+    "999223": "Evoluciona a Mega-Scizor. Vuelve a la normalidad tras terminar el combate."
 }

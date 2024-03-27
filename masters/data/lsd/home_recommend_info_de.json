@@ -37,7 +37,7 @@
     "50400013": "Das Legenden-Turnier findet statt!",
     "50400014": "Kämpfe mit Gefährten aus Sinnoh gegen Team Galaktik!",
     "50400015": "Stelle dich Zyrus mit Gefährten aus Sinnoh!",
-    "50400017": "In Multikämpfen kannst du Ausrüstung erhalten!",
+    "50400017": "In Multiteamkämpfen kannst du Ausrüstung erhalten!",
     "50500001": "Merkwürdige Ereignisse auf Passio! Ist das ein Riss am Himmel?!",
     "50500002": "Starke Gegner erwarten dich in extrem schweren Kämpfen!",
     "50500003": "Tolle Belohnungen erwarten dich in der Heiter-Challenge!",
@@ -45,7 +45,7 @@
     "50500005": "Ho-Oh erschien Jens beim Training?!",
     "50500006": "Legendäre Pokémon sind als Partner nicht zu unterschätzen!",
     "50500007": "Wird Eusins Traum wahr werden? Folge dem Schillernden Suicune!",
-    "50500008": "In Multikämpfen kannst du Ausrüstung erhalten!",
+    "50500008": "In Multiteamkämpfen kannst du Ausrüstung erhalten!",
     "50500009": "Ein besonderer, zeitlich begrenzter Champkampf ist verfügbar!",
     "50500010": "Neue Missionen im Legendenkampf!",
     "50600001": "Ben und Svenja spielen beim Fest der Sterne die Hauptrolle!",
@@ -166,5 +166,12 @@
     "60200010": "„Durch die Kraft des Tanzes“ jetzt verfügbar!",
     "60200011": "„Ziehe Rabauz auf!“ jetzt verfügbar!",
     "60200012": "Du kannst Kai in dein Team holen!",
-    "60200013": "„Herausforderung heißblütiger Kämpfer“ jetzt verfügbar!"
+    "60200013": "„Herausforderung heißblütiger Kämpfer“ jetzt verfügbar!",
+    "60300001": "„Wissenschaftler und Ruinenforscher“ jetzt verfügbar!",
+    "60300002": "„Störenfriede am Stromnetz“ jetzt verfügbar!",
+    "60300003": "Ein Ultimativer Kampf ist jetzt verfügbar!",
+    "60300004": "Ein besonderer Champkampf ist verfügbar!",
+    "60300005": "„Neue Helden braucht die Welt“ jetzt verfügbar!",
+    "60300006": "Trainiere mit Lorelei und Bruno!",
+    "60300007": "Trainiere mit Agathe und Siegfried!"
 }

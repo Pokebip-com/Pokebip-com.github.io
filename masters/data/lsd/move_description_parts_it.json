@@ -695,5 +695,19 @@
     "999240": "Aumenta l'[Name:ReferencedMessageTag Idx=\"1\" ] di un alleato di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
     "999239": "Permette a Tyranitar di megaevolversi. L'effetto svanisce al termine della lotta.",
     "999238": "Questo attacco aumenta di potenza quando ci sono condizioni atmosferiche attive o se il campo di lotta o una zona sono stati trasformati.",
-    "999237": "Aumenta l'[Name:ReferencedMessageTag Idx=\"2\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ]."
+    "999237": "Aumenta l'[Name:ReferencedMessageTag Idx=\"2\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ].",
+    "999236": "(Chi la usa sferra una mossa diversa da [Name:MoveId Idx=\"118\" ], salvo alcune eccezioni.)",
+    "999235": "Aumenta l'effetto \"Prossima mossa fisica ↑\" e l'effetto \"Prossima mossa speciale ↑\" di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
+    "999234": "Quando le statistiche di chi la usa vengono aumentate per un totale di 10 gradi o più.",
+    "999233": "Quando le statistiche di chi la usa vengono aumentate per un totale di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ] o meno.",
+    "999232": "Rimuove tutti gli aumenti delle statistiche di chi la usa.",
+    "999231": "Quando gli attacchi semplici di chi la usa colpiscono per un totale di [Digit:1digit ] [IT:Qty S=\"volta\" P=\"volte\" ] mentre questa mossa è disattivata.",
+    "999230": "Se Scizor di chi la usa si megaevolve, ripristina anche [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"utilizzo\" P=\"utilizzi\" ] della sua sincromossa.",
+    "999229": "Aumenta l'effetto \"Prossima mossa fisica ↑\" e l'effetto \"Prossima mossa speciale ↑\" di tutte le Unità alleate di [Digit:1digit Idx=\"7\" ] [IT:Qty Ref=\"7\" S=\"grado\" P=\"gradi\" ].",
+    "999228": "Aumenta la potenza delle mosse e delle Unimosse di tutte le Unità alleate del [Digit:1digit ]%. Riduce i danni subiti da attacchi semplici e Unimosse per tutte le Unità alleate del [Digit:2digits Idx=\"1\" ]%. Le percentuali aumentano in base al numero di Unità [Name:ReferencedMessageTag Idx=\"2\" ] sul campo alleato. (Ogni Unità in più aumenta la potenza delle mosse e delle Unimosse del [Digit:1digit Idx=\"3\" ]% e la riduzione dei danni del [Digit:1digit Idx=\"4\" ]%. L'aumento massimo è del [Digit:2digits Idx=\"5\" ]% e del [Digit:2digits Idx=\"6\" ]% per la riduzione dei danni.)",
+    "999227": "Applica l'[Name:ReferencedMessageTag Idx=\"5\" ] a chi la usa.",
+    "999226": "Aumenta l'Attacco e la probabilità di mandare a segno brutti colpi di un alleato di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
+    "999225": "Inoltre, aumenta [Name:ReferencedMessageTag Idx=\"4\" ] di chi la usa di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ] durante le tempeste di sabbia.",
+    "999224": "Permette a Heracross di megaevolversi. L'effetto svanisce al termine della lotta.",
+    "999223": "Permette a Scizor di megaevolversi. L'effetto svanisce al termine della lotta."
 }

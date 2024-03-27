@@ -119,6 +119,8 @@
     "20009600": "Traumato",
     "20009700": "Hypno",
     "20009701": "Hypno",
+    "20009800": "Krabby",
+    "20009900": "Kingler",
     "20010000": "Voltobal",
     "20010100": "Lektrobal",
     "20010200": "Owei",
@@ -144,6 +146,7 @@
     "20011900": "Golking",
     "20012000": "Sterndu",
     "20012100": "Starmie",
+    "20012200": "Pantimos",
     "20012300": "Sichlor",
     "20012400": "Rossana",
     "20012500": "Elektek",
@@ -209,7 +212,10 @@
     "20020851": "Mega-Stahlos",
     "20021000": "Granbull",
     "20021200": "Scherox",
+    "20021201": "Scherox",
+    "20021251": "Mega-Scherox",
     "20021400": "Skaraborn",
+    "20021451": "Mega-Skaraborn",
     "20021500": "Sniebel",
     "20021800": "Schneckmag",
     "20021900": "Magcargo",
@@ -711,5 +717,6 @@
     "2008691444": "Pokusan",
     "2009700000": "Lumiflora",
     "2009010000": "Ursaluna",
-    "2005710041": "Zoroark"
+    "2005710041": "Zoroark",
+    "2009810000": "Farigiraf"
 }

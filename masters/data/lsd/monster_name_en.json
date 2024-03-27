@@ -119,6 +119,8 @@
     "20009600": "Drowzee",
     "20009700": "Hypno",
     "20009701": "Hypno",
+    "20009800": "Krabby",
+    "20009900": "Kingler",
     "20010000": "Voltorb",
     "20010100": "Electrode",
     "20010200": "Exeggcute",
@@ -144,6 +146,7 @@
     "20011900": "Seaking",
     "20012000": "Staryu",
     "20012100": "Starmie",
+    "20012200": "Mr. Mime",
     "20012300": "Scyther",
     "20012400": "Jynx",
     "20012500": "Electabuzz",
@@ -209,7 +212,10 @@
     "20020851": "Mega Steelix",
     "20021000": "Granbull",
     "20021200": "Scizor",
+    "20021201": "Scizor",
+    "20021251": "Mega Scizor",
     "20021400": "Heracross",
+    "20021451": "Mega Heracross",
     "20021500": "Sneasel",
     "20021800": "Slugma",
     "20021900": "Magcargo",
@@ -711,5 +717,6 @@
     "2008691444": "Alcremie",
     "2009700000": "Glimmora",
     "2009010000": "Ursaluna",
-    "2005710041": "Zoroark"
+    "2005710041": "Zoroark",
+    "2009810000": "Farigiraf"
 }

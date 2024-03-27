@@ -119,6 +119,8 @@
     "20009600": "Soporifik",
     "20009700": "Hypnomade",
     "20009701": "Hypnomade",
+    "20009800": "Krabby",
+    "20009900": "Krabboss",
     "20010000": "Voltorbe",
     "20010100": "Électrode",
     "20010200": "Noeunoeuf",
@@ -144,6 +146,7 @@
     "20011900": "Poissoroy",
     "20012000": "Stari",
     "20012100": "Staross",
+    "20012200": "M. Mime",
     "20012300": "Insécateur",
     "20012400": "Lippoutou",
     "20012500": "Élektek",
@@ -209,7 +212,10 @@
     "20020851": "Méga-Steelix",
     "20021000": "Granbull",
     "20021200": "Cizayox",
+    "20021201": "Cizayox",
+    "20021251": "Méga-Cizayox",
     "20021400": "Scarhino",
+    "20021451": "Méga-Scarhino",
     "20021500": "Farfuret",
     "20021800": "Limagma",
     "20021900": "Volcaropod",
@@ -711,5 +717,6 @@
     "2008691444": "Charmilly",
     "2009700000": "Floréclat",
     "2009010000": "Ursaking",
-    "2005710041": "Zoroark"
+    "2005710041": "Zoroark",
+    "2009810000": "Farigiraf"
 }
