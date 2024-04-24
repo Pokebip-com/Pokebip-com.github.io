@@ -49,6 +49,7 @@
     "20003600": "Pixi",
     "20003700": "Vulpix",
     "20003800": "Vulnona",
+    "20003861": "Vulnona",
     "20003900": "Pummeluff",
     "20004000": "Knuddeluff",
     "20004100": "Zubat",
@@ -205,6 +206,7 @@
     "20018700": "Hoppspross",
     "20018800": "Hubelupf",
     "20018900": "Papungha",
+    "20019501": "Morlord",
     "20019600": "Psiana",
     "20019700": "Nachtara",
     "20020300": "Girafarig",
@@ -309,6 +311,7 @@
     "20033600": "Vipitis",
     "20033700": "Lunastein",
     "20033800": "Sonnfel",
+    "20034000": "Welsar",
     "20034200": "Krebutack",
     "20034400": "Lepumentas",
     "20034600": "Wielie",
@@ -437,6 +440,7 @@
     "20052400": "Kiesling",
     "20052500": "Sedimantur",
     "20052600": "Brockoloss",
+    "20052800": "Fletiamo",
     "20053000": "Stalobor",
     "20053400": "Meistagrif",
     "20053600": "Mebrana",
@@ -512,6 +516,7 @@
     "20070400": "Leufeo",
     "20070501": "Pyroleo",
     "20071311": "Flabébé",
+    "20071513": "Florges",
     "20072900": "Chevrumm",
     "20073300": "Psiau",
     "20073400": "Psiaugon",
@@ -718,5 +723,7 @@
     "2009700000": "Lumiflora",
     "2009010000": "Ursaluna",
     "2005710041": "Zoroark",
-    "2009810000": "Farigiraf"
+    "2009810000": "Farigiraf",
+    "2009590000": "Granforgita",
+    "2009800051": "Suelord"
 }

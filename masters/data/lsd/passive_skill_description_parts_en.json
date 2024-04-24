@@ -1489,5 +1489,22 @@
     "p998496": "When the user uses Normal-type attack moves, those moves become [Name:ReferencedMessageTag Idx=\"1\" ]-type moves.",
     "p998495": "Turns the field of play’s zone into a [Name:ReferencedMessageTag ] the first time the user’s Pokémon uses a status move each battle.",
     "p998494": "Lowers one of the target’s following stats by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] at random when the user’s attack move against it is successful: Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness.",
-    "p998493": "Reduces MP by [Digit:1digit ] for the user’s moves that have the Berry effect tag and raises its Sp. Atk and Sp. Def by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when its attack move is successful."
+    "p998493": "Reduces MP by [Digit:1digit ] for the user’s moves that have the Berry effect tag and raises its Sp. Atk and Sp. Def by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when its attack move is successful.",
+    "p998492": "Has a chance ([Digit:2digits ]%) of restoring the user’s HP when its attack move is successful against a poisoned or badly poisoned opponent.",
+    "p998491": "Restores the user’s HP when its attack move is successful against a poisoned or badly poisoned opponent.",
+    "p998490": "Has a chance ([Digit:2digits Idx=\"1\" ]%) of applying the [Name:ReferencedMessageTag ] to the user when its attack move is successful while effects that apply only to the allied field of play are in effect.",
+    "p998489": "Applies the [Name:ReferencedMessageTag ] to the user when its attack move is successful while effects that apply only to the allied field of play are in effect.",
+    "p998488": "Has a chance ([Digit:2digits Idx=\"1\" ]%) of applying the [Name:ReferencedMessageTag ] to the user when its attack move is successful while the target’s Type Rebuff is lowered.",
+    "p998487": "Applies the [Name:ReferencedMessageTag ] to the user when its attack move is successful while the target’s Type Rebuff is lowered.",
+    "p998486": "Has a chance ([Digit:2digits Idx=\"1\" ]%) of lowering one of the following stats of an opponent that attacked the user by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] at random when the user is hit by an attack move: Attack, Defense, Sp. Atk, Sp. Def, or Speed.",
+    "p998485": "Lowers one of the following stats of an opponent that attacked the user by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] at random when the user is hit by an attack move: Attack, Defense, Sp. Atk, Sp. Def, or Speed.",
+    "p998482": "If the target’s stats are lowered, the amount of decrease is doubled the first time the user’s sync move targeting the opponent is successful each battle. This effect can activate only once per battle.",
+    "p998481": "Raises the user’s Sp. Atk and Speed by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] when it enters a battle.",
+    "p998480": "Applies the Physical Damage Reduction effect and the Special Damage Reduction effect to the allied field of play when the user applies the [Name:ReferencedMessageTag ].",
+    "p998479": "The user’s Defense and Sp. Def increase 20% when effects that apply only to the allied field of play are in effect.",
+    "p998478": "Has a chance ([Digit:2digits Idx=\"1\" ]%) of increasing the user’s Physical Moves ↑ Next effect and Special Moves ↑ Next effect by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ] after using its sync move.",
+    "p998477": "Increases the user’s Physical Moves ↑ Next effect and Special Moves ↑ Next effect by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ] after using its sync move.",
+    "p998476": "Has a chance ([Digit:2digits Idx=\"1\" ]%) of applying the [Name:ReferencedMessageTag ] to the opponents’ field of play when the user’s move is successful.",
+    "p998475": "Applies the [Name:ReferencedMessageTag ] to the opponents’ field of play when the user’s move is successful.",
+    "p998388": "dummy"
 }

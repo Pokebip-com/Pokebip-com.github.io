@@ -470,5 +470,20 @@
 { "missionGroupId": 2603080, "scheduleId": "6030_BattleRally_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 603015, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 },
 { "missionGroupId": 2603090, "scheduleId": "6030_BattleRally_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 603035, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 },
 { "missionGroupId": 2603100, "scheduleId": "6030_BattleRally_Mission_3", "u3": 0, "u4": 1, "u5": 0, "u6": 603045, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 },
-{ "missionGroupId": 2603110, "scheduleId": "6030_BattleRally_Mission_4", "u3": 0, "u4": 1, "u5": 0, "u6": 603075, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 }
+{ "missionGroupId": 2603110, "scheduleId": "6030_BattleRally_Mission_4", "u3": 0, "u4": 1, "u5": 0, "u6": 603075, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604010, "scheduleId": "6040_1W_Event_ti_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 604010, "itemSetId": "414", "bannerId": 1604002, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604020, "scheduleId": "6040_1W_Event_speti_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 604020, "itemSetId": "6040136", "bannerId": 1604003, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604030, "scheduleId": "6040_1W_Event_carp_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 604030, "itemSetId": "4040189", "bannerId": 1404003, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604040, "scheduleId": "6040_1W_Event_gold_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 604040, "itemSetId": "414", "bannerId": 1404007, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604050, "scheduleId": "6040_1W_Event_specos_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 604050, "itemSetId": "414", "bannerId": 1604006, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604060, "scheduleId": "6040_1W_Event_matsuba_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 604060, "itemSetId": "414", "bannerId": 1404006, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604070, "scheduleId": "6040_2W_Event_skull_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 604070, "itemSetId": "414", "bannerId": 1604010, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604080, "scheduleId": "6040_3W_Event_po_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 604080, "itemSetId": "6040210", "bannerId": 1604011, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604090, "scheduleId": "6040_4W_Event_minaki_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 604090, "itemSetId": "414", "bannerId": 1505004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604100, "scheduleId": "6040_4W_Event_Egg_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 604100, "itemSetId": "206118", "bannerId": 1604015, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604110, "scheduleId": "6040_BattleRally_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 604045, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604120, "scheduleId": "6040_BattleRally_Mission_2", "u3": 0, "u4": 1, "u5": 0, "u6": 604065, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604130, "scheduleId": "6040_BattleRally_Mission_3", "u3": 0, "u4": 1, "u5": 0, "u6": 604075, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604140, "scheduleId": "6040_BattleRally_Mission_4", "u3": 0, "u4": 1, "u5": 0, "u6": 604085, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2604150, "scheduleId": "6040_BattleRally_Mission_5", "u3": 0, "u4": 1, "u5": 0, "u6": 604095, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 }
 ]}

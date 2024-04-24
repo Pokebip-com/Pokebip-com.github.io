@@ -153,5 +153,11 @@
     "event_6030_2W_MasterTicket_01": "ジュン スペコス 確定Ｂサーチ",
     "event_6030_2W_SuperTicket_02": "ミヅキ スペコス 出現率アップＢサーチ",
     "event_6030_2W_MasterTicket_02": "ミヅキ スペコス 確定Ｂサーチ",
-    "event_6030_3W_SuperTicket_01": "バラエティ 出現率アップＢサーチ"
+    "event_6030_3W_SuperTicket_01": "バラエティ 出現率アップＢサーチ",
+    "event_6040_1W_SuperTicket_08": "ハチクマン スペコス 出現率アップＢサーチ",
+    "event_6040_1W_MasterTicket_08": "ハチクマン スペコス 確定Ｂサーチ",
+    "event_6040_1W_SuperTicket_09": "ジュジュベ スペコス 出現率アップＢサーチ",
+    "event_6040_1W_MasterTicket_09": "ジュジュベ スペコス 確定Ｂサーチ",
+    "event_6040_2W_MasterTicket_03": "グズマ確定 バラエティＢサーチ",
+    "event_6040_2W_MasterTicket_04": "プルメリ確定 バラエティＢサーチ"
 }

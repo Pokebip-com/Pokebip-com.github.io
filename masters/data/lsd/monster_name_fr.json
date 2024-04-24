@@ -49,6 +49,7 @@
     "20003600": "Mélodelfe",
     "20003700": "Goupix",
     "20003800": "Feunard",
+    "20003861": "Feunard",
     "20003900": "Rondoudou",
     "20004000": "Grodoudou",
     "20004100": "Nosferapti",
@@ -205,6 +206,7 @@
     "20018700": "Granivol",
     "20018800": "Floravol",
     "20018900": "Cotovol",
+    "20019501": "Maraiste",
     "20019600": "Mentali",
     "20019700": "Noctali",
     "20020300": "Girafarig",
@@ -309,6 +311,7 @@
     "20033600": "Séviper",
     "20033700": "Séléroc",
     "20033800": "Solaroc",
+    "20034000": "Barbicha",
     "20034200": "Colhomard",
     "20034400": "Kaorine",
     "20034600": "Vacilys",
@@ -437,6 +440,7 @@
     "20052400": "Nodulithe",
     "20052500": "Géolithe",
     "20052600": "Gigalithe",
+    "20052800": "Rhinolove",
     "20053000": "Minotaupe",
     "20053400": "Bétochef",
     "20053600": "Batracné",
@@ -512,6 +516,7 @@
     "20070400": "Hélionceau",
     "20070501": "Némélios",
     "20071311": "Flabébé",
+    "20071513": "Florges",
     "20072900": "Chevroum",
     "20073300": "Psystigri",
     "20073400": "Mistigrix",
@@ -718,5 +723,7 @@
     "2009700000": "Floréclat",
     "2009010000": "Ursaking",
     "2005710041": "Zoroark",
-    "2009810000": "Farigiraf"
+    "2009810000": "Farigiraf",
+    "2009590000": "Forgelina",
+    "2009800051": "Terraiste"
 }

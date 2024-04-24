@@ -440,7 +440,7 @@
     "999499": "Ignoriert den Effekt Folge-Schadensschutz des Zieles.",
     "999498": "Verbraucht maximal [Digit:1digit Idx=\"1\" ] [DE:Qty Ref=\"1\" S=\"Segment\" P=\"Segmente\" ] der Attackenleiste deines Teams. Je mehr von der Leiste verbraucht wurde, desto mehr werden der Spezial-Angriff und die Spezial-Verteidigung aller verbündeten Gefährten erhöht (können um bis zu maximal [Digit:1digit Idx=\"2\" ] erhöht werden). Verursacht zusätzlich bei Verbrauch von [Digit:1digit Idx=\"1\" ] [DE:Qty Ref=\"1\" S=\"Segment\" P=\"Segmenten\" ] bei allen verbündeten Gefährten den [Name:ReferencedMessageTag Idx=\"3\" ].",
     "999497": "Erhöht die Verteidigung und Volltrefferquote des Anwenders um [Digit:1digit Idx=\"1\" ].",
-    "999496": "Erzeugt einen Boden-Fokus. (Der Boden-Fokus verstärkt Angriffe vom Typ Boden.)",
+    "999496": "Erzeugt einen Boden-Fokus. (Ein Boden-Fokus verstärkt Angriffe vom Typ Boden.)",
     "999495": "Löst bei Latios bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Latios aus.",
     "999494": "Löst bei Lohgock bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Lohgock aus.",
     "999493": "Löst bei Camerupt bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Camerupt aus.",
@@ -709,5 +709,16 @@
     "999226": "Erhöht den Angriff und die Volltrefferquote eines Verbündeten um [Digit:1digit ].",
     "999225": "Erhöht bei Sandstürmen zusätzlich [Name:ReferencedMessageTag Idx=\"4\" ] des Anwenders um [Digit:1digit Idx=\"5\" ].",
     "999224": "Löst bei Skaraborn bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Skaraborn aus.",
-    "999223": "Löst bei Scherox bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Scherox aus."
+    "999223": "Löst bei Scherox bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Scherox aus.",
+    "999222": "Wenn der Anwender [Digit:1digit ]-mal von einem Angriff mit einer Attacke getroffen wird.",
+    "999221": "Wenn der Anwender beliebige Attacken [Digit:1digit ]-mal einsetzt.",
+    "999220": "Wenn der Trainer des Anwenders beliebige Attacken [Digit:1digit ]-mal einsetzt.",
+    "999219": "Senkt den Spezial-Angriff und die Spezial-Verteidigung des Zieles um [Digit:1digit Idx=\"1\" ].",
+    "999218": "Wenn starkes Sonnenlicht beginnt.",
+    "999217": "Wenn die Wetterbedingung starkes Sonnenlicht nicht mehr aktiv ist.",
+    "999216": "Senkt die Verteidigung und Spezial-Verteidigung des Zieles um [Digit:1digit ].",
+    "999215": "Verursacht bei einem Verbündeten den [Name:ReferencedMessageTag Idx=\"3\" ].",
+    "999214": "Erhöht die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ aller verbündeten Gefährten um [Digit:1digit Idx=\"2\" ].",
+    "999213": "Senkt den [Name:ReferencedMessageTag Idx=\"2\" ] des Zieles um [Digit:1digit Idx=\"3\" ].",
+    "999212": "Verursacht beim Anwender den [Name:ReferencedMessageTag Idx=\"2\" ]."
 }

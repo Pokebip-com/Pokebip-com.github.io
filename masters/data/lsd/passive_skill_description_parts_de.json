@@ -1489,5 +1489,22 @@
     "p998496": "Wenn der Anwender Angriffe mit Attacken vom Typ Normal einsetzt, nehmen diese Attacken den Typ [Name:ReferencedMessageTag Idx=\"1\" ] an.",
     "p998495": "Erzeugt ein Mal pro Kampf einen [Name:ReferencedMessageTag ], wenn das Pokémon des Anwenders erstmals eine Status-Attacke einsetzt.",
     "p998494": "Senkt zufällig einen der folgenden Statuswerte des Zieles um [Digit:1digit ], wenn der Angriff des Anwenders mit einer Attacke gegen es Erfolg hat: Angriff, Verteidigung, Spezial-Angriff, Spezial-Verteidigung, Initiative, Genauigkeit oder Fluchtwert.",
-    "p998493": "Reduziert die Attackeneinsatzpunkte (AEP) der Attacken des Anwenders, die über den Zusatzeffekt Beere verfügen, um [Digit:1digit ] und erhöht seinen Spezial-Angriff und seine Spezial-Verteidigung um [Digit:1digit Idx=\"1\" ], wenn sein Angriff mit einer Attacke Erfolg hat."
+    "p998493": "Reduziert die Attackeneinsatzpunkte (AEP) der Attacken des Anwenders, die über den Zusatzeffekt Beere verfügen, um [Digit:1digit ] und erhöht seinen Spezial-Angriff und seine Spezial-Verteidigung um [Digit:1digit Idx=\"1\" ], wenn sein Angriff mit einer Attacke Erfolg hat.",
+    "p998492": "Hat eine [Digit:2digits ] %-Chance die KP des Anwenders wiederherzustellen, wenn sein Angriff mit einer Attacke auf einen vergifteten oder schwer vergifteten Gegner Erfolg hat.",
+    "p998491": "Stellt die KP des Anwenders wieder her, wenn sein Angriff mit einer Attacke auf einen vergifteten oder schwer vergifteten Gegner Erfolg hat.",
+    "p998490": "Hat eine [Digit:2digits Idx=\"1\" ] %-Chance beim Anwender den [Name:ReferencedMessageTag ] zu verursachen, wenn sein Angriff mit einer Attacke Erfolg hat, während Effekte, die nur die Anwender-Seite betreffen, wirksam sind.",
+    "p998489": "Verursacht beim Anwender den [Name:ReferencedMessageTag ], wenn sein Angriff mit einer Attacke Erfolg hat, während Effekte, die nur die Anwender-Seite betreffen, wirksam sind.",
+    "p998488": "Hat eine [Digit:2digits Idx=\"1\" ] %-Chance beim Anwender den [Name:ReferencedMessageTag ] zu verursachen, wenn sein Angriff mit einer Attacke Erfolg hat und der Typwiderstand des Zieles gesenkt wurde.",
+    "p998487": "Verursacht beim Anwender den [Name:ReferencedMessageTag ], wenn sein Angriff mit einer Attacke Erfolg hat und der Typwiderstand des Zieles gesenkt wurde.",
+    "p998486": "Hat eine [Digit:2digits Idx=\"1\" ] %-Chance zufällig einen der folgenden Statuswerte eines Gegners, der den Anwender angegriffen hat, um [Digit:1digit ] zu senken, wenn der Anwender von einem Angriff mit einer Attacke getroffen wird: Angriff, Verteidigung, Spezial-Angriff, Spezial-Verteidigung oder Initiative.",
+    "p998485": "Senkt zufällig einen der folgenden Statuswerte eines Gegners, der den Anwender angegriffen hat, um [Digit:1digit ], wenn der Anwender von einem Angriff mit einer Attacke getroffen wird: Angriff, Verteidigung, Spezial-Angriff, Spezial-Verteidigung oder Initiative.",
+    "p998482": "Verdoppelt ein Mal pro Kampf die bereits vorhandene Senkung von Statuswerten des Zieles, wenn die Gefährtenattacke des Anwenders auf den Gegner erstmals Erfolg hat. Dieser Effekt kann nur ein Mal pro Kampf aktiviert werden.",
+    "p998481": "Erhöht den Spezial-Angriff und die Initiative des Anwenders um [Digit:1digit ], wenn er den Kampf antritt.",
+    "p998480": "Verursacht auf der Anwender-Seite die Effekte Physischer Schaden↓ und Spezial-Schaden↓, wenn der Anwender den [Name:ReferencedMessageTag ] verursacht.",
+    "p998479": "Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders um 20 %, wenn Effekte, die nur die Anwender-Seite betreffen, wirksam sind.",
+    "p998478": "Hat eine [Digit:2digits Idx=\"1\" ] %-Chance die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ des Anwenders um [Digit:1digit ] zu erhöhen, nachdem er seine Gefährtenattacke eingesetzt hat.",
+    "p998477": "Erhöht die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ des Anwenders um [Digit:1digit ], nachdem er seine Gefährtenattacke eingesetzt hat.",
+    "p998476": "Hat eine [Digit:2digits Idx=\"1\" ] %-Chance auf der Gegner-Seite den [Name:ReferencedMessageTag ] zu verursachen, wenn die Attacke des Anwenders Erfolg hat.",
+    "p998475": "Verursacht auf der Gegner-Seite den [Name:ReferencedMessageTag ], wenn die Attacke des Anwenders Erfolg hat.",
+    "p998388": "dummy"
 }

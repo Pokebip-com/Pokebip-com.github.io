@@ -55,5 +55,8 @@
     "legend_rule_6010_013": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
     "legend_rule_6010_021": "Fallen Vipitis’ KP das erste Mal auf 80 %\noder 40 %, hält es mit dieser Anzahl an KP\ndurch.",
     "legend_rule_6010_022": "Erhöht die Stärke von Attacken und der\nGA des Gegners, wenn Mitstreiter vergiftet\noder schwer vergiftet sind.",
-    "legend_rule_6010_023": "Erhöht die Stärke von Attacken und der\nGefährtenattacke des Gegners, wenn seine\nInitiative erhöht ist."
+    "legend_rule_6010_023": "Erhöht die Stärke von Attacken und der\nGefährtenattacke des Gegners, wenn seine\nInitiative erhöht ist.",
+    "legend_rule_6040_001": "Fallen Gluraks KP das erste Mal auf 60 %,\nhält es mit dieser Anzahl an KP durch.",
+    "legend_rule_6040_002": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
+    "legend_rule_6040_003": "Wenn der Gegner nicht von Statusproblemen\nbetroffen ist, ist die Stärke seiner Angriffe\nerhöht."
 }

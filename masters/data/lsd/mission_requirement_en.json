@@ -169,5 +169,15 @@
     "191": "Set free hashtags",
     "192": "Set a title",
     "193": "Send a like",
-    "194": "Raise the designated guest’s\nfriendship level to [Digit:7digits ]"
+    "194": "Raise the designated guest’s\nfriendship level to [Digit:7digits ]",
+    "override_title_6040_1_01": "Rika’s Elite Test #1",
+    "override_title_6040_1_02": "Rika’s Elite Test #2",
+    "override_title_6040_1_03": "Rika’s Elite Test #3",
+    "override_title_6040_1_04": "Rika’s Elite Test #4",
+    "override_title_6040_1_05": "Rika’s Elite Test #5",
+    "override_title_6040_1_06": "Rika’s Elite Test #6",
+    "override_title_6040_1_07": "Rika’s Elite Test #7",
+    "override_title_6040_1_08": "Rika’s Elite Test #8",
+    "override_title_6040_1_09": "Rika’s Elite Test #9",
+    "override_title_6040_1_10": "Rika’s Elite Test #10"
 }

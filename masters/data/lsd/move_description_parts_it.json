@@ -709,5 +709,16 @@
     "999226": "Aumenta l'Attacco e la probabilità di mandare a segno brutti colpi di un alleato di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999225": "Inoltre, aumenta [Name:ReferencedMessageTag Idx=\"4\" ] di chi la usa di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ] durante le tempeste di sabbia.",
     "999224": "Permette a Heracross di megaevolversi. L'effetto svanisce al termine della lotta.",
-    "999223": "Permette a Scizor di megaevolversi. L'effetto svanisce al termine della lotta."
+    "999223": "Permette a Scizor di megaevolversi. L'effetto svanisce al termine della lotta.",
+    "999222": "Quando l'Unità subisce un attacco semplice [Digit:1digit ] [IT:Qty S=\"volta\" P=\"volte\" ].",
+    "999221": "Quando chi la usa sferra qualsiasi mossa [Digit:1digit ] [IT:Qty S=\"volta\" P=\"volte\" ].",
+    "999220": "Quando l'Allenatore di chi la usa sferra qualsiasi mossa [Digit:1digit ] [IT:Qty S=\"volta\" P=\"volte\" ].",
+    "999219": "Riduce l'Attacco Speciale e la Difesa Speciale del bersaglio di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
+    "999218": "Quando la luce solare diventa intensa.",
+    "999217": "Quando la luce solare smette di essere intensa.",
+    "999216": "Riduce la Difesa e la Difesa Speciale del bersaglio di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
+    "999215": "Applica l'[Name:ReferencedMessageTag Idx=\"3\" ] a un alleato.",
+    "999214": "Aumenta l'effetto \"Prossima mossa fisica ↑\" e l'effetto \"Prossima mossa speciale ↑\" di tutte le Unità alleate di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
+    "999213": "Riduce la [Name:ReferencedMessageTag Idx=\"2\" ] del bersaglio di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ].",
+    "999212": "Applica l'[Name:ReferencedMessageTag Idx=\"2\" ] a chi la usa."
 }

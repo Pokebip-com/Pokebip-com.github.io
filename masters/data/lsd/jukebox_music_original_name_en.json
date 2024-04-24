@@ -63,6 +63,7 @@
     "100401015": "The Elite Four Appear!",
     "100401016": "Victory Road",
     "100401018": "Hearthome City (Day)",
+    "100401019": "Team Galactic Appears!",
     "100402001": "Battle! (Frontier Brain—Sinnoh Version)",
     "100402002": "Looker’s Theme",
     "100404001": "Battle! (People of Hisui 2)",
@@ -120,6 +121,7 @@
     "100701002": "The Battle at the Summit!",
     "100701003": "Battle! (Elite Four)",
     "100701004": "Battle! (Island Kahuna)",
+    "100701005": "Trainers’ Eyes Meet (Team Skull)",
     "100701006": "Battle! (Team Skull Admin)",
     "100701007": "Battle! (Team Skull Boss)",
     "100701008": "Battle! (Trainer)",
@@ -167,5 +169,7 @@
     "100901001": "Battle! (Nemona)",
     "100901002": "Battle! (Wild Pokémon)",
     "100901003": "Battle! (Cassiopeia)",
-    "100901005": "Battle! (Top Champion)"
+    "100901005": "Battle! (Top Champion)",
+    "100901006": "The Academy Ace Tournament",
+    "100901007": "Battle! (Elite Four)"
 }

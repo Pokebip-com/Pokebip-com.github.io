@@ -49,6 +49,7 @@
     "20003600": "Clefable",
     "20003700": "Vulpix",
     "20003800": "Ninetales",
+    "20003861": "Ninetales",
     "20003900": "Jigglypuff",
     "20004000": "Wigglytuff",
     "20004100": "Zubat",
@@ -205,6 +206,7 @@
     "20018700": "Hoppip",
     "20018800": "Skiploom",
     "20018900": "Jumpluff",
+    "20019501": "Quagsire",
     "20019600": "Espeon",
     "20019700": "Umbreon",
     "20020300": "Girafarig",
@@ -309,6 +311,7 @@
     "20033600": "Seviper",
     "20033700": "Lunatone",
     "20033800": "Solrock",
+    "20034000": "Whiscash",
     "20034200": "Crawdaunt",
     "20034400": "Claydol",
     "20034600": "Cradily",
@@ -437,6 +440,7 @@
     "20052400": "Roggenrola",
     "20052500": "Boldore",
     "20052600": "Gigalith",
+    "20052800": "Swoobat",
     "20053000": "Excadrill",
     "20053400": "Conkeldurr",
     "20053600": "Palpitoad",
@@ -512,6 +516,7 @@
     "20070400": "Litleo",
     "20070501": "Pyroar",
     "20071311": "Flabébé",
+    "20071513": "Florges",
     "20072900": "Gogoat",
     "20073300": "Espurr",
     "20073400": "Meowstic",
@@ -718,5 +723,7 @@
     "2009700000": "Glimmora",
     "2009010000": "Ursaluna",
     "2005710041": "Zoroark",
-    "2009810000": "Farigiraf"
+    "2009810000": "Farigiraf",
+    "2009590000": "Tinkaton",
+    "2009800051": "Clodsire"
 }

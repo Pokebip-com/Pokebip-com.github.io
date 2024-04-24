@@ -9,5 +9,6 @@
 { "loginBonusId": "campaign_LoginBonus_5010_1", "scheduleId": "5010_4W_Campaign_return_Loginbonus", "u3": 30, "itemSetId": "5010906" },
 { "loginBonusId": "campaign_LoginBonus_5070_5", "scheduleId": "5070_3W_Campaign_return_Loginbonus", "u3": 30, "itemSetId": "5070003" },
 { "loginBonusId": "campaign_LoginBonus_6010_3", "scheduleId": "6010_4W_Campaign_return_Loginbonus", "u3": 30, "itemSetId": "6010113" },
-{ "loginBonusId": "campaign_LoginBonus_6030_4", "scheduleId": "6030_2W_Campaign_return_Loginbonus", "u3": 30, "itemSetId": "18446744073709551615" }
+{ "loginBonusId": "campaign_LoginBonus_6030_4", "scheduleId": "6030_2W_Campaign_return_Loginbonus", "u3": 30, "itemSetId": "18446744073709551615" },
+{ "loginBonusId": "campaign_LoginBonus_6040_7", "scheduleId": "6040_3W_ComeBack_Loginbonus", "u3": 30, "itemSetId": "18446744073709551615" }
 ]}

@@ -190,6 +190,7 @@
     "20033600": "Vipitis lebt seit Generationen in Fehde mit Sengo.\nDie Narben auf seinem Körper sind Zeugen grausamer\nKämpfe. Dieses Pokémon greift seine Gegner mit seinem\nscharfkantigen Schweif an.",
     "20033700": "Lunastein wurde in der Nähe eines Meteoritenkraters\nentdeckt. Daher nehmen einige Menschen an, dass dieses\nPokémon aus dem Weltall stammt. Diese Theorie konnte\nallerdings bisher noch nicht belegt werden.",
     "20033800": "Sonnfel ist eine neue Pokémon-Art, die angeblich aus\ndem Weltall kam. Es gleitet durch die Luft und bewegt\nsich leise. Im Kampf setzt dieses Pokémon sehr helles\nLicht ein.",
+    "20034000": "Es schüchtert seine Gegner ein, indem es den Boden\nbeben lässt. Seine Beute verschluckt es mitsamt dem\nSchlamm, in dem sie sich aufhält.",
     "20034200": "Es ist ungestüm und liebt Kämpfe, doch sobald es seine\nScheren verliert, wird es mutlos. Bis sie nachgewachsen\nsind, zittert es vor Angst.",
     "20034600": "Es lebte für gewöhnlich an seichten Stellen im Meer.\nBei Ebbe kam es an Land, um nach Beute zu suchen.",
     "20035001": "Es soll das schönste Pokémon sein, aber Trainer,\ndie Barschwa trainiert haben, weil sie es mögen,\nsollen nicht so begeistert sein.",
@@ -285,6 +286,7 @@
     "20052400": "Das sechseckige Loch dient ihm als Ohr. Tief darin liegt\nsein Energiekern versteckt. Wenn jemand hineingreift,\nwird es wütend.",
     "20052500": "Energie, die aus seinem Körper austrat, hat sich\nzu orangefarbenen, harten Kristallen verfestigt.\nSie können sogar Diamanten zersplittern.",
     "20052600": "Wenn es mit geballter Kraft seine gesamte Energie\nentlädt, führt das dazu, dass sich auf seinem Körper\nunzählige Risse auftun.",
+    "20052800": "Beim Abfeuern seiner Ultraschallwellen, mit denen es\nselbst Beton zertrümmern kann, wedelt es eifrig mit dem\nSchweif.",
     "20053000": "Seine zu Stahl weiterentwickelten Bohrer kriegen selbst\nEisenplatten klein. Im Tunnelbau ist es ein absolutes Ass.",
     "20053400": "Man nimmt an, dass es der Menschheit\nvor ca. 2 000 Jahren das Betonmischen\nbeigebracht hat.",
     "20053600": "Wenn es die Beulen auf seinem Kopf zum Schwingen\nbringt, tobt je nach Umgebung entweder das Wasser\noder die Erde bebt.",
@@ -536,5 +538,7 @@
     "2009700000": "Erkennt es Gefahr, öffnet es seine kristallenen\nBlütenblätter, um aus seinem kegelförmigen Körper\nStrahlen abzufeuern.",
     "2009010000": "Vermutlich ist das sumpfige Gelände Hisuis der Grund für\nseine robuste Statur sowie die neu errungene Fähigkeit,\nTorf nach Belieben manipulieren zu können.",
     "2005710041": "Durch die zerzauste weiße Mähne gleicht es Gevatter Tod.\nGetrieben von bitterem Groll, von dem es selbst zerfressen\nwird, streckt es Feinde ohne Rücksicht auf das eigene\nLeben nieder.",
-    "2009810000": "Aufgrund der synchronisierten Gehirnströme von Kopf und\nSchweif sind seine Psycho-Kräfte zehnmal so stark wie die\nvon Girafarig."
+    "2009810000": "Aufgrund der synchronisierten Gehirnströme von Kopf und\nSchweif sind seine Psycho-Kräfte zehnmal so stark wie die\nvon Girafarig.",
+    "2009590000": "Es ist intelligent und verwegen. Mit seinem Hammer\nschlägt es Felsen in die Luft und zielt damit auf fliegende\nKrarmor.",
+    "2009800051": "Wird Suelord angegriffen, wehrt es sich, indem es dicke\nStacheln ausfährt. Setzt es diese riskante Attacke ein, ist\nes bereit, aufs Ganze zu gehen."
 }

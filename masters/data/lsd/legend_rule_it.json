@@ -55,5 +55,8 @@
     "legend_rule_6010_013": "Gli effetti sul campo attivati dagli avversari\nsono permanenti.",
     "legend_rule_6010_021": "I PS di Seviper restano all'80% o al 40% la\nprima volta che subisce danni che farebbero\nscendere i suoi PS all'80% o al 40% o meno.",
     "legend_rule_6010_022": "Se gli alleati sono iperavvelenati o\navvelenati, la potenza delle mosse\ne Unimosse avversarie aumenta.",
-    "legend_rule_6010_023": "Se la Velocità degli avversari è aumentata,\nle loro mosse o Unimosse, oppure sia le\nmosse che le Unimosse, vengono potenziate."
+    "legend_rule_6010_023": "Se la Velocità degli avversari è aumentata,\nle loro mosse o Unimosse, oppure sia le\nmosse che le Unimosse, vengono potenziate.",
+    "legend_rule_6040_001": "I PS di Charizard rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
+    "legend_rule_6040_002": "Se non sono presenti effetti sul campo\navversario, la Difesa e la Difesa Speciale\ndegli avversari sono triplicate.",
+    "legend_rule_6040_003": "Quando gli avversari non sono affetti\nda problemi di stato, i loro attacchi\nvengono potenziati."
 }

@@ -55,5 +55,8 @@
     "legend_rule_6010_013": "Les effets sur le terrain déclenchés\npar l'ennemi durent tout le combat.",
     "legend_rule_6010_021": "Les PV de Séviper restent à 80 % et 40 %\nla première fois que ses PV chutent\nà 80 % et 40 % ou moins.",
     "legend_rule_6010_022": "Augmente la puissance des capacités et de la\ncapa. Duo de l'ennemi quand les alliés sont\nempoisonnés ou gravement empoisonnés.",
-    "legend_rule_6010_023": "La puissance des capacités et de la capacité\nDuo de l'ennemi augmente quand sa Vitesse\nest augmentée."
+    "legend_rule_6010_023": "La puissance des capacités et de la capacité\nDuo de l'ennemi augmente quand sa Vitesse\nest augmentée.",
+    "legend_rule_6040_001": "Les PV de Dracaufeu restent à 60 %\nla première fois que ses PV chutent\nà 60 % ou moins.",
+    "legend_rule_6040_002": "Quand l'ennemi n'est pas affecté par un effet\nsur le terrain, sa Déf. et sa Déf. Spé. sont triplées.",
+    "legend_rule_6040_003": "Quand l'ennemi ne souffre pas d'une altération\nde statut, ses capacités offensives sont renforcées."
 }

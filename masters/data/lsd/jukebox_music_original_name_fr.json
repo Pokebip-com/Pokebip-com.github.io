@@ -63,6 +63,7 @@
     "100401015": "Le Conseil 4 apparaît !",
     "100401016": "Route Victoire",
     "100401018": "Unionpolis (jour)",
+    "100401019": "La Team Galaxie apparaît !",
     "100402001": "Combat (Meneur de Zone - version Sinnoh)",
     "100402002": "Musique de Beladonis",
     "100404001": "Combat (Habitants de Hisui 2)",
@@ -120,6 +121,7 @@
     "100701002": "Combat au sommet",
     "100701003": "Combat (Conseil 4)",
     "100701004": "Combat (Doyen ou Doyenne)",
+    "100701005": "Regards croisés (Team Skull)",
     "100701006": "Combat (Admin de la Team Skull)",
     "100701007": "Combat (Boss de la Team Skull)",
     "100701008": "Combat (Dresseur ou Dresseuse)",
@@ -167,5 +169,7 @@
     "100901001": "Combat (Menzi)",
     "100901002": "Combat (Pokémon sauvage)",
     "100901003": "Combat (Cassiopée)",
-    "100901005": "Combat (Maîtresse en Chef)"
+    "100901005": "Combat (Maîtresse en Chef)",
+    "100901006": "Grand Tournoi de l'Académie",
+    "100901007": "Combat (Conseil 4)"
 }

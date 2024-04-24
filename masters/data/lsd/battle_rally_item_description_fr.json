@@ -6,7 +6,7 @@
     "6": "Augmente l'Attaque, Défense, Atq. Spé.\net Déf. Spé. de 500 %.\n\n[Name:ItemDescription Idx=\"1\" ]\n\n[Name:ItemDescription Idx=\"2\" ]\n\n[Name:ItemDescription Idx=\"3\" ]\n\n[Name:ItemDescription Idx=\"4\" ]\n\n[Name:ItemDescription Idx=\"5\" ]\n\n[Name:ItemDescription Idx=\"6\" ]\n\n[Name:ItemDescription Idx=\"7\" ]\n\n[Name:ItemDescription Idx=\"8\" ]\n\n[Name:ItemDescription Idx=\"9\" ]\n\n[Name:ItemDescription Idx=\"10\" ]",
     "7": "Augmente de 100 % l'Attaque, la Défense,\nl'Atq. Spé. et la Déf. Spé. de tous les Duos\nalliés quand un Duo ou plus dans l'équipe\npossèdent le mot-clé suivant :\n• [Name:TeamSkillTag ]",
     "41": "Les capacités offensives sont renforcées\nde 100 % quand l'ennemi est affecté\npar l'effet suivant :\n\n• Altération de statut",
-    "42": "Les capacités offensives sont renforcées\nde 100 % quand l'ennemi est affecté\npar l'effet suivant :\n\n• Immunité Tourment",
+    "42": "Les capacités offensives sont renforcées\nde 100 % quand l'ennemi est affecté\npar l'effet suivant :\n\n• Tourment",
     "43": "Les capacités offensives sont renforcées\nde 100 % quand l'ennemi est affecté\npar l'effet suivant :\n\n• [Name:FieldEffectType ]",
     "44": "Les capacités offensives sont renforcées\nde 100 % quand l'ennemi est affecté\npar l'effet suivant :\n\n• N'importe quelle réduction de stat",
     "61": "Les capacités offensives des Duos alliés\npossédant encore la moitié de leurs PV\nou moins sont renforcées de 100 %.",

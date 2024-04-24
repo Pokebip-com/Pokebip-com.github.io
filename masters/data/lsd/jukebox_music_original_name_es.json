@@ -63,6 +63,7 @@
     "100401015": "¡Aparece el Alto Mando!",
     "100401016": "Calle Victoria",
     "100401018": "Ciudad Corazón (día)",
+    "100401019": "¡Aparece el Equipo Galaxia!",
     "100402001": "¡Combate! (As del Frente: Sinnoh)",
     "100402002": "Melodía de Handsome",
     "100404001": "¡Combate! (Gente de Hisui 2)",
@@ -120,6 +121,7 @@
     "100701002": "¡Combate en la cumbre!",
     "100701003": "¡Combate! (Alto Mando)",
     "100701004": "¡Combate! (Kahuna)",
+    "100701005": "Las miradas de dos Entrenadores se cruzan\n(Team Skull)",
     "100701006": "¡Combate! (Comandante Skull)",
     "100701007": "¡Combate! (Jefe del Team Skull)",
     "100701008": "¡Combate! (Entrenador)",
@@ -167,5 +169,7 @@
     "100901001": "¡Combate! (Mencía)",
     "100901002": "¡Combate! (Pokémon salvaje)",
     "100901003": "¡Combate! (Casiopea)",
-    "100901005": "¡Combate! (Supercampeona)"
+    "100901005": "¡Combate! (Supercampeona)",
+    "100901006": "¡Gran Pugna Académica!",
+    "100901007": "¡Combate! (Alto Mando)"
 }

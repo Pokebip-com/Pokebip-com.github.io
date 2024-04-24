@@ -1489,5 +1489,22 @@
     "p998496": "Quand le lanceur utilise des capacités offensives de type Normal, ces capacités deviennent des capacités de type [Name:ReferencedMessageTag Idx=\"1\" ].",
     "p998495": "Transforme la zone en une [Name:ReferencedMessageTag ] la première fois que le Pokémon du lanceur utilise une capacité de statut à chaque combat.",
     "p998494": "Baisse une des stats de la cible au hasard (Attaque, Défense, Atq. Spé., Déf. Spé., Vitesse, Précision ou Esquive) de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] quand le lanceur utilise avec succès une capacité offensive contre elle.",
-    "p998493": "Réduit les PPC de [Digit:1digit ] des capacités du lanceur qui ont l'effet Baie et augmente son Atq. Spé. et sa Déf. Spé. de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] quand il utilise avec succès une capacité offensive."
+    "p998493": "Réduit les PPC de [Digit:1digit ] des capacités du lanceur qui ont l'effet Baie et augmente son Atq. Spé. et sa Déf. Spé. de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] quand il utilise avec succès une capacité offensive.",
+    "p998492": "[Digit:2digits ] % de chances de restaurer les PV du lanceur quand il utilise avec succès une capacité offensive contre un ennemi empoisonné ou gravement empoisonné.",
+    "p998491": "Restaure les PV du lanceur quand il utilise avec succès une capacité offensive contre un ennemi empoisonné ou gravement empoisonné.",
+    "p998490": "[Digit:2digits Idx=\"1\" ] % de chances d'appliquer l'[Name:ReferencedMessageTag ] au lanceur quand il utilise avec succès une capacité offensive alors que les effets qui ne s'appliquent qu'au côté allié sont appliqués.",
+    "p998489": "Applique l'[Name:ReferencedMessageTag ] au lanceur quand il utilise avec succès une capacité offensive alors que les effets qui ne s'appliquent qu'au côté allié sont appliqués.",
+    "p998488": "[Digit:2digits Idx=\"1\" ] % de chances d'appliquer l'[Name:ReferencedMessageTag ] au lanceur quand il utilise avec succès une capacité offensive alors que la Résilience au type de la cible est baissée.",
+    "p998487": "Applique l'[Name:ReferencedMessageTag ] au lanceur quand il utilise avec succès une capacité offensive alors que la Résilience au type de la cible est baissée.",
+    "p998486": "[Digit:2digits Idx=\"1\" ] % de chances de baisser au hasard une des stats d'un ennemi ayant attaqué le lanceur (Attaque, Défense, Atq. Spé., Déf. Spé. ou Vitesse) de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] quand le lanceur subit une capacité offensive.",
+    "p998485": "Baisse au hasard une des stats d'un ennemi ayant attaqué le lanceur (Attaque, Défense, Atq. Spé., Déf. Spé. ou Vitesse) de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] quand le lanceur subit une capacité offensive.",
+    "p998482": "Si les stats de la cible sont baissées, double la baisse de stats la première fois que le lanceur utilise avec succès une capacité Duo visant l'ennemi à chaque combat. Cet effet ne peut être activé qu'une fois par combat.",
+    "p998481": "Augmente l'Atq. Spé. et la Vitesse du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] quand il arrive au combat.",
+    "p998480": "Applique l'effet Résilience Physique et l'effet Résilience Spéciale au côté allié quand le lanceur applique l'[Name:ReferencedMessageTag ].",
+    "p998479": "La Défense et la Déf. Spé. du lanceur augmentent de 20 % lorsque les effets qui ne s'appliquent qu'au côté allié sont appliqués.",
+    "p998478": "[Digit:2digits Idx=\"1\" ] % de chances d'augmenter l'effet Prochain boost capacité physique et l'effet Prochain boost capacité spéciale du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] après l'utilisation d'une capacité Duo.",
+    "p998477": "Augmente l'effet Prochain boost capacité physique et l'effet Prochain boost capacité spéciale du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] après l'utilisation d'une capacité Duo.",
+    "p998476": "[Digit:2digits Idx=\"1\" ] % de chances d'appliquer l'[Name:ReferencedMessageTag ] au côté ennemi quand le lanceur utilise avec succès une capacité.",
+    "p998475": "Applique l'[Name:ReferencedMessageTag ] au côté ennemi quand le lanceur utilise avec succès une capacité.",
+    "p998388": "dummy"
 }

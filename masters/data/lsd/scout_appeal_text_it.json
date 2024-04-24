@@ -301,7 +301,7 @@
     "event_5120_2W_FesPickup_01": "Puoi fare squadra con Unità\ndi tipo Erba! Sono anche\nnuovamente disponibili due\npotenti Unità Masterparty di\ntipo Erba!",
     "event_5120_2W_FesPickup_03": "Arriva Kissara! Può rinforzare tutti\ngli alleati ogni volta che subisce\nun attacco semplice!",
     "event_5120_3W_FesPickup_01": "È in corso l'Unicerca a tre VIP!\nÈ la tua occasione per ottenere\ntre Unità Masterparty!",
-    "event_5120_4W_FesPickup_01": "Arriva Grusha! Questa Unità\ndi tipo Ghiaccio con il ruolo\ndi Aiutante può attivare\nla Zona Ghiaccio!",
+    "event_5120_4W_FesPickup_01": "Arriva Grusha! È un Aiutante\ndi tipo Ghiaccio che può attivare\nla Zona Ghiaccio!",
     "event_5120_4W_FesPickup_04": "Torna Dandel in un'Unità master!\nPuoi ricevere un regalo\neffettuando l'Unicerca VIP\ncon gemme a pagamento!",
     "event_5120_4W_Normal_06": "La prima Unicerca ×11 può essere\neffettuata con la metà del normale\nnumero di gemme! Puoi anche\nottenere regali come Essenze\ndei Campioni e Uniticket 5★!",
     "event_6010_1W_FesPickup_01": "Arriva Chase! Aiuta gli alleati\ncon la sua Analisi di Kanto!",
@@ -332,5 +332,16 @@
     "event_6030_2W_SpecialCos_01": "Arriva Barry con un abito speciale!\nPuoi ottenere dei regali fantastici\nnella Scalacerca!",
     "event_6030_2W_SpecialCos_02": "Arriva Selene con un abito\nspeciale! Puoi ottenere dei regali\nfantastici nella Scalacerca!",
     "event_6030_3W_Variety_01": "Tornano le Unità varietà! È anche\ndisponibile una Scalacerca!",
-    "event_6030_4W_MasterFes_02": "Torna Ivan in un'Unità master!\nPuoi ricevere un regalo\neffettuando l'Unicerca VIP\ncon gemme a pagamento!"
+    "event_6030_4W_MasterFes_02": "Torna Ivan in un'Unità master!\nPuoi ricevere un regalo\neffettuando l'Unicerca VIP\ncon gemme a pagamento!",
+    "event_6040_0W_Mix_02": "Arriva Blu! Può intensificare i raggi\nsolari con Dynafiammata!",
+    "event_6040_1W_PokeFes_01": "Arriva Capsi! Può aiutare\ngli alleati attivando la\nZona Terra con la sua\nsincromossa!",
+    "event_6040_1W_SpecialCos_08": "Arriva Fantasilvestro!\nPuoi ottenere dei regali fantastici\nnella Scalacerca!",
+    "event_6040_1W_SpecialCos_09": "Arriva Malicia!\nPuoi ottenere dei regali fantastici\nnella Scalacerca!",
+    "event_6040_1W_PokeFes_010": "Torna Angelo Costumax!\nAiuta gli alleati potenziandone\nle capacità offensive e difensive!",
+    "event_6040_2W_PokeFes_01": "Puoi fare squadra con Unità\ndi tipo Acqua e Folletto! Sono\nanche nuovamente disponibili\ndue potenti Unità Masterparty!",
+    "event_6040_2W_Variety_03": "Arriva Guzman con un nuovo\nPokémon! Puoi ricevere regali\neffettuando l'Unicerca VIP\n(massimo tre volte)!",
+    "event_6040_2W_Variety_04": "Arriva Plumeria con un nuovo\nPokémon! Puoi ricevere regali\neffettuando l'Unicerca VIP\n(massimo tre volte)!",
+    "event_6040_3W_PokeFes_01": "Arriva Verina! Può infliggere danni\ningenti con la sua sincromossa\nGranmartello inammaccabile!",
+    "event_6040_4W_PokeFes_01": "È in corso l'Unicerca a due VIP!\nÈ la tua occasione per ottenere\ndue Unità Masterparty!",
+    "event_6040_4W_MasterFes_03": "Torna Max in un'Unità master!\nPuoi ricevere un regalo\neffettuando l'Unicerca VIP\ncon gemme a pagamento!"
 }

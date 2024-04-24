@@ -424,5 +424,17 @@
 { "id": 133007103, "condition": 3, "salonPhotoItemId": 1320071 },
 { "id": 133007104, "condition": 4, "salonPhotoItemId": 1320071 },
 { "id": 133007105, "condition": 5, "salonPhotoItemId": 1320071 },
-{ "id": 133007111, "condition": 11, "salonPhotoItemId": 1320071 }
+{ "id": 133007111, "condition": 11, "salonPhotoItemId": 1320071 },
+{ "id": 133007201, "condition": 1, "salonPhotoItemId": 1320072 },
+{ "id": 133007202, "condition": 2, "salonPhotoItemId": 1320072 },
+{ "id": 133007203, "condition": 3, "salonPhotoItemId": 1320072 },
+{ "id": 133007204, "condition": 4, "salonPhotoItemId": 1320072 },
+{ "id": 133007205, "condition": 5, "salonPhotoItemId": 1320072 },
+{ "id": 133007211, "condition": 11, "salonPhotoItemId": 1320072 },
+{ "id": 133007301, "condition": 1, "salonPhotoItemId": 1320073 },
+{ "id": 133007302, "condition": 2, "salonPhotoItemId": 1320073 },
+{ "id": 133007303, "condition": 3, "salonPhotoItemId": 1320073 },
+{ "id": 133007304, "condition": 4, "salonPhotoItemId": 1320073 },
+{ "id": 133007305, "condition": 5, "salonPhotoItemId": 1320073 },
+{ "id": 133007311, "condition": 11, "salonPhotoItemId": 1320073 }
 ]}

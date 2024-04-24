@@ -273,5 +273,14 @@
 { "itemId": "850051100005", "textId": 111, "imageId": "i085_0001_00", "rarity": 3, "u5": 2, "u6": -388218021, "eggLotGroupId": 511005, "time": 43200 },
 { "itemId": "850051100006", "textId": 112, "imageId": "i085_0001_00", "rarity": 3, "u5": 2, "u6": -388217821, "eggLotGroupId": 511006, "time": 43200 },
 { "itemId": "850060100001", "textId": 93, "imageId": "i085_0001_00", "rarity": 3, "u5": 1, "u6": 17, "eggLotGroupId": 601001, "time": 43200 },
-{ "itemId": "850060200001", "textId": 83, "imageId": "i085_0001_00", "rarity": 3, "u5": 2, "u6": -388220121, "eggLotGroupId": 406001, "time": 43200 }
+{ "itemId": "850060200001", "textId": 83, "imageId": "i085_0001_00", "rarity": 3, "u5": 2, "u6": -388220121, "eggLotGroupId": 406001, "time": 43200 },
+{ "itemId": "850060400001", "textId": 80, "imageId": "i085_0001_00", "rarity": 3, "u5": 2, "u6": -388220221, "eggLotGroupId": 604001, "time": 43200 },
+{ "itemId": "850060400002", "textId": 117, "imageId": "i085_0001_00", "rarity": 1, "u5": 1, "u6": 17, "eggLotGroupId": 604002, "time": 21600 },
+{ "itemId": "850060400003", "textId": 117, "imageId": "i085_0001_00", "rarity": 2, "u5": 1, "u6": 17, "eggLotGroupId": 604003, "time": 28800 },
+{ "itemId": "850060400004", "textId": 117, "imageId": "i085_0001_00", "rarity": 3, "u5": 1, "u6": 17, "eggLotGroupId": 604004, "time": 43200 },
+{ "itemId": "850060400005", "textId": 65, "imageId": "i085_0001_00", "rarity": 3, "u5": 2, "u6": -388222821, "eggLotGroupId": 604005, "time": 43200 },
+{ "itemId": "850060400006", "textId": 118, "imageId": "i085_0001_00", "rarity": 3, "u5": 2, "u6": -388216921, "eggLotGroupId": 604006, "time": 43200 },
+{ "itemId": "850060400007", "textId": 68, "imageId": "i085_0001_00", "rarity": 3, "u5": 2, "u6": -388222521, "eggLotGroupId": 604007, "time": 43200 },
+{ "itemId": "850060400008", "textId": 72, "imageId": "i085_0001_00", "rarity": 3, "u5": 2, "u6": -388223721, "eggLotGroupId": 604008, "time": 43200 },
+{ "itemId": "850060400009", "textId": 87, "imageId": "i085_0001_00", "rarity": 3, "u5": 2, "u6": -388219921, "eggLotGroupId": 604009, "time": 43200 }
 ]}

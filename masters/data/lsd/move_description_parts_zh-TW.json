@@ -704,10 +704,21 @@
     "999231": "在封印狀態下自己使出招式攻擊命中[Digit:1digit ]次時",
     "999230": "當巨鉗螳螂已經變成超級巨鉗螳螂時，還會再會幫自己的同步招式的使用次數回復[Digit:1digit Idx=\"1\" ]次。",
     "999229": "分別提高我方全體拍組的下次物理招式威力增強和下次特殊招式威力增強[Digit:1digit Idx=\"7\" ]階段。",
-    "999228": "提高我方全體拍組的招式和拍組招式威力[Digit:1digit ]％。\n減輕我方全體拍組受到招式和拍組招式攻擊時的傷害[Digit:2digits Idx=\"1\" ]％。\n當我方場地中擁有[Name:ReferencedMessageTag Idx=\"2\" ]的拍組越多，此效果還會提升得越多。\n（每增加１對拍組，威力提升＋[Digit:1digit Idx=\"3\" ]％，減輕傷害＋[Digit:1digit Idx=\"4\" ]％。）\n（威力最多可提升[Digit:2digits Idx=\"5\" ]％，傷害最多可減輕[Digit:2digits Idx=\"6\" ]％。）",
+    "999228": "提高我方全體拍組的招式和拍組招式威力[Digit:1digit ]％。\n減輕我方全體拍組受到招式和拍組招式攻擊時的傷害[Digit:2digits Idx=\"1\" ]％。\n當我方場地中擁有[Name:ReferencedMessageTag Idx=\"2\" ]的拍組越多，此效果還會提升得越多。\n（每增加１對拍組，威力提升＋[Digit:1digit Idx=\"3\" ]％，傷害減輕＋[Digit:1digit Idx=\"4\" ]％。）\n（威力最多可提升[Digit:2digits Idx=\"5\" ]％，傷害最多可減輕[Digit:2digits Idx=\"6\" ]％。）",
     "999227": "讓自己變成[Name:ReferencedMessageTag Idx=\"5\" ]狀態。",
     "999226": "提高我方的攻擊和擊中要害率[Digit:1digit ]階段。",
     "999225": "當天氣為沙暴時，還會再提高自己的[Name:ReferencedMessageTag Idx=\"4\" ][Digit:1digit Idx=\"5\" ]階段。",
     "999224": "變成超級赫拉克羅斯直到對戰結束。",
-    "999223": "變成超級巨鉗螳螂直到對戰結束。"
+    "999223": "變成超級巨鉗螳螂直到對戰結束。",
+    "999222": "受到[Digit:1digit ]次招式攻擊時",
+    "999221": "自己使出[Digit:1digit ]次招式時",
+    "999220": "自己使出[Digit:1digit ]次訓練家招式時",
+    "999219": "降低對手的特攻和特防[Digit:1digit Idx=\"1\" ]階段。",
+    "999218": "天氣變成日照強烈的瞬間在場上時",
+    "999217": "日照強烈被解除時",
+    "999216": "降低對手的防禦和特防[Digit:1digit ]階段。",
+    "999215": "讓我方變成[Name:ReferencedMessageTag Idx=\"3\" ]狀態。",
+    "999214": "分別提高我方全體拍組的下次物理招式威力增強和下次特殊招式威力增強[Digit:1digit Idx=\"2\" ]階段。",
+    "999213": "降低對手的[Name:ReferencedMessageTag Idx=\"2\" ][Digit:1digit Idx=\"3\" ]階段。",
+    "999212": "讓自己變成[Name:ReferencedMessageTag Idx=\"2\" ]狀態。"
 }
