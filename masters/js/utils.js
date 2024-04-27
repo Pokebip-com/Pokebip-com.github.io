@@ -73,9 +73,11 @@ function getPairPrettyPrintWithUrl(trainerId) {
 }
 
 function getTrainerName(id) {
+    if(trainerVerboseNames[id])
+        return trainerVerboseNames[id];
     let tr = trainer.find(t => t.trainerId === id) || {};
     let tb = trainerBase.find(tba => tba.id === tr.trainerBaseId.toString()) || {};
-    return trainerVerboseNames[id] || trainerNames[tb.trainerNameId] || "Dresseur (Scottie/Bettie)";
+    return trainerNames[tb.altTrainerNameId] || trainerNames[tb.trainerNameId] || "Dresseur (Scottie/Bettie)";
 }
 
 function getMonsterNameByTrainerId(id) {
