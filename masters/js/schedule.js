@@ -54,6 +54,8 @@ let trainerNames;
 let trainerRarityupBonus;
 let trainerVerboseNames;
 
+let schedLocales;
+
 let treatedEvents;
 
 let scheduleDiv;
@@ -113,44 +115,44 @@ async function getData() {
         trainerNameResponse,
         trainerVerboseNameResponse,
     ] = await Promise.all([
-        fetch("./data/proto/AbilityPanel.json"),
-        fetch("./data/proto/Banner.json"),
-        fetch("./data/proto/ChallengeToStrongTrainerQuestGroup.json"),
-        fetch("./data/proto/ChampionBattleEvent.json"),
-        fetch("./data/proto/ChampionBattleEventQuestGroup.json"),
-        fetch("./data/proto/ChampionBattleRegion.json"),
-        fetch("./data/proto/ChampionBattleRegionOpeningSchedule.json"),
-        fetch("./data/proto/EventBanner.json"),
-        fetch("./data/proto/EventQuestGroup.json"),
-        fetch("./data/proto/HomeEventAppeal.json"),
-        fetch("./data/proto/ItemExchange.json"),
-        fetch("./data/proto/ItemSet.json"),
-        fetch("./data/proto/LegendQuestGroup.json"),
-        fetch("./data/proto/LegendQuestGroupSchedule.json"),
-        fetch("./data/proto/LoginBonus.json"),
-        fetch("./data/proto/LoginBonusReward.json"),
-        fetch("./data/proto/Monster.json"),
-        fetch("./data/proto/MonsterBase.json"),
-        fetch("./data/proto/SalonGuest.json"),
-        fetch("./data/proto/Schedule.json"),
-        fetch("./data/proto/Scout.json"),
-        fetch("./data/proto/ScoutPickup.json"),
-        fetch("./data/proto/ShopPurchasableItem.json"),
-        fetch("./data/proto/StoryQuest.json"),
-        fetch("./data/proto/Trainer.json"),
-        fetch("./data/proto/TrainerBase.json"),
-        fetch("./data/proto/TrainerExRole.json"),
-        fetch("./data/proto/TrainerRarityupBonus.json"),
-        fetch("./data/proto/VillaQuestGroup.json"),
-        fetch("./data/lsd/banner_text_fr.json"),
-        fetch("./data/lsd/event_name_fr.json"),
-        fetch("./data/lsd/jukebox_music_name_fr.json"),
-        fetch("./data/lsd/login_bonus_name_fr.json"),
-        fetch("./data/lsd/monster_name_fr.json"),
-        fetch("./data/lsd/motif_type_name_fr.json"),
-        fetch("./data/lsd/scout_pickup_description_fr.json"),
-        fetch("./data/lsd/trainer_name_fr.json"),
-        fetch("./data/lsd/trainer_verbose_name_fr.json")
+        fetch(`./data/proto/AbilityPanel.json`),
+        fetch(`./data/proto/Banner.json`),
+        fetch(`./data/proto/ChallengeToStrongTrainerQuestGroup.json`),
+        fetch(`./data/proto/ChampionBattleEvent.json`),
+        fetch(`./data/proto/ChampionBattleEventQuestGroup.json`),
+        fetch(`./data/proto/ChampionBattleRegion.json`),
+        fetch(`./data/proto/ChampionBattleRegionOpeningSchedule.json`),
+        fetch(`./data/proto/EventBanner.json`),
+        fetch(`./data/proto/EventQuestGroup.json`),
+        fetch(`./data/proto/HomeEventAppeal.json`),
+        fetch(`./data/proto/ItemExchange.json`),
+        fetch(`./data/proto/ItemSet.json`),
+        fetch(`./data/proto/LegendQuestGroup.json`),
+        fetch(`./data/proto/LegendQuestGroupSchedule.json`),
+        fetch(`./data/proto/LoginBonus.json`),
+        fetch(`./data/proto/LoginBonusReward.json`),
+        fetch(`./data/proto/Monster.json`),
+        fetch(`./data/proto/MonsterBase.json`),
+        fetch(`./data/proto/SalonGuest.json`),
+        fetch(`./data/proto/Schedule.json`),
+        fetch(`./data/proto/Scout.json`),
+        fetch(`./data/proto/ScoutPickup.json`),
+        fetch(`./data/proto/ShopPurchasableItem.json`),
+        fetch(`./data/proto/StoryQuest.json`),
+        fetch(`./data/proto/Trainer.json`),
+        fetch(`./data/proto/TrainerBase.json`),
+        fetch(`./data/proto/TrainerExRole.json`),
+        fetch(`./data/proto/TrainerRarityupBonus.json`),
+        fetch(`./data/proto/VillaQuestGroup.json`),
+        fetch(`./data/lsd/banner_text_${lng}.json`),
+        fetch(`./data/lsd/event_name_${lng}.json`),
+        fetch(`./data/lsd/jukebox_music_name_${lng}.json`),
+        fetch(`./data/lsd/login_bonus_name_${lng}.json`),
+        fetch(`./data/lsd/monster_name_${lng}.json`),
+        fetch(`./data/lsd/motif_type_name_${lng}.json`),
+        fetch(`./data/lsd/scout_pickup_description_${lng}.json`),
+        fetch(`./data/lsd/trainer_name_${lng}.json`),
+        fetch(`./data/lsd/trainer_verbose_name_${lng}.json`)
     ])
         .catch(error => console.log(error));
 
@@ -251,16 +253,18 @@ async function getData() {
 
 async function getCustomJSON() {
     const [
+        localeSchedResponse,
         shopTierPricesResponse,
         versionsResponse
     ] = await Promise.all([
-        fetch("./data/custom/shop_tier_prices.json"),
-        fetch("./data/custom/version_release_dates.json")
+        fetch(`./data/locales/schedule_${lng}.json`),
+        fetch(`./data/custom/shop_tier_prices.json`),
+        fetch(`./data/custom/version_release_dates.json`)
     ])
         .catch(error => console.log(error));
 
+    schedLocales = await localeSchedResponse.json();
     shopTierPrices = (await shopTierPricesResponse.json()).entries;
-
     versions = await versionsResponse.json().then(orderByVersion);
 }
 
@@ -447,7 +451,7 @@ function downloadData() {
                 newsText += "[/table][/item]\n\n";
             }
 
-            let monthName = date.toLocaleString("default", {month: 'long'});
+            let monthName = date.toLocaleString(locale, {month: 'long'});
             monthName = monthName.replace(/^./, monthName[0].toUpperCase());
 
             newsText += "[item|nostyle][table]\n" +
@@ -611,14 +615,14 @@ function scheduleByVersion() {
 
         let option = {};
         option.value = versions[i].version;
-        option.text = `Version ${versions[i].version} (${date.toLocaleDateString('fr-fr', {year: 'numeric', month: 'short', day: 'numeric'})})`;
+        option.text = `Version ${versions[i].version} (${date.toLocaleDateString(locale, {year: 'numeric', month: 'short', day: 'numeric'})})`;
         versionSelect.add(new Option(option.text, option.value));
     }
 }
 
 function printEndDate(timestamp) {
-    let endDate = timestamp === '32503680000' ? "Permanent" : new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(new Date(timestamp*1000-1));
-    scheduleDiv.innerHTML += `<br /><br /><strong>Date de fin : </strong> ${endDate}`;
+    let endDate = timestamp === '32503680000' ? schedLocales.duration_permanent : new Intl.DateTimeFormat(locale, {dateStyle: 'full', timeStyle: 'short'}).format(new Date(timestamp*1000-1));
+    scheduleDiv.innerHTML += `<br /><br /><strong>${schedLocales.end_date} </strong> ${endDate}`;
 }
 
 function printScouts(schedule) {
@@ -642,7 +646,7 @@ function printScouts(schedule) {
             scheduleDiv.innerHTML += h3;
 
             if(sb.bannerIdString !== "") {
-                scheduleDiv.innerHTML += `<img src="./data/banner/scout/${sb.bannerIdString}.png" />\n`;
+                scheduleDiv.innerHTML += `<img src="./data/banner/scout/${sb.bannerIdString}.png" class="bannerImg" />\n`;
             }
         });
 
@@ -650,15 +654,17 @@ function printScouts(schedule) {
 
         let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
 
-
         if(sPickups.length > 0) {
-            scheduleDiv.innerHTML += `<h4>Duos à l'affiche</h4>\n<ul style='list-style-type: disc;'>\n`;
+            scheduleDiv.innerHTML += `<br /><br /><b>${schedLocales.featured_sync_pairs}</b>\n`;
+
+            let ul = `<ul style='list-style-type: disc;'>\n`;
 
             sPickups.forEach(sp => {
-                scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(sp.trainerId)}</b></li>\n`;
+                ul += `<li><b>${getPairPrettyPrintWithUrl(sp.trainerId)}</b></li>\n`;
             });
 
-            scheduleDiv.innerHTML += "</ul>\n";
+            ul += "</ul>\n";
+            scheduleDiv.innerHTML += ul;
         }
     });
 }
@@ -675,14 +681,16 @@ function printShopBanner(banner, schedule) {
     scheduleDiv.innerHTML += h3;
 
     if(banner.bannerIdString !== "") {
-        scheduleDiv.innerHTML += `<img src="./data/banner/event/${banner.bannerIdString}.png" />\n`;
+        scheduleDiv.innerHTML += `<img src="./data/banner/event/${banner.bannerIdString}.png" class="bannerImg" />\n`;
     }
 
     let purchasableItems = shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId);
 
     if(purchasableItems.length > 0) {
 
-        scheduleDiv.innerHTML += `<h4>PACKS DISPONIBLES</h4>\n<ul>\n`;
+        scheduleDiv.innerHTML += `<br /><br /><b>${schedLocales.gem_packs}</b>\n`;
+
+        let ul = `<ul>\n`;
 
         purchasableItems.forEach(pi => {
             let matches = pi.internalName.match(/paidvc_[a-zA-Z]+([0-9]+)_([0-9]+)/i);
@@ -690,10 +698,12 @@ function printShopBanner(banner, schedule) {
 
             price = price.euros || "??.??";
 
-            scheduleDiv.innerHTML += `<li><b>${matches[2]} Diamants :</b> ${price}€ (${pi.limit}x)</li>\n`;
+            ul += `<li><b>${matches[2]} ${schedLocales.gems}</b> ${price}€ (${pi.limit}x)</li>\n`;
         });
 
-        scheduleDiv.innerHTML += `</ul>\n`;
+        ul += `</ul>`;
+
+        scheduleDiv.innerHTML += ul;
     }
 
     printEndDate(schedule.endDate);
@@ -711,7 +721,7 @@ function printEventBanner(eventBanner, eventSchedule) {
     scheduleDiv.innerHTML += h3;
 
     if(eventBanner.bannerIdString !== "") {
-        scheduleDiv.innerHTML += `<img src="./data/banner/event/${eventBanner.bannerIdString}.png" />\n`;
+        scheduleDiv.innerHTML += `<img src="./data/banner/event/${eventBanner.bannerIdString}.png" class="bannerImg" />\n`;
     }
 
     printEndDate(eventSchedule.endDate);
@@ -745,13 +755,13 @@ async function printPairChanges(sched) {
     const scheduleId = sched.scheduleId;
 
     // Ajout de cases dans le plateau
-    let panelChanges = [...new Set(abilityPanel.filter(ap => ap.scheduleId === scheduleId).map(ap => ap.trainerId))].map(tid => { return {"trainerId" : tid, "type": "panel", "text" : "Ajout de cases dans le plateau duo-gemme."}; });
+    let panelChanges = [...new Set(abilityPanel.filter(ap => ap.scheduleId === scheduleId).map(ap => ap.trainerId))].map(tid => { return {"trainerId" : tid, "type": "panel", "text" : schedLocales.grid_additions}; });
 
     // Sortie de duo
-    let trainerRelease = [...new Set(trainer.filter(ti => ti.scheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : "Ajout du duo dans le jeu."}; });
+    let trainerRelease = [...new Set(trainer.filter(ti => ti.scheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : schedLocales.pair_addition}; });
 
     // Sortie du 6EX
-    let trainerExRelease = [...new Set(trainer.filter(ti => ti.exScheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "ex", "text" : "Ajout du 6★ EX."}; });
+    let trainerExRelease = [...new Set(trainer.filter(ti => ti.exScheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "ex", "text" : schedLocales.ex_addition}; });
 
     // Musique offerte au 6EX
     const musicReleases = schedule.filter(s => trainerRarityupBonusUpdate.includes(s.scheduleId) && s.startDate === sched.startDate);
@@ -769,15 +779,19 @@ async function printPairChanges(sched) {
             music = jukeboxMusicName[itSet[`item${i}`]];
             break;
         }
-        return { "trainerId" : trb.trainerId, "type" : "exMusic", "text" : `Musique au passage en 6★ EX : <i>${music}</i>.` };
+        return { "trainerId" : trb.trainerId, "type" : "exMusic", "text" : `${schedLocales.ex_music} <i>${music}</i>.` };
     }))];
 
     // Sortie du Rôle EX
-    let ExRoleRelease = [...new Set(trainerExRole.filter(ti => ti.scheduleId === scheduleId).map(ti => { return {"trainerId" : ti.trainerId, "role" : role_names[ti.role] }; }))].map(exRole => { return {"trainerId" : exRole.trainerId, "type" : "exRole", "text" : `Ajout du Rôle EX (${exRole.role}).`}; });
+    let ExRoleRelease = [...new Set(trainerExRole.filter(ti => ti.scheduleId === scheduleId).map(ti => { return {"trainerId" : ti.trainerId, "role" : commonLocales.role_names[ti.role] }; }))].map(exRole => { return {"trainerId" : exRole.trainerId, "type" : "exRole", "text" : schedLocales.ex_role_release.replace("{{role}}", exRole.role)}; });
 
     let changes = trainerRelease.concat(trainerExRelease, trainerExMusicRelease, ExRoleRelease, panelChanges).sort((a, b) => getTrainerName(a.trainerId).localeCompare(getTrainerName(b.trainerId)));
 
     let lastTID = "";
+
+    if(changes.length === 0){
+        scheduleDiv.innerHTML += schedLocales.misc_pair_addition;
+    }
 
     scheduleDiv.innerHTML += "<ul>";
 
@@ -793,10 +807,12 @@ async function printPairChanges(sched) {
 
         scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
     }
+
+    scheduleDiv.innerHTML += "</ul>";
 }
 
 function printSalonGuest(scheduleId) {
-    let salonGuestList = [...new Set(salonGuests.filter(sg => sg.scheduleId === scheduleId).map(sg => sg.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : "Ajout au Salon des Dresseurs"}; });
+    let salonGuestList = [...new Set(salonGuests.filter(sg => sg.scheduleId === scheduleId).map(sg => sg.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : schedLocales.lodge_addition}; });
 
     let lastTID = "";
 
@@ -856,14 +872,16 @@ function printLegBat(schedule) {
 function printNewMusics(scheduleId) {
     let itemIds = itemExchange.filter(ie => ie.scheduleId === scheduleId).map(ie => ie.itemId);
 
-    scheduleDiv.innerHTML += "<b>Ajout de musiques dans le Jukebox :</b>";
-    scheduleDiv.innerHTML += "<ul>";
+    scheduleDiv.innerHTML += `<b>${schedLocales.jukebox_music}</b>`;
+
+    let ul = `<ul>\n`;
 
     itemIds.forEach(itemId => {
-        scheduleDiv.innerHTML += `<li>${jukeboxMusicName[itemId]}</li>`;
+        ul += `<li>${jukeboxMusicName[itemId]}</li>\n`;
     });
 
-    scheduleDiv.innerHTML += "</ul>";
+    ul += "</ul>";
+    scheduleDiv.innerHTML += ul;
 }
 
 function printLoginBonus(loginBonus) {
@@ -880,44 +898,44 @@ function printLoginBonus(loginBonus) {
         switch (loginBonus.type) {
             // General Log-In Bonus
             case 0:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Bonus de connexion standard";
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.standard_login_bonus;
                 entryStr += "</h3>\n";
-                entryStr += "Réinitialisation du bonus de connexion normal.\n";
+                entryStr += `${schedLocales.standard_login_bonus_reset}\n`;
                 break;
 
             // Other Log-In Bonus
             case 1:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Bonus de connexion spécial";
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.special_login_bonus;
                 entryStr += "</h3>\n";
-                entryStr += "Autre bonus de connexion, non-identifié.\n";
+                entryStr += `${schedLocales.unknown_bonus}\n`;
                 break;
 
             // Compensation/Cadeau de Rallye
             case 2:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Cadeau/Compensation";
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.gift_compensation;
                 entryStr += "</h3>\n";
-                entryStr += "Cadeau (Rallye, événement, ...) ou Compensation pour un problème\n";
+                entryStr += `${schedLocales.gift_compensation_descr}\n`;
                 break;
 
             // Bonus Retour
             case 3:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Bonus Retour";
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.welcome_back_rally;
                 entryStr += "</h3>\n";
-                entryStr += "Campagne de retour.\n";
+                entryStr += `${schedLocales.welcome_back_rally_descr}\n`;
                 break;
 
             // Packs Diamants Journaliers
             case 4:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Pack de Diamants journaliers";
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.daily_gem_packs;
                 entryStr += "</h3>\n";
-                entryStr += "Pack de diamants journaliers.\n";
+                entryStr += `${schedLocales.daily_gem_packs}\n`;
                 break;
 
             // Journée Pokémon Masters
             case 5:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || "Bonus de connexion JPM";
+                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.pmd_login_bonus;
                 entryStr += "</h3>\n";
-                entryStr += "Bonus de connexion pour la Journée Pokémon Masters.\n";
+                entryStr += `${schedLocales.pmd_login_bonus_descr}\n`;
                 break;
         }
 
@@ -977,7 +995,7 @@ function printCalendars(startDates) {
             calLi.classList.add("listh-no-style");
             calTable.classList.add("bipcode");
 
-            calThMonth.innerText = date.toLocaleString("default", {month: 'long'});
+            calThMonth.innerText = date.toLocaleString(locale, {month: 'long'});
             calThMonth.innerText = calThMonth.innerText.replace(/^./, calThMonth.innerText[0].toUpperCase());
             calThMonth.colSpan = 7;
 
@@ -987,31 +1005,31 @@ function printCalendars(startDates) {
             let calTrDays = document.createElement("tr");
 
             let calThMon = document.createElement("th");
-            calThMon.innerText = "Lun.";
+            calThMon.innerText = schedLocales.cal_monday;
             calTrDays.appendChild(calThMon);
 
             let calThTue = document.createElement("th");
-            calThTue.innerText = "Mar.";
+            calThTue.innerText = schedLocales.cal_tuesday;
             calTrDays.appendChild(calThTue);
 
             let calThWed = document.createElement("th");
-            calThWed.innerText = "Mer.";
+            calThWed.innerText = schedLocales.cal_wednesday;
             calTrDays.appendChild(calThWed);
 
             let calThThu = document.createElement("th");
-            calThThu.innerText = "Jeu.";
+            calThThu.innerText = schedLocales.cal_thursday;
             calTrDays.appendChild(calThThu);
 
             let calThFri = document.createElement("th");
-            calThFri.innerText = "Ven.";
+            calThFri.innerText = schedLocales.cal_friday;
             calTrDays.appendChild(calThFri);
 
             let calThSat = document.createElement("th");
-            calThSat.innerText = "Sam.";
+            calThSat.innerText = schedLocales.cal_saturday;
             calTrDays.appendChild(calThSat);
 
             let calThSun = document.createElement("th");
-            calThSun.innerText = "Dim.";
+            calThSun.innerText = schedLocales.cal_sunday;
             calTrDays.appendChild(calThSun);
 
             calThead.appendChild(calTrDays);
@@ -1081,16 +1099,14 @@ function setVersionInfos(id) {
         scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = musicFlag = loginBonusFlag = championBattleFlag = true;
         treatedEvents = [];
 
-        console.log(timestamp);
-
         let date = new Date(timestamp*1000);
-        scheduleDiv.innerHTML += `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat('fr-FR', {dateStyle: 'full', timeStyle: 'short'}).format(date)}</h1>\n`;
+        scheduleDiv.innerHTML += `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat(locale, {dateStyle: 'full', timeStyle: 'short'}).format(date)}</h1>\n`;
 
         version.schedule.filter(schedule => schedule.startDate === timestamp).forEach(sched => {
             switch(sched.scheduleType.name) {
                 case "scout":
                     if(scoutFlag) {
-                        scheduleDiv.innerHTML += "<h2>Appels Duo</h2>";
+                        scheduleDiv.innerHTML += `<h2>${schedLocales.scouts}</h2>`;
                         scoutFlag = false;
                     }
                     printScouts(sched);
@@ -1098,7 +1114,7 @@ function setVersionInfos(id) {
 
                 case "championBattle":
                     if(championBattleFlag) {
-                        scheduleDiv.innerHTML += "<h2>Combat de Maître</h2>";
+                        scheduleDiv.innerHTML += `<h2>${schedLocales.champion_stadium}</h2>`;
                         championBattleFlag = false;
                     }
                     printChampionBattle(sched);
@@ -1106,7 +1122,7 @@ function setVersionInfos(id) {
 
                 case "event":
                     if(eventFlag) {
-                        scheduleDiv.innerHTML += "<h2>Événements</h2>";
+                        scheduleDiv.innerHTML += `<h2>${schedLocales.events}</h2>`;
                         eventFlag = false;
                     }
 
@@ -1125,7 +1141,7 @@ function setVersionInfos(id) {
 
                 case "shop":
                     if(shopFlag) {
-                        scheduleDiv.innerHTML += "<h2>Offres de diamants</h2>";
+                        scheduleDiv.innerHTML += `<h2>${schedLocales.gem_specials}</h2>`;
                         shopFlag = false;
                     }
                     printShopOffers(sched);
@@ -1133,8 +1149,8 @@ function setVersionInfos(id) {
 
                 case "salon":
                     if(salonFlag) {
-                        scheduleDiv.innerHTML += "<h2>Salon des Dresseurs</h2>";
-                        scheduleDiv.innerHTML += `<img src="${salonBannerPath}" />`;
+                        scheduleDiv.innerHTML += `<h2>${schedLocales.trainer_lodge}</h2>`;
+                        scheduleDiv.innerHTML += `<img src="${salonBannerPath}" class="bannerImg" />`;
                         salonFlag = false;
                     }
                     printSalonGuest(sched.scheduleId);
@@ -1142,7 +1158,7 @@ function setVersionInfos(id) {
 
                 case "chara":
                     if(charaFlag) {
-                        scheduleDiv.innerHTML += "<h2>Ajouts/Modif. de Duos</h2>";
+                        scheduleDiv.innerHTML += `<h2>${schedLocales.pair_addition_update}</h2>`;
                         charaFlag = false;
                     }
                     printPairChanges(sched);
@@ -1150,7 +1166,7 @@ function setVersionInfos(id) {
 
                 case "music":
                     if(musicFlag) {
-                        scheduleDiv.innerHTML += "<h2>Jukebox</h2>";
+                        scheduleDiv.innerHTML += `<h2>${schedLocales.jukebox}</h2>`;
                         musicFlag = false;
                     }
                     printNewMusics(sched.scheduleId);
@@ -1158,7 +1174,7 @@ function setVersionInfos(id) {
 
                 case "loginBonus":
                     if(loginBonusFlag) {
-                        scheduleDiv.innerHTML += "<h2>Bonus de connexion</h2>";
+                        scheduleDiv.innerHTML += `<h2>${schedLocales.login_bonus}</h2>`;
                         loginBonusFlag = false;
                     }
                     printLoginBonus(sched);
@@ -1194,13 +1210,27 @@ function setUrlEventID(id) {
     window.history.pushState(null, '', url.toString());
 }
 
+function changeHtmlTexts() {
+    versionSelect = document.createElement("select");
+    versionSelect.id = "versionSelect";
+
+    document.getElementById("verSelDiv").appendChild(versionSelect);
+    document.getElementById("changeVersion").innerText = schedLocales.change_version;
+    document.getElementById("downloadDataLegend").innerText = schedLocales.download_data_legend;
+    document.getElementById("downloadData").innerText = schedLocales.download_data_btn;
+    document.getElementById("calendarTitle").innerText = schedLocales.calendar_title;
+}
+
 async function init() {
+
     versionSelect = document.getElementById("versionSelect");
     scheduleDiv = document.getElementById("scheduleDiv");
     toolsDiv = document.getElementById('adminTools');
 
+    await buildHeader();
     await getCustomJSON();
-    await getData();
+    await getData().then(() => buildHeader(commonLocales));
+    changeHtmlTexts();
 
     if(isAdminMode) {
         toolsDiv.style.display = "table";

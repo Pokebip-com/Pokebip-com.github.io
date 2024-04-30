@@ -1,0 +1,29 @@
+{
+  "role_names" : [
+    "Attaquant (Physique)", "Attaquant (Spécial)", "Soutien", "Tacticien", "Accélérateur", "Régisseur"
+  ],
+  "role_name_standard" : [
+    "Attaquant", "Attaquant", "Soutien", "Tacticien", "Accélérateur", "Régisseur"
+  ],
+  "category_names" : {
+    "Physical" : "Physique",
+    "Special" : "Spéciale",
+    "Status" : "Statut"
+  },
+  "ex_sync_effect" : [
+    "Cible tous les ennemis.",
+    "Cible tous les ennemis.",
+    "Augmente la détermination de deux rangs la première fois qu'une capacité Duo est utilisée.",
+    "La puissance des capacités Duo est augmentée de 50 %.",
+    "La première fois que le lanceur utilise une capacité Duo, le nombre d'actions nécessaires pour lancer une capacité Duo est réduit de trois.",
+    "Implémente un effet de terrain juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet."
+  ],
+  "base_trainer_name" : "Dresseur (Scottie/Bettie)",
+  "menu_schedule" : "Programme",
+  "menu_sync_pairs" : "Duos",
+  "submenu_pair_page" : "Fiches",
+  "submenu_pair_ex_role" : "Rôles EX",
+  "menu_battle_rally" : "Rallye",
+  "submenu_rally_role_set" : "Sets de rôles",
+  "adminmenu_sync_grid" : "Plateaux Duo-Gemme"
+}

@@ -101,6 +101,14 @@
                 transform: translateY(-4px);
                 text-shadow: 0px 5px #00000050;
             }
+
+            .bannerImg {
+                margin-top: -34px;
+            }
+
+            h3 {
+                margin-top: 15px !important;
+            }
         </style>
 
         <link rel="stylesheet" href="../css/pokebip.css">
@@ -113,9 +121,9 @@
     <body>
         <div id="contentDiv">
             <div id="tools">
-                <label for="versionSelect"><b>Changer de version :</b></label> <select id="versionSelect"></select>
+                <label for="verSelDiv"><b id="changeVersion"></b></label> <span id="verSelDiv"></span>
                 <fieldset id="adminTools" style="display: none; margin-top: 10px; line-height: 1.6rem; width: fit-content; border-radius: 8px;">
-                    <legend><b>Télécharger les données</b></legend>
+                    <legend><b id="downloadDataLegend">Télécharger les données</b></legend>
                     <p style="display: table-row;">
                         <label for="startDate" style="display: table-cell; text-align: right;"><b>Début :</b></label> <input type="date" id="startDate" style="display: table-cell; margin-left: 5px;" />
                     </p>
@@ -129,7 +137,7 @@
             </div>
             <br />
             <div id="calendarDiv">
-                <h1>CALENDRIER :</h1>
+                <h1 id="calendarTitle">Loading Data...</h1>
                 <div id="calendar" style="margin: 0 auto; text-align: center;"></div>
             </div>
             <div id="scheduleDiv" style="max-width: 600px; margin: 0 auto;"></div>
@@ -139,9 +147,9 @@
             <a href="#" id="nextContent"><span class="material-symbols-outlined">event_upcoming</span></a>
             <a href="#" id="scrollTop"><span class="material-symbols-outlined">arrow_upward</span></a>
         </div>
+        <script src="./js/header.js"></script>
         <script src="./js/utils.js"></script>
         <script src="./js/schedule.js"></script>
-        <script src="./js/header.js"></script>
     </body>
 
 </html>
