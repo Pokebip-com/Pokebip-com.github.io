@@ -1,7 +1,5 @@
 
 const starsHex = ["#FFFFFF", "#bed9db", "#cfb19e", "#cbdbe3", "#ebe59a"];
-const role_names = ["Attaquant (Physique)", "Attaquant (Spécial)", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
-const role_name_standard = ["Attaquant", "Attaquant", "Soutien", "Tacticien", "Accélérateur", "Régisseur"];
 const targetToId = {
     "AllySingle" : 0,
     "AllyAll" : 1,
@@ -149,7 +147,7 @@ function getMonsterById(monsterId) {
 function getRoleByTrainerId(id, standard = false) {
     const role = trainer.find(t => t.trainerId === id).role;
 
-    return standard ? role_name_standard[role] : role_names[role];
+    return standard ? commonLocales.role_name_standard[role] : commonLocales.role_names[role];
 }
 
 function getRoleUrlByTrainerId(id, specification = true) {
@@ -165,7 +163,7 @@ function getRoleUrlByTrainerId(id, specification = true) {
         case 1:
             return "attaquant-special";
         default:
-            return removeAccents(role_names[role].toLowerCase());
+            return removeAccents(commonLocales.role_names[role].toLowerCase());
     }
 }
 
@@ -193,7 +191,7 @@ function getExRoleText(id) {
     const ter = trainerExRole.find(ter => ter.trainerId === id);
 
     if(ter)
-        return role_names[ter.role]
+        return commonLocales.role_names[ter.role]
 
     return "-";
 }

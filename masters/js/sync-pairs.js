@@ -12,10 +12,22 @@ let trainer;
 let trainerBase;
 let trainerExRole;
 
-let abilityName;
-let abilityType;
-let abilityTypeBGColor;
-let abilityTypeTitle;
+let abilityType = {
+    "1" : "StatsBoost",
+    "2" : "Passive",
+    "3" : "AdditionalMoveEffect",
+    "4" : "MovePowerAccuracyBoost",
+    "5" : "SyncMove"
+};
+
+let abilityTypeBGColor = {
+    "StatsBoost" : "#779EFF",
+    "MovePowerAccuracyBoost" : "#47D147",
+    "AdditionalMoveEffect" : "#FF0066",
+    "Passive" : "#FFC266",
+    "SyncMove" : "#BF80FF"
+};
+
 let versions;
 
 let monsterDescriptions;
@@ -33,6 +45,8 @@ let lastReleasePairsDiv;
 let syncPairSelect;
 let syncPairDiv;
 let toolsDiv;
+
+let syncPairLocale;
 
 let syncLevel = 5;
 let maxEnergy = 60;
@@ -77,15 +91,15 @@ async function getData() {
         fetch("./data/proto/TrainerBase.json"),
         fetch("./data/proto/TrainerExRole.json"),
         fetch("./data/custom/version_release_dates.json"),
-        fetch("./data/lsd/monster_description_fr.json"),
-        fetch("./data/lsd/monster_form_fr.json"),
-        fetch("./data/lsd/monster_name_fr.json"),
-        fetch("./data/lsd/motif_type_name_fr.json"),
-        fetch("./data/lsd/team_skill_effect_fr.json"),
-        fetch("./data/lsd/team_skill_tag_fr.json"),
-        fetch("./data/lsd/trainer_description_fr.json"),
-        fetch("./data/lsd/trainer_name_fr.json"),
-        fetch("./data/lsd/trainer_verbose_name_fr.json")
+        fetch(`./data/lsd/monster_description_${lng}.json`),
+        fetch(`./data/lsd/monster_form_${lng}.json`),
+        fetch(`./data/lsd/monster_name_${lng}.json`),
+        fetch(`./data/lsd/motif_type_name_${lng}.json`),
+        fetch(`./data/lsd/team_skill_effect_${lng}.json`),
+        fetch(`./data/lsd/team_skill_tag_${lng}.json`),
+        fetch(`./data/lsd/trainer_description_${lng}.json`),
+        fetch(`./data/lsd/trainer_name_${lng}.json`),
+        fetch(`./data/lsd/trainer_verbose_name_${lng}.json`)
     ])
         .catch(error => console.log(error));
 
@@ -143,25 +157,15 @@ async function getData() {
 
 async function getCustomJSON() {
     const [
-        abilityNameResponse,
-        abilityTypeResponse,
-        abilityTypeBGColorResponse,
-        abilityTypeTitleResponse,
+        syncPairsLocaleResponse,
         versionsResponse,
     ] = await Promise.all([
-        fetch("./data/custom/ability_name.json"),
-        fetch("./data/custom/ability_type.json"),
-        fetch("./data/custom/table_bgcolor.json"),
-        fetch("./data/custom/ability_type_title.json"),
+        fetch(`./data/locales/${lng}/sync-pairs.json`),
         fetch("./data/custom/version_release_dates.json"),
     ])
         .catch(error => console.log(error));
 
-
-    abilityName = await abilityNameResponse.json();
-    abilityType = await abilityTypeResponse.json();
-    abilityTypeBGColor = await abilityTypeBGColorResponse.json();
-    abilityTypeTitle = await abilityTypeTitleResponse.json();
+    syncPairLocale = await syncPairsLocaleResponse.json();
     versions = await versionsResponse.json().then(orderByVersion);
 }
 
@@ -238,7 +242,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
 
         exTitleRow = document.createElement("tr");
         let exTitle = document.createElement("th");
-        exTitle.innerText = "Tenue 6★ EX";
+        exTitle.innerText = syncPairLocale.ex_clothing;
         exTitle.colSpan = 5;
         exTitleRow.appendChild(exTitle);
 
@@ -265,23 +269,23 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
 
     let infosTitleRow = document.createElement("tr");
     let roleTitle = document.createElement("th");
-    roleTitle.innerText = "Rôle";
+    roleTitle.innerText = syncPairLocale.role;
     roleTitle.colSpan = 2;
 
     let exRoleTitle = document.createElement("th");
-    exRoleTitle.innerText = "Rôle EX";
+    exRoleTitle.innerText = syncPairLocale.ex_role;
     exRoleTitle.colSpan = 2;
 
     let potentielTitle = document.createElement("th");
-    potentielTitle.innerText = "Potentiel\n(Base)";
+    potentielTitle.innerText = syncPairLocale.potential_base;
     potentielTitle.colSpan = 2;
 
     let typeTitle = document.createElement("th");
-    typeTitle.innerText = "Type";
+    typeTitle.innerText = syncPairLocale.type;
     typeTitle.colSpan = 2;
 
     let weaknessTitle = document.createElement("th");
-    weaknessTitle.innerText = "Faiblesse";
+    weaknessTitle.innerText = syncPairLocale.weakness;
     weaknessTitle.colSpan = 2;
 
     infosTitleRow.appendChild(roleTitle);
@@ -322,7 +326,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
 
     let descrTitleRow = document.createElement("tr");
     let descrTitle = document.createElement("th");
-    descrTitle.innerText = "Descriptions";
+    descrTitle.innerText = syncPairLocale.descriptions;
     descrTitle.colSpan = 10;
     descrTitleRow.appendChild(descrTitle);
     table.appendChild(descrTitleRow);
@@ -412,7 +416,7 @@ function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole
     let headRow = document.createElement("tr");
 
     let statsMaxTh = document.createElement("th");
-    statsMaxTh.innerText = "Stats max";
+    statsMaxTh.innerText = syncPairLocale.max_stats;
     headRow.appendChild(statsMaxTh);
 
     for(let i = rarity; i <= 6; i++) {
@@ -428,12 +432,12 @@ function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole
     }
 
     table.appendChild(headRow);
-    table.appendChild(getStatRow("PV", monsterData.hpValues, rarity, input.value, exRoleBonus.hp));
-    table.appendChild(getStatRow("Attaque", monsterData.atkValues, rarity, input.value, exRoleBonus.atk, (variation ? variation.atkScale/100 : 1)));
-    table.appendChild(getStatRow("Défense", monsterData.defValues, rarity, input.value, exRoleBonus.def, (variation ? variation.defScale/100 : 1)));
-    table.appendChild(getStatRow("Atq. Spé.", monsterData.spaValues, rarity, input.value, exRoleBonus.spa, (variation ? variation.spaScale/100 : 1)));
-    table.appendChild(getStatRow("Déf. Spé.", monsterData.spdValues, rarity, input.value, exRoleBonus.spd, (variation ? variation.spdScale/100 : 1)));
-    table.appendChild(getStatRow("Vitesse", monsterData.speValues, rarity, input.value, exRoleBonus.spe, (variation ? variation.speScale/100 : 1)));
+    table.appendChild(getStatRow(syncPairLocale.hp, monsterData.hpValues, rarity, input.value, exRoleBonus.hp));
+    table.appendChild(getStatRow(syncPairLocale.atk, monsterData.atkValues, rarity, input.value, exRoleBonus.atk, (variation ? variation.atkScale/100 : 1)));
+    table.appendChild(getStatRow(syncPairLocale.def, monsterData.defValues, rarity, input.value, exRoleBonus.def, (variation ? variation.defScale/100 : 1)));
+    table.appendChild(getStatRow(syncPairLocale.spa, monsterData.spaValues, rarity, input.value, exRoleBonus.spa, (variation ? variation.spaScale/100 : 1)));
+    table.appendChild(getStatRow(syncPairLocale.spd, monsterData.spdValues, rarity, input.value, exRoleBonus.spd, (variation ? variation.spdScale/100 : 1)));
+    table.appendChild(getStatRow(syncPairLocale.spe, monsterData.speValues, rarity, input.value, exRoleBonus.spe, (variation ? variation.speScale/100 : 1)));
     statsDiv.appendChild(table);
 }
 
@@ -442,7 +446,7 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
     let monsterData = getMonsterById(monsterId);
 
     let statsH2 = document.createElement("h2");
-    statsH2.innerText = "Statistiques";
+    statsH2.innerText = syncPairLocale.stats;
     contentDiv.appendChild(statsH2);
 
     let statContainer = document.createElement("div");
@@ -455,7 +459,7 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
     toolFieldset.style.display = "inline-block";
     toolFieldset.style.verticalAlign = "middle";
     toolFieldset.style.margin = "5px";
-    toolFieldset.innerHTML = "<legend><b>Options</b></legend>"
+    toolFieldset.innerHTML = `<legend><b>${syncPairLocale.stats_settings}</b></legend>`;
 
     let defaultLevels = document.createElement("dataList");
     defaultLevels.id = "defaultLevels";
@@ -474,7 +478,7 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
 
     let lvlLabel = document.createElement("label");
     lvlLabel.setAttribute("for", "levelInput");
-    lvlLabel.innerHTML = "<b>Niveau : </b>";
+    lvlLabel.innerHTML = `<b>${syncPairLocale.level}: </b>`;
     lvlLabel.style.display = "table-cell";
     lvlLabel.style.textAlign = "right";
     lvlP.appendChild(lvlLabel);
@@ -499,7 +503,7 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
         exRoleLabel.setAttribute("for", "exRoleCheckbox");
         exRoleLabel.style.display = "table-cell";
         exRoleLabel.style.textAlign = "right";
-        exRoleLabel.innerHTML = "<b>Rôle Ex débloqué : </b>";
+        exRoleLabel.innerHTML = `<b>${syncPairLocale.ex_role_unlocked}: </b>`;
         exRoleP.appendChild(exRoleLabel)
 
 
@@ -531,7 +535,7 @@ function setPairPassives(contentDiv, variation = null) {
     let tr = trainer.find(t => t.trainerId === syncPairSelect.value);
 
     let skillsH2 = document.createElement("h2");
-    skillsH2.innerText = "Talents";
+    skillsH2.innerText = syncPairLocale.skills_title;
     contentDiv.appendChild(skillsH2);
 
     let table = document.createElement("table");
@@ -541,17 +545,17 @@ function setPairPassives(contentDiv, variation = null) {
     let headRow = document.createElement("tr");
     let headTitle = document.createElement("th");
     headTitle.colSpan = 2;
-    headTitle.innerText = "Talents passifs";
+    headTitle.innerText = syncPairLocale.passive_skills;
     headRow.appendChild(headTitle);
     table.appendChild(headRow);
 
     let titleRow = document.createElement("tr");
     let nameTitle = document.createElement("th");
-    nameTitle.innerText = "Nom";
+    nameTitle.innerText = syncPairLocale.passive_skill_name;
     titleRow.appendChild(nameTitle);
 
     let descrTitle = document.createElement("th");
-    descrTitle.innerText = "Description";
+    descrTitle.innerText = syncPairLocale.passiive_skill_description;
     titleRow.appendChild(descrTitle);
 
     table.appendChild(titleRow);
@@ -587,7 +591,7 @@ function setPairTeamSkills(contentDiv) {
 
     let titleRow = document.createElement("tr");
     let titleCell = document.createElement("th");
-    titleCell.innerText = "Talents d'équipe";
+    titleCell.innerText = syncPairLocale.team_skills;
 
     let row = document.createElement("tr");
 
@@ -626,7 +630,7 @@ function getMoveRow(moveId) {
     tr.appendChild(typeCell);
 
     let categoryCell = document.createElement("td");
-    categoryCell.innerText = categoryToFR[mov.category];
+    categoryCell.innerText = commonLocales.category_names[mov.category];
     tr.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
@@ -670,7 +674,7 @@ function getGMaxMoveRow(moveId) {
     tr.appendChild(typeCell);
 
     let categoryCell = document.createElement("td");
-    categoryCell.innerText = categoryToFR[mov.category];
+    categoryCell.innerText = commonLocales.category_names[mov.category];
     tr.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
@@ -701,7 +705,7 @@ function getSyncMoveRow(syncMoveId, tr) {
     row.appendChild(typeCell);
 
     let categoryCell = document.createElement("td");
-    categoryCell.innerText = categoryToFR[mov.category];
+    categoryCell.innerText = commonLocales.category_names[mov.category];
     row.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
@@ -714,13 +718,13 @@ function getSyncMoveRow(syncMoveId, tr) {
 
     if(hasExUnlocked(tr.trainerId)) {
         let exEffectCell = document.createElement("td");
-        exEffectCell.innerText = exSyncEffect[tr.role];
+        exEffectCell.innerText = commonLocales.ex_sync_effect[tr.role];
         row.appendChild(exEffectCell);
     }
 
     if(hasExRoleUnlocked(tr.trainerId)) {
         let exRoleEffectCell = document.createElement("td");
-        exRoleEffectCell.innerText = exSyncEffect[getExRoleId(tr.trainerId)];
+        exRoleEffectCell.innerText = commonLocales.ex_sync_effect[getExRoleId(tr.trainerId)];
         row.appendChild(exRoleEffectCell);
     }
 
@@ -733,12 +737,12 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     table.style.textAlign = "center";
 
     let movesH2 = document.createElement("h2");
-    movesH2.innerText = "Capacités";
+    movesH2.innerText = syncPairLocale.moves_title;
     contentDiv.appendChild(movesH2);
 
     let headRow = document.createElement("tr");
     let headTitle = document.createElement("th");
-    headTitle.innerText = "Capacités";
+    headTitle.innerText = syncPairLocale.moves;
     headTitle.colSpan = 9;
     headRow.appendChild(headTitle);
     table.appendChild(headRow);
@@ -746,39 +750,39 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     let titleRow = document.createElement("tr");
 
     let titleName = document.createElement("th");
-    titleName.innerText = "Nom";
+    titleName.innerText = syncPairLocale.move_name;
     titleRow.appendChild(titleName);
 
     let titleType = document.createElement("th");
-    titleType.innerText = "Type";
+    titleType.innerText = syncPairLocale.move_type;
     titleRow.appendChild(titleType);
 
     let titleCategory = document.createElement("th");
-    titleCategory.innerText = "Catégorie";
+    titleCategory.innerText = syncPairLocale.move_category;
     titleRow.appendChild(titleCategory);
 
     let titlePower = document.createElement("th");
-    titlePower.innerText = "Puissance";
+    titlePower.innerText = syncPairLocale.move_power;
     titleRow.appendChild(titlePower);
 
     let titleAccuracy = document.createElement("th");
-    titleAccuracy.innerText = "Précision";
+    titleAccuracy.innerText = syncPairLocale.move_accuracy;
     titleRow.appendChild(titleAccuracy);
 
     let titleGauge = document.createElement("th");
-    titleGauge.innerText = "Jauge";
+    titleGauge.innerText = syncPairLocale.move_gauge;
     titleRow.appendChild(titleGauge);
 
     let titleTarget = document.createElement("th");
-    titleTarget.innerText = "Cible";
+    titleTarget.innerText = syncPairLocale.move_target;
     titleRow.appendChild(titleTarget);
 
     let titleEffect = document.createElement("th");
-    titleEffect.innerText = "Effet";
+    titleEffect.innerText = syncPairLocale.move_description;
     titleRow.appendChild(titleEffect);
 
     let titleLimit = document.createElement("th");
-    titleLimit.innerText = "Limite";
+    titleLimit.innerText = syncPairLocale.move_uses;
     titleRow.appendChild(titleLimit);
 
     table.appendChild(titleRow);
@@ -820,7 +824,7 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
         let titleRow = document.createElement("tr");
 
         let titleDynamax = document.createElement("th");
-        titleDynamax.innerText = "Capacités Duo Dynamax";
+        titleDynamax.innerText = syncPairLocale.max_moves;
         titleDynamax.colSpan = 6;
         titleRow.appendChild(titleDynamax);
         table.appendChild(titleRow);
@@ -828,27 +832,27 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
         let headRow = document.createElement("tr");
 
         let headName = document.createElement("th");
-        headName.innerText = "Nom";
+        headName.innerText = syncPairLocale.move_name;
         headRow.appendChild(headName);
 
         let headType = document.createElement("th");
-        headType.innerText = "Type";
+        headType.innerText = syncPairLocale.move_type;
         headRow.appendChild(headType);
 
         let headCategory = document.createElement("th");
-        headCategory.innerText = "Catégorie";
+        headCategory.innerText = syncPairLocale.move_category;
         headRow.appendChild(headCategory);
 
         let headPower = document.createElement("th");
-        headPower.innerText = "Puissance";
+        headPower.innerText = syncPairLocale.move_power;
         headRow.appendChild(headPower);
 
         let headTarget = document.createElement("th");
-        headTarget.innerText = "Cible";
+        headTarget.innerText = syncPairLocale.move_target;
         headRow.appendChild(headTarget);
 
         let headEffect = document.createElement("th");
-        headEffect.innerText = "Effet";
+        headEffect.innerText = syncPairLocale.move_description;
         headRow.appendChild(headEffect);
 
         table.appendChild(headRow);
@@ -873,7 +877,7 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     titleRow = document.createElement("tr");
 
     let titleSync = document.createElement("th");
-    titleSync.innerText = "Capacité Duo";
+    titleSync.innerText = syncPairLocale.sync_move;
     titleSync.colSpan = 5 + hasExUnlocked(syncPairSelect.value) + hasExRoleUnlocked(syncPairSelect.value);
     titleRow.appendChild(titleSync);
     table.appendChild(titleRow);
@@ -881,34 +885,34 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     headRow = document.createElement("tr");
 
     let syncHeadName = document.createElement("th");
-    syncHeadName.innerText = "Nom";
+    syncHeadName.innerText = syncPairLocale.move_name;
     headRow.appendChild(syncHeadName);
 
     let syncHeadType = document.createElement("th");
-    syncHeadType.innerText = "Type";
+    syncHeadType.innerText = syncPairLocale.move_type;
     headRow.appendChild(syncHeadType);
 
     let syncHeadCategory = document.createElement("th");
-    syncHeadCategory.innerText = "Catégorie";
+    syncHeadCategory.innerText = syncPairLocale.move_category;
     headRow.appendChild(syncHeadCategory);
 
     let syncHeadPower = document.createElement("th");
-    syncHeadPower.innerText = "Puissance";
+    syncHeadPower.innerText = syncPairLocale.move_power;
     headRow.appendChild(syncHeadPower);
 
     let syncHeadEffect = document.createElement("th");
-    syncHeadEffect.innerText = "Effet";
+    syncHeadEffect.innerText = syncPairLocale.move_description;
     headRow.appendChild(syncHeadEffect);
 
     if(hasExUnlocked(syncPairSelect.value)) {
         let syncHeadExEffect = document.createElement("th");
-        syncHeadExEffect.innerText = "Effet (EX)";
+        syncHeadExEffect.innerText = syncPairLocale.sync_move_ex_title;
         headRow.appendChild(syncHeadExEffect);
     }
 
     if(hasExRoleUnlocked(syncPairSelect.value)) {
         let syncHeadExRoleEffect = document.createElement("th");
-        syncHeadExRoleEffect.innerText = "Role EX";
+        syncHeadExRoleEffect.innerText = syncPairLocale.sync_move_ex_role_title;
         headRow.appendChild(syncHeadExRoleEffect);
     }
 
@@ -927,7 +931,7 @@ function appendGridCategory(table, panels, category) {
     let categoryName = document.createElement("th");
     categoryName.style.backgroundColor = abilityTypeBGColor[category];
     categoryName.colSpan = 5;
-    categoryName.innerText = abilityTypeTitle[category];
+    categoryName.innerText = syncPairLocale.sync_grid_ability_type_title[category];
     headRow.appendChild(categoryName);
     table.appendChild(headRow);
 
@@ -938,7 +942,7 @@ function appendGridCategory(table, panels, category) {
             tr.style.backgroundColor = "#7afa96";
         }
 
-        let amelioration = abilityName[p.ability.type];
+        let amelioration = syncPairLocale.sync_grid_ability_name[p.ability.type];
         amelioration = amelioration.replace("{val}", p.ability.value);
 
         if(p.ability.passiveId) {
@@ -1096,7 +1100,7 @@ function setGridPicker(ap, gridPickerDiv) {
     gridDiv.appendChild(center);
 
     ap.forEach(panel => {
-        let amelioration = abilityName[panel.ability.type];
+        let amelioration = syncPairLocale.sync_grid_ability_name[panel.ability.type];
         amelioration = amelioration.replace("{val}", panel.ability.value);
 
         if(panel.ability.passiveId) {
@@ -1125,10 +1129,10 @@ function setGridPicker(ap, gridPickerDiv) {
         tooltip.innerHTML = `<p style="text-align: center"><b>${amelioration}</b></p>\n`;
 
         if(panel.ability.passiveId) {
-            tooltip.innerHTML += `<p><b>Effet :</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
+            tooltip.innerHTML += `<p><b>${syncPairLocale.sync_grid_tile_description_tooltip}:</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
         }
 
-        tooltip.innerHTML += `<p><b>Duo-Sphères :</b> ${panel.orbCost} - <b>Énergie :</b> ${panel.energyCost}</p>`;
+        tooltip.innerHTML += `<p><b>${syncPairLocale.sync_grid_tile_orbs_tooltip}:</b> ${panel.orbCost} - <b>${syncPairLocale.sync_grid_tile_energy_tooltip}:</b> ${panel.energyCost}</p>`;
 
         let polygon = document.createElementNS("http://www.w3.org/2000/svg","polygon");
         polygon.setAttribute("points", "17,00 0,30 0,31 17,60 52,60 69,31 69,30 52,0");
@@ -1216,7 +1220,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
     let tr = document.createElement("tr");
     let capaTitle = document.createElement("th");
-    capaTitle.innerText = "Niveau des capacités";
+    capaTitle.innerText = syncPairLocale.sync_pair_level;
     capaTitle.colSpan = 2;
 
     tr.appendChild(capaTitle);
@@ -1263,7 +1267,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
     tr = document.createElement("tr");
     let energyLimitTitle = document.createElement("th");
-    energyLimitTitle.innerText = "Niveau d'énergie max";
+    energyLimitTitle.innerText = syncPairLocale.sync_grid_energy_level;
     energyLimitTitle.colSpan = 2;
 
     tr.appendChild(energyLimitTitle);
@@ -1326,10 +1330,10 @@ function setGridPicker(ap, gridPickerDiv) {
 
     tr = document.createElement("tr");
     let orbTitle = document.createElement("th");
-    orbTitle.innerText = "Duo-Sphères";
+    orbTitle.innerText = syncPairLocale.sync_orbs;
 
     let energyTitle = document.createElement("th");
-    energyTitle.innerText = "Énergie";
+    energyTitle.innerText = syncPairLocale.sync_grid_energy;
 
     tr.appendChild(orbTitle);
     tr.appendChild(energyTitle);
@@ -1352,7 +1356,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
     tr = document.createElement("tr");
     let tilesTitle = document.createElement("th");
-    tilesTitle.innerText = "Cases sélectionnées";
+    tilesTitle.innerText = syncPairLocale.sync_grid_selected_tiles;
     tilesTitle.colSpan = 2;
 
     tr.appendChild(tilesTitle);
@@ -1405,7 +1409,7 @@ function setSyncGrid() {
 
     setGridPicker(ap, gridPickerDiv);
 
-    container.innerHTML = "<br /><h2>Plateau Duo-Gemme</h2>";
+    container.innerHTML = `<br /><h2>${syncPairLocale.sync_grid_title}</h2>`;
     container.appendChild(gridPickerDiv);
     container.appendChild(document.createElement("br"));
 
@@ -1416,23 +1420,23 @@ function setSyncGrid() {
     let headRow = document.createElement("tr");
 
     let upgradeTitle = document.createElement("th");
-    upgradeTitle.innerText = "Amélioration";
+    upgradeTitle.innerText = syncPairLocale.sync_grid_tile_upgrade_title;
     headRow.appendChild(upgradeTitle);
 
     let effectTitle = document.createElement("th");
-    effectTitle.innerText = "Effet";
+    effectTitle.innerText = syncPairLocale.sync_grid_tile_description_title;
     headRow.appendChild(effectTitle);
 
     let energyTitle = document.createElement("th");
-    energyTitle.innerText = "Énergie requise";
+    energyTitle.innerText = syncPairLocale.sync_grid_tile_required_energy_title;
     headRow.appendChild(energyTitle);
 
     let spheresTitle = document.createElement("th");
-    spheresTitle.innerText = "Duo-Sphères requises";
+    spheresTitle.innerText = syncPairLocale.sync_grid_tile_required_orbs_title;
     headRow.appendChild(spheresTitle);
 
     let trainerLevelTitle = document.createElement("th");
-    trainerLevelTitle.innerText = "Niveau des capacités requis";
+    trainerLevelTitle.innerText = syncPairLocale.sync_grid_tile_required_pair_level_title;
     headRow.appendChild(trainerLevelTitle);
 
     table.appendChild(headRow);
@@ -1556,11 +1560,11 @@ function setLatestPairs() {
         .sort((a, b) => a.scheduleId.localeCompare(b.scheduleId));
 
     let h2 = document.createElement("h2");
-    h2.innerText = "Dernière mise à jour";
+    h2.innerText = syncPairLocale.last_update;
     lastReleasePairsDiv.appendChild(h2);
 
     let addedH3 = document.createElement("h3");
-    addedH3.innerText = "Duos ajoutés";
+    addedH3.innerText = syncPairLocale.pairs_added;
     lastReleasePairsDiv.appendChild(addedH3);
 
     let ul = document.createElement("ul");
@@ -1584,7 +1588,7 @@ function setLatestPairs() {
     lastReleasePairsDiv.appendChild(ul);
 
     let gridH3 = document.createElement("h3");
-    gridH3.innerText = "Plateaux étendus";
+    gridH3.innerText = syncPairLocale.extended_grids;
     lastReleasePairsDiv.appendChild(gridH3);
 
     let updatedGridTrainer = [...new Set(abilityPanel.filter(ap => schedule.map(s => s.scheduleId).includes(ap.scheduleId)).map(ap => ap.trainerId))]
@@ -1651,8 +1655,11 @@ async function init() {
     syncPairDiv = document.getElementById("syncPairDiv");
     toolsDiv = document.getElementById('adminTools');
 
+    await buildHeader();
     await getData();
     await getCustomJSON();
+
+    document.getElementById("changePairLabel").innerText = syncPairLocale.change_pair;
 
     if(isAdminMode) {
         dataArea = document.getElementById("dataArea");
@@ -1813,10 +1820,10 @@ function appendGridCategoryBipCode(panels, category) {
         },[])
         .sort((a, b) => a.level - b.level || a.cellId - b.cellId);
 
-    let string = `\t[tr][th|bgcolor=${abilityTypeBGColor[category]}|colspan=5]${abilityTypeTitle[category]}[/th][/tr]\n`;
+    let string = `\t[tr][th|bgcolor=${abilityTypeBGColor[category]}|colspan=5]${syncPairLocale.sync_grid_ability_type_title[category]}[/th][/tr]\n`;
 
     panels.forEach(p => {
-        let amelioration = abilityName[p.ability.type];
+        let amelioration = syncPairLocale.sync_grid_ability_name[p.ability.type];
         amelioration = amelioration.replace("{val}", p.ability.value);
 
         if(p.ability.passiveId) {

@@ -27,18 +27,18 @@ async function getData() {
         passiveSkillNamePartsResponse,
         tagNameWithPrepositionsResponse,
     ] = await Promise.all([
-        fetch("./data/proto/Move.json"),
-        fetch("./data/proto/MoveAndPassiveSkillDigit.json"),
-        fetch("./data/lsd/move_description_fr.json"),
-        fetch("./data/lsd/move_description_parts_fr.json"),
-        fetch("./data/lsd/move_name_fr.json"),
-        fetch("./data/lsd/move_target_type_fr.json"),
-        fetch("./data/lsd/passive_skill_and_move_number_fr.json"),
-        fetch("./data/lsd/passive_skill_description_fr.json"),
-        fetch("./data/lsd/passive_skill_description_parts_fr.json"),
-        fetch("./data/lsd/passive_skill_name_fr.json"),
-        fetch("./data/lsd/passive_skill_name_parts_fr.json"),
-        fetch("./data/lsd/tag_name_with_prepositions_fr.json")
+        fetch(`./data/proto/Move.json`),
+        fetch(`./data/proto/MoveAndPassiveSkillDigit.json`),
+        fetch(`./data/lsd/move_description_${lng}.json`),
+        fetch(`./data/lsd/move_description_parts_${lng}.json`),
+        fetch(`./data/lsd/move_name_${lng}.json`),
+        fetch(`./data/lsd/move_target_type_${lng}.json`),
+        fetch(`./data/lsd/passive_skill_and_move_number_${lng}.json`),
+        fetch(`./data/lsd/passive_skill_description_${lng}.json`),
+        fetch(`./data/lsd/passive_skill_description_parts_${lng}.json`),
+        fetch(`./data/lsd/passive_skill_name_${lng}.json`),
+        fetch(`./data/lsd/passive_skill_name_parts_${lng}.json`),
+        fetch(`./data/lsd/tag_name_with_prepositions_${lng}.json`)
     ])
         .catch(error => console.log(error));
 
