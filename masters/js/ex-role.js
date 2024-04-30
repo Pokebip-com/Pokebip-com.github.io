@@ -11,6 +11,7 @@ let trainerNames;
 let trainerVerboseNames;
 
 async function getData() {
+    await buildHeader();
     const [
         monsterResponse,
         monsterBaseResponse,
@@ -27,9 +28,9 @@ async function getData() {
         fetch("./data/proto/Trainer.json"),
         fetch("./data/proto/TrainerExRole.json"),
         fetch("./data/proto/TrainerBase.json"),
-        fetch("./data/lsd/monster_name_fr.json"),
-        fetch("./data/lsd/trainer_name_fr.json"),
-        fetch("./data/lsd/trainer_verbose_name_fr.json")
+        fetch(`./data/lsd/monster_name_${lng}.json`),
+        fetch(`./data/lsd/trainer_name_${lng}.json`),
+        fetch(`./data/lsd/trainer_verbose_name_${lng}.json`)
     ])
         .catch(error => console.log(error));
 
@@ -54,11 +55,13 @@ async function getData() {
 }
 
 getData().then(() => {
+    document.getElementById("pageTitle").innerText = commonLocales.submenu_pair_ex_role;
+
     exRoleDiv = document.getElementById("exRoleDiv");
 
     exRoleDiv.innerHTML += "<ul>";
     for(let entry in trainerExRole) {
-        let role = role_names[trainerExRole[entry].role];
+        let role = commonLocales.role_names[trainerExRole[entry].role];
 
         exRoleDiv.innerHTML += `<li><b>${getTrainerName(trainerExRole[entry].trainerId)} & ${getMonsterNameByTrainerId(trainerExRole[entry].trainerId)} :</b> ${role}</li>`;
     }
