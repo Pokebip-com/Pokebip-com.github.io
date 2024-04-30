@@ -257,7 +257,7 @@ async function getCustomJSON() {
         shopTierPricesResponse,
         versionsResponse
     ] = await Promise.all([
-        fetch(`./data/locales/schedule_${lng}.json`),
+        fetch(`./data/locales/${lng}/schedule.json`),
         fetch(`./data/custom/shop_tier_prices.json`),
         fetch(`./data/custom/version_release_dates.json`)
     ])

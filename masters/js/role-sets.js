@@ -3,18 +3,23 @@ let toolboxDiv;
 let mainUl;
 
 let brRoleBonusSet;
+let roleSetLocale;
 
 async function getData() {
+    await buildHeader("../data/locales/");
+
     const [
         brRoleBonusSetResponse,
-
+        roleSetLocaleResponse
     ] = await Promise.all([
         fetch("../data/proto/BattleRallyRoleBonusSet.json"),
+        fetch(`../data/locales/${lng}/role-set.json`),
     ])
         .catch(error => console.log(error));
 
     const brRoleBonusSetJSON = await brRoleBonusSetResponse.json();
     brRoleBonusSet = brRoleBonusSetJSON.entries;
+    roleSetLocale = await roleSetLocaleResponse.json();
 }
 
 function createSelectInput() {
@@ -71,7 +76,7 @@ function appendSelectRow(rowNum) {
     let label = document.createElement("label");
     label.setAttribute("for", `toolRow_${rowNum}_A`);
     label.style.fontWeight = "700";
-    label.innerText = `Étage ${rowNum}`;
+    label.innerText = `${roleSetLocale.floor} ${rowNum}`;
 
     let inputA = createSelectInput();
     inputA.id = `toolRow_${rowNum}_A`;
@@ -80,7 +85,7 @@ function appendSelectRow(rowNum) {
     inputB.id = `toolRow_${rowNum}_B`;
 
     let eraseBtn = document.createElement("button");
-    eraseBtn.innerText = "Effacer";
+    eraseBtn.innerText = roleSetLocale.reset;
     eraseBtn.addEventListener("click", () => {
         inputA.value = "";
         inputB.value = "";
@@ -111,6 +116,20 @@ getData().then(() => {
     roleSetsDiv = document.getElementById("roleSetsDiv");
     toolboxDiv = document.getElementById("toolbox");
     mainUl = document.getElementById("mainUL");
+
+    document.getElementById("pageTitle").innerText = `${commonLocales.menu_battle_rally} > ${commonLocales.submenu_rally_role_set}`;
+    document.getElementById("fieldsetLegend").innerText = roleSetLocale.filters;
+
+    let dataList = document.createElement("datalist");
+    dataList.id = "roles-list";
+
+    for(let i = 1; i < commonLocales.role_name_standard.length; i++) {
+        let option = document.createElement("option");
+        option.value = commonLocales.role_name_standard[i];
+        dataList.appendChild(option);
+    }
+
+    document.getElementById("contentDiv").appendChild(dataList);
 
     appendSelectRow(1);
 
@@ -151,8 +170,8 @@ function setMainUL() {
             let inputB = document.getElementById(`toolRow_${i+1}_B`);
 
             if(inputA && inputB && (
-                (role_name_standard.includes(inputA.value) && inputA.value !== role_name_standard[setData[i].roleA])
-                || (role_name_standard.includes(inputB.value) && inputB.value !== role_name_standard[setData[i].roleB])
+                (commonLocales.role_name_standard.includes(inputA.value) && inputA.value !== commonLocales.role_name_standard[setData[i].roleA])
+                || (commonLocales.role_name_standard.includes(inputB.value) && inputB.value !== commonLocales.role_name_standard[setData[i].roleB])
             )) {
                 isSetVisible = false;
                 break;
@@ -161,15 +180,15 @@ function setMainUL() {
             let tr = document.createElement("tr");
 
             let floor = document.createElement("td");
-            floor.innerHTML = `<b>Étage ${setData[i].floor}</b>`;
+            floor.innerHTML = `<b>${roleSetLocale.floor} ${setData[i].floor}</b>`;
             tr.appendChild(floor);
 
             let roleA = document.createElement("td");
-            roleA.innerText = `${role_name_standard[setData[i].roleA]}`;
+            roleA.innerText = commonLocales.role_name_standard[setData[i].roleA];
             tr.appendChild(roleA);
 
             let roleB = document.createElement("td");
-            roleB.innerText = `${role_name_standard[setData[i].roleB]}`;
+            roleB.innerText = commonLocales.role_name_standard[setData[i].roleB];
             tr.appendChild(roleB);
 
             table.appendChild(tr);

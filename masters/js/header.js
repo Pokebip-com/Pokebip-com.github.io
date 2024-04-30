@@ -67,13 +67,13 @@ function getSubnav(data) {
 
 }
 
-async function getLocale() {
-    let commonLocalesResponse = await fetch(`./data/locales/common_${lng}.json`);
+async function getLocale(localePath) {
+    let commonLocalesResponse = await fetch(`${localePath}${lng}/common.json`);
     commonLocales = await commonLocalesResponse.json();
 }
 
-async function buildHeader() {
-    await getLocale();
+async function buildHeader(localePath = "./data/locales/") {
+    await getLocale(localePath);
 
     let headerData = [
         { "title": commonLocales.menu_schedule, "url": "/masters/programme.html", "drop": [] },
