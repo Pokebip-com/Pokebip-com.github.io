@@ -9,14 +9,30 @@
   </head>
 
   <body>
-    <div id="contentDiv" style="margin: 0 auto;">
+    <div id="contentDiv">
       <div style="text-align: center; font-size: 28px;">
-        <p>Je trouverai bien quelque chose à mettre ici un jour...</p>
-        <p>En attendant, vous pouvez passer par le menu pour accéder aux pages qui traitent du jeu !</p>
+        <p id="firstLine"></p>
+        <p id="secondLine"></p>
       </div>
     </div>
 
     <script src="./js/header.js"></script>
+    <script>
+      buildHeader();
+      let firstLine = document.getElementById("firstLine");
+      let secondLine = document.getElementById("secondLine");
+      let indexLocale;
+
+      async function getIndexLocale() {
+        let indexLocaleResponse = await fetch(`./data/locales/${lng}/index.json`);
+        indexLocale = await indexLocaleResponse.json();
+      }
+
+      getIndexLocale().then(() => {
+        firstLine.innerText = indexLocale.firstLine;
+        secondLine.innerText = indexLocale.secondLine;
+      });
+    </script>
   </body>
 
 </html>
