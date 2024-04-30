@@ -1,5 +1,4 @@
 let locale = navigator.language || navigator.userLanguage || "en-US";
-locale = "en-US";
 let lng = locale.substring(0, 2);
 if(lng !== "fr" && lng !== "en") lng = "en";
 let commonLocales;
