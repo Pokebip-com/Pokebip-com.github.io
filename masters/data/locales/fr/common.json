@@ -25,5 +25,8 @@
   "submenu_pair_ex_role" : "Rôles EX",
   "menu_battle_rally" : "Rallye",
   "submenu_rally_role_set" : "Sets de rôles",
+  "menu_language" : "Langue",
+  "submenu_language_fr" : "Français",
+  "submenu_language_en" : "English",
   "adminmenu_sync_grid" : "Plateaux Duo-Gemme"
 }

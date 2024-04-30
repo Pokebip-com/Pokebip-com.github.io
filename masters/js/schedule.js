@@ -1229,7 +1229,7 @@ async function init() {
 
     await buildHeader();
     await getCustomJSON();
-    await getData().then(() => buildHeader(commonLocales));
+    await getData().then();
     changeHtmlTexts();
 
     if(isAdminMode) {

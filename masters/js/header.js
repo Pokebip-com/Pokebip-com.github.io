@@ -1,6 +1,28 @@
-let locale = navigator.language || navigator.userLanguage || "en-US";
+const supportedLanguages = ["fr", "en"];
+const pageParams = new URLSearchParams(window.location.search);
+const pageUrl = new URL(window.location);
+let urlLang = pageUrl.searchParams.get("lang");
+
+let locale;
+
+switch(urlLang) {
+    case "fr":
+        locale = "fr-FR";
+        setCookie("locale", "fr-FR", 8000);
+        break;
+
+    case "en":
+        locale = "en-US";
+        setCookie("locale", "en-US", 8000);
+        break;
+
+    default:
+        locale = getCookie("locale") || navigator.language || navigator.userLanguage || "en-US";
+        break;
+}
+
 let lng = locale.substring(0, 2);
-if(lng !== "fr" && lng !== "en") lng = "en";
+if(!supportedLanguages.includes(lng)) lng = "en";
 let commonLocales;
 
 let body = document.getElementsByTagName("body")[0];
@@ -23,8 +45,16 @@ function getCookie(cname) {
     return "";
 }
 
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
 function createNavEntry(url, title) {
     let a = document.createElement("a");
+    console.log(url);
     a.href = url;
     a.innerText = title;
 
@@ -80,23 +110,34 @@ async function buildHeader(localePath = "./data/locales/") {
         { "title" : commonLocales.menu_sync_pairs, "url": "", "drop": [
                 { "title" : commonLocales.submenu_pair_page, "url" : "/masters/duo.html" },
                 { "title": commonLocales.submenu_pair_ex_role, "url": "/masters/ex-role.html" }
-            ] },
+            ]
+        },
         { "title": commonLocales.menu_battle_rally, "url": "", "drop": [
                 { "title": commonLocales.submenu_rally_role_set, "url": "/masters/rally/role-set.html" }
-            ] },
+            ]
+        },
+        {
+            "title": commonLocales.menu_language, "url": "", "drop": []
+        }
     ];
 
+    supportedLanguages.forEach(language => {
+        let params = pageParams;
+        params.delete("lang");
+        params.append("lang", language);
+        headerData[3]["drop"].push({ "title": commonLocales[`submenu_language_${language}`], "url": pageUrl.toString().split("?")[0] + "?" + params.toString() });
+    });
+
     let adminHeaderData = [
-        { "title" : commonLocales.adminmenu_sync_grid, "url": "/masters/sync-grids.html", "drop": [] },
+        //{ "title" : commonLocales.adminmenu_sync_grid, "url": "/masters/sync-grids.html", "drop": [] },
     ];
 
 
     if(!isAdminMode) {
-        const url = new URL(window.location);
-        isAdminMode = url.searchParams.get("admin");
+        isAdminMode = pageUrl.searchParams.get("admin");
 
         if (isAdminMode !== null || adminHeaderData.filter(ahd => ahd.url === currentUrl).length > 0) {
-            document.cookie = "admin=true; expires Fri, 31 Dec 9999 21:10:10 GMT";
+            setCookie("admin", "true", 8000);
             isAdminMode = true;
         }
     }
