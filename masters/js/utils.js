@@ -75,7 +75,7 @@ function getTrainerName(id) {
         return trainerVerboseNames[id];
     let tr = trainer.find(t => t.trainerId === id) || {};
     let tb = trainerBase.find(tba => tba.id === tr.trainerBaseId.toString()) || {};
-    return trainerNames[tb.altTrainerNameId] || trainerNames[tb.trainerNameId] || "Dresseur (Scottie/Bettie)";
+    return trainerNames[tb.altTrainerNameId] || trainerNames[tb.trainerNameId] || commonLocales.base_trainer_name;
 }
 
 function getMonsterNameByTrainerId(id) {
@@ -113,7 +113,6 @@ function getTrainerActorId(trainerId, replaceKeyword = true) {
         let rak = replaceActorKeyword.find(rak => rak.replacedActorId === actorId);
 
         if(rak) {
-            console.log("RAK :", rak);
             actorId = rak.replacingActorId;
         }
     }
@@ -123,14 +122,11 @@ function getTrainerActorId(trainerId, replaceKeyword = true) {
 
 function getActorDressFromTrainerId(trainerId) {
     let val = trainerDress.find(td => td.trainerId == trainerId);
-    console.log(trainerId);
-    console.log(val);
 
     if(!val)
         return null;
 
     let dress = actorDress.find(ad => ad.id == val.actorDressId);
-    console.log(dress);
 
     if(!dress)
         return null;

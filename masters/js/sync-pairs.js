@@ -191,7 +191,7 @@ function populateSelect() {
     while(syncPairSelect.length > 0) {
         syncPairSelect.remove(0);
     }
-    let optionData = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER").map(t => {
+    let optionData = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER" && t.scoutMethod !== 3).map(t => {
         let data = {};
         data.value = t.trainerId;
         data.text = getPairName(t.trainerId);
@@ -1423,6 +1423,9 @@ function setSyncGrid() {
             return acc;
         }, []);
 
+    if(ap.length === 0)
+        return;
+
     let container = document.getElementById("syncGridContainer");
     let gridPickerDiv = document.createElement("div");
     gridPickerDiv.style.textAlign = "center";
@@ -1513,7 +1516,6 @@ function setPairInfos(id, pushState = false) {
     let pairEvolutions = monsterEvolution.filter(me => me.trainerId === id);
     let monsterIds = [];
     let pairVariations = {};
-    let pairEnhancements = {};
 
     let title = document.createElement("h1");
     title.textContent = getPairName(id);
@@ -1883,6 +1885,7 @@ function getPairBipCode(trainerId) {
         + `[include=jeuxvideo/pokemon-masters/duos/0-sommaire-duo]\n\n`;
 
     let t = trainer.find(t => t.trainerId === trainerId);
+    let trainerActorDress = getActorDressFromTrainerId(trainerId);
     let pairEvolutions = monsterEvolution.filter(me => me.trainerId === trainerId);
     let monsterIds = [];
     let monsters = [];
@@ -1893,6 +1896,15 @@ function getPairBipCode(trainerId) {
     for(let i = 0; i < monsterIds.length; i++) {
         pairVariations[monsterIds[i]] = null;
         let variations = monsterVariation.filter(mv => mv.monsterId === monsterIds[i] && mv.form !== 4);
+
+        let enhancements = monsterEnhancement.filter(me => me.monsterIdCurrent === monsterIds[i] && me.type !== "2");
+
+        if(enhancements.length > 0) {
+            enhancements.forEach(e => {
+                variations.push(...monsterVariation.filter(mv => mv.monsterId === e.monsterIdNext));
+            });
+        }
+
         if(variations.length > 0) {
             pairVariations[monsterIds[i]] = variations.map(v => {
                 v.monsterBaseId = getMonsterBaseIdFromActorId(v.actorId);
@@ -1922,7 +1934,7 @@ function getPairBipCode(trainerId) {
     string += "[/th][/tr]\n"
         + "\t[tr]\n";
 
-    string += `\t[td${hasExUnlocked(trainerId) ? "|rowspan=3" : ""}|colspan=4][img]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER.png[/img][/td]\n`
+    string += `\t[td${(hasExUnlocked(trainerId) && trainerActorDress) ? "|rowspan=3" : ""}|colspan=4][img]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER.png[/img][/td]\n`
         + `\t[td|colspan=2]`;
 
     for(let i = 0; i < monsters.length; i++) {
@@ -1936,7 +1948,7 @@ function getPairBipCode(trainerId) {
 
     string += `[/td]\n\t[/tr]\n`;
 
-    if(hasExUnlocked(trainerId)) {
+    if(hasExUnlocked(trainerId) && trainerActorDress) {
         string += `\t[tr][th|colspan=2]Tenue 6★ EX[/th][/tr]\n`
             + `\t[tr][td|colspan=2][img|w=230]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER-ex.png[/img][/td][/tr]\n`;
     }

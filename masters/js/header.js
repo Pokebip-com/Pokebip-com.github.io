@@ -54,7 +54,6 @@ function setCookie(cname, cvalue, exdays) {
 
 function createNavEntry(url, title) {
     let a = document.createElement("a");
-    console.log(url);
     a.href = url;
     a.innerText = title;
 
