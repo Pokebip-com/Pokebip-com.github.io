@@ -1,8 +1,10 @@
 let ability;
 let abilityPanel;
+let actorDress;
 let exRoleStatusUp;
 let monster;
 let monsterBase;
+let monsterEnhancement;
 let monsterEvolution;
 let monsterVariation;
 let replaceActorKeyword;
@@ -10,6 +12,7 @@ let schedule;
 let teamSkill;
 let trainer;
 let trainerBase;
+let trainerDress;
 let trainerExRole;
 
 let abilityType = {
@@ -55,9 +58,11 @@ async function getData() {
     const [
         abilityResponse,
         abilityPanelResponse,
+        actorDressResponse,
         exRoleStatusUpResponse,
         monsterResponse,
         monsterBaseResponse,
+        monsterEnhancementResponse,
         monsterEvolutionResponse,
         monsterVariationResponse,
         replaceActorKeywordResponse,
@@ -65,6 +70,7 @@ async function getData() {
         teamSkillResponse,
         trainerResponse,
         trainerBaseResponse,
+        trainerDressResponse,
         trainerExRoleResponse,
         versionResponse,
         monsterDescriptionResponse,
@@ -79,9 +85,11 @@ async function getData() {
     ] = await Promise.all([
         fetch("./data/proto/Ability.json"),
         fetch("./data/proto/AbilityPanel.json"),
+        fetch("./data/proto/ActorDress.json"),
         fetch("./data/proto/ExRoleStatusUp.json"),
         fetch("./data/proto/Monster.json"),
         fetch("./data/proto/MonsterBase.json"),
+        fetch("./data/proto/MonsterEnhancement.json"),
         fetch("./data/proto/MonsterEvolution.json"),
         fetch("./data/proto/MonsterVariation.json"),
         fetch("./data/proto/ReplaceActorKeyword.json"),
@@ -89,6 +97,7 @@ async function getData() {
         fetch("./data/proto/TeamSkill.json"),
         fetch("./data/proto/Trainer.json"),
         fetch("./data/proto/TrainerBase.json"),
+        fetch("./data/proto/TrainerDress.json"),
         fetch("./data/proto/TrainerExRole.json"),
         fetch("./data/custom/version_release_dates.json"),
         fetch(`./data/lsd/monster_description_${lng}.json`),
@@ -109,6 +118,9 @@ async function getData() {
     abilityPanel = await abilityPanelResponse.json();
     abilityPanel = abilityPanel.entries;
 
+    actorDress = await actorDressResponse.json();
+    actorDress = actorDress.entries;
+
     exRoleStatusUp = await exRoleStatusUpResponse.json();
     exRoleStatusUp = exRoleStatusUp.entries;
 
@@ -126,6 +138,9 @@ async function getData() {
     const monsterEvolutionJSON = await monsterEvolutionResponse.json();
     monsterEvolution = monsterEvolutionJSON.entries;
 
+    const monsterEnhancementJSON = await monsterEnhancementResponse.json();
+    monsterEnhancement = monsterEnhancementJSON.entries;
+
     const monsterVariationJSON = await monsterVariationResponse.json();
     monsterVariation = monsterVariationJSON.entries;
 
@@ -140,6 +155,9 @@ async function getData() {
 
     const trainersBaseJSON = await trainerBaseResponse.json();
     trainerBase = trainersBaseJSON.entries;
+
+    trainerDress = await trainerDressResponse.json();
+    trainerDress = trainerDress.entries;
 
     trainerExRole = await trainerExRoleResponse.json();
     trainerExRole = trainerExRole.entries;
@@ -217,6 +235,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
     let secondRow = document.createElement("tr");
 
     let trainerActorId = getTrainerActorId(syncPairSelect.value);
+    let trainerActorDress = getActorDressFromTrainerId(syncPairSelect.value);
     let trainerImageCell = document.createElement("td");
     let trainerImg = document.createElement("img");
     trainerImg.src = `./data/actor/Trainer/${trainerActorId}/${trainerActorId}_1024.png`;
@@ -237,7 +256,8 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
     table.appendChild(secondRow);
 
     let exTitleRow, exImageRow;
-    if(hasExUnlocked(syncPairSelect.value)) {
+
+    if(hasExUnlocked(syncPairSelect.value) && trainerActorDress) {
         pokemonImageCell.rowSpan = 3;
 
         exTitleRow = document.createElement("tr");
@@ -249,7 +269,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
         exImageRow = document.createElement("tr");
         let exImageCell = document.createElement("td");
 
-        exImageCell.style.backgroundImage = `url("./data/actor/Trainer/${trainerActorId}/${trainerActorId}_mindscape00.png")`;
+        exImageCell.style.backgroundImage = `url("./data/actor/mindscape/Tx_${trainerActorId}_mindscape00.png")`;
         exImageCell.style.backgroundPosition = "center";
         exImageCell.style.backgroundSize = "cover";
         exImageCell.style.backgroundRepeat = "no-repeat";
@@ -257,7 +277,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
 
         let exImg = document.createElement("img");
 
-        exImg.src = `./data/actor/Trainer/${trainerActorId}_01_expose/${trainerActorId}_01_expose_1024.png`;
+        exImg.src = `./data/actor/Trainer/${trainerActorDress}_expose/${trainerActorDress}_expose_1024.png`;
         exImg.style.maxWidth = "256px";
 
         exImageCell.appendChild(exImg);
@@ -555,7 +575,7 @@ function setPairPassives(contentDiv, variation = null) {
     titleRow.appendChild(nameTitle);
 
     let descrTitle = document.createElement("th");
-    descrTitle.innerText = syncPairLocale.passiive_skill_description;
+    descrTitle.innerText = syncPairLocale.passive_skill_description;
     titleRow.appendChild(descrTitle);
 
     table.appendChild(titleRow);
@@ -1493,6 +1513,7 @@ function setPairInfos(id, pushState = false) {
     let pairEvolutions = monsterEvolution.filter(me => me.trainerId === id);
     let monsterIds = [];
     let pairVariations = {};
+    let pairEnhancements = {};
 
     let title = document.createElement("h1");
     title.textContent = getPairName(id);
@@ -1520,6 +1541,14 @@ function setPairInfos(id, pushState = false) {
         }
 
         let variations = monsterVariation.filter(mv => mv.monsterId === monsterIds[i]);
+        let enhancements = monsterEnhancement.filter(me => me.monsterIdCurrent === monsterIds[i] && me.type !== "2");
+
+        if(enhancements.length > 0) {
+            enhancements.forEach(e => {
+                variations.push(...monsterVariation.filter(mv => mv.monsterId === e.monsterIdNext));
+            });
+        }
+
         if(variations.length > 0) {
             pairVariations[monsterIds[i]] = variations;
 

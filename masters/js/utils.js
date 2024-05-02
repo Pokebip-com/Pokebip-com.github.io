@@ -105,19 +105,37 @@ function getNameByMonsterBaseId(id, formId = 0) {
 
 }
 
-function getTrainerActorId(trainerId) {
+function getTrainerActorId(trainerId, replaceKeyword = true) {
     let trainerBaseId = trainer.find(t => t.trainerId === trainerId).trainerBaseId;
     let actorId = trainerBase.find(tb => tb.id === trainerBaseId.toString()).actorId;
 
-    if(actorId) {
+    if(actorId && replaceKeyword) {
         let rak = replaceActorKeyword.find(rak => rak.replacedActorId === actorId);
 
         if(rak) {
+            console.log("RAK :", rak);
             actorId = rak.replacingActorId;
         }
     }
 
     return actorId;
+}
+
+function getActorDressFromTrainerId(trainerId) {
+    let val = trainerDress.find(td => td.trainerId == trainerId);
+    console.log(trainerId);
+    console.log(val);
+
+    if(!val)
+        return null;
+
+    let dress = actorDress.find(ad => ad.id == val.actorDressId);
+    console.log(dress);
+
+    if(!dress)
+        return null;
+
+    return dress.actorDress;
 }
 
 function getFormIdFromActorId(actorId) {
