@@ -105,15 +105,18 @@ function getNameByMonsterBaseId(id, formId = 0) {
 
 }
 
-function getTrainerActorId(trainerId, replaceKeyword = true) {
+function getTrainerActorId(trainerId) {
     let trainerBaseId = trainer.find(t => t.trainerId === trainerId).trainerBaseId;
     let actorId = trainerBase.find(tb => tb.id === trainerBaseId.toString()).actorId;
 
-    if(actorId && replaceKeyword) {
+    if(actorId) {
         let rak = replaceActorKeyword.find(rak => rak.replacedActorId === actorId);
 
         if(rak) {
-            actorId = rak.replacingActorId;
+            let replacingActorTrainer = trainerBase.find(tb => tb.actorId ===  rak.replacingActorId);
+
+            if(replacingActorTrainer && (!replacingActorTrainer.isGeneric || rak.useGenericIfAvailable))
+                actorId = rak.replacingActorId;
         }
     }
 
@@ -126,12 +129,7 @@ function getActorDressFromTrainerId(trainerId) {
     if(!val)
         return null;
 
-    let dress = actorDress.find(ad => ad.id == val.actorDressId);
-
-    if(!dress)
-        return null;
-
-    return dress.actorDress;
+    return actorDress.find(ad => ad.id == val.actorDressId);
 }
 
 function getFormIdFromActorId(actorId) {

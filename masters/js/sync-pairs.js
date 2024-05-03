@@ -277,7 +277,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
 
         let exImg = document.createElement("img");
 
-        exImg.src = `./data/actor/Trainer/${trainerActorDress}_expose/${trainerActorDress}_expose_1024.png`;
+        exImg.src = `./data/actor/Trainer/${trainerActorDress.actorDress}_expose/${trainerActorDress.actorDress}_expose_1024.png`;
         exImg.style.maxWidth = "256px";
 
         exImageCell.appendChild(exImg);
