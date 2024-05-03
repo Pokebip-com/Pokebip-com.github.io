@@ -29,6 +29,17 @@ let body = document.getElementsByTagName("body")[0];
 const currentUrl = window.location.pathname.split("/").pop();
 let isAdminMode = getCookie("admin");
 
+window.onpopstate = function(event) {
+    let langElements = document.querySelectorAll('a[data-lang]');
+    let params = new URLSearchParams(window.location.search);
+
+    langElements.forEach(element => {
+        params.delete("lang");
+        params.append("lang", element.getAttribute("data-lang"));
+        element.href = pageUrl.toString().split("?")[0] + "?" + params.toString();
+    })
+}
+
 function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -83,6 +94,10 @@ function getSubnav(data) {
     for(let i = 0; i < data["drop"].length; i++) {
         let a = createNavEntry(data["drop"][i].url, data["drop"][i].title);
 
+        if(data["drop"][i].dataLang) {
+            a.setAttribute("data-lang", data["drop"][i].dataLang);
+        }
+
         if(a.classList.contains("active")) {
             subnav.classList.add("active");
         }
@@ -124,7 +139,7 @@ async function buildHeader(localePath = "./data/locales/") {
         let params = pageParams;
         params.delete("lang");
         params.append("lang", language);
-        headerData[3]["drop"].push({ "title": commonLocales[`submenu_language_${language}`], "url": pageUrl.toString().split("?")[0] + "?" + params.toString() });
+        headerData[3]["drop"].push({ "title": commonLocales[`submenu_language_${language}`], "url": pageUrl.toString().split("?")[0] + "?" + params.toString(), "dataLang" : `${language}` });
     });
 
     let adminHeaderData = [
