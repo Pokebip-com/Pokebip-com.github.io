@@ -169,4 +169,8 @@ async function buildHeader(localePath = "./data/locales/") {
     headerData.forEach(hd => headerBody.appendChild(getSubnav(hd)));
 
     body.appendChild(headerBody);
+
+    body.style.marginTop = headerBody.offsetHeight + "px";
+
+    console.log("test");
 }
