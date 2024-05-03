@@ -489,3 +489,50 @@ function outlineBrackets(descr) {
     return descr.replaceAll(/\[/gi, "<span style='color:yellowgreen;'><strong><u>[")
         .replaceAll(/]/gi, "]</u></strong></span>");
 }
+
+function agenderDescription(descr) {
+    // Types = [ "FR" ]
+    // SubTypes = [ "Gen" ]
+    // FR: Gen
+    // Params = [ "M", "F", "Ref" ]
+
+    if(!descr)
+        return descr;
+
+    let bracketValues = (descr.match(/(?<=\[)[^\][]*(?=])/g) || []).map(match => `[${match}]`);
+
+    for(let i = 0; i < bracketValues.length; i++) {
+        let type = bracketValues[i].match(/(?<=\[)(.*?)(?=:)/g)[0];
+        let subtype = bracketValues[i].match(/(?<=:)(.*?)(?=\s)/g)[0];
+        let params = (bracketValues[i]
+            .match(/(?<=\s)(.*?=.*?)(?=\s)/g) || [])
+            .map(p => {
+                let m = p.match(/^([^=]*)="(.*)"/).slice(1,3);
+                return { [m[0]] : m[1] };
+            })
+            .reduce((acc, curr) => Object.assign(acc, curr), {});
+
+        let replaceValue = "";
+
+        delete params.Ref;
+
+        switch(Object.keys(params).length) {
+            case 1:
+                replaceValue = `/${params[Object.keys(params)[0]]}`;
+                break;
+
+            case 2:
+                replaceValue = `${params["M"]}/${params["F"]}`;
+                break;
+
+            default:
+                console.warn("Unable to handle params : ", params);
+                break;
+        }
+
+        descr = descr.replace(bracketValues[i], replaceValue);
+    }
+
+
+    return descr;
+}

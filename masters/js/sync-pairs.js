@@ -351,7 +351,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
     descrTitleRow.appendChild(descrTitle);
     table.appendChild(descrTitleRow);
 
-    let descrTrainerTxt = trainerDescriptions[syncPairSelect.value];
+    let descrTrainerTxt = agenderDescription(trainerDescriptions[syncPairSelect.value]);
 
     if(descrTrainerTxt) {
         let descrTrainerRow = document.createElement("tr");
@@ -1965,7 +1965,7 @@ function getPairBipCode(trainerId) {
         + `\t[tr][th|colspan=6]Descriptions[/th][/tr]\n`;
 
     if(trainerDescriptions[trainerId])
-        string += `\t[tr][td|colspan=6]${trainerDescriptions[trainerId].replaceAll("\n", " ") }[/td][/tr]\n`;
+        string += `\t[tr][td|colspan=6]${ agenderDescription(trainerDescriptions[trainerId].replaceAll("\n", " ")) }[/td][/tr]\n`;
 
     monsters.map(m => m.monsterBaseId).forEach(mbId => {
             if (monsterDescriptions[mbId])
