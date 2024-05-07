@@ -6,7 +6,7 @@
 { "itemConfigId": "battle_rally_ticket_item.upper_limit_of_id", "value": "5" },
 { "itemConfigId": "deck_item.upper_limit_of_type_all", "value": "500" },
 { "itemConfigId": "event_exchange_item.price_of_auto_selling", "value": "10" },
-{ "itemConfigId": "event_exchange_item.price_of_auto_selling.750000000254", "value": "0" },
+{ "itemConfigId": "event_exchange_item.price_of_auto_selling.750000000254", "value": "1" },
 { "itemConfigId": "event_exchange_item.price_of_auto_selling.750000000274", "value": "1000" },
 { "itemConfigId": "event_exchange_item.price_of_auto_selling.750000000446", "value": "1000" },
 { "itemConfigId": "event_exchange_item.price_of_auto_selling.750000000580", "value": "1000" },
