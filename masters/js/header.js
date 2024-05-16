@@ -143,7 +143,10 @@ async function buildHeader(localePath = "./data/locales/") {
     });
 
     let adminHeaderData = [
-        //{ "title" : commonLocales.adminmenu_sync_grid, "url": "/masters/sync-grids.html", "drop": [] },
+        { "title" : commonLocales.adminmenu_title, "url": "", "drop": [
+                { "title" : commonLocales.adminsubmenu_skill_gear, "url" : "/masters/skill-gears.html" },
+            ]
+        }
     ];
 
 

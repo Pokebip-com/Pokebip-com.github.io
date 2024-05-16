@@ -12,7 +12,7 @@ let passiveSkillName;
 let passiveSkillNameParts;
 let tagNameWithPrepositions;
 
-async function getData() {
+async function initMovePassiveSkills() {
     const [
         moveResponse,
         moveAndPassiveSkillDigitResponse,
@@ -249,12 +249,5 @@ function createPassiveTable() {
         row.appendChild(descriptionCell);
 
         table.appendChild(row);
-    })
-
+    });
 }
-
-async function init() {
-    await getData();
-}
-
-init().then();

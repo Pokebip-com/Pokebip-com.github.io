@@ -1687,6 +1687,7 @@ async function init() {
     toolsDiv = document.getElementById('adminTools');
 
     await buildHeader();
+    await initMovePassiveSkills();
     await getData();
     await getCustomJSON();
 

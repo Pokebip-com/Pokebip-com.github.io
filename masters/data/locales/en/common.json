@@ -28,5 +28,6 @@
   "menu_language" : "Language",
   "submenu_language_fr" : "Français",
   "submenu_language_en" : "English",
-  "adminmenu_sync_grid" : "Sync Grids"
+  "adminmenu_title" : "Admin",
+  "adminsubmenu_skill_gear" : "Skill Gears"
 }

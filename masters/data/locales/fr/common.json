@@ -28,5 +28,6 @@
   "menu_language" : "Langue",
   "submenu_language_fr" : "Français",
   "submenu_language_en" : "English",
-  "adminmenu_sync_grid" : "Plateaux Duo-Gemme"
+  "adminmenu_title" : "Admin",
+  "adminsubmenu_skill_gear" : "Équipements de talent"
 }
