@@ -1,2 +1,6 @@
 {
+  "team_skills" : "Talents d'équipe",
+  "passive_skills" : "Talents passifs",
+  "passive_name_title" : "Nom",
+  "passive_descr_title" : "Description"
 }

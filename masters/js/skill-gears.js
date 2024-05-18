@@ -1,3 +1,4 @@
+let skillDeckItemConditionTeamSkillTagLot;
 let skillDeckItemEffectLot;
 let skillDeckItemSkillFeatherItem;
 let teamSkill;
@@ -12,6 +13,7 @@ let skillGearsDiv;
 
 async function getData() {
     const [
+        skillDeckItemConditionTeamSkillTagLotResponse,
         skillDeckItemEffectLotResponse,
         skillDeckItemSkillFeatherItemResponse,
         teamSkillResponse,
@@ -19,6 +21,7 @@ async function getData() {
         teamSkillEffectResponse,
         teamSkillTagResponse,
     ] = await Promise.all([
+        fetch("./data/proto/SkillDeckItemConditionTeamSkillTagLot.json"),
         fetch("./data/proto/SkillDeckItemEffectLot.json"),
         fetch("./data/proto/SkillDeckItemSkillFeatherItem.json"),
         fetch("./data/proto/TeamSkill.json"),
@@ -27,6 +30,9 @@ async function getData() {
         fetch(`./data/lsd/team_skill_tag_${lng}.json`),
     ])
         .catch(error => console.log(error));
+
+    skillDeckItemConditionTeamSkillTagLot = await skillDeckItemConditionTeamSkillTagLotResponse.json();
+    skillDeckItemConditionTeamSkillTagLot = skillDeckItemConditionTeamSkillTagLot.entries;
 
     skillDeckItemEffectLot = await skillDeckItemEffectLotResponse.json();
     skillDeckItemEffectLot = skillDeckItemEffectLot.entries;
@@ -53,18 +59,74 @@ async function getCustomJSON() {
     skillGearsLocale = await skillGearsLocaleResponse.json();
 }
 
+function getFeatherItemImage(feather) {
+    let img = document.createElement("img");
+    img.style.backgroundImage = `url(./data/item/Frame/128/if01_0${feather.rarity}_128.png)`;
+    img.style.backgroundSize = "64px 64px";
+
+    img.src = `./data/item/${feather.imgName}/${feather.imgName}_128.png`;
+    img.style.width = "64px";
+    img.style.height = "64px";
+    return img;
+}
+
 function listFeatherInfos() {
+
+    let ul = document.createElement("ul");
+    ul.classList.add("listh-bipcode");
+
+    for(let i = 0; i < skillDeckItemSkillFeatherItem.length; i++) {
+        let li = document.createElement("li");
+        li.classList.add("listh-bipcode");
+        li.style.width = "100px";
+        li.appendChild(getFeatherItemImage(skillDeckItemSkillFeatherItem[i]));
+
+        li.appendChild(document.createElement("br"));
+
+        let link = document.createElement("a");
+        link.href = `#feather_${skillDeckItemSkillFeatherItem[i].itemId}`;
+        link.innerHTML = `<b>${skillDeckItemSkillFeatherItemName[skillDeckItemSkillFeatherItem[i].itemId]}</b>`;
+
+        li.classList.add("listh-click");
+        li.onclick = () => link.click();
+        li.appendChild(link);
+
+        ul.appendChild(li);
+    }
+
+    skillGearsDiv.appendChild(ul);
+
     for(let i = 0; i < skillDeckItemSkillFeatherItem.length; i++) {
         printFeatherInfos(skillDeckItemSkillFeatherItem[i]);
     }
 }
 
-function printFeatherInfos(feather) {
-    let div = document.createElement("div");
+function printFeatherTeamSkills(feather, div) {
 
-    let h2 = document.createElement("h2");
-    h2.innerText = skillDeckItemSkillFeatherItemName[feather.itemId];
-    div.appendChild(h2);
+    let h3 = document.createElement("h3");
+    h3.innerText = skillGearsLocale.team_skills;
+    div.appendChild(h3);
+
+    let ul = document.createElement("ul");
+    ul.classList.add("listh-bipcode");
+    div.appendChild(ul);
+
+    let teamSkillSet = skillDeckItemConditionTeamSkillTagLot.filter(x => x.setId === feather.teamSkillTagLotSetId);
+
+    for(let i = 0; i < teamSkillSet.length; i++) {
+        let li = document.createElement("li");
+        li.classList.add("listh-bipcode");
+        li.innerHTML = `<b>${teamSkillTag[teamSkillSet[i].teamSkillTagId]}</b>`;
+        ul.appendChild(li);
+    }
+
+    div.appendChild(ul);
+}
+
+function printFeatherPassiveSkills(feather, div) {
+    let h3 = document.createElement("h3");
+    h3.innerText = skillGearsLocale.passive_skills;
+    div.appendChild(h3);
 
     let table = document.createElement("table");
     table.classList.add("bipcode");
@@ -73,23 +135,15 @@ function printFeatherInfos(feather) {
     let thead = document.createElement("thead");
 
     let tr = document.createElement("tr");
-    let u1Title = document.createElement("th");
-    u1Title.innerText = "SkillSetId";
-
-    let passiveId = document.createElement("th");
-    passiveId.innerText = "Passive ID";
 
     let passiveName = document.createElement("th");
-    passiveName.innerText = "Passive Name";
+    passiveName.innerText = skillGearsLocale.passive_name_title;
 
     let passiveDescr = document.createElement("th");
-    passiveDescr.innerText = "Passive Description";
+    passiveDescr.innerText = skillGearsLocale.passive_descr_title;
 
-    tr.appendChild(u1Title);
-    tr.appendChild(passiveId);
     tr.appendChild(passiveName);
     tr.appendChild(passiveDescr);
-
     thead.appendChild(tr);
     table.appendChild(thead);
 
@@ -100,20 +154,11 @@ function printFeatherInfos(feather) {
     for(let i = 0; i < lot.length; i++) {
         let tr = document.createElement("tr");
 
-        let u1 = document.createElement("td");
-        u1.innerText = lot[i].skillSetId;
-
-        let passiveId = document.createElement("td");
-        passiveId.innerText = lot[i].passiveSkillId;
-
         let passiveName = document.createElement("td");
-        passiveName.innerText = getPassiveSkillName(lot[i].passiveSkillId.toString());
+        passiveName.innerText = getPassiveSkillName(lot[i].passiveSkillId);
 
         let passiveDescr = document.createElement("td");
-        passiveDescr.innerText = getPassiveSkillDescr(lot[i].passiveSkillId.toString());
-
-        tr.appendChild(u1);
-        tr.appendChild(passiveId);
+        passiveDescr.innerText = getPassiveSkillDescr(lot[i].passiveSkillId);
         tr.appendChild(passiveName);
         tr.appendChild(passiveDescr);
 
@@ -122,6 +167,20 @@ function printFeatherInfos(feather) {
 
     table.appendChild(tbody);
     div.appendChild(table);
+}
+
+function printFeatherInfos(feather) {
+    let div = document.createElement("div");
+    div.id = `feather_${feather.itemId}`;
+    div.style.scrollMarginTop = "5em";
+
+    let h2 = document.createElement("h2");
+    h2.innerText = skillDeckItemSkillFeatherItemName[feather.itemId];
+    div.appendChild(h2);
+
+    printFeatherTeamSkills(feather, div);
+    printFeatherPassiveSkills(feather, div);
+
     skillGearsDiv.appendChild(div);
 }
 
@@ -152,6 +211,14 @@ async function init() {
     // }
 
     listFeatherInfos();
+
+    if(window.location.hash !== "" && window.location.hash !== "#") {
+        setTimeout(function () {
+            let tmp = document.createElement("a");
+            tmp.href = window.location.hash;
+            tmp.click();
+        }, 1000);
+    }
 }
 
 function getPassiveSkillBipCode(t, v = null) {
