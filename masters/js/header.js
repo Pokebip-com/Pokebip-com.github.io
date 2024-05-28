@@ -145,6 +145,7 @@ async function buildHeader(localePath = "./data/locales/") {
     let adminHeaderData = [
         { "title" : commonLocales.adminmenu_title, "url": "", "drop": [
                 { "title" : commonLocales.adminsubmenu_skill_gear, "url" : "/masters/skill-gears.html" },
+                { "title" : commonLocales.adminsubmenu_discord, "url" : "/masters/discord.html" },
             ]
         }
     ];
@@ -153,7 +154,7 @@ async function buildHeader(localePath = "./data/locales/") {
     if(!isAdminMode) {
         isAdminMode = pageUrl.searchParams.get("admin");
 
-        if (isAdminMode !== null || adminHeaderData.filter(ahd => ahd.url === currentUrl).length > 0) {
+        if (isAdminMode !== null || adminHeaderData.filter(ahd => ahd.url === currentUrl && ahd.giveAdmin !== null && ahd.giveAdmin === true).length > 0) {
             setCookie("admin", "true", 8000);
             isAdminMode = true;
         }

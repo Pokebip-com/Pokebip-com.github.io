@@ -29,5 +29,6 @@
   "submenu_language_fr" : "Français",
   "submenu_language_en" : "English",
   "adminmenu_title" : "Admin",
-  "adminsubmenu_skill_gear" : "Skill Gears"
+  "adminsubmenu_skill_gear" : "Skill Gears",
+  "adminsubmenu_discord" : "Discord Message"
 }
