@@ -396,10 +396,9 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
         else
             statValue += 20*(i-rarity)*(name === "PV" ? 5 : 2);
 
-        statValue += exRoleBonus;
-
         statValue = Math.trunc(statValue*scale);
 
+        statValue += exRoleBonus;
 
         let td = document.createElement("td");
 
@@ -419,14 +418,14 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
     return tr;
 }
 
-function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole = false) {
+function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole = false, exRoleCheckboxId = "") {
     if(input.value === "")
         return;
 
     statsDiv.innerHTML = "";
 
     let rarity = getTrainerRarity(syncPairSelect.value);
-    let exRoleCheckbox = document.getElementById("exRoleCheckbox");
+    let exRoleCheckbox = document.getElementById(exRoleCheckboxId);
     let exRoleStats = hasExRole && exRoleCheckbox && exRoleCheckbox.checked;
 
     let table = document.createElement("table");
@@ -529,10 +528,10 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
 
         let exRoleCheckbox = document.createElement("input");
         exRoleCheckbox.type = "checkbox";
-        exRoleCheckbox.id = "exRoleCheckbox";
+        exRoleCheckbox.id = `exRoleCheckbox-${monsterBaseId}-${formId}`;
         exRoleCheckbox.style.display = "table-cell";
         exRoleCheckbox.style.marginLeft = "5px";
-        exRoleCheckbox.addEventListener("change", (e) => setStatsTable(lvlInput, statsDiv, monsterData, variation, hasExRoleUnlocked(syncPairSelect.value)));
+        exRoleCheckbox.addEventListener("change", (e) => setStatsTable(lvlInput, statsDiv, monsterData, variation, hasExRoleUnlocked(syncPairSelect.value), `exRoleCheckbox-${monsterBaseId}-${formId}`));
         exRoleP.appendChild(exRoleCheckbox)
         toolFieldset.appendChild(exRoleP);
     }
@@ -547,7 +546,7 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
     statContainer.appendChild(statsDiv);
     contentDiv.appendChild(statContainer)
 
-    lvlInput.addEventListener("change", (e) => setStatsTable(e.currentTarget, statsDiv, monsterData, variation, hasExRoleUnlocked(syncPairSelect.value)));
+    lvlInput.addEventListener("change", (e) => setStatsTable(e.currentTarget, statsDiv, monsterData, variation, hasExRoleUnlocked(syncPairSelect.value), `exRoleCheckbox-${monsterBaseId}-${formId}`));
     setStatsTable(lvlInput, statsDiv, monsterData, variation);
 }
 
