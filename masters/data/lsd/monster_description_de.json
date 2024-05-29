@@ -332,6 +332,8 @@
     "20063500": "Die Köpfe an seinen beiden Armen haben kein eigenes\nGehirn. Seine drei Mäuler kauen alles radikal kurz und\nklein.",
     "20063700": "Während es umherfliegt, verteilt es glühenden Flügelstaub.\nEinst wurde es von den Menschen gefürchtet und als\n„Zorn der Sonne“ bezeichnet.",
     "20063800": "Sein Körper und sein Herz sind aus Stahl. Ein böser Blick\ngenügt und selbst die wildesten Pokémon unterwerfen\nsich ihm.",
+    "20064000": "Das Horn an seinem Kopf ist eine scharfe Klinge.\nNeckt seine Gegner mit quirligen Bewegungen\nund greift blitzartig an.",
+    "20064111": "Sein Unterkörper ist in eine wolkenartige Energieschicht\ngehüllt. Es jagt mit bis zu 300 km/h durch die Lüfte.",
     "20064112": "Es fliegt den gesamten Globus ab. Der Wind, den es dabei\nerzeugt, ist so stark, dass er alles aus den Angeln hebt.",
     "20064300": "Ein Legendäres Pokémon mit der Macht, die Welt mit\nseinen Flammen einzuäschern. Hilft allen, die nach\nWirklichkeit streben.",
     "20064400": "Ein Legendäres Pokémon mit der Macht, die Welt durch\nDonner einzuäschern. Hilft allen, die einer Welt der\nWünsche harren.",
@@ -496,6 +498,7 @@
     "2008420000": "Sein Körper wird von süßem Nektar bedeckt und\ndie Schale auf seinem Rücken ist besonders süß.\nFrüher war diese ein Leckerbissen für Kinder.",
     "2008491100": "Wenn es am Fortsatz an seiner Brust kratzt und dadurch\nStrom erzeugt, dann erklingt in der Umgebung ein Ton\nwie von einer Gitarre.",
     "2008491200": "Wenn es mit speziellen Organen in seiner Brust Elektrizität\nerzeugt, erklingen dabei Geräusche, die an eine\nBassgitarre erinnern.",
+    "2008510000": "Wenn es Hitze erzeugt, beträgt seine Temperatur etwa\n800 °C. Es bewegt seinen Körper wie eine Peitsche, um\ndann den Gegner anzuspringen.",
     "2008530000": "Sein Körper besteht gänzlich aus Muskeln. Die schiere\nStärke seines Würgegriffs, bei dem es seine Tentakel\neinsetzt, ist sagenhaft.",
     "2008551100": "Es schmeckt und riecht sehr markant. Wenn es seinem\nTrainer vertraut, lässt es ihn manchmal ein klitzekleines\nSchlückchen probieren.",
     "2008580000": "Die starken Psycho-Kräfte, die es ausstrahlt, rufen\nKopfschmerzen hervor. So hält es andere Lebewesen von\nsich fern.",
@@ -540,5 +543,6 @@
     "2005710041": "Durch die zerzauste weiße Mähne gleicht es Gevatter Tod.\nGetrieben von bitterem Groll, von dem es selbst zerfressen\nwird, streckt es Feinde ohne Rücksicht auf das eigene\nLeben nieder.",
     "2009810000": "Aufgrund der synchronisierten Gehirnströme von Kopf und\nSchweif sind seine Psycho-Kräfte zehnmal so stark wie die\nvon Girafarig.",
     "2009590000": "Es ist intelligent und verwegen. Mit seinem Hammer\nschlägt es Felsen in die Luft und zielt damit auf fliegende\nKrarmor.",
-    "2009800051": "Wird Suelord angegriffen, wehrt es sich, indem es dicke\nStacheln ausfährt. Setzt es diese riskante Attacke ein, ist\nes bereit, aufs Ganze zu gehen."
+    "2009800051": "Wird Suelord angegriffen, wehrt es sich, indem es dicke\nStacheln ausfährt. Setzt es diese riskante Attacke ein, ist\nes bereit, aufs Ganze zu gehen.",
+    "2009821100": "Mit seinem harten Schweif höhlt es tief unter der Erde\nFelsgestein aus, um seinen Bau zu graben. Dessen Gänge\nkönnen bis zu 10 km lang werden."
 }

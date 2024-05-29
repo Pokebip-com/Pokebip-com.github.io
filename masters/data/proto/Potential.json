@@ -13,6 +13,7 @@
 { "potentialId": 13010302, "rarity": 2 },
 { "potentialId": 13010303, "rarity": 3 },
 { "potentialId": 13010401, "rarity": 3 },
+{ "potentialId": 13010405, "rarity": 1 },
 { "potentialId": 13010501, "rarity": 1 },
 { "potentialId": 13010502, "rarity": 2 },
 { "potentialId": 13010503, "rarity": 3 },
@@ -26,6 +27,7 @@
 { "potentialId": 15010101, "rarity": 3 },
 { "potentialId": 15010301, "rarity": 3 },
 { "potentialId": 16015004, "rarity": 1 },
+{ "potentialId": 16017604, "rarity": 1 },
 { "potentialId": 17010101, "rarity": 3 },
 { "potentialId": 17010201, "rarity": 3 },
 { "potentialId": 17010301, "rarity": 3 },
@@ -112,6 +114,7 @@
 { "potentialId": 17020809, "rarity": 2 },
 { "potentialId": 17041601, "rarity": 3 },
 { "potentialId": 17043701, "rarity": 3 },
+{ "potentialId": 17047301, "rarity": 1 },
 { "potentialId": 17069801, "rarity": 1 },
 { "potentialId": 18010101, "rarity": 1 },
 { "potentialId": 18010102, "rarity": 1 },
@@ -225,6 +228,7 @@
 { "potentialId": 18097902, "rarity": 1 },
 { "potentialId": 18114009, "rarity": 1 },
 { "potentialId": 18114409, "rarity": 1 },
+{ "potentialId": 18116902, "rarity": 1 },
 { "potentialId": 20010101, "rarity": 3 },
 { "potentialId": 21010101, "rarity": 3 },
 { "potentialId": 22010201, "rarity": 1 },
@@ -245,5 +249,6 @@
 { "potentialId": 24011501, "rarity": 3 },
 { "potentialId": 24011601, "rarity": 3 },
 { "potentialId": 24011701, "rarity": 3 },
-{ "potentialId": 24011801, "rarity": 3 }
+{ "potentialId": 24011801, "rarity": 3 },
+{ "potentialId": 24012101, "rarity": 1 }
 ]}

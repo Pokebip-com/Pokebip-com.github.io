@@ -28,5 +28,7 @@
 { "scheduleId": "6020_1W_TitleCall", "u2": 0, "actorId": "ch0295_00_omodaka", "u4": "13" },
 { "scheduleId": "6040_1W_TitleCall", "u2": 0, "actorId": "ch0302_00_chiri", "u4": "14" },
 { "scheduleId": "6040_3W_TitleCall", "u2": 0, "actorId": "ch0302_00_chiri", "u4": "15" },
-{ "scheduleId": "6040_3W_TitleCall", "u2": 0, "actorId": "ch0303_00_poppy", "u4": "15" }
+{ "scheduleId": "6040_3W_TitleCall", "u2": 0, "actorId": "ch0303_00_poppy", "u4": "15" },
+{ "scheduleId": "6050_3W_TitleCall", "u2": 0, "actorId": "ch0252_00_kabu", "u4": "16" },
+{ "scheduleId": "6050_3W_TitleCall", "u2": 0, "actorId": "ch0304_00_aoki", "u4": "16" }
 ]}

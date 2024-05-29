@@ -720,5 +720,17 @@
     "999215": "味方を[Name:ReferencedMessageTag Idx=\"3\" ]にする",
     "999214": "味方のバディーズ全員の次回物理技威力ブーストと次回特殊技威力ブーストをそれぞれ[Digit:1digit Idx=\"2\" ]段階あげる",
     "999213": "相手の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階さげる",
-    "999212": "自分を[Name:ReferencedMessageTag Idx=\"2\" ]にする"
+    "999212": "自分を[Name:ReferencedMessageTag Idx=\"2\" ]にする",
+    "999211": "自分の[Name:ReferencedMessageTag Idx=\"1\" ]があがっているほど威力があがる",
+    "999210": "初めてこの技での攻撃が成功したときだけ相手の[Name:ReferencedMessageTag Idx=\"4\" ]を[Digit:1digit Idx=\"5\" ]段階さげる",
+    "999209": "味方全体の場が[Name:ReferencedMessageTag ]になったとき",
+    "999208": "味方全体の場の[Name:ReferencedMessageTag ]が解除されたとき",
+    "999207": "相手の攻撃と特攻を[Digit:1digit Idx=\"1\" ]段階さげる",
+    "999206": "相手の[Name:ReferencedMessageTag Idx=\"3\" ]を[Digit:1digit Idx=\"4\" ]段階さげる",
+    "999205": "自分を[Name:ReferencedMessageTag Idx=\"5\" ]にする",
+    "999204": "相手がやけど状態のときは味方のバディーズ全員のＨＰを回復する",
+    "999203": "相手がバインド状態のときは味方のバディーズ全員のＨＰを回復する",
+    "999202": "相手のバディーズ全員をバインド状態にする",
+    "999201": "自分の次回物理技威力ブーストと次回特殊技威力ブーストをそれぞれ[Digit:1digit Idx=\"3\" ]段階あげる",
+    "999200": "自分の[Name:ReferencedMessageTag Idx=\"1\" ]を[Digit:1digit Idx=\"2\" ]段階あげる"
 }

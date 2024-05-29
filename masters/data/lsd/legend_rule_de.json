@@ -33,7 +33,7 @@
     "legend_rule_5020_002": "Erhöht die Stärke von Attacken und der\nGefährtenattacke des Gegners, wenn sein\nSpezial-Angriff erhöht ist.",
     "legend_rule_5020_003": "Ab der zweiten KP-Leiste des Gegners\nerleidet der Gegner weniger Schaden, wenn\nkein Feld-Effekt aktiv ist.",
     "legend_rule_5060_001": "Mehrere Gegner erscheinen.",
-    "legend_rule_5060_002": "Erhöht die Stärke von Attacken, der\nGefährtenattacke des Gegners oder von\nbeiden, wenn seine Initiative erhöht ist.",
+    "legend_rule_5060_002": "Erhöht die Stärke von Attacken oder von\nAttacken und der Gefährtenattacke des\nGegners, wenn seine Initiative erhöht ist.",
     "legend_rule_5060_003": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
     "legend_rule_5090_001": "Der Gegner erleidet weniger Schaden, wenn\nseine Vert. und Sp.-Vert. erhöht sind.",
     "legend_rule_5090_002": "Veränderungen der Vert. und Sp.-Vert.\nwirken sich stärker auf den Schaden aus.",
@@ -55,8 +55,11 @@
     "legend_rule_6010_013": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
     "legend_rule_6010_021": "Fallen Vipitis’ KP das erste Mal auf 80 %\noder 40 %, hält es mit dieser Anzahl an KP\ndurch.",
     "legend_rule_6010_022": "Erhöht die Stärke von Attacken und der\nGA des Gegners, wenn Mitstreiter vergiftet\noder schwer vergiftet sind.",
-    "legend_rule_6010_023": "Erhöht die Stärke von Attacken und der\nGefährtenattacke des Gegners, wenn seine\nInitiative erhöht ist.",
+    "legend_rule_6010_023": "Erhöht die Stärke von Attacken oder von\nAttacken und der Gefährtenattacke des\nGegners, wenn seine Initiative erhöht ist.",
     "legend_rule_6040_001": "Fallen Gluraks KP das erste Mal auf 60 %,\nhält es mit dieser Anzahl an KP durch.",
     "legend_rule_6040_002": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
-    "legend_rule_6040_003": "Wenn der Gegner nicht von Statusproblemen\nbetroffen ist, ist die Stärke seiner Angriffe\nerhöht."
+    "legend_rule_6040_003": "Wenn der Gegner nicht von Statusproblemen\nbetroffen ist, ist die Stärke seiner Angriffe\nerhöht.",
+    "legend_rule_6050_001": "Fallen Demeteros’ KP das erste Mal auf 80 %\nund 50 %, hält es mit der jeweiligen Anzahl\nan KP durch.",
+    "legend_rule_6050_002": "Erhöht die Stärke von Attacken oder von\nAttacken und der Gefährtenattacke des\nGegners während eines Sandsturms.",
+    "legend_rule_6050_003": "Wenn die Initiative des Gegners erhöht ist,\nsind seine Vert. und Sp.-Vert. verdreifacht."
 }

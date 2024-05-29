@@ -33,7 +33,7 @@
     "legend_rule_5020_002": "Se potencian los movimientos y movimientos\ncompi del rival cuando aumenta su At. Esp.",
     "legend_rule_5020_003": "Cuando alcanza la 2.ª barra de PS, el rival\nsufre menos daño si no hay efectos de campo.",
     "legend_rule_5060_001": "El rival comienza con varios Pokémon.",
-    "legend_rule_5060_002": "Cuando aumenta la Velocidad del rival, se\npotencian sus movimientos, sus movimientos\ncompi o ambos.",
+    "legend_rule_5060_002": "Cuando aumenta la Velocidad del rival, se\npotencian o bien sus movimientos, o bien\nsus movimientos y sus movimientos compi.",
     "legend_rule_5060_003": "Los efectos de campo activados por el rival\nduran todo el combate.",
     "legend_rule_5090_001": "Se mitiga el daño que recibe el rival cuando\naumenta su Defensa o su Defensa Especial.",
     "legend_rule_5090_002": "Los cambios en la Defensa y la Defensa\nEspecial afectan al daño más de lo normal.",
@@ -55,8 +55,11 @@
     "legend_rule_6010_013": "Los efectos de campo activados por el rival\nduran todo el combate.",
     "legend_rule_6010_021": "La primera vez que los PS de Seviper bajan\nal 80% o menos y la primera vez que bajan\nal 40% o menos, se quedan a esos\nrespectivos porcentajes.",
     "legend_rule_6010_022": "Se potencian los movimientos y movimientos\ncompi del rival cuando algún aliado está\nenvenenado o gravemente envenenado.",
-    "legend_rule_6010_023": "Cuando aumenta la Velocidad del rival, se\npotencian sus movimientos, sus movimientos\ncompi o ambos.",
+    "legend_rule_6010_023": "Cuando aumenta la Velocidad del rival, se\npotencian o bien sus movimientos, o bien\nsus movimientos y sus movimientos compi.",
     "legend_rule_6040_001": "La primera vez que los PS de Charizard\nbajan al 60% o menos, se quedan a ese\nporcentaje.",
     "legend_rule_6040_002": "Cuando el rival no está afectado por efectos\nde campo, se triplican su Defensa y su\nDefensa Especial.",
-    "legend_rule_6040_003": "Cuando el rival no sufre problemas de\nestado, se potencian sus ataques."
+    "legend_rule_6040_003": "Cuando el rival no sufre problemas de\nestado, se potencian sus ataques.",
+    "legend_rule_6050_001": "La primera vez que los PS de Landorus\nbajan al 80% o menos y la primera vez que\nbajan al 50% o menos, se quedan a esos\nrespectivos porcentajes.",
+    "legend_rule_6050_002": "Cuando hay una tormenta de arena, se\npotencian o bien los movimientos del rival,\no bien sus movimientos y sus movimientos\ncompi.",
+    "legend_rule_6050_003": "Cuando aumenta la Velocidad del rival, se\ntriplican su Defensa y su Defensa Esp."
 }

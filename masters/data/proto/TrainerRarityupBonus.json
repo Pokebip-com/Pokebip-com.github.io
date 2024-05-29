@@ -60,5 +60,6 @@
 { "trainerRarityupBonusId": "6020001", "trainerId": "10295000000", "itemSetId": "6020005", "scheduleId": "6020_Music_omodaka" },
 { "trainerRarityupBonusId": "6020002", "trainerId": "10133900000", "itemSetId": "6020006", "scheduleId": "6020_Music_silver" },
 { "trainerRarityupBonusId": "6040009", "trainerId": "10302000000", "itemSetId": "6040009", "scheduleId": "6040_Music_tiri" },
-{ "trainerRarityupBonusId": "6040010", "trainerId": "10303000000", "itemSetId": "6040010", "scheduleId": "6040_Music_popi" }
+{ "trainerRarityupBonusId": "6040010", "trainerId": "10303000000", "itemSetId": "6040010", "scheduleId": "6040_Music_popi" },
+{ "trainerRarityupBonusId": "6050001", "trainerId": "10304000000", "itemSetId": "6050001", "scheduleId": "6050_3W_Music_aoki" }
 ]}

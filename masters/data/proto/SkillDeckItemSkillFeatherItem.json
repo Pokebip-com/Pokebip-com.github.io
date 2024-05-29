@@ -51,5 +51,9 @@
 { "itemId": "930000300029", "u1": 202, "u2": 301, "u3": 301, "teamSkillTagLotSetId": "300029", "u5": 301, "skillSetId": "300029", "skillFeatherItemDescription": "9302", "imgName": "i093_002_01", "rarity": 3 },
 { "itemId": "930000300030", "u1": 202, "u2": 301, "u3": 301, "teamSkillTagLotSetId": "300030", "u5": 301, "skillSetId": "300030", "skillFeatherItemDescription": "9302", "imgName": "i093_002_01", "rarity": 3 },
 { "itemId": "930000300031", "u1": 202, "u2": 301, "u3": 301, "teamSkillTagLotSetId": "300031", "u5": 301, "skillSetId": "300031", "skillFeatherItemDescription": "9302", "imgName": "i093_002_01", "rarity": 3 },
-{ "itemId": "930000300032", "u1": 202, "u2": 301, "u3": 301, "teamSkillTagLotSetId": "300032", "u5": 301, "skillSetId": "300032", "skillFeatherItemDescription": "9302", "imgName": "i093_002_01", "rarity": 3 }
+{ "itemId": "930000300032", "u1": 202, "u2": 301, "u3": 301, "teamSkillTagLotSetId": "300032", "u5": 301, "skillSetId": "300032", "skillFeatherItemDescription": "9302", "imgName": "i093_002_01", "rarity": 3 },
+{ "itemId": "930000300033", "u1": 202, "u2": 301, "u3": 301, "teamSkillTagLotSetId": "300033", "u5": 301, "skillSetId": "300033", "skillFeatherItemDescription": "9302", "imgName": "i093_002_01", "rarity": 3 },
+{ "itemId": "930000300034", "u1": 202, "u2": 301, "u3": 301, "teamSkillTagLotSetId": "300034", "u5": 301, "skillSetId": "300034", "skillFeatherItemDescription": "9302", "imgName": "i093_002_01", "rarity": 3 },
+{ "itemId": "930000300035", "u1": 202, "u2": 301, "u3": 301, "teamSkillTagLotSetId": "300035", "u5": 301, "skillSetId": "300035", "skillFeatherItemDescription": "9302", "imgName": "i093_002_01", "rarity": 3 },
+{ "itemId": "930000300036", "u1": 202, "u2": 301, "u3": 301, "teamSkillTagLotSetId": "300036", "u5": 301, "skillSetId": "300036", "skillFeatherItemDescription": "9302", "imgName": "i093_002_01", "rarity": 3 }
 ]}

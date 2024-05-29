@@ -332,6 +332,8 @@
     "20063500": "Les têtes sur ses bras n'ont pas de cerveau.\nAvec ses trois têtes, il dévore et détruit tout.",
     "20063700": "Il décrit des cercles dans le ciel en faisant pleuvoir\ndes écailles enflammées. Il était jadis surnommé\n« le courroux solaire ».",
     "20063800": "Il possède un corps et un cœur de fer. Il peut mater\nles Pokémon les plus agressifs d'un simple regard.",
+    "20064000": "Ses cornes sont des lames effilées. Il lacère ses ennemis\ndans un mouvement tourbillonnant.",
+    "20064111": "Le bas de son corps est entouré d'une masse d'énergie\nsemblable à un nuage. Il vole dans le ciel à 300 km/h.",
     "20064112": "Il voyage aux quatre vents. Son passage\nprovoque des tempêtes qui balayent tout\naux alentours.",
     "20064300": "Un Pokémon légendaire assez puissant pour embraser\nle monde entier. Il soutient les défenseurs de la Réalité.",
     "20064400": "Un Pokémon légendaire assez puissant pour foudroyer\nle monde entier. Il soutient ceux qui suivent leur Idéal.",
@@ -496,6 +498,7 @@
     "2008420000": "Son corps est recouvert de nectar. La peau de son dos, \nparticulièrement sucrée, constituait jadis le goûter\ndes enfants.",
     "2008491100": "Lorsqu'il gratte l'excroissance sur son ventre\npour produire de l'électricité, on peut entendre\nun son similaire à celui d'une guitare.",
     "2008491200": "Son organe générant de l'électricité se trouve\nsur son torse. Quand il est actif, il émet un son\nsemblable à celui d'une basse.",
+    "2008510000": "Quand il génère de la chaleur, sa température\nest d'environ 800 °C. Il se sert de son corps\ncomme d'un fouet pour sauter sur ses ennemis.",
     "2008530000": "Son corps est un amas de muscles. La puissance\ndes prises d'étranglement qu'il exécute avec\nses tentacules est saisissante.",
     "2008551100": "Son goût et son parfum sont très particuliers.\nSeuls les Dresseurs en lesquels il a entièrement\nconfiance sont autorisés à en boire une gorgée.",
     "2008580000": "Il éloigne les autres êtres vivants en émettant\ndes ondes psychiques pouvant donner\ndes maux de tête épouvantables.",
@@ -540,5 +543,6 @@
     "2005710041": "Sa crinière blanche échevelée lui donne l'allure d'un dieu\nde la mort. Le ressentiment qu'il éprouve le déchire\nphysiquement, mais lui donne une énergie telle\nqu'elle peut occire tout ennemi.",
     "2009810000": "Grâce à la synchronisation des ondes cérébrales\nde sa tête et de sa queue, ses pouvoirs psychiques\nsont dix fois plus puissants que ceux de Girafarig.",
     "2009590000": "Ce Pokémon très intelligent et hardi jette des rochers\ndans les airs puis les frappe avec son marteau\nen visant les Corvaillus qui volent.",
-    "2009800051": "Quand on l'attaque, il riposte en faisant sortir\nde grosses épines de son tronc, une dangereuse\ntechnique qui montre qu'il est prêt à tout risquer."
+    "2009800051": "Quand on l'attaque, il riposte en faisant sortir\nde grosses épines de son tronc, une dangereuse\ntechnique qui montre qu'il est prêt à tout risquer.",
+    "2009821100": "Il se sert de sa queue pour creuser son terrier\ndans les profondeurs rocheuses de la terre.\nCelui-ci peut faire jusqu'à 10 km de long."
 }

@@ -720,5 +720,17 @@
     "999215": "같은 편을 [Name:ReferencedMessageTag Idx=\"3\" ] 상태로 만든다",
     "999214": "같은 편 버디즈 전원의 차회물리기술위력부스트와 차회특수기술위력부스트가 각각 [Digit:1digit Idx=\"2\" ]단계 오른다",
     "999213": "상대의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"3\" ]단계 떨어뜨린다",
-    "999212": "자신을 [Name:ReferencedMessageTag Idx=\"2\" ] 상태로 만든다"
+    "999212": "자신을 [Name:ReferencedMessageTag Idx=\"2\" ] 상태로 만든다",
+    "999211": "자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] 올라가 있는 만큼 위력이 오른다",
+    "999210": "처음 이 기술로 공격에 성공했을 때만 상대의 [Name:ReferencedMessageTag Idx=\"4\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"5\" ]단계 떨어뜨린다",
+    "999209": "같은 편 전원의 필드가 [Name:ReferencedMessageTag ]이 되었을 때",
+    "999208": "같은 편 전원의 필드의 [Name:ReferencedMessageTag ]이 해제되었을 때",
+    "999207": "상대의 공격과 특수공격을 [Digit:1digit Idx=\"1\" ]단계 떨어뜨린다",
+    "999206": "상대의 [Name:ReferencedMessageTag Idx=\"3\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"4\" ]단계 떨어뜨린다",
+    "999205": "자신을 [Name:ReferencedMessageTag Idx=\"5\" ] 상태로 만든다",
+    "999204": "상대가 화상 상태일 때는 같은 편 버디즈 전원의 HP를 회복한다",
+    "999203": "상대가 바인드 상태일 때는 같은 편 버디즈 전원의 HP를 회복한다",
+    "999202": "상대 버디즈 전원을 바인드 상태로 만든다",
+    "999201": "자신의 차회물리기술위력부스트와 차회특수기술위력부스트가 각각 [Digit:1digit Idx=\"3\" ]단계 오른다",
+    "999200": "자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"2\" ]단계 오른다"
 }

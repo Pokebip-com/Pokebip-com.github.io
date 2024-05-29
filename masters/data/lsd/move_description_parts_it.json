@@ -720,5 +720,17 @@
     "999215": "Applica l'[Name:ReferencedMessageTag Idx=\"3\" ] a un alleato.",
     "999214": "Aumenta l'effetto \"Prossima mossa fisica ↑\" e l'effetto \"Prossima mossa speciale ↑\" di tutte le Unità alleate di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
     "999213": "Riduce la [Name:ReferencedMessageTag Idx=\"2\" ] del bersaglio di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ].",
-    "999212": "Applica l'[Name:ReferencedMessageTag Idx=\"2\" ] a chi la usa."
+    "999212": "Applica l'[Name:ReferencedMessageTag Idx=\"2\" ] a chi la usa.",
+    "999211": "Aumenta la potenza di questo attacco in proporzione all'aumento dell'[Name:ReferencedMessageTag Idx=\"1\" ] di chi la usa.",
+    "999210": "Riduce la [Name:ReferencedMessageTag Idx=\"4\" ] del bersaglio di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ] la prima volta che questo attacco semplice va a segno in ogni lotta.",
+    "999209": "Quando al campo alleato viene applicato [Name:ReferencedMessageTag ].",
+    "999208": "Quando al campo alleato non è più applicato [Name:ReferencedMessageTag ].",
+    "999207": "Riduce l'Attacco e l'Attacco Speciale del bersaglio di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
+    "999206": "Riduce la [Name:ReferencedMessageTag Idx=\"3\" ] del bersaglio di [Digit:1digit Idx=\"4\" ] [IT:Qty Ref=\"4\" S=\"grado\" P=\"gradi\" ].",
+    "999205": "Applica l'[Name:ReferencedMessageTag Idx=\"5\" ] a chi la usa.",
+    "999204": "Fa recuperare PS a tutte le Unità alleate quando il bersaglio è scottato.",
+    "999203": "Fa recuperare PS a tutte le Unità alleate quando il bersaglio è imprigionato.",
+    "999202": "Imprigiona tutte le Unità avversarie.",
+    "999201": "Aumenta l'effetto \"Prossima mossa fisica ↑\" e l'effetto \"Prossima mossa speciale ↑\" di chi la usa di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ].",
+    "999200": "Aumenta la [Name:ReferencedMessageTag Idx=\"1\" ] di chi la usa di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ]."
 }

@@ -23,7 +23,7 @@
     "999948": "Das gilt auch, wenn der Angriff fehlschlägt.",
     "999944": "Verursacht beim Anwender den Effekt Folge-Effektiv.-Stärke↑.",
     "999939": "Je stärker die Initiative des Zieles gesenkt wurde, desto mehr wird die Stärke dieses Angriffs erhöht.",
-    "999928": "Diese Attacke ignoriert erhöhte Statuswerte des Zieles.",
+    "999928": "Dieser Angriff ignoriert erhöhte Statuswerte des Zieles.",
     "999925": "Verursacht bei allen verbündeten Gefährten den Effekt KP-Regenerierung.",
     "999922": "Verursacht beim Anwender den Effekt Überstehen.",
     "999921": "Je stärker die Initiative des Anwenders erhöht wurde, desto mehr wird die Stärke dieses Angriffs erhöht.",
@@ -720,5 +720,17 @@
     "999215": "Verursacht bei einem Verbündeten den [Name:ReferencedMessageTag Idx=\"3\" ].",
     "999214": "Erhöht die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ aller verbündeten Gefährten um [Digit:1digit Idx=\"2\" ].",
     "999213": "Senkt den [Name:ReferencedMessageTag Idx=\"2\" ] des Zieles um [Digit:1digit Idx=\"3\" ].",
-    "999212": "Verursacht beim Anwender den [Name:ReferencedMessageTag Idx=\"2\" ]."
+    "999212": "Verursacht beim Anwender den [Name:ReferencedMessageTag Idx=\"2\" ].",
+    "999211": "Je stärker der [Name:ReferencedMessageTag Idx=\"1\" ] des Anwenders erhöht wurde, desto mehr wird die Stärke dieses Angriffs erhöht.",
+    "999210": "Senkt ein Mal pro Kampf den [Name:ReferencedMessageTag Idx=\"4\" ] des Zieles um [Digit:1digit Idx=\"5\" ], wenn dieser Angriff mit einer Attacke erstmals Erfolg hat.",
+    "999209": "Wenn [Name:ReferencedMessageTag ] auf der Anwender-Seite aktiv ist.",
+    "999208": "Wenn [Name:ReferencedMessageTag ] nicht mehr auf der Anwender-Seite aktiv ist.",
+    "999207": "Senkt den Angriff und Spezial-Angriff des Zieles um [Digit:1digit Idx=\"1\" ].",
+    "999206": "Senkt den [Name:ReferencedMessageTag Idx=\"3\" ] des Zieles um [Digit:1digit Idx=\"4\" ].",
+    "999205": "Verursacht beim Anwender den [Name:ReferencedMessageTag Idx=\"5\" ].",
+    "999204": "Stellt bei allen verbündeten Gefährten die KP wieder her, wenn das Ziel an Verbrennungen leidet.",
+    "999203": "Stellt bei allen verbündeten Gefährten die KP wieder her, wenn das Ziel in einer Umschlingung gefangen ist.",
+    "999202": "Alle gegnerischen Gefährten werden in einer Umschlingung gefangen.",
+    "999201": "Erhöht die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ des Anwenders um [Digit:1digit Idx=\"3\" ].",
+    "999200": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] des Anwenders um [Digit:1digit Idx=\"2\" ]."
 }

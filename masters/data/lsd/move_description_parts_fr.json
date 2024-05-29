@@ -720,5 +720,17 @@
     "999215": "Applique l'[Name:ReferencedMessageTag Idx=\"3\" ] à un allié.",
     "999214": "Augmente l'effet Prochain boost capacité physique et l'effet Prochain boost capacité spéciale de tous les Duos alliés de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ].",
     "999213": "Baisse la [Name:ReferencedMessageTag Idx=\"2\" ] de la cible de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ].",
-    "999212": "Applique l'[Name:ReferencedMessageTag Idx=\"2\" ] au lanceur."
+    "999212": "Applique l'[Name:ReferencedMessageTag Idx=\"2\" ] au lanceur.",
+    "999211": "Plus l'[Name:ReferencedMessageTag Idx=\"1\" ] du lanceur a été augmenté, plus cette attaque est puissante.",
+    "999210": "Baisse la [Name:ReferencedMessageTag Idx=\"4\" ] de la cible de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ] la première fois que cette capacité offensive est utilisée avec succès à chaque combat.",
+    "999209": "Quand [Name:ReferencedMessageTag ] s'applique au côté allié.",
+    "999208": "Quand [Name:ReferencedMessageTag ] ne s'applique plus au côté allié.",
+    "999207": "Baisse l'Attaque et l'Atq. Spé. de la cible de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
+    "999206": "Baisse la [Name:ReferencedMessageTag Idx=\"3\" ] de la cible de [Digit:1digit Idx=\"4\" ] [FR:Qty Ref=\"4\" S=\"rang\" P=\"rangs\" ].",
+    "999205": "Applique l'[Name:ReferencedMessageTag Idx=\"5\" ] au lanceur.",
+    "999204": "Restaure les PV de tous les Duos alliés quand la cible est brûlée.",
+    "999203": "Restaure les PV de tous les Duos alliés quand la cible est ligotée.",
+    "999202": "Ligote tous les Duos ennemis.",
+    "999201": "Augmente l'effet Prochain boost capacité physique et l'effet Prochain boost capacité spéciale du lanceur de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ].",
+    "999200": "Augmente la [Name:ReferencedMessageTag Idx=\"1\" ] du lanceur de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ]."
 }

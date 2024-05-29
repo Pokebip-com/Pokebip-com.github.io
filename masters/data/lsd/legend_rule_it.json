@@ -33,7 +33,7 @@
     "legend_rule_5020_002": "Se l'Attacco Speciale degli avversari è\naumentato, la potenza delle loro mosse\ne Unimosse aumenta.",
     "legend_rule_5020_003": "A partire dalla 2ª barra PS, gli avversari\nsubiscono meno danni, se non sono presenti\neffetti sul campo avversario.",
     "legend_rule_5060_001": "Diversi Pokémon appaiono come nemici.",
-    "legend_rule_5060_002": "Se la Velocità degli avversari è aumentata,\nle loro mosse o Unimosse, oppure sia le\nmosse che le Unimosse, vengono potenziate.",
+    "legend_rule_5060_002": "Se la Velocità degli avversari è aumentata,\nle loro mosse, oppure le loro mosse\ne Unimosse, vengono potenziate.",
     "legend_rule_5060_003": "Gli effetti sul campo attivati dagli avversari\nsono permanenti.",
     "legend_rule_5090_001": "I danni subiti dagli avversari vengono\nridotti se la loro Difesa o Difesa Speciale\nè aumentata.",
     "legend_rule_5090_002": "Aumentano le variazioni dei danni dovute\nalle modifiche a Difesa o Difesa Speciale.",
@@ -55,8 +55,11 @@
     "legend_rule_6010_013": "Gli effetti sul campo attivati dagli avversari\nsono permanenti.",
     "legend_rule_6010_021": "I PS di Seviper restano all'80% o al 40% la\nprima volta che subisce danni che farebbero\nscendere i suoi PS all'80% o al 40% o meno.",
     "legend_rule_6010_022": "Se gli alleati sono iperavvelenati o\navvelenati, la potenza delle mosse\ne Unimosse avversarie aumenta.",
-    "legend_rule_6010_023": "Se la Velocità degli avversari è aumentata,\nle loro mosse o Unimosse, oppure sia le\nmosse che le Unimosse, vengono potenziate.",
+    "legend_rule_6010_023": "Se la Velocità degli avversari è aumentata,\nle loro mosse, oppure le loro mosse\ne Unimosse, vengono potenziate.",
     "legend_rule_6040_001": "I PS di Charizard rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
     "legend_rule_6040_002": "Se non sono presenti effetti sul campo\navversario, la Difesa e la Difesa Speciale\ndegli avversari sono triplicate.",
-    "legend_rule_6040_003": "Quando gli avversari non sono affetti\nda problemi di stato, i loro attacchi\nvengono potenziati."
+    "legend_rule_6040_003": "Quando gli avversari non sono affetti\nda problemi di stato, i loro attacchi\nvengono potenziati.",
+    "legend_rule_6050_001": "I PS di Landorus restano all'80% o al 50% la\nprima volta che subisce danni che farebbero\nscendere i suoi PS all'80% o al 50% o meno.",
+    "legend_rule_6050_002": "Durante le tempeste di sabbia, le mosse\ndegli avversari, oppure le loro mosse\ne Unimosse, vengono potenziate.",
+    "legend_rule_6050_003": "Se la Velocità degli avversari è aumentata,\nla loro Difesa e la loro Difesa Speciale\nsono triplicate."
 }
