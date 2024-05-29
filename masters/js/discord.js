@@ -87,7 +87,7 @@ function appendNewPairs() {
         .sort((a, b) => a.scheduleId.localeCompare(b.scheduleId));
 
     newTrainers.forEach(tr => {
-        discordMsgTxt.value += `\n- **[${getPairName(tr.trainerId)}](http://pokemon.brybry.ch/masters/duo.html?pair=${tr.trainerId})**`;
+        discordMsgTxt.value += `\n- **[${getPairName(tr.trainerId)}](${window.location.protocol}//${window.location.hostname}/masters/duo.html?pair=${tr.trainerId})**`;
     });
 }
 
@@ -103,7 +103,7 @@ function appendSyncGridUps() {
     });
 
     updatedGridTrainer.forEach(ugt => {
-        discordMsgTxt.value += `\n- **[${getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})](http://pokemon.brybry.ch/masters/duo.html?pair=${ugt.trainerId})**`;
+        discordMsgTxt.value += `\n- **[${getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})](${window.location.protocol}//${window.location.hostname}/masters/duo.html?pair=${ugt.trainerId})**`;
     });
 }
 
@@ -128,7 +128,7 @@ getData().then(() => {
     document.getElementById("pageTitle").innerText = discordLocale.title;
 
     discordMsgTxt = document.getElementById("discordMsg");
-    discordMsgTxt.value = `## [${discordLocale.monthly_schedule}](http://pokemon.brybry.ch/masters/programme.html)`;
+    discordMsgTxt.value = `## [${discordLocale.monthly_schedule}](${window.location.protocol}//${window.location.hostname}/masters/programme.html)`;
 
     appendNewPairs();
     appendSyncGridUps();
