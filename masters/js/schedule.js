@@ -709,7 +709,7 @@ function printShopBanner(banner, schedule) {
     printEndDate(schedule.endDate);
 }
 
-function printEventBanner(eventBanner, eventSchedule) {
+function printEventBanner(eventBanner, lastSchedule) {
     let h3 = `<h3>${bannerText[eventBanner.text1Id]}`;
 
     if(eventBanner.text2Id > -1) {
@@ -724,11 +724,11 @@ function printEventBanner(eventBanner, eventSchedule) {
         scheduleDiv.innerHTML += `<img src="./data/banner/event/${eventBanner.bannerIdString}.png" class="bannerImg" />\n`;
     }
 
-    printEndDate(eventSchedule.endDate);
+    printEndDate(lastSchedule.endDate);
 }
 
-function printEvents(schedule) {
-    let scheduleQuests = storyQuest.filter(quest => quest.scheduleId === schedule.scheduleId);
+function printEvents(sched) {
+    let scheduleQuests = storyQuest.filter(quest => quest.scheduleId === sched.scheduleId);
 
     if(scheduleQuests.length === 0)
         return;
@@ -736,16 +736,25 @@ function printEvents(schedule) {
     let questGroups = [...new Set(scheduleQuests.map(sq => sq.questGroupId))];
 
     questGroups.forEach(qg => {
-        if(treatedEvents.includes(qg))
+
+        if(treatedEvents.includes(qg)) {
             return;
-        else
+        }
+        else {
             treatedEvents.push(qg);
+
+            let scheduleIds = [...new Set(storyQuest.filter(sq => sq.questGroupId === qg).map(sq => sq.scheduleId))];
+
+            if(scheduleIds.length > 1) {
+                sched = schedule.find(s => s.scheduleId === scheduleIds[scheduleIds.length - 1]);
+            }
+        }
 
         eventQuestGroup.filter(eventQG => eventQG.questGroupId == qg)
             .forEach(eventQG => {
                 let eventBanners = banner.filter(b => b.bannerId === eventQG.bannerId);
 
-                eventBanners.forEach(eb => printEventBanner(eb, schedule));
+                eventBanners.forEach(eb => printEventBanner(eb, sched));
             });
     });
 }
