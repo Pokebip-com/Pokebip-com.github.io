@@ -66,6 +66,7 @@ function getMoveDescr(id) {
     const descrPartsRE = /\[Name:MoveDescriptionPartsIdTag Idx="(\w+)" ]/i;
     let idx = descrPartsRE.exec(descr);
 
+
     if(idx !== null) {
         do {
             descr = descr.replace(descrPartsRE, moveDescriptionParts[idx[1]]);
@@ -187,6 +188,8 @@ function getParamArray(id) {
             let value = values[`param${i+1}`];
             paramArray.push(value);
         }
+        else
+            paramArray.push(null);
     }
 
     return paramArray;
