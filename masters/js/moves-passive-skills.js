@@ -127,6 +127,8 @@ function setParams(id, descr) {
     let paramArray = getParamArray(id);
     let bracketValues = (descr.match(/(?<=\[)[^\][]*(?=])/g) || []).map(match => `[${match}]`);
 
+    console.log(descr);
+
     for(let i = 0; i < bracketValues.length; i++) {
         let type = bracketValues[i].match(/(?<=\[)(.*?)(?=:)/g)[0];
         let subtype = bracketValues[i].match(/(?<=:)(.*?)(?=\s)/g)[0];
@@ -161,6 +163,7 @@ function setParams(id, descr) {
                 }
                 break;
 
+            case "EN":
             case "FR":
                 replaceValue = (paramArray[params.Ref] > 1 ? params.P : params.S);
                 break;
