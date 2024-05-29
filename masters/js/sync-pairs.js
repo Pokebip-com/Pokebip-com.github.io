@@ -653,19 +653,20 @@ function getMoveRow(moveId) {
     tr.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
-    powerCell.innerText = mov.power || "–";
+    powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power*1.2)}` : "—";
+
     tr.appendChild(powerCell);
 
     let accuracyCell = document.createElement("td");
-    accuracyCell.innerText = mov.accuracy || "–";
+    accuracyCell.innerText = mov.accuracy || "—";
     tr.appendChild(accuracyCell);
 
     let gaugeCell = document.createElement("td");
-    gaugeCell.innerText = mov.gaugeDrain || "–";
+    gaugeCell.innerText = mov.gaugeDrain || "—";
     tr.appendChild(gaugeCell);
 
     let targetCell = document.createElement("td");
-    targetCell.innerText = moveTargetType[targetToId[mov.target]] || "–";
+    targetCell.innerText = moveTargetType[targetToId[mov.target]] || "—";
     tr.appendChild(targetCell);
 
     let descrCell = document.createElement("td");
@@ -673,7 +674,7 @@ function getMoveRow(moveId) {
     tr.appendChild(descrCell);
 
     let limitCell = document.createElement("td");
-    limitCell.innerText = mov.uses || "–";
+    limitCell.innerText = mov.uses || "—";
     tr.appendChild(limitCell);
 
     return tr;
@@ -697,11 +698,11 @@ function getGMaxMoveRow(moveId) {
     tr.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
-    powerCell.innerText = mov.power || "–";
+    powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power*1.2)}` : "—";
     tr.appendChild(powerCell);
 
     let targetCell = document.createElement("td");
-    targetCell.innerText = moveTargetType[targetToId[mov.target]] || "–";
+    targetCell.innerText = moveTargetType[targetToId[mov.target]] || "—";
     tr.appendChild(targetCell);
 
     let descrCell = document.createElement("td");
@@ -728,7 +729,7 @@ function getSyncMoveRow(syncMoveId, tr) {
     row.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
-    powerCell.innerText = mov.power || "–";
+    powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power*1.2)}` : "—";
     row.appendChild(powerCell);
 
     let effectCell = document.createElement("td");
@@ -976,11 +977,11 @@ function appendGridCategory(table, panels, category) {
         tr.appendChild(ameliorationCell);
 
         let effectCell = document.createElement("td");
-        effectCell.innerText = p.ability.passiveId ? getPassiveSkillDescr(p.ability.passiveId) : "–";
+        effectCell.innerText = p.ability.passiveId ? getPassiveSkillDescr(p.ability.passiveId) : "—";
         tr.appendChild(effectCell);
 
         let energyCell = document.createElement("td");
-        energyCell.innerText = p.energyCost || "–";
+        energyCell.innerText = p.energyCost || "—";
         tr.appendChild(energyCell);
 
         let orbCostCell = document.createElement("td");
