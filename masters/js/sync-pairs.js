@@ -1990,7 +1990,7 @@ function getPairBipCode(trainerId) {
     });
 
     if(hasExRoleUnlocked(trainerId)) {
-        string += `\t[include=jeuxvideo/pokemon-masters/duos/include/role-ex-${getRoleUrlByTrainerId(trainerId)}]\n`;
+        string += `\t[include=jeuxvideo/pokemon-masters/duos/include/role-ex-${getExRoleUrlByTrainerId(trainerId)}]\n`;
     }
 
     string += `[/listh]\n\n`;

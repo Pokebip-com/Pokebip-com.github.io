@@ -179,6 +179,23 @@ function getRoleUrlByTrainerId(id, specification = true) {
     }
 }
 
+function getExRoleUrlByTrainerId(id, specification = true) {
+    const role = trainerExRole.find(t => t.trainerId === id).role;
+
+    switch(role) {
+        case 0:
+        case 1:
+            if(!specification)
+                return "attaquant";
+        case 0:
+            return "attaquant-physique";
+        case 1:
+            return "attaquant-special";
+        default:
+            return removeAccents(commonLocales.role_names[role].toLowerCase());
+    }
+}
+
 function getTrainerTypeName(id) {
     return motifTypeName[trainer.find(t => t.trainerId === id).type];
 }
