@@ -1432,7 +1432,7 @@ function setSyncGrid() {
 
     setGridPicker(ap, gridPickerDiv);
 
-    container.innerHTML = `<br /><h2>${syncPairLocale.sync_grid_title}</h2>`;
+    container.innerHTML = `<br /><h2>${syncPairLocale.sync_grid_title} (${ap.length} ${syncPairLocale.sync_grid_tiles})</h2>`;
     container.appendChild(gridPickerDiv);
     container.appendChild(document.createElement("br"));
 

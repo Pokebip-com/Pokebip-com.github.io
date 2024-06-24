@@ -46,6 +46,7 @@
   "sync_grid_energy_level" : "Niveau d'energie max",
   "sync_orbs" : "Duo-Sphères",
   "sync_grid_energy" : "Énergie",
+  "sync_grid_tiles" : "cases",
   "sync_grid_selected_tiles" : "Cases sélectionnées",
   "sync_grid_tile_description_tooltip" : "Effet ",
   "sync_grid_tile_orbs_tooltip" : "Duo-Sphères ",

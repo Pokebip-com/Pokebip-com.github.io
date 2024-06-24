@@ -46,6 +46,7 @@
   "sync_grid_energy_level" : "Max energy cap",
   "sync_orbs" : "Sync Orbs",
   "sync_grid_energy" : "Energy",
+  "sync_grid_tiles" : "tiles",
   "sync_grid_selected_tiles" : "Selected tiles",
   "sync_grid_tile_description_tooltip" : "Effect",
   "sync_grid_tile_orbs_tooltip" : "Sync orbs",
