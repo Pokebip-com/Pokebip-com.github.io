@@ -61,5 +61,8 @@
     "legend_rule_6040_003": "Cuando el rival no sufre problemas de\nestado, se potencian sus ataques.",
     "legend_rule_6050_001": "La primera vez que los PS de Landorus\nbajan al 80% o menos y la primera vez que\nbajan al 50% o menos, se quedan a esos\nrespectivos porcentajes.",
     "legend_rule_6050_002": "Cuando hay una tormenta de arena, se\npotencian o bien los movimientos del rival,\no bien sus movimientos y sus movimientos\ncompi.",
-    "legend_rule_6050_003": "Cuando aumenta la Velocidad del rival, se\ntriplican su Defensa y su Defensa Esp."
+    "legend_rule_6050_003": "Cuando aumenta la Velocidad del rival, se\ntriplican su Defensa y su Defensa Esp.",
+    "legend_rule_6060_001": "Cada vez que Machamp usa su movimiento\ncompi, se reduce en 1 el máximo del\ncontador de movimientos compi de este.",
+    "legend_rule_6060_002": "El rival ignora el efecto Aguante y las\nhabilidades pasivas de tus aliados que\nreduzcan el daño de los ataques.",
+    "legend_rule_6060_003": "La primera vez que los PS de Machamp\nbajan al 80% o menos y la primera vez que\nbajan al 50% o menos, se quedan a esos\nrespectivos porcentajes."
 }

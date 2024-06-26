@@ -22,5 +22,7 @@
     "score_attack_battle_rule_5060_008": "Allied tech sync pairs’ Attack, Defense, Sp. Atk,\nSp. Def, and Speed are lowered by 80%.",
     "score_attack_battle_rule_5060_009": "Allied strike sync pairs’ Attack, Defense, Sp. Atk,\nSp. Def, and Speed are lowered by 80%.",
     "score_attack_battle_rule_5060_010": "Opponents are immune to status conditions and\nwon’t flinch, become confused, or\nbecome trapped.",
-    "score_attack_battle_rule_5060_011": "Opponents take 80% less damage when they\nare unaffected by a status condition\nor interference."
+    "score_attack_battle_rule_5060_011": "Opponents take 80% less damage when they\nare unaffected by a status condition\nor interference.",
+    "damage_challenge_rule_6060_001": "Reduces the damage allies deal with moves\nby 80%.",
+    "damage_challenge_rule_6060_002": "Reduces the damage allies deal with sync moves\nand max moves by 80%."
 }

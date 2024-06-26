@@ -22,5 +22,7 @@
     "score_attack_battle_rule_5060_008": "L'Attacco, la Difesa, l'Attacco Speciale, la Difesa\nSpeciale e la Velocità delle Unità Alleate\ncon il ruolo di Tecnico diminuiscono dell'80%.",
     "score_attack_battle_rule_5060_009": "L'Attacco, la Difesa, l'Attacco Speciale, la Difesa\nSpeciale e la Velocità delle Unità alleate\ncon il ruolo di Attaccante diminuiscono dell'80%.",
     "score_attack_battle_rule_5060_010": "Le Unità avversarie sono immuni ai problemi\ndi stato, al tentennamento, alla confusione\ne all'imprigionamento.",
-    "score_attack_battle_rule_5060_011": "Se non sono affetti da problemi di stato\no impedimenti, gli avversari subiscono\nl'80% di danni in meno."
+    "score_attack_battle_rule_5060_011": "Se non sono affetti da problemi di stato\no impedimenti, gli avversari subiscono\nl'80% di danni in meno.",
+    "damage_challenge_rule_6060_001": "I danni inflitti dalle Unità alleate usando\nle mosse si abbassano dell'80%.",
+    "damage_challenge_rule_6060_002": "I danni inflitti dalle Unità alleate usando\nUnimosse o mosse UniDynamax\nsi abbassano dell'80%."
 }

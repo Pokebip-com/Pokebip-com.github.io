@@ -106,6 +106,8 @@
     "20008100": "Magnetilo",
     "20008200": "Magneton",
     "20008300": "Porenta",
+    "20008400": "Dodu",
+    "20008401": "Dodu",
     "20008600": "Jurob",
     "20008700": "Jugong",
     "20008800": "Sleima",
@@ -457,6 +459,7 @@
     "20055011": "Barschuft",
     "20055300": "Rabigator",
     "20055400": "Flampion",
+    "20056000": "Irokex",
     "20056100": "Symvolara",
     "20056300": "Echnatoll",
     "20056500": "Karippas",
@@ -665,8 +668,10 @@
     "2008160000": "Memmeon",
     "2008180000": "Intelleon",
     "2008200000": "Schlaraffel",
+    "2008230000": "Krarmor",
     "2008280000": "Gaunux",
     "2008300000": "Cottomi",
+    "2008320000": "Zwollock",
     "2008340000": "Kamalm",
     "2008350000": "Voldi",
     "2008390000": "Montecarbo",
@@ -684,6 +689,7 @@
     "2008650031": "Lauchzelot",
     "2008670031": "Oghnatoll",
     "2008691111": "Pokusan",
+    "2008710000": "Britzigel",
     "2008751100": "Kubuin",
     "2008751200": "Kubuin",
     "2008771100": "Morpeko",
@@ -735,5 +741,6 @@
     "2009800051": "Suelord",
     "2000790031": "Flegmon",
     "2000800031": "Lahmus",
-    "2009821100": "Dummimisel"
+    "2009821100": "Dummimisel",
+    "2001990031": "Laschoking"
 }

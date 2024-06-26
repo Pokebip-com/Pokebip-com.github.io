@@ -159,5 +159,10 @@
     "event_6040_1W_SuperTicket_09": "주즈베 스페셜 코스튬 출현율업 B서치",
     "event_6040_1W_MasterTicket_09": "주즈베 스페셜 코스튬 확정 B서치",
     "event_6040_2W_MasterTicket_03": "구즈마 확정 버라이어티 B서치",
-    "event_6040_2W_MasterTicket_04": "플루메리 확정 버라이어티 B서치"
+    "event_6040_2W_MasterTicket_04": "플루메리 확정 버라이어티 B서치",
+    "event_6060_1W_SuperTicket_01": "유채 시즌 한정 출현율업 B서치",
+    "event_6060_1W_MasterTicket_01": "유채 시즌 한정 확정 B서치",
+    "event_6060_1W_SuperTicket_02": "아세로라 시즌 한정 출현율업 B서치",
+    "event_6060_1W_MasterTicket_02": "아세로라 시즌 한정 확정 B서치",
+    "event_6060_1W_SuperTicket_05": "시즌 한정 출현율업 B서치"
 }

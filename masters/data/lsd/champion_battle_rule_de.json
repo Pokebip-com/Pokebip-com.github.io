@@ -22,5 +22,7 @@
     "score_attack_battle_rule_5060_008": "Angriff, Verteidigung, Sp.-Ang., Sp.-Vert. und \nInitiative verbündeter Taktiker sind um 80 %\ngesenkt.",
     "score_attack_battle_rule_5060_009": "Angriff, Verteidigung, Sp.-Ang., Sp.-Vert. und \nInitiative verbündeter Angreifer sind um 80 %\ngesenkt.",
     "score_attack_battle_rule_5060_010": "Gegner sind immun gegen Statusprobleme,\nZurückschrecken, Verwirrung und Umschlingung.",
-    "score_attack_battle_rule_5060_011": "Gegner erleiden 80 % weniger Schaden, wenn\nsie nicht von Statusproblemen oder Störungen\nbetroffen sind."
+    "score_attack_battle_rule_5060_011": "Gegner erleiden 80 % weniger Schaden, wenn\nsie nicht von Statusproblemen oder Störungen\nbetroffen sind.",
+    "damage_challenge_rule_6060_001": "Verbündete fügen mit Attacken 80 % weniger\nSchaden zu.",
+    "damage_challenge_rule_6060_002": "Verbündete fügen mit Gefährtenattacken und\nGefährten-Dynamax-Attacken 80 % weniger\nSchaden zu."
 }

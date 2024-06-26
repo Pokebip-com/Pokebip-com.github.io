@@ -61,5 +61,8 @@
     "legend_rule_6040_003": "Quand l'ennemi ne souffre pas d'une altération\nde statut, ses capacités offensives sont renforcées.",
     "legend_rule_6050_001": "Les PV de Démétéros restent à 80 % et 50 %\nla première fois que ses PV chutent\nà 80 % et 50 % ou moins.",
     "legend_rule_6050_002": "La puissance des capacités de l'ennemi,\nde ses capacités Duo, ou des deux,\naugmente pendant les tempêtes de sable.",
-    "legend_rule_6050_003": "Quand la Vitesse de l'ennemi est augmentée,\nsa Déf. et sa Déf. Spé. sont triplées."
+    "legend_rule_6050_003": "Quand la Vitesse de l'ennemi est augmentée,\nsa Déf. et sa Déf. Spé. sont triplées.",
+    "legend_rule_6060_001": "À chaque fois que Mackogneur utilise une\ncapacité Duo, le nombre maximum d'actions\nnécessaires pour en lancer une réduit de 1.",
+    "legend_rule_6060_002": "L'ennemi ignore l'effet Coriacité et les talents\npassifs des alliés réduisant les dégâts.",
+    "legend_rule_6060_003": "Les PV de Mackogneur restent à 80 %\net 50 % la première fois que ses PV\nchutent à 80 % et 50 % ou moins."
 }

@@ -61,5 +61,8 @@
     "legend_rule_6040_003": "Wenn der Gegner nicht von Statusproblemen\nbetroffen ist, ist die Stärke seiner Angriffe\nerhöht.",
     "legend_rule_6050_001": "Fallen Demeteros’ KP das erste Mal auf 80 %\nund 50 %, hält es mit der jeweiligen Anzahl\nan KP durch.",
     "legend_rule_6050_002": "Erhöht die Stärke von Attacken oder von\nAttacken und der Gefährtenattacke des\nGegners während eines Sandsturms.",
-    "legend_rule_6050_003": "Wenn die Initiative des Gegners erhöht ist,\nsind seine Vert. und Sp.-Vert. verdreifacht."
+    "legend_rule_6050_003": "Wenn die Initiative des Gegners erhöht ist,\nsind seine Vert. und Sp.-Vert. verdreifacht.",
+    "legend_rule_6060_001": "Machomeis GA-Countdown wird nach dem\nEinsatz jeder GA um 1 reduziert.",
+    "legend_rule_6060_002": "Der Gegner ignoriert K.O.-Schutz-Effekte\nund verbündete Passivfähigkeiten, die\nSchadensreduktion bewirken.",
+    "legend_rule_6060_003": "Fallen Machomeis KP das erste Mal auf 80 %\nund 50 %, hält es mit der jeweiligen Anzahl\nan KP durch."
 }

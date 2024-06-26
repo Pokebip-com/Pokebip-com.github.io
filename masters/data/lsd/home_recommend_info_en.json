@@ -1,5 +1,5 @@
 {
-    "50200001": "There’s a tournament to decide the new Neo Champion!",
+    "50200001": "There’s a competition to decide the new Neo Champion!",
     "50200002": "Neo Champion Time! Take on the strong opponents who await you!",
     "50200003": "Strong opponents await in extreme battles!",
     "50200004": "Combat Team Rocket with Kanto sync pairs!",
@@ -112,7 +112,7 @@
     "51000014": "Happy Pokémon Masters Day!",
     "51000015": "An Ultimate Battle is now available!",
     "51100001": "New content added to the Mysterious Stones chapter!",
-    "51100002": "There’s a tournament to decide the new Neo Champion!",
+    "51100002": "There’s a competition to decide the new Neo Champion!",
     "51100003": "Take on the extreme battles!",
     "51100004": "Investigate the Foundation under way!",
     "51100005": "People Protecting Pokémon under way!",
@@ -195,5 +195,15 @@
     "60500090": "Looming Shadow of Kanto is under way!",
     "60500100": "Spreading Shadows is under way!",
     "60500110": "Updating the Pokémon Center is under way!",
-    "60500120": "Luxurious Missions is under way!"
+    "60500120": "Luxurious Missions is under way!",
+    "60600010": "Exciting Treasure Hunt under way!",
+    "60600020": "Twin Stars Far Apart under way!",
+    "60600030": "High Score Event under way!",
+    "60600040": "With Beauty and Grace under way!",
+    "60600050": "Isle Disciples, Arena Tycoon under way!",
+    "60600060": "Team Magma’s Red-Hot Rage under way!",
+    "60600070": "Team Aqua’s Stormy Seas under way!",
+    "60600080": "An Ultimate Battle has been added!",
+    "60600081": "Damage Challenge now available!",
+    "60600082": "A Ranked Damage Event is under way!"
 }

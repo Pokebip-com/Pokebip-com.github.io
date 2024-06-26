@@ -282,5 +282,20 @@
     "10101004": "Normal (Initiator)",
     "10303004": "Top Vier (Initiator)",
     "10304004": "Arenaleiter (Initiator)",
-    "19968004": "Die Ruhe in Person (Initiator)"
+    "19968004": "Die Ruhe in Person (Initiator)",
+    "10105004": "Pflanze (Initiator)",
+    "10106005": "Eis (Feldwandler)",
+    "10110004": "Flug (Initiator)",
+    "10111005": "Psycho (Feldwandler)",
+    "10113005": "Gestein (Feldwandler)",
+    "10115004": "Drache (Initiator)",
+    "10205004": "Einall (Initiator)",
+    "10403005": "Brillenträger (Feldwandler)",
+    "10412005": "Doppelzopfträger (Feldwandler)",
+    "19954004": "Einall-Abenteurer (Initiator)",
+    "19910004": "Sparringspartner (Initiator)",
+    "19932005": "Junge Damen (Feldwandler)",
+    "19956005": "Naturliebhaber (Feldwandler)",
+    "19960005": "Die Übersinnlichen (Feldwandler)",
+    "19970005": "Alola-Abenteurer (Feldwandler)"
 }

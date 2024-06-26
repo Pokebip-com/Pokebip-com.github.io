@@ -159,5 +159,10 @@
     "event_6040_1W_SuperTicket_09": "Reclutamiento favorable\nde trajes esp.: Malignia",
     "event_6040_1W_MasterTicket_09": "Reclutamiento garantizado\nde trajes esp.: Malignia",
     "event_6040_2W_MasterTicket_03": "Reclutamiento variado\ngarantizado: Guzmán",
-    "event_6040_2W_MasterTicket_04": "Reclutamiento variado\ngarantizado: Francine"
+    "event_6040_2W_MasterTicket_04": "Reclutamiento variado\ngarantizado: Francine",
+    "event_6060_1W_SuperTicket_01": "Reclutamiento favorable\nde temporada: Gardenia",
+    "event_6060_1W_MasterTicket_01": "Reclutamiento garantizado\nde temporada: Gardenia",
+    "event_6060_1W_SuperTicket_02": "Reclutamiento favorable\nde temporada: Zarala",
+    "event_6060_1W_MasterTicket_02": "Reclutamiento garantizado\nde temporada: Zarala",
+    "event_6060_1W_SuperTicket_05": "Reclutamiento favorable\nde compis de temporada"
 }

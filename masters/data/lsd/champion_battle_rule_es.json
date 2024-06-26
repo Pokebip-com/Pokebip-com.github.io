@@ -22,5 +22,7 @@
     "score_attack_battle_rule_5060_008": "Se reducen en un 80% el Ataque, la Defensa,\nel Ataque Especial, la Defensa Especial y la\nVelocidad de los compis de sabotaje de tu\nequipo.",
     "score_attack_battle_rule_5060_009": "Se reducen en un 80% el Ataque, la Defensa,\nel Ataque Especial, la Defensa Especial y la\nVelocidad de los compis de ataque de tu equipo.",
     "score_attack_battle_rule_5060_010": "El equipo rival es inmune a los problemas de\nestado, al retroceso, a la confusión y a las\nataduras.",
-    "score_attack_battle_rule_5060_011": "El equipo rival recibe un 80% menos de daño\ncuando no le afecta ningún problema ni cambio\nde estado."
+    "score_attack_battle_rule_5060_011": "El equipo rival recibe un 80% menos de daño\ncuando no le afecta ningún problema ni cambio\nde estado.",
+    "damage_challenge_rule_6060_001": "Se reduce en un 80% el daño que inflige tu\nequipo con movimientos.",
+    "damage_challenge_rule_6060_002": "Se reduce en un 80% el daño que inflige tu\nequipo con movimientos compi y movimientos\ncompi Dinamax."
 }

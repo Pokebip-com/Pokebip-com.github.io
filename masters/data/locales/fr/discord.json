@@ -4,5 +4,8 @@
   "new_pairs_information_title" : "FICHES DES NOUVEAUX DUOS",
   "sync_grid_ups_title" : "PLATEAUX ÉTENDUS",
   "sync_grid_ups_text" : "Les nouvelles cases sont surlignées en vert dans le tableau récapitulatif tout en bas de la page",
-  "new_ex_roles_title" : "NOUVEAUX RÔLES EX"
+  "new_ex_roles_title" : "NOUVEAUX RÔLES EX",
+  "new_sync_pairs" : "Nouveaux Duos :",
+  "new_ex_roles_title_small" : "Nouveaux Rôles Ex :",
+  "sync_grid_ups_title_small" : "Plateaux étendus :"
 }

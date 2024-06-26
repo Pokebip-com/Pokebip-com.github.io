@@ -22,5 +22,7 @@
     "score_attack_battle_theme_5060_008": "Five stats of allied tech\nsync pairs significantly\nreduced",
     "score_attack_battle_theme_5060_009": "Five stats of allied strike\nsync pairs significantly\nreduced",
     "score_attack_battle_theme_5060_010": "Opponents are immune\nto status conditions and\ninterference",
-    "score_attack_battle_theme_5060_011": "Damage taken by\nunaffected opponents\nis significantly reduced"
+    "score_attack_battle_theme_5060_011": "Damage taken by\nunaffected opponents\nis significantly reduced",
+    "damage_challenge_theme_6060_001": "Ally move damage significantly reduced",
+    "damage_challenge_theme_6060_002": "Ally sync move and max move damage\nsignificantly reduced"
 }

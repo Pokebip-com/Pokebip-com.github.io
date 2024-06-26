@@ -33,6 +33,8 @@
 { "battleParameterId": "chain_combo.duration", "value": "2000", "coords": "" },
 { "battleParameterId": "chain_combo.max_duration", "value": "20000", "coords": "" },
 { "battleParameterId": "command.execute_interval", "value": "1000", "coords": "" },
+{ "battleParameterId": "damage_challenge_score_up_large", "value": "50000", "coords": "" },
+{ "battleParameterId": "damage_challenge_score_up_middle", "value": "10000", "coords": "" },
 { "battleParameterId": "damage_logic.base_level_like_scale", "value": "25", "coords": "" },
 { "battleParameterId": "damage_logic.effectiveness_scale_effective", "value": "2000", "coords": "" },
 { "battleParameterId": "damage_logic.effectiveness_scale_not_effective", "value": "800", "coords": "" },

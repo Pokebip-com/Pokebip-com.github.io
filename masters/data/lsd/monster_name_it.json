@@ -106,6 +106,8 @@
     "20008100": "Magnemite",
     "20008200": "Magneton",
     "20008300": "Farfetch'd",
+    "20008400": "Doduo",
+    "20008401": "Doduo",
     "20008600": "Seel",
     "20008700": "Dewgong",
     "20008800": "Grimer",
@@ -457,6 +459,7 @@
     "20055011": "Basculin",
     "20055300": "Krookodile",
     "20055400": "Darumaka",
+    "20056000": "Scrafty",
     "20056100": "Sigilyph",
     "20056300": "Cofagrigus",
     "20056500": "Carracosta",
@@ -665,8 +668,10 @@
     "2008160000": "Sobble",
     "2008180000": "Inteleon",
     "2008200000": "Greedent",
+    "2008230000": "Corviknight",
     "2008280000": "Thievul",
     "2008300000": "Eldegoss",
+    "2008320000": "Dubwool",
     "2008340000": "Drednaw",
     "2008350000": "Yamper",
     "2008390000": "Coalossal",
@@ -684,6 +689,7 @@
     "2008650031": "Sirfetch'd",
     "2008670031": "Runerigus",
     "2008691111": "Alcremie",
+    "2008710000": "Pincurchin",
     "2008751100": "Eiscue",
     "2008751200": "Eiscue",
     "2008771100": "Morpeko",
@@ -735,5 +741,6 @@
     "2009800051": "Clodsire",
     "2000790031": "Slowpoke",
     "2000800031": "Slowbro",
-    "2009821100": "Dudunsparce"
+    "2009821100": "Dudunsparce",
+    "2001990031": "Slowking"
 }

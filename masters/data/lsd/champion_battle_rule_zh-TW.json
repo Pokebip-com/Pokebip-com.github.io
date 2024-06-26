@@ -22,5 +22,7 @@
     "score_attack_battle_rule_5060_008": "我方技術型拍組的\n攻擊、防禦、特攻、特防和速度會降低８０％。",
     "score_attack_battle_rule_5060_009": "我方攻擊型拍組的\n攻擊、防禦、特攻、特防和速度會降低８０％。",
     "score_attack_battle_rule_5060_010": "對手不會陷入異常狀態、畏縮狀態、混亂狀態\n和束縛狀態。",
-    "score_attack_battle_rule_5060_011": "當對手未陷入異常狀態或妨害狀態時，\n會減輕所受到的傷害８０％。"
+    "score_attack_battle_rule_5060_011": "當對手未陷入異常狀態或妨害狀態時，\n會減輕所受到的傷害８０％。",
+    "damage_challenge_rule_6060_001": "我方用招式給予的傷害會減少８０％。",
+    "damage_challenge_rule_6060_002": "我方用拍組招式和拍組極巨化招式\n給予的傷害會減少８０％。"
 }

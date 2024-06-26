@@ -159,5 +159,10 @@
     "event_6040_1W_SuperTicket_09": "Bellelba Costume\nFeatured Ticket Scout",
     "event_6040_1W_MasterTicket_09": "Bellelba Costume\nGuaranteed Ticket Scout",
     "event_6040_2W_MasterTicket_03": "Guzma\nGuaranteed Variety Scout",
-    "event_6040_2W_MasterTicket_04": "Plumeria\nGuaranteed Variety Scout"
+    "event_6040_2W_MasterTicket_04": "Plumeria\nGuaranteed Variety Scout",
+    "event_6060_1W_SuperTicket_01": "Gardenia Seasonal\nFeatured Ticket Scout",
+    "event_6060_1W_MasterTicket_01": "Gardenia Seasonal\nGuaranteed Ticket Scout",
+    "event_6060_1W_SuperTicket_02": "Acerola Seasonal\nFeatured Ticket Scout",
+    "event_6060_1W_MasterTicket_02": "Acerola Seasonal\nGuaranteed Ticket Scout",
+    "event_6060_1W_SuperTicket_05": "Seasonal Featured\nTicket Scout"
 }

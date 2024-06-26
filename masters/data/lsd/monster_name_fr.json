@@ -106,6 +106,8 @@
     "20008100": "Magnéti",
     "20008200": "Magnéton",
     "20008300": "Canarticho",
+    "20008400": "Doduo",
+    "20008401": "Doduo",
     "20008600": "Otaria",
     "20008700": "Lamantine",
     "20008800": "Tadmorv",
@@ -457,6 +459,7 @@
     "20055011": "Bargantua",
     "20055300": "Crocorible",
     "20055400": "Darumarond",
+    "20056000": "Baggaïd",
     "20056100": "Cryptéro",
     "20056300": "Tutankafer",
     "20056500": "Mégapagos",
@@ -665,8 +668,10 @@
     "2008160000": "Larméléon",
     "2008180000": "Lézargus",
     "2008200000": "Rongrigou",
+    "2008230000": "Corvaillus",
     "2008280000": "Roublenard",
     "2008300000": "Blancoton",
+    "2008320000": "Moumouflon",
     "2008340000": "Torgamord",
     "2008350000": "Voltoutou",
     "2008390000": "Monthracite",
@@ -684,6 +689,7 @@
     "2008650031": "Palarticho",
     "2008670031": "Tutétékri",
     "2008691111": "Charmilly",
+    "2008710000": "Wattapik",
     "2008751100": "Bekaglaçon",
     "2008751200": "Bekaglaçon",
     "2008771100": "Morpeko",
@@ -735,5 +741,6 @@
     "2009800051": "Terraiste",
     "2000790031": "Ramoloss",
     "2000800031": "Flagadoss",
-    "2009821100": "Deusolourdo"
+    "2009821100": "Deusolourdo",
+    "2001990031": "Roigada"
 }

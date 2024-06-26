@@ -155,7 +155,7 @@
     "100801001": "Battle! (Gym Leader: Piers)",
     "100801002": "Battle! (Marnie)",
     "100801003": "Decisive Battle! (Champion Leon)",
-    "100801004": "Battle! (Trainer Battle)",
+    "100801004": "Battle! (Trainer)",
     "100801005": "Battle! (Gym Leader)",
     "100801006": "Battle! (Hop)",
     "100801007": "Battle! (Wild Pokémon)",
@@ -163,6 +163,7 @@
     "100801009": "Battle! (Bede)",
     "100801010": "Decisive Battle! (Marnie)",
     "100801011": "A Bizarre Situation",
+    "100801012": "Team Yell Appears!",
     "100801013": "Battle! (Team Yell)",
     "100801014": "Battle! (Rose)",
     "100801015": "Battle! (Oleana)",
@@ -176,5 +177,10 @@
     "100901003": "Battle! (Cassiopeia)",
     "100901005": "Battle! (Top Champion)",
     "100901006": "The Academy Ace Tournament",
-    "100901007": "Battle! (Elite Four)"
+    "100901007": "Battle! (Elite Four)",
+    "100502016": "Cheren’s Theme",
+    "100502017": "Bianca’s Theme",
+    "100801022": "Battle! (Klara)",
+    "100801023": "Krazy for Klara",
+    "100801024": "Battle! (Avery)"
 }

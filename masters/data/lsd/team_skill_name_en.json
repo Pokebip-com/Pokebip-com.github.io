@@ -282,5 +282,20 @@
     "10101004": "Normal Sprint",
     "10303004": "Elite Four Sprint",
     "10304004": "Gym Leader Sprint",
-    "19968004": "Free Spirit Sprint"
+    "19968004": "Free Spirit Sprint",
+    "10105004": "Grass Sprint",
+    "10106005": "Ice Field",
+    "10110004": "Flying Sprint",
+    "10111005": "Psychic Field",
+    "10113005": "Rock Field",
+    "10115004": "Dragon Sprint",
+    "10205004": "Unova Sprint",
+    "10403005": "Glasses Field",
+    "10412005": "Pigtails Field",
+    "19954004": "Unova Adventurer Sprint",
+    "19910004": "Body Builder Sprint",
+    "19932005": "Fancy Lady Field",
+    "19956005": "Nature Lover Field",
+    "19960005": "Supernatural Field",
+    "19970005": "Alola Adventurer Field"
 }
