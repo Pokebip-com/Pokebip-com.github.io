@@ -1,0 +1,9 @@
+{"entries": [
+{ "numLot": "101", "numGuaranteedSlots": 1, "entryWeight": 1000 },
+{ "numLot": "101", "numGuaranteedSlots": 2, "entryWeight": 1000 },
+{ "numLot": "101", "numGuaranteedSlots": 3, "entryWeight": 1000 },
+{ "numLot": "201", "numGuaranteedSlots": 2, "entryWeight": 1000 },
+{ "numLot": "201", "numGuaranteedSlots": 3, "entryWeight": 1000 },
+{ "numLot": "202", "numGuaranteedSlots": 2, "entryWeight": 1000 },
+{ "numLot": "301", "numGuaranteedSlots": 3, "entryWeight": 1000 }
+]}

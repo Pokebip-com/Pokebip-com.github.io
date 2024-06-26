@@ -1,5 +1,18 @@
 {
+  "new_feathers" : "New Skill Feathers",
+  "all_feathers" : "All Skill Feathers",
+  "num_slots" : "Unlocked slots",
+  "chances" : "Probability",
   "team_skills" : "Team skills",
+  "stats" : "Stats",
+  "equipment_name" : {
+    "Bracelet" : "Bracelet",
+    "Bandana" : "Bandana",
+    "Pin" : "Pin"
+  },
+  "stat_name_title" : "Stat",
+  "stat_min_title" : "Min",
+  "stat_max_title" : "Max",
   "passive_skills" : "Passive skills",
   "passive_name_title" : "Name",
   "passive_descr_title" : "Description"

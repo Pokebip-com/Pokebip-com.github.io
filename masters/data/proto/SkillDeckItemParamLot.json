@@ -1,0 +1,20 @@
+{"entries": [
+{ "skillDeckItemNumLot": 101, "equipmentType": "Bracelet", "stat": "hp", "entryWeight": 1000, "minStat": 2, "maxStat": 6, "isPriority": false },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Bracelet", "stat": "atk", "entryWeight": 1000, "minStat": 8, "maxStat": 16, "isPriority": true },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Bracelet", "stat": "def", "entryWeight": 1000, "minStat": 2, "maxStat": 6, "isPriority": false },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Bandana", "stat": "hp", "entryWeight": 1000, "minStat": 2, "maxStat": 6, "isPriority": false },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Bandana", "stat": "spa", "entryWeight": 1000, "minStat": 8, "maxStat": 16, "isPriority": true },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Bandana", "stat": "spd", "entryWeight": 1000, "minStat": 2, "maxStat": 6, "isPriority": false },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Pin", "stat": "hp", "entryWeight": 1000, "minStat": 8, "maxStat": 20, "isPriority": true },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Pin", "stat": "atk", "entryWeight": 1000, "minStat": 2, "maxStat": 4, "isPriority": false },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Pin", "stat": "def", "entryWeight": 1000, "minStat": 2, "maxStat": 4, "isPriority": false },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Pin", "stat": "spa", "entryWeight": 1000, "minStat": 2, "maxStat": 4, "isPriority": false },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Pin", "stat": "spd", "entryWeight": 1000, "minStat": 2, "maxStat": 4, "isPriority": false },
+{ "skillDeckItemNumLot": 101, "equipmentType": "Pin", "stat": "spe", "entryWeight": 1000, "minStat": 2, "maxStat": 6, "isPriority": false },
+{ "skillDeckItemNumLot": 301, "equipmentType": "Bracelet", "stat": "atk", "entryWeight": 1000, "minStat": 12, "maxStat": 12, "isPriority": true },
+{ "skillDeckItemNumLot": 301, "equipmentType": "Bracelet", "stat": "def", "entryWeight": 1000, "minStat": 4, "maxStat": 4, "isPriority": true },
+{ "skillDeckItemNumLot": 301, "equipmentType": "Bandana", "stat": "spa", "entryWeight": 1000, "minStat": 12, "maxStat": 12, "isPriority": true },
+{ "skillDeckItemNumLot": 301, "equipmentType": "Bandana", "stat": "spd", "entryWeight": 1000, "minStat": 4, "maxStat": 4, "isPriority": true },
+{ "skillDeckItemNumLot": 301, "equipmentType": "Pin", "stat": "hp", "entryWeight": 1000, "minStat": 14, "maxStat": 14, "isPriority": true },
+{ "skillDeckItemNumLot": 301, "equipmentType": "Pin", "stat": "spe", "entryWeight": 1000, "minStat": 4, "maxStat": 4, "isPriority": true }
+]}

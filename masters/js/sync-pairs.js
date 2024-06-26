@@ -451,12 +451,12 @@ function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole
     }
 
     table.appendChild(headRow);
-    table.appendChild(getStatRow(syncPairLocale.hp, monsterData.hpValues, rarity, input.value, exRoleBonus.hp));
-    table.appendChild(getStatRow(syncPairLocale.atk, monsterData.atkValues, rarity, input.value, exRoleBonus.atk, (variation ? variation.atkScale/100 : 1)));
-    table.appendChild(getStatRow(syncPairLocale.def, monsterData.defValues, rarity, input.value, exRoleBonus.def, (variation ? variation.defScale/100 : 1)));
-    table.appendChild(getStatRow(syncPairLocale.spa, monsterData.spaValues, rarity, input.value, exRoleBonus.spa, (variation ? variation.spaScale/100 : 1)));
-    table.appendChild(getStatRow(syncPairLocale.spd, monsterData.spdValues, rarity, input.value, exRoleBonus.spd, (variation ? variation.spdScale/100 : 1)));
-    table.appendChild(getStatRow(syncPairLocale.spe, monsterData.speValues, rarity, input.value, exRoleBonus.spe, (variation ? variation.speScale/100 : 1)));
+    table.appendChild(getStatRow(commonLocales.hp, monsterData.hpValues, rarity, input.value, exRoleBonus.hp));
+    table.appendChild(getStatRow(commonLocales.atk, monsterData.atkValues, rarity, input.value, exRoleBonus.atk, (variation ? variation.atkScale/100 : 1)));
+    table.appendChild(getStatRow(commonLocales.def, monsterData.defValues, rarity, input.value, exRoleBonus.def, (variation ? variation.defScale/100 : 1)));
+    table.appendChild(getStatRow(commonLocales.spa, monsterData.spaValues, rarity, input.value, exRoleBonus.spa, (variation ? variation.spaScale/100 : 1)));
+    table.appendChild(getStatRow(commonLocales.spd, monsterData.spdValues, rarity, input.value, exRoleBonus.spd, (variation ? variation.spdScale/100 : 1)));
+    table.appendChild(getStatRow(commonLocales.spe, monsterData.speValues, rarity, input.value, exRoleBonus.spe, (variation ? variation.speScale/100 : 1)));
     statsDiv.appendChild(table);
 }
 

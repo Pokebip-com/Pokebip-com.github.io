@@ -18,6 +18,12 @@
     "Sync move countdown is reduced by three the first time the user's Sync move is used each battle.",
     "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only."
   ],
+  "hp" : "HP",
+  "atk" : "Attack",
+  "def" : "Defense",
+  "spa" : "Sp. Atk.",
+  "spd" : "Sp. Def.",
+  "spe" : "Speed",
   "base_trainer_name" : "Trainer (Scottie/Bettie)",
   "menu_schedule" : "Schedule",
   "menu_sync_pairs" : "Sync Pairs",

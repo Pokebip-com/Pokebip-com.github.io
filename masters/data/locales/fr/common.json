@@ -18,6 +18,12 @@
     "La première fois que le lanceur utilise une capacité Duo, le nombre d'actions nécessaires pour lancer une capacité Duo est réduit de trois.",
     "Implémente un effet de terrain juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet."
   ],
+  "hp" : "PV",
+  "atk" : "Attaque",
+  "def" : "Défense",
+  "spa" : "Atq. Spé.",
+  "spd" : "Déf. Spé.",
+  "spe" : "Vitesse",
   "base_trainer_name" : "Dresseur (Scottie/Bettie)",
   "menu_schedule" : "Programme",
   "menu_sync_pairs" : "Duos",

@@ -1,0 +1,8 @@
+{"entries": [
+{ "stat": "hp", "coefficient": 5 },
+{ "stat": "atk", "coefficient": 5 },
+{ "stat": "def", "coefficient": 5 },
+{ "stat": "spa", "coefficient": 5 },
+{ "stat": "spd", "coefficient": 5 },
+{ "stat": "spe", "coefficient": 5 }
+]}

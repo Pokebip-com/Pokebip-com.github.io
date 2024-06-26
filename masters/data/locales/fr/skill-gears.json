@@ -1,5 +1,18 @@
 {
+  "new_feathers" : "Nouvelles Plumes Talent",
+  "all_feathers" : "Toutes les Plumes Talent",
+  "num_slots" : "Slots déverouillés",
+  "chances" : "Probabilités",
   "team_skills" : "Talents d'équipe",
+  "stats" : "Stats",
+  "equipment_name" : {
+    "Bracelet" : "Bracelet",
+    "Bandana" : "Bandana",
+    "Pin" : "Broche"
+  },
+  "stat_name_title" : "Stat",
+  "stat_min_title" : "Min",
+  "stat_max_title" : "Max",
   "passive_skills" : "Talents passifs",
   "passive_name_title" : "Nom",
   "passive_descr_title" : "Description"
