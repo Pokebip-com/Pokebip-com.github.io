@@ -18,6 +18,7 @@ let versions;
 
 let skillGearsLocale;
 
+let featherListDiv;
 let skillGearsDiv;
 
 
@@ -121,6 +122,26 @@ function getFeatherItemImage(feather) {
     return img;
 }
 
+function getFeatherLi(feather) {
+    let newLi = document.createElement("li");
+    newLi.classList.add("listh-bipcode");
+    newLi.style.width = "100px";
+    newLi.appendChild(getFeatherItemImage(feather));
+
+    newLi.appendChild(document.createElement("br"));
+
+    let link = document.createElement("a");
+    link.onclick = () => printFeatherInfos(feather);
+    link.href = `#feather_${feather.itemId}`;
+    link.innerHTML = `<b>${skillDeckItemSkillFeatherItemName[feather.itemId]}</b>`;
+
+    newLi.classList.add("listh-click");
+    newLi.onclick = () => link.click();
+    newLi.appendChild(link);
+
+    return newLi;
+}
+
 function listFeatherInfos() {
 
     let newFeathers = getNewSpecialFeathers();
@@ -135,58 +156,26 @@ function listFeatherInfos() {
         newUl.classList.add("listh-bipcode");
 
         for(let i = 0; i < newFeathers.length; i++) {
-            let newLi = document.createElement("li");
-            newLi.classList.add("listh-bipcode");
-            newLi.style.width = "100px";
-            newLi.appendChild(getFeatherItemImage(newFeathers[i]));
-
-            newLi.appendChild(document.createElement("br"));
-
-            let link = document.createElement("a");
-            link.href = `#feather_${newFeathers[i].itemId}`;
-            link.innerHTML = `<b>${skillDeckItemSkillFeatherItemName[newFeathers[i].itemId]}</b>`;
-
-            newLi.classList.add("listh-click");
-            newLi.onclick = () => link.click();
-            newLi.appendChild(link);
-
-            newUl.appendChild(newLi);
+            newUl.appendChild(getFeatherLi(newFeathers[i]));
         }
 
-        skillGearsDiv.appendChild(newUl);
+        featherListDiv.appendChild(newUl);
     }
 
     let allFeathersH2 = document.createElement("h2");
     allFeathersH2.innerText = skillGearsLocale.all_feathers;
-    skillGearsDiv.appendChild(allFeathersH2);
+    featherListDiv.appendChild(allFeathersH2);
 
     let ul = document.createElement("ul");
     ul.classList.add("listh-bipcode");
 
     for(let i = 0; i < skillDeckItemSkillFeatherItem.length; i++) {
-        let li = document.createElement("li");
-        li.classList.add("listh-bipcode");
-        li.style.width = "100px";
-        li.appendChild(getFeatherItemImage(skillDeckItemSkillFeatherItem[i]));
-
-        li.appendChild(document.createElement("br"));
-
-        let link = document.createElement("a");
-        link.href = `#feather_${skillDeckItemSkillFeatherItem[i].itemId}`;
-        link.innerHTML = `<b>${skillDeckItemSkillFeatherItemName[skillDeckItemSkillFeatherItem[i].itemId]}</b>`;
-
-        li.classList.add("listh-click");
-        li.onclick = () => link.click();
-        li.appendChild(link);
-
-        ul.appendChild(li);
+        ul.appendChild(getFeatherLi(skillDeckItemSkillFeatherItem[i]));
     }
 
-    skillGearsDiv.appendChild(ul);
+    featherListDiv.appendChild(ul);
 
-    for(let i = 0; i < skillDeckItemSkillFeatherItem.length; i++) {
-        printFeatherInfos(skillDeckItemSkillFeatherItem[i]);
-    }
+    printFeatherInfos(newFeathers[0]);
 }
 
 function printSlotsTable(lots, div) {
@@ -409,6 +398,7 @@ function printFeatherPassiveSkills(feather, div) {
 }
 
 function printFeatherInfos(feather) {
+    skillGearsDiv.innerHTML = "";
     let div = document.createElement("div");
     div.id = `feather_${feather.itemId}`;
     div.style.scrollMarginTop = "5em";
@@ -426,6 +416,7 @@ function printFeatherInfos(feather) {
 
 async function init() {
     skillGearsDiv = document.getElementById("skillGearsDiv");
+    featherListDiv = document.getElementById("featherListDiv");
     //toolsDiv = document.getElementById('adminTools');
 
     await buildHeader();
