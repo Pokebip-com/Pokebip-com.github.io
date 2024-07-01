@@ -1,6 +1,7 @@
 {
   "new_feathers" : "Nouvelles Plumes Talent",
-  "all_feathers" : "Toutes les Plumes Talent",
+  "normal_feathers" : "Plumes Talent standard",
+  "special_feathers" : "Plumes Talent spéciales",
   "num_slots" : "Slots déverouillés",
   "chances" : "Probabilités",
   "team_skills" : "Talents d'équipe",

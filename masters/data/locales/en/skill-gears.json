@@ -1,6 +1,7 @@
 {
   "new_feathers" : "New Skill Feathers",
-  "all_feathers" : "All Skill Feathers",
+  "normal_feathers" : "Standard Skill Feathers",
+  "special_feathers" : "Special Skill Feathers",
   "num_slots" : "Unlocked slots",
   "chances" : "Probability",
   "team_skills" : "Team skills",

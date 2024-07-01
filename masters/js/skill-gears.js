@@ -123,6 +123,7 @@ function getFeatherItemImage(feather) {
 }
 
 function getFeatherLi(feather) {
+    console.log(feather);
     let newLi = document.createElement("li");
     newLi.classList.add("listh-bipcode");
     newLi.style.width = "100px";
@@ -145,12 +146,14 @@ function getFeatherLi(feather) {
 function listFeatherInfos() {
 
     let newFeathers = getNewSpecialFeathers();
+    let normalFeathers = skillDeckItemSkillFeatherItem.filter(sdisfi => sdisfi.skillFeatherItemDescription === "9301");
+    let specialFeathers = skillDeckItemSkillFeatherItem.filter(sdisfi => !normalFeathers.includes(sdisfi));
 
     if(newFeathers.length > 0) {
 
         let newFeathersH2 = document.createElement("h2");
         newFeathersH2.innerText = skillGearsLocale.new_feathers;
-        skillGearsDiv.appendChild(newFeathersH2);
+        featherListDiv.appendChild(newFeathersH2);
 
         let newUl = document.createElement("ul");
         newUl.classList.add("listh-bipcode");
@@ -162,18 +165,31 @@ function listFeatherInfos() {
         featherListDiv.appendChild(newUl);
     }
 
-    let allFeathersH2 = document.createElement("h2");
-    allFeathersH2.innerText = skillGearsLocale.all_feathers;
-    featherListDiv.appendChild(allFeathersH2);
+    let normalFeathersH2 = document.createElement("h2");
+    normalFeathersH2.innerText = skillGearsLocale.normal_feathers;
+    featherListDiv.appendChild(normalFeathersH2);
 
-    let ul = document.createElement("ul");
-    ul.classList.add("listh-bipcode");
+    let normalUl = document.createElement("ul");
+    normalUl.classList.add("listh-bipcode");
 
-    for(let i = 0; i < skillDeckItemSkillFeatherItem.length; i++) {
-        ul.appendChild(getFeatherLi(skillDeckItemSkillFeatherItem[i]));
+    for(let i = 0; i < normalFeathers.length; i++) {
+        normalUl.appendChild(getFeatherLi(normalFeathers[i]));
     }
 
-    featherListDiv.appendChild(ul);
+    featherListDiv.appendChild(normalUl);
+
+    let specialFeathersH2 = document.createElement("h2");
+    specialFeathersH2.innerText = skillGearsLocale.special_feathers;
+    featherListDiv.appendChild(specialFeathersH2);
+
+    let specialUl = document.createElement("ul");
+    specialUl.classList.add("listh-bipcode");
+
+    for(let i = 0; i < specialFeathers.length; i++) {
+        specialUl.appendChild(getFeatherLi(specialFeathers[i]));
+    }
+
+    featherListDiv.appendChild(specialUl);
 
     printFeatherInfos(newFeathers[0]);
 }
