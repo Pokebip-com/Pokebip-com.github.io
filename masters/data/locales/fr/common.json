@@ -29,12 +29,12 @@
   "menu_sync_pairs" : "Duos",
   "submenu_pair_page" : "Fiches",
   "submenu_pair_ex_role" : "Rôles EX",
+  "submenu_skill_gear" : "Équipements de talent",
   "menu_battle_rally" : "Rallye",
   "submenu_rally_role_set" : "Sets de rôles",
   "menu_language" : "Langue",
   "submenu_language_fr" : "Français",
   "submenu_language_en" : "English",
   "adminmenu_title" : "Admin",
-  "adminsubmenu_skill_gear" : "Équipements de talent",
   "adminsubmenu_discord" : "Message Discord"
 }

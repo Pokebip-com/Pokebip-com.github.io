@@ -123,7 +123,8 @@ async function buildHeader(localePath = "./data/locales/") {
         { "title": commonLocales.menu_schedule, "url": "/masters/programme.html", "drop": [] },
         { "title" : commonLocales.menu_sync_pairs, "url": "", "drop": [
                 { "title" : commonLocales.submenu_pair_page, "url" : "/masters/duo.html" },
-                { "title": commonLocales.submenu_pair_ex_role, "url": "/masters/ex-role.html" }
+                { "title": commonLocales.submenu_pair_ex_role, "url": "/masters/ex-role.html" },
+                { "title" : commonLocales.submenu_skill_gear, "url" : "/masters/skill-gears.html" },
             ]
         },
         { "title": commonLocales.menu_battle_rally, "url": "", "drop": [
@@ -144,7 +145,6 @@ async function buildHeader(localePath = "./data/locales/") {
 
     let adminHeaderData = [
         { "title" : commonLocales.adminmenu_title, "url": "", "drop": [
-                { "title" : commonLocales.adminsubmenu_skill_gear, "url" : "/masters/skill-gears.html" },
                 { "title" : commonLocales.adminsubmenu_discord, "url" : "/masters/discord.html" },
             ]
         }

@@ -29,12 +29,12 @@
   "menu_sync_pairs" : "Sync Pairs",
   "submenu_pair_page" : "Information",
   "submenu_pair_ex_role" : "EX Roles",
+  "submenu_skill_gear" : "Skill Gears",
   "menu_battle_rally" : "Battle Rally",
   "submenu_rally_role_set" : "Role Sets",
   "menu_language" : "Language",
   "submenu_language_fr" : "Français",
   "submenu_language_en" : "English",
   "adminmenu_title" : "Admin",
-  "adminsubmenu_skill_gear" : "Skill Gears",
   "adminsubmenu_discord" : "Discord Message"
 }

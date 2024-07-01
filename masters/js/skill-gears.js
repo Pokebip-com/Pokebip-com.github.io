@@ -123,7 +123,6 @@ function getFeatherItemImage(feather) {
 }
 
 function getFeatherLi(feather) {
-    console.log(feather);
     let newLi = document.createElement("li");
     newLi.classList.add("listh-bipcode");
     newLi.style.width = "100px";
@@ -440,7 +439,7 @@ async function init() {
     await getData();
     await getCustomJSON();
 
-    document.getElementById("pageTitle").innerText = commonLocales.adminsubmenu_skill_gear;
+    document.getElementById("pageTitle").innerText = commonLocales.submenu_skill_gear;
 
     // if(isAdminMode) {
     //     dataArea = document.getElementById("dataArea");
