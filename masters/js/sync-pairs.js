@@ -1017,7 +1017,6 @@ function setTileBackground(div) {
 
     if(dataLevel && dataLevel > syncLevel) {
         tileIcon = `locked-${dataLevel}`;
-        polygon.style.pointerEvents = "none";
 
         if(div.getAttribute("selected") !== null) {
             suppressCellData(div)
@@ -1025,7 +1024,6 @@ function setTileBackground(div) {
     }
     else {
         tileIcon = div.getAttribute("data-category");
-        polygon.style.pointerEvents = "auto";
 
         if(div.getAttribute("data-type") !== null) {
             tileIcon += `-${div.getAttribute("data-type")}`;
@@ -1162,7 +1160,13 @@ function setGridPicker(ap, gridPickerDiv) {
         polygon.addEventListener("click", () => changeSelection(svg));
 
         polygon.addEventListener("mouseenter", () => {
-            polygon.setAttribute("fill-opacity", "0.25");
+            if(panel.level <= syncLevel) {
+                polygon.setAttribute("fill-opacity", "0.25");
+            }
+            else {
+                polygon.style.cursor = "default";
+            }
+
             tooltip.style.display = "inline-block";
 
         });

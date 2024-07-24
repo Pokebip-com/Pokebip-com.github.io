@@ -280,7 +280,8 @@ function getSchedule() {
     trainerRarityupBonusUpdate = [...new Set(trainerRarityupBonus.map(trb => trb.scheduleId))];
 
 
-    schedule = schedule.entries.filter(s =>
+
+    let usableSchedule = schedule.entries.filter(s =>
         scoutIds.includes(s.scheduleId)
         || eventIds.includes(s.scheduleId)
         || legendaryBattleIds.includes(s.scheduleId)
@@ -298,6 +299,10 @@ function getSchedule() {
                 || s.scheduleId.endsWith("_option")
             ))
     );
+
+    console.log(schedule.entries.filter(s => s.startDate >= versions[0].releaseTimestamp && !usableSchedule.includes(s.scheduleId)));
+
+    schedule = usableSchedule;
 }
 
 function getBySpecificID(data, id) {
