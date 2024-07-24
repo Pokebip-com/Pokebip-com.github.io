@@ -12,6 +12,7 @@ let legendQuestGroupSchedule;
 let schedule;
 let scoutIds;
 let championBattleAllPeriod;
+let cyclicRankingIds;
 let eventIds;
 let loginBonusIds;
 let legendaryBattleIds;
@@ -19,6 +20,10 @@ let salonGuestsUpdate;
 let mainStoryUpdate;
 let trainingAreaUpdate;
 let trainerRarityupBonusUpdate;
+
+let cyclicRankingEvent;
+let cyclicRankingQuestGroup;
+let cyclicRankingQuestGroupSchedule;
 
 let scout;
 let scoutPickup;
@@ -49,13 +54,14 @@ let salonGuests;
 let trainerBase;
 let trainerExRole;
 let trainer;
-let trainerInfosArray;
 let trainerNames;
 let trainerRarityupBonus;
 let trainerVerboseNames;
 
 let schedLocales;
 
+
+let cyclicRankingData;
 let treatedEvents;
 
 let scheduleDiv;
@@ -83,6 +89,9 @@ async function getData() {
         championBattleEventQuestGroupResponse,
         championBattleRegionResponse,
         championBattleRegionOpeningScheduleResponse,
+        cyclicRankingEventResponse,
+        cyclicRankingQuestGroupResponse,
+        cyclicRankingQuestGroupScheduleResponse,
         eventBannerResponse,
         eventQuestGroupResponse,
         homeEventAppealResponse,
@@ -122,6 +131,9 @@ async function getData() {
         fetch(`./data/proto/ChampionBattleEventQuestGroup.json`),
         fetch(`./data/proto/ChampionBattleRegion.json`),
         fetch(`./data/proto/ChampionBattleRegionOpeningSchedule.json`),
+        fetch(`./data/proto/CyclicRankingEvent.json`),
+        fetch(`./data/proto/CyclicRankingQuestGroup.json`),
+        fetch(`./data/proto/CyclicRankingQuestGroupSchedule.json`),
         fetch(`./data/proto/EventBanner.json`),
         fetch(`./data/proto/EventQuestGroup.json`),
         fetch(`./data/proto/HomeEventAppeal.json`),
@@ -188,6 +200,11 @@ async function getData() {
     championBattleRegionOpeningSchedule = (await championBattleRegionOpeningScheduleResponse.json()).entries;
 
     eventQuestGroup.push(...(await challengeToStrongTrainerQuestGroupResponse.json()).entries);
+
+    cyclicRankingEvent = (await cyclicRankingEventResponse.json()).entries;
+    cyclicRankingQuestGroup = (await cyclicRankingQuestGroupResponse.json()).entries;
+    cyclicRankingQuestGroupSchedule = (await cyclicRankingQuestGroupScheduleResponse.json()).entries;
+    cyclicRankingData = getBySpecificID(cyclicRankingQuestGroupSchedule, "scheduleId");
 
     scout = (await scoutResponse.json()).entries;
 
@@ -278,11 +295,12 @@ function getSchedule() {
     trainingAreaUpdate = [...new Set(storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
     championBattleAllPeriod = [...new Set(schedule.entries.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
     trainerRarityupBonusUpdate = [...new Set(trainerRarityupBonus.map(trb => trb.scheduleId))];
-
+    cyclicRankingIds = [...new Set(cyclicRankingQuestGroupSchedule.map(crqg => crqg.scheduleId))];
 
 
     let usableSchedule = schedule.entries.filter(s =>
         scoutIds.includes(s.scheduleId)
+        || cyclicRankingIds.includes(s.scheduleId)
         || eventIds.includes(s.scheduleId)
         || legendaryBattleIds.includes(s.scheduleId)
         || mainStoryUpdate.includes(s.scheduleId)
@@ -300,7 +318,7 @@ function getSchedule() {
             ))
     );
 
-    console.log(schedule.entries.filter(s => s.startDate >= versions[0].releaseTimestamp && !usableSchedule.includes(s.scheduleId)));
+    // console.log(schedule.entries.filter(s => s.startDate >= versions[0].releaseTimestamp && !usableSchedule.includes(s.scheduleId)));
 
     schedule = usableSchedule;
 }
@@ -567,12 +585,72 @@ function downloadData() {
     console.log(newsText);
 }
 
+function addCyclingRankingEvents(i, latestCyclicRankingSchedule) {
+    let cyclicRankingScheduleStartDates = Object.keys(latestCyclicRankingSchedule).sort((a, b) => a - b);
+
+    if(cyclicRankingScheduleStartDates.length > 0) {
+        let firstCRSchedule = 0;
+
+        cyclicRankingScheduleStartDates
+            .map(parseInt)
+            .filter(sd => sd < versions[i].releaseTimestamp)
+            .map(sd => {
+                firstCRSchedule = Math.max(firstCRSchedule, sd);
+            });
+
+        if(firstCRSchedule === 0) {
+            firstCRSchedule = cyclicRankingScheduleStartDates[0];
+        }
+
+        let lastCRSchedule = 0;
+
+        cyclicRankingScheduleStartDates
+            .map(parseInt)
+            .filter(sd => sd >= versions[i].releaseTimestamp && (i === 0 || sd < versions[i-1].releaseTimestamp))
+            .map(sd => {
+                lastCRSchedule = Math.max(lastCRSchedule, sd);
+            });
+
+        if(lastCRSchedule === 0) {
+            lastCRSchedule = cyclicRankingScheduleStartDates[cyclicRankingScheduleStartDates.length - 1];
+        }
+
+        let startDates = [...new Set(cyclicRankingScheduleStartDates.filter(sd => sd >= firstCRSchedule && sd <= lastCRSchedule))];
+        let sdPointer = -1;
+        let sdSelect = startDates[0];
+
+        let cyclicRankingQuestGroupId, cyclingSeconds;
+        let lastStart = versions[i].schedule.map(s => s.startDate).sort((a, b) => b - a)[0];
+
+        let j = 0;
+
+        while(latestCyclicRankingSchedule[sdSelect].startDate < lastStart) {
+            if(sdPointer === -1 || (sdPointer + 1) < startDates.length && startDates[sdPointer + 1] >= latestCyclicRankingSchedule.startDate) {
+                sdPointer++;
+                sdSelect = startDates[sdPointer];
+                cyclicRankingQuestGroupId = cyclicRankingData[latestCyclicRankingSchedule[sdSelect].scheduleId][0].questGroupId;
+                cyclingSeconds = cyclicRankingEvent.filter(ce => ce.damageChallengeBattleId === cyclicRankingQuestGroupId)[0].secondsBeforeCycling;
+            }
+
+            let schedule = {...latestCyclicRankingSchedule[sdSelect]};
+            schedule.cyclingSeconds = [...cyclingSeconds]
+
+            versions[i].schedule.push(schedule);
+
+            latestCyclicRankingSchedule[sdSelect].startDate = "" + (parseInt(cyclingSeconds[j]) + parseInt(latestCyclicRankingSchedule[sdSelect].startDate));
+            j = (j+1) % cyclingSeconds.length;
+        }
+    }
+}
+
 function scheduleByVersion() {
     while(versionSelect.length > 0) {
         versionSelect.remove(0);
     }
 
-    for(let i = 0; i < versions.length; i++) {
+    let latestCyclicRankingSchedule = {};
+
+    for(let i = versions.length - 2; i >= 0; i--) {
         versions[i].schedule = schedule.filter(s =>
                 s.startDate >= versions[i].releaseTimestamp
                 && (i === 0 || s.startDate < versions[i-1].releaseTimestamp)
@@ -580,6 +658,7 @@ function scheduleByVersion() {
             .map(s => {
                 s.isLegendaryBattle = false;
                 s.isHomeAppeal = false;
+                s.isCyclicRanking = false;
 
                 if(scoutIds.includes(s.scheduleId)) {
                     s.scheduleType = { "name" : "scout", "priority": "10" };
@@ -611,11 +690,23 @@ function scheduleByVersion() {
                     if(trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId)) {
                         s.isHomeAppeal = true;
                     }
+                    if(Object.keys(cyclicRankingData).includes(s.scheduleId)) {
+                        s.isCyclicRanking = true;
+                        latestCyclicRankingSchedule[s.startDate] = {...s};
+                        latestCyclicRankingSchedule[s.startDate].originalSD = s.startDate;
+                        latestCyclicRankingSchedule[s.startDate].questGroupId = cyclicRankingData[s.scheduleId][0].questGroupId;
+                    }
                 }
                 return s;
-            })
-            .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.scheduleType.priority.localeCompare(b.scheduleType.priority));
+            });
 
+        addCyclingRankingEvents(i, latestCyclicRankingSchedule);
+
+        versions[i].schedule
+            .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.scheduleType.priority.localeCompare(b.scheduleType.priority));
+    }
+
+    for(let i = 0; i < versions.length - 1; i++) {
         let date = new Date(versions[i].releaseTimestamp*1000);
 
         let option = {};
@@ -876,6 +967,21 @@ function printHomeAppealEvent(schedule) {
 
         banners.forEach(ban => printEventBanner(ban, schedule));
     })
+}
+
+function printCyclicRanking(schedule) {
+    let secondsPassed = parseInt(schedule.startDate) - parseInt(schedule.originalSD);
+    let CRQuests = cyclicRankingQuestGroup.filter(crqg => crqg.questGroupId === schedule.questGroupId);
+    let CRQNum = 1;
+
+    for(let i = 0; secondsPassed > 0; i++) {
+        secondsPassed -= schedule.cyclingSeconds[i % schedule.cyclingSeconds.length];
+        CRQNum++;
+    }
+
+    let quest = CRQuests.find(crq => crq.cyclicRankingQuestNum === CRQNum);
+    let banners = banner.filter(b => b.bannerId === quest.bannerId);
+    banners.forEach(ban => printEventBanner(ban, schedule));
 }
 
 function printLegBat(schedule) {
@@ -1147,6 +1253,13 @@ function setVersionInfos(id) {
 
                     if(sched.isHomeAppeal) {
                         printHomeAppealEvent(sched);
+                        break;
+                    }
+
+                    if(sched.isCyclicRanking) {
+                        if(sched.originalSD) {
+                            printCyclicRanking(sched);
+                        }
                         break;
                     }
 
