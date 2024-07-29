@@ -8,6 +8,7 @@ let itemExchange;
 let homeEventAppeal;
 let legendQuestGroup;
 let legendQuestGroupSchedule;
+let missionGroup;
 
 let schedule;
 let scoutIds;
@@ -16,6 +17,7 @@ let cyclicRankingIds;
 let eventIds;
 let loginBonusIds;
 let legendaryBattleIds;
+let missionGroupIds;
 let salonGuestsUpdate;
 let mainStoryUpdate;
 let trainingAreaUpdate;
@@ -101,6 +103,7 @@ async function getData() {
         legendQuestGroupScheduleResponse,
         loginBonusResponse,
         loginBonusRewardResponse,
+        missionGroupResponse,
         monsterResponse,
         monsterBaseResponse,
         salonGuestResponse,
@@ -143,6 +146,7 @@ async function getData() {
         fetch(`./data/proto/LegendQuestGroupSchedule.json`),
         fetch(`./data/proto/LoginBonus.json`),
         fetch(`./data/proto/LoginBonusReward.json`),
+        fetch(`./data/proto/MissionGroup.json`),
         fetch(`./data/proto/Monster.json`),
         fetch(`./data/proto/MonsterBase.json`),
         fetch(`./data/proto/SalonGuest.json`),
@@ -173,6 +177,9 @@ async function getData() {
     banner = (await bannerResponse.json()).entries;
 
     eventQuestGroup = (await eventQuestGroupResponse.json()).entries;
+
+    // On ne prend que les missions qui ne sont pas des missions d'événement
+    missionGroup = (await missionGroupResponse.json()).entries.filter(mg => eventQuestGroup.filter(eqg => eqg.bannerId === mg.bannerId).length === 0);
 
     let villaQuestGroup = await villaQuestGroupResponse.json();
     villaQuestGroup.entries.map(vqg => vqg.bannerId = 1202001);
@@ -296,6 +303,7 @@ function getSchedule() {
     championBattleAllPeriod = [...new Set(schedule.entries.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
     trainerRarityupBonusUpdate = [...new Set(trainerRarityupBonus.map(trb => trb.scheduleId))];
     cyclicRankingIds = [...new Set(cyclicRankingQuestGroupSchedule.map(crqg => crqg.scheduleId))];
+    missionGroupIds = [...new Set(missionGroup.map(mg => mg.scheduleId))];
 
 
     let usableSchedule = schedule.entries.filter(s =>
@@ -303,6 +311,7 @@ function getSchedule() {
         || cyclicRankingIds.includes(s.scheduleId)
         || eventIds.includes(s.scheduleId)
         || legendaryBattleIds.includes(s.scheduleId)
+        || missionGroupIds.includes(s.scheduleId)
         || mainStoryUpdate.includes(s.scheduleId)
         || trainingAreaUpdate.includes(s.scheduleId)
         || trainerRarityupBonusUpdate.includes(s.scheduleId)
@@ -683,6 +692,9 @@ function scheduleByVersion() {
                 else if(s.scheduleId.includes("_ChampionBattle_")) {
                     s.scheduleType = { "name" : "championBattle", "priority": "17" };
                 }
+                else if(missionGroupIds.includes(s.scheduleId)) {
+                    s.scheduleType = { "name" : "mission", "priority": "25" };
+                }
                 else {
                     s.scheduleType = { "name" : "event", "priority": "20" };
 
@@ -994,6 +1006,14 @@ function printLegBat(schedule) {
     banners.forEach(ban => printEventBanner(ban, schedule));
 }
 
+function printNewMissions(schedule) {
+    let miGr = missionGroup.filter(mg => mg.scheduleId === schedule.scheduleId);
+    miGr.forEach(mg => {
+        let banners = banner.filter(b => b.bannerId === mg.bannerId);
+        banners.forEach(ban => printEventBanner(ban, schedule));
+    });
+}
+
 function printNewMusics(scheduleId) {
     let itemIds = itemExchange.filter(ie => ie.scheduleId === scheduleId).map(ie => ie.itemId);
 
@@ -1214,14 +1234,14 @@ function setVersionInfos(id) {
 
     scheduleDiv.innerHTML = "";
 
-    let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag, musicFlag, loginBonusFlag, championBattleFlag;
+    let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag, musicFlag, loginBonusFlag, championBattleFlag, missionFlag;
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
     printCalendars(startDates.map(t => new Date(t*1000)));
 
     startDates.forEach(timestamp => {
 
-        scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = musicFlag = loginBonusFlag = championBattleFlag = true;
+        scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = musicFlag = loginBonusFlag = championBattleFlag = missionFlag = true;
         treatedEvents = [];
 
         let date = new Date(timestamp*1000);
@@ -1294,6 +1314,14 @@ function setVersionInfos(id) {
                         charaFlag = false;
                     }
                     printPairChanges(sched);
+                    break;
+
+                case "mission":
+                    if(missionFlag) {
+                        scheduleDiv.innerHTML += `<h2>${schedLocales.mission}</h2>`;
+                        missionFlag = false;
+                    }
+                    printNewMissions(sched);
                     break;
 
                 case "music":
