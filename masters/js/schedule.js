@@ -624,7 +624,7 @@ function addCyclingRankingEvents(i, latestCyclicRankingSchedule) {
 
         let j = 0;
 
-        while(latestCyclicRankingSchedule[sdSelect].startDate < lastStart) {
+        while(latestCyclicRankingSchedule[sdSelect].startDate <= lastStart) {
             if(sdPointer === -1 || (sdPointer + 1) < startDates.length && startDates[sdPointer + 1] >= latestCyclicRankingSchedule.startDate) {
                 sdPointer++;
                 sdSelect = startDates[sdPointer];
