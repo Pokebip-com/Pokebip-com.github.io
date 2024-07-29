@@ -751,5 +751,22 @@
     "999184": "Cuando los PS del usuario son el [Digit:2digits ]% o más.",
     "999183": "Cuando los PS del usuario son inferiores al [Digit:2digits ]%.",
     "999182": "Aumenta el Ataque, la Defensa, el Ataque Especial, la Defensa Especial y la Velocidad de todos los compis aliados en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
-    "999181": "Aumenta la Resiliencia Agua y la Resiliencia Fantasma del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ]."
+    "999181": "Aumenta la Resiliencia Agua y la Resiliencia Fantasma del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+    "999180": "Aumenta [Name:ReferencedMessageTag ] del usuario en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ] cuando adopta una pose de ataque.",
+    "999179": "Aplica el [Name:ReferencedMessageTag Idx=\"1\" ] al objetivo y al usuario.",
+    "999178": "Si los PM restantes de [Name:MoveId Idx=\"18500\" ] del usuario son [Digit:1digit ] o más cuando ataca con este movimiento, reduce dichos PM en [Digit:1digit ] y aumenta el [Name:ReferencedMessageTag Idx=\"2\" ] de todos los compis aliados en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ].",
+    "999177": "Si los PM restantes de [Name:MoveId Idx=\"18500\" ] del usuario son 0 cuando ataca con este movimiento, recupera aproximadamente un [Digit:2digits Idx=\"4\" ]% de los PS máximos del usuario.",
+    "999176": "Crea una [Name:ReferencedMessageTag Idx=\"3\" ]. (Una [Name:ReferencedMessageTag Idx=\"3\" ] potencia los ataques de tipo [Name:ReferencedMessageTag Idx=\"4\" ]).",
+    "999175": "Aumenta el efecto Siguiente Físico ↑ y el efecto Siguiente Especial ↑ de todos los compis aliados en [Digit:1digit Idx=\"5\" ] [ES:Qty Ref=\"5\" S=\"nivel\" P=\"niveles\" ].",
+    "999174": "Cuando ha aumentado [Name:ReferencedMessageTag Idx=\"4\" ] del usuario.",
+    "999173": "Cuando no ha aumentado [Name:ReferencedMessageTag Idx=\"4\" ] del usuario.",
+    "999172": "(No aumentará el Ataque Especial del usuario si no ha adoptado una pose de ataque).",
+    "999171": "Cuanto más se haya reducido [Name:ReferencedMessageTag Idx=\"2\" ] del objetivo, más aumenta la potencia de este ataque.",
+    "999170": "Reduce [Name:ReferencedMessageTag Idx=\"2\" ] del objetivo en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ] cuando está envenenado o gravemente envenenado.",
+    "999169": "Cuando se le aplica un círculo al bando aliado, el usuario ataca al instante.",
+    "999168": "Además, recupera aproximadamente un [Digit:2digits ]% de los PS máximos del usuario.",
+    "999167": "Aplica el [Name:ReferencedMessageTag Idx=\"2\" ] a todos los compis aliados.",
+    "999166": "Aumenta el Ataque y la probabilidad de asestar golpes críticos de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+    "999165": "Además, aumenta el Ataque y la Defensa de todos los compis aliados en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ] cuando el usuario sufre relevo imposible.",
+    "999164": "Aumenta el efecto Siguiente Físico ↑ y el efecto Siguiente Especial ↑ del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ]."
 }

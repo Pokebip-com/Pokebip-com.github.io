@@ -972,12 +972,14 @@ function printHomeAppealEvent(schedule) {
 function printCyclicRanking(schedule) {
     let secondsPassed = parseInt(schedule.startDate) - parseInt(schedule.originalSD);
     let CRQuests = cyclicRankingQuestGroup.filter(crqg => crqg.questGroupId === schedule.questGroupId);
-    let CRQNum = 1;
+    let CRQNum = 0;
 
     for(let i = 0; secondsPassed > 0; i++) {
         secondsPassed -= schedule.cyclingSeconds[i % schedule.cyclingSeconds.length];
         CRQNum++;
     }
+
+    CRQNum = CRQNum % (CRQuests.length) + 1;
 
     let quest = CRQuests.find(crq => crq.cyclicRankingQuestNum === CRQNum);
     let banners = banner.filter(b => b.bannerId === quest.bannerId);

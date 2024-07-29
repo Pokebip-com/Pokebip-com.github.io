@@ -108,6 +108,8 @@
     "20008300": "Farfetch'd",
     "20008400": "Doduo",
     "20008401": "Doduo",
+    "20008500": "Dodrio",
+    "20008501": "Dodrio",
     "20008600": "Seel",
     "20008700": "Dewgong",
     "20008800": "Grimer",
@@ -273,6 +275,7 @@
     "20027500": "Shiftry",
     "20027700": "Swellow",
     "20027900": "Pelipper",
+    "20028100": "Kirlia",
     "20028200": "Gardevoir",
     "20028251": "Mega-Gardevoir",
     "20028300": "Surskit",
@@ -403,6 +406,8 @@
     "20046800": "Togekiss",
     "20047000": "Leafeon",
     "20047100": "Glaceon",
+    "20047300": "Mamoswine",
+    "20047301": "Mamoswine",
     "20047400": "Porygon-Z",
     "20047500": "Gallade",
     "20047551": "Mega-Gallade",
@@ -742,5 +747,8 @@
     "2000790031": "Slowpoke",
     "2000800031": "Slowbro",
     "2009821100": "Dudunsparce",
-    "2001990031": "Slowking"
+    "2001990031": "Slowking",
+    "2009430000": "Mabosstiff",
+    "2009850000": "Colagrito",
+    "2009400000": "Wattrel"
 }

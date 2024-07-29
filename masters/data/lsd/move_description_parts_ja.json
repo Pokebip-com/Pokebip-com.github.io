@@ -751,5 +751,22 @@
     "999184": "自分のＨＰが[Digit:2digits ]％以上のとき",
     "999183": "自分のＨＰが[Digit:2digits ]％未満のとき",
     "999182": "味方のバディーズ全員の攻撃と防御と特攻と特防と素早さを[Digit:1digit Idx=\"1\" ]段階あげる",
-    "999181": "自分のみずタイプ抵抗とゴーストタイプ抵抗を[Digit:1digit ]段階あげる"
+    "999181": "自分のみずタイプ抵抗とゴーストタイプ抵抗を[Digit:1digit ]段階あげる",
+    "999180": "攻撃待機状態になったときに自分の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階あげる",
+    "999179": "相手と自分を[Name:ReferencedMessageTag Idx=\"1\" ]にする",
+    "999178": "この技で攻撃するときに自分の「[Name:MoveId Idx=\"18500\" ]」の残り回数が[Digit:1digit ]以上のときは　その回数を[Digit:1digit ]減らして味方のバディーズ全員の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階あげる",
+    "999177": "この技で攻撃するときに自分の「[Name:MoveId Idx=\"18500\" ]」の残り回数が０のときは自分のＨＰを最大ＨＰの約[Digit:2digits Idx=\"4\" ]％回復する",
+    "999176": "ゾーンを[Name:ReferencedMessageTag Idx=\"3\" ]にする\n（[Name:ReferencedMessageTag Idx=\"3\" ]は[Name:ReferencedMessageTag Idx=\"4\" ]タイプの攻撃の威力をあげる）",
+    "999175": "味方のバディーズ全員の次回物理技威力ブーストと次回特殊技威力ブーストをそれぞれ[Digit:1digit Idx=\"5\" ]段階あげる",
+    "999174": "自分の[Name:ReferencedMessageTag Idx=\"4\" ]があがっているとき",
+    "999173": "自分の[Name:ReferencedMessageTag Idx=\"4\" ]があがっていないとき",
+    "999172": "（攻撃待機状態にならなかったときは特攻はあがらない）",
+    "999171": "相手の[Name:ReferencedMessageTag Idx=\"2\" ]がさがっているほど威力があがる",
+    "999170": "相手がどく状態かもうどく状態のときは相手の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階さげる",
+    "999169": "味方全体の場がいずれかのサークルのときは攻撃待機状態にならず攻撃する",
+    "999168": "さらに自分のＨＰを最大ＨＰの約[Digit:2digits ]％回復する",
+    "999167": "味方のバディーズ全員を[Name:ReferencedMessageTag Idx=\"2\" ]にする",
+    "999166": "味方のバディーズ全員の攻撃と急所率を[Digit:1digit ]段階あげる",
+    "999165": "自分が交代禁止状態のときはさらに味方のバディーズ全員の攻撃と防御を[Digit:1digit Idx=\"1\" ]段階あげる",
+    "999164": "自分の次回物理技威力ブーストと次回特殊技威力ブーストをそれぞれ[Digit:1digit ]段階あげる"
 }

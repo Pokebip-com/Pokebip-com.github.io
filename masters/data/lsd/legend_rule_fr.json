@@ -10,7 +10,7 @@
     "legend_rule_2085_003": "À sa 3e jauge de PV, la réduction des dégâts\ndes capacités physiques et spéciales subis\npar l'ennemi affecte les capacités Duo.",
     "legend_rule_2100_001": "Les faiblesses de l'ennemi changent\n2 fois pendant le combat.",
     "legend_rule_2100_002": "Quand l'ennemi se remet d'un tourment,\nsa résistance à celui-ci se renforce.",
-    "legend_rule_2100_003": "Le terrain devient un Champ Herbu lorsque,\nentre autres, l'ennemi utilise Impact Plante.",
+    "legend_rule_2100_003": "Le terrain devient un champ herbu lorsque,\nentre autres, l'ennemi utilise Impact Plante.",
     "legend_rule_2110_001": "Les faiblesses de l'ennemi changent\nune fois par combat.",
     "legend_rule_2110_002": "La Défense des alliés et des ennemis baisse\nquand ils subissent un coup critique \nd'une attaque.",
     "legend_rule_2110_003": "L'ennemi est immunisé aux baisses de stats\nnon-listées ci-dessus (cela n'empêche pas\nles baisses de stats auto-infligées).",
@@ -45,7 +45,7 @@
     "legend_rule_5110_002": "Quand Artikodin entre en combat, sa Déf.\nest triplée. Lorsque ses PV chutent à 60 %\nou moins, c'est sa Déf. Spé. qui est triplée.",
     "legend_rule_5110_003": "Quand l'ennemi ne souffre pas\nd'un changement de statut négatif,\nsa Défense et sa Déf. Spé. sont triplées.",
     "legend_rule_5120_001": "Les PV d'Étouraptor restent à 40 %\nla première fois que ses PV\nchutent à 40 % ou moins.",
-    "legend_rule_5120_002": "Quand les PV d'Étouraptor chutent à 40 %\nou moins, il ne subit aucun dégât\ndes Aires Dégâts, quel que soit le type.",
+    "legend_rule_5120_002": "Quand les PV d'Étouraptor chutent à 40 %\nou moins, il ne subit aucun dégât\ndes aires de dégâts, quel que soit le type.",
     "legend_rule_5120_003": "Quand l'ennemi n'est pas affecté par un effet\nsur le terrain, sa Déf. et sa Déf. Spé. sont triplées.",
     "legend_rule_6010_001": "Les PV de Suicune restent à 50 %\nla première fois que ses PV chutent\nà 50 % ou moins.",
     "legend_rule_6010_002": "Les effets sur le terrain déclenchés\npar l'ennemi durent tout le combat.",
@@ -64,5 +64,8 @@
     "legend_rule_6050_003": "Quand la Vitesse de l'ennemi est augmentée,\nsa Déf. et sa Déf. Spé. sont triplées.",
     "legend_rule_6060_001": "À chaque fois que Mackogneur utilise une\ncapacité Duo, le nombre maximum d'actions\nnécessaires pour en lancer une réduit de 1.",
     "legend_rule_6060_002": "L'ennemi ignore l'effet Coriacité et les talents\npassifs des alliés réduisant les dégâts.",
-    "legend_rule_6060_003": "Les PV de Mackogneur restent à 80 %\net 50 % la première fois que ses PV\nchutent à 80 % et 50 % ou moins."
+    "legend_rule_6060_003": "Les PV de Mackogneur restent à 80 %\net 50 % la première fois que ses PV\nchutent à 80 % et 50 % ou moins.",
+    "legend_rule_6070_001": "Les PV de Mewtwo restent à 80 %\net 40 % la première fois que ses PV\nchutent à 80 % et 40 % ou moins.",
+    "legend_rule_6070_002": "La puissance des capacités de l'ennemi,\nde ses capacités Duo, ou des deux,\naugmente quand ses stats sont augmentées.",
+    "legend_rule_6070_003": "Quand l'ennemi n'est pas affecté\npar un effet sur le terrain, sa Déf.\net sa Déf. Spé. sont triplées."
 }

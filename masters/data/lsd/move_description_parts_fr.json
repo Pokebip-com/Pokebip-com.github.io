@@ -751,5 +751,22 @@
     "999184": "Quand les PV du lanceur sont à [Digit:2digits ] % ou plus.",
     "999183": "Quand les PV du lanceur sont inférieurs à [Digit:2digits ] %.",
     "999182": "Augmente l'Attaque, la Défense, l'Atq. Spé., la Déf. Spé. et la Vitesse de tous les Duos alliés de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
-    "999181": "Augmente la Résilience Eau et la Résilience Spectre du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ]."
+    "999181": "Augmente la Résilience Eau et la Résilience Spectre du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
+    "999180": "Augmente [Name:ReferencedMessageTag ] du lanceur de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] quand il charge l'attaque.",
+    "999179": "Applique l'[Name:ReferencedMessageTag Idx=\"1\" ] à la cible et au lanceur.",
+    "999178": "Si les PPC restants de la capacité [Name:MoveId Idx=\"18500\" ] du lanceur sont de [Digit:1digit ] ou plus quand il attaque avec cette capacité, réduit la quantité de ces PPC de [Digit:1digit ] et augmente l'[Name:ReferencedMessageTag Idx=\"2\" ] de tous les Duos alliés de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ].",
+    "999177": "Si les PPC restants de la capacité [Name:MoveId Idx=\"18500\" ] du lanceur sont équivalents à 0 quand il attaque avec cette capacité, celui-ci regagne environ [Digit:2digits Idx=\"4\" ] % de ses PV maximums.",
+    "999176": "Transforme la zone en une [Name:ReferencedMessageTag Idx=\"3\" ]. (Une [Name:ReferencedMessageTag Idx=\"3\" ] renforce les attaques de type [Name:ReferencedMessageTag Idx=\"4\" ].)",
+    "999175": "Augmente l'effet Prochain boost capacité physique et l'effet Prochain boost capacité spéciale de tous les Duos alliés de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ].",
+    "999174": "Quand [Name:ReferencedMessageTag Idx=\"4\" ] du lanceur a été augmenté(e).",
+    "999173": "Quand [Name:ReferencedMessageTag Idx=\"4\" ] du lanceur n'est pas augmenté(e).",
+    "999172": "(L'Atq. Spé. du lanceur n'augmentera pas s'il ne charge pas l'attaque.)",
+    "999171": "Plus [Name:ReferencedMessageTag Idx=\"2\" ] de la cible est baissé(e), plus cette attaque est puissante.",
+    "999170": "Baisse [Name:ReferencedMessageTag Idx=\"2\" ] de la cible de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ] quand elle est empoisonnée ou gravement empoisonnée.",
+    "999169": "La période de préparation est sautée quand un cercle s'applique au côté allié, et le lanceur attaque tout de suite.",
+    "999168": "Le lanceur regagne également environ [Digit:2digits ] % de ses PV maximums.",
+    "999167": "Applique l'[Name:ReferencedMessageTag Idx=\"2\" ] à tous les Duos alliés.",
+    "999166": "Augmente l'Attaque et le taux de critiques de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
+    "999165": "Augmente également l'Attaque et la Défense de tous les Duos alliés de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] quand le lanceur subit l'effet Carcan.",
+    "999164": "Augmente l'effet Prochain boost capacité physique et l'effet Prochain boost capacité spéciale du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ]."
 }

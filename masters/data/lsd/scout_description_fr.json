@@ -3,6 +3,7 @@
     "event_2040_1W_DailyFree_01": "Obtenez des objets et/ou\ndes Duos une fois par jour\nsans frais !",
     "event_2050_1W_DailyFree_01": "Obtenez des objets et/ou\ndes Duos une fois par jour\nsans frais !",
     "event_2060_1W_DailyFree_01": "Obtenez des objets et/ou\ndes Duos une fois par jour\nsans frais !",
+    "event_6070_5W_Daily_01": "Obtenez des Duos une fois\npar jour sans frais !",
     "event_2120_1W_GuaranteeRarity5_02": "Appel Duo exclusif de Kanto\net de Johto ! Un Duo 5★\ngaranti ! Limité à une fois !",
     "event_2120_1W_GuaranteeRarity5_03": "Appel Duo exclusif de Hoenn\net de Sinnoh ! Un Duo 5★\ngaranti ! Limité à une fois !",
     "event_2120_1W_GuaranteeRarity5_04": "Appel Duo exclusif d'Unys !\nUn Duo 5★ garanti !\nLimité à une fois !",
@@ -90,5 +91,8 @@
     "event_6050_4W_PokeMas_01": "Journée Pokémon Masters !\n11 Appels Duo pour 25\nDiamants ! Limité à une fois !",
     "event_6050_4W_PokeMasGuarantee_02": "JPM : 11 Appels Duo dont un Duo\n5★ garanti pour 100 Diamants\npayants ! Limité à une fois !",
     "event_6060_4W_PokeMas_01": "Journée Pokémon Masters !\n11 Appels Duo pour 25\nDiamants ! Limité à une fois !",
-    "event_6060_4W_PokeMasGuarantee_02": "JPM : 11 Appels Duo dont un Duo\n5★ garanti pour 100 Diamants\npayants ! Limité à une fois !"
+    "event_6060_4W_PokeMasGuarantee_02": "JPM : 11 Appels Duo dont un Duo\n5★ garanti pour 100 Diamants\npayants ! Limité à une fois !",
+    "event_6070_4W_PokeMas_01": "Journée Pokémon Masters !\n11 Appels Duo pour 25\nDiamants ! Limité à une fois !",
+    "event_6070_4W_PokeMasGuarantee_02": "JPM : 11 Appels Duo dont un Duo\n5★ garanti pour 100 Diamants\npayants ! Limité à une fois !",
+    "event_6070_1W_PokeFes_01": "Duos exclusifs aux Appels Duo\nfestival pour le Combat de Maître !\nInclut des objets d'entraînement !"
 }

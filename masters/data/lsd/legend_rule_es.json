@@ -64,5 +64,8 @@
     "legend_rule_6050_003": "Cuando aumenta la Velocidad del rival, se\ntriplican su Defensa y su Defensa Esp.",
     "legend_rule_6060_001": "Cada vez que Machamp usa su movimiento\ncompi, se reduce en 1 el máximo del\ncontador de movimientos compi de este.",
     "legend_rule_6060_002": "El rival ignora el efecto Aguante y las\nhabilidades pasivas de tus aliados que\nreduzcan el daño de los ataques.",
-    "legend_rule_6060_003": "La primera vez que los PS de Machamp\nbajan al 80% o menos y la primera vez que\nbajan al 50% o menos, se quedan a esos\nrespectivos porcentajes."
+    "legend_rule_6060_003": "La primera vez que los PS de Machamp\nbajan al 80% o menos y la primera vez que\nbajan al 50% o menos, se quedan a esos\nrespectivos porcentajes.",
+    "legend_rule_6070_001": "La primera vez que los PS de Mewtwo\nbajan al 80% o menos y la primera vez que\nbajan al 40% o menos, se quedan a esos\nrespectivos porcentajes.",
+    "legend_rule_6070_002": "Cuando aumentan las características del\nrival, se potencian o bien sus movimientos,\no bien sus movimientos y sus movimientos\ncompi.",
+    "legend_rule_6070_003": "Cuando el rival no está afectado por efectos\nde campo, se triplican su Defensa y su\nDefensa Especial."
 }

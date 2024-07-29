@@ -3,6 +3,7 @@
     "event_2040_1W_DailyFree_01": "One chance per day to\nget items or sync pairs\nat no cost!",
     "event_2050_1W_DailyFree_01": "One chance per day to\nget items or sync pairs\nat no cost!",
     "event_2060_1W_DailyFree_01": "One chance per day to\nget items or sync pairs\nat no cost!",
+    "event_6070_5W_Daily_01": "One chance per day to\nget sync pairs at no cost!",
     "event_2120_1W_GuaranteeRarity5_02": "Kanto and Johto sync pair\nexclusive! One-time-only\n5★ guaranteed!",
     "event_2120_1W_GuaranteeRarity5_03": "Hoenn and Sinnoh sync pair\nexclusive! One-time-only\n5★ guaranteed!",
     "event_2120_1W_GuaranteeRarity5_04": "Unova sync pair exclusive!\nOne-time-only\n5★ guaranteed!",
@@ -90,5 +91,8 @@
     "event_6050_4W_PokeMas_01": "One time only on Pokémon\nMasters Day! Scout ×11 for\nonly 25 gems!",
     "event_6050_4W_PokeMasGuarantee_02": "One time only on Pokémon\nMasters Day! Scout ×11 for\n100 paid gems + 5★ guaranteed!",
     "event_6060_4W_PokeMas_01": "One time only on Pokémon\nMasters Day! Scout ×11 for\nonly 25 gems!",
-    "event_6060_4W_PokeMasGuarantee_02": "One time only on Pokémon\nMasters Day! Scout ×11 for\n100 paid gems + 5★ guaranteed!"
+    "event_6060_4W_PokeMasGuarantee_02": "One time only on Pokémon\nMasters Day! Scout ×11 for\n100 paid gems + 5★ guaranteed!",
+    "event_6070_4W_PokeMas_01": "One time only on Pokémon\nMasters Day! Scout ×11 for\nonly 25 gems!",
+    "event_6070_4W_PokeMasGuarantee_02": "One time only on Pokémon\nMasters Day! Scout ×11 for\n100 paid gems + 5★ guaranteed!",
+    "event_6070_1W_PokeFes_01": "Get fair-exclusive sync pairs\nfor the Champion Stadium!\nBonus training materials included!"
 }

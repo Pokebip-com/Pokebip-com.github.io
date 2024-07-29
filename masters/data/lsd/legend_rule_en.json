@@ -64,5 +64,8 @@
     "legend_rule_6050_003": "When the opponent’s Speed is raised,\nits Defense and Sp. Def are tripled.",
     "legend_rule_6060_001": "The total number of moves Machamp needs\nto use before it can unleash a sync move is\nreduced by 1 each time it uses a sync move.",
     "legend_rule_6060_002": "The opponent ignores the endure effect and\nyour allies’ passive skills that reduce\ndamage.",
-    "legend_rule_6060_003": "The first time Machamp’s HP reaches 80%\nand 50% or lower, it endures with that HP."
+    "legend_rule_6060_003": "The first time Machamp’s HP reaches 80%\nand 50% or lower, it endures with that HP.",
+    "legend_rule_6070_001": "The first time Mewtwo’s HP reaches 80%\nand 40% or lower, it endures with that HP.",
+    "legend_rule_6070_002": "Powers up the opponent’s moves, sync\nmove, or both when their stats are raised.",
+    "legend_rule_6070_003": "When the opponent is not affected by a\nfield effect, its Defense and Sp. Def\nare tripled."
 }

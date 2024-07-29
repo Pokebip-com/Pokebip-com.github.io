@@ -63,5 +63,7 @@
 { "trainerRarityupBonusId": "6040010", "trainerId": "10303000000", "itemSetId": "6040010", "scheduleId": "6040_Music_popi" },
 { "trainerRarityupBonusId": "6050001", "trainerId": "10304000000", "itemSetId": "6050001", "scheduleId": "6050_3W_Music_aoki" },
 { "trainerRarityupBonusId": "6060001", "trainerId": "10272000000", "itemSetId": "6060001", "scheduleId": "6060_3W_Music_1" },
-{ "trainerRarityupBonusId": "6060002", "trainerId": "10273000000", "itemSetId": "6060002", "scheduleId": "6060_3W_Music_2" }
+{ "trainerRarityupBonusId": "6060002", "trainerId": "10273000000", "itemSetId": "6060002", "scheduleId": "6060_3W_Music_2" },
+{ "trainerRarityupBonusId": "6070001", "trainerId": "10317000000", "itemSetId": "6070001", "scheduleId": "6070_2W_Music_1" },
+{ "trainerRarityupBonusId": "6070002", "trainerId": "10289100000", "itemSetId": "6070002", "scheduleId": "6070_3W_Music_2" }
 ]}

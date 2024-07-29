@@ -751,5 +751,22 @@
     "999184": "Wenn die KP des Anwenders [Digit:2digits ] % oder mehr betragen.",
     "999183": "Wenn die KP des Anwenders weniger als [Digit:2digits ] % betragen.",
     "999182": "Erhöht den Angriff, die Verteidigung, den Spezial-Angriff, die Spezial-Verteidigung und die Initiative aller verbündeten Gefährten um [Digit:1digit Idx=\"1\" ].",
-    "999181": "Erhöht den Wasserwiderstand und Geistwiderstand des Anwenders um [Digit:1digit ]."
+    "999181": "Erhöht den Wasserwiderstand und Geistwiderstand des Anwenders um [Digit:1digit ].",
+    "999180": "Erhöht [Name:ReferencedMessageTag ] des Anwenders um [Digit:1digit Idx=\"1\" ], wenn er in Angriffsbereitschaft geht.",
+    "999179": "Verursacht beim Ziel und beim Anwender den [Name:ReferencedMessageTag Idx=\"1\" ].",
+    "999178": "Wenn die verbleibenden Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"18500\" ] des Anwenders [Digit:1digit ] oder mehr betragen und mit dieser Attacke angegriffen wird, werden diese AEP um [Digit:1digit ] reduziert und der [Name:ReferencedMessageTag Idx=\"2\" ] aller verbündeten Gefährten wird um [Digit:1digit Idx=\"3\" ] erhöht.",
+    "999177": "Wenn die verbleibenden Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"18500\" ] des Anwenders 0 betragen und mit dieser Attacke angegriffen wird, werden seine KP um etwa [Digit:2digits Idx=\"4\" ] % seiner maximalen KP wiederhergestellt.",
+    "999176": "Erzeugt einen [Name:ReferencedMessageTag Idx=\"3\" ]. (Ein [Name:ReferencedMessageTag Idx=\"3\" ] verstärkt Angriffe vom Typ [Name:ReferencedMessageTag Idx=\"4\" ].)",
+    "999175": "Erhöht die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ aller verbündeten Gefährten um [Digit:1digit Idx=\"5\" ].",
+    "999174": "Wenn [Name:ReferencedMessageTag Idx=\"4\" ] des Anwenders erhöht ist.",
+    "999173": "Wenn [Name:ReferencedMessageTag Idx=\"4\" ] des Anwenders nicht erhöht ist.",
+    "999172": "(Der Spezial-Angriff des Anwenders wird nicht erhöht, wenn er nicht in Angriffsbereitschaft gegangen ist.)",
+    "999171": "Je stärker [Name:ReferencedMessageTag Idx=\"2\" ] des Zieles gesenkt wurde, desto mehr wird die Stärke dieses Angriffs erhöht.",
+    "999170": "Senkt [Name:ReferencedMessageTag Idx=\"2\" ] des Zieles um [Digit:1digit Idx=\"3\" ], wenn es vergiftet oder schwer vergiftet ist.",
+    "999169": "Wenn ein Freundeskreis auf der Anwender-Seite aktiv ist, geht der Anwender nicht in Angriffsbereitschaft und greift stattdessen sofort an.",
+    "999168": "Außerdem werden die KP des Anwenders um etwa [Digit:2digits ] % seiner maximalen KP wiederhergestellt.",
+    "999167": "Verursacht bei allen verbündeten Gefährten den [Name:ReferencedMessageTag Idx=\"2\" ].",
+    "999166": "Erhöht den Angriff und die Volltrefferquote aller verbündeten Gefährten um [Digit:1digit ].",
+    "999165": "Erhöht zusätzlich den Angriff und die Verteidigung aller verbündeten Gefährten um [Digit:1digit Idx=\"1\" ], wenn der Anwender in einer Wechselsperre gefangen ist.",
+    "999164": "Erhöht die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ des Anwenders um [Digit:1digit ]."
 }
