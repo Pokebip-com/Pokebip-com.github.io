@@ -635,10 +635,12 @@ function addCyclingRankingEvents(i, latestCyclicRankingSchedule) {
             let schedule = {...latestCyclicRankingSchedule[sdSelect]};
             schedule.cyclingSeconds = [...cyclingSeconds]
 
+            let idx = latestCyclicRankingSchedule[sdSelect].cycleIdx;
+
             versions[i].schedule.push(schedule);
 
-            latestCyclicRankingSchedule[sdSelect].startDate = "" + (parseInt(cyclingSeconds[j]) + parseInt(latestCyclicRankingSchedule[sdSelect].startDate));
-            j = (j+1) % cyclingSeconds.length;
+            latestCyclicRankingSchedule[sdSelect].startDate = "" + (parseInt(cyclingSeconds[idx]) + parseInt(latestCyclicRankingSchedule[sdSelect].startDate));
+            latestCyclicRankingSchedule[sdSelect].cycleIdx = (idx+1) % cyclingSeconds.length;
         }
     }
 }
@@ -695,6 +697,7 @@ function scheduleByVersion() {
                         latestCyclicRankingSchedule[s.startDate] = {...s};
                         latestCyclicRankingSchedule[s.startDate].originalSD = s.startDate;
                         latestCyclicRankingSchedule[s.startDate].questGroupId = cyclicRankingData[s.scheduleId][0].questGroupId;
+                        latestCyclicRankingSchedule[s.startDate].cycleIdx = 0;
                     }
                 }
                 return s;
