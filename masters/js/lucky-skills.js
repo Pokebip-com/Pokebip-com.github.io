@@ -33,7 +33,7 @@ async function getData() {
         potentialItemNameResponse
     ] = await Promise.all([
         fetch("./data/proto/ItemExchange.json"),
-        fetch("./data/proto/itemSet.json"),
+        fetch("./data/proto/ItemSet.json"),
         fetch("./data/proto/Potential.json"),
         fetch("./data/proto/PotentialItem.json"),
         fetch("./data/proto/PotentialLot.json"),
