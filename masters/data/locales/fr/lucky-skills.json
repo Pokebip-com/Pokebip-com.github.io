@@ -1,0 +1,9 @@
+{
+  "new_cookies" : "Nouveaux Biscuits Surprise",
+  "normal_cookies" : "Biscuits Surprise Normaux",
+  "guaranteed_cookies" : "Biscuits Surprise Garantis",
+  "trainer_cookies" : "Biscuits Surprise de Dresseurs",
+  "passive_name_title" : "Nom",
+  "passive_descr_title" : "Description",
+  "passive_drop_rate_title" : "Taux"
+}
