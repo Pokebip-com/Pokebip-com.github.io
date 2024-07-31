@@ -1,4 +1,7 @@
 let itemExchange;
+let itemSet;
+let progressEvent, progressEventRewardGroup;
+let storyQuest;
 
 let skillDeckItemConditionTeamSkillTagLot;
 let skillDeckItemEffect;
@@ -25,6 +28,9 @@ let skillGearsDiv;
 async function getData() {
     const [
         itemExchangeResponse,
+        itemSetResponse,
+        progressEventResponse,
+        progressEventRewardGroupResponse,
         scheduleResponse,
         skillDeckItemConditionTeamSkillTagLotResponse,
         skillDeckItemEffectResponse,
@@ -33,12 +39,16 @@ async function getData() {
         skillDeckItemNumLotResponse,
         skillDeckItemParamLotResponse,
         skillDeckItemSkillFeatherItemResponse,
+        storyQuestResponse,
         teamSkillResponse,
         skillDeckItemSkillFeatherItemNameResponse,
         teamSkillEffectResponse,
         teamSkillTagResponse,
     ] = await Promise.all([
         fetch("./data/proto/ItemExchange.json"),
+        fetch("./data/proto/ItemSet.json"),
+        fetch("./data/proto/ProgressEvent.json"),
+        fetch("./data/proto/ProgressEventRewardGroup.json"),
         fetch("./data/proto/Schedule.json"),
         fetch("./data/proto/SkillDeckItemConditionTeamSkillTagLot.json"),
         fetch("./data/proto/SkillDeckItemEffect.json"),
@@ -47,6 +57,7 @@ async function getData() {
         fetch("./data/proto/SkillDeckItemNumLot.json"),
         fetch("./data/proto/SkillDeckItemParamLot.json"),
         fetch("./data/proto/SkillDeckItemSkillFeatherItem.json"),
+        fetch("./data/proto/StoryQuest.json"),
         fetch("./data/proto/TeamSkill.json"),
         fetch(`./data/lsd/skill_deck_item_skill_feather_item_name_${lng}.json`),
         fetch(`./data/lsd/team_skill_effect_${lng}.json`),
@@ -56,6 +67,11 @@ async function getData() {
 
     itemExchange = await itemExchangeResponse.json();
     itemExchange = itemExchange.entries;
+
+    itemSet = (await itemSetResponse.json()).entries;
+
+    progressEvent = (await progressEventResponse.json()).entries;
+    progressEventRewardGroup = (await progressEventRewardGroupResponse.json()).entries;
 
     schedule = await scheduleResponse.json();
     schedule = schedule.entries;
@@ -81,6 +97,8 @@ async function getData() {
     skillDeckItemSkillFeatherItem = await skillDeckItemSkillFeatherItemResponse.json();
     skillDeckItemSkillFeatherItem = skillDeckItemSkillFeatherItem.entries;
 
+    storyQuest = (await storyQuestResponse.json()).entries;
+
     skillDeckItemSkillFeatherItemName = await skillDeckItemSkillFeatherItemNameResponse.json();
 
     teamSkill = await teamSkillResponse.json();
@@ -103,10 +121,20 @@ async function getCustomJSON() {
     versions = await versionsResponse.json().then(orderByVersion);
 }
 
+function getProgressEventRewardFeathers(featherList, lastVersionScheduleStarts) {
+    let itemSetIds = itemSet.filter(is => featherList.includes(is.item1)).map(is => is.itemSetId);
+    let progressEventEQGIds = progressEvent.map(pe => pe.questGroupId);
+    let lastVersionQuestGroups = storyQuest.filter(sq => lastVersionScheduleStarts.includes(sq.scheduleId) && progressEventEQGIds.includes(sq.questGroupId)).map(sq => sq.questGroupId);
+
+    return progressEventRewardGroup.filter(perg => lastVersionQuestGroups.includes(perg.progressEventId) && itemSetIds.includes(perg.itemSetId)).map(perg => itemSet.find(is => is.itemSetId === perg.itemSetId).item1);
+}
+
 function getNewSpecialFeathers() {
     let featherList = [...new Set(skillDeckItemSkillFeatherItem.filter(sdisfi => sdisfi.skillFeatherItemDescription === "9302").map(sdisfi => sdisfi.itemId))];
     let lastVersionScheduleStarts = schedule.filter(s => s.startDate >= versions[0].releaseTimestamp).map(s => s.scheduleId);
     let featherIds = itemExchange.filter(ie => featherList.includes(ie.itemId) && lastVersionScheduleStarts.includes(ie.scheduleId)).map(ie => ie.itemId);
+
+    featherIds.push(...getProgressEventRewardFeathers(featherList, lastVersionScheduleStarts));
 
     return skillDeckItemSkillFeatherItem.filter(sdisfi => featherIds.includes(sdisfi.itemId));
 }

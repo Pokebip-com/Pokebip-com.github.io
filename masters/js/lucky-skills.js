@@ -89,7 +89,7 @@ function getNewCookies() {
     let lastVersionScheduleStarts = [...new Set(schedule.filter(s => s.startDate >= versions[0].releaseTimestamp).map(s => s.scheduleId))];
     let cookieIds = itemExchange.filter(ie => cookiesList.includes(ie.itemId) && lastVersionScheduleStarts.includes(ie.scheduleId)).map(ie => ie.itemId);
 
-   cookieIds.push(...getProgressEventRewardCookies(cookiesList, lastVersionScheduleStarts));
+    cookieIds.push(...getProgressEventRewardCookies(cookiesList, lastVersionScheduleStarts));
 
     return potentialItem.filter(pi => cookieIds.includes(pi.itemId));
 }
