@@ -15,6 +15,8 @@ let trainerBase;
 let trainerDress;
 let trainerExRole;
 
+let trainerBuildupConfig, trainerBuildupParameter;
+
 let abilityType = {
     "1" : "StatsBoost",
     "2" : "Passive",
@@ -70,6 +72,8 @@ async function getData() {
         teamSkillResponse,
         trainerResponse,
         trainerBaseResponse,
+        trainerBuildupConfigResponse,
+        trainerBuildupParameterResponse,
         trainerDressResponse,
         trainerExRoleResponse,
         versionResponse,
@@ -97,6 +101,8 @@ async function getData() {
         fetch("./data/proto/TeamSkill.json"),
         fetch("./data/proto/Trainer.json"),
         fetch("./data/proto/TrainerBase.json"),
+        fetch("./data/proto/TrainerBuildupConfig.json"),
+        fetch("./data/proto/TrainerBuildupParameter.json"),
         fetch("./data/proto/TrainerDress.json"),
         fetch("./data/proto/TrainerExRole.json"),
         fetch("./data/custom/version_release_dates.json"),
@@ -155,6 +161,9 @@ async function getData() {
 
     const trainersBaseJSON = await trainerBaseResponse.json();
     trainerBase = trainersBaseJSON.entries;
+
+    trainerBuildupConfig = (await trainerBuildupConfigResponse.json()).entries;
+    trainerBuildupParameter = (await trainerBuildupParameterResponse.json()).entries;
 
     trainerDress = await trainerDressResponse.json();
     trainerDress = trainerDress.entries;
@@ -381,20 +390,27 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
 
     let tr = document.createElement("tr");
     let th = document.createElement("th");
-    th.innerText = name;
+    th.innerText = commonLocales[name];
 
     tr.appendChild(th);
 
     let pointBIdx = breakPointLevels.findIndex((a) => a > level);
     let pointAIdx = pointBIdx - 1;
 
-    for(let i = rarity; i <= 6; i++) {
+    let buildupParameter = trainerBuildupParameter.filter(tbp => tbp.trainerId === syncPairSelect.value);
+    let buildupBonus = 0;
+
+    console.log(buildupParameter);
+    console.log(trainerBuildupConfig);
+
+    for(let i = 0; i < buildupParameter.length; i++) {
         let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx])*(statValues[pointBIdx] - statValues[pointAIdx])/(breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
 
-        if(i < 6)
-            statValue += 20*(i-rarity)*(name === "PV" ? 2 : 1);
-        else
-            statValue += 20*(i-rarity)*(name === "PV" ? 5 : 2);
+        if(i > 0) {
+            let buildupPowerups = trainerBuildupConfig.find(tbc => tbc.trainerBuildupConfigId === buildupParameter[i-1].trainerBuildupConfigId).nbPowerups || 0;
+            buildupBonus += buildupPowerups * buildupParameter[i-1][name];
+            statValue += buildupBonus;
+        }
 
         statValue = Math.trunc(statValue*scale);
 
@@ -451,12 +467,12 @@ function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole
     }
 
     table.appendChild(headRow);
-    table.appendChild(getStatRow(commonLocales.hp, monsterData.hpValues, rarity, input.value, exRoleBonus.hp));
-    table.appendChild(getStatRow(commonLocales.atk, monsterData.atkValues, rarity, input.value, exRoleBonus.atk, (variation ? variation.atkScale/100 : 1)));
-    table.appendChild(getStatRow(commonLocales.def, monsterData.defValues, rarity, input.value, exRoleBonus.def, (variation ? variation.defScale/100 : 1)));
-    table.appendChild(getStatRow(commonLocales.spa, monsterData.spaValues, rarity, input.value, exRoleBonus.spa, (variation ? variation.spaScale/100 : 1)));
-    table.appendChild(getStatRow(commonLocales.spd, monsterData.spdValues, rarity, input.value, exRoleBonus.spd, (variation ? variation.spdScale/100 : 1)));
-    table.appendChild(getStatRow(commonLocales.spe, monsterData.speValues, rarity, input.value, exRoleBonus.spe, (variation ? variation.speScale/100 : 1)));
+    table.appendChild(getStatRow("hp", monsterData.hpValues, rarity, input.value, exRoleBonus.hp));
+    table.appendChild(getStatRow("atk", monsterData.atkValues, rarity, input.value, exRoleBonus.atk, (variation ? variation.atkScale/100 : 1)));
+    table.appendChild(getStatRow("def", monsterData.defValues, rarity, input.value, exRoleBonus.def, (variation ? variation.defScale/100 : 1)));
+    table.appendChild(getStatRow("spa", monsterData.spaValues, rarity, input.value, exRoleBonus.spa, (variation ? variation.spaScale/100 : 1)));
+    table.appendChild(getStatRow("spd", monsterData.spdValues, rarity, input.value, exRoleBonus.spd, (variation ? variation.spdScale/100 : 1)));
+    table.appendChild(getStatRow("spe", monsterData.speValues, rarity, input.value, exRoleBonus.spe, (variation ? variation.speScale/100 : 1)));
     statsDiv.appendChild(table);
 }
 
@@ -1720,22 +1736,26 @@ async function init() {
     urlStateChange();
     window.addEventListener('popstate', urlStateChange);
 }
-function getPairStatsRowBipCode(name, statValues, rarity, scale = 1) {
+function getPairStatsRowBipCode(name, statValues, t, scale = 1) {
     const breakPointLevels = [1, 30, 45, 100, 120, 140, 200];
 
-    let string = `\t\t[tr][th]${name}[/th]`;
+    let string = `\t\t[tr][th]${commonLocales[name]}[/th]`;
 
     let level = 150;
     let pointBIdx = breakPointLevels.findIndex((a) => a > level);
     let pointAIdx = pointBIdx - 1;
 
-    for(let i = rarity; i <= 6; i++) {
+    let buildupParameter = trainerBuildupParameter.filter(tbp => tbp.trainerId === t.trainerId);
+    let buildupBonus = 0;
+
+    for(let i = 0; i < buildupParameter.length; i++) {
         let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx])*(statValues[pointBIdx] - statValues[pointAIdx])/(breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
 
-        if(i < 6)
-            statValue += 20*(i-rarity)*(name === "PV" ? 2 : 1);
-        else
-            statValue += 20*(i-rarity)*(name === "PV" ? 5 : 2);
+        if(i > 0) {
+            let buildupPowerups = trainerBuildupConfig.find(tbc => tbc.trainerBuildupConfigId === buildupParameter[i-1].trainerBuildupConfigId).nbPowerups || 0;
+            buildupBonus += buildupPowerups * buildupParameter[i-1][name];
+            statValue += buildupBonus;
+        }
 
         statValue = Math.trunc(statValue*scale);
 
@@ -1758,22 +1778,22 @@ function getPairStatsRowBipCode(name, statValues, rarity, scale = 1) {
     return string;
 }
 
-function getMonsterStatsBipCode(m, rarity, v = null) {
+function getMonsterStatsBipCode(m, t, v = null) {
     let string = `\t[item|nostyle][table]\n`
-        + `\t\t[tr][th|colspan=${rarity+1}]${(v ? v.monsterName : getMonsterNameByMonsterId(m.monsterId))}[/th][/tr]\n`
+        + `\t\t[tr][th|colspan=${t.rarity+1}]${(v ? v.monsterName : getMonsterNameByMonsterId(m.monsterId))}[/th][/tr]\n`
         + `\t\t[tr][th]Stats max[/th]`;
 
-    for(let i = rarity; i <= 6; i++) {
+    for(let i = t.rarity; i <= 6; i++) {
         string += `[th|width=50px]${i === 6 ? "5+" : i}★[/th]`;
     }
 
     string += `[/tr]\n`;
-    string += getPairStatsRowBipCode("PV", m.hpValues, rarity);
-    string += getPairStatsRowBipCode("Attaque", m.atkValues, rarity, (v ? v.atkScale/100 : 1));
-    string += getPairStatsRowBipCode("Défense", m.defValues, rarity, (v ? v.defScale/100 : 1));
-    string += getPairStatsRowBipCode("Atq. Spé.", m.spaValues, rarity, (v ? v.spaScale/100 : 1));
-    string += getPairStatsRowBipCode("Déf. Spé.", m.spdValues, rarity, (v ? v.spdScale/100 : 1));
-    string += getPairStatsRowBipCode("Vitesse", m.speValues, rarity, (v ? v.speScale/100 : 1));
+    string += getPairStatsRowBipCode("hp", m.hpValues, t);
+    string += getPairStatsRowBipCode("atk", m.atkValues, t, (v ? v.atkScale/100 : 1));
+    string += getPairStatsRowBipCode("def", m.defValues, t, (v ? v.defScale/100 : 1));
+    string += getPairStatsRowBipCode("spa", m.spaValues, t, (v ? v.spaScale/100 : 1));
+    string += getPairStatsRowBipCode("spd", m.spdValues, t, (v ? v.spdScale/100 : 1));
+    string += getPairStatsRowBipCode("spe", m.speValues, t, (v ? v.speScale/100 : 1));
 
     string += `\t[/table][/item]\n`;
 
@@ -1987,10 +2007,10 @@ function getPairBipCode(trainerId) {
         + `[listh]\n`;
 
     monsters.forEach(m => {
-        string += getMonsterStatsBipCode(m, t.rarity);
+        string += getMonsterStatsBipCode(m, t);
 
         if(pairVariations[m.monsterId])
-            pairVariations[m.monsterId].forEach(v => string += getMonsterStatsBipCode(m, t.rarity, v));
+            pairVariations[m.monsterId].forEach(v => string += getMonsterStatsBipCode(m, t, v));
     });
 
     if(hasExRoleUnlocked(trainerId)) {
