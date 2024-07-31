@@ -34,8 +34,16 @@
   "menu_battle_rally" : "Rallye",
   "submenu_rally_role_set" : "Sets de rôles",
   "menu_language" : "Langue",
-  "submenu_language_fr" : "Français",
-  "submenu_language_en" : "English",
+  "submenu_language" : {
+    "fr" : "Français",
+    "en" : "English",
+    "de" : "Deutsch",
+    "es" : "Español",
+    "it" : "Italiano",
+    "ja" : "日本語",
+    "ko" : "한국어",
+    "zh-TW" : "简体中文"
+  },
   "adminmenu_title" : "Admin",
   "adminsubmenu_discord" : "Message Discord"
 }

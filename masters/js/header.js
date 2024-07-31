@@ -1,4 +1,4 @@
-const supportedLanguages = ["fr", "en"];
+const supportedLanguages = ["fr", "en", "de", "es", "it", "ja", "ko", "zh-TW"];
 const pageParams = new URLSearchParams(window.location.search);
 const pageUrl = new URL(window.location);
 let urlLang = pageUrl.searchParams.get("lang");
@@ -16,12 +16,42 @@ switch(urlLang) {
         setCookie("locale", "en-US", 8000);
         break;
 
+    case "de":
+        locale = "de-DE";
+        setCookie("locale", "de-DE", 8000);
+        break;
+
+    case "es":
+        locale = "es-ES";
+        setCookie("locale", "es-ES", 8000);
+        break;
+
+    case "it":
+        locale = "it-IT";
+        setCookie("locale", "it-IT", 8000);
+        break;
+
+    case "ja":
+        locale = "ja-JP";
+        setCookie("locale", "ja-JP", 8000);
+        break;
+
+    case "ko":
+        locale = "ko-KR";
+        setCookie("locale", "ko-KR", 8000);
+        break;
+
+    case "zh-TW":
+        locale = "zh-TW";
+        setCookie("locale", "zh-TW", 8000);
+        break;
+
     default:
         locale = getCookie("locale") || navigator.language || navigator.userLanguage || "en-US";
         break;
 }
 
-let lng = locale.substring(0, 2);
+let lng = locale === "zh-TW" ? "zh-TW" : locale.substring(0, 2);
 if(!supportedLanguages.includes(lng)) lng = "en";
 let commonLocales;
 
@@ -141,7 +171,7 @@ async function buildHeader(localePath = "./data/locales/") {
         let params = pageParams;
         params.delete("lang");
         params.append("lang", language);
-        headerData[3]["drop"].push({ "title": commonLocales[`submenu_language_${language}`], "url": pageUrl.toString().split("?")[0] + "?" + params.toString(), "dataLang" : `${language}` });
+        headerData[3]["drop"].push({ "title": commonLocales[`submenu_language`][`${language}`], "url": pageUrl.toString().split("?")[0] + "?" + params.toString(), "dataLang" : `${language}` });
     });
 
     let adminHeaderData = [

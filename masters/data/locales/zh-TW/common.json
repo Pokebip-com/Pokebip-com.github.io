@@ -1,9 +1,9 @@
 {
   "role_names" : [
-    "Strike (Physical)", "Strike (Special)", "Support", "Tech", "Sprint", "Field"
+    "攻擊型 (物理)", "攻擊型 (特殊)", "輔助型", "技術型", "速戰型", "場地型"
   ],
   "role_name_standard" : [
-    "Strike", "Strike", "Support", "Tech", "Sprint", "Field"
+    "攻擊型", "攻擊型", "輔助型", "技術型", "速戰型", "場地型"
   ],
   "category_names" : {
     "Physical" : "Physical",
@@ -19,11 +19,11 @@
     "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only."
   ],
   "hp" : "HP",
-  "atk" : "Attack",
-  "def" : "Defense",
-  "spa" : "Sp. Atk.",
-  "spd" : "Sp. Def.",
-  "spe" : "Speed",
+  "atk" : "攻擊",
+  "def" : "防禦",
+  "spa" : "特攻",
+  "spd" : "特防",
+  "spe" : "速度",
   "base_trainer_name" : "Trainer (Scottie/Bettie)",
   "menu_schedule" : "Schedule",
   "menu_sync_pairs" : "Sync Pairs",

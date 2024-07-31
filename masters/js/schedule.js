@@ -955,6 +955,8 @@ function printSalonGuest(scheduleId) {
 function printShopOffers(schedule) {
     let eventBanners = eventBannerList.filter(eb => eb.scheduleId === schedule.scheduleId);
 
+    console.log(schedule);
+
     if(eventBanners.length === 0)
         return;
 
