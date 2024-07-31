@@ -46,6 +46,7 @@ function setLodgeTopics(guestId) {
     lodgeTopicsDiv.innerHTML = "";
 
     let points = [10, 7, 5];
+    let appreciationEmojis = ["💗", "💖", "💔"];
     let topics = {};
 
     Object.keys(salonTopicCategory).forEach(key => {
@@ -57,21 +58,39 @@ function setLodgeTopics(guestId) {
         topics[topic.salonTopicCategoryId][sgt.appreciation].push(topic);
     });
 
+    let categoriesUl = document.createElement("ul");
+    categoriesUl.classList.add("listh-bipcode");
+
     Object.keys(salonTopicCategory).forEach(key => {
-        let categoryTitle = document.createElement("h2");
+        let categoryLi = document.createElement("li");
+        categoryLi.classList.add("listh-bipcode");
+        categoryLi.style.textAlign = "left";
+        categoryLi.style.padding = "0";
+
+        let categoryTitle = document.createElement("h1");
         categoryTitle.innerText = salonTopicCategory[key];
-        lodgeTopicsDiv.appendChild(categoryTitle);
+        categoryLi.appendChild(categoryTitle);
+
+        let topicsDiv = document.createElement("div");
+        topicsDiv.style.padding = "0.5em";
+        categoryLi.appendChild(topicsDiv);
 
         Object.keys(topics[key]).forEach(appreciation => {
             topics[key][appreciation].forEach(topic => {
                 let topicName = document.createElement("span");
-                topicName.innerText = `${salonTopicName[topic.salonTopicId].replace("\n", " ")} (${points[appreciation-1]} pts)`;
-                lodgeTopicsDiv.appendChild(topicName);
-                lodgeTopicsDiv.appendChild(document.createElement("br"));
+                topicName.innerText = `${appreciationEmojis[appreciation-1]} ${salonTopicName[topic.salonTopicId].replace("\n", " ")} (${points[appreciation-1]} pts)`;
+                topicsDiv.appendChild(topicName);
+                topicsDiv.appendChild(document.createElement("br"));
             });
-            lodgeTopicsDiv.appendChild(document.createElement("br"));
+            if(topics[key][appreciation].length > 0) {
+                topicsDiv.appendChild(document.createElement("br"));
+            }
         });
+
+        categoriesUl.appendChild(categoryLi);
     });
+
+    lodgeTopicsDiv.appendChild(categoriesUl);
 }
 
 getData().then(() => {
