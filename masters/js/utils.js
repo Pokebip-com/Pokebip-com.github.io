@@ -59,7 +59,7 @@ function getPairPrettyPrint(trainerId) {
 }
 
 function getPairName(trainerId) {
-    return `${getTrainerName(trainerId).replace("\n", "")} & ${getMonsterNameByTrainerId(trainerId)}`;
+    return `${getTrainerName(trainerId)} & ${getMonsterNameByTrainerId(trainerId)}`;
 }
 
 function getStarsRarityString(trainerId) {
@@ -72,10 +72,10 @@ function getPairPrettyPrintWithUrl(trainerId) {
 
 function getTrainerName(id) {
     if(trainerVerboseNames[id])
-        return trainerVerboseNames[id];
+        return trainerVerboseNames[id].replace("\n", " ");
     let tr = trainer.find(t => t.trainerId === id) || {};
     let tb = trainerBase.find(tba => tba.id === tr.trainerBaseId.toString()) || {};
-    return trainerNames[tb.altTrainerNameId] || trainerNames[tb.trainerNameId] || commonLocales.base_trainer_name;
+    return (trainerNames[tb.altTrainerNameId] || trainerNames[tb.trainerNameId] || commonLocales.base_trainer_name).replace("\n", " ");
 }
 
 function getMonsterNameByTrainerId(id) {
