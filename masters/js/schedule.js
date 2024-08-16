@@ -931,15 +931,13 @@ function printNewMusics(scheduleId) {
     scheduleDiv.innerHTML += ul;
 }
 
-function printLoginBonus(loginBonus) {
+async function printLoginBonus(loginBonus) {
 
-    if(loginBonus.bannerId > -1) {
+    if (loginBonus.bannerId > -1) {
         let lbBanner = banner.filter(b => b.bannerId === loginBonus.bannerId);
 
         lbBanner.forEach(ban => printEventBanner(ban, loginBonus));
-    }
-
-    else {
+    } else {
         let entryStr = `<h3>`;
 
         switch (loginBonus.type) {
@@ -990,16 +988,20 @@ function printLoginBonus(loginBonus) {
         printEndDate(loginBonus.endDate);
     }
 
-    // scheduleDiv.innerHTML += "<br><br><b>RÉCOMPENSES:</b>";
-    // loginBonusReward.filter(lbr => lbr.rewardId === loginBonus.rewardId).sort((a, b) => a.day - b.day).forEach(lbr => {
-    //     scheduleDiv.innerHTML += `<br><b>Jour ${lbr.day}:</b> `;
-    //     let sets = itemSet.filter(is => is.itemSetId === lbr.itemSetId)[0];
-    //     let i = 1;
-    //     while(sets[`item${i}`] && sets[`item${i}`] !== "0") {
-    //         scheduleDiv.innerHTML += `${sets[`item${i}`]} x${sets[`item${i}Quantity`]}`;
-    //         i++;
-    //     }
-    // });
+    const rewards = loginBonusReward.filter(lbr => lbr.rewardId === loginBonus.rewardId).sort((a, b) => a.day - b.day);
+
+    if(rewards.length === 0) return;
+
+    scheduleDiv.innerHTML += `<br><br><b>${schedLocales.login_bonus_rewards}</b>`;
+    for (const lbr1 of rewards) {
+        scheduleDiv.innerHTML += `<br><b>${lbr1.day}.</b>`;
+        let sets = itemSet.filter(is => is.itemSetId === lbr1.itemSetId)[0];
+        let i = 1;
+        while (sets[`item${i}`] && sets[`item${i}`] !== "0") {
+            scheduleDiv.innerHTML += ` ${await getItemName(sets[`item${i}`])} x${sets[`item${i}Quantity`]}`;
+            i++;
+        }
+    }
 }
 
 function printCalendars(startDates) {
@@ -1243,7 +1245,7 @@ async function setVersionInfos(id) {
                         scheduleDiv.innerHTML += `<h2>${schedLocales.login_bonus}</h2>`;
                         loginBonusFlag = false;
                     }
-                    printLoginBonus(sched);
+                    await printLoginBonus(sched);
                     break;
             }
         }

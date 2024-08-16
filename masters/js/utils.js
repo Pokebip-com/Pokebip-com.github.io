@@ -372,9 +372,8 @@ async function getItemName(itemId) {
 
         // TrainerBuildupItem.pb
         case 55:
-            fieldName = (await jsonCache.getProto("TrainerBuildupItem")).find(tbi => tbi.itemId === itemId)["trainerBuildupConfigId"].toString() || -1;
-            lsdName = "trainer_buildup_item_name";
-            break;
+            const tbi = (await jsonCache.getProto("TrainerBuildupItem")).find(tbi => tbi.itemId === itemId);
+            return (await jsonCache.getLsd("trainer_buildup_item_name"))[tbi.trainerBuildupConfigId] + (tbi.trainerId.toString() === "-1" ? "" : ` (${await getPairName(tbi.trainerId)})`);
 
         // AbilityItem.pb
         case 56:
