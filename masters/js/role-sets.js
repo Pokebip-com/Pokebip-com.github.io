@@ -6,20 +6,10 @@ let brRoleBonusSet;
 let roleSetLocale;
 
 async function getData() {
-    await buildHeader("../data/locales/");
+    await buildHeader("..");
 
-    const [
-        brRoleBonusSetResponse,
-        roleSetLocaleResponse
-    ] = await Promise.all([
-        fetch("../data/proto/BattleRallyRoleBonusSet.json"),
-        fetch(`../data/locales/${lng}/role-set.json`),
-    ])
-        .catch(error => console.log(error));
-
-    const brRoleBonusSetJSON = await brRoleBonusSetResponse.json();
-    brRoleBonusSet = brRoleBonusSetJSON.entries;
-    roleSetLocale = await roleSetLocaleResponse.json();
+    brRoleBonusSet = await jsonCache.getProto("BattleRallyRoleBonusSet");
+    roleSetLocale = await jsonCache.getLocale("role-set");
 }
 
 function createSelectInput() {

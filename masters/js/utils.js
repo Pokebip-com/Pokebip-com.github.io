@@ -54,45 +54,53 @@ function getAbilityType(ability) {
     }
 }
 
-function getPairPrettyPrint(trainerId) {
-    return `${getStarsRarityString(trainerId)} ${getPairName(trainerId)}`;
+async function getPairPrettyPrint(trainerId) {
+    return `${await getStarsRarityString(trainerId)} ${await getPairName(trainerId)}`;
 }
 
-function getPairName(trainerId) {
-    return `${getTrainerName(trainerId)} & ${getMonsterNameByTrainerId(trainerId)}`;
+async function getPairName(trainerId) {
+    return `${await getTrainerName(trainerId)} & ${await getMonsterNameByTrainerId(trainerId)}`;
 }
 
-function getStarsRarityString(trainerId) {
-    return `<span style="color: ${starsHex[getTrainerRarity(trainerId)-1]}; -webkit-text-stroke: thin black;"><b>${"★".repeat(getTrainerRarity(trainerId))}</b></span>`;
+async function getStarsRarityString(trainerId) {
+    return `<span style="color: ${starsHex[await getTrainerRarity(trainerId)-1]}; -webkit-text-stroke: thin black;"><b>${"★".repeat(await getTrainerRarity(trainerId))}</b></span>`;
 }
 
-function getPairPrettyPrintWithUrl(trainerId) {
-    return `<a href="./duo.html?pair=${trainerId}">${getPairPrettyPrint(trainerId)}</a>`;
+async function getPairPrettyPrintWithUrl(trainerId) {
+    return `<a href="./duo.html?pair=${trainerId}">${await getPairPrettyPrint(trainerId)}</a>`;
 }
 
-function getTrainerName(id) {
-    if(trainerVerboseNames[id])
+async function getTrainerName(id) {
+    let trainerVerboseNames = await jsonCache.getLsd(`trainer_verbose_name`);
+    if (trainerVerboseNames[id])
         return trainerVerboseNames[id].replace("\n", " ");
-    let tr = trainer.find(t => t.trainerId === id) || {};
-    let tb = trainerBase.find(tba => tba.id === tr.trainerBaseId.toString()) || {};
+
+    let trainerNames = await jsonCache.getLsd(`trainer_name`);
+    let tr = (await jsonCache.getProto(`Trainer`))
+            .find(t => t.trainerId === id) || {};
+    let tb = (await jsonCache.getProto(`TrainerBase`))
+            .find(tba => tba.id === tr.trainerBaseId?.toString()) || {};
+
     return (trainerNames[tb.altTrainerNameId] || trainerNames[tb.trainerNameId] || commonLocales.base_trainer_name).replace("\n", " ");
 }
 
-function getMonsterNameByTrainerId(id) {
-    let tr = trainer.find(t => t.trainerId === id) || {};
-    let mon = monster.find(m => m.monsterId.toString() === tr.monsterId.toString()) || {};
-    let mb = monsterBase.find(mb => mb.monsterBaseId === mon.monsterBaseId) || {};
-    return monsterNames[mb.monsterNameId] || "";
+async function getMonsterNameByTrainerId(id) {
+    let tr = (await jsonCache.getProto(`Trainer`)).find(t => t.trainerId === id) || {};
+    let mon = (await jsonCache.getProto(`Monster`)).find(m => m.monsterId.toString() === tr.monsterId?.toString()) || {};
+    let mb = (await jsonCache.getProto(`MonsterBase`)).find(mb => mb.monsterBaseId === mon.monsterBaseId) || {};
+    return (await jsonCache.getLsd(`monster_name`))[mb.monsterNameId] || "";
 }
 
-function getMonsterNameByMonsterId(id) {
-    let mon = monster.find(m => m.monsterId.toString() === id.toString()) || {};
-    return getNameByMonsterBaseId(mon.monsterBaseId);
+async function getMonsterNameByMonsterId(id) {
+    let mon = (await jsonCache.getProto(`Monster`)).find(m => m.monsterId.toString() === id.toString()) || {};
+    return await getNameByMonsterBaseId(mon.monsterBaseId);
 }
 
-function getNameByMonsterBaseId(id, formId = 0) {
-    let mb = monsterBase.find(mb => mb.monsterBaseId === id) || {};
-    let name = monsterNames[mb.monsterNameId] || "";
+async function getNameByMonsterBaseId(id, formId = 0) {
+    let mb = (await jsonCache.getProto(`MonsterBase`)).find(mb => mb.monsterBaseId === id) || {};
+    let name = (await jsonCache.getLsd(`monster_name`))[mb.monsterNameId] || "";
+
+    let monsterForms = await jsonCache.getLsd(`monster_form`);
 
     if(formId > 0 && monsterForms[formId]) {
         name += ` ${monsterForms[formId]}`;
@@ -105,15 +113,15 @@ function getNameByMonsterBaseId(id, formId = 0) {
 
 }
 
-function getTrainerActorId(trainerId) {
-    let trainerBaseId = trainer.find(t => t.trainerId === trainerId).trainerBaseId;
-    let actorId = trainerBase.find(tb => tb.id === trainerBaseId.toString()).actorId;
+async function getTrainerActorId(trainerId) {
+    let trainerBaseId = (await jsonCache.getProto("Trainer")).find(t => t.trainerId === trainerId).trainerBaseId;
+    let actorId = (await jsonCache.getProto("TrainerBase")).find(tb => tb.id === trainerBaseId.toString()).actorId;
 
     if(actorId) {
-        let rak = replaceActorKeyword.find(rak => rak.replacedActorId === actorId);
+        let rak = (await jsonCache.getProto("ReplaceActorKeyword")).find(rak => rak.replacedActorId === actorId);
 
         if(rak) {
-            let replacingActorTrainer = trainerBase.find(tb => tb.actorId ===  rak.replacingActorId);
+            let replacingActorTrainer = (await jsonCache.getProto("TrainerBase")).find(tb => tb.actorId ===  rak.replacingActorId);
 
             if(replacingActorTrainer && (!replacingActorTrainer.isGeneric || rak.useGenericIfAvailable))
                 actorId = rak.replacingActorId;
@@ -123,47 +131,47 @@ function getTrainerActorId(trainerId) {
     return actorId;
 }
 
-function getActorDressFromTrainerId(trainerId) {
-    let val = trainerDress.find(td => td.trainerId == trainerId);
+async function getActorDressFromTrainerId(trainerId) {
+    let val = (await jsonCache.getProto("ActorDress")).find(td => td.trainerId == trainerId);
 
     if(!val)
         return null;
 
-    return actorDress.find(ad => ad.id == val.actorDressId);
+    return (await jsonCache.getProto("ActorDress")).find(ad => ad.id == val.actorDressId);
 }
 
-function getFormIdFromActorId(actorId) {
-    return monsterBase.find(mb => mb.actorId === actorId).formId || -1;
+async function getFormIdFromActorId(actorId) {
+    return (await jsonCache.getProto("MonsterBase")).find(mb => mb.actorId === actorId).formId || -1;
 }
 
-function getMonsterBaseIdFromMonsterId(monsterId) {
-    return monster.find(m => m.monsterId === monsterId).monsterBaseId;
+async function getMonsterBaseIdFromMonsterId(monsterId) {
+    return (await jsonCache.getProto("Monster")).find(m => m.monsterId === monsterId).monsterBaseId;
 }
 
-function getMonsterBaseIdFromActorId(actorId) {
-    return monsterBase.find(mb => mb.actorId === actorId).monsterBaseId || -1;
+async function getMonsterBaseIdFromActorId(actorId) {
+    return (await jsonCache.getProto("MonsterBase")).find(mb => mb.actorId === actorId).monsterBaseId || -1;
 }
 
-function getPokemonNumberFromMonsterBaseId(monsterBaseId) {
-    return monsterBase.find(mb => mb.monsterBaseId === monsterBaseId).actorNumber;
+async function getPokemonNumberFromMonsterBaseId(monsterBaseId) {
+    return (await jsonCache.getProto("MonsterBase")).find(mb => mb.monsterBaseId === monsterBaseId).actorNumber;
 }
 
-function getMonsterActorIdFromBaseId(baseId) {
-    return monsterBase.find(mb => mb.monsterBaseId === baseId).actorId;
+async function getMonsterActorIdFromBaseId(baseId) {
+    return (await jsonCache.getProto("MonsterBase")).find(mb => mb.monsterBaseId === baseId).actorId;
 }
 
-function getMonsterById(monsterId) {
-    return monster.find(m => m.monsterId === monsterId);
+async function getMonsterById(monsterId) {
+    return (await jsonCache.getProto("Monster")).find(m => m.monsterId === monsterId);
 }
 
-function getRoleByTrainerId(id, standard = false) {
-    const role = trainer.find(t => t.trainerId === id).role;
+async function getRoleByTrainerId(id, standard = false) {
+    const role = (await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).role;
 
     return standard ? commonLocales.role_name_standard[role] : commonLocales.role_names[role];
 }
 
-function getRoleUrlByTrainerId(id, specification = true) {
-    const role = trainer.find(t => t.trainerId === id).role;
+async function getRoleUrlByTrainerId(id, specification = true) {
+    const role = (await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).role;
 
     switch(role) {
         case 0:
@@ -179,8 +187,8 @@ function getRoleUrlByTrainerId(id, specification = true) {
     }
 }
 
-function getExRoleUrlByTrainerId(id, specification = true) {
-    const role = trainerExRole.find(t => t.trainerId === id).role;
+async function getExRoleUrlByTrainerId(id, specification = true) {
+    const role = (await jsonCache.getProto("TrainerExRole")).find(t => t.trainerId === id).role;
 
     switch(role) {
         case 0:
@@ -196,28 +204,28 @@ function getExRoleUrlByTrainerId(id, specification = true) {
     }
 }
 
-function getTrainerTypeName(id) {
-    return motifTypeName[trainer.find(t => t.trainerId === id).type];
+async function getTrainerTypeName(id) {
+    return (await jsonCache.getLsd("motif_type_name"))[(await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).type];
 }
 
-function getTrainerWeaknessName(id) {
-    return motifTypeName[trainer.find(t => t.trainerId === id).weakness];
+async function getTrainerWeaknessName(id) {
+    return (await jsonCache.getLsd("motif_type_name"))[(await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).weakness];
 }
 
-function getTrainerRarity(id) {
-    return trainer.find(t => t.trainerId === id).rarity;
+async function getTrainerRarity(id) {
+    return (await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).rarity;
 }
 
-function hasExUnlocked(id) {
-    return trainer.find(t => t.trainerId === id).exScheduleId !== "NEVER";
+async function hasExUnlocked(id) {
+    return (await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).exScheduleId !== "NEVER";
 }
 
-function hasExRoleUnlocked(id) {
-    return trainerExRole.find(t => t.trainerId === id) !== undefined;
+async function hasExRoleUnlocked(id) {
+    return (await jsonCache.getProto("TrainerExRole")).find(t => t.trainerId === id) !== undefined;
 }
 
-function getExRoleText(id) {
-    const ter = trainerExRole.find(ter => ter.trainerId === id);
+async function getExRoleText(id) {
+    const ter = (await jsonCache.getProto("TrainerExRole")).find(ter => ter.trainerId === id);
 
     if(ter)
         return commonLocales.role_names[ter.role]
@@ -225,8 +233,8 @@ function getExRoleText(id) {
     return "-";
 }
 
-function getExRoleId(id) {
-    const ter = trainerExRole.find(ter => ter.trainerId === id);
+async function getExRoleId(id) {
+    const ter = (await jsonCache.getProto("TrainerExRole")).find(ter => ter.trainerId === id);
 
     return ter ? ter.role : -1;
 }
@@ -235,8 +243,8 @@ function getTrainerNumber(id) {
     return Math.trunc(trainer[id][0].number/100);
 }
 
-function getAbilityPanelQty(id) {
-    return abilityPanel.filter(ap => ap.trainerId === id && ap.version === 0).length || 0;
+async function getAbilityPanelQty(id) {
+    return (await jsonCache.getProto("AbilityPanel")).filter(ap => ap.trainerId === id && ap.version === 0).length || 0;
 }
 
 function removeAccents(string) {
@@ -292,17 +300,27 @@ function orderByVersion(data) {
     });
 }
 
-function getItemName(itemId) {
-    let subCategory; // = items.filter(i => i.itemId === itemId)[0].subCategory || -1;
+async function getNormalizedItemName(itemId) {
+    return await getItemName(itemId)
+        .then(itemName => removeAccents(itemName).toLowerCase().replaceAll(" ", "-"));
+}
+
+async function getItemName(itemId) {
+    let lsdName = "";
+    let fieldName = itemId;
+    let prefix = "";
+    let subCategory = (await jsonCache.getProto("Item")).find(i => i.itemId === itemId).subCategory;
+    subCategory = subCategory ? subCategory : -1;
     switch(subCategory) {
         // Trainer.pb
         case 1:
-
-            break;
+            return await getPairName(itemId);
 
         // StoryQuest.pb
+        // story_quest_name_xx.lsd => quest_title_{id}
         case 3:
-
+            fieldName = (await jsonCache.getProto("StoryQuest")).find(sq => sq.storyQuestId === itemId).questNameId || "";
+            lsdName = `story_quest_name`;
             break;
 
         // other_item_name_xx.lsd
@@ -319,37 +337,49 @@ function getItemName(itemId) {
         case 65:
         case 66:
         case 67:
+        case 78:
+        case 79:
         case 95:
         case 111:
         case 112:
         case 134:
-
+            lsdName = `other_item_name`;
             break;
+
+        // RewardConfigId.pb
+        // item_id.exp
+        case 5:
+            return "XP";
+
+        // ChequeManagementItem.pb
+        case 42:
+            return "Paid Login Bonus Reward"
 
         // breakthrough_item_name_xx.lsd
         case 51:
-
+            lsdName = `breakthrough_item_name`;
             break;
 
         // training_item_name_xx.lsd
         case 52:
-
+            lsdName = `training_item_name`;
             break;
 
         // potential_item_name_xx.lsd
         case 54:
-
+            lsdName = `potential_item_name`;
             break;
 
         // TrainerBuildupItem.pb
         case 55:
-
+            fieldName = (await jsonCache.getProto("TrainerBuildupItem")).find(tbi => tbi.itemId === itemId)["trainerBuildupConfigId"].toString() || -1;
+            lsdName = "trainer_buildup_item_name";
             break;
 
         // AbilityItem.pb
         case 56:
-
-            break;
+            const trainerId = (await jsonCache.getProto("AbilityItem")).find(ai => ai.itemId === itemId)["trainerId"] || -1;
+            return (await jsonCache.getLsd(`ability_item_name`))[trainerId === "0" ? "1" : "2"] + (trainerId === "0" ? "" : " (" + await getPairName(trainerId) + ")");
 
         // MoveLevelUpItem.pb
         case 57:
@@ -358,7 +388,7 @@ function getItemName(itemId) {
 
         // exrole_release_item_name_xx.lsd
         case 59:
-
+            lsdName = `exrole_release_item_name`;
             break;
 
         // MonsterEvolution.pb
@@ -369,37 +399,47 @@ function getItemName(itemId) {
         // trainer_rarity_up_item_name_xx.lsd
         case 68:
         case 69:
-
+            lsdName = `trainer_rarity_up_item_name`;
             break;
 
         // bardge_item_name_xx.lsd
         case 73:
-
+            lsdName = `bardge_item_name`;
             break;
 
         // villa_item_name_xx.lsd
         case 74:
-
+            lsdName = `villa_item_name`;
             break;
 
         // event_item_name_xx.lsd
         case 75:
+            lsdName = `event_item_name`;
+            break;
+
+        // BattleRallyItem.pb
+        case 76:
+
+            break;
+
+        // BattleRallyTicketItem.pb => other_item_name
+        case 77:
 
             break;
 
         // deck_item_name_xx.lsd
         case 81:
-
+            lsdName = `deck_item_name`;
             break;
 
         // deck_item_lvup_item_name_xx.lsd
         case 82:
-
+            lsdName = `deck_item_lvup_item_name`;
             break;
 
         // packed_item_name_xx.lsd
         case 83:
-
+            lsdName = `packed_item_name`;
             break;
 
         // EggItem.pb
@@ -409,17 +449,17 @@ function getItemName(itemId) {
 
         // treat_item_name_xx.lsd
         case 86:
-
+            lsdName = `treat_item_name`;
             break;
 
         // scout_ticket_item_name_xx.lsd
         case 89:
-
+            lsdName = `scout_ticket_item_name`;
             break;
 
         // scout_server_ticket_item_name_xx.lsd
         case 90:
-
+            lsdName = `scout_server_ticket_item_name`;
             break;
 
         // MonsterEnhancement.pb
@@ -429,12 +469,12 @@ function getItemName(itemId) {
 
         // skill_deck_item_skill_feather_item_name_xx.lsd
         case 93:
-
+            lsdName = `skill_deck_item_skill_feather_item_name`;
             break;
 
         // skill_deck_item_unchanged_pin_item_name_xx.lsd
         case 94:
-
+            lsdName = `skill_deck_item_unchanged_pin_item_name`;
             break;
 
         // MissionItem.pb
@@ -444,17 +484,23 @@ function getItemName(itemId) {
 
         // jukebox_music_key_item_name_xx.lsd
         case 120:
+            lsdName = `jukebox_music_key_item_name`;
+            break;
+
+        // RewardConfig.Pb
+        // => item_set_id_at_duplication.{itemId} => ItemSetId => Item
+        case 121:
 
             break;
 
         // salon_help_item_name_xx.lsd
         case 130:
-
+            lsdName = `salon_help_item_name`;
             break;
 
         // salon_present_item_name_xx.lsd
         case 131:
-
+            lsdName = `salon_present_item_name`;
             break;
 
         // SalonPhotoItem.pb
@@ -469,7 +515,7 @@ function getItemName(itemId) {
 
         // salon_friendship_level_item_name_xx.lsd
         case 135:
-
+            lsdName = `salon_friendship_level_item_name`;
             break;
 
         // salon_exchange_item_name_xx.lsd
@@ -477,28 +523,52 @@ function getItemName(itemId) {
         case 140:
         case 142:
         case 143:
-
+            lsdName = `salon_exchange_item_name`;
             break;
 
         // expedition_boost_item_name_xx.lsd
         case 141:
-
+            lsdName = `expedition_boost_item_name`;
             break;
 
         // salon_goods_item_name_xx.lsd
         case 150:
         case 152:
+            lsdName = `salon_goods_item_name`;
+            break;
+
+        // SalonMemorialArtItem.pb
+        case 151:
 
             break;
 
-        case 5:
-        case 42:
+        // SalonGoodsItem.pb
+        case 153:
+
+            break;
+
+        // HonorItem.pb
+        case 160:
+
+            break;
+
+        // PhotoMakerDecorationItem.pb
+        case 170:
+
+            break;
+
+        // Inconnus...
         case 91:
         case 900:
         default:
-
-            break;
+            return "Unknown Item";
     }
+
+    if(lsdName === "")
+        return "Item category not yet implemented...";
+
+    return (prefix === "" ? "" : `${prefix} `) + (await jsonCache.getLsd(lsdName))[fieldName] || "Unknown Item";
+
 }
 
 function outlineBrackets(descr) {

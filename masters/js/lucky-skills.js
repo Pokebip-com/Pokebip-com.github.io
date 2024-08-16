@@ -20,60 +20,26 @@ let passivesDiv;
 
 
 async function getData() {
-    const [
-        itemExchangeResponse,
-        itemSetResponse,
-        potentialResponse,
-        potentialItemResponse,
-        potentialLotResponse,
-        progressEventResponse,
-        progressEventRewardGroupResponse,
-        scheduleResponse,
-        storyQuestResponse,
-        potentialItemNameResponse
-    ] = await Promise.all([
-        fetch("./data/proto/ItemExchange.json"),
-        fetch("./data/proto/ItemSet.json"),
-        fetch("./data/proto/Potential.json"),
-        fetch("./data/proto/PotentialItem.json"),
-        fetch("./data/proto/PotentialLot.json"),
-        fetch("./data/proto/ProgressEvent.json"),
-        fetch("./data/proto/ProgressEventRewardGroup.json"),
-        fetch("./data/proto/Schedule.json"),
-        fetch("./data/proto/StoryQuest.json"),
-        fetch(`./data/lsd/potential_item_name_${lng}.json`),
-    ])
-        .catch(error => console.log(error));
+    itemExchange = await jsonCache.getProto("ItemExchange");
+    itemSet = await jsonCache.getProto("ItemSet");
 
-    itemExchange = (await itemExchangeResponse.json()).entries;
-    itemSet = (await itemSetResponse.json()).entries;
+    potential = await jsonCache.getProto("Potential");
+    potentialItem = await jsonCache.getProto("PotentialItem");
+    potentialLot = await jsonCache.getProto("PotentialLot");
 
-    potential = (await potentialResponse.json()).entries;
-    potentialItem = (await potentialItemResponse.json()).entries;
-    potentialLot = (await potentialLotResponse.json()).entries;
+    progressEvent = await jsonCache.getProto("ProgressEvent");
+    progressEventRewardGroup = await jsonCache.getProto("ProgressEventRewardGroup");
 
-    progressEvent = (await progressEventResponse.json()).entries;
-    progressEventRewardGroup = (await progressEventRewardGroupResponse.json()).entries;
+    schedule = await jsonCache.getProto("Schedule");
 
-    schedule = (await scheduleResponse.json()).entries;
+    storyQuest = await jsonCache.getProto("StoryQuest");
 
-    storyQuest = (await storyQuestResponse.json()).entries;
-
-    potentialItemName = await potentialItemNameResponse.json();
+    potentialItemName = await jsonCache.getLsd("potential_item_name");
 }
 
 async function getCustomJSON() {
-    const [
-        luckySkillLocaleResponse,
-        versionsResponse
-    ] = await Promise.all([
-        fetch(`./data/locales/${lng}/lucky-skills.json`),
-        fetch(`./data/custom/version_release_dates.json`),
-    ])
-        .catch(error => console.log(error));
-
-    luckySkillLocale = await luckySkillLocaleResponse.json();
-    versions = await versionsResponse.json().then(orderByVersion);
+    luckySkillLocale = await jsonCache.getLocale("lucky-skills");
+    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
 }
 
 function getProgressEventRewardCookies(cookiesList, lastVersionScheduleStarts) {
@@ -313,12 +279,12 @@ function getPassiveSkillBipCode(t, v = null) {
     return string;
 }
 
-function downloadData() {
+async function downloadData() {
     let e = document.createElement('a');
     e.href = window.URL.createObjectURL(
-        new Blob([getPairBipCode(syncPairSelect.value)], { "type": "text/plain" })
+        new Blob([getPairBipCode(syncPairSelect.value)], {"type": "text/plain"})
     );
-    e.setAttribute('download', removeAccents(getPairName(syncPairSelect.value)));
+    e.setAttribute('download', removeAccents(await getPairName(syncPairSelect.value)));
     e.style.display = 'none';
 
     document.body.appendChild(e);
@@ -326,18 +292,18 @@ function downloadData() {
     document.body.removeChild(e);
 }
 
-function downloadAll() {
+async function downloadAll() {
     let zip = new JSZip();
     let trainerIds = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER")
         .map(t => t.trainerId);
 
-    trainerIds.forEach(tid => {
-        let filename = removeAccents(getPairName(tid)).replace("/", "-") + '.txt';
+    for (const tid of trainerIds) {
+        let filename = removeAccents(await getPairName(tid)).replace("/", "-") + '.txt';
         zip.file(filename, getPairBipCode(tid));
-    });
+    }
 
-    zip.generateAsync({ type: 'blob' })
-        .then(function(content) {
+    zip.generateAsync({type: 'blob'})
+        .then(function (content) {
             saveAs(content, "Team-Skills.zip");
         });
 }

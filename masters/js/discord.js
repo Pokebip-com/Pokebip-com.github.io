@@ -21,70 +21,30 @@ let versions;
 
 async function getData() {
     await buildHeader();
-    const [
-        abilityPanelResponse,
-        monsterResponse,
-        monsterBaseResponse,
-        scheduleResponse,
-        trainerResponse,
-        trainerExRoleResponse,
-        trainerBaseResponse,
-        discordResponse,
-        versionResponse,
-        monsterNameResponse,
-        motifTypeNameResponse,
-        trainerNameResponse,
-        trainerVerboseNameResponse,
 
-    ] = await Promise.all([
-        fetch("./data/proto/AbilityPanel.json"),
-        fetch("./data/proto/Monster.json"),
-        fetch("./data/proto/MonsterBase.json"),
-        fetch("./data/proto/Schedule.json"),
-        fetch("./data/proto/Trainer.json"),
-        fetch("./data/proto/TrainerExRole.json"),
-        fetch("./data/proto/TrainerBase.json"),
-        fetch(`./data/locales/${lng}/discord.json`),
-        fetch(`./data/custom/version_release_dates.json`),
-        fetch(`./data/lsd/monster_name_${lng}.json`),
-        fetch(`./data/lsd/motif_type_name_${lng}.json`),
-        fetch(`./data/lsd/trainer_name_${lng}.json`),
-        fetch(`./data/lsd/trainer_verbose_name_${lng}.json`)
-    ])
-        .catch(error => console.log(error));
+    discordLocale = await jsonCache.getLocale("discord");
 
-    discordLocale = await discordResponse.json();
+    abilityPanel = await jsonCache.getProto("AbilityPanel");
 
-    abilityPanel = await abilityPanelResponse.json();
-    abilityPanel = abilityPanel.entries;
+    monster = await jsonCache.getProto("Monster");
+    monsterBase = await jsonCache.getProto("MonsterBase");
 
-    const monstersJSON = await monsterResponse.json();
-    monster = monstersJSON.entries;
+    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
 
-    const monstersBaseJSON = await monsterBaseResponse.json();
-    monsterBase = monstersBaseJSON.entries;
+    schedule = (await jsonCache.getProto("Schedule"))
+        .filter(s => s.scheduleId.startsWith("chara_") && s.startDate >= versions[0].releaseTimestamp);
 
-    versions = await versionResponse.json().then(orderByVersion);
+    trainer = await jsonCache.getProto("Trainer");
+    trainerBase = await jsonCache.getProto("TrainerBase");
+    trainerExRole = (await jsonCache.getProto("TrainerExRole")).sort((a, b) => b.scheduleId.localeCompare(a.scheduleId));
 
-    schedule = await scheduleResponse.json();
-    schedule = schedule.entries.filter(s => s.scheduleId.startsWith("chara_") && s.startDate >= versions[0].releaseTimestamp);
-
-    const trainersJSON = await trainerResponse.json();
-    trainer = trainersJSON.entries;
-
-    const trainersBaseJSON = await trainerBaseResponse.json();
-    trainerBase = trainersBaseJSON.entries;
-
-    const trainerExRoleJSON = await trainerExRoleResponse.json();
-    trainerExRole = trainerExRoleJSON.entries.sort((a, b) => b.scheduleId.localeCompare(a.scheduleId));
-
-    monsterNames = await monsterNameResponse.json();
-    motifTypeName = await motifTypeNameResponse.json();
-    trainerNames = await trainerNameResponse.json();
-    trainerVerboseNames = await trainerVerboseNameResponse.json();
+    monsterNames = await jsonCache.getLsd("monster_name");
+    motifTypeName = await jsonCache.getLsd("motif_type_name");
+    trainerNames = await jsonCache.getLsd("trainer_name");
+    trainerVerboseNames = await jsonCache.getLsd("trainer_verbose_name");
 }
 
-function appendNewPairs(txtArea, isLink = false) {
+async function appendNewPairs(txtArea, isLink = false) {
     if(isLink) {
         txtArea.value += `## ${discordLocale.new_pairs_information_title}`;
     }
@@ -96,22 +56,21 @@ function appendNewPairs(txtArea, isLink = false) {
         .filter(t => schedule.map(s => s.scheduleId).includes(t.scheduleId))
         .sort((a, b) => a.scheduleId.localeCompare(b.scheduleId));
 
-    newTrainers.forEach(tr => {
+    for(const tr of newTrainers) {
         if(isLink) {
-            txtArea.value += `\n- **[${getPairName(tr.trainerId)}](${window.location.protocol}//${window.location.hostname}/masters/duo.html?pair=${tr.trainerId})**`;
+            txtArea.value += `\n- **[${await getPairName(tr.trainerId)}](${window.location.protocol}//${window.location.hostname}/masters/duo.html?pair=${tr.trainerId})**`;
         }
         else {
-            txtArea.value += `\n- **${getPairName(tr.trainerId)}** (${getTrainerTypeName(tr.trainerId)}): ${getRoleByTrainerId(tr.trainerId)}`;
+            txtArea.value += `\n- **${await getPairName(tr.trainerId)}** (${await getTrainerTypeName(tr.trainerId)}): ${await getRoleByTrainerId(tr.trainerId)}`;
         }
-    });
+    }
 }
 
-function appendSyncGridUps(txtArea, isLink = false) {
-    if(isLink) {
+async function appendSyncGridUps(txtArea, isLink = false) {
+    if (isLink) {
         txtArea.value += `\n## ${discordLocale.sync_grid_ups_title}`;
         txtArea.value += `\n*${discordLocale.sync_grid_ups_text}*`;
-    }
-    else {
+    } else {
         txtArea.value += `\n### ${discordLocale.sync_grid_ups_title_small}`
     }
 
@@ -119,18 +78,22 @@ function appendSyncGridUps(txtArea, isLink = false) {
 
     updatedGridTrainer = updatedGridTrainer.map(tid => {
         let trainerPanels = abilityPanel.filter(ap => ap.trainerId === tid);
-        return {"trainerId" : tid, "new" : trainerPanels.length, "old" : trainerPanels.filter(tp => !schedule.map(s => s.scheduleId).includes(tp.scheduleId)).length };
+        return {
+            "trainerId": tid,
+            "new": trainerPanels.length,
+            "old": trainerPanels.filter(tp => !schedule.map(s => s.scheduleId).includes(tp.scheduleId)).length
+        };
     });
 
-    updatedGridTrainer.forEach(ugt => {
-        if(isLink)
-            txtArea.value += `\n- **[${getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})](${window.location.protocol}//${window.location.hostname}/masters/duo.html?pair=${ugt.trainerId})**`;
+    for (const ugt of updatedGridTrainer) {
+        if (isLink)
+            txtArea.value += `\n- **[${await getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})](${window.location.protocol}//${window.location.hostname}/masters/duo.html?pair=${ugt.trainerId})**`;
         else
-            txtArea.value += `\n- **${getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})**`;
-    });
+            txtArea.value += `\n- **${await getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})**`;
+    }
 }
 
-function appendNewExRoles(txtArea, isLink = false) {
+async function appendNewExRoles(txtArea, isLink = false) {
     if(isLink)
         txtArea.value += `\n## ${discordLocale.new_ex_roles_title}`;
     else
@@ -143,29 +106,29 @@ function appendNewExRoles(txtArea, isLink = false) {
         return aSched.startDate - bSched.startDate;
     });
 
-    for(let entry in newExRoles) {
-        let role = commonLocales.role_names[newExRoles[entry].role];
+    for(const entry of newExRoles) {
+        let role = commonLocales.role_names[entry.role];
 
         if(isLink)
-            txtArea.value += `\n- **[${getPairName(newExRoles[entry].trainerId)}](${window.location.protocol}//${window.location.hostname}/masters/duo.html?pair=${newExRoles[entry].trainerId}) :** ${role}`;
+            txtArea.value += `\n- **[${await getPairName(entry.trainerId)}](${window.location.protocol}//${window.location.hostname}/masters/duo.html?pair=${entry.trainerId}) :** ${role}`;
         else
-            txtArea.value += `\n- **${getPairName(newExRoles[entry].trainerId)} :** ${role}`;
+            txtArea.value += `\n- **${await getPairName(entry.trainerId)} :** ${role}`;
     }
 }
 
-getData().then(() => {
+getData().then(async () => {
     document.getElementById("pageTitle").innerText = discordLocale.title;
 
     firstMsgTxt = document.getElementById("firstMsg")
 
-    appendNewPairs(firstMsgTxt);
-    appendNewExRoles(firstMsgTxt);
-    appendSyncGridUps(firstMsgTxt);
+    await appendNewPairs(firstMsgTxt);
+    await appendNewExRoles(firstMsgTxt);
+    await appendSyncGridUps(firstMsgTxt);
 
     discordMsgTxt = document.getElementById("discordMsg");
     discordMsgTxt.value = `## [${discordLocale.monthly_schedule}](${window.location.protocol}//${window.location.hostname}/masters/programme.html)\n`;
 
-    appendNewPairs(discordMsgTxt, true);
-    appendSyncGridUps(discordMsgTxt, true);
-    appendNewExRoles(discordMsgTxt, true);
+    await appendNewPairs(discordMsgTxt, true);
+    await appendSyncGridUps(discordMsgTxt, true);
+    await appendNewExRoles(discordMsgTxt, true);
 });

@@ -13,51 +13,20 @@ let passiveSkillNameParts;
 let tagNameWithPrepositions;
 
 async function initMovePassiveSkills() {
-    const [
-        moveResponse,
-        moveAndPassiveSkillDigitResponse,
-        moveDescriptionResponse,
-        moveDescriptionPartsResponse,
-        moveNamesResponse,
-        moveTargetTypeResponse,
-        passiveSkillAndMoveNumberResponse,
-        passiveSkillDescriptionResponse,
-        passiveSkillDescriptionPartsResponse,
-        passiveSkillNameResponse,
-        passiveSkillNamePartsResponse,
-        tagNameWithPrepositionsResponse,
-    ] = await Promise.all([
-        fetch(`./data/proto/Move.json`),
-        fetch(`./data/proto/MoveAndPassiveSkillDigit.json`),
-        fetch(`./data/lsd/move_description_${lng}.json`),
-        fetch(`./data/lsd/move_description_parts_${lng}.json`),
-        fetch(`./data/lsd/move_name_${lng}.json`),
-        fetch(`./data/lsd/move_target_type_${lng}.json`),
-        fetch(`./data/lsd/passive_skill_and_move_number_${lng}.json`),
-        fetch(`./data/lsd/passive_skill_description_${lng}.json`),
-        fetch(`./data/lsd/passive_skill_description_parts_${lng}.json`),
-        fetch(`./data/lsd/passive_skill_name_${lng}.json`),
-        fetch(`./data/lsd/passive_skill_name_parts_${lng}.json`),
-        fetch(`./data/lsd/tag_name_with_prepositions_${lng}.json`)
-    ])
-        .catch(error => console.log(error));
+    move = await jsonCache.getProto("Move");
+    moveAndPassiveSkillDigit = await jsonCache.getProto("MoveAndPassiveSkillDigit");
 
-    move = await moveResponse.json();
-    move = move.entries;
+    moveDescription = await jsonCache.getLsd("move_description");
+    moveDescriptionParts = await jsonCache.getLsd("move_description_parts");
+    moveNames = await jsonCache.getLsd("move_name");
+    moveTargetType = await jsonCache.getLsd("move_target_type");
 
-    moveAndPassiveSkillDigit = await moveAndPassiveSkillDigitResponse.json();
-    moveAndPassiveSkillDigit = moveAndPassiveSkillDigit.entries;
-
-    moveDescription = await moveDescriptionResponse.json();
-    moveDescriptionParts = await moveDescriptionPartsResponse.json();
-    moveNames = await moveNamesResponse.json();
-    moveTargetType = await moveTargetTypeResponse.json();
-    passiveSkillAndMoveNumber = await passiveSkillAndMoveNumberResponse.json();
-    passiveSkillDescription = await passiveSkillDescriptionResponse.json();
-    passiveSkillDescriptionParts = await passiveSkillDescriptionPartsResponse.json();
-    passiveSkillName = await passiveSkillNameResponse.json();
-    passiveSkillNameParts = await passiveSkillNamePartsResponse.json();
-    tagNameWithPrepositions = await tagNameWithPrepositionsResponse.json();
+    passiveSkillAndMoveNumber = await jsonCache.getLsd("passive_skill_and_move_number");
+    passiveSkillDescription = await jsonCache.getLsd("passive_skill_description");
+    passiveSkillDescriptionParts = await jsonCache.getLsd("passive_skill_description_parts");
+    passiveSkillName = await jsonCache.getLsd("passive_skill_name");
+    passiveSkillNameParts = await jsonCache.getLsd("passive_skill_name_parts");
+    tagNameWithPrepositions = await jsonCache.getLsd("tag_name_with_prepositions");
 }
 
 function getMoveDescr(id) {

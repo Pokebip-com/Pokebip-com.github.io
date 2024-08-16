@@ -26,99 +26,41 @@ let skillGearsDiv;
 
 
 async function getData() {
-    const [
-        itemExchangeResponse,
-        itemSetResponse,
-        progressEventResponse,
-        progressEventRewardGroupResponse,
-        scheduleResponse,
-        skillDeckItemConditionTeamSkillTagLotResponse,
-        skillDeckItemEffectResponse,
-        skillDeckItemEffectLotResponse,
-        skillDeckItemLotParamCoefficientResponse,
-        skillDeckItemNumLotResponse,
-        skillDeckItemParamLotResponse,
-        skillDeckItemSkillFeatherItemResponse,
-        storyQuestResponse,
-        teamSkillResponse,
-        skillDeckItemSkillFeatherItemNameResponse,
-        teamSkillEffectResponse,
-        teamSkillTagResponse,
-    ] = await Promise.all([
-        fetch("./data/proto/ItemExchange.json"),
-        fetch("./data/proto/ItemSet.json"),
-        fetch("./data/proto/ProgressEvent.json"),
-        fetch("./data/proto/ProgressEventRewardGroup.json"),
-        fetch("./data/proto/Schedule.json"),
-        fetch("./data/proto/SkillDeckItemConditionTeamSkillTagLot.json"),
-        fetch("./data/proto/SkillDeckItemEffect.json"),
-        fetch("./data/proto/SkillDeckItemEffectLot.json"),
-        fetch("./data/proto/SkillDeckItemLotParamCoefficient.json"),
-        fetch("./data/proto/SkillDeckItemNumLot.json"),
-        fetch("./data/proto/SkillDeckItemParamLot.json"),
-        fetch("./data/proto/SkillDeckItemSkillFeatherItem.json"),
-        fetch("./data/proto/StoryQuest.json"),
-        fetch("./data/proto/TeamSkill.json"),
-        fetch(`./data/lsd/skill_deck_item_skill_feather_item_name_${lng}.json`),
-        fetch(`./data/lsd/team_skill_effect_${lng}.json`),
-        fetch(`./data/lsd/team_skill_tag_${lng}.json`),
-    ])
-        .catch(error => console.log(error));
+    itemExchange = await jsonCache.getProto("ItemExchange");
 
-    itemExchange = await itemExchangeResponse.json();
-    itemExchange = itemExchange.entries;
+    itemSet = await jsonCache.getProto("ItemSet");
 
-    itemSet = (await itemSetResponse.json()).entries;
+    progressEvent = await jsonCache.getProto("ProgressEvent");
+    progressEventRewardGroup = await jsonCache.getProto("ProgressEventRewardGroup");
 
-    progressEvent = (await progressEventResponse.json()).entries;
-    progressEventRewardGroup = (await progressEventRewardGroupResponse.json()).entries;
+    schedule = await jsonCache.getProto("Schedule");
 
-    schedule = await scheduleResponse.json();
-    schedule = schedule.entries;
+    skillDeckItemConditionTeamSkillTagLot = await jsonCache.getProto("SkillDeckItemConditionTeamSkillTagLot");
 
-    skillDeckItemConditionTeamSkillTagLot = await skillDeckItemConditionTeamSkillTagLotResponse.json();
-    skillDeckItemConditionTeamSkillTagLot = skillDeckItemConditionTeamSkillTagLot.entries;
+    skillDeckItemEffect = await jsonCache.getProto("SkillDeckItemEffect");
 
-    skillDeckItemEffect = await skillDeckItemEffectResponse.json();
-    skillDeckItemEffect = skillDeckItemEffect.entries;
+    skillDeckItemEffectLot = await jsonCache.getProto("SkillDeckItemEffectLot");
 
-    skillDeckItemEffectLot = await skillDeckItemEffectLotResponse.json();
-    skillDeckItemEffectLot = skillDeckItemEffectLot.entries;
+    skillDeckItemLotParamCoefficient = await jsonCache.getProto("SkillDeckItemLotParamCoefficient");
 
-    skillDeckItemLotParamCoefficient = await skillDeckItemLotParamCoefficientResponse.json();
-    skillDeckItemLotParamCoefficient = skillDeckItemLotParamCoefficient.entries;
+    skillDeckItemNumLot = await jsonCache.getProto("SkillDeckItemNumLot");
 
-    skillDeckItemNumLot = await skillDeckItemNumLotResponse.json();
-    skillDeckItemNumLot = skillDeckItemNumLot.entries;
+    skillDeckItemParamLot = await jsonCache.getProto("SkillDeckItemParamLot");
 
-    skillDeckItemParamLot = await skillDeckItemParamLotResponse.json();
-    skillDeckItemParamLot = skillDeckItemParamLot.entries;
+    skillDeckItemSkillFeatherItem = await jsonCache.getProto("SkillDeckItemSkillFeatherItem");
 
-    skillDeckItemSkillFeatherItem = await skillDeckItemSkillFeatherItemResponse.json();
-    skillDeckItemSkillFeatherItem = skillDeckItemSkillFeatherItem.entries;
+    storyQuest = await jsonCache.getProto("StoryQuest");
 
-    storyQuest = (await storyQuestResponse.json()).entries;
+    skillDeckItemSkillFeatherItemName = await jsonCache.getLsd("skill_deck_item_skill_feather_item_name");
 
-    skillDeckItemSkillFeatherItemName = await skillDeckItemSkillFeatherItemNameResponse.json();
-
-    teamSkill = await teamSkillResponse.json();
-    teamSkill = teamSkill.entries;
-    teamSkillTag = await teamSkillTagResponse.json();
-    teamSkillEffect = await teamSkillEffectResponse.json();
+    teamSkill = await jsonCache.getProto("TeamSkill");
+    teamSkillTag = await jsonCache.getLsd("team_skill_tag");
+    teamSkillEffect = await jsonCache.getLsd("team_skill_effect");
 }
 
 async function getCustomJSON() {
-    const [
-        skillGearsLocaleResponse,
-        versionsResponse,
-    ] = await Promise.all([
-        fetch(`./data/locales/${lng}/skill-gears.json`),
-        fetch("./data/custom/version_release_dates.json"),
-    ])
-        .catch(error => console.log(error));
-
-    skillGearsLocale = await skillGearsLocaleResponse.json();
-    versions = await versionsResponse.json().then(orderByVersion);
+    skillGearsLocale = await jsonCache.getLocale("skill-gears");
+    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
 }
 
 function getProgressEventRewardFeathers(featherList, lastVersionScheduleStarts) {
@@ -513,12 +455,12 @@ function getPassiveSkillBipCode(t, v = null) {
     return string;
 }
 
-function downloadData() {
+async function downloadData() {
     let e = document.createElement('a');
     e.href = window.URL.createObjectURL(
-        new Blob([getPairBipCode(syncPairSelect.value)], { "type": "text/plain" })
+        new Blob([getPairBipCode(syncPairSelect.value)], {"type": "text/plain"})
     );
-    e.setAttribute('download', removeAccents(getPairName(syncPairSelect.value)));
+    e.setAttribute('download', removeAccents(await getPairName(syncPairSelect.value)));
     e.style.display = 'none';
 
     document.body.appendChild(e);
@@ -526,18 +468,18 @@ function downloadData() {
     document.body.removeChild(e);
 }
 
-function downloadAll() {
+async function downloadAll() {
     let zip = new JSZip();
     let trainerIds = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER")
         .map(t => t.trainerId);
 
-    trainerIds.forEach(tid => {
-        let filename = removeAccents(getPairName(tid)).replace("/", "-") + '.txt';
+    for (const tid of trainerIds) {
+        let filename = removeAccents(await getPairName(tid)).replace("/", "-") + '.txt';
         zip.file(filename, getPairBipCode(tid));
-    });
+    }
 
-    zip.generateAsync({ type: 'blob' })
-        .then(function(content) {
+    zip.generateAsync({type: 'blob'})
+        .then(function (content) {
             saveAs(content, "Team-Skills.zip");
         });
 }

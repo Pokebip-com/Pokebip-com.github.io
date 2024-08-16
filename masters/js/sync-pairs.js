@@ -57,159 +57,68 @@ let syncLevel = 5;
 let maxEnergy = 60;
 
 async function getData() {
-    const [
-        abilityResponse,
-        abilityPanelResponse,
-        actorDressResponse,
-        exRoleStatusUpResponse,
-        monsterResponse,
-        monsterBaseResponse,
-        monsterEnhancementResponse,
-        monsterEvolutionResponse,
-        monsterVariationResponse,
-        replaceActorKeywordResponse,
-        scheduleResponse,
-        teamSkillResponse,
-        trainerResponse,
-        trainerBaseResponse,
-        trainerBuildupConfigResponse,
-        trainerBuildupParameterResponse,
-        trainerDressResponse,
-        trainerExRoleResponse,
-        versionResponse,
-        monsterDescriptionResponse,
-        monsterFormResponse,
-        monsterNameResponse,
-        motifTypeNameResponse,
-        teamSkillEffectResponse,
-        teamSkillTagResponse,
-        trainerDescriptionResponse,
-        trainerNameResponse,
-        trainerVerboseNameResponse,
-    ] = await Promise.all([
-        fetch("./data/proto/Ability.json"),
-        fetch("./data/proto/AbilityPanel.json"),
-        fetch("./data/proto/ActorDress.json"),
-        fetch("./data/proto/ExRoleStatusUp.json"),
-        fetch("./data/proto/Monster.json"),
-        fetch("./data/proto/MonsterBase.json"),
-        fetch("./data/proto/MonsterEnhancement.json"),
-        fetch("./data/proto/MonsterEvolution.json"),
-        fetch("./data/proto/MonsterVariation.json"),
-        fetch("./data/proto/ReplaceActorKeyword.json"),
-        fetch("./data/proto/Schedule.json"),
-        fetch("./data/proto/TeamSkill.json"),
-        fetch("./data/proto/Trainer.json"),
-        fetch("./data/proto/TrainerBase.json"),
-        fetch("./data/proto/TrainerBuildupConfig.json"),
-        fetch("./data/proto/TrainerBuildupParameter.json"),
-        fetch("./data/proto/TrainerDress.json"),
-        fetch("./data/proto/TrainerExRole.json"),
-        fetch("./data/custom/version_release_dates.json"),
-        fetch(`./data/lsd/monster_description_${lng}.json`),
-        fetch(`./data/lsd/monster_form_${lng}.json`),
-        fetch(`./data/lsd/monster_name_${lng}.json`),
-        fetch(`./data/lsd/motif_type_name_${lng}.json`),
-        fetch(`./data/lsd/team_skill_effect_${lng}.json`),
-        fetch(`./data/lsd/team_skill_tag_${lng}.json`),
-        fetch(`./data/lsd/trainer_description_${lng}.json`),
-        fetch(`./data/lsd/trainer_name_${lng}.json`),
-        fetch(`./data/lsd/trainer_verbose_name_${lng}.json`)
-    ])
-        .catch(error => console.log(error));
+    ability = await jsonCache.getProto("Ability");
 
-    ability = await abilityResponse.json();
-    ability = ability.entries;
+    abilityPanel = await jsonCache.getProto("AbilityPanel");
 
-    abilityPanel = await abilityPanelResponse.json();
-    abilityPanel = abilityPanel.entries;
+    actorDress = await jsonCache.getProto("ActorDress");
 
-    actorDress = await actorDressResponse.json();
-    actorDress = actorDress.entries;
+    exRoleStatusUp = await jsonCache.getProto("ExRoleStatusUp");
 
-    exRoleStatusUp = await exRoleStatusUpResponse.json();
-    exRoleStatusUp = exRoleStatusUp.entries;
+    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
 
-    versions = await versionResponse.json().then(orderByVersion);
+    schedule = (await jsonCache.getProto("Schedule")).filter(s => s.scheduleId.startsWith("chara_") && s.startDate >= versions[0].releaseTimestamp);
 
-    schedule = await scheduleResponse.json();
-    schedule = schedule.entries.filter(s => s.scheduleId.startsWith("chara_") && s.startDate >= versions[0].releaseTimestamp);
+    monster = await jsonCache.getProto("Monster");
+    monsterBase = await jsonCache.getProto("MonsterBase");
+    monsterEvolution = await jsonCache.getProto("MonsterEvolution");
+    monsterEnhancement = await jsonCache.getProto("MonsterEnhancement");
+    monsterVariation = await jsonCache.getProto("MonsterVariation");
 
-    const monstersJSON = await monsterResponse.json();
-    monster = monstersJSON.entries;
+    replaceActorKeyword = await jsonCache.getProto("ReplaceActorKeyword");
 
-    const monstersBaseJSON = await monsterBaseResponse.json();
-    monsterBase = monstersBaseJSON.entries;
+    teamSkill = await jsonCache.getProto("TeamSkill");
 
-    const monsterEvolutionJSON = await monsterEvolutionResponse.json();
-    monsterEvolution = monsterEvolutionJSON.entries;
+    trainer = await jsonCache.getProto("Trainer");
+    trainerBase = await jsonCache.getProto("TrainerBase");
 
-    const monsterEnhancementJSON = await monsterEnhancementResponse.json();
-    monsterEnhancement = monsterEnhancementJSON.entries;
+    trainerBuildupConfig = await jsonCache.getProto("TrainerBuildupConfig");
+    trainerBuildupParameter = await jsonCache.getProto("TrainerBuildupParameter");
 
-    const monsterVariationJSON = await monsterVariationResponse.json();
-    monsterVariation = monsterVariationJSON.entries;
+    trainerDress = await jsonCache.getProto("TrainerDress");
+    trainerExRole = await jsonCache.getProto("TrainerExRole");
 
-    const replaceActorKeywordJSON = await replaceActorKeywordResponse.json();
-    replaceActorKeyword = replaceActorKeywordJSON.entries;
-
-    teamSkill = await teamSkillResponse.json();
-    teamSkill = teamSkill.entries;
-
-    trainer = await trainerResponse.json();
-    trainer = trainer.entries;
-
-    const trainersBaseJSON = await trainerBaseResponse.json();
-    trainerBase = trainersBaseJSON.entries;
-
-    trainerBuildupConfig = (await trainerBuildupConfigResponse.json()).entries;
-    trainerBuildupParameter = (await trainerBuildupParameterResponse.json()).entries;
-
-    trainerDress = await trainerDressResponse.json();
-    trainerDress = trainerDress.entries;
-
-    trainerExRole = await trainerExRoleResponse.json();
-    trainerExRole = trainerExRole.entries;
-
-    monsterDescriptions = await monsterDescriptionResponse.json();
-    monsterForms = await monsterFormResponse.json();
-    monsterNames = await monsterNameResponse.json();
-    motifTypeName = await motifTypeNameResponse.json();
-    teamSkillTag = await teamSkillTagResponse.json();
-    teamSkillEffect = await teamSkillEffectResponse.json();
-    trainerDescriptions = await trainerDescriptionResponse.json();
-    trainerNames = await trainerNameResponse.json();
-    trainerVerboseNames = await trainerVerboseNameResponse.json();
+    monsterDescriptions = await jsonCache.getLsd("monster_description");
+    monsterForms = await jsonCache.getLsd("monster_form");
+    monsterNames = await jsonCache.getLsd("monster_name");
+    motifTypeName = await jsonCache.getLsd("motif_type_name");
+    teamSkillTag = await jsonCache.getLsd("team_skill_tag");
+    teamSkillEffect = await jsonCache.getLsd("team_skill_effect");
+    trainerDescriptions = await jsonCache.getLsd("trainer_description");
+    trainerNames = await jsonCache.getLsd("trainer_name");
+    trainerVerboseNames = await jsonCache.getLsd("trainer_verbose_name");
 }
 
 async function getCustomJSON() {
-    const [
-        syncPairsLocaleResponse,
-        versionsResponse,
-    ] = await Promise.all([
-        fetch(`./data/locales/${lng}/sync-pairs.json`),
-        fetch("./data/custom/version_release_dates.json"),
-    ])
-        .catch(error => console.log(error));
-
-    syncPairLocale = await syncPairsLocaleResponse.json();
-    versions = await versionsResponse.json().then(orderByVersion);
+    syncPairLocale = await jsonCache.getLocale("sync-pairs");
+    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
 }
 
-function populateSelect() {
-    while(syncPairSelect.length > 0) {
+async function populateSelect() {
+    while (syncPairSelect.length > 0) {
         syncPairSelect.remove(0);
     }
-    let optionData = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER" && t.scoutMethod !== 3).map(t => {
-        let data = {};
-        data.value = t.trainerId;
-        data.text = getPairName(t.trainerId);
-        return data;
-    }).sort((a, b) => a.text.localeCompare(b.text));
+    let optionData = (await Promise.all(trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER" && t.scoutMethod !== 3)
+        .map(async t => {
+            let data = {};
+            data.value = t.trainerId;
+            data.text = await getPairName(t.trainerId);
+            return data;
+        }))).sort((a, b) =>  a.text.localeCompare(b.text));
 
-    optionData.forEach(opt => {
+    for(const opt of optionData) {
         syncPairSelect.add(new Option(opt.text, opt.value));
-    });
+    }
 }
 
 function switchTab(monsterId, monsterBaseId, formId, pushstate = true) {
@@ -221,7 +130,7 @@ function switchTab(monsterId, monsterBaseId, formId, pushstate = true) {
     document.getElementById(`btn-${monsterId}-${monsterBaseId}-${formId}`).classList.add("active");
 }
 
-function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation = null) {
+async function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation = null) {
     let table = document.createElement("table");
     let firstRow = document.createElement("tr");
     let trainerName = document.createElement("th");
@@ -232,7 +141,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
     table.style.maxWidth = "512px";
 
     trainerName.colSpan = 5;
-    trainerName.innerText = getTrainerName(syncPairSelect.value);
+    trainerName.innerText = await getTrainerName(syncPairSelect.value);
 
     pokemonName.colSpan = 5;
     pokemonName.innerText = monsterName;
@@ -243,15 +152,15 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
 
     let secondRow = document.createElement("tr");
 
-    let trainerActorId = getTrainerActorId(syncPairSelect.value);
-    let trainerActorDress = getActorDressFromTrainerId(syncPairSelect.value);
+    let trainerActorId = await getTrainerActorId(syncPairSelect.value);
+    let trainerActorDress = await getActorDressFromTrainerId(syncPairSelect.value);
     let trainerImageCell = document.createElement("td");
     let trainerImg = document.createElement("img");
     trainerImg.src = `./data/actor/Trainer/${trainerActorId}/${trainerActorId}_1024.png`;
     trainerImg.style.maxWidth = "256px";
     trainerImageCell.appendChild(trainerImg);
 
-    let pokemonActorId = getMonsterActorIdFromBaseId(monsterBaseId);
+    let pokemonActorId = await getMonsterActorIdFromBaseId(monsterBaseId);
     let pokemonImageCell = document.createElement("td");
     let pokemonImg = document.createElement("img");
     pokemonImg.src = `./data/actor/Monster/${pokemonActorId}/${pokemonActorId}_256.png`;
@@ -266,7 +175,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
 
     let exTitleRow, exImageRow;
 
-    if(hasExUnlocked(syncPairSelect.value) && trainerActorDress) {
+    if ((await hasExUnlocked(syncPairSelect.value)) && trainerActorDress) {
         pokemonImageCell.rowSpan = 3;
 
         exTitleRow = document.createElement("tr");
@@ -327,23 +236,23 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
     let infosRow = document.createElement("tr");
 
     let roleCell = document.createElement("td");
-    roleCell.innerText = getRoleByTrainerId(syncPairSelect.value);
+    roleCell.innerText = await getRoleByTrainerId(syncPairSelect.value);
     roleCell.colSpan = 2;
 
     let exRoleCell = document.createElement("td");
-    exRoleCell.innerText = getExRoleText(syncPairSelect.value);
+    exRoleCell.innerText = await getExRoleText(syncPairSelect.value);
     exRoleCell.colSpan = 2;
 
     let potentielCell = document.createElement("td");
-    potentielCell.innerHTML = getStarsRarityString(syncPairSelect.value);
+    potentielCell.innerHTML = await getStarsRarityString(syncPairSelect.value);
     potentielCell.colSpan = 2;
 
     let typeCell = document.createElement("td");
-    typeCell.innerText = variation && variation.type > 0 ? motifTypeName[variation.type] : getTrainerTypeName(syncPairSelect.value);
+    typeCell.innerText = variation && variation.type > 0 ? motifTypeName[variation.type] : await getTrainerTypeName(syncPairSelect.value);
     typeCell.colSpan = 2;
 
     let weaknessCell = document.createElement("td");
-    weaknessCell.innerText = variation && variation.weakness > 0 ? motifTypeName[variation.weakness] : getTrainerWeaknessName(syncPairSelect.value);
+    weaknessCell.innerText = variation && variation.weakness > 0 ? motifTypeName[variation.weakness] : await getTrainerWeaknessName(syncPairSelect.value);
     weaknessCell.colSpan = 2;
 
     infosRow.appendChild(roleCell);
@@ -362,7 +271,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
 
     let descrTrainerTxt = agenderDescription(trainerDescriptions[syncPairSelect.value]);
 
-    if(descrTrainerTxt) {
+    if (descrTrainerTxt) {
         let descrTrainerRow = document.createElement("tr");
         let descrTrainer = document.createElement("td");
         descrTrainer.innerText = descrTrainerTxt.replaceAll("\n", " ");
@@ -373,7 +282,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
 
     let descrMonsterTxt = monsterDescriptions[monsterBaseId];
 
-    if(descrMonsterTxt) {
+    if (descrMonsterTxt) {
         let descrMonsterRow = document.createElement("tr");
         let descrMonster = document.createElement("td");
         descrMonster.innerText = descrMonsterTxt.replaceAll("\n", " ");
@@ -434,13 +343,13 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
     return tr;
 }
 
-function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole = false, exRoleCheckboxId = "") {
-    if(input.value === "")
+async function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole = false, exRoleCheckboxId = "") {
+    if (input.value === "")
         return;
 
     statsDiv.innerHTML = "";
 
-    let rarity = getTrainerRarity(syncPairSelect.value);
+    let rarity = await getTrainerRarity(syncPairSelect.value);
     let exRoleCheckbox = document.getElementById(exRoleCheckboxId);
     let exRoleStats = hasExRole && exRoleCheckbox && exRoleCheckbox.checked;
 
@@ -454,31 +363,31 @@ function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole
     statsMaxTh.innerText = syncPairLocale.max_stats;
     headRow.appendChild(statsMaxTh);
 
-    for(let i = rarity; i <= 6; i++) {
+    for (let i = rarity; i <= 6; i++) {
         let th = document.createElement("th");
         th.innerText = (i === 6 ? "5+★" : `${i}★`);
         headRow.appendChild(th);
     }
 
-    let exRoleBonus = {"hp" : 0, "atk": 0, "spa": 0, "def": 0, "spd": 0, "spe": 0 };
+    let exRoleBonus = {"hp": 0, "atk": 0, "spa": 0, "def": 0, "spd": 0, "spe": 0};
 
-    if(exRoleStats) {
-        exRoleBonus = exRoleStatusUp.find(ersu => ersu.roleId === getExRoleId(syncPairSelect.value));
+    if (exRoleStats) {
+        exRoleBonus = exRoleStatusUp.find(async ersu => ersu.roleId === await getExRoleId(syncPairSelect.value));
     }
 
     table.appendChild(headRow);
     table.appendChild(getStatRow("hp", monsterData.hpValues, rarity, input.value, exRoleBonus.hp));
-    table.appendChild(getStatRow("atk", monsterData.atkValues, rarity, input.value, exRoleBonus.atk, (variation ? variation.atkScale/100 : 1)));
-    table.appendChild(getStatRow("def", monsterData.defValues, rarity, input.value, exRoleBonus.def, (variation ? variation.defScale/100 : 1)));
-    table.appendChild(getStatRow("spa", monsterData.spaValues, rarity, input.value, exRoleBonus.spa, (variation ? variation.spaScale/100 : 1)));
-    table.appendChild(getStatRow("spd", monsterData.spdValues, rarity, input.value, exRoleBonus.spd, (variation ? variation.spdScale/100 : 1)));
-    table.appendChild(getStatRow("spe", monsterData.speValues, rarity, input.value, exRoleBonus.spe, (variation ? variation.speScale/100 : 1)));
+    table.appendChild(getStatRow("atk", monsterData.atkValues, rarity, input.value, exRoleBonus.atk, (variation ? variation.atkScale / 100 : 1)));
+    table.appendChild(getStatRow("def", monsterData.defValues, rarity, input.value, exRoleBonus.def, (variation ? variation.defScale / 100 : 1)));
+    table.appendChild(getStatRow("spa", monsterData.spaValues, rarity, input.value, exRoleBonus.spa, (variation ? variation.spaScale / 100 : 1)));
+    table.appendChild(getStatRow("spd", monsterData.spdValues, rarity, input.value, exRoleBonus.spd, (variation ? variation.spdScale / 100 : 1)));
+    table.appendChild(getStatRow("spe", monsterData.speValues, rarity, input.value, exRoleBonus.spe, (variation ? variation.speScale / 100 : 1)));
     statsDiv.appendChild(table);
 }
 
-function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
+async function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
 
-    let monsterData = getMonsterById(monsterId);
+    let monsterData = await getMonsterById(monsterId);
 
     let statsH2 = document.createElement("h2");
     statsH2.innerText = syncPairLocale.stats;
@@ -530,7 +439,7 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
     lvlP.appendChild(lvlInput);
     toolFieldset.appendChild(lvlP);
 
-    if(hasExRoleUnlocked(syncPairSelect.value)) {
+    if (await hasExRoleUnlocked(syncPairSelect.value)) {
         let exRoleP = document.createElement("p");
         exRoleP.style.display = "table-row";
 
@@ -547,7 +456,7 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
         exRoleCheckbox.id = `exRoleCheckbox-${monsterBaseId}-${formId}`;
         exRoleCheckbox.style.display = "table-cell";
         exRoleCheckbox.style.marginLeft = "5px";
-        exRoleCheckbox.addEventListener("change", (e) => setStatsTable(lvlInput, statsDiv, monsterData, variation, hasExRoleUnlocked(syncPairSelect.value), `exRoleCheckbox-${monsterBaseId}-${formId}`));
+        exRoleCheckbox.addEventListener("change", async (_) => await setStatsTable(lvlInput, statsDiv, monsterData, variation, await hasExRoleUnlocked(syncPairSelect.value), `exRoleCheckbox-${monsterBaseId}-${formId}`));
         exRoleP.appendChild(exRoleCheckbox)
         toolFieldset.appendChild(exRoleP);
     }
@@ -562,8 +471,8 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
     statContainer.appendChild(statsDiv);
     contentDiv.appendChild(statContainer)
 
-    lvlInput.addEventListener("change", (e) => setStatsTable(e.currentTarget, statsDiv, monsterData, variation, hasExRoleUnlocked(syncPairSelect.value), `exRoleCheckbox-${monsterBaseId}-${formId}`));
-    setStatsTable(lvlInput, statsDiv, monsterData, variation);
+    lvlInput.addEventListener("change", async (e) => await setStatsTable(e.currentTarget, statsDiv, monsterData, variation, await hasExRoleUnlocked(syncPairSelect.value), `exRoleCheckbox-${monsterBaseId}-${formId}`));
+    await setStatsTable(lvlInput, statsDiv, monsterData, variation);
 }
 
 function setPairPassives(contentDiv, variation = null) {
@@ -728,7 +637,7 @@ function getGMaxMoveRow(moveId) {
     return tr;
 }
 
-function getSyncMoveRow(syncMoveId, tr) {
+async function getSyncMoveRow(syncMoveId, tr) {
     let row = document.createElement("tr");
     let mov = move.find(m => m.moveId === syncMoveId);
 
@@ -745,29 +654,29 @@ function getSyncMoveRow(syncMoveId, tr) {
     row.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
-    powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power*1.2)}` : "—";
+    powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power * 1.2)}` : "—";
     row.appendChild(powerCell);
 
     let effectCell = document.createElement("td");
     effectCell.innerText = getMoveDescr(syncMoveId);
     row.appendChild(effectCell);
 
-    if(hasExUnlocked(tr.trainerId)) {
+    if (await hasExUnlocked(tr.trainerId)) {
         let exEffectCell = document.createElement("td");
         exEffectCell.innerText = commonLocales.ex_sync_effect[tr.role];
         row.appendChild(exEffectCell);
     }
 
-    if(hasExRoleUnlocked(tr.trainerId)) {
+    if (await hasExRoleUnlocked(tr.trainerId)) {
         let exRoleEffectCell = document.createElement("td");
-        exRoleEffectCell.innerText = commonLocales.ex_sync_effect[getExRoleId(tr.trainerId)];
+        exRoleEffectCell.innerText = commonLocales.ex_sync_effect[await getExRoleId(tr.trainerId)];
         row.appendChild(exRoleEffectCell);
     }
 
     return row;
 }
 
-function setPairMoves(contentDiv, monsterId, variation = null) {
+async function setPairMoves(contentDiv, monsterId, variation = null) {
     let table = document.createElement("table");
     table.classList.add("bipcode");
     table.style.textAlign = "center";
@@ -826,20 +735,18 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     let tr = trainer.find(t => t.trainerId === syncPairSelect.value);
     let mon = monster.find(m => m.monsterId === monsterId);
 
-    for(let i = 1; i < 5; i++) {
+    for (let i = 1; i < 5; i++) {
         let moveId;
 
-        if(variation && variation[`move${i}Id`] > -1) {
+        if (variation && variation[`move${i}Id`] > -1) {
             moveId = variation[`move${i}Id`]
-        }
-        else if(mon && mon[`move${i}ChangeId`] > -1) {
+        } else if (mon && mon[`move${i}ChangeId`] > -1) {
             moveId = mon[`move${i}ChangeId`];
-        }
-        else {
+        } else {
             moveId = tr[`move${i}Id`];
         }
 
-        if(moveId > -1) {
+        if (moveId > -1) {
             table.appendChild(getMoveRow(moveId));
         }
     }
@@ -850,7 +757,7 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
 
     let gmaxVar = monsterVariation.find(mv => mv.monsterId === monsterId && mv.form === 4);
 
-    if(gmaxVar) {
+    if (gmaxVar) {
         contentDiv.appendChild(document.createElement("br"));
 
         let table = document.createElement("table");
@@ -893,10 +800,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
 
         table.appendChild(headRow);
 
-        for(let i = 1; i < 5; i++) {
+        for (let i = 1; i < 5; i++) {
             let moveId = gmaxVar[`moveDynamax${i}Id`];
 
-            if(moveId > -1) {
+            if (moveId > -1) {
                 table.appendChild(getGMaxMoveRow(moveId));
             }
         }
@@ -914,7 +821,7 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
 
     let titleSync = document.createElement("th");
     titleSync.innerText = syncPairLocale.sync_move;
-    titleSync.colSpan = 5 + hasExUnlocked(syncPairSelect.value) + hasExRoleUnlocked(syncPairSelect.value);
+    titleSync.colSpan = 5 + (await hasExUnlocked(syncPairSelect.value)) + (await hasExRoleUnlocked(syncPairSelect.value));
     titleRow.appendChild(titleSync);
     table.appendChild(titleRow);
 
@@ -940,20 +847,20 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     syncHeadEffect.innerText = syncPairLocale.move_description;
     headRow.appendChild(syncHeadEffect);
 
-    if(hasExUnlocked(syncPairSelect.value)) {
+    if (await hasExUnlocked(syncPairSelect.value)) {
         let syncHeadExEffect = document.createElement("th");
         syncHeadExEffect.innerText = syncPairLocale.sync_move_ex_title;
         headRow.appendChild(syncHeadExEffect);
     }
 
-    if(hasExRoleUnlocked(syncPairSelect.value)) {
+    if (await hasExRoleUnlocked(syncPairSelect.value)) {
         let syncHeadExRoleEffect = document.createElement("th");
         syncHeadExRoleEffect.innerText = syncPairLocale.sync_move_ex_role_title;
         headRow.appendChild(syncHeadExRoleEffect);
     }
 
     table.appendChild(headRow);
-    table.appendChild(getSyncMoveRow(mon.syncMoveId, tr));
+    table.appendChild(await getSyncMoveRow(mon.syncMoveId, tr));
 
     contentDiv.appendChild(table);
 }
@@ -1029,7 +936,6 @@ function setTileBackground(div) {
 
     let tileIcon;
     let dataLevel = div.getAttribute("data-level");
-    let polygon = div.firstChild;
 
     if(dataLevel && dataLevel > syncLevel) {
         tileIcon = `locked-${dataLevel}`;
@@ -1432,7 +1338,7 @@ function setSyncGrid() {
 
             if(cell) {
                 if(cell.version < curr.version) {
-                    acc = acc.filter(a => cellId !== curr.cellId);
+                    acc = acc.filter(_ => cellId !== curr.cellId);
                     acc.push(curr);
                 }
 
@@ -1489,27 +1395,26 @@ function setSyncGrid() {
     container.appendChild(table);
 }
 
-function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
-    setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation);
-    setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
+async function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
+    await setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation);
+    await setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
     setPairPassives(contentDiv, variation);
     setPairTeamSkills(contentDiv);
-    setPairMoves(contentDiv, monsterId, variation);
+    await setPairMoves(contentDiv, monsterId, variation);
 }
 
-function createTab(monsterId, monTabs, tabContentDiv, pushState = false, isDefault = false, variation = null) {
+async function createTab(monsterId, monTabs, tabContentDiv, pushState = false, isDefault = false, variation = null) {
     let monsterBaseId = 0;
     let formId = 0;
     let monsterName;
 
-    if(variation) {
+    if (variation) {
         formId = variation.formId;
-        monsterBaseId = getMonsterBaseIdFromActorId(variation.actorId);
-        monsterName = getNameByMonsterBaseId(monsterBaseId, formId);
-    }
-    else {
-        monsterBaseId = getMonsterBaseIdFromMonsterId(monsterId);
-        monsterName = getMonsterNameByMonsterId(monsterId);
+        monsterBaseId = await getMonsterBaseIdFromActorId(variation.actorId);
+        monsterName = await getNameByMonsterBaseId(monsterBaseId, formId);
+    } else {
+        monsterBaseId = await getMonsterBaseIdFromMonsterId(monsterId);
+        monsterName = await getMonsterNameByMonsterId(monsterId);
     }
 
     let miBtn = document.createElement("button");
@@ -1523,22 +1428,22 @@ function createTab(monsterId, monTabs, tabContentDiv, pushState = false, isDefau
     contentDiv.id = `${monsterId}-${monsterBaseId}-${formId}`;
     contentDiv.classList.add("tabContent");
 
-    setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
+    await setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
 
     tabContentDiv.appendChild(contentDiv);
 
-    if(isDefault) {
+    if (isDefault) {
         switchTab(monsterId, monsterBaseId, formId, pushState);
     }
 }
 
-function setPairInfos(id, pushState = false) {
+async function setPairInfos(id, pushState = false) {
     let pairEvolutions = monsterEvolution.filter(me => me.trainerId === id);
     let monsterIds = [];
     let pairVariations = {};
 
     let title = document.createElement("h1");
-    title.textContent = getPairName(id);
+    title.textContent = await getPairName(id);
 
     syncPairDiv.innerHTML = "";
     syncPairDiv.appendChild(title);
@@ -1554,37 +1459,36 @@ function setPairInfos(id, pushState = false) {
     monsterIds.push(trainer.find(t => t.trainerId === id).monsterId);
     pairEvolutions.forEach(pe => monsterIds.push(pe.monsterIdNext));
 
-    for(let i = 0; i < monsterIds.length; i++) {
-        if(i === (monsterIds.length - 1)) {
-            createTab(monsterIds[i], monTabs, tabContentDiv, pushState, true);
-        }
-        else {
-            createTab(monsterIds[i], monTabs, tabContentDiv, pushState);
+    for (let i = 0; i < monsterIds.length; i++) {
+        if (i === (monsterIds.length - 1)) {
+            await createTab(monsterIds[i], monTabs, tabContentDiv, pushState, true);
+        } else {
+            await createTab(monsterIds[i], monTabs, tabContentDiv, pushState);
         }
 
         let variations = monsterVariation.filter(mv => mv.monsterId === monsterIds[i]);
         let enhancements = monsterEnhancement.filter(me => me.monsterIdCurrent === monsterIds[i] && me.type !== "2");
 
-        if(enhancements.length > 0) {
+        if (enhancements.length > 0) {
             enhancements.forEach(e => {
                 variations.push(...monsterVariation.filter(mv => mv.monsterId === e.monsterIdNext));
             });
         }
 
-        if(variations.length > 0) {
+        if (variations.length > 0) {
             pairVariations[monsterIds[i]] = variations;
 
-            variations.forEach(v => {
-                if(v.form !== 4)    // Ne pas inclure les Gigamax
-                    createTab(monsterIds[i], monTabs, tabContentDiv, pushState, false, v)
-            });
+            for (const v of variations) {
+                if (v.form !== 4)    // Ne pas inclure les Gigamax
+                    await createTab(monsterIds[i], monTabs, tabContentDiv, pushState, false, v)
+            }
         }
     }
 
     setSyncGrid();
 
-    if(isAdminMode) {
-        dataArea.value = getPairBipCode(syncPairSelect.value);
+    if (isAdminMode) {
+        dataArea.value = await getPairBipCode(syncPairSelect.value);
     }
 }
 
@@ -1604,7 +1508,7 @@ function setUrlMonsterInfos(monsterId, baseId, formId, pushState) {
         window.history.pushState(null, '', url.toString());
 }
 
-function setLatestPairs() {
+async function setLatestPairs() {
     lastReleasePairsDiv = document.getElementById('lastReleasedPairs');
     let newTrainers = trainer
         .filter(t => schedule.map(s => s.scheduleId).includes(t.scheduleId))
@@ -1620,21 +1524,21 @@ function setLatestPairs() {
 
     let ul = document.createElement("ul");
 
-    newTrainers.forEach(tr => {
+    for (const tr of newTrainers) {
         let li = document.createElement("li");
         let b = document.createElement("b");
         let anchor = document.createElement("a");
         anchor.href = '#';
-        anchor.textContent = getPairName(tr.trainerId);
-        anchor.addEventListener("click", () => {
+        anchor.textContent = await getPairName(tr.trainerId);
+        anchor.addEventListener("click", async () => {
             syncPairSelect.value = tr.trainerId;
-            selectChange();
+            await selectChange();
         });
 
         b.appendChild(anchor);
         li.appendChild(b);
         ul.appendChild(li);
-    });
+    }
 
     lastReleasePairsDiv.appendChild(ul);
 
@@ -1646,17 +1550,21 @@ function setLatestPairs() {
 
     updatedGridTrainer = updatedGridTrainer.map(tid => {
         let trainerPanels = abilityPanel.filter(ap => ap.trainerId === tid);
-        return {"trainerId" : tid, "new" : trainerPanels.length, "old" : trainerPanels.filter(tp => !schedule.map(s => s.scheduleId).includes(tp.scheduleId)).length };
+        return {
+            "trainerId": tid,
+            "new": trainerPanels.length,
+            "old": trainerPanels.filter(tp => !schedule.map(s => s.scheduleId).includes(tp.scheduleId)).length
+        };
     });
 
     ul = document.createElement("ul");
 
-    updatedGridTrainer.forEach(ugt => {
+    for (const ugt of updatedGridTrainer) {
         let li = document.createElement("li");
         let b = document.createElement("b");
         let anchor = document.createElement("a");
         anchor.href = '#';
-        anchor.innerText = `${getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})`;
+        anchor.innerText = `${await getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})`;
         anchor.addEventListener("click", () => {
             syncPairSelect.value = ugt.trainerId;
             selectChange();
@@ -1665,12 +1573,12 @@ function setLatestPairs() {
         b.appendChild(anchor);
         li.appendChild(b);
         ul.appendChild(li);
-    });
+    }
 
     lastReleasePairsDiv.appendChild(ul);
 }
 
-function selectChange() {
+async function selectChange() {
     const url = new URL(window.location);
     url.searchParams.delete('monsterId');
     url.searchParams.delete('baseId');
@@ -1679,24 +1587,24 @@ function selectChange() {
 
     window.history.pushState(null, '', url.toString());
 
-    setPairInfos(syncPairSelect.value, false);
+    await setPairInfos(syncPairSelect.value, false);
 }
 
-function urlStateChange() {
+async function urlStateChange() {
     const url = new URL(window.location);
     const urlPairId = url.searchParams.get('pair');
 
-    if(urlPairId !== null) {
+    if (urlPairId !== null) {
         syncPairSelect.value = urlPairId;
     }
 
-    setPairInfos(syncPairSelect.value);
+    await setPairInfos(syncPairSelect.value);
 
     const monsterId = url.searchParams.get('monsterId');
     const baseId = url.searchParams.get('baseId');
     const formId = url.searchParams.get('formId');
 
-    if(monsterId && baseId && formId) {
+    if (monsterId && baseId && formId) {
         switchTab(monsterId, baseId, formId, false);
     }
 }
@@ -1728,13 +1636,13 @@ async function init() {
         copyBtn.addEventListener('click', () => navigator.clipboard.writeText(dataArea.value));
     }
 
-    populateSelect();
+    await populateSelect();
     setLatestPairs();
 
     syncPairSelect.addEventListener('change', selectChange);
 
-    urlStateChange();
-    window.addEventListener('popstate', urlStateChange);
+    await urlStateChange();
+    window.addEventListener('popstate', async () => await urlStateChange());
 }
 function getPairStatsRowBipCode(name, statValues, t, scale = 1) {
     const breakPointLevels = [1, 30, 45, 100, 120, 140, 200];
@@ -1778,22 +1686,22 @@ function getPairStatsRowBipCode(name, statValues, t, scale = 1) {
     return string;
 }
 
-function getMonsterStatsBipCode(m, t, v = null) {
+async function getMonsterStatsBipCode(m, t, v = null) {
     let string = `\t[item|nostyle][table]\n`
-        + `\t\t[tr][th|colspan=${t.rarity+1}]${(v ? v.monsterName : getMonsterNameByMonsterId(m.monsterId))}[/th][/tr]\n`
+        + `\t\t[tr][th|colspan=${t.rarity + 1}]${(v ? v.monsterName : await getMonsterNameByMonsterId(m.monsterId))}[/th][/tr]\n`
         + `\t\t[tr][th]Stats max[/th]`;
 
-    for(let i = t.rarity; i <= 6; i++) {
+    for (let i = t.rarity; i <= 6; i++) {
         string += `[th|width=50px]${i === 6 ? "5+" : i}★[/th]`;
     }
 
     string += `[/tr]\n`;
     string += getPairStatsRowBipCode("hp", m.hpValues, t);
-    string += getPairStatsRowBipCode("atk", m.atkValues, t, (v ? v.atkScale/100 : 1));
-    string += getPairStatsRowBipCode("def", m.defValues, t, (v ? v.defScale/100 : 1));
-    string += getPairStatsRowBipCode("spa", m.spaValues, t, (v ? v.spaScale/100 : 1));
-    string += getPairStatsRowBipCode("spd", m.spdValues, t, (v ? v.spdScale/100 : 1));
-    string += getPairStatsRowBipCode("spe", m.speValues, t, (v ? v.speScale/100 : 1));
+    string += getPairStatsRowBipCode("atk", m.atkValues, t, (v ? v.atkScale / 100 : 1));
+    string += getPairStatsRowBipCode("def", m.defValues, t, (v ? v.defScale / 100 : 1));
+    string += getPairStatsRowBipCode("spa", m.spaValues, t, (v ? v.spaScale / 100 : 1));
+    string += getPairStatsRowBipCode("spd", m.spdValues, t, (v ? v.spdScale / 100 : 1));
+    string += getPairStatsRowBipCode("spe", m.speValues, t, (v ? v.speScale / 100 : 1));
 
     string += `\t[/table][/item]\n`;
 
@@ -1901,16 +1809,16 @@ function appendGridCategoryBipCode(panels, category) {
     return string;
 }
 
-function getPairBipCode(trainerId) {
-    let string = `[title]Pokémon Masters EX > ${getPairName(trainerId)}[/title]\n`
+async function getPairBipCode(trainerId) {
+    let string = `[title]Pokémon Masters EX > ${await getPairName(trainerId)}[/title]\n`
         + `[nav]jeuxvideo/pokemon-masters/navigation[/nav]\n`
-        + `[h1]Pokémon Masters EX\nDuos Dex\n${getPairName(trainerId)}[/h1]\n`
+        + `[h1]Pokémon Masters EX\nDuos Dex\n${await getPairName(trainerId)}[/h1]\n`
         + `[include=jeuxvideo/pokemon-masters/duos/0-menu-deroulant]\n`
         + `[include=jeuxvideo/pokemon-masters/duos/menus-deroulants/A_MODIFIER]\n\n`
         + `[include=jeuxvideo/pokemon-masters/duos/0-sommaire-duo]\n\n`;
 
     let t = trainer.find(t => t.trainerId === trainerId);
-    let trainerActorDress = getActorDressFromTrainerId(trainerId);
+    let trainerActorDress = await getActorDressFromTrainerId(trainerId);
     let pairEvolutions = monsterEvolution.filter(me => me.trainerId === trainerId);
     let monsterIds = [];
     let monsters = [];
@@ -1918,22 +1826,22 @@ function getPairBipCode(trainerId) {
     monsterIds.push(t.monsterId);
     pairEvolutions.forEach(pe => monsterIds.push(pe.monsterIdNext));
 
-    for(let i = 0; i < monsterIds.length; i++) {
+    for (let i = 0; i < monsterIds.length; i++) {
         pairVariations[monsterIds[i]] = null;
         let variations = monsterVariation.filter(mv => mv.monsterId === monsterIds[i] && mv.form !== 4);
 
         let enhancements = monsterEnhancement.filter(me => me.monsterIdCurrent === monsterIds[i] && me.type !== "2");
 
-        if(enhancements.length > 0) {
+        if (enhancements.length > 0) {
             enhancements.forEach(e => {
                 variations.push(...monsterVariation.filter(mv => mv.monsterId === e.monsterIdNext));
             });
         }
 
-        if(variations.length > 0) {
-            pairVariations[monsterIds[i]] = variations.map(v => {
-                v.monsterBaseId = getMonsterBaseIdFromActorId(v.actorId);
-                v.monsterName = getNameByMonsterBaseId(v.monsterBaseId, v.formId);
+        if (variations.length > 0) {
+            pairVariations[monsterIds[i]] = variations.map(async v => {
+                v.monsterBaseId = await getMonsterBaseIdFromActorId(v.actorId);
+                v.monsterName = await getNameByMonsterBaseId(v.monsterBaseId, v.formId);
                 return v;
             });
         }
@@ -1942,15 +1850,15 @@ function getPairBipCode(trainerId) {
     }
 
     string += `[center][table]\n`
-        + `\t[tr][th|width=430px|colspan=4]${getTrainerName(trainerId).replace("\n", "")}[/th][th|colspan=2|width=230px]`;
+        + `\t[tr][th|width=430px|colspan=4]${(await getTrainerName(trainerId)).replace("\n", "")}[/th][th|colspan=2|width=230px]`;
 
-    for(let i = 0; i < monsters.length; i++) {
-        if(i > 0)
+    for (let i = 0; i < monsters.length; i++) {
+        if (i > 0)
             string += ", ";
 
-        string += getMonsterNameByMonsterId(monsters[i].monsterId);
+        string += await getMonsterNameByMonsterId(monsters[i].monsterId);
 
-        if(pairVariations[monsterIds[i]])
+        if (pairVariations[monsterIds[i]])
             pairVariations[monsterIds[i]].forEach(v => {
                 string += `, ${v.monsterName}`
             });
@@ -1959,29 +1867,29 @@ function getPairBipCode(trainerId) {
     string += "[/th][/tr]\n"
         + "\t[tr]\n";
 
-    string += `\t[td${(hasExUnlocked(trainerId) && trainerActorDress) ? "|rowspan=3" : ""}|colspan=4][img]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER.png[/img][/td]\n`
+    string += `\t[td${(await hasExUnlocked(trainerId) && trainerActorDress) ? "|rowspan=3" : ""}|colspan=4][img]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER.png[/img][/td]\n`
         + `\t[td|colspan=2]`;
 
-    for(let i = 0; i < monsters.length; i++) {
-        string += `[pokeimg=${getPokemonNumberFromMonsterBaseId(monsters[i].monsterBaseId)}|MX]`;
+    for (let i = 0; i < monsters.length; i++) {
+        string += `[pokeimg=${await getPokemonNumberFromMonsterBaseId(monsters[i].monsterBaseId)}|MX]`;
 
-        if(pairVariations[monsterIds[i]])
-            pairVariations[monsterIds[i]].forEach(v => {
-                string += `[pokeimg=${getPokemonNumberFromMonsterBaseId(monsters[i].monsterBaseId)}A_MODIFIER|MX]`;
-            });
+        if (pairVariations[monsterIds[i]])
+            for (const v of pairVariations[monsterIds[i]]) {
+                string += `[pokeimg=${await getPokemonNumberFromMonsterBaseId(monsters[i].monsterBaseId)}A_MODIFIER|MX]`;
+            }
     }
 
     string += `[/td]\n\t[/tr]\n`;
 
-    if(hasExUnlocked(trainerId) && trainerActorDress) {
+    if (await hasExUnlocked(trainerId) && trainerActorDress) {
         string += `\t[tr][th|colspan=2]Tenue 6★ EX[/th][/tr]\n`
             + `\t[tr][td|colspan=2][img|w=230]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER-ex.png[/img][/td][/tr]\n`;
     }
 
     string += `\t[tr][th]Rôle[/th][th]Potentiel (Base)[/th][th]Type[/th][th]Faiblesse[/th][th]Origine[/th][th]Tenue[/th][/tr]\n`
         + `\t[tr]\n`
-        + `\t[td|width=100px][img]/pages/jeuxvideo/pokemon-masters/images/roles/${getRoleUrlByTrainerId(trainerId)}.png[/img][br]${getRoleByTrainerId(trainerId)}[/td]\n`
-        + `\t[td|width=100px]${"★".repeat(getTrainerRarity(trainerId))}[/td]\n`
+        + `\t[td|width=100px][img]/pages/jeuxvideo/pokemon-masters/images/roles/${await getRoleUrlByTrainerId(trainerId)}.png[/img][br]${await getRoleByTrainerId(trainerId)}[/td]\n`
+        + `\t[td|width=100px]${"★".repeat(await getTrainerRarity(trainerId))}[/td]\n`
         + `\t[td|width=100px][type=${removeAccents(motifTypeName[t.type].toLowerCase())}|MX][/td]\n`
         + `\t[td|width=100px][type=${removeAccents(motifTypeName[t.weakness].toLowerCase())}|MX][/td]\n`
         + `\t[td|width=200px]Pokémon A_MODIFIER[/td]\n`
@@ -1989,8 +1897,8 @@ function getPairBipCode(trainerId) {
         + `\t[/tr]\n`
         + `\t[tr][th|colspan=6]Descriptions[/th][/tr]\n`;
 
-    if(trainerDescriptions[trainerId])
-        string += `\t[tr][td|colspan=6]${ agenderDescription(trainerDescriptions[trainerId].replaceAll("\n", " ")) }[/td][/tr]\n`;
+    if (trainerDescriptions[trainerId])
+        string += `\t[tr][td|colspan=6]${agenderDescription(trainerDescriptions[trainerId].replaceAll("\n", " "))}[/td][/tr]\n`;
 
     monsters.map(m => m.monsterBaseId).forEach(mbId => {
             if (monsterDescriptions[mbId])
@@ -2006,26 +1914,28 @@ function getPairBipCode(trainerId) {
     string += `[ancre=stats][h2]Statistiques[/h2]\n`
         + `[listh]\n`;
 
-    monsters.forEach(m => {
-        string += getMonsterStatsBipCode(m, t);
+    for (const m of monsters) {
+        string += await getMonsterStatsBipCode(m, t);
 
-        if(pairVariations[m.monsterId])
-            pairVariations[m.monsterId].forEach(v => string += getMonsterStatsBipCode(m, t, v));
-    });
+        if (pairVariations[m.monsterId])
+            for (const v of pairVariations[m.monsterId]) {
+                string += await getMonsterStatsBipCode(m, t, v);
+            }
+    }
 
-    if(hasExRoleUnlocked(trainerId)) {
-        string += `\t[include=jeuxvideo/pokemon-masters/duos/include/role-ex-${getExRoleUrlByTrainerId(trainerId)}]\n`;
+    if (await hasExRoleUnlocked(trainerId)) {
+        string += `\t[include=jeuxvideo/pokemon-masters/duos/include/role-ex-${await getExRoleUrlByTrainerId(trainerId)}]\n`;
     }
 
     string += `[/listh]\n\n`;
 
     string += `[ancre=talents][h2]Talents[/h2]\n`;
 
-    string += `[h3]${getMonsterNameByMonsterId(monsterIds[monsterIds.length - 1])}[/h3]\n`;
+    string += `[h3]${await getMonsterNameByMonsterId(monsterIds[monsterIds.length - 1])}[/h3]\n`;
     string += getPassiveSkillBipCode(t);
 
     monsterIds.forEach(mId => {
-        if(pairVariations[mId]) {
+        if (pairVariations[mId]) {
             pairVariations[mId].forEach(v => {
                 string += `[h3]${v.monsterName}[/h3]\n`;
                 string += getPassiveSkillBipCode(t, v);
@@ -2036,33 +1946,33 @@ function getPairBipCode(trainerId) {
     string += `[center][table]\n`
         + `\t[tr][th|colspan=2]Talents d'équipe (Niv. 1 à 4)[/th][/tr]\n`
         + `\t[tr][td|colspan=2]Créez une équipe avec au moins deux Duos qui partagent un même mot-clé pour activer son effet.[/td][/tr]\n`
-        + `\t[tr][th|width=200px]Nom[/th][th|width=400px]Effet (${getRoleByTrainerId(trainerId, true)})[/th][/tr]\n`;
+        + `\t[tr][th|width=200px]Nom[/th][th|width=400px]Effet (${await getRoleByTrainerId(trainerId, true)})[/th][/tr]\n`;
 
-    for(let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 5; i++) {
         let ts = teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 1);
         let descr = []
         descr.push(teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 3));
         descr.push(teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 4));
 
-        if(!ts)
+        if (!ts)
             continue;
 
         string += `\t[tr][td]${teamSkillTag[ts.teamSkillPropValue]}[/td][td]`;
 
-        let include= `[include=/jeuxvideo/pokemon-masters/duos/talents/mots-cles-${getRoleUrlByTrainerId(trainerId, false)}]`;
-        if(i === 1) {
-            include = `[include=/jeuxvideo/pokemon-masters/duos/talents/type-${getRoleUrlByTrainerId(trainerId, false)}]`;
+        let include = `[include=/jeuxvideo/pokemon-masters/duos/talents/mots-cles-${await getRoleUrlByTrainerId(trainerId, false)}]`;
+        if (i === 1) {
+            include = `[include=/jeuxvideo/pokemon-masters/duos/talents/type-${await getRoleUrlByTrainerId(trainerId, false)}]`;
         }
 
         const digitBlock = "[Digit:3digits ]";
 
-        for(let i = 0; i < descr.length; i++) {
-            if(descr[i]) {
+        for (let i = 0; i < descr.length; i++) {
+            if (descr[i]) {
                 let d = teamSkillEffect[descr[i].teamSkillPropValue].replace("\n", " ");
                 let index = d.indexOf(digitBlock);
                 d = d.replace(digitBlock, "X");
 
-                if(i > 0)
+                if (i > 0)
                     string += " ";
 
                 string += `[tooltip=${d.substring(0, index + 1)}]${include}[/tooltip]${d.substring(index + 1)}`;
@@ -2077,11 +1987,11 @@ function getPairBipCode(trainerId) {
 
     string += `[ancre=capacites][h2]Capacités[/h2]\n`
 
-    string += `[h3]${getMonsterNameByMonsterId(monsterIds[monsterIds.length - 1])}[/h3]\n`;
+    string += `[h3]${await getMonsterNameByMonsterId(monsterIds[monsterIds.length - 1])}[/h3]\n`;
     string += getMoveBipCode(t, monsters[monsters.length - 1]);
 
     monsters.forEach(m => {
-        if(pairVariations[m.monsterId]) {
+        if (pairVariations[m.monsterId]) {
             pairVariations[m.monsterId].forEach(v => {
                 string += `\n[h3]${v.monsterName}[/h3]\n`;
                 string += getMoveBipCode(t, m, v);
@@ -2091,22 +2001,22 @@ function getPairBipCode(trainerId) {
 
     let gmaxVar = monsterVariation.find(mv => mv.monsterId === monsterIds[monsterIds.length - 1] && mv.form === 4);
 
-    if(gmaxVar) {
+    if (gmaxVar) {
 
         string += `\n[center][table]\n`
             + `\t[tr][th|colspan=6|width=1000px][img|w=32]/pages/jeuxvideo/pokemon-masters/images/icones-combat/capacite-duo-dynamax.png[/img] Capacités Duo Dynamax[/th][/tr]\n`
             + `\t[tr][th|width=100px]Nom[/th][th|width=80px]Type[/th][th|width=80px]Catég.[/th][th|width=50px]Puis.[/th][th|width=80px]Cible[/th][th]Effet[/th][/tr]\n`;
 
-        for(let i = 1; i < 5; i++) {
+        for (let i = 1; i < 5; i++) {
             let moveId = gmaxVar[`moveDynamax${i}Id`];
 
-            if(moveId > -1) {
+            if (moveId > -1) {
                 let mov = move.find(m => m.moveId == moveId);
                 string += `\t[tr]\n`
                     + `\t\t[td]${moveNames[moveId].replace("\n", " ")}[/td]\n`
                     + `\t\t[td]${mov.type ? `[type=${removeAccents(motifTypeName[mov.type].toLowerCase())}|MX]` : "–"}[/td]\n`
                     + `\t\t[td][type=${removeAccents(categoryToFR[mov.category].toLowerCase())}|MX][/td]\n`
-                    + `\t\t[td]${mov.power ? `${mov.power}-${Math.trunc(mov.power*1.2)}` : "–"}[/td]\n`
+                    + `\t\t[td]${mov.power ? `${mov.power}-${Math.trunc(mov.power * 1.2)}` : "–"}[/td]\n`
                     + `\t\t[td]${moveTargetType[targetToId[mov.target]] || "–"}[/td]\n`
                     + `\t\t[td]${getMoveDescr(moveId)}[/td]\n`
                     + `\t[/tr]\n`
@@ -2119,13 +2029,13 @@ function getPairBipCode(trainerId) {
     let syncMove = move.find(mov => mov.moveId === monsters[monsters.length - 1].syncMoveId);
 
     string += "\n[center][table]\n"
-        + `\t[tr][th|colspan=${6+hasExUnlocked(trainerId)+hasExRoleUnlocked(trainerId)}|width=1000px][img|w=32]/pages/jeuxvideo/pokemon-masters/images/icones-combat/capacite-duo.png[/img] Capacité Duo[/th][/tr]\n`
+        + `\t[tr][th|colspan=${6 + (await hasExUnlocked(trainerId)) + (await hasExRoleUnlocked(trainerId))}|width=1000px][img|w=32]/pages/jeuxvideo/pokemon-masters/images/icones-combat/capacite-duo.png[/img] Capacité Duo[/th][/tr]\n`
         + `\t[tr][th|width=100px]Nom[/th][th|width=80px]Type[/th][th|width=80px]Catég.[/th][th|width=50px]Puis.[/th][th|width=200px]Effet[/th]`;
 
-    if(hasExUnlocked(trainerId)) {
+    if (await hasExUnlocked(trainerId)) {
         string += `[th|width=150px]Effet (EX)[/th]`;
     }
-    if(hasExRoleUnlocked(trainerId)) {
+    if (await hasExRoleUnlocked(trainerId)) {
         string += `[th|width=150px]Rôle EX[/th]`;
     }
 
@@ -2134,14 +2044,14 @@ function getPairBipCode(trainerId) {
         + `\t\t[td]${moveNames[syncMove.moveId]}[/td]\n`
         + `\t\t[td]${syncMove.type ? `[type=${removeAccents(motifTypeName[syncMove.type].toLowerCase())}|MX]` : "–"}[/td]\n`
         + `\t\t[td][type=${removeAccents(categoryToFR[syncMove.category].toLowerCase())}|MX][/td]\n`
-        + `\t\t[td]${syncMove.power ? `${syncMove.power}-${Math.trunc(syncMove.power*1.2)}` : "–"}[/td]\n`
+        + `\t\t[td]${syncMove.power ? `${syncMove.power}-${Math.trunc(syncMove.power * 1.2)}` : "–"}[/td]\n`
         + `\t\t[td]${getMoveDescr(syncMove.moveId)}[/td]\n`;
 
-    if(hasExUnlocked(trainerId)) {
+    if (await hasExUnlocked(trainerId)) {
         string += `\t\t[td]${exSyncEffect[t.role]}[/td]\n`;
     }
-    if(hasExRoleUnlocked(trainerId)) {
-        string += `\t\t[td]${exSyncEffect[getExRoleId(trainerId)]}[/td]\n`;
+    if (await hasExRoleUnlocked(trainerId)) {
+        string += `\t\t[td]${exSyncEffect[await getExRoleId(trainerId)]}[/td]\n`;
     }
 
     string += `\t[/tr]\n`
@@ -2155,7 +2065,7 @@ function getPairBipCode(trainerId) {
         .map(ap => {
             ap.ability = ability.find(a => a.abilityId === ap.abilityId);
             ap.level = 1;
-            ap.conditionIds.forEach(cid => (cid >= 12 && cid <= 15) ? ap.level = cid-10 : "");
+            ap.conditionIds.forEach(cid => (cid >= 12 && cid <= 15) ? ap.level = cid - 10 : "");
             ap.type = getAbilityType(ap.ability);
             return ap;
         });
@@ -2170,12 +2080,12 @@ function getPairBipCode(trainerId) {
     return string;
 }
 
-function downloadData() {
+async function downloadData() {
     let e = document.createElement('a');
     e.href = window.URL.createObjectURL(
-        new Blob([getPairBipCode(syncPairSelect.value)], { "type": "text/plain" })
+        new Blob([getPairBipCode(syncPairSelect.value)], {"type": "text/plain"})
     );
-    e.setAttribute('download', removeAccents(getPairName(syncPairSelect.value)));
+    e.setAttribute('download', removeAccents(await getPairName(syncPairSelect.value)));
     e.style.display = 'none';
 
     document.body.appendChild(e);
@@ -2183,18 +2093,18 @@ function downloadData() {
     document.body.removeChild(e);
 }
 
-function downloadAll() {
+async function downloadAll() {
     let zip = new JSZip();
     let trainerIds = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER")
         .map(t => t.trainerId);
 
-    trainerIds.forEach(tid => {
-        let filename = removeAccents(getPairName(tid)).replace("/", "-") + '.txt';
+    for (const tid of trainerIds) {
+        let filename = removeAccents(await getPairName(tid)).replace("/", "-") + '.txt';
         zip.file(filename, getPairBipCode(tid));
-    });
+    }
 
-    zip.generateAsync({ type: 'blob' })
-        .then(function(content) {
+    zip.generateAsync({type: 'blob'})
+        .then(function (content) {
             saveAs(content, "Duos.zip");
         });
 }

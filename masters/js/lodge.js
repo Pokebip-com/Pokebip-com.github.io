@@ -6,40 +6,18 @@ let trainerNames, trainerVerboseNames, trainer, trainerBase;
 
 async function getData() {
     await buildHeader();
-    const [
-        salonGuestResponse,
-        salonGuestTopicResponse,
-        salonTopicResponse,
-        trainerResponse,
-        trainerBaseResponse,
-        salonTopicNameResponse,
-        salonTopicCategoryResponse,
-        trainerNameResponse,
-        trainerVerboseNameResponse
-    ] = await Promise.all([
-        fetch("./data/proto/SalonGuest.json"),
-        fetch("./data/proto/SalonGuestTopic.json"),
-        fetch("./data/proto/SalonTopic.json"),
-        fetch("./data/proto/Trainer.json"),
-        fetch("./data/proto/TrainerBase.json"),
-        fetch(`./data/lsd/salon_topic_${lng}.json`),
-        fetch(`./data/lsd/salon_topic_category_${lng}.json`),
-        fetch(`./data/lsd/trainer_name_${lng}.json`),
-        fetch(`./data/lsd/trainer_verbose_name_${lng}.json`)
-    ])
-        .catch(error => console.log(error));
 
-    salonGuest = (await salonGuestResponse.json()).entries;
-    salonGuestTopic = (await salonGuestTopicResponse.json()).entries;
-    salonTopic = (await salonTopicResponse.json()).entries;
+    salonGuest = await jsonCache.getProto("SalonGuest");
+    salonGuestTopic = await jsonCache.getProto("SalonGuestTopic");
+    salonTopic = await jsonCache.getProto("SalonTopic");
 
-    salonTopicName = await salonTopicNameResponse.json();
-    salonTopicCategory = await salonTopicCategoryResponse.json();
+    salonTopicName = await jsonCache.getLsd("salon_topic");
+    salonTopicCategory = await jsonCache.getLsd("salon_topic_category");
 
-    trainer = (await trainerResponse.json()).entries;
-    trainerBase = (await trainerBaseResponse.json()).entries;
-    trainerNames = await trainerNameResponse.json();
-    trainerVerboseNames = await trainerVerboseNameResponse.json();
+    trainer = await jsonCache.getProto("Trainer");
+    trainerBase = await jsonCache.getProto("TrainerBase");
+    trainerNames = await jsonCache.getLsd("trainer_name");
+    trainerVerboseNames = await jsonCache.getLsd("trainer_verbose_name");
 }
 
 function setLodgeTopics(guestId) {
@@ -93,13 +71,15 @@ function setLodgeTopics(guestId) {
     lodgeTopicsDiv.appendChild(categoriesUl);
 }
 
-getData().then(() => {
+getData().then(async () => {
 
     let salonGuestSelect = document.getElementById("salonGuestSelect");
     lodgeTopicsDiv = document.getElementById("lodgeTopicsDiv");
 
-    salonGuest
-        .map(sg => { return { "name": getTrainerName(sg.trainerId), "salonGuestId": sg.salonGuestId }})
+    (await Promise.all(salonGuest
+        .map(async sg => {
+            return {"name": await getTrainerName(sg.trainerId), "salonGuestId": sg.salonGuestId}
+        })))
         .sort((a, b) => a.name.localeCompare(b.name))
         .forEach(sg => {
             let option = new Option(sg.name, sg.salonGuestId);
@@ -118,11 +98,10 @@ getData().then(() => {
 
     const url = new URL(window.location);
     const guestId = url.searchParams.get('guestId');
-    if(guestId !== null) {
+    if (guestId !== null) {
         salonGuestSelect.value = guestId;
         setLodgeTopics(parseInt(guestId));
-    }
-    else {
+    } else {
         setLodgeTopics(parseInt(salonGuestSelect.options[salonGuestSelect.selectedIndex].value));
     }
 });

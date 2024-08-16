@@ -24,8 +24,7 @@
       let indexLocale;
 
       async function getIndexLocale() {
-        let indexLocaleResponse = await fetch(`./data/locales/${lng}/index.json`);
-        indexLocale = await indexLocaleResponse.json();
+        indexLocale = await jsonCache.getLocale("index");
       }
 
       getIndexLocale().then(() => {

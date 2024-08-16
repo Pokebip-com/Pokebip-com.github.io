@@ -51,6 +51,59 @@ switch(urlLang) {
         break;
 }
 
+class JsonCache {
+    baseDir = ".";
+
+    constructor() {
+        this.cache = new Map();
+        this.inProgressRequests = new Map();
+    }
+
+    async getProto(protoName, hasEntries = true) {
+        return this.fetchData(`${this.baseDir}/data/proto/${protoName}.json`, hasEntries);
+    }
+
+    async getLsd(lsdName, hasEntries = false) {
+        return this.fetchData(`${this.baseDir}/data/lsd/${lsdName}_${lng}.json`, hasEntries);
+    }
+
+    async getLocale(localeName, hasEntries = false) {
+        return this.fetchData(`${this.baseDir}/data/locales/${lng}/${localeName}.json`, hasEntries);
+    }
+
+    async getCustom(customName, hasEntries = false) {
+        return this.fetchData(`${this.baseDir}/data/custom/${customName}.json`, hasEntries);
+    }
+
+    async fetchData(url, hasEntries = false) {
+        if (this.cache.has(url)) {
+            return this.cache.get(url);
+        }
+
+        if (this.inProgressRequests.has(url)) {
+            return this.inProgressRequests.get(url);
+        }
+
+        const requestPromise = fetch(url)
+            .then(async (response) => {
+                const data = hasEntries ? (await response.json()).entries : await response.json();
+                this.cache.set(url, data);
+                this.inProgressRequests.delete(url);
+                return data;
+            })
+            .catch((error) => {
+                this.inProgressRequests.delete(url);
+                throw error;
+            });
+
+        this.inProgressRequests.set(url, requestPromise);
+
+        return requestPromise;
+    }
+}
+
+const jsonCache = new JsonCache();
+
 let lng = locale === "zh-TW" ? "zh-TW" : locale.substring(0, 2);
 if(!supportedLanguages.includes(lng)) lng = "en";
 let commonLocales;
@@ -141,25 +194,25 @@ function getSubnav(data) {
 
 }
 
-async function getLocale(localePath) {
-    let commonLocalesResponse = await fetch(`${localePath}${lng}/common.json`);
-    commonLocales = await commonLocalesResponse.json();
+async function getLocale() {
+    commonLocales = await jsonCache.getLocale("common");
 }
 
-async function buildHeader(localePath = "./data/locales/") {
-    await getLocale(localePath);
+async function buildHeader(baseDir = ".") {
+    jsonCache.baseDir = baseDir;
+    await getLocale();
 
     let headerData = [
-        { "title": commonLocales.menu_schedule, "url": "/masters/programme.html", "drop": [] },
+        { "title": commonLocales.menu_schedule, "url": `${baseDir}/programme.html`, "drop": [] },
         { "title" : commonLocales.menu_sync_pairs, "url": "", "drop": [
-                { "title" : commonLocales.submenu_pair_page, "url" : "/masters/duo.html" },
-                { "title": commonLocales.submenu_pair_ex_role, "url": "/masters/ex-role.html" },
-                { "title" : commonLocales.submenu_skill_gear, "url" : "/masters/skill-gears.html" },
-                { "title" : commonLocales.submenu_lucky_skills, "url" : "/masters/lucky-skills.html" },
+                { "title" : commonLocales.submenu_pair_page, "url" : `${baseDir}/duo.html` },
+                { "title": commonLocales.submenu_pair_ex_role, "url": `${baseDir}/ex-role.html` },
+                { "title" : commonLocales.submenu_skill_gear, "url" : `${baseDir}/skill-gears.html` },
+                { "title" : commonLocales.submenu_lucky_skills, "url" : `${baseDir}/lucky-skills.html` },
             ]
         },
         { "title": commonLocales.menu_battle_rally, "url": "", "drop": [
-                { "title": commonLocales.submenu_rally_role_set, "url": "/masters/rally/role-set.html" }
+                { "title": commonLocales.submenu_rally_role_set, "url": `${baseDir}/rally/role-set.html` }
             ]
         },
         {
@@ -176,7 +229,8 @@ async function buildHeader(localePath = "./data/locales/") {
 
     let adminHeaderData = [
         { "title" : commonLocales.adminmenu_title, "url": "", "drop": [
-                { "title" : commonLocales.adminsubmenu_discord, "url" : "/masters/discord.html" },
+                { "title" : commonLocales.adminsubmenu_discord, "url" : `${baseDir}/discord.html` },
+                //{ "title" : commonLocales.adminsubmenu_eventRewards, "url" : `${baseDir}/progress-events.html` },
             ]
         }
     ];

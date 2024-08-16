@@ -83,113 +83,22 @@ const CBEText1Id = 17503026;
 const CBEText2Id = 27503027;
 
 async function getData() {
-    const [
-        abilityPanelResponse,
-        bannerResponse,
-        challengeToStrongTrainerQuestGroupResponse,
-        championBattleEventResponse,
-        championBattleEventQuestGroupResponse,
-        championBattleRegionResponse,
-        championBattleRegionOpeningScheduleResponse,
-        cyclicRankingEventResponse,
-        cyclicRankingQuestGroupResponse,
-        cyclicRankingQuestGroupScheduleResponse,
-        eventBannerResponse,
-        eventQuestGroupResponse,
-        homeEventAppealResponse,
-        itemExchangeResponse,
-        itemSetResponse,
-        legendQuestGroupResponse,
-        legendQuestGroupScheduleResponse,
-        loginBonusResponse,
-        loginBonusRewardResponse,
-        missionGroupResponse,
-        monsterResponse,
-        monsterBaseResponse,
-        salonGuestResponse,
-        scheduleResponse,
-        scoutResponse,
-        scoutPickupResponse,
-        shopPurchasableItemResponse,
-        storyQuestResponse,
-        trainerResponse,
-        trainerBaseResponse,
-        trainerExRoleResponse,
-        trainerRarityupBonusResponse,
-        villaQuestGroupResponse,
-        bannerTextResponse,
-        eventNameResponse,
-        jukeboxMusicNameResponse,
-        loginBonusNameResponse,
-        monsterNameResponse,
-        motifTypeNameResponse,
-        scoutPickupDescrResponse,
-        trainerNameResponse,
-        trainerVerboseNameResponse,
-    ] = await Promise.all([
-        fetch(`./data/proto/AbilityPanel.json`),
-        fetch(`./data/proto/Banner.json`),
-        fetch(`./data/proto/ChallengeToStrongTrainerQuestGroup.json`),
-        fetch(`./data/proto/ChampionBattleEvent.json`),
-        fetch(`./data/proto/ChampionBattleEventQuestGroup.json`),
-        fetch(`./data/proto/ChampionBattleRegion.json`),
-        fetch(`./data/proto/ChampionBattleRegionOpeningSchedule.json`),
-        fetch(`./data/proto/CyclicRankingEvent.json`),
-        fetch(`./data/proto/CyclicRankingQuestGroup.json`),
-        fetch(`./data/proto/CyclicRankingQuestGroupSchedule.json`),
-        fetch(`./data/proto/EventBanner.json`),
-        fetch(`./data/proto/EventQuestGroup.json`),
-        fetch(`./data/proto/HomeEventAppeal.json`),
-        fetch(`./data/proto/ItemExchange.json`),
-        fetch(`./data/proto/ItemSet.json`),
-        fetch(`./data/proto/LegendQuestGroup.json`),
-        fetch(`./data/proto/LegendQuestGroupSchedule.json`),
-        fetch(`./data/proto/LoginBonus.json`),
-        fetch(`./data/proto/LoginBonusReward.json`),
-        fetch(`./data/proto/MissionGroup.json`),
-        fetch(`./data/proto/Monster.json`),
-        fetch(`./data/proto/MonsterBase.json`),
-        fetch(`./data/proto/SalonGuest.json`),
-        fetch(`./data/proto/Schedule.json`),
-        fetch(`./data/proto/Scout.json`),
-        fetch(`./data/proto/ScoutPickup.json`),
-        fetch(`./data/proto/ShopPurchasableItem.json`),
-        fetch(`./data/proto/StoryQuest.json`),
-        fetch(`./data/proto/Trainer.json`),
-        fetch(`./data/proto/TrainerBase.json`),
-        fetch(`./data/proto/TrainerExRole.json`),
-        fetch(`./data/proto/TrainerRarityupBonus.json`),
-        fetch(`./data/proto/VillaQuestGroup.json`),
-        fetch(`./data/lsd/banner_text_${lng}.json`),
-        fetch(`./data/lsd/event_name_${lng}.json`),
-        fetch(`./data/lsd/jukebox_music_name_${lng}.json`),
-        fetch(`./data/lsd/login_bonus_name_${lng}.json`),
-        fetch(`./data/lsd/monster_name_${lng}.json`),
-        fetch(`./data/lsd/motif_type_name_${lng}.json`),
-        fetch(`./data/lsd/scout_pickup_description_${lng}.json`),
-        fetch(`./data/lsd/trainer_name_${lng}.json`),
-        fetch(`./data/lsd/trainer_verbose_name_${lng}.json`)
-    ])
-        .catch(error => console.log(error));
+    abilityPanel = await jsonCache.getProto("AbilityPanel");
 
-    abilityPanel = (await abilityPanelResponse.json()).entries;
+    banner = await jsonCache.getProto("Banner");
 
-    banner = (await bannerResponse.json()).entries;
-
-    eventQuestGroup = (await eventQuestGroupResponse.json()).entries;
+    eventQuestGroup = await jsonCache.getProto("EventQuestGroup");
 
     // On ne prend que les missions qui ne sont pas des missions d'événement
-    missionGroup = (await missionGroupResponse.json()).entries.filter(mg => eventQuestGroup.filter(eqg => eqg.bannerId === mg.bannerId).length === 0);
+    missionGroup = (await jsonCache.getProto("MissionGroup")).filter(mg => eventQuestGroup.filter(eqg => eqg.bannerId === mg.bannerId).length === 0);
 
-    let villaQuestGroup = await villaQuestGroupResponse.json();
-    villaQuestGroup.entries.map(vqg => vqg.bannerId = 1202001);
-    eventQuestGroup.push(...villaQuestGroup.entries);
+    eventQuestGroup.push(...(await jsonCache.getProto("VillaQuestGroup")).map(vqg => vqg.bannerId = 1202001));
 
-    let champBattleEvent = await championBattleEventResponse.json();
-    let champBattleEventQuestGroup = await championBattleEventQuestGroupResponse.json();
+    let champBattleEvent = await jsonCache.getProto("ChampionBattleEvent");
+    let champBattleEventQuestGroup = await jsonCache.getProto("ChampionBattleEventQuestGroup");
 
-    champBattleEventQuestGroup.entries.map(cbeqg => {
-        cbeqg.bannerId = champBattleEvent.entries.find(cbe => cbe.championBattleEventId === cbeqg.championBattleEventId).bannerId;
+    champBattleEventQuestGroup.map(cbeqg => {
+        cbeqg.bannerId = champBattleEvent.find(cbe => cbe.championBattleEventId === cbeqg.championBattleEventId).bannerId;
 
         banner.map(ban => {
             if(ban.bannerId === cbeqg.bannerId) {
@@ -201,42 +110,42 @@ async function getData() {
             }
         });
     });
-    eventQuestGroup.push(...champBattleEventQuestGroup.entries);
+    eventQuestGroup.push(...champBattleEventQuestGroup);
 
-    championBattleRegion = (await championBattleRegionResponse.json()).entries;
-    championBattleRegionOpeningSchedule = (await championBattleRegionOpeningScheduleResponse.json()).entries;
+    championBattleRegion = await jsonCache.getProto("ChampionBattleRegion");
+    championBattleRegionOpeningSchedule = await jsonCache.getProto("ChampionBattleRegionOpeningSchedule");
 
-    eventQuestGroup.push(...(await challengeToStrongTrainerQuestGroupResponse.json()).entries);
+    eventQuestGroup.push(...await jsonCache.getProto("ChallengeToStrongTrainerQuestGroup"));
 
-    cyclicRankingEvent = (await cyclicRankingEventResponse.json()).entries;
-    cyclicRankingQuestGroup = (await cyclicRankingQuestGroupResponse.json()).entries;
-    cyclicRankingQuestGroupSchedule = (await cyclicRankingQuestGroupScheduleResponse.json()).entries;
+    cyclicRankingEvent = await jsonCache.getProto("CyclicRankingEvent");
+    cyclicRankingQuestGroup = await jsonCache.getProto("CyclicRankingQuestGroup");
+    cyclicRankingQuestGroupSchedule = await jsonCache.getProto("CyclicRankingQuestGroupSchedule");
     cyclicRankingData = getBySpecificID(cyclicRankingQuestGroupSchedule, "scheduleId");
 
-    scout = (await scoutResponse.json()).entries;
+    scout = await jsonCache.getProto("Scout");
 
-    scoutPickup = (await scoutPickupResponse.json()).entries;
-    storyQuest = (await storyQuestResponse.json()).entries;
+    scoutPickup = await jsonCache.getProto("ScoutPickup");
+    storyQuest = await jsonCache.getProto("StoryQuest");
 
-    salonGuests = (await salonGuestResponse.json()).entries;
+    salonGuests = await jsonCache.getProto("SalonGuest");
 
-    legendQuestGroup = getBySpecificID((await legendQuestGroupResponse.json()).entries, "questGroupId");
-    legendQuestGroupSchedule = getBySpecificID((await legendQuestGroupScheduleResponse.json()).entries, "scheduleId");
+    legendQuestGroup = getBySpecificID(await jsonCache.getProto("LegendQuestGroup"), "questGroupId");
+    legendQuestGroupSchedule = getBySpecificID(await jsonCache.getProto("LegendQuestGroupSchedule"), "scheduleId");
 
-    trainerRarityupBonus = (await trainerRarityupBonusResponse.json()).entries;
+    trainerRarityupBonus = await jsonCache.getProto("TrainerRarityupBonus");
 
-    schedule = await scheduleResponse.json();
+    schedule = await jsonCache.getProto("Schedule");
     getSchedule();
 
-    bannerText = await bannerTextResponse.json();
-    eventBannerList = (await eventBannerResponse.json()).entries;
-    eventName = await eventNameResponse.json();
+    bannerText = await jsonCache.getLsd("banner_text");
+    eventBannerList = await jsonCache.getProto("EventBanner");
+    eventName = await jsonCache.getLsd("event_name");
 
-    itemExchange = (await itemExchangeResponse.json()).entries;
+    itemExchange = await jsonCache.getProto("ItemExchange");
 
     const lastScheduleStartDate = Math.max(...new Set(schedule.map(s => s.startDate*1)));
 
-    loginBonus = (await loginBonusResponse.json()).entries.filter(lb => lb.startDate <= lastScheduleStartDate).map(lb => {
+    loginBonus = (await jsonCache.getProto("LoginBonus")).filter(lb => lb.startDate <= lastScheduleStartDate).map(lb => {
         lb.scheduleId = lb.loginBonusId;
         lb.startDate = lb.startDate.toString();
         lb.endDate = lb.endDate.toString();
@@ -245,51 +154,40 @@ async function getData() {
 
     loginBonusIds = loginBonus.map(lb => lb.loginBonusId);
 
-    loginBonusName = await loginBonusNameResponse.json();
+    loginBonusName = await jsonCache.getLsd("login_bonus_name");
 
     schedule.push(...loginBonus);
 
-    shopPurchasableItem = (await shopPurchasableItemResponse.json()).entries;
+    shopPurchasableItem = await jsonCache.getProto("ShopPurchasableItem");
 
-    loginBonusReward = (await loginBonusRewardResponse.json()).entries;
+    loginBonusReward = await jsonCache.getProto("LoginBonusReward");
 
-    jukeboxMusicName = await jukeboxMusicNameResponse.json();
+    jukeboxMusicName = await jsonCache.getLsd("jukebox_music_name");
 
-    homeEventAppeal = (await homeEventAppealResponse.json()).entries;
+    homeEventAppeal = await jsonCache.getProto("HomeEventAppeal");
 
-    scoutPickupDescr = await scoutPickupDescrResponse.json();
+    scoutPickupDescr = await jsonCache.getLsd("scout_pickup_description");
 
-    monster = (await monsterResponse.json()).entries;
-    monsterBase = (await monsterBaseResponse.json()).entries;
+    monster = await jsonCache.getProto("Monster");
+    monsterBase = await jsonCache.getProto("MonsterBase");
 
-    trainer = (await trainerResponse.json()).entries;
-    trainerBase = (await trainerBaseResponse.json()).entries;
-    trainerExRole = (await trainerExRoleResponse.json()).entries;
+    trainer = await jsonCache.getProto("Trainer");
+    trainerBase = await jsonCache.getProto("TrainerBase");
+    trainerExRole = await jsonCache.getProto("TrainerExRole");
 
-    motifTypeName = await motifTypeNameResponse.json();
+    motifTypeName = await jsonCache.getLsd("motif_type_name");
 
-    monsterNames = await monsterNameResponse.json();
-    trainerNames = await trainerNameResponse.json();
-    trainerVerboseNames = await trainerVerboseNameResponse.json();
+    monsterNames = await jsonCache.getLsd("monster_name");
+    trainerNames = await jsonCache.getLsd("trainer_name");
+    trainerVerboseNames = await jsonCache.getLsd("trainer_verbose_name");
 
-    itemSet = (await itemSetResponse.json()).entries;
+    itemSet = await jsonCache.getProto("ItemSet");
 }
 
 async function getCustomJSON() {
-    const [
-        localeSchedResponse,
-        shopTierPricesResponse,
-        versionsResponse
-    ] = await Promise.all([
-        fetch(`./data/locales/${lng}/schedule.json`),
-        fetch(`./data/custom/shop_tier_prices.json`),
-        fetch(`./data/custom/version_release_dates.json`)
-    ])
-        .catch(error => console.log(error));
-
-    schedLocales = await localeSchedResponse.json();
-    shopTierPrices = (await shopTierPricesResponse.json()).entries;
-    versions = await versionsResponse.json().then(orderByVersion);
+    schedLocales = await jsonCache.getLocale("schedule");
+    shopTierPrices = (await jsonCache.getCustom("shop_tier_prices", true));
+    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
 }
 
 function getSchedule() {
@@ -300,13 +198,13 @@ function getSchedule() {
     salonGuestsUpdate = [...new Set(salonGuests.map(sg => sg.scheduleId))];
     mainStoryUpdate = [...new Set(storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
     trainingAreaUpdate = [...new Set(storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
-    championBattleAllPeriod = [...new Set(schedule.entries.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
+    championBattleAllPeriod = [...new Set(schedule.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
     trainerRarityupBonusUpdate = [...new Set(trainerRarityupBonus.map(trb => trb.scheduleId))];
     cyclicRankingIds = [...new Set(cyclicRankingQuestGroupSchedule.map(crqg => crqg.scheduleId))];
     missionGroupIds = [...new Set(missionGroup.map(mg => mg.scheduleId))];
 
 
-    let usableSchedule = schedule.entries.filter(s =>
+    let usableSchedule = schedule.filter(s =>
         scoutIds.includes(s.scheduleId)
         || cyclicRankingIds.includes(s.scheduleId)
         || eventIds.includes(s.scheduleId)
@@ -342,21 +240,21 @@ function getBySpecificID(data, id) {
 
 
 
-function getScoutNewsText(schedule) {
+async function getScoutNewsText(schedule) {
     let scheduleScouts = scout.filter(sc => sc.scheduleId === schedule.scheduleId);
 
-    if(scheduleScouts.length === 0)
+    if (scheduleScouts.length === 0)
         return;
 
     let newsText = "";
 
-    scheduleScouts.forEach(schedScout => {
+    for (const schedScout of scheduleScouts) {
         let scoutBanners = banner.filter(b => b.bannerId === schedScout.bannerId);
 
         scoutBanners.forEach(sb => {
             newsText += `[h3]${bannerText[sb.text1Id].replaceAll("\n", " ")}`;
 
-            if(sb.text2Id > -1) {
+            if (sb.text2Id > -1) {
                 newsText += ` ${bannerText[sb.text2Id].replaceAll("\n", " ")}`;
             }
 
@@ -367,49 +265,49 @@ function getScoutNewsText(schedule) {
 
         let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
 
-        if(sPickups.length > 0) {
+        if (sPickups.length > 0) {
             newsText += "[listh]\n" +
                 "[item|nostyle][table]\n" +
                 "\t[tr][th|colspan=3]Duos à l'affiche[/th][th]Rôles[/th][th]Type[/th][th]Potentiel[/th][th]Plateau[/th][/tr]\n";
 
-            sPickups.forEach(sp => {
+            for (const sp of sPickups) {
                 newsText += "\t[tr]\n" +
-                    `\t\t[td]${getTrainerNumber(sp.trainerId)}[/td]\n` +
+                    `\t\t[td]${(getTrainerNumber(sp.trainerId))}[/td]\n` +
                     `\t\t[td][url=/page/jeuxvideo/pokemon-masters/duos/LIEN-DU-DUO]` +
                     `[img|w=80]/pages/jeuxvideo/pokemon-masters/images/personnages/bustes/PERSO.png[/img]\n` +
-                    `\t\t[b]${getTrainerName(sp.trainerId).replaceAll("\n", "[br]")}[/b][/url][/td]\n` +
+                    `\t\t[b]${(getTrainerName(sp.trainerId).replaceAll("\n", "[br]"))}[/b][/url][/td]\n` +
                     `\t\t[td]` +
                     `[img|w=80]/pages/icones/poke/MX/NUMERO.png[/img]\n` +
-                    `\t\t[b]${getMonsterNameByTrainerId(sp.trainerId)}[/b][/td]\n` +
-                    `\t\t[td][type=${removeAccents(getRoleByTrainerId(sp.trainerId).toLowerCase()).replace(" ", "-")}|MX]`;
+                    `\t\t[b]${await getMonsterNameByTrainerId(sp.trainerId)}[/b][/td]\n` +
+                    `\t\t[td][type=${removeAccents((await getRoleByTrainerId(sp.trainerId)).toLowerCase()).replace(" ", "-")}|MX]`;
 
-                let exRole = getExRoleText(sp.trainerId);
+                let exRole = await getExRoleText(sp.trainerId);
 
-                if(exRole !== null) {
+                if (exRole !== null) {
                     newsText += `[br][type=${removeAccents(exRole.toLowerCase())}-ex|MX]`;
                 }
 
                 newsText += `[/td]\n` +
-                    `\t\t[td][type=${removeAccents(getTrainerTypeName(sp.trainerId).toLowerCase())}|MX][/td]\n` +
-                    `\t\t[td]${"★".repeat(getTrainerRarity(sp.trainerId))}`;
+                    `\t\t[td][type=${removeAccents(await getTrainerTypeName(sp.trainerId).toLowerCase())}|MX][/td]\n` +
+                    `\t\t[td]${"★".repeat(await getTrainerRarity(sp.trainerId))}`;
 
-                if(hasExUnlocked(sp.trainerId)) {
+                if ((await hasExUnlocked(sp.trainerId))) {
                     newsText += `[br][type=ex|MX]`;
                 }
 
                 newsText += `[/td]\n` +
-                    `\t\t[td]${getAbilityPanelQty(sp.trainerId)} cases[/td]\n` +
+                    `\t\t[td]${await getAbilityPanelQty(sp.trainerId)} cases[/td]\n` +
                     `\t[/tr]\n`;
-            });
+            }
 
             newsText += "[/table][/item]\n\n" +
                 "[item|nostyle][table]\n" +
                 "\t[tr][th]Fin de l'affiche[/th][/tr]\n" +
-                `\t[tr][td]${getDayMonthDate(new Date(schedule.endDate*1000-1))}[/td][/tr]\n` +
+                `\t[tr][td]${getDayMonthDate(new Date(schedule.endDate * 1000 - 1))}[/td][/tr]\n` +
                 "[/table][/item]\n" +
                 "[/listh]\n\n";
         }
-    });
+    }
 
     return newsText;
 }
@@ -736,19 +634,19 @@ function printEndDate(timestamp) {
     scheduleDiv.innerHTML += `<br /><br /><strong>${schedLocales.end_date} </strong> ${endDate}`;
 }
 
-function printScouts(schedule) {
+async function printScouts(schedule) {
     let scheduleScouts = scout.filter(sc => sc.scheduleId === schedule.scheduleId);
 
-    if(scheduleScouts.length === 0)
+    if (scheduleScouts.length === 0)
         return;
 
-    scheduleScouts.forEach(schedScout => {
+    for (const schedScout of scheduleScouts) {
         let scoutBanners = banner.filter(b => b.bannerId === schedScout.bannerId);
 
         scoutBanners.forEach(sb => {
             let h3 = `<h3>${bannerText[sb.text1Id]}`;
 
-            if(sb.text2Id > -1) {
+            if (sb.text2Id > -1) {
                 h3 += ` ${bannerText[sb.text2Id]}`;
             }
 
@@ -756,7 +654,7 @@ function printScouts(schedule) {
 
             scheduleDiv.innerHTML += h3;
 
-            if(sb.bannerIdString !== "") {
+            if (sb.bannerIdString !== "") {
                 scheduleDiv.innerHTML += `<img src="./data/banner/scout/${sb.bannerIdString}.png" class="bannerImg" />\n`;
             }
         });
@@ -765,19 +663,19 @@ function printScouts(schedule) {
 
         let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
 
-        if(sPickups.length > 0) {
+        if (sPickups.length > 0) {
             scheduleDiv.innerHTML += `<br /><br /><b>${schedLocales.featured_sync_pairs}</b>\n`;
 
             let ul = `<ul style='list-style-type: disc;'>\n`;
 
-            sPickups.forEach(sp => {
-                ul += `<li><b>${getPairPrettyPrintWithUrl(sp.trainerId)}</b></li>\n`;
-            });
+            for (const sp of sPickups) {
+                ul += `<li><b>${await getPairPrettyPrintWithUrl(sp.trainerId)}</b></li>\n`;
+            }
 
             ul += "</ul>\n";
             scheduleDiv.innerHTML += ul;
         }
-    });
+    }
 }
 
 function printShopBanner(banner, schedule) {
@@ -905,7 +803,7 @@ async function printPairChanges(sched) {
     // Sortie du Rôle EX
     let ExRoleRelease = [...new Set(trainerExRole.filter(ti => ti.scheduleId === scheduleId).map(ti => { return {"trainerId" : ti.trainerId, "role" : commonLocales.role_names[ti.role] }; }))].map(exRole => { return {"trainerId" : exRole.trainerId, "type" : "exRole", "text" : schedLocales.ex_role_release.replace("{{role}}", exRole.role)}; });
 
-    let changes = trainerRelease.concat(trainerExRelease, trainerExMusicRelease, ExRoleRelease, panelChanges).sort((a, b) => getTrainerName(a.trainerId).localeCompare(getTrainerName(b.trainerId)));
+    let changes = trainerRelease.concat(trainerExRelease, trainerExMusicRelease, ExRoleRelease, panelChanges).sort(async (a, b) => (await getTrainerName(a.trainerId)).localeCompare(await getTrainerName(b.trainerId)));
 
     let lastTID = "";
 
@@ -925,22 +823,24 @@ async function printPairChanges(sched) {
 
         }
 
-        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
+        scheduleDiv.innerHTML += `<li><b>${await getPairPrettyPrintWithUrl(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
     }
 
     scheduleDiv.innerHTML += "</ul>";
 }
 
-function printSalonGuest(scheduleId) {
-    let salonGuestList = [...new Set(salonGuests.filter(sg => sg.scheduleId === scheduleId).map(sg => sg.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : schedLocales.lodge_addition}; });
+async function printSalonGuest(scheduleId) {
+    let salonGuestList = [...new Set(salonGuests.filter(sg => sg.scheduleId === scheduleId).map(sg => sg.trainerId))].map(tid => {
+        return {"trainerId": tid, "type": "add", "text": schedLocales.lodge_addition};
+    });
 
     let lastTID = "";
 
     scheduleDiv.innerHTML += "<ul>";
 
-    for(let index in salonGuestList) {
-        if(lastTID !== salonGuestList[index].trainerId) {
-            if(lastTID !== "") {
+    for (let index in salonGuestList) {
+        if (lastTID !== salonGuestList[index].trainerId) {
+            if (lastTID !== "") {
                 scheduleDiv.innerHTML += "<br />";
             }
 
@@ -948,7 +848,7 @@ function printSalonGuest(scheduleId) {
 
         }
 
-        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(salonGuestList[index].trainerId)} : </b> ${salonGuestList[index].text}</li>`;
+        scheduleDiv.innerHTML += `<li><b>${await getPairPrettyPrintWithUrl(salonGuestList[index].trainerId)} : </b> ${salonGuestList[index].text}</li>`;
     }
 }
 
@@ -1228,39 +1128,43 @@ function printCalendars(startDates) {
     } while(date.getMonth() <= endDate.getMonth() && date.getFullYear() <= endDate.getFullYear());
 }
 
-function setVersionInfos(id) {
+async function setVersionInfos(id) {
     let version = versions.find(v => v.version === id);
 
-    if(version === undefined)
+    if (version === undefined)
         return;
 
     scheduleDiv.innerHTML = "";
 
-    let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag, musicFlag, loginBonusFlag, championBattleFlag, missionFlag;
+    let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag, musicFlag, loginBonusFlag, championBattleFlag,
+        missionFlag;
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
-    printCalendars(startDates.map(t => new Date(t*1000)));
+    printCalendars(startDates.map(t => new Date(t * 1000)));
 
-    startDates.forEach(timestamp => {
+    for (const timestamp of startDates) {
 
         scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = musicFlag = loginBonusFlag = championBattleFlag = missionFlag = true;
         treatedEvents = [];
 
-        let date = new Date(timestamp*1000);
-        scheduleDiv.innerHTML += `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat(locale, {dateStyle: 'full', timeStyle: 'short'}).format(date)}</h1>\n`;
+        let date = new Date(timestamp * 1000);
+        scheduleDiv.innerHTML += `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat(locale, {
+            dateStyle: 'full',
+            timeStyle: 'short'
+        }).format(date)}</h1>\n`;
 
-        version.schedule.filter(schedule => schedule.startDate === timestamp).forEach(sched => {
-            switch(sched.scheduleType.name) {
+        for (const sched of version.schedule.filter(schedule => schedule.startDate === timestamp)) {
+            switch (sched.scheduleType.name) {
                 case "scout":
-                    if(scoutFlag) {
+                    if (scoutFlag) {
                         scheduleDiv.innerHTML += `<h2>${schedLocales.scouts}</h2>`;
                         scoutFlag = false;
                     }
-                    printScouts(sched);
+                    await printScouts(sched);
                     break;
 
                 case "championBattle":
-                    if(championBattleFlag) {
+                    if (championBattleFlag) {
                         scheduleDiv.innerHTML += `<h2>${schedLocales.champion_stadium}</h2>`;
                         championBattleFlag = false;
                     }
@@ -1268,23 +1172,23 @@ function setVersionInfos(id) {
                     break;
 
                 case "event":
-                    if(eventFlag) {
+                    if (eventFlag) {
                         scheduleDiv.innerHTML += `<h2>${schedLocales.events}</h2>`;
                         eventFlag = false;
                     }
 
-                    if(sched.isLegendaryBattle) {
+                    if (sched.isLegendaryBattle) {
                         printLegBat(sched);
                         break;
                     }
 
-                    if(sched.isHomeAppeal) {
+                    if (sched.isHomeAppeal) {
                         printHomeAppealEvent(sched);
                         break;
                     }
 
-                    if(sched.isCyclicRanking) {
-                        if(sched.originalSD) {
+                    if (sched.isCyclicRanking) {
+                        if (sched.originalSD) {
                             printCyclicRanking(sched);
                         }
                         break;
@@ -1294,7 +1198,7 @@ function setVersionInfos(id) {
                     break;
 
                 case "shop":
-                    if(shopFlag) {
+                    if (shopFlag) {
                         scheduleDiv.innerHTML += `<h2>${schedLocales.gem_specials}</h2>`;
                         shopFlag = false;
                     }
@@ -1302,24 +1206,24 @@ function setVersionInfos(id) {
                     break;
 
                 case "salon":
-                    if(salonFlag) {
+                    if (salonFlag) {
                         scheduleDiv.innerHTML += `<h2>${schedLocales.trainer_lodge}</h2>`;
                         scheduleDiv.innerHTML += `<img src="${salonBannerPath}" class="bannerImg" />`;
                         salonFlag = false;
                     }
-                    printSalonGuest(sched.scheduleId);
+                    await printSalonGuest(sched.scheduleId);
                     break;
 
                 case "chara":
-                    if(charaFlag) {
+                    if (charaFlag) {
                         scheduleDiv.innerHTML += `<h2>${schedLocales.pair_addition_update}</h2>`;
                         charaFlag = false;
                     }
-                    printPairChanges(sched);
+                    await printPairChanges(sched);
                     break;
 
                 case "mission":
-                    if(missionFlag) {
+                    if (missionFlag) {
                         scheduleDiv.innerHTML += `<h2>${schedLocales.mission}</h2>`;
                         missionFlag = false;
                     }
@@ -1327,7 +1231,7 @@ function setVersionInfos(id) {
                     break;
 
                 case "music":
-                    if(musicFlag) {
+                    if (musicFlag) {
                         scheduleDiv.innerHTML += `<h2>${schedLocales.jukebox}</h2>`;
                         musicFlag = false;
                     }
@@ -1335,28 +1239,28 @@ function setVersionInfos(id) {
                     break;
 
                 case "loginBonus":
-                    if(loginBonusFlag) {
+                    if (loginBonusFlag) {
                         scheduleDiv.innerHTML += `<h2>${schedLocales.login_bonus}</h2>`;
                         loginBonusFlag = false;
                     }
                     printLoginBonus(sched);
                     break;
             }
-        });
-    });
+        }
+    }
 }
 
-function setVersion(id, setUrl = true) {
+async function setVersion(id, setUrl = true) {
     versionSelect.value = id;
     nextContentBtn.href = "#"
     nextContentBtn.style.display = "none";
 
-    setVersionInfos(id);
+    await setVersionInfos(id);
 
-    if(setUrl)
+    if (setUrl)
         setUrlEventID(versionSelect.value);
 
-    if(window.location.hash !== "" && window.location.hash !== "#") {
+    if (window.location.hash !== "" && window.location.hash !== "#") {
         setTimeout(function () {
             let tmp = document.createElement("a");
             tmp.href = window.location.hash;
@@ -1407,8 +1311,8 @@ async function init() {
     scheduleByVersion();
 
 
-    versionSelect.onchange = function() {
-        setVersion(versionSelect.value);
+    versionSelect.onchange = async function() {
+        await setVersion(versionSelect.value);
     };
 
     const url = new URL(window.location);
@@ -1418,7 +1322,7 @@ async function init() {
         versionSelect.value = urlVersionId;
     }
 
-    setVersion(versionSelect.value, false);
+    await setVersion(versionSelect.value, false);
 
     //downloadData()
 
