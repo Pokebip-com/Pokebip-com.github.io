@@ -215,7 +215,7 @@ function getSchedule() {
         || trainerRarityupBonusUpdate.includes(s.scheduleId)
         || salonGuestsUpdate.includes(s.scheduleId)
         || s.scheduleId.startsWith("chara_")
-        || s.scheduleId.includes("_Shop_otoku")
+        || s.scheduleId.includes("_Shop_")
         || s.scheduleId.endsWith("_musiccoin_FOREVER")
         || (s.scheduleId.includes("_ChampionBattle_")
             && !(s.scheduleId.endsWith("_AllPeriod")
@@ -578,7 +578,7 @@ function scheduleByVersion() {
                 else if(s.scheduleId.startsWith("chara_")) {
                     s.scheduleType = { "name" : "chara", "priority": "40" };
                 }
-                else if(s.scheduleId.includes("_Shop_otoku")) {
+                else if(s.scheduleId.includes("_Shop_")) {
                     s.scheduleType = { "name" : "shop", "priority": "50" };
                 }
                 else if(s.scheduleId.endsWith("_musiccoin_FOREVER")) {
@@ -634,11 +634,13 @@ function printEndDate(timestamp) {
     scheduleDiv.innerHTML += `<br /><br /><strong>${schedLocales.end_date} </strong> ${endDate}`;
 }
 
-async function printScouts(schedule) {
+async function printScouts(schedule, titleText = "") {
     let scheduleScouts = scout.filter(sc => sc.scheduleId === schedule.scheduleId);
 
     if (scheduleScouts.length === 0)
         return;
+
+    scheduleDiv.innerHTML += titleText;
 
     for (const schedScout of scheduleScouts) {
         let scoutBanners = banner.filter(b => b.bannerId === schedScout.bannerId);
@@ -718,7 +720,7 @@ function printShopBanner(banner, schedule) {
     printEndDate(schedule.endDate);
 }
 
-function printEventBanner(eventBanner, lastSchedule) {
+function printEventBanner(eventBanner, lastSchedule, titleText = "") {
     let h3 = `<h3>${bannerText[eventBanner.text1Id]}`;
 
     if(eventBanner.text2Id > -1) {
@@ -726,6 +728,8 @@ function printEventBanner(eventBanner, lastSchedule) {
     }
 
     h3 += "</h3>";
+
+    scheduleDiv.innerHTML += titleText;
 
     scheduleDiv.innerHTML += h3;
 
@@ -768,7 +772,7 @@ function printEvents(sched) {
     });
 }
 
-async function printPairChanges(sched) {
+async function printPairChanges(sched, titleText = "") {
 
     const scheduleId = sched.scheduleId;
 
@@ -808,8 +812,10 @@ async function printPairChanges(sched) {
     let lastTID = "";
 
     if(changes.length === 0){
-        scheduleDiv.innerHTML += schedLocales.misc_pair_addition;
+        return;
     }
+
+    scheduleDiv.innerHTML += titleText;
 
     scheduleDiv.innerHTML += "<ul>";
 
@@ -829,10 +835,15 @@ async function printPairChanges(sched) {
     scheduleDiv.innerHTML += "</ul>";
 }
 
-async function printSalonGuest(scheduleId) {
+async function printSalonGuest(scheduleId, titleText = "") {
     let salonGuestList = [...new Set(salonGuests.filter(sg => sg.scheduleId === scheduleId).map(sg => sg.trainerId))].map(tid => {
         return {"trainerId": tid, "type": "add", "text": schedLocales.lodge_addition};
     });
+
+    if(salonGuestList.length === 0)
+        return;
+
+    scheduleDiv.innerHTML += titleText;
 
     let lastTID = "";
 
@@ -852,13 +863,13 @@ async function printSalonGuest(scheduleId) {
     }
 }
 
-function printShopOffers(schedule) {
+function printShopOffers(schedule, titleText = "") {
     let eventBanners = eventBannerList.filter(eb => eb.scheduleId === schedule.scheduleId);
-
-    console.log(schedule);
 
     if(eventBanners.length === 0)
         return;
+
+    scheduleDiv.innerHTML += titleText;
 
     eventBanners.forEach(eb => {
         let banners = banner.filter(b => b.bannerId === eb.bannerId);
@@ -867,17 +878,26 @@ function printShopOffers(schedule) {
     });
 }
 
-function printChampionBattle(sched) {
+function printChampionBattle(sched, titleText = "") {
     let period = championBattleAllPeriod.find(cbap => sched.startDate >= cbap.startDate && sched.startDate < cbap.endDate);
     let openingSchedule = championBattleRegionOpeningSchedule.find(cbros => cbros.scheduleId === period.scheduleId);
     let cbr = championBattleRegion.find(cbr => cbr.championBattleRegionId === openingSchedule.championBattleId);
     let ban = banner.find(b => b.bannerId === cbr.bannerId);
 
-    printEventBanner(ban, sched);
+    if (!ban) {
+        return;
+    }
+
+    printEventBanner(ban, sched, titleText);
 }
 
-function printHomeAppealEvent(schedule) {
+function printHomeAppealEvent(schedule, titleText = "") {
     const eventAppeal = homeEventAppeal.filter(hea => hea.bannerScheduleId === schedule.scheduleId);
+
+    if (eventAppeal.length === 0)
+        return;
+
+    scheduleDiv.innerHTML += titleText;
 
     eventAppeal.forEach(ea => {
         let banners = banner.filter(b => b.bannerId === ea.bannerId);
@@ -886,7 +906,7 @@ function printHomeAppealEvent(schedule) {
     })
 }
 
-function printCyclicRanking(schedule) {
+function printCyclicRanking(schedule, titleText = "") {
     let secondsPassed = parseInt(schedule.startDate) - parseInt(schedule.originalSD);
     let CRQuests = cyclicRankingQuestGroup.filter(crqg => crqg.questGroupId === schedule.questGroupId);
     let CRQNum = 0;
@@ -900,24 +920,49 @@ function printCyclicRanking(schedule) {
 
     let quest = CRQuests.find(crq => crq.cyclicRankingQuestNum === CRQNum);
     let banners = banner.filter(b => b.bannerId === quest.bannerId);
+
+    if(banners.length === 0)
+        return;
+
+    scheduleDiv.innerHTML += titleText;
+
     banners.forEach(ban => printEventBanner(ban, schedule));
 }
 
-function printLegBat(schedule) {
+function printLegBat(schedule, titleText = "") {
+    let titleTextPrinted = false;
     let banners = banner.filter(b => b.bannerId === legendQuestGroup[legendQuestGroupSchedule[schedule.scheduleId][0].questGroupId][0].bannerId);
+
+    if (banners.length === 0)
+        return;
+
+    scheduleDiv.innerHTML += titleText;
+
     banners.forEach(ban => printEventBanner(ban, schedule));
 }
 
-function printNewMissions(schedule) {
+function printNewMissions(schedule, titleText = "") {
     let miGr = missionGroup.filter(mg => mg.scheduleId === schedule.scheduleId);
+
+    if (miGr.length === 0) {
+        return;
+    }
+
+    scheduleDiv.innerHTML += titleText;
+
     miGr.forEach(mg => {
         let banners = banner.filter(b => b.bannerId === mg.bannerId);
         banners.forEach(ban => printEventBanner(ban, schedule));
     });
 }
 
-function printNewMusics(scheduleId) {
+function printNewMusics(scheduleId, titleText = "") {
     let itemIds = itemExchange.filter(ie => ie.scheduleId === scheduleId).map(ie => ie.itemId);
+
+    if (itemIds.length === 0)
+        return;
+
+    scheduleDiv.innerHTML += titleText;
 
     scheduleDiv.innerHTML += `<b>${schedLocales.jukebox_music}</b>`;
 
@@ -931,10 +976,16 @@ function printNewMusics(scheduleId) {
     scheduleDiv.innerHTML += ul;
 }
 
-async function printLoginBonus(loginBonus) {
+async function printLoginBonus(loginBonus, titleText = "") {
 
     if (loginBonus.bannerId > -1) {
         let lbBanner = banner.filter(b => b.bannerId === loginBonus.bannerId);
+
+        if (lbBanner.length === 0) {
+            return;
+        }
+
+        scheduleDiv.innerHTML += titleText;
 
         lbBanner.forEach(ban => printEventBanner(ban, loginBonus));
     } else {
@@ -984,6 +1035,7 @@ async function printLoginBonus(loginBonus) {
                 break;
         }
 
+        scheduleDiv.innerHTML += titleText;
         scheduleDiv.innerHTML += entryStr;
         printEndDate(loginBonus.endDate);
     }
@@ -1156,96 +1208,97 @@ async function setVersionInfos(id) {
         }).format(date)}</h1>\n`;
 
         for (const sched of version.schedule.filter(schedule => schedule.startDate === timestamp)) {
+            let titleText = ""
+
             switch (sched.scheduleType.name) {
                 case "scout":
                     if (scoutFlag) {
-                        scheduleDiv.innerHTML += `<h2>${schedLocales.scouts}</h2>`;
                         scoutFlag = false;
+                        titleText = `<h2>${schedLocales.scouts}</h2>`;
                     }
-                    await printScouts(sched);
+                    await printScouts(sched, titleText);
                     break;
 
                 case "championBattle":
                     if (championBattleFlag) {
-                        scheduleDiv.innerHTML += `<h2>${schedLocales.champion_stadium}</h2>`;
                         championBattleFlag = false;
+                        titleText = `<h2>${schedLocales.champion_stadium}</h2>`;
                     }
-                    printChampionBattle(sched);
+                    printChampionBattle(sched, titleText);
                     break;
 
                 case "event":
                     if (eventFlag) {
-                        scheduleDiv.innerHTML += `<h2>${schedLocales.events}</h2>`;
                         eventFlag = false;
+                        titleText = `<h2>${schedLocales.events}</h2>`;
                     }
 
                     if (sched.isLegendaryBattle) {
-                        printLegBat(sched);
+                        printLegBat(sched, titleText);
                         break;
                     }
 
                     if (sched.isHomeAppeal) {
-                        printHomeAppealEvent(sched);
+                        printHomeAppealEvent(sched, titleText);
                         break;
                     }
 
                     if (sched.isCyclicRanking) {
                         if (sched.originalSD) {
-                            printCyclicRanking(sched);
+                            printCyclicRanking(sched, titleText);
                         }
                         break;
                     }
 
-                    printEvents(sched);
+                    printEvents(sched, titleText);
                     break;
 
                 case "shop":
                     if (shopFlag) {
-                        scheduleDiv.innerHTML += `<h2>${schedLocales.gem_specials}</h2>`;
                         shopFlag = false;
+                        titleText = `<h2>${schedLocales.gem_specials}</h2>`;
                     }
-                    printShopOffers(sched);
+                    printShopOffers(sched, titleText);
                     break;
 
                 case "salon":
                     if (salonFlag) {
-                        scheduleDiv.innerHTML += `<h2>${schedLocales.trainer_lodge}</h2>`;
-                        scheduleDiv.innerHTML += `<img src="${salonBannerPath}" class="bannerImg" />`;
                         salonFlag = false;
+                        titleText = `<h2>${schedLocales.trainer_lodge}</h2>\n<img src="${salonBannerPath}" class="bannerImg" />`;
                     }
-                    await printSalonGuest(sched.scheduleId);
+                    await printSalonGuest(sched.scheduleId, titleText);
                     break;
 
                 case "chara":
                     if (charaFlag) {
-                        scheduleDiv.innerHTML += `<h2>${schedLocales.pair_addition_update}</h2>`;
                         charaFlag = false;
+                        titleText = `<h2>${schedLocales.pair_addition_update}</h2>`;
                     }
-                    await printPairChanges(sched);
+                    await printPairChanges(sched, titleText);
                     break;
 
                 case "mission":
                     if (missionFlag) {
-                        scheduleDiv.innerHTML += `<h2>${schedLocales.mission}</h2>`;
                         missionFlag = false;
+                        titleText = `<h2>${schedLocales.mission}</h2>`;
                     }
-                    printNewMissions(sched);
+                    printNewMissions(sched, titleText);
                     break;
 
                 case "music":
                     if (musicFlag) {
-                        scheduleDiv.innerHTML += `<h2>${schedLocales.jukebox}</h2>`;
                         musicFlag = false;
+                        titleText = `<h2>${schedLocales.jukebox}</h2>`;
                     }
-                    printNewMusics(sched.scheduleId);
+                    printNewMusics(sched.scheduleId, titleText);
                     break;
 
                 case "loginBonus":
                     if (loginBonusFlag) {
-                        scheduleDiv.innerHTML += `<h2>${schedLocales.login_bonus}</h2>`;
                         loginBonusFlag = false;
+                        titleText = `<h2>${schedLocales.login_bonus}</h2>`;
                     }
-                    await printLoginBonus(sched);
+                    await printLoginBonus(sched, titleText);
                     break;
             }
         }
