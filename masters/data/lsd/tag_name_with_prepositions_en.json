@@ -35,6 +35,7 @@
     "20020007": "the Alola theme",
     "20020008": "the Galar theme",
     "20020009": "the Paldea theme",
+    "20020010": "the Pasio theme",
     "30010001": "Physical",
     "30010002": "Special",
     "40000209": "Restrain effect",
@@ -63,6 +64,7 @@
     "40000245": "Dark Type Rebuff",
     "40000246": "Steel Type Rebuff",
     "40000247": "Fairy Type Rebuff",
+    "40000266": "Sync Move ↑ Next effect",
     "40000301": "Physical Damage Reduction effect",
     "40000302": "Special Damage Reduction effect",
     "40000307": "Critical-Hit Defense effect",
@@ -99,6 +101,7 @@
     "40000383": "Alola Circle (Defensive)",
     "40000385": "Galar Circle (Special)",
     "40000387": "Paldea Circle (Physical)",
+    "40000392": "Pasio Circle (Defensive)",
     "50000001": "Normal",
     "50000002": "Fire",
     "50000003": "Water",
@@ -116,5 +119,12 @@
     "50000015": "Dragon",
     "50000016": "Dark",
     "50000017": "Steel",
-    "50000018": "Fairy"
+    "50000018": "Fairy",
+    "51000004": "the Electric theme",
+    "51000005": "the Grass theme",
+    "51000006": "the Ice theme",
+    "51000009": "the Ground theme",
+    "51000011": "the Psychic theme",
+    "51000015": "the Dragon theme",
+    "51000017": "the Steel theme"
 }

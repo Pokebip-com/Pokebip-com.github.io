@@ -35,6 +35,7 @@
     "20020007": "das Alola-Attribut",
     "20020008": "das Galar-Attribut",
     "20020009": "das Paldea-Attribut",
+    "20020010": "das Passio-Attribut",
     "30010001": "Physisch",
     "30010002": "Spezial",
     "40000209": "Effekt Wechselsperre",
@@ -63,6 +64,7 @@
     "40000245": "Unlichtwiderstand",
     "40000246": "Stahlwiderstand",
     "40000247": "Feenwiderstand",
+    "40000266": "Effekt Folge-GA-Stärke↑",
     "40000301": "Effekt Physischer Schaden↓",
     "40000302": "Effekt Spezial-Schaden↓",
     "40000307": "Effekt Volltrefferschutz",
@@ -99,6 +101,7 @@
     "40000383": "Alolas Freundeskreis (Verteidigung)",
     "40000385": "Galars Freundeskreis (Spezial)",
     "40000387": "Paldeas Freundeskreis (Physisch)",
+    "40000392": "Passios Freundeskreis (Verteidigung)",
     "50000001": "Normal",
     "50000002": "Feuer",
     "50000003": "Wasser",
@@ -116,5 +119,12 @@
     "50000015": "Drache",
     "50000016": "Unlicht",
     "50000017": "Stahl",
-    "50000018": "Fee"
+    "50000018": "Fee",
+    "51000004": "das Elektro-Attribut",
+    "51000005": "das Pflanzen-Attribut",
+    "51000006": "das Eis-Attribut",
+    "51000009": "das Boden-Attribut",
+    "51000011": "das Psycho-Attribut",
+    "51000015": "das Drachen-Attribut",
+    "51000017": "das Stahl-Attribut"
 }

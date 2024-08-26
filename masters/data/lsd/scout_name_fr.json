@@ -164,5 +164,8 @@
     "event_6060_1W_MasterTicket_01": "Appel Duo saisonn.\ngaranti : Flo !",
     "event_6060_1W_SuperTicket_02": "Appel Duo saisonn.\ntaux ↑ : Margie !",
     "event_6060_1W_MasterTicket_02": "Appel Duo saisonn.\ngaranti : Margie !",
-    "event_6060_1W_SuperTicket_05": "Appel Duo\nsaisonnier taux ↑"
+    "event_6060_1W_SuperTicket_05": "Appel Duo\nsaisonnier taux ↑",
+    "event_6080_2W_MasterTicket_01": "Appel Duo garanti :\nMalva !",
+    "event_6080_2W_MasterTicket_02": "Appel Duo garanti :\nChuck !",
+    "event_6080_2W_MasterTicket_03": "Appel Duo garanti :\nTrovato !"
 }

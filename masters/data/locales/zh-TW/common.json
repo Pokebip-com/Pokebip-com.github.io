@@ -1,9 +1,9 @@
 {
   "role_names" : [
-    "攻擊型 (物理)", "攻擊型 (特殊)", "輔助型", "技術型", "速戰型", "場地型"
+    "攻擊型 (物理)", "攻擊型 (特殊)", "輔助型", "技術型", "速戰型", "場地型", "複合型"
   ],
   "role_name_standard" : [
-    "攻擊型", "攻擊型", "輔助型", "技術型", "速戰型", "場地型"
+    "攻擊型", "攻擊型", "輔助型", "技術型", "速戰型", "場地型", "複合型"
   ],
   "category_names" : {
     "Physical" : "Physical",
@@ -16,7 +16,8 @@
     "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
     "Sync move power is increased by 50 %.",
     "Sync move countdown is reduced by three the first time the user's Sync move is used each battle.",
-    "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only."
+    "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only.",
+    "Lowers the opponent's Type Rebuff of a particular type the first time the user's Sync move is used each battle."
   ],
   "hp" : "HP",
   "atk" : "攻擊",

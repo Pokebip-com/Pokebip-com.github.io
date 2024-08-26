@@ -67,5 +67,8 @@
     "legend_rule_6060_003": "La primera vez que los PS de Machamp\nbajan al 80% o menos y la primera vez que\nbajan al 50% o menos, se quedan a esos\nrespectivos porcentajes.",
     "legend_rule_6070_001": "La primera vez que los PS de Mewtwo\nbajan al 80% o menos y la primera vez que\nbajan al 40% o menos, se quedan a esos\nrespectivos porcentajes.",
     "legend_rule_6070_002": "Cuando aumentan las características del\nrival, se potencian o bien sus movimientos,\no bien sus movimientos y sus movimientos\ncompi.",
-    "legend_rule_6070_003": "Cuando el rival no está afectado por efectos\nde campo, se triplican su Defensa y su\nDefensa Especial."
+    "legend_rule_6070_003": "Cuando el rival no está afectado por efectos\nde campo, se triplican su Defensa y su\nDefensa Especial.",
+    "legend_rule_6080_001": "La primera vez que los PS de Latios bajan al\n60% o menos, se quedan a ese porcentaje.",
+    "legend_rule_6080_002": "Cuanto más aumentan las características del\nrival, más se reduce el daño que recibe.",
+    "legend_rule_6080_003": "Se potencian los movimientos y los\nmovimientos compi de cada rival cuando\naumentan su Ataque Especial, su Ataque o\nsu Defensa Especial, respectivamente."
 }

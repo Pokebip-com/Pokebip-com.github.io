@@ -66,5 +66,10 @@
 { "requirementId": 64, "u2": 74, "u3": 6 },
 { "requirementId": 65, "u2": 88, "u3": 5 },
 { "requirementId": 66, "u2": 57, "u3": 5 },
-{ "requirementId": 67, "u2": 92, "u3": 4 }
+{ "requirementId": 67, "u2": 92, "u3": 4 },
+{ "requirementId": 68, "u2": 189, "u3": 0 },
+{ "requirementId": 69, "u2": 193, "u3": 0 },
+{ "requirementId": 70, "u2": 139, "u3": 0 },
+{ "requirementId": 71, "u2": 78, "u3": 5 },
+{ "requirementId": 72, "u2": 110, "u3": 6 }
 ]}

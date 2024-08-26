@@ -3265,5 +3265,20 @@
 { "skillSetId": "300044", "passiveSkillId": 30034704, "u2": "", "u3": "", "scheduleId": "FOREVER" },
 { "skillSetId": "300045", "passiveSkillId": 30011503, "u2": "", "u3": "", "scheduleId": "FOREVER" },
 { "skillSetId": "300045", "passiveSkillId": 30025302, "u2": "", "u3": "", "scheduleId": "FOREVER" },
-{ "skillSetId": "300045", "passiveSkillId": 30030202, "u2": "", "u3": "", "scheduleId": "FOREVER" }
+{ "skillSetId": "300045", "passiveSkillId": 30030202, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300046", "passiveSkillId": 30011803, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300046", "passiveSkillId": 30024402, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300046", "passiveSkillId": 30031804, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300047", "passiveSkillId": 30015202, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300047", "passiveSkillId": 30020102, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300047", "passiveSkillId": 30030202, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300048", "passiveSkillId": 30015002, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300048", "passiveSkillId": 30020302, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300048", "passiveSkillId": 30034704, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300049", "passiveSkillId": 30010202, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300049", "passiveSkillId": 30025202, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300049", "passiveSkillId": 30030102, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300050", "passiveSkillId": 30015202, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300050", "passiveSkillId": 30023303, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300050", "passiveSkillId": 30030303, "u2": "", "u3": "", "scheduleId": "FOREVER" }
 ]}

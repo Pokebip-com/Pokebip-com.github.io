@@ -67,5 +67,8 @@
     "legend_rule_6060_003": "I PS di Machamp restano all'80% o al 50% la\nprima volta che subisce danni che farebbero\nscendere i suoi PS all'80% o al 50% o meno.",
     "legend_rule_6070_001": "I PS di Mewtwo restano all'80% o al 40% la\nprima volta che subisce danni che farebbero\nscendere i suoi PS all'80% o al 40% o meno.",
     "legend_rule_6070_002": "Se le statistiche degli avversari aumentano,\nle loro mosse, oppure le loro mosse\ne Unimosse, vengono potenziate.",
-    "legend_rule_6070_003": "Se non sono presenti effetti sul campo\navversario, la Difesa e la Difesa Speciale\ndegli avversari sono triplicate."
+    "legend_rule_6070_003": "Se non sono presenti effetti sul campo\navversario, la Difesa e la Difesa Speciale\ndegli avversari sono triplicate.",
+    "legend_rule_6080_001": "I PS di Latios rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
+    "legend_rule_6080_002": "I danni subiti dagli avversari diminuiscono\nin proporzione al totale delle modifiche\nalle loro statistiche.",
+    "legend_rule_6080_003": "Se l'Attacco, l'Attacco Speciale o la Difesa\nSpeciale degli avversari aumenta, le loro\nmosse, oppure le loro mosse e Unimosse,\nvengono potenziate."
 }

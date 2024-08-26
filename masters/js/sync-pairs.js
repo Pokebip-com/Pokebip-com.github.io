@@ -1,5 +1,6 @@
 let ability;
 let abilityPanel;
+let abilityReleaseCondition;
 let actorDress;
 let exRoleStatusUp;
 let monster;
@@ -60,6 +61,8 @@ async function getData() {
     ability = await jsonCache.getProto("Ability");
 
     abilityPanel = await jsonCache.getProto("AbilityPanel");
+
+    abilityReleaseCondition = await jsonCache.getProto("AbilityReleaseCondition");
 
     actorDress = await jsonCache.getProto("ActorDress");
 
@@ -504,7 +507,7 @@ function setPairPassives(contentDiv, variation = null) {
 
     table.appendChild(titleRow);
 
-    for(let i = 1; i <= 4; i++) {
+    for(let i = 1; i <= 5; i++) {
         const passiveId = variation && variation[`passive${i}Id`] > 0 ? variation[`passive${i}Id`] : tr[`passive${i}Id`];
 
         if(passiveId === 0)
@@ -1328,7 +1331,15 @@ function setSyncGrid() {
         .map(ap => {
             ap.ability = ability.find(a => a.abilityId === ap.abilityId);
             ap.level = 1;
-            ap.conditionIds.forEach(cid => (cid >= 12 && cid <= 15) ? ap.level = cid-10 : "");
+            ap.conditionIds.forEach(cid => {
+                let releaseCon = abilityReleaseCondition.find(arc => arc.conditionId === cid);
+
+                switch(releaseCon.type) {
+                    case 6:
+                    case 7:
+                        ap.level = releaseCon.parameter;
+                }
+            });
             ap.type = getAbilityType(ap.ability);
             ap.isNew = charaScheduleId.includes(ap.scheduleId);
             return ap;
@@ -1713,7 +1724,7 @@ function getPassiveSkillBipCode(t, v = null) {
         + `\t[tr][th|colspan=2]Talents passifs[/th][/tr]\n`
         + `\t[tr][th|width=200px]Nom[/th][th|width=400px]Effet[/th][/tr]\n`;
 
-    for(let i = 1; i <= 4; i++) {
+    for(let i = 1; i <= 5; i++) {
         const passiveId = v && v[`passive${i}Id`] > 0 ? v[`passive${i}Id`] : t[`passive${i}Id`];
 
         if(passiveId === 0)
@@ -2065,7 +2076,15 @@ async function getPairBipCode(trainerId) {
         .map(ap => {
             ap.ability = ability.find(a => a.abilityId === ap.abilityId);
             ap.level = 1;
-            ap.conditionIds.forEach(cid => (cid >= 12 && cid <= 15) ? ap.level = cid - 10 : "");
+            ap.conditionIds.forEach(cid => {
+                let releaseCon = abilityReleaseCondition.find(arc => arc.conditionId === cid);
+
+                switch(releaseCon.type) {
+                    case 6:
+                    case 7:
+                        ap.level = releaseCon.parameter;
+                }
+            });
             ap.type = getAbilityType(ap.ability);
             return ap;
         });

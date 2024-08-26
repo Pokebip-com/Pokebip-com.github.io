@@ -164,5 +164,8 @@
     "event_6060_1W_MasterTicket_01": "유채 시즌 한정 확정 B서치",
     "event_6060_1W_SuperTicket_02": "아세로라 시즌 한정 출현율업 B서치",
     "event_6060_1W_MasterTicket_02": "아세로라 시즌 한정 확정 B서치",
-    "event_6060_1W_SuperTicket_05": "시즌 한정 출현율업 B서치"
+    "event_6060_1W_SuperTicket_05": "시즌 한정 출현율업 B서치",
+    "event_6080_2W_MasterTicket_01": "파키라 확정 버디즈서치",
+    "event_6080_2W_MasterTicket_02": "사도 확정 버디즈서치",
+    "event_6080_2W_MasterTicket_03": "트로바 확정 버디즈서치"
 }

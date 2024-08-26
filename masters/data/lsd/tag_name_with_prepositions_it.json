@@ -35,6 +35,7 @@
     "20020007": "del gruppo \"Alola\"",
     "20020008": "del gruppo \"Galar\"",
     "20020009": "del gruppo \"Paldea\"",
+    "20020010": "del gruppo \"Pasio\"",
     "30010001": "Fisica",
     "30010002": "Speciale",
     "40000209": "effetto \"Sostituzione vietata\"",
@@ -63,6 +64,7 @@
     "40000245": "Protezione Buio",
     "40000246": "Protezione Acciaio",
     "40000247": "Protezione Folletto",
+    "40000266": "effetto \"Prossima Unimossa ↑\"",
     "40000301": "effetto \"Riduzione danni fisici\"",
     "40000302": "effetto \"Riduzione danni speciali\"",
     "40000307": "effetto \"Blocco brutti colpi\"",
@@ -99,6 +101,7 @@
     "40000383": "Cerchia di Alola (difensiva)",
     "40000385": "Cerchia di Galar (danni speciali)",
     "40000387": "Cerchia di Paldea (danni fisici)",
+    "40000392": "Cerchia di Pasio (difensiva)",
     "50000001": "Normale",
     "50000002": "Fuoco",
     "50000003": "Acqua",
@@ -116,5 +119,12 @@
     "50000015": "Drago",
     "50000016": "Buio",
     "50000017": "Acciaio",
-    "50000018": "Folletto"
+    "50000018": "Folletto",
+    "51000004": "del gruppo \"Elettro\"",
+    "51000005": "del gruppo \"Erba\"",
+    "51000006": "del gruppo \"Ghiaccio\"",
+    "51000009": "del gruppo \"Terra\"",
+    "51000011": "del gruppo \"Psico\"",
+    "51000015": "del gruppo \"Drago\"",
+    "51000017": "del gruppo \"Acciaio\""
 }

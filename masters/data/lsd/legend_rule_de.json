@@ -67,5 +67,8 @@
     "legend_rule_6060_003": "Fallen Machomeis KP das erste Mal auf 80 %\nund 50 %, hält es mit der jeweiligen Anzahl\nan KP durch.",
     "legend_rule_6070_001": "Fallen Mewtus KP das erste Mal auf 80 %\nund 40 %, hält es mit der jeweiligen Anzahl\nan KP durch.",
     "legend_rule_6070_002": "Erhöht die Stärke von Attacken oder von\nAttacken und der Gefährtenattacke des\nGegners, wenn seine Statuswerte erhöht\nsind.",
-    "legend_rule_6070_003": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht."
+    "legend_rule_6070_003": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
+    "legend_rule_6080_001": "Fallen Latios’ KP das erste Mal auf 60 %,\nhält es mit dieser Anzahl an KP durch.",
+    "legend_rule_6080_002": "Der Schaden des Gegners sinkt abhängig\nvon der Summe der erhöhten Statuswerte.",
+    "legend_rule_6080_003": "Die Attacken und Gefährtenattacken der\nGegner sind verstärkt, wenn ihr Angriff, ihr\nSp.-Ang., oder ihre Sp.-Vert. erhöht sind."
 }

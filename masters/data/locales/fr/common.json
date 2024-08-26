@@ -1,9 +1,9 @@
 {
   "role_names" : [
-    "Attaquant (Physique)", "Attaquant (Spécial)", "Soutien", "Tacticien", "Accélérateur", "Régisseur"
+    "Attaquant (Physique)", "Attaquant (Spécial)", "Soutien", "Tacticien", "Accélérateur", "Régisseur", "Multi"
   ],
   "role_name_standard" : [
-    "Attaquant", "Attaquant", "Soutien", "Tacticien", "Accélérateur", "Régisseur"
+    "Attaquant", "Attaquant", "Soutien", "Tacticien", "Accélérateur", "Régisseur", "Multi"
   ],
   "category_names" : {
     "Physical" : "Physique",
@@ -16,7 +16,8 @@
     "Augmente la détermination de deux rangs la première fois qu'une capacité Duo est utilisée.",
     "La puissance des capacités Duo est augmentée de 50 %.",
     "La première fois que le lanceur utilise une capacité Duo, le nombre d'actions nécessaires pour lancer une capacité Duo est réduit de trois.",
-    "Implémente un effet de terrain juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet."
+    "Implémente un effet de terrain juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet.",
+    "Baisse la résligence au type de l'ennemi d'un type particulier la première fois qu'une capacité Duo est utilisée."
   ],
   "hp" : "PV",
   "atk" : "Attaque",

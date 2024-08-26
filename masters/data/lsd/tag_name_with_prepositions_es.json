@@ -35,6 +35,7 @@
     "20020007": "el distintivo \"Alola\"",
     "20020008": "el distintivo \"Galar\"",
     "20020009": "el distintivo \"Paldea\"",
+    "20020010": "el distintivo \"Passio\"",
     "30010001": "Físico",
     "30010002": "Especial",
     "40000209": "efecto Relevo imposible",
@@ -63,6 +64,7 @@
     "40000245": "Resiliencia Siniestro",
     "40000246": "Resiliencia Acero",
     "40000247": "Resiliencia Hada",
+    "40000266": "efecto Siguiente Movimiento Compi ↑",
     "40000301": "efecto Daño físico ↓",
     "40000302": "efecto Daño especial ↓",
     "40000307": "efecto Bloqueo críticos",
@@ -99,6 +101,7 @@
     "40000383": "Círculo de Alola (Defensivo)",
     "40000385": "Círculo de Galar (Especial)",
     "40000387": "Círculo de Paldea (Físico)",
+    "40000392": "Círculo de Passio (Defensivo)",
     "50000001": "Normal",
     "50000002": "Fuego",
     "50000003": "Agua",
@@ -116,5 +119,12 @@
     "50000015": "Dragón",
     "50000016": "Siniestro",
     "50000017": "Acero",
-    "50000018": "Hada"
+    "50000018": "Hada",
+    "51000004": "el distintivo \"Eléctrico\"",
+    "51000005": "el distintivo \"Planta\"",
+    "51000006": "el distintivo \"Hielo\"",
+    "51000009": "el distintivo \"Tierra\"",
+    "51000011": "el distintivo \"Psíquico\"",
+    "51000015": "el distintivo \"Dragón\"",
+    "51000017": "el distintivo \"Acero\""
 }

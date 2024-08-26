@@ -768,5 +768,21 @@
     "999167": "Applies the [Name:ReferencedMessageTag Idx=\"2\" ] to all allied sync pairs.",
     "999166": "Raises the Attack and critical-hit rate of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
     "999165": "In addition, raises the Attack and Defense of all allied sync pairs by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when the user is restrained.",
-    "999164": "Increases the user’s Physical Moves ↑ Next effect and Special Moves ↑ Next effect by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ]."
+    "999164": "Increases the user’s Physical Moves ↑ Next effect and Special Moves ↑ Next effect by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "999163": "Lowers the user’s [Name:ReferencedMessageTag ] by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "999162": "When a sandstorm is caused.",
+    "999161": "Increases the user’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ] when its attack hits a target that is trapped.",
+    "999160": "When an ally’s Pokémon uses any moves [Digit:1digit ] [EN:Qty S=\"time\" P=\"times\" ].",
+    "999159": "The more the opponent’s Defense or Sp. Def are lowered, the greater the power of this attack.",
+    "999158": "Lowers the target’s Sp. Def by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "999156": "Turns the field of play’s zone into a [Name:ReferencedMessageTag ] the first time this attack move is successful each battle.",
+    "999155": "When the weather turns rainy.",
+    "999154": "When the weather condition is no longer rainy.",
+    "999153": "Uses a maximum of three slots of the user’s move gauge. The more amount used, the more it raises the critical-hit rate of all allied sync pairs (can be raised by zero to three stat ranks maximum).",
+    "999152": "Raises the Sp. Atk and critical-hit rate of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "999151": "Raises an ally’s Speed, accuracy, evasiveness, and critical-hit rate by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "999150": "Raises the Sp. Atk and Sp. Def of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "999149": "Become Mega Garchomp until the end of battle.",
+    "999148": "Become Mega Metagross until the end of battle.",
+    "999147": "This attack’s power increases when a circle applies to the allied field of play."
 }

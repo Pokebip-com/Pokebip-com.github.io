@@ -35,6 +35,7 @@
     "20020007": "le mot-clé Alola",
     "20020008": "le mot-clé Galar",
     "20020009": "le mot-clé Paldea",
+    "20020010": "le mot-clé Passio",
     "30010001": "Physique",
     "30010002": "Spécial",
     "40000209": "effet Carcan",
@@ -63,6 +64,7 @@
     "40000245": "Résilience Ténèbres",
     "40000246": "Résilience Acier",
     "40000247": "Résilience Fée",
+    "40000266": "effet Prochain boost capacité Duo",
     "40000301": "effet Résilience Physique",
     "40000302": "effet Résilience Spéciale",
     "40000307": "effet Anti-critiques",
@@ -99,6 +101,7 @@
     "40000383": "Cercle d'Alola Défensif",
     "40000385": "Cercle de Galar Spécial",
     "40000387": "Cercle de Paldea Physique",
+    "40000392": "Cercle de Passio Défensif",
     "50000001": "Normal",
     "50000002": "Feu",
     "50000003": "Eau",
@@ -116,5 +119,12 @@
     "50000015": "Dragon",
     "50000016": "Ténèbres",
     "50000017": "Acier",
-    "50000018": "Fée"
+    "50000018": "Fée",
+    "51000004": "le mot-clé Électrik",
+    "51000005": "le mot-clé Plante",
+    "51000006": "le mot-clé Glace",
+    "51000009": "le mot-clé Sol",
+    "51000011": "le mot-clé Psy",
+    "51000015": "le mot-clé Dragon",
+    "51000017": "le mot-clé Acier"
 }

@@ -13,5 +13,8 @@
 { "itemId": "570000000011", "imageId": "i057_0004_02", "stars": 5, "type": 3, "role": 2 },
 { "itemId": "570000000012", "imageId": "i057_0005_00", "stars": -1, "type": 0, "role": 3 },
 { "itemId": "570000000045", "imageId": "i057_0006_02", "stars": 5, "type": 3, "role": 2 },
-{ "itemId": "570000000055", "imageId": "i057_0007_02", "stars": 5, "type": 3, "role": 2 }
+{ "itemId": "570000000055", "imageId": "i057_0007_02", "stars": 5, "type": 3, "role": 2 },
+{ "itemId": "571009090000", "imageId": "i057_0001_02", "stars": 5, "type": 3, "role": 4 },
+{ "itemId": "571009190000", "imageId": "i057_0001_02", "stars": 5, "type": 3, "role": 4 },
+{ "itemId": "571011190000", "imageId": "i057_0001_02", "stars": 5, "type": 3, "role": 4 }
 ]}

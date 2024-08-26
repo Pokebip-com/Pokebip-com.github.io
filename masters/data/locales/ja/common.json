@@ -1,9 +1,9 @@
 {
   "role_names" : [
-    "アタッカー (物理)", "アタッカー (特殊)", "サポート", "テクニカル", "スピード", "フィールド"
+    "アタッカー (物理)", "アタッカー (特殊)", "サポート", "テクニカル", "スピード", "フィールド", "マルチ"
   ],
   "role_name_standard" : [
-    "アタッカー", "アタッカー", "サポート", "テクニカル", "スピード", "フィールド"
+    "アタッカー", "アタッカー", "サポート", "テクニカル", "スピード", "フィールド", "マルチ"
   ],
   "category_names" : {
     "Physical" : "Physical",
@@ -16,7 +16,8 @@
     "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
     "Sync move power is increased by 50 %.",
     "Sync move countdown is reduced by three the first time the user's Sync move is used each battle.",
-    "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only."
+    "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only.",
+    "Lowers the opponent's Type Rebuff of a particular type the first time the user's Sync move is used each battle."
   ],
   "hp" : "HP",
   "atk" : "こうげき",

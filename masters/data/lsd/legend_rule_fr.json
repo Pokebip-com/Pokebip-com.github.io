@@ -67,5 +67,8 @@
     "legend_rule_6060_003": "Les PV de Mackogneur restent à 80 %\net 50 % la première fois que ses PV\nchutent à 80 % et 50 % ou moins.",
     "legend_rule_6070_001": "Les PV de Mewtwo restent à 80 %\net 40 % la première fois que ses PV\nchutent à 80 % et 40 % ou moins.",
     "legend_rule_6070_002": "La puissance des capacités de l'ennemi,\nde ses capacités Duo, ou des deux,\naugmente quand ses stats sont augmentées.",
-    "legend_rule_6070_003": "Quand l'ennemi n'est pas affecté\npar un effet sur le terrain, sa Déf.\net sa Déf. Spé. sont triplées."
+    "legend_rule_6070_003": "Quand l'ennemi n'est pas affecté\npar un effet sur le terrain, sa Déf.\net sa Déf. Spé. sont triplées.",
+    "legend_rule_6080_001": "Les PV de Latios restent à 60 %\nla première fois que ses PV chutent\nà 60 % ou moins.",
+    "legend_rule_6080_002": "Plus les stats de l'ennemi sont augmentées,\nplus les dégâts qu'il subit sont réduits.",
+    "legend_rule_6080_003": "Lorsque l'Attaque Spéciale, l'Attaque ou\nla Défense Spéciale ennemie est augmentée,\nses capacités et capacités Duo sont renforcées."
 }

@@ -164,5 +164,8 @@
     "event_6060_1W_MasterTicket_01": "Gardenia Seasonal\nGuaranteed Ticket Scout",
     "event_6060_1W_SuperTicket_02": "Acerola Seasonal\nFeatured Ticket Scout",
     "event_6060_1W_MasterTicket_02": "Acerola Seasonal\nGuaranteed Ticket Scout",
-    "event_6060_1W_SuperTicket_05": "Seasonal Featured\nTicket Scout"
+    "event_6060_1W_SuperTicket_05": "Seasonal Featured\nTicket Scout",
+    "event_6080_2W_MasterTicket_01": "Malva\nGuaranteed Ticket Scout",
+    "event_6080_2W_MasterTicket_02": "Chuck\nGuaranteed Ticket Scout",
+    "event_6080_2W_MasterTicket_03": "Trevor\nGuaranteed Ticket Scout"
 }

@@ -322,5 +322,14 @@
 { "bingoMissionCardId": 510001, "number": 6, "missionId": 251009906 },
 { "bingoMissionCardId": 510001, "number": 7, "missionId": 251009907 },
 { "bingoMissionCardId": 510001, "number": 8, "missionId": 251009908 },
-{ "bingoMissionCardId": 510001, "number": 9, "missionId": 251009909 }
+{ "bingoMissionCardId": 510001, "number": 9, "missionId": 251009909 },
+{ "bingoMissionCardId": 608001, "number": 1, "missionId": 260807005 },
+{ "bingoMissionCardId": 608001, "number": 2, "missionId": 260807002 },
+{ "bingoMissionCardId": 608001, "number": 3, "missionId": 260807009 },
+{ "bingoMissionCardId": 608001, "number": 4, "missionId": 260807004 },
+{ "bingoMissionCardId": 608001, "number": 5, "missionId": 260807001 },
+{ "bingoMissionCardId": 608001, "number": 6, "missionId": 260807006 },
+{ "bingoMissionCardId": 608001, "number": 7, "missionId": 260807007 },
+{ "bingoMissionCardId": 608001, "number": 8, "missionId": 260807008 },
+{ "bingoMissionCardId": 608001, "number": 9, "missionId": 260807003 }
 ]}
