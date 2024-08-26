@@ -382,7 +382,20 @@ async function getItemName(itemId) {
 
         // MoveLevelUpItem.pb
         case 57:
+            let valId = parseInt(itemId.slice(-4)).toString();
+            if(valId <= 12)
+                valId++;
 
+            const moveLevelUpItem = (await jsonCache.getProto("MoveLevelUpItem")).find(mlui => mlui.itemId === itemId);
+            switch (moveLevelUpItem.paramType) {
+                case 1:
+                case 2:
+                case 3:
+                    return (await jsonCache.getLsd("move_levelup_item_name"))[valId];
+
+                case 4:
+                    return (await jsonCache.getLsd("move_levelup_item_name"))["60"] + ` (${await getPairName(moveLevelUpItem.param)})`;
+            }
             break;
 
         // exrole_release_item_name_xx.lsd

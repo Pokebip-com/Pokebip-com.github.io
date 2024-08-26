@@ -28,6 +28,7 @@ let cyclicRankingQuestGroup;
 let cyclicRankingQuestGroupSchedule;
 
 let scout;
+let scoutEp;
 let scoutPickup;
 let storyQuest;
 
@@ -123,7 +124,7 @@ async function getData() {
     cyclicRankingData = getBySpecificID(cyclicRankingQuestGroupSchedule, "scheduleId");
 
     scout = await jsonCache.getProto("Scout");
-
+    scoutEp = await jsonCache.getProto("ScoutEp");
     scoutPickup = await jsonCache.getProto("ScoutPickup");
     storyQuest = await jsonCache.getProto("StoryQuest");
 
@@ -677,6 +678,38 @@ async function printScouts(schedule, titleText = "") {
             ul += "</ul>\n";
             scheduleDiv.innerHTML += ul;
         }
+
+        let scoutEps = scoutEp.filter(sep => sep.scoutId === schedScout.scoutId && sep.u8 === 1);
+
+        if (scoutEps.length > 0) {
+            scoutEps.sort((a, b) => a.scoutEpId.localeCompare(b.scoutEpId));
+
+            let rewards = "";
+
+            for(let j = 0; j < scoutEps.length; j++) {
+                let is = itemSet.find(iset => iset.itemSetId === scoutEps[j].itemSetId);
+
+                if(!is)
+                    continue;
+
+                let itemsArray = [];
+
+                for(let i = 1; i <= 10; i++) {
+                    if(is[`item${i}`] === "0")
+                        break;
+
+                    itemsArray.push(await getItemName(is[`item${i}`]) + " x" + is[`item${i}Quantity`]);
+                }
+
+                rewards += `<br /><b>${j+1}.</b> ${itemsArray.join(" + ")}`;
+            }
+
+            if(rewards === "")
+                break;
+
+            scheduleDiv.innerHTML += `<br /><b>${schedLocales.pair_pull_bonus_gift}</b>\n`;
+            scheduleDiv.innerHTML += rewards;
+        }
     }
 }
 
@@ -740,11 +773,13 @@ function printEventBanner(eventBanner, lastSchedule, titleText = "") {
     printEndDate(lastSchedule.endDate);
 }
 
-function printEvents(sched) {
+function printEvents(sched, titleText = "") {
     let scheduleQuests = storyQuest.filter(quest => quest.scheduleId === sched.scheduleId);
 
     if(scheduleQuests.length === 0)
         return;
+
+    scheduleDiv.innerHTML += titleText;
 
     let questGroups = [...new Set(scheduleQuests.map(sq => sq.questGroupId))];
 
