@@ -312,8 +312,8 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
     let buildupParameter = trainerBuildupParameter.filter(tbp => tbp.trainerId === syncPairSelect.value);
     let buildupBonus = 0;
 
-    console.log(buildupParameter);
-    console.log(trainerBuildupConfig);
+    // console.log(buildupParameter);
+    // console.log(trainerBuildupConfig);
 
     for(let i = 0; i < buildupParameter.length; i++) {
         let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx])*(statValues[pointBIdx] - statValues[pointAIdx])/(breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
@@ -375,7 +375,8 @@ async function setStatsTable(input, statsDiv, monsterData, variation = null, has
     let exRoleBonus = {"hp": 0, "atk": 0, "spa": 0, "def": 0, "spd": 0, "spe": 0};
 
     if (exRoleStats) {
-        exRoleBonus = exRoleStatusUp.find(async ersu => ersu.roleId === await getExRoleId(syncPairSelect.value));
+        let exRoleId = await getExRoleId(syncPairSelect.value);
+        exRoleBonus = exRoleStatusUp.find(ersu => ersu.roleId === exRoleId);
     }
 
     table.appendChild(headRow);
