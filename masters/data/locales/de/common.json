@@ -9,38 +9,38 @@
     "Status": "Status"
   },
   "def": "Vert.",
-  "ex_sync_effect": [
-    "Targets all opponents.",
-    "Targets all opponents.",
-    "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
-    "Sync move power is increased by 50 %.",
-    "Sync move countdown is reduced by three the first time the user's Sync move is used each battle.",
-    "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only.",
-    "Lowers the opponent's Type Rebuff of a particular type the first time the user's Sync move is used each battle."
-  ],
+  "ex_sync_effect": {
+    "0": "Targets all opponents.",
+    "1": "Targets all opponents.",
+    "2": "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
+    "3": "Sync move power is increased by 50 %.",
+    "4": "Nach dem ersten Einsatz einer Gefährtenattacke wird ein Mal pro Kampf der GA-Countdown um 3 reduziert.",
+    "5": "Kurz vor dem ersten Einsatz einer Gefährtenattacke wird ein Mal pro Kampf der folgende Seiten-Effekt aktiviert und\ndessen Dauer verlängert:\n• [Name:FieldEffectType ]",
+    "6": "Senkt den Typwiderstand aller Gegner für den folgenden Typ um 1, wenn der Anwender zum erste Mal im Kampf seine Gefährtenattacke einsetzt:\n• [Name:Type ]"
+  },
   "hp": "KP",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",
   "menu_schedule": "Schedule",
   "menu_sync_pairs": "Sync Pairs",
-  "role_name_standard": [
-    "Angreifer",
-    "Angreifer",
-    "Helfer",
-    "Taktiker",
-    "Initiator",
-    "Feldwandler",
-    "Variabel"
-  ],
-  "role_names": [
-    "Angreifer (Physischer)",
-    "Angreifer (Spezial)",
-    "Helfer",
-    "Taktiker",
-    "Initiator",
-    "Feldwandler",
-    "Variabel"
-  ],
+  "role_name_standard": {
+    "0": "Angreifer",
+    "1": "Angreifer",
+    "2": "Helfer",
+    "3": "Taktiker",
+    "4": "Initiator",
+    "5": "Feldwandler",
+    "6": "Variabel"
+  },
+  "role_names": {
+    "0": "Angreifer (Physischer)",
+    "1": "Angreifer (Spezial)",
+    "2": "Helfer",
+    "3": "Taktiker",
+    "4": "Initiator",
+    "5": "Feldwandler",
+    "6": "Variabel"
+  },
   "spa": "Sp.-Ang.",
   "spd": "Sp.-Vert.",
   "spe": "Initiative",

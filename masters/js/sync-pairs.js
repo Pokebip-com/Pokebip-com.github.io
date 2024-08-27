@@ -312,10 +312,9 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
     let buildupParameter = trainerBuildupParameter.filter(tbp => tbp.trainerId === syncPairSelect.value);
     let buildupBonus = 0;
 
-    // console.log(buildupParameter);
-    // console.log(trainerBuildupConfig);
+    let numCols = 6 - rarity + 1;
 
-    for(let i = 0; i < buildupParameter.length; i++) {
+    for(let i = 0; i < numCols; i++) {
         let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx])*(statValues[pointBIdx] - statValues[pointAIdx])/(breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
 
         if(i > 0) {
@@ -667,13 +666,13 @@ async function getSyncMoveRow(syncMoveId, tr) {
 
     if (await hasExUnlocked(tr.trainerId)) {
         let exEffectCell = document.createElement("td");
-        exEffectCell.innerText = commonLocales.ex_sync_effect[tr.role];
+        exEffectCell.innerText = await getExSyncEffect(tr.role, tr.type);
         row.appendChild(exEffectCell);
     }
 
     if (await hasExRoleUnlocked(tr.trainerId)) {
         let exRoleEffectCell = document.createElement("td");
-        exRoleEffectCell.innerText = commonLocales.ex_sync_effect[await getExRoleId(tr.trainerId)];
+        exRoleEffectCell.innerText = await getExSyncEffect(await getExRoleId(tr.trainerId), tr.type);
         row.appendChild(exRoleEffectCell);
     }
 
@@ -889,18 +888,16 @@ function appendGridCategory(table, panels, category) {
             tr.style.backgroundColor = "#7afa96";
         }
 
-        let amelioration = syncPairLocale.sync_grid_ability_name[p.ability.type];
-        amelioration = amelioration.replace("{val}", p.ability.value);
-
-        if(p.ability.passiveId) {
-            amelioration = amelioration.replace("{passive}", getPassiveSkillName(p.ability.passiveId));
-        }
-        if(p.ability.moveId) {
-            amelioration = amelioration.replace("{move}", moveNames[p.ability.moveId].replace("\n", " "));
-        }
-
         let ameliorationCell = document.createElement("td");
-        ameliorationCell.innerText = amelioration;
+
+        (jsonCache.getLsd("ability_name"))
+            .then(abilityName => abilityName[p.ability.type]
+                .replace("[Digit:5digits ]", "+" + p.ability.value)
+                .replace("[Name:Ability ]", getPassiveSkillName(p.ability.passiveId))
+                .replace("[Name:Move ]", moveNames[p.ability.moveId]).replace("\n", " ")
+            )
+            .then(text => ameliorationCell.innerText = text);
+
         tr.appendChild(ameliorationCell);
 
         let effectCell = document.createElement("td");
@@ -1045,15 +1042,6 @@ function setGridPicker(ap, gridPickerDiv) {
     gridDiv.appendChild(center);
 
     ap.forEach(panel => {
-        let amelioration = syncPairLocale.sync_grid_ability_name[panel.ability.type];
-        amelioration = amelioration.replace("{val}", panel.ability.value);
-
-        if(panel.ability.passiveId) {
-            amelioration = amelioration.replace("{passive}", getPassiveSkillName(panel.ability.passiveId));
-        }
-        if(panel.ability.moveId) {
-            amelioration = amelioration.replace("{move}", moveNames[panel.ability.moveId].replace("\n", " "));
-        }
 
         let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute("height", "60");
@@ -1064,6 +1052,9 @@ function setGridPicker(ap, gridPickerDiv) {
         svg.style.cursor = "pointer";
         svg.style.pointerEvents = "none";
 
+        let titleP = document.createElement("p");
+        titleP.style.textAlign = "center";
+
         let tooltip = document.createElement("div");
         tooltip.classList.add("tooltip");
 
@@ -1071,13 +1062,6 @@ function setGridPicker(ap, gridPickerDiv) {
         tooltip.style.left = parseInt(svg.style.left) - 125 + "px";
         tooltip.style.zIndex = "100";
         tooltip.style.display = "none";
-        tooltip.innerHTML = `<p style="text-align: center"><b>${amelioration}</b></p>\n`;
-
-        if(panel.ability.passiveId) {
-            tooltip.innerHTML += `<p><b>${syncPairLocale.sync_grid_tile_description_tooltip}:</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
-        }
-
-        tooltip.innerHTML += `<p><b>${syncPairLocale.sync_grid_tile_orbs_tooltip}:</b> ${panel.orbCost} - <b>${syncPairLocale.sync_grid_tile_energy_tooltip}:</b> ${panel.energyCost}</p>`;
 
         let polygon = document.createElementNS("http://www.w3.org/2000/svg","polygon");
         polygon.setAttribute("points", "17,00 0,30 0,31 17,60 52,60 69,31 69,30 52,0");
@@ -1155,7 +1139,23 @@ function setGridPicker(ap, gridPickerDiv) {
         svg.setAttribute("data-energy", panel.energyCost);
         svg.setAttribute("data-orbs", panel.orbCost);
         svg.setAttribute("data-cellId", panel.cellId);
-        svg.setAttribute("data-tileName", amelioration);
+        (jsonCache.getLsd("ability_name"))
+            .then(abilityName => abilityName[panel.ability.type]
+                .replace("[Digit:5digits ]", "+" + panel.ability.value)
+                .replace("[Name:Ability ]", getPassiveSkillName(panel.ability.passiveId))
+                .replace("[Name:Move ]", moveNames[panel.ability.moveId]).replace("\n", " ")
+            )
+            .then(text => {
+                svg.setAttribute("data-tileName", text);
+                titleP.innerHTML = `<b>${text}</b>\n`;
+                tooltip.appendChild(titleP);
+
+                if(panel.ability.passiveId) {
+                    tooltip.innerHTML += `<p><b>${syncPairLocale.sync_grid_tile_description_tooltip}:</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
+                }
+
+                tooltip.innerHTML += `<p><b>${syncPairLocale.sync_grid_tile_orbs_tooltip}:</b> ${panel.orbCost} - <b>${syncPairLocale.sync_grid_tile_energy_tooltip}:</b> ${panel.energyCost}</p>`;
+            })
 
         setTileBackground(svg);
         gridDiv.appendChild(svg);
@@ -1673,7 +1673,9 @@ function getPairStatsRowBipCode(name, statValues, t, scale = 1) {
     let buildupParameter = trainerBuildupParameter.filter(tbp => tbp.trainerId === t.trainerId);
     let buildupBonus = 0;
 
-    for(let i = 0; i < buildupParameter.length; i++) {
+    let numCols = 6 - t.rarity + 1;
+
+    for(let i = 0; i < numCols; i++) {
         let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx])*(statValues[pointBIdx] - statValues[pointAIdx])/(breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
 
         if(i > 0) {
@@ -1782,13 +1784,13 @@ function getMoveBipCode(t, m, v = null) {
     return string;
 }
 
-function appendGridCategoryBipCode(panels, category) {
+async function appendGridCategoryBipCode(panels, category) {
     panels = panels.filter(p => p.type === category)
         .reduce((acc, curr) => {
             let cell = acc.find(a => a.cellId === curr.cellId);
 
-            if(cell) {
-                if(cell.version < curr.version) {
+            if (cell) {
+                if (cell.version < curr.version) {
                     acc = acc.filter(a => a.cellId !== curr.cellId);
                     acc.push(curr);
                 }
@@ -1798,30 +1800,27 @@ function appendGridCategoryBipCode(panels, category) {
 
             acc = acc.concat(curr);
             return acc;
-        },[])
+        }, [])
         .sort((a, b) => a.level - b.level || a.cellId - b.cellId);
 
     let string = `\t[tr][th|bgcolor=${abilityTypeBGColor[category]}|colspan=5]${syncPairLocale.sync_grid_ability_type_title[category]}[/th][/tr]\n`;
 
-    panels.forEach(p => {
-        let amelioration = syncPairLocale.sync_grid_ability_name[p.ability.type];
-        amelioration = amelioration.replace("{val}", p.ability.value);
-
-        if(p.ability.passiveId) {
-            amelioration = amelioration.replace("{passive}", getPassiveSkillName(p.ability.passiveId));
-        }
-        if(p.ability.moveId) {
-            amelioration = amelioration.replace("{move}", moveNames[p.ability.moveId].replace("\n", " "));
-        }
+    for (let p of panels) {
+        let amelioration = (jsonCache.getLsd("ability_name"))
+            .then(abilityName => abilityName[p.ability.type]
+                .replace("[Digit:5digits ]", "+" + p.ability.value)
+                .replace("[Name:Ability ]", getPassiveSkillName(p.ability.passiveId))
+                .replace("[Name:Move ]", moveNames[p.ability.moveId]).replace("\n", " ")
+            );
 
         string += `\t[tr]\n`
-            + `\t\t[td]${amelioration}[/td]\n`
+            + `\t\t[td]${await amelioration}[/td]\n`
             + `\t\t[td]${p.ability.passiveId ? getPassiveSkillDescr(p.ability.passiveId) : "–"}[/td]\n`
             + `\t\t[td]${p.energyCost || "–"}[/td]\n`
             + `\t\t[td]${p.orbCost} [img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/duo-sphere.png[/img][/td]\n`
             + `\t\t[td][img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/niveau-capacites-${p.level}.png[/img][/td]\n`
             + `\t[/tr]\n`;
-    });
+    }
 
     return string;
 }
@@ -2095,7 +2094,9 @@ async function getPairBipCode(trainerId) {
             return ap;
         });
 
-    Object.keys(abilityType).forEach(key => string += appendGridCategoryBipCode(ap, abilityType[key]));
+    for (const key of Object.keys(abilityType)) {
+        string += await appendGridCategoryBipCode(ap, abilityType[key]);
+    }
 
     string += `[/table][/center]\n\n`;
 

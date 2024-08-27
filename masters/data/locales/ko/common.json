@@ -9,38 +9,38 @@
     "Status": "Status"
   },
   "def": "방어",
-  "ex_sync_effect": [
-    "Targets all opponents.",
-    "Targets all opponents.",
-    "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
-    "Sync move power is increased by 50 %.",
-    "Sync move countdown is reduced by three the first time the user's Sync move is used each battle.",
-    "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only.",
-    "Lowers the opponent's Type Rebuff of a particular type the first time the user's Sync move is used each battle."
-  ],
+  "ex_sync_effect": {
+    "0": "Targets all opponents.",
+    "1": "Targets all opponents.",
+    "2": "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
+    "3": "Sync move power is increased by 50 %.",
+    "4": "처음 버디즈기술을 사용했을 때만 버디즈기술 발동 가능 상태가 되기까지의 카운트를 3 줄인다",
+    "5": "처음 버디즈기술을 사용하기 직전에 아래의 필드 효과를 발생시킨다 이때만 발생한 필드 효과의 시간을 연장한다\n・[Name:FieldEffectType ]",
+    "6": "처음 버디즈기술을 사용했을 때만 상대 버디즈 전원의 아래 타입의 타입 저항을 1단계 떨어뜨린다\n・[Name:Type ]"
+  },
   "hp": "HP",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",
   "menu_schedule": "Schedule",
   "menu_sync_pairs": "Sync Pairs",
-  "role_name_standard": [
-    "어태커",
-    "어태커",
-    "서포트",
-    "테크니컬",
-    "스피드",
-    "필드",
-    "멀티"
-  ],
-  "role_names": [
-    "어태커 (물리)",
-    "어태커 (특수)",
-    "서포트",
-    "테크니컬",
-    "스피드",
-    "필드",
-    "멀티"
-  ],
+  "role_name_standard": {
+    "0": "어태커",
+    "1": "어태커",
+    "2": "서포트",
+    "3": "테크니컬",
+    "4": "스피드",
+    "5": "필드",
+    "6": "멀티"
+  },
+  "role_names": {
+    "0": "어태커 (물리)",
+    "1": "어태커 (특수)",
+    "2": "서포트",
+    "3": "테크니컬",
+    "4": "스피드",
+    "5": "필드",
+    "6": "멀티"
+  },
   "spa": "특수공격",
   "spd": "특수방어",
   "spe": "스피드",

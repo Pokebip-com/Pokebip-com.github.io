@@ -29,18 +29,6 @@
   "skills_title": "Talents",
   "stats": "Statistiques",
   "stats_settings": "Paramètres",
-  "sync_grid_ability_name": {
-    "1": "PV +{val}",
-    "10": "{move} : Précision +{val}",
-    "2": "Attaque +{val}",
-    "3": "Défense +{val}",
-    "4": "Atq. Spé. +{val}",
-    "5": "Déf. Spé. +{val}",
-    "6": "Vitesse +{val}",
-    "7": "{passive}",
-    "8": "{move} : {passive}",
-    "9": "{move} : Puissance +{val}"
-  },
   "sync_grid_ability_type_title": {
     "AdditionalMoveEffect": "Amélioration d'Effet de Capacité",
     "MovePowerAccuracyBoost": "Amélioration de Capacité",

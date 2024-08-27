@@ -9,38 +9,38 @@
     "Status": "Status"
   },
   "def": "Defense",
-  "ex_sync_effect": [
-    "Targets all opponents.",
-    "Targets all opponents.",
-    "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
-    "Sync move power is increased by 50 %.",
-    "Sync move countdown is reduced by three the first time the user's Sync move is used each battle.",
-    "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only.",
-    "Lowers the opponent's Type Rebuff of a particular type the first time the user's Sync move is used each battle."
-  ],
+  "ex_sync_effect": {
+    "0": "Targets all opponents.",
+    "1": "Targets all opponents.",
+    "2": "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
+    "3": "Sync move power is increased by 50 %.",
+    "4": "The first time the user’s sync move is used each battle, the sync move countdown is reduced by three.",
+    "5": "Implements the following field effect just before the user’s sync move is used the first time each battle. Extends the field effect duration only that time.\n• [Name:FieldEffectType ]",
+    "6": "Lowers all opposing sync pairs’ Type Rebuff for the following Type by one rank the first time the user’s sync move is used each battle:\n• [Name:Type ]"
+  },
   "hp": "HP",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",
   "menu_schedule": "Schedule",
   "menu_sync_pairs": "Sync Pairs",
-  "role_name_standard": [
-    "Strike",
-    "Strike",
-    "Support",
-    "Tech",
-    "Sprint",
-    "Field",
-    "Multi"
-  ],
-  "role_names": [
-    "Strike (Physical)",
-    "Strike (Special)",
-    "Support",
-    "Tech",
-    "Sprint",
-    "Field",
-    "Multi"
-  ],
+  "role_name_standard": {
+    "0": "Strike",
+    "1": "Strike",
+    "2": "Support",
+    "3": "Tech",
+    "4": "Sprint",
+    "5": "Field",
+    "6": "Multi"
+  },
+  "role_names": {
+    "0": "Strike (Physical)",
+    "1": "Strike (Special)",
+    "2": "Support",
+    "3": "Tech",
+    "4": "Sprint",
+    "5": "Field",
+    "6": "Multi"
+  },
   "spa": "Sp. Atk.",
   "spd": "Sp. Def.",
   "spe": "Speed",

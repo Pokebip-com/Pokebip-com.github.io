@@ -9,38 +9,38 @@
     "Status": "Status"
   },
   "def": "Defensa",
-  "ex_sync_effect": [
-    "Targets all opponents.",
-    "Targets all opponents.",
-    "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
-    "Sync move power is increased by 50 %.",
-    "Sync move countdown is reduced by three the first time the user's Sync move is used each battle.",
-    "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only.",
-    "Lowers the opponent's Type Rebuff of a particular type the first time the user's Sync move is used each battle."
-  ],
+  "ex_sync_effect": {
+    "0": "Targets all opponents.",
+    "1": "Targets all opponents.",
+    "2": "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
+    "3": "Sync move power is increased by 50 %.",
+    "4": "Se reduce en 3 el contador de movimientos compi la primera vez que el usuario usa un movimiento compi en cada combate.",
+    "5": "Activa este efecto de entorno justo antes de la 1.ª vez que el\nusuario use un mov. compi en cada combate y aumenta su\nduración solo esta vez:\n• [Name:FieldEffectType ]",
+    "6": "Se reduce la resiliencia de todos los compis rivales al siguiente tipo en 1 nivel la primera vez que el usuario usa un movimiento compi en cada combate.\n• [Name:Type ]"
+  },
   "hp": "PS",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",
   "menu_schedule": "Schedule",
   "menu_sync_pairs": "Sync Pairs",
-  "role_name_standard": [
-    "Ataque",
-    "Ataque",
-    "Apoyo",
-    "Sabotaje",
-    "Velocidad",
-    "Entorno",
-    "Multi"
-  ],
-  "role_names": [
-    "Ataque",
-    "Ataque (Especial)",
-    "Apoyo",
-    "Sabotaje",
-    "Velocidad",
-    "Entorno",
-    "Multi"
-  ],
+  "role_name_standard": {
+    "0": "Ataque",
+    "1": "Ataque",
+    "2": "Apoyo",
+    "3": "Sabotaje",
+    "4": "Velocidad",
+    "5": "Entorno",
+    "6": "Multi"
+  },
+  "role_names": {
+    "0": "Ataque",
+    "1": "Ataque (Especial)",
+    "2": "Apoyo",
+    "3": "Sabotaje",
+    "4": "Velocidad",
+    "5": "Entorno",
+    "6": "Multi"
+  },
   "spa": "At. Esp.",
   "spd": "Def. Esp.",
   "spe": "Velocidad",

@@ -9,38 +9,38 @@
     "Status": "Statut"
   },
   "def": "Défense",
-  "ex_sync_effect": [
-    "Cible tous les ennemis.",
-    "Cible tous les ennemis.",
-    "Augmente la détermination de deux rangs la première fois qu'une capacité Duo est utilisée.",
-    "La puissance des capacités Duo est augmentée de 50 %.",
-    "La première fois que le lanceur utilise une capacité Duo, le nombre d'actions nécessaires pour lancer une capacité Duo est réduit de trois.",
-    "Implémente un effet de terrain juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet.",
-    "Baisse la résligence au type de l'ennemi d'un type particulier la première fois qu'une capacité Duo est utilisée."
-  ],
+  "ex_sync_effect": {
+    "0": "Cible tous les ennemis.",
+    "1": "Cible tous les ennemis.",
+    "2": "Augmente la détermination de deux rangs la première fois qu'une capacité Duo est utilisée.",
+    "3": "La puissance des capacités Duo est augmentée de 50 %.",
+    "4": "La première fois que le lanceur utilise une capacité Duo au cours d'un combat, le nombre d'actions nécessaires pour lancer une capacité Duo est réduit de trois.",
+    "5": "Implémente l'effet de terrain suivant juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet cette fois seulement :\n• [Name:FieldEffectType ]",
+    "6": "Baisse la résilience de type de tous les ennemis d'un rang la première fois que le lanceur utilise une capacité Duo en combat :\n• [Name:Type ]"
+  },
   "hp": "PV",
   "menu_battle_rally": "Rallye",
   "menu_language": "Langue",
   "menu_schedule": "Programme",
   "menu_sync_pairs": "Duos",
-  "role_name_standard": [
-    "Attaquant",
-    "Attaquant",
-    "Soutien",
-    "Tacticien",
-    "Accélérateur",
-    "Régisseur",
-    "Multi"
-  ],
-  "role_names": [
-    "Attaquant (Physique)",
-    "Attaquant (Spécial)",
-    "Soutien",
-    "Tacticien",
-    "Accélérateur",
-    "Régisseur",
-    "Multi"
-  ],
+  "role_name_standard": {
+    "0": "Attaquant",
+    "1": "Attaquant",
+    "2": "Soutien",
+    "3": "Tacticien",
+    "4": "Accélérateur",
+    "5": "Régisseur",
+    "6": "Multi"
+  },
+  "role_names": {
+    "0": "Attaquant (Physique)",
+    "1": "Attaquant (Spécial)",
+    "2": "Soutien",
+    "3": "Tacticien",
+    "4": "Accélérateur",
+    "5": "Régisseur",
+    "6": "Multi"
+  },
   "spa": "Atq. Spé.",
   "spd": "Déf. Spé.",
   "spe": "Vitesse",

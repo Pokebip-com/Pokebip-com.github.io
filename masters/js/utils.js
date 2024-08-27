@@ -24,6 +24,27 @@ const exSyncEffect = [
     "Implémente un effet de terrain juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet.",
 ];
 
+const typeToFieldTextTag = {
+    "1" : "125",
+    "2" : "108",
+    "3" : "109",
+    "4" : "114",
+    "5" : "113",
+    "6" : "115",
+    "7" : "119",
+    "8" : "124",
+    "9" : "118",
+    "10" : "122",
+    "11" : "112",
+    "12" : "127",
+    "13" : "126",
+    "14" : "116",
+    "15" : "117",
+    "16" : "123",
+    "17" : "120",
+    "18" : "121",
+}
+
 function getAbilityType(ability) {
     switch(ability.type) {
         case 1:
@@ -223,6 +244,27 @@ async function hasExUnlocked(id) {
 
 async function hasExRoleUnlocked(id) {
     return (await jsonCache.getProto("TrainerExRole")).find(t => t.trainerId === id) !== undefined;
+}
+
+async function getFieldEffect(type) {
+    return (await jsonCache.getLsd("abnormal_state"))[(await jsonCache.getProto("TextTagValue")).find(t => t.textTagValueId === typeToFieldTextTag[type]).value];
+}
+
+async function getExSyncEffect(roleId, type) {
+    switch(roleId) {
+        case 0:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            return commonLocales.ex_sync_effect[roleId];
+
+        case 5:
+            return commonLocales.ex_sync_effect[roleId].replace("[Name:FieldEffectType ]", await getFieldEffect(type));
+
+        case 6:
+            return commonLocales.ex_sync_effect[roleId].replace("[Name:Type ]", (await jsonCache.getLsd("motif_type_name"))[type]);
+    }
 }
 
 async function getExRoleText(id) {

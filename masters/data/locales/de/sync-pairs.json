@@ -29,18 +29,6 @@
   "skills_title": "Skills",
   "stats": "Stats",
   "stats_settings": "Settings",
-  "sync_grid_ability_name": {
-    "1": "HP +{val}",
-    "10": "{move} : Accuracy +{val}",
-    "2": "Attack +{val}",
-    "3": "Defense +{val}",
-    "4": "Sp. Atk. +{val}",
-    "5": "Sp. Def. +{val}",
-    "6": "Speed +{val}",
-    "7": "{passive}",
-    "8": "{move} : {passive}",
-    "9": "{move} : Power +{val}"
-  },
   "sync_grid_ability_type_title": {
     "AdditionalMoveEffect": "Additional Move Effect",
     "MovePowerAccuracyBoost": "Move Boost",

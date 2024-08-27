@@ -9,38 +9,38 @@
     "Status": "Status"
   },
   "def": "ぼうぎょ",
-  "ex_sync_effect": [
-    "Targets all opponents.",
-    "Targets all opponents.",
-    "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
-    "Sync move power is increased by 50 %.",
-    "Sync move countdown is reduced by three the first time the user's Sync move is used each battle.",
-    "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only.",
-    "Lowers the opponent's Type Rebuff of a particular type the first time the user's Sync move is used each battle."
-  ],
+  "ex_sync_effect": {
+    "0": "Targets all opponents.",
+    "1": "Targets all opponents.",
+    "2": "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
+    "3": "Sync move power is increased by 50 %.",
+    "4": "初めてバディーズわざをつかったときだけバディーズわざ発動可能状態までのカウントを３減らす",
+    "5": "初めてバディーズわざをつかう直前に以下の場の効果を発生させる このときだけ発生した場の効果の時間を延長する\n・[Name:FieldEffectType ]",
+    "6": "初めてバディーズわざをつかったときだけ相手のバディーズ全員の以下のタイプのタイプ抵抗を１段階さげる\n・[Name:Type ]"
+  },
   "hp": "HP",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",
   "menu_schedule": "Schedule",
   "menu_sync_pairs": "Sync Pairs",
-  "role_name_standard": [
-    "アタッカー",
-    "アタッカー",
-    "サポート",
-    "テクニカル",
-    "スピード",
-    "フィールド",
-    "マルチ"
-  ],
-  "role_names": [
-    "アタッカー (物理)",
-    "アタッカー (特殊)",
-    "サポート",
-    "テクニカル",
-    "スピード",
-    "フィールド",
-    "マルチ"
-  ],
+  "role_name_standard": {
+    "0": "アタッカー",
+    "1": "アタッカー",
+    "2": "サポート",
+    "3": "テクニカル",
+    "4": "スピード",
+    "5": "フィールド",
+    "6": "マルチ"
+  },
+  "role_names": {
+    "0": "アタッカー (物理)",
+    "1": "アタッカー (特殊)",
+    "2": "サポート",
+    "3": "テクニカル",
+    "4": "スピード",
+    "5": "フィールド",
+    "6": "マルチ"
+  },
   "spa": "とくこう",
   "spd": "とくぼう",
   "spe": "すばやさ",

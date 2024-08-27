@@ -9,38 +9,38 @@
     "Status": "Status"
   },
   "def": "Difesa",
-  "ex_sync_effect": [
-    "Targets all opponents.",
-    "Targets all opponents.",
-    "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
-    "Sync move power is increased by 50 %.",
-    "Sync move countdown is reduced by three the first time the user's Sync move is used each battle.",
-    "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only.",
-    "Lowers the opponent's Type Rebuff of a particular type the first time the user's Sync move is used each battle."
-  ],
+  "ex_sync_effect": {
+    "0": "Targets all opponents.",
+    "1": "Targets all opponents.",
+    "2": "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
+    "3": "Sync move power is increased by 50 %.",
+    "4": "Soltanto dopo il primo utilizzo di un'Unimossa in ogni lotta, abbassa di 3 il numero di azioni necessarie per sferrarne un'altra.",
+    "5": "Subito prima del primo utilizzo di un'Unimossa in ogni lotta, attiva il seguente effetto sul campo, aumentandone la durata:\n• [Name:FieldEffectType ]",
+    "6": "Soltanto dopo il primo utilizzo di un'Unimossa in ogni lotta, riduce di un grado la protezione di tutte le Unità avversarie dal seguente tipo:\n• [Name:Type ]"
+  },
   "hp": "PS",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",
   "menu_schedule": "Schedule",
   "menu_sync_pairs": "Sync Pairs",
-  "role_name_standard": [
-    "Attaccante",
-    "Attaccante",
-    "Aiutante",
-    "Tecnico",
-    "Sprinter",
-    "Campomastro",
-    "Multi"
-  ],
-  "role_names": [
-    "Attaccante (fisico)",
-    "Attaccante (speciale)",
-    "Aiutante",
-    "Tecnico",
-    "Sprinter",
-    "Campomastro",
-    "Multi"
-  ],
+  "role_name_standard": {
+    "0": "Attaccante",
+    "1": "Attaccante",
+    "2": "Aiutante",
+    "3": "Tecnico",
+    "4": "Sprinter",
+    "5": "Campomastro",
+    "6": "Multi"
+  },
+  "role_names": {
+    "0": "Attaccante (fisico)",
+    "1": "Attaccante (speciale)",
+    "2": "Aiutante",
+    "3": "Tecnico",
+    "4": "Sprinter",
+    "5": "Campomastro",
+    "6": "Multi"
+  },
   "spa": "Att. Sp.",
   "spd": "Dif. Sp.",
   "spe": "Velocità",
