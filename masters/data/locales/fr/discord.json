@@ -1,11 +1,11 @@
 {
-  "title" : "Message Discord",
-  "monthly_schedule" : "CLIQUEZ ICI POUR CONSULTER LE PROGRAMME DU MOIS",
-  "new_pairs_information_title" : "FICHES DES NOUVEAUX DUOS",
-  "sync_grid_ups_title" : "PLATEAUX ÉTENDUS",
-  "sync_grid_ups_text" : "Les nouvelles cases sont surlignées en vert dans le tableau récapitulatif tout en bas de la page",
-  "new_ex_roles_title" : "NOUVEAUX RÔLES EX",
-  "new_sync_pairs" : "Nouveaux Duos :",
-  "new_ex_roles_title_small" : "Nouveaux Rôles Ex :",
-  "sync_grid_ups_title_small" : "Plateaux étendus :"
+  "monthly_schedule": "CLIQUEZ ICI POUR CONSULTER LE PROGRAMME DU MOIS",
+  "new_ex_roles_title": "NOUVEAUX RÔLES EX",
+  "new_ex_roles_title_small": "Nouveaux Rôles Ex :",
+  "new_pairs_information_title": "FICHES DES NOUVEAUX DUOS",
+  "new_sync_pairs": "Nouveaux Duos :",
+  "sync_grid_ups_text": "Les nouvelles cases sont surlignées en vert dans le tableau récapitulatif tout en bas de la page",
+  "sync_grid_ups_title": "PLATEAUX ÉTENDUS",
+  "sync_grid_ups_title_small": "Plateaux étendus :",
+  "title": "Message Discord"
 }

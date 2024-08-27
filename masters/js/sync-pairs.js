@@ -939,6 +939,7 @@ function suppressCellData(cell) {
 function setTileBackground(div) {
 
     let tileIcon;
+    let panelType = div.getAttribute("data-panelType") || div.getAttribute("data-category");
     let dataLevel = div.getAttribute("data-level");
 
     if(dataLevel && dataLevel > syncLevel) {
@@ -957,13 +958,13 @@ function setTileBackground(div) {
     }
 
     if(div.getAttribute("selected") !== null) {
-        div.style.backgroundImage = `url('./data/sync-grids/selected-overlay.png'), url('./data/sync-grids/icons/${tileIcon}-selected.png'), url('./data/sync-grids/${div.getAttribute("data-category")}-selected.png')`;
+        div.style.backgroundImage = `url('./data/sync-grids/selected-overlay.png'), url('./data/sync-grids/icons/${tileIcon}-selected.png'), url('./data/sync-grids/${panelType}-selected.png')`;
         div.style.backgroundRepeat = "no-repeat, no-repeat, no-repeat";
         div.style.backgroundSize = "contain, contain, contain";
         return;
     }
 
-    div.style.backgroundImage = `url('./data/sync-grids/icons/${tileIcon}.png'), url('./data/sync-grids/${div.getAttribute("data-category")}.png')`;
+    div.style.backgroundImage = `url('./data/sync-grids/icons/${tileIcon}.png'), url('./data/sync-grids/${panelType}.png')`;
     div.style.backgroundRepeat = "no-repeat, no-repeat";
     div.style.backgroundSize = "contain, contain";
 
@@ -1145,6 +1146,10 @@ function setGridPicker(ap, gridPickerDiv) {
                     svg.setAttribute("data-category", "movepowerup");
                 }
                 break;
+        }
+
+        if (panel.conditionIds.filter(cid => cid >= 16 && cid <= 19).length > 0) {
+            svg.setAttribute("data-panelType", "arceuspanel");
         }
 
         svg.setAttribute("data-energy", panel.energyCost);

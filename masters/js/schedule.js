@@ -916,7 +916,7 @@ function printShopOffers(schedule, titleText = "") {
 function printChampionBattle(sched, titleText = "") {
     let period = championBattleAllPeriod.find(cbap => sched.startDate >= cbap.startDate && sched.startDate < cbap.endDate);
     let openingSchedule = championBattleRegionOpeningSchedule.find(cbros => cbros.scheduleId === period.scheduleId);
-    let cbr = championBattleRegion.find(cbr => cbr.championBattleRegionId === openingSchedule.championBattleId);
+    let cbr = championBattleRegion.find(cbr => cbr.championBattleRegionId === openingSchedule.championBattleRegionId);
     let ban = banner.find(b => b.bannerId === cbr.bannerId);
 
     if (!ban) {

@@ -1,5 +1,5 @@
 {
-  "floor" : "Étage",
-  "filters" : "Filtres",
-  "reset" : "Effacer"
+  "filters": "Filtres",
+  "floor": "Étage",
+  "reset": "Effacer"
 }

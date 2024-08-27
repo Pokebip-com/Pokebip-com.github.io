@@ -1,5 +1,5 @@
 {
-  "floor" : "Floor",
-  "filters" : "Filters",
-  "reset" : "Reset"
+  "filters": "Filters",
+  "floor": "Floor",
+  "reset": "Reset"
 }

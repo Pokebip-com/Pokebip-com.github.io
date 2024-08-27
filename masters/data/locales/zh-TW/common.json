@@ -1,16 +1,15 @@
 {
-  "role_names" : [
-    "攻擊型 (物理)", "攻擊型 (特殊)", "輔助型", "技術型", "速戰型", "場地型", "複合型"
-  ],
-  "role_name_standard" : [
-    "攻擊型", "攻擊型", "輔助型", "技術型", "速戰型", "場地型", "複合型"
-  ],
-  "category_names" : {
-    "Physical" : "Physical",
-    "Special" : "Special",
-    "Status" : "Status"
+  "adminmenu_title": "Admin",
+  "adminsubmenu_discord": "Discord Message",
+  "atk": "攻擊",
+  "base_trainer_name": "Trainer (Scottie/Bettie)",
+  "category_names": {
+    "Physical": "Physical",
+    "Special": "Special",
+    "Status": "Status"
   },
-  "ex_sync_effect" : [
+  "def": "防禦",
+  "ex_sync_effect": [
     "Targets all opponents.",
     "Targets all opponents.",
     "Doubles the number of sync buffs given to each teammate the first time their sync move isused each battle.",
@@ -19,32 +18,45 @@
     "Implements a specified field effect just before the first time the user's Sync move is used each battle, and extends its duration for that time only.",
     "Lowers the opponent's Type Rebuff of a particular type the first time the user's Sync move is used each battle."
   ],
-  "hp" : "HP",
-  "atk" : "攻擊",
-  "def" : "防禦",
-  "spa" : "特攻",
-  "spd" : "特防",
-  "spe" : "速度",
-  "base_trainer_name" : "Trainer (Scottie/Bettie)",
-  "menu_schedule" : "Schedule",
-  "menu_sync_pairs" : "Sync Pairs",
-  "submenu_pair_page" : "Information",
-  "submenu_pair_ex_role" : "EX Roles",
-  "submenu_skill_gear" : "Skill Gears",
-  "submenu_lucky_skills" : "Lucky Skills",
-  "menu_battle_rally" : "Battle Rally",
-  "submenu_rally_role_set" : "Role Sets",
-  "menu_language" : "Language",
-  "submenu_language" : {
-    "fr" : "Français",
-    "en" : "English",
-    "de" : "Deutsch",
-    "es" : "Español",
-    "it" : "Italiano",
-    "ja" : "日本語",
-    "ko" : "한국어",
-    "zh-TW" : "简体中文"
+  "hp": "HP",
+  "menu_battle_rally": "Battle Rally",
+  "menu_language": "Language",
+  "menu_schedule": "Schedule",
+  "menu_sync_pairs": "Sync Pairs",
+  "role_name_standard": [
+    "攻擊型",
+    "攻擊型",
+    "輔助型",
+    "技術型",
+    "速戰型",
+    "場地型",
+    "複合型"
+  ],
+  "role_names": [
+    "攻擊型 (物理)",
+    "攻擊型 (特殊)",
+    "輔助型",
+    "技術型",
+    "速戰型",
+    "場地型",
+    "複合型"
+  ],
+  "spa": "特攻",
+  "spd": "特防",
+  "spe": "速度",
+  "submenu_language": {
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "zh-TW": "简体中文"
   },
-  "adminmenu_title" : "Admin",
-  "adminsubmenu_discord" : "Discord Message"
+  "submenu_lucky_skills": "Lucky Skills",
+  "submenu_pair_ex_role": "EX Roles",
+  "submenu_pair_page": "Information",
+  "submenu_rally_role_set": "Role Sets",
+  "submenu_skill_gear": "Skill Gears"
 }

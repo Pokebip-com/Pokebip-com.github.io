@@ -1,9 +1,9 @@
 {
-  "new_cookies" : "New Cookies",
-  "normal_cookies" : "Normal Cookies",
-  "guaranteed_cookies" : "Guaranteed Cookies",
-  "trainer_cookies" : "Trainer Cookies",
-  "passive_name_title" : "Name",
-  "passive_descr_title" : "Description",
-  "passive_drop_rate_title" : "Drop Rate"
+  "guaranteed_cookies": "Guaranteed Cookies",
+  "new_cookies": "New Cookies",
+  "normal_cookies": "Normal Cookies",
+  "passive_descr_title": "Description",
+  "passive_drop_rate_title": "Drop Rate",
+  "passive_name_title": "Name",
+  "trainer_cookies": "Trainer Cookies"
 }

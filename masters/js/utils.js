@@ -117,6 +117,7 @@ async function getTrainerActorId(trainerId) {
     let trainerBaseId = (await jsonCache.getProto("Trainer")).find(t => t.trainerId === trainerId).trainerBaseId;
     let actorId = (await jsonCache.getProto("TrainerBase")).find(tb => tb.id === trainerBaseId.toString()).actorId;
 
+
     if(actorId) {
         let rak = (await jsonCache.getProto("ReplaceActorKeyword")).find(rak => rak.replacedActorId === actorId);
 
@@ -132,7 +133,7 @@ async function getTrainerActorId(trainerId) {
 }
 
 async function getActorDressFromTrainerId(trainerId) {
-    let val = (await jsonCache.getProto("ActorDress")).find(td => td.trainerId == trainerId);
+    let val = (await jsonCache.getProto("TrainerDress")).find(td => td.trainerId == trainerId);
 
     if(!val)
         return null;

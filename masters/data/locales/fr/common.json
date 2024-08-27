@@ -1,16 +1,15 @@
 {
-  "role_names" : [
-    "Attaquant (Physique)", "Attaquant (Spécial)", "Soutien", "Tacticien", "Accélérateur", "Régisseur", "Multi"
-  ],
-  "role_name_standard" : [
-    "Attaquant", "Attaquant", "Soutien", "Tacticien", "Accélérateur", "Régisseur", "Multi"
-  ],
-  "category_names" : {
-    "Physical" : "Physique",
-    "Special" : "Spéciale",
-    "Status" : "Statut"
+  "adminmenu_title": "Admin",
+  "adminsubmenu_discord": "Message Discord",
+  "atk": "Attaque",
+  "base_trainer_name": "Dresseur (Scottie/Bettie)",
+  "category_names": {
+    "Physical": "Physique",
+    "Special": "Spéciale",
+    "Status": "Statut"
   },
-  "ex_sync_effect" : [
+  "def": "Défense",
+  "ex_sync_effect": [
     "Cible tous les ennemis.",
     "Cible tous les ennemis.",
     "Augmente la détermination de deux rangs la première fois qu'une capacité Duo est utilisée.",
@@ -19,32 +18,45 @@
     "Implémente un effet de terrain juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet.",
     "Baisse la résligence au type de l'ennemi d'un type particulier la première fois qu'une capacité Duo est utilisée."
   ],
-  "hp" : "PV",
-  "atk" : "Attaque",
-  "def" : "Défense",
-  "spa" : "Atq. Spé.",
-  "spd" : "Déf. Spé.",
-  "spe" : "Vitesse",
-  "base_trainer_name" : "Dresseur (Scottie/Bettie)",
-  "menu_schedule" : "Programme",
-  "menu_sync_pairs" : "Duos",
-  "submenu_pair_page" : "Fiches",
-  "submenu_pair_ex_role" : "Rôles EX",
-  "submenu_skill_gear" : "Équipements de talent",
-  "submenu_lucky_skills" : "Talents Surprise",
-  "menu_battle_rally" : "Rallye",
-  "submenu_rally_role_set" : "Sets de rôles",
-  "menu_language" : "Langue",
-  "submenu_language" : {
-    "fr" : "Français",
-    "en" : "English",
-    "de" : "Deutsch",
-    "es" : "Español",
-    "it" : "Italiano",
-    "ja" : "日本語",
-    "ko" : "한국어",
-    "zh-TW" : "简体中文"
+  "hp": "PV",
+  "menu_battle_rally": "Rallye",
+  "menu_language": "Langue",
+  "menu_schedule": "Programme",
+  "menu_sync_pairs": "Duos",
+  "role_name_standard": [
+    "Attaquant",
+    "Attaquant",
+    "Soutien",
+    "Tacticien",
+    "Accélérateur",
+    "Régisseur",
+    "Multi"
+  ],
+  "role_names": [
+    "Attaquant (Physique)",
+    "Attaquant (Spécial)",
+    "Soutien",
+    "Tacticien",
+    "Accélérateur",
+    "Régisseur",
+    "Multi"
+  ],
+  "spa": "Atq. Spé.",
+  "spd": "Déf. Spé.",
+  "spe": "Vitesse",
+  "submenu_language": {
+    "de": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "zh-TW": "简体中文"
   },
-  "adminmenu_title" : "Admin",
-  "adminsubmenu_discord" : "Message Discord"
+  "submenu_lucky_skills": "Talents Surprise",
+  "submenu_pair_ex_role": "Rôles EX",
+  "submenu_pair_page": "Fiches",
+  "submenu_rally_role_set": "Sets de rôles",
+  "submenu_skill_gear": "Équipements de talent"
 }
