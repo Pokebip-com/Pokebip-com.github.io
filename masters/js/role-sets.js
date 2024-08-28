@@ -158,10 +158,11 @@ function setMainUL() {
         for(let i = 0; i < setData.length; i++) {
             let inputA = document.getElementById(`toolRow_${i+1}_A`);
             let inputB = document.getElementById(`toolRow_${i+1}_B`);
+            let keys = Object.keys(commonLocales.role_name_standard);
 
             if(inputA && inputB && (
-                (commonLocales.role_name_standard.includes(inputA.value) && inputA.value !== commonLocales.role_name_standard[setData[i].roleA])
-                || (commonLocales.role_name_standard.includes(inputB.value) && inputB.value !== commonLocales.role_name_standard[setData[i].roleB])
+                (keys.includes(inputA.value) && inputA.value !== commonLocales.role_name_standard[setData[i].roleA])
+                || (keys.includes(inputB.value) && inputB.value !== commonLocales.role_name_standard[setData[i].roleB])
             )) {
                 isSetVisible = false;
                 break;
