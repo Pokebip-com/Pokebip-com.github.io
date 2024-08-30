@@ -113,7 +113,7 @@ getData().then(() => {
     let dataList = document.createElement("datalist");
     dataList.id = "roles-list";
 
-    for(let i = 1; i < commonLocales.role_name_standard.length; i++) {
+    for(let i = 1; i < Object.keys(commonLocales.role_name_standard).length; i++) {
         let option = document.createElement("option");
         option.value = commonLocales.role_name_standard[i];
         dataList.appendChild(option);
@@ -158,11 +158,11 @@ function setMainUL() {
         for(let i = 0; i < setData.length; i++) {
             let inputA = document.getElementById(`toolRow_${i+1}_A`);
             let inputB = document.getElementById(`toolRow_${i+1}_B`);
-            let keys = Object.keys(commonLocales.role_name_standard);
+            let values = Object.values(commonLocales.role_name_standard);
 
             if(inputA && inputB && (
-                (keys.includes(inputA.value) && inputA.value !== commonLocales.role_name_standard[setData[i].roleA])
-                || (keys.includes(inputB.value) && inputB.value !== commonLocales.role_name_standard[setData[i].roleB])
+                (values.includes(inputA.value) && inputA.value !== commonLocales.role_name_standard[setData[i].roleA])
+                || (values.includes(inputB.value) && inputB.value !== commonLocales.role_name_standard[setData[i].roleB])
             )) {
                 isSetVisible = false;
                 break;
