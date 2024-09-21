@@ -57,6 +57,7 @@ class JsonCache {
     constructor() {
         this.cache = new Map();
         this.inProgressRequests = new Map();
+        this.preloadPromises = [];
     }
 
     async getProto(protoName, hasEntries = true) {
@@ -99,6 +100,48 @@ class JsonCache {
         this.inProgressRequests.set(url, requestPromise);
 
         return requestPromise;
+    }
+
+    preloadProto(protoName, storedVariable = null, hasEntries = true) {
+        const url = `${this.baseDir}/data/proto/${protoName}.json`;
+        const promise = this.fetchData(url, hasEntries);
+        if (storedVariable) {
+            promise.then(data => storedVariable = data);
+        }
+        this.preloadPromises.push(promise);
+    }
+
+    preloadLsd(lsdName, storedVariable = null, hasEntries = false) {
+        const url = `${this.baseDir}/data/lsd/${lsdName}_${lng}.json`;
+        const promise = this.fetchData(url, hasEntries);
+        if (storedVariable) {
+            promise.then(data => storedVariable = data);
+        }
+        this.preloadPromises.push(promise);
+    }
+
+    preloadLocale(localeName, storedVariable = null, hasEntries = false) {
+        const url = `${this.baseDir}/data/locales/${lng}/${localeName}.json`;
+        const promise = this.fetchData(url, hasEntries);
+        if (storedVariable) {
+            promise.then(data => storedVariable = data);
+        }
+        this.preloadPromises.push(promise);
+    }
+
+    preloadCustom(customName, storedVariable = null, hasEntries = false) {
+        const url = `${this.baseDir}/data/custom/${customName}.json`;
+        const promise = this.fetchData(url, hasEntries);
+        if (storedVariable) {
+            promise.then(data => storedVariable = data);
+        }
+        this.preloadPromises.push(promise);
+    }
+
+    runPreload() {
+        return Promise.all(this.preloadPromises).then(() => {
+            this.preloadPromises = [];
+        });
     }
 }
 

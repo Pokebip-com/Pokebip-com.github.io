@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        div#contentDiv li.puce::before {
+            content: "› ";
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+        fieldset#toolbox {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        fieldset#toolbox p {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 630px;
+            padding: 2px 10px;
+            border-radius: 8px;
+            line-height: 1rem;
+        }
+
+        div#buttons {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 99;
+            align-items: center;
+            justify-content: center;
+            display: inline-flex;
+        }
+
+        div#buttons a {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.2s ease-out;
+            height: 100% !important;
+        }
+
+        a#scrollTop {
+            background-color: #dc143c;
+        }
+
+        a#scrollTop:hover {
+            background-color: #be1a3b;
+        }
+
+        div#buttons a span {
+            color: #fff;
+            font-size: 3rem;
+            transition: 0.2s ease-out;
+            text-shadow: #00000050 0px 2px;
+        }
+
+        div#buttons a:hover span {
+            transform: translateY(-4px);
+            text-shadow: 0px 5px #00000050;
+        }
+
+        .listh-click {
+            cursor: pointer;
+        }
+
+        .listh-click:hover > a {
+            color: #d96b6b;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../../css/pokebip.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="./js/dist/FileSaver.min.js"></script>
+    <script src="./js/dist/jszip.min.js"></script>
+</head>
+
+<body>
+<div id="contentDiv" style="max-width: 1200px;">
+    <h1 id="pageTitle">Loading...</h1>
+
+    <fieldset id="toolbox">
+        <p>
+            <label for="bingoList">Choose a bingo:</label>
+            <select id="bingoList"></select>
+        </p>
+        <p style="display: none;" id="getBipcode">
+            <button id="btnGetBipcode">Copier le code du tableau</button>
+        </p>
+    </fieldset>
+    <ul class="listh-bipcode">
+        <li class="listh-no-style">
+            <div id="bingoMissionDiv"></div>
+        </li>
+        <li class="listh-no-style">
+            <div id="bingoRewardDiv"></div>
+        </li>
+    </ul>
+</div>
+
+<div id="buttons">
+    <a href="#" id="scrollTop"><span class="material-symbols-outlined">arrow_upward</span></a>
+</div>
+
+<script src="./js/header.js"></script>
+<script src="./js/utils.js"></script>
+<script src="./js/bingo.js"></script>
+</body>
+
+</html>

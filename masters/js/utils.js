@@ -291,7 +291,7 @@ async function getAbilityPanelQty(id) {
 }
 
 function removeAccents(string) {
-    return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[)('.]/g, "");
 }
 
 function getDayMonthDate(date) {
@@ -348,12 +348,12 @@ async function getNormalizedItemName(itemId) {
         .then(itemName => removeAccents(itemName).toLowerCase().replaceAll(" ", "-"));
 }
 
-async function getItemName(itemId) {
+async function getItemName(itemId, log = false) {
     let lsdName = "";
     let fieldName = itemId;
     let prefix = "";
-    let subCategory = (await jsonCache.getProto("Item")).find(i => i.itemId === itemId).subCategory;
-    subCategory = subCategory ? subCategory : -1;
+    let subCategory = (await jsonCache.getProto("Item")).find(i => i.itemId === itemId);
+    subCategory = subCategory && subCategory.subCategory ? subCategory.subCategory : -1;
     switch(subCategory) {
         // Trainer.pb
         case 1:
@@ -545,7 +545,8 @@ async function getItemName(itemId) {
         // RewardConfig.Pb
         // => item_set_id_at_duplication.{itemId} => ItemSetId => Item
         case 121:
-
+            fieldName = itemId.slice(4);
+            lsdName = `hero_customize_parts_name`
             break;
 
         // salon_help_item_name_xx.lsd
@@ -619,8 +620,11 @@ async function getItemName(itemId) {
             return "Unknown Item";
     }
 
-    if(lsdName === "")
+    if(lsdName === "") {
+        console.log(`Item category ${subCategory} not yet implemented...`);
+        console.log(`Item ID: ${itemId}`);
         return "Item category not yet implemented...";
+    }
 
     return (prefix === "" ? "" : `${prefix} `) + (await jsonCache.getLsd(lsdName))[fieldName] || "Unknown Item";
 
