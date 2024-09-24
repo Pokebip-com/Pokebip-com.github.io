@@ -1,63 +1,51 @@
-let potential;
-let potentialItem;
-let potentialLot;
-
-let potentialItemName;
-
-let storyQuest;
-let itemExchange;
-let itemSet;
-let progressEvent;
-let progressEventRewardGroup;
-let schedule;
-
-let versions;
-
-let luckySkillLocale;
-
 let cookieListDiv;
 let passivesDiv;
 
 
 async function getData() {
-    itemExchange = await jsonCache.getProto("ItemExchange");
-    itemSet = await jsonCache.getProto("ItemSet");
+    // PROTO
+    jsonCache.preloadProto("ItemExchange");
+    jsonCache.preloadProto("ItemSet");
+    jsonCache.preloadProto("PotentialItem");
+    jsonCache.preloadProto("PotentialLot");
+    jsonCache.preloadProto("ProgressEvent");
+    jsonCache.preloadProto("ProgressEventRewardGroup");
+    jsonCache.preloadProto("Schedule");
+    jsonCache.preloadProto("StoryQuest");
 
-    potential = await jsonCache.getProto("Potential");
-    potentialItem = await jsonCache.getProto("PotentialItem");
-    potentialLot = await jsonCache.getProto("PotentialLot");
+    // LSD
+    jsonCache.preloadLsd("potential_item_name");
 
-    progressEvent = await jsonCache.getProto("ProgressEvent");
-    progressEventRewardGroup = await jsonCache.getProto("ProgressEventRewardGroup");
+    // CUSTOM
+    jsonCache.preloadCustom("version_release_dates");
 
-    schedule = await jsonCache.getProto("Schedule");
+    // Locale
+    jsonCache.preloadLocale("lucky-skills");
 
-    storyQuest = await jsonCache.getProto("StoryQuest");
+    // Other Preloads
+    preloadUtils();
+    preloadMovePassiveSkills();
 
-    potentialItemName = await jsonCache.getLsd("potential_item_name");
-}
-
-async function getCustomJSON() {
-    luckySkillLocale = await jsonCache.getLocale("lucky-skills");
-    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
+    await jsonCache.runPreload();
+    orderByVersion(jData.custom.versionReleaseDates);
 }
 
 function getProgressEventRewardCookies(cookiesList, lastVersionScheduleStarts) {
-    let itemSetIds = itemSet.filter(is => cookiesList.includes(is.item1)).map(is => is.itemSetId);
-    let progressEventEQGIds = progressEvent.map(pe => pe.questGroupId);
-    let lastVersionQuestGroups = storyQuest.filter(sq => lastVersionScheduleStarts.includes(sq.scheduleId) && progressEventEQGIds.includes(sq.questGroupId)).map(sq => sq.questGroupId);
+    let itemSetIds = jData.proto.itemSet.filter(is => cookiesList.includes(is.item1)).map(is => is.itemSetId);
+    let progressEventEQGIds = jData.proto.progressEvent.map(pe => pe.questGroupId);
+    let lastVersionQuestGroups = jData.proto.storyQuest.filter(sq => lastVersionScheduleStarts.includes(sq.scheduleId) && progressEventEQGIds.includes(sq.questGroupId)).map(sq => sq.questGroupId);
 
-    return progressEventRewardGroup.filter(perg => lastVersionQuestGroups.includes(perg.progressEventId) && itemSetIds.includes(perg.itemSetId)).map(perg => itemSet.find(is => is.itemSetId === perg.itemSetId).item1);
+    return jData.proto.progressEventRewardGroup.filter(perg => lastVersionQuestGroups.includes(perg.progressEventId) && itemSetIds.includes(perg.itemSetId)).map(perg => jData.proto.itemSet.find(is => is.itemSetId === perg.itemSetId).item1);
 }
 
 function getNewCookies() {
-    let cookiesList = [...new Set(potentialItem.filter(pi => pi.potentialLotId >= 6000).map(pi => pi.itemId))];
-    let lastVersionScheduleStarts = [...new Set(schedule.filter(s => s.startDate >= versions[0].releaseTimestamp).map(s => s.scheduleId))];
-    let cookieIds = itemExchange.filter(ie => cookiesList.includes(ie.itemId) && lastVersionScheduleStarts.includes(ie.scheduleId)).map(ie => ie.itemId);
+    let cookiesList = [...new Set(jData.proto.potentialItem.filter(pi => pi.potentialLotId >= 6000).map(pi => pi.itemId))];
+    let lastVersionScheduleStarts = [...new Set(jData.proto.schedule.filter(s => s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp).map(s => s.scheduleId))];
+    let cookieIds = jData.proto.itemExchange.filter(ie => cookiesList.includes(ie.itemId) && lastVersionScheduleStarts.includes(ie.scheduleId)).map(ie => ie.itemId);
 
     cookieIds.push(...getProgressEventRewardCookies(cookiesList, lastVersionScheduleStarts));
 
-    return potentialItem.filter(pi => cookieIds.includes(pi.itemId));
+    return jData.proto.potentialItem.filter(pi => cookieIds.includes(pi.itemId));
 }
 
 function getCookieItemImage(cookie) {
@@ -82,7 +70,7 @@ function getCookieLi(cookie) {
     let link = document.createElement("a");
     link.onclick = () => printCookieInfos(cookie);
     link.href = `#cookie_${cookie.itemId}`;
-    link.innerHTML = `<b>${potentialItemName[cookie.itemId]}</b>`;
+    link.innerHTML = `<b>${jData.lsd.potentialItemName[cookie.itemId]}</b>`;
 
     newLi.classList.add("listh-click");
     newLi.onclick = () => link.click();
@@ -95,14 +83,14 @@ function listLuckyCookiesInfos() {
 
     let newCookies = getNewCookies();
 
-    let normalCookies = potentialItem.filter(pi => pi.rarity < 9);
-    let guaranteedCookies = potentialItem.filter(pi => pi.rarity === 9 && pi.u2 !== "1");
-    let trainerCookies = potentialItem.filter(pi => pi.rarity === 9 && pi.u2 === "1");
+    let normalCookies = jData.proto.potentialItem.filter(pi => pi.rarity < 9);
+    let guaranteedCookies = jData.proto.potentialItem.filter(pi => pi.rarity === 9 && pi.u2 !== "1");
+    let trainerCookies = jData.proto.potentialItem.filter(pi => pi.rarity === 9 && pi.u2 === "1");
 
     if(newCookies.length > 0) {
 
         let newCookiesH2 = document.createElement("h2");
-        newCookiesH2.innerText = luckySkillLocale.new_cookies;
+        newCookiesH2.innerText = jData.locale.luckySkills.new_cookies;
         cookieListDiv.appendChild(newCookiesH2);
 
         let newUl = document.createElement("ul");
@@ -116,7 +104,7 @@ function listLuckyCookiesInfos() {
     }
 
     let normalCookiesH2 = document.createElement("h2");
-    normalCookiesH2.innerText = luckySkillLocale.normal_cookies;
+    normalCookiesH2.innerText = jData.locale.luckySkills.normal_cookies;
 
     let normalUl = document.createElement("ul");
     normalUl.classList.add("listh-bipcode");
@@ -126,7 +114,7 @@ function listLuckyCookiesInfos() {
     }
 
     let guaranteedCookiesH2 = document.createElement("h2");
-    guaranteedCookiesH2.innerText = luckySkillLocale.guaranteed_cookies;
+    guaranteedCookiesH2.innerText = jData.locale.luckySkills.guaranteed_cookies;
 
     let guaranteedUl = document.createElement("ul");
     guaranteedUl.classList.add("listh-bipcode");
@@ -136,7 +124,7 @@ function listLuckyCookiesInfos() {
     }
 
     let trainerCookiesH2 = document.createElement("h2");
-    trainerCookiesH2.innerText = luckySkillLocale.trainer_cookies;
+    trainerCookiesH2.innerText = jData.locale.luckySkills.trainer_cookies;
 
     let trainerUl = document.createElement("ul");
     trainerUl.classList.add("listh-bipcode");
@@ -166,13 +154,13 @@ function printCookiePassiveSkills(cookie, div) {
     let tr = document.createElement("tr");
 
     let passiveName = document.createElement("th");
-    passiveName.innerText = luckySkillLocale.passive_name_title;
+    passiveName.innerText = jData.locale.luckySkills.passive_name_title;
 
     let passiveDescr = document.createElement("th");
-    passiveDescr.innerText = luckySkillLocale.passive_descr_title;
+    passiveDescr.innerText = jData.locale.luckySkills.passive_descr_title;
 
     let passiveDropRate = document.createElement("th");
-    passiveDropRate.innerText = luckySkillLocale.passive_drop_rate_title;
+    passiveDropRate.innerText = jData.locale.luckySkills.passive_drop_rate_title;
 
     tr.appendChild(passiveName);
     tr.appendChild(passiveDescr);
@@ -182,7 +170,7 @@ function printCookiePassiveSkills(cookie, div) {
 
     let tbody = document.createElement("tbody");
 
-    let lot = potentialLot.filter(pl => parseInt(pl.potentialLotId) === cookie.potentialLotId);
+    let lot = jData.proto.potentialLot.filter(pl => parseInt(pl.potentialLotId) === cookie.potentialLotId);
     let lotFullRate = lot.reduce((acc, val) => acc + val.rate, 0);
 
     for(let i = 0; i < lot.length; i++) {
@@ -215,7 +203,7 @@ function printCookieInfos(cookie) {
     div.style.scrollMarginTop = "5em";
 
     let h2 = document.createElement("h2");
-    h2.innerText = potentialItemName[cookie.itemId];
+    h2.innerText = jData.lsd.potentialItemName[cookie.itemId];
     div.appendChild(h2);
 
     printCookiePassiveSkills(cookie, div);
@@ -229,11 +217,9 @@ async function init() {
     //toolsDiv = document.getElementById('adminTools');
 
     await buildHeader();
-    await initMovePassiveSkills();
     await getData();
-    await getCustomJSON();
 
-    document.getElementById("pageTitle").innerText = commonLocales.submenu_lucky_skills;
+    document.getElementById("pageTitle").innerText = jData.locale.common.submenu_lucky_skills;
 
     // if(isAdminMode) {
     //     dataArea = document.getElementById("dataArea");
@@ -259,53 +245,6 @@ async function init() {
             tmp.click();
         }, 1000);
     }
-}
-
-function getPassiveSkillBipCode(t, v = null) {
-    let string = `[center][table]\n`
-        + `\t[tr][th|colspan=2]Talents passifs[/th][/tr]\n`
-        + `\t[tr][th|width=200px]Nom[/th][th|width=400px]Effet[/th][/tr]\n`;
-
-    for(let i = 1; i <= 4; i++) {
-        const passiveId = v && v[`passive${i}Id`] > 0 ? v[`passive${i}Id`] : t[`passive${i}Id`];
-
-        if(passiveId === 0)
-            continue;
-
-        string += `\t[tr][td]${getPassiveSkillName(passiveId)}[/td][td]${getPassiveSkillDescr(passiveId)}[/td][/tr]\n`;
-    }
-
-    string += `[/table][/center]\n\n`;
-    return string;
-}
-
-async function downloadData() {
-    let e = document.createElement('a');
-    e.href = window.URL.createObjectURL(
-        new Blob([getPairBipCode(syncPairSelect.value)], {"type": "text/plain"})
-    );
-    e.setAttribute('download', removeAccents(await getPairName(syncPairSelect.value)));
-    e.style.display = 'none';
-
-    document.body.appendChild(e);
-    e.click();
-    document.body.removeChild(e);
-}
-
-async function downloadAll() {
-    let zip = new JSZip();
-    let trainerIds = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER")
-        .map(t => t.trainerId);
-
-    for (const tid of trainerIds) {
-        let filename = removeAccents(await getPairName(tid)).replace("/", "-") + '.txt';
-        zip.file(filename, getPairBipCode(tid));
-    }
-
-    zip.generateAsync({type: 'blob'})
-        .then(function (content) {
-            saveAs(content, "Team-Skills.zip");
-        });
 }
 
 init().then();

@@ -1,23 +1,3 @@
-let ability;
-let abilityPanel;
-let abilityReleaseCondition;
-let actorDress;
-let exRoleStatusUp;
-let monster;
-let monsterBase;
-let monsterEnhancement;
-let monsterEvolution;
-let monsterVariation;
-let replaceActorKeyword;
-let schedule;
-let teamSkill;
-let trainer;
-let trainerBase;
-let trainerDress;
-let trainerExRole;
-
-let trainerBuildupConfig, trainerBuildupParameter;
-
 let abilityType = {
     "1" : "StatsBoost",
     "2" : "Passive",
@@ -34,90 +14,66 @@ let abilityTypeBGColor = {
     "SyncMove" : "#BF80FF"
 };
 
-let versions;
-
-let monsterDescriptions;
-let monsterForms;
-let monsterNames;
-let motifTypeName;
-let teamSkillEffect;
-let teamSkillTag;
-let trainerDescriptions;
-let trainerNames;
-let trainerVerboseNames;
-
 let dataArea;
 let lastReleasePairsDiv;
 let syncPairSelect;
 let syncPairDiv;
 let toolsDiv;
 
-let syncPairLocale;
-
 let syncLevel = 5;
 let maxEnergy = 60;
 
 async function getData() {
-    ability = await jsonCache.getProto("Ability");
 
-    abilityPanel = await jsonCache.getProto("AbilityPanel");
+    // PROTO
+    jsonCache.preloadProto("Ability");
+    jsonCache.preloadProto("AbilityPanel");
+    jsonCache.preloadProto("AbilityReleaseCondition");
+    jsonCache.preloadProto("ExRoleStatusUp");
+    jsonCache.preloadProto("Monster");
+    jsonCache.preloadProto("MonsterEnhancement");
+    jsonCache.preloadProto("MonsterEvolution");
+    jsonCache.preloadProto("MonsterVariation");
+    jsonCache.preloadProto("Schedule");
+    jsonCache.preloadProto("TeamSkill");
+    jsonCache.preloadProto("Trainer");
+    jsonCache.preloadProto("TrainerBuildupConfig");
+    jsonCache.preloadProto("TrainerBuildupParameter");
 
-    abilityReleaseCondition = await jsonCache.getProto("AbilityReleaseCondition");
+    // LSD
+    jsonCache.preloadLsd("ability_name");
+    jsonCache.preloadLsd("monster_description");
+    jsonCache.preloadLsd("motif_type_name");
+    jsonCache.preloadLsd("team_skill_tag");
+    jsonCache.preloadLsd("team_skill_effect");
+    jsonCache.preloadLsd("trainer_description");
 
-    actorDress = await jsonCache.getProto("ActorDress");
+    // Locale
+    jsonCache.preloadLocale("sync-pairs");
 
-    exRoleStatusUp = await jsonCache.getProto("ExRoleStatusUp");
+    // Custom
+    jsonCache.preloadCustom("version_release_dates");
 
-    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
+    preloadUtils();
+    preloadMovePassiveSkills();
 
-    schedule = (await jsonCache.getProto("Schedule")).filter(s => s.scheduleId.startsWith("chara_") && s.startDate >= versions[0].releaseTimestamp);
-
-    monster = await jsonCache.getProto("Monster");
-    monsterBase = await jsonCache.getProto("MonsterBase");
-    monsterEvolution = await jsonCache.getProto("MonsterEvolution");
-    monsterEnhancement = await jsonCache.getProto("MonsterEnhancement");
-    monsterVariation = await jsonCache.getProto("MonsterVariation");
-
-    replaceActorKeyword = await jsonCache.getProto("ReplaceActorKeyword");
-
-    teamSkill = await jsonCache.getProto("TeamSkill");
-
-    trainer = await jsonCache.getProto("Trainer");
-    trainerBase = await jsonCache.getProto("TrainerBase");
-
-    trainerBuildupConfig = await jsonCache.getProto("TrainerBuildupConfig");
-    trainerBuildupParameter = await jsonCache.getProto("TrainerBuildupParameter");
-
-    trainerDress = await jsonCache.getProto("TrainerDress");
-    trainerExRole = await jsonCache.getProto("TrainerExRole");
-
-    monsterDescriptions = await jsonCache.getLsd("monster_description");
-    monsterForms = await jsonCache.getLsd("monster_form");
-    monsterNames = await jsonCache.getLsd("monster_name");
-    motifTypeName = await jsonCache.getLsd("motif_type_name");
-    teamSkillTag = await jsonCache.getLsd("team_skill_tag");
-    teamSkillEffect = await jsonCache.getLsd("team_skill_effect");
-    trainerDescriptions = await jsonCache.getLsd("trainer_description");
-    trainerNames = await jsonCache.getLsd("trainer_name");
-    trainerVerboseNames = await jsonCache.getLsd("trainer_verbose_name");
+    await jsonCache.runPreload()
+    orderByVersion(jData.custom.versionReleaseDates);
+    jData.proto.schedule = jData.proto.schedule
+        .filter(s => s.scheduleId.startsWith("chara_") && s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp);
 }
 
-async function getCustomJSON() {
-    syncPairLocale = await jsonCache.getLocale("sync-pairs");
-    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
-}
-
-async function populateSelect() {
+function populateSelect() {
     while (syncPairSelect.length > 0) {
         syncPairSelect.remove(0);
     }
-    let optionData = (await Promise.all(trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER" && t.scoutMethod !== 3)
-        .map(async t => {
+    let optionData = jData.proto.trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER" && t.scoutMethod !== 3)
+        .map(t => {
             let data = {};
             data.value = t.trainerId;
-            data.text = await getPairName(t.trainerId);
+            data.text = getPairName(t.trainerId);
             return data;
-        }))).sort((a, b) =>  a.text.localeCompare(b.text));
+        }).sort((a, b) =>  a.text.localeCompare(b.text));
 
     for(const opt of optionData) {
         syncPairSelect.add(new Option(opt.text, opt.value));
@@ -133,7 +89,7 @@ function switchTab(monsterId, monsterBaseId, formId, pushstate = true) {
     document.getElementById(`btn-${monsterId}-${monsterBaseId}-${formId}`).classList.add("active");
 }
 
-async function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation = null) {
+function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation = null) {
     let table = document.createElement("table");
     let firstRow = document.createElement("tr");
     let trainerName = document.createElement("th");
@@ -144,7 +100,7 @@ async function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId
     table.style.maxWidth = "512px";
 
     trainerName.colSpan = 5;
-    trainerName.innerText = await getTrainerName(syncPairSelect.value);
+    trainerName.innerText = getTrainerName(syncPairSelect.value);
 
     pokemonName.colSpan = 5;
     pokemonName.innerText = monsterName;
@@ -155,15 +111,15 @@ async function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId
 
     let secondRow = document.createElement("tr");
 
-    let trainerActorId = await getTrainerActorId(syncPairSelect.value);
-    let trainerActorDress = await getActorDressFromTrainerId(syncPairSelect.value);
+    let trainerActorId = getTrainerActorId(syncPairSelect.value);
+    let trainerActorDress = getActorDressFromTrainerId(syncPairSelect.value);
     let trainerImageCell = document.createElement("td");
     let trainerImg = document.createElement("img");
     trainerImg.src = `./data/actor/Trainer/${trainerActorId}/${trainerActorId}_1024.png`;
     trainerImg.style.maxWidth = "256px";
     trainerImageCell.appendChild(trainerImg);
 
-    let pokemonActorId = await getMonsterActorIdFromBaseId(monsterBaseId);
+    let pokemonActorId = getMonsterActorIdFromBaseId(monsterBaseId);
     let pokemonImageCell = document.createElement("td");
     let pokemonImg = document.createElement("img");
     pokemonImg.src = `./data/actor/Monster/${pokemonActorId}/${pokemonActorId}_256.png`;
@@ -178,12 +134,12 @@ async function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId
 
     let exTitleRow, exImageRow;
 
-    if ((await hasExUnlocked(syncPairSelect.value)) && trainerActorDress) {
+    if (hasExUnlocked(syncPairSelect.value) && trainerActorDress) {
         pokemonImageCell.rowSpan = 3;
 
         exTitleRow = document.createElement("tr");
         let exTitle = document.createElement("th");
-        exTitle.innerText = syncPairLocale.ex_clothing;
+        exTitle.innerText = jData.locale.syncPairs.ex_clothing;
         exTitle.colSpan = 5;
         exTitleRow.appendChild(exTitle);
 
@@ -210,23 +166,23 @@ async function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId
 
     let infosTitleRow = document.createElement("tr");
     let roleTitle = document.createElement("th");
-    roleTitle.innerText = syncPairLocale.role;
+    roleTitle.innerText = jData.locale.syncPairs.role;
     roleTitle.colSpan = 2;
 
     let exRoleTitle = document.createElement("th");
-    exRoleTitle.innerText = syncPairLocale.ex_role;
+    exRoleTitle.innerText = jData.locale.syncPairs.ex_role;
     exRoleTitle.colSpan = 2;
 
     let potentielTitle = document.createElement("th");
-    potentielTitle.innerText = syncPairLocale.potential_base;
+    potentielTitle.innerText = jData.locale.syncPairs.potential_base;
     potentielTitle.colSpan = 2;
 
     let typeTitle = document.createElement("th");
-    typeTitle.innerText = syncPairLocale.type;
+    typeTitle.innerText = jData.locale.syncPairs.type;
     typeTitle.colSpan = 2;
 
     let weaknessTitle = document.createElement("th");
-    weaknessTitle.innerText = syncPairLocale.weakness;
+    weaknessTitle.innerText = jData.locale.syncPairs.weakness;
     weaknessTitle.colSpan = 2;
 
     infosTitleRow.appendChild(roleTitle);
@@ -239,23 +195,23 @@ async function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId
     let infosRow = document.createElement("tr");
 
     let roleCell = document.createElement("td");
-    roleCell.innerText = await getRoleByTrainerId(syncPairSelect.value);
+    roleCell.innerText = getRoleByTrainerId(syncPairSelect.value);
     roleCell.colSpan = 2;
 
     let exRoleCell = document.createElement("td");
-    exRoleCell.innerText = await getExRoleText(syncPairSelect.value);
+    exRoleCell.innerText = getExRoleText(syncPairSelect.value);
     exRoleCell.colSpan = 2;
 
     let potentielCell = document.createElement("td");
-    potentielCell.innerHTML = await getStarsRarityString(syncPairSelect.value);
+    potentielCell.innerHTML = getStarsRarityString(syncPairSelect.value);
     potentielCell.colSpan = 2;
 
     let typeCell = document.createElement("td");
-    typeCell.innerText = variation && variation.type > 0 ? motifTypeName[variation.type] : await getTrainerTypeName(syncPairSelect.value);
+    typeCell.innerText = variation && variation.type > 0 ? jData.lsd.motifTypeName[variation.type] : getTrainerTypeName(syncPairSelect.value);
     typeCell.colSpan = 2;
 
     let weaknessCell = document.createElement("td");
-    weaknessCell.innerText = variation && variation.weakness > 0 ? motifTypeName[variation.weakness] : await getTrainerWeaknessName(syncPairSelect.value);
+    weaknessCell.innerText = variation && variation.weakness > 0 ? jData.lsd.motifTypeName[variation.weakness] : getTrainerWeaknessName(syncPairSelect.value);
     weaknessCell.colSpan = 2;
 
     infosRow.appendChild(roleCell);
@@ -267,12 +223,12 @@ async function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId
 
     let descrTitleRow = document.createElement("tr");
     let descrTitle = document.createElement("th");
-    descrTitle.innerText = syncPairLocale.descriptions;
+    descrTitle.innerText = jData.locale.syncPairs.descriptions;
     descrTitle.colSpan = 10;
     descrTitleRow.appendChild(descrTitle);
     table.appendChild(descrTitleRow);
 
-    let descrTrainerTxt = agenderDescription(trainerDescriptions[syncPairSelect.value]);
+    let descrTrainerTxt = agenderDescription(jData.lsd.trainerDescription[syncPairSelect.value]);
 
     if (descrTrainerTxt) {
         let descrTrainerRow = document.createElement("tr");
@@ -283,7 +239,7 @@ async function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId
         table.appendChild(descrTrainerRow);
     }
 
-    let descrMonsterTxt = monsterDescriptions[monsterBaseId];
+    let descrMonsterTxt = jData.lsd.monsterDescription[monsterBaseId];
 
     if (descrMonsterTxt) {
         let descrMonsterRow = document.createElement("tr");
@@ -302,14 +258,14 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
 
     let tr = document.createElement("tr");
     let th = document.createElement("th");
-    th.innerText = commonLocales[name];
+    th.innerText = jData.locale.common[name];
 
     tr.appendChild(th);
 
     let pointBIdx = breakPointLevels.findIndex((a) => a > level);
     let pointAIdx = pointBIdx - 1;
 
-    let buildupParameter = trainerBuildupParameter.filter(tbp => tbp.trainerId === syncPairSelect.value);
+    let buildupParameter = jData.proto.trainerBuildupParameter.filter(tbp => tbp.trainerId === syncPairSelect.value);
     let buildupBonus = 0;
 
     let numCols = 6 - rarity + 1;
@@ -318,7 +274,7 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
         let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx])*(statValues[pointBIdx] - statValues[pointAIdx])/(breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
 
         if(i > 0) {
-            let buildupPowerups = trainerBuildupConfig.find(tbc => tbc.trainerBuildupConfigId === buildupParameter[i-1].trainerBuildupConfigId).nbPowerups || 0;
+            let buildupPowerups = jData.proto.trainerBuildupConfig.find(tbc => tbc.trainerBuildupConfigId === buildupParameter[i-1].trainerBuildupConfigId).nbPowerups || 0;
             buildupBonus += buildupPowerups * buildupParameter[i-1][name];
             statValue += buildupBonus;
         }
@@ -345,13 +301,13 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
     return tr;
 }
 
-async function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole = false, exRoleCheckboxId = "") {
+function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole = false, exRoleCheckboxId = "") {
     if (input.value === "")
         return;
 
     statsDiv.innerHTML = "";
 
-    let rarity = await getTrainerRarity(syncPairSelect.value);
+    let rarity = getTrainerRarity(syncPairSelect.value);
     let exRoleCheckbox = document.getElementById(exRoleCheckboxId);
     let exRoleStats = hasExRole && exRoleCheckbox && exRoleCheckbox.checked;
 
@@ -362,7 +318,7 @@ async function setStatsTable(input, statsDiv, monsterData, variation = null, has
     let headRow = document.createElement("tr");
 
     let statsMaxTh = document.createElement("th");
-    statsMaxTh.innerText = syncPairLocale.max_stats;
+    statsMaxTh.innerText = jData.locale.syncPairs.max_stats;
     headRow.appendChild(statsMaxTh);
 
     for (let i = rarity; i <= 6; i++) {
@@ -374,8 +330,8 @@ async function setStatsTable(input, statsDiv, monsterData, variation = null, has
     let exRoleBonus = {"hp": 0, "atk": 0, "spa": 0, "def": 0, "spd": 0, "spe": 0};
 
     if (exRoleStats) {
-        let exRoleId = await getExRoleId(syncPairSelect.value);
-        exRoleBonus = exRoleStatusUp.find(ersu => ersu.roleId === exRoleId);
+        let exRoleId = getExRoleId(syncPairSelect.value);
+        exRoleBonus = jData.proto.exRoleStatusUp.find(ersu => ersu.roleId === exRoleId);
     }
 
     table.appendChild(headRow);
@@ -388,12 +344,12 @@ async function setStatsTable(input, statsDiv, monsterData, variation = null, has
     statsDiv.appendChild(table);
 }
 
-async function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
+function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
 
-    let monsterData = await getMonsterById(monsterId);
+    let monsterData = getMonsterById(monsterId);
 
     let statsH2 = document.createElement("h2");
-    statsH2.innerText = syncPairLocale.stats;
+    statsH2.innerText = jData.locale.syncPairs.stats;
     contentDiv.appendChild(statsH2);
 
     let statContainer = document.createElement("div");
@@ -406,7 +362,7 @@ async function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, f
     toolFieldset.style.display = "inline-block";
     toolFieldset.style.verticalAlign = "middle";
     toolFieldset.style.margin = "5px";
-    toolFieldset.innerHTML = `<legend><b>${syncPairLocale.stats_settings}</b></legend>`;
+    toolFieldset.innerHTML = `<legend><b>${jData.locale.syncPairs.stats_settings}</b></legend>`;
 
     let defaultLevels = document.createElement("dataList");
     defaultLevels.id = "defaultLevels";
@@ -425,7 +381,7 @@ async function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, f
 
     let lvlLabel = document.createElement("label");
     lvlLabel.setAttribute("for", "levelInput");
-    lvlLabel.innerHTML = `<b>${syncPairLocale.level}: </b>`;
+    lvlLabel.innerHTML = `<b>${jData.locale.syncPairs.level}: </b>`;
     lvlLabel.style.display = "table-cell";
     lvlLabel.style.textAlign = "right";
     lvlP.appendChild(lvlLabel);
@@ -442,7 +398,7 @@ async function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, f
     lvlP.appendChild(lvlInput);
     toolFieldset.appendChild(lvlP);
 
-    if (await hasExRoleUnlocked(syncPairSelect.value)) {
+    if (hasExRoleUnlocked(syncPairSelect.value)) {
         let exRoleP = document.createElement("p");
         exRoleP.style.display = "table-row";
 
@@ -450,7 +406,7 @@ async function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, f
         exRoleLabel.setAttribute("for", "exRoleCheckbox");
         exRoleLabel.style.display = "table-cell";
         exRoleLabel.style.textAlign = "right";
-        exRoleLabel.innerHTML = `<b>${syncPairLocale.ex_role_unlocked}: </b>`;
+        exRoleLabel.innerHTML = `<b>${jData.locale.syncPairs.ex_role_unlocked}: </b>`;
         exRoleP.appendChild(exRoleLabel)
 
 
@@ -459,7 +415,7 @@ async function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, f
         exRoleCheckbox.id = `exRoleCheckbox-${monsterBaseId}-${formId}`;
         exRoleCheckbox.style.display = "table-cell";
         exRoleCheckbox.style.marginLeft = "5px";
-        exRoleCheckbox.addEventListener("change", async (_) => await setStatsTable(lvlInput, statsDiv, monsterData, variation, await hasExRoleUnlocked(syncPairSelect.value), `exRoleCheckbox-${monsterBaseId}-${formId}`));
+        exRoleCheckbox.addEventListener("change", (_) => setStatsTable(lvlInput, statsDiv, monsterData, variation, hasExRoleUnlocked(syncPairSelect.value), `exRoleCheckbox-${monsterBaseId}-${formId}`));
         exRoleP.appendChild(exRoleCheckbox)
         toolFieldset.appendChild(exRoleP);
     }
@@ -474,15 +430,15 @@ async function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, f
     statContainer.appendChild(statsDiv);
     contentDiv.appendChild(statContainer)
 
-    lvlInput.addEventListener("change", async (e) => await setStatsTable(e.currentTarget, statsDiv, monsterData, variation, await hasExRoleUnlocked(syncPairSelect.value), `exRoleCheckbox-${monsterBaseId}-${formId}`));
-    await setStatsTable(lvlInput, statsDiv, monsterData, variation);
+    lvlInput.addEventListener("change", (e) => setStatsTable(e.currentTarget, statsDiv, monsterData, variation, hasExRoleUnlocked(syncPairSelect.value), `exRoleCheckbox-${monsterBaseId}-${formId}`));
+    setStatsTable(lvlInput, statsDiv, monsterData, variation);
 }
 
 function setPairPassives(contentDiv, variation = null) {
-    let tr = trainer.find(t => t.trainerId === syncPairSelect.value);
+    let tr = jData.proto.trainer.find(t => t.trainerId === syncPairSelect.value);
 
     let skillsH2 = document.createElement("h2");
-    skillsH2.innerText = syncPairLocale.skills_title;
+    skillsH2.innerText = jData.locale.syncPairs.skills_title;
     contentDiv.appendChild(skillsH2);
 
     let table = document.createElement("table");
@@ -492,17 +448,17 @@ function setPairPassives(contentDiv, variation = null) {
     let headRow = document.createElement("tr");
     let headTitle = document.createElement("th");
     headTitle.colSpan = 2;
-    headTitle.innerText = syncPairLocale.passive_skills;
+    headTitle.innerText = jData.locale.syncPairs.passive_skills;
     headRow.appendChild(headTitle);
     table.appendChild(headRow);
 
     let titleRow = document.createElement("tr");
     let nameTitle = document.createElement("th");
-    nameTitle.innerText = syncPairLocale.passive_skill_name;
+    nameTitle.innerText = jData.locale.syncPairs.passive_skill_name;
     titleRow.appendChild(nameTitle);
 
     let descrTitle = document.createElement("th");
-    descrTitle.innerText = syncPairLocale.passive_skill_description;
+    descrTitle.innerText = jData.locale.syncPairs.passive_skill_description;
     titleRow.appendChild(descrTitle);
 
     table.appendChild(titleRow);
@@ -530,7 +486,7 @@ function setPairPassives(contentDiv, variation = null) {
 }
 
 function setPairTeamSkills(contentDiv) {
-    let tr = trainer.find(t => t.trainerId === syncPairSelect.value);
+    let tr = jData.proto.trainer.find(t => t.trainerId === syncPairSelect.value);
 
     let table = document.createElement("table");
     table.classList.add("bipcode");
@@ -538,18 +494,18 @@ function setPairTeamSkills(contentDiv) {
 
     let titleRow = document.createElement("tr");
     let titleCell = document.createElement("th");
-    titleCell.innerText = syncPairLocale.team_skills;
+    titleCell.innerText = jData.locale.syncPairs.team_skills;
 
     let row = document.createElement("tr");
 
     for(let i = 1; i <= 5; i++) {
-        let ts = teamSkill.find(tsk => tsk.teamSkillId == tr[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 1);
+        let ts = jData.proto.teamSkill.find(tsk => tsk.teamSkillId == tr[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 1);
 
         if(!ts)
             continue;
 
         let td = document.createElement("td");
-        td.innerText = teamSkillTag[ts.teamSkillPropValue];
+        td.innerText = jData.lsd.teamSkillTag[ts.teamSkillPropValue];
         row.appendChild(td);
 
         titleCell.colSpan++;
@@ -564,20 +520,20 @@ function setPairTeamSkills(contentDiv) {
 }
 
 function getMoveRow(moveId) {
-    let mov = move.find(m => m.moveId == moveId);
+    let mov = jData.proto.move.find(m => m.moveId == moveId);
 
     let tr = document.createElement("tr");
 
     let nameCell = document.createElement("td");
-    nameCell.innerText = moveNames[moveId];
+    nameCell.innerText = jData.lsd.moveName[moveId];
     tr.appendChild(nameCell);
 
     let typeCell = document.createElement("td");
-    typeCell.innerText = motifTypeName[mov.type];
+    typeCell.innerText = jData.lsd.motifTypeName[mov.type];
     tr.appendChild(typeCell);
 
     let categoryCell = document.createElement("td");
-    categoryCell.innerText = commonLocales.category_names[mov.category];
+    categoryCell.innerText = jData.locale.common.category_names[mov.category];
     tr.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
@@ -594,7 +550,7 @@ function getMoveRow(moveId) {
     tr.appendChild(gaugeCell);
 
     let targetCell = document.createElement("td");
-    targetCell.innerText = moveTargetType[targetToId[mov.target]] || "—";
+    targetCell.innerText = jData.lsd.moveTargetType[targetToId[mov.target]] || "—";
     tr.appendChild(targetCell);
 
     let descrCell = document.createElement("td");
@@ -609,20 +565,20 @@ function getMoveRow(moveId) {
 }
 
 function getGMaxMoveRow(moveId) {
-    let mov = move.find(m => m.moveId == moveId);
+    let mov = jData.proto.move.find(m => m.moveId == moveId);
 
     let tr = document.createElement("tr");
 
     let nameCell = document.createElement("td");
-    nameCell.innerText = moveNames[moveId];
+    nameCell.innerText = jData.lsd.moveName[moveId];
     tr.appendChild(nameCell);
 
     let typeCell = document.createElement("td");
-    typeCell.innerText = motifTypeName[mov.type];
+    typeCell.innerText = jData.lsd.motifTypeName[mov.type];
     tr.appendChild(typeCell);
 
     let categoryCell = document.createElement("td");
-    categoryCell.innerText = commonLocales.category_names[mov.category];
+    categoryCell.innerText = jData.locale.common.category_names[mov.category];
     tr.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
@@ -630,7 +586,7 @@ function getGMaxMoveRow(moveId) {
     tr.appendChild(powerCell);
 
     let targetCell = document.createElement("td");
-    targetCell.innerText = moveTargetType[targetToId[mov.target]] || "—";
+    targetCell.innerText = jData.lsd.moveTargetType[targetToId[mov.target]] || "—";
     tr.appendChild(targetCell);
 
     let descrCell = document.createElement("td");
@@ -640,20 +596,20 @@ function getGMaxMoveRow(moveId) {
     return tr;
 }
 
-async function getSyncMoveRow(syncMoveId, tr) {
+function getSyncMoveRow(syncMoveId, tr) {
     let row = document.createElement("tr");
-    let mov = move.find(m => m.moveId === syncMoveId);
+    let mov = jData.proto.move.find(m => m.moveId === syncMoveId);
 
     let nameCell = document.createElement("td");
-    nameCell.innerText = moveNames[syncMoveId];
+    nameCell.innerText = jData.lsd.moveName[syncMoveId];
     row.appendChild(nameCell);
 
     let typeCell = document.createElement("td");
-    typeCell.innerText = motifTypeName[mov.type];
+    typeCell.innerText = jData.lsd.motifTypeName[mov.type];
     row.appendChild(typeCell);
 
     let categoryCell = document.createElement("td");
-    categoryCell.innerText = commonLocales.category_names[mov.category];
+    categoryCell.innerText = jData.locale.common.category_names[mov.category];
     row.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
@@ -664,33 +620,33 @@ async function getSyncMoveRow(syncMoveId, tr) {
     effectCell.innerText = getMoveDescr(syncMoveId);
     row.appendChild(effectCell);
 
-    if (await hasExUnlocked(tr.trainerId)) {
+    if (hasExUnlocked(tr.trainerId)) {
         let exEffectCell = document.createElement("td");
-        exEffectCell.innerText = await getExSyncEffect(tr.role, tr.type);
+        exEffectCell.innerText = getExSyncEffect(tr.role, tr.type);
         row.appendChild(exEffectCell);
     }
 
-    if (await hasExRoleUnlocked(tr.trainerId)) {
+    if (hasExRoleUnlocked(tr.trainerId)) {
         let exRoleEffectCell = document.createElement("td");
-        exRoleEffectCell.innerText = await getExSyncEffect(await getExRoleId(tr.trainerId), tr.type);
+        exRoleEffectCell.innerText = getExSyncEffect(getExRoleId(tr.trainerId), tr.type);
         row.appendChild(exRoleEffectCell);
     }
 
     return row;
 }
 
-async function setPairMoves(contentDiv, monsterId, variation = null) {
+function setPairMoves(contentDiv, monsterId, variation = null) {
     let table = document.createElement("table");
     table.classList.add("bipcode");
     table.style.textAlign = "center";
 
     let movesH2 = document.createElement("h2");
-    movesH2.innerText = syncPairLocale.moves_title;
+    movesH2.innerText = jData.locale.syncPairs.moves_title;
     contentDiv.appendChild(movesH2);
 
     let headRow = document.createElement("tr");
     let headTitle = document.createElement("th");
-    headTitle.innerText = syncPairLocale.moves;
+    headTitle.innerText = jData.locale.syncPairs.moves;
     headTitle.colSpan = 9;
     headRow.appendChild(headTitle);
     table.appendChild(headRow);
@@ -698,45 +654,45 @@ async function setPairMoves(contentDiv, monsterId, variation = null) {
     let titleRow = document.createElement("tr");
 
     let titleName = document.createElement("th");
-    titleName.innerText = syncPairLocale.move_name;
+    titleName.innerText = jData.locale.syncPairs.move_name;
     titleRow.appendChild(titleName);
 
     let titleType = document.createElement("th");
-    titleType.innerText = syncPairLocale.move_type;
+    titleType.innerText = jData.locale.syncPairs.move_type;
     titleRow.appendChild(titleType);
 
     let titleCategory = document.createElement("th");
-    titleCategory.innerText = syncPairLocale.move_category;
+    titleCategory.innerText = jData.locale.syncPairs.move_category;
     titleRow.appendChild(titleCategory);
 
     let titlePower = document.createElement("th");
-    titlePower.innerText = syncPairLocale.move_power;
+    titlePower.innerText = jData.locale.syncPairs.move_power;
     titleRow.appendChild(titlePower);
 
     let titleAccuracy = document.createElement("th");
-    titleAccuracy.innerText = syncPairLocale.move_accuracy;
+    titleAccuracy.innerText = jData.locale.syncPairs.move_accuracy;
     titleRow.appendChild(titleAccuracy);
 
     let titleGauge = document.createElement("th");
-    titleGauge.innerText = syncPairLocale.move_gauge;
+    titleGauge.innerText = jData.locale.syncPairs.move_gauge;
     titleRow.appendChild(titleGauge);
 
     let titleTarget = document.createElement("th");
-    titleTarget.innerText = syncPairLocale.move_target;
+    titleTarget.innerText = jData.locale.syncPairs.move_target;
     titleRow.appendChild(titleTarget);
 
     let titleEffect = document.createElement("th");
-    titleEffect.innerText = syncPairLocale.move_description;
+    titleEffect.innerText = jData.locale.syncPairs.move_description;
     titleRow.appendChild(titleEffect);
 
     let titleLimit = document.createElement("th");
-    titleLimit.innerText = syncPairLocale.move_uses;
+    titleLimit.innerText = jData.locale.syncPairs.move_uses;
     titleRow.appendChild(titleLimit);
 
     table.appendChild(titleRow);
 
-    let tr = trainer.find(t => t.trainerId === syncPairSelect.value);
-    let mon = monster.find(m => m.monsterId === monsterId);
+    let tr = jData.proto.trainer.find(t => t.trainerId === syncPairSelect.value);
+    let mon = jData.proto.monster.find(m => m.monsterId === monsterId);
 
     for (let i = 1; i < 5; i++) {
         let moveId;
@@ -758,7 +714,7 @@ async function setPairMoves(contentDiv, monsterId, variation = null) {
 
     // Capacités Duo Dynamax
 
-    let gmaxVar = monsterVariation.find(mv => mv.monsterId === monsterId && mv.form === 4);
+    let gmaxVar = jData.proto.monsterVariation.find(mv => mv.monsterId === monsterId && mv.form === 4);
 
     if (gmaxVar) {
         contentDiv.appendChild(document.createElement("br"));
@@ -770,7 +726,7 @@ async function setPairMoves(contentDiv, monsterId, variation = null) {
         let titleRow = document.createElement("tr");
 
         let titleDynamax = document.createElement("th");
-        titleDynamax.innerText = syncPairLocale.max_moves;
+        titleDynamax.innerText = jData.locale.syncPairs.max_moves;
         titleDynamax.colSpan = 6;
         titleRow.appendChild(titleDynamax);
         table.appendChild(titleRow);
@@ -778,27 +734,27 @@ async function setPairMoves(contentDiv, monsterId, variation = null) {
         let headRow = document.createElement("tr");
 
         let headName = document.createElement("th");
-        headName.innerText = syncPairLocale.move_name;
+        headName.innerText = jData.locale.syncPairs.move_name;
         headRow.appendChild(headName);
 
         let headType = document.createElement("th");
-        headType.innerText = syncPairLocale.move_type;
+        headType.innerText = jData.locale.syncPairs.move_type;
         headRow.appendChild(headType);
 
         let headCategory = document.createElement("th");
-        headCategory.innerText = syncPairLocale.move_category;
+        headCategory.innerText = jData.locale.syncPairs.move_category;
         headRow.appendChild(headCategory);
 
         let headPower = document.createElement("th");
-        headPower.innerText = syncPairLocale.move_power;
+        headPower.innerText = jData.locale.syncPairs.move_power;
         headRow.appendChild(headPower);
 
         let headTarget = document.createElement("th");
-        headTarget.innerText = syncPairLocale.move_target;
+        headTarget.innerText = jData.locale.syncPairs.move_target;
         headRow.appendChild(headTarget);
 
         let headEffect = document.createElement("th");
-        headEffect.innerText = syncPairLocale.move_description;
+        headEffect.innerText = jData.locale.syncPairs.move_description;
         headRow.appendChild(headEffect);
 
         table.appendChild(headRow);
@@ -823,47 +779,47 @@ async function setPairMoves(contentDiv, monsterId, variation = null) {
     titleRow = document.createElement("tr");
 
     let titleSync = document.createElement("th");
-    titleSync.innerText = syncPairLocale.sync_move;
-    titleSync.colSpan = 5 + (await hasExUnlocked(syncPairSelect.value)) + (await hasExRoleUnlocked(syncPairSelect.value));
+    titleSync.innerText = jData.locale.syncPairs.sync_move;
+    titleSync.colSpan = 5 + hasExUnlocked(syncPairSelect.value) + hasExRoleUnlocked(syncPairSelect.value);
     titleRow.appendChild(titleSync);
     table.appendChild(titleRow);
 
     headRow = document.createElement("tr");
 
     let syncHeadName = document.createElement("th");
-    syncHeadName.innerText = syncPairLocale.move_name;
+    syncHeadName.innerText = jData.locale.syncPairs.move_name;
     headRow.appendChild(syncHeadName);
 
     let syncHeadType = document.createElement("th");
-    syncHeadType.innerText = syncPairLocale.move_type;
+    syncHeadType.innerText = jData.locale.syncPairs.move_type;
     headRow.appendChild(syncHeadType);
 
     let syncHeadCategory = document.createElement("th");
-    syncHeadCategory.innerText = syncPairLocale.move_category;
+    syncHeadCategory.innerText = jData.locale.syncPairs.move_category;
     headRow.appendChild(syncHeadCategory);
 
     let syncHeadPower = document.createElement("th");
-    syncHeadPower.innerText = syncPairLocale.move_power;
+    syncHeadPower.innerText = jData.locale.syncPairs.move_power;
     headRow.appendChild(syncHeadPower);
 
     let syncHeadEffect = document.createElement("th");
-    syncHeadEffect.innerText = syncPairLocale.move_description;
+    syncHeadEffect.innerText = jData.locale.syncPairs.move_description;
     headRow.appendChild(syncHeadEffect);
 
-    if (await hasExUnlocked(syncPairSelect.value)) {
+    if (hasExUnlocked(syncPairSelect.value)) {
         let syncHeadExEffect = document.createElement("th");
-        syncHeadExEffect.innerText = syncPairLocale.sync_move_ex_title;
+        syncHeadExEffect.innerText = jData.locale.syncPairs.sync_move_ex_title;
         headRow.appendChild(syncHeadExEffect);
     }
 
-    if (await hasExRoleUnlocked(syncPairSelect.value)) {
+    if (hasExRoleUnlocked(syncPairSelect.value)) {
         let syncHeadExRoleEffect = document.createElement("th");
-        syncHeadExRoleEffect.innerText = syncPairLocale.sync_move_ex_role_title;
+        syncHeadExRoleEffect.innerText = jData.locale.syncPairs.sync_move_ex_role_title;
         headRow.appendChild(syncHeadExRoleEffect);
     }
 
     table.appendChild(headRow);
-    table.appendChild(await getSyncMoveRow(mon.syncMoveId, tr));
+    table.appendChild(getSyncMoveRow(mon.syncMoveId, tr));
 
     contentDiv.appendChild(table);
 }
@@ -877,7 +833,7 @@ function appendGridCategory(table, panels, category) {
     let categoryName = document.createElement("th");
     categoryName.style.backgroundColor = abilityTypeBGColor[category];
     categoryName.colSpan = 5;
-    categoryName.innerText = syncPairLocale.sync_grid_ability_type_title[category];
+    categoryName.innerText = jData.locale.syncPairs.sync_grid_ability_type_title[category];
     headRow.appendChild(categoryName);
     table.appendChild(headRow);
 
@@ -890,13 +846,12 @@ function appendGridCategory(table, panels, category) {
 
         let ameliorationCell = document.createElement("td");
 
-        (jsonCache.getLsd("ability_name"))
-            .then(abilityName => abilityName[p.ability.type]
+        ameliorationCell.innerText = jData.lsd.abilityName[p.ability.type]
                 .replace("[Digit:5digits ]", "+" + p.ability.value)
                 .replace("[Name:Ability ]", getPassiveSkillName(p.ability.passiveId))
-                .replace("[Name:Move ]", moveNames[p.ability.moveId]).replace("\n", " ")
-            )
-            .then(text => ameliorationCell.innerText = text);
+                .replace("[Name:Move ]", jData.lsd.moveName[p.ability.moveId]).replace("\n", " ");
+
+
 
         tr.appendChild(ameliorationCell);
 
@@ -1118,7 +1073,7 @@ function setGridPicker(ap, gridPickerDiv) {
             case 9:
             case 10:
                 //move power/accuracy boost
-                let m = move.find(m => m.moveId === panel.ability.moveId);
+                let m = jData.proto.move.find(m => m.moveId === panel.ability.moveId);
                 if(m.group === "Sync") {
                     svg.setAttribute("data-category", "syncmove");
                 }
@@ -1139,23 +1094,21 @@ function setGridPicker(ap, gridPickerDiv) {
         svg.setAttribute("data-energy", panel.energyCost);
         svg.setAttribute("data-orbs", panel.orbCost);
         svg.setAttribute("data-cellId", panel.cellId);
-        (jsonCache.getLsd("ability_name"))
-            .then(abilityName => abilityName[panel.ability.type]
-                .replace("[Digit:5digits ]", "+" + panel.ability.value)
-                .replace("[Name:Ability ]", getPassiveSkillName(panel.ability.passiveId))
-                .replace("[Name:Move ]", moveNames[panel.ability.moveId]).replace("\n", " ")
-            )
-            .then(text => {
-                svg.setAttribute("data-tileName", text);
-                titleP.innerHTML = `<b>${text}</b>\n`;
-                tooltip.appendChild(titleP);
 
-                if(panel.ability.passiveId) {
-                    tooltip.innerHTML += `<p><b>${syncPairLocale.sync_grid_tile_description_tooltip}:</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
-                }
+        let text = jData.lsd.abilityName[panel.ability.type]
+            .replace("[Digit:5digits ]", "+" + panel.ability.value)
+            .replace("[Name:Ability ]", getPassiveSkillName(panel.ability.passiveId))
+            .replace("[Name:Move ]", jData.lsd.moveName[panel.ability.moveId]).replace("\n", " ");
 
-                tooltip.innerHTML += `<p><b>${syncPairLocale.sync_grid_tile_orbs_tooltip}:</b> ${panel.orbCost} - <b>${syncPairLocale.sync_grid_tile_energy_tooltip}:</b> ${panel.energyCost}</p>`;
-            })
+        svg.setAttribute("data-tileName", text);
+        titleP.innerHTML = `<b>${text}</b>\n`;
+        tooltip.appendChild(titleP);
+
+        if(panel.ability.passiveId) {
+            tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_description_tooltip}:</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
+        }
+
+        tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_orbs_tooltip}:</b> ${panel.orbCost} - <b>${jData.locale.syncPairs.sync_grid_tile_energy_tooltip}:</b> ${panel.energyCost}</p>`;
 
         setTileBackground(svg);
         gridDiv.appendChild(svg);
@@ -1175,7 +1128,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
     let tr = document.createElement("tr");
     let capaTitle = document.createElement("th");
-    capaTitle.innerText = syncPairLocale.sync_pair_level;
+    capaTitle.innerText = jData.locale.syncPairs.sync_pair_level;
     capaTitle.colSpan = 2;
 
     tr.appendChild(capaTitle);
@@ -1222,7 +1175,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
     tr = document.createElement("tr");
     let energyLimitTitle = document.createElement("th");
-    energyLimitTitle.innerText = syncPairLocale.sync_grid_energy_level;
+    energyLimitTitle.innerText = jData.locale.syncPairs.sync_grid_energy_level;
     energyLimitTitle.colSpan = 2;
 
     tr.appendChild(energyLimitTitle);
@@ -1285,10 +1238,10 @@ function setGridPicker(ap, gridPickerDiv) {
 
     tr = document.createElement("tr");
     let orbTitle = document.createElement("th");
-    orbTitle.innerText = syncPairLocale.sync_orbs;
+    orbTitle.innerText = jData.locale.syncPairs.sync_orbs;
 
     let energyTitle = document.createElement("th");
-    energyTitle.innerText = syncPairLocale.sync_grid_energy;
+    energyTitle.innerText = jData.locale.syncPairs.sync_grid_energy;
 
     tr.appendChild(orbTitle);
     tr.appendChild(energyTitle);
@@ -1311,7 +1264,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
     tr = document.createElement("tr");
     let tilesTitle = document.createElement("th");
-    tilesTitle.innerText = syncPairLocale.sync_grid_selected_tiles;
+    tilesTitle.innerText = jData.locale.syncPairs.sync_grid_selected_tiles;
     tilesTitle.colSpan = 2;
 
     tr.appendChild(tilesTitle);
@@ -1332,13 +1285,13 @@ function setGridPicker(ap, gridPickerDiv) {
 
 function setSyncGrid() {
 
-    let charaScheduleId = schedule.map(s => s.scheduleId);
-    let ap = abilityPanel.filter(ap => ap.trainerId === syncPairSelect.value)
+    let charaScheduleId = jData.proto.schedule.map(s => s.scheduleId);
+    let ap = jData.proto.abilityPanel.filter(ap => ap.trainerId === syncPairSelect.value)
         .map(ap => {
-            ap.ability = ability.find(a => a.abilityId === ap.abilityId);
+            ap.ability = jData.proto.ability.find(a => a.abilityId === ap.abilityId);
             ap.level = 1;
             ap.conditionIds.forEach(cid => {
-                let releaseCon = abilityReleaseCondition.find(arc => arc.conditionId === cid);
+                let releaseCon = jData.proto.abilityReleaseCondition.find(arc => arc.conditionId === cid);
 
                 switch(releaseCon.type) {
                     case 6:
@@ -1375,7 +1328,7 @@ function setSyncGrid() {
 
     setGridPicker(ap, gridPickerDiv);
 
-    container.innerHTML = `<br /><h2>${syncPairLocale.sync_grid_title} (${ap.length} ${syncPairLocale.sync_grid_tiles})</h2>`;
+    container.innerHTML = `<br /><h2>${jData.locale.syncPairs.sync_grid_title} (${ap.length} ${jData.locale.syncPairs.sync_grid_tiles})</h2>`;
     container.appendChild(gridPickerDiv);
     container.appendChild(document.createElement("br"));
 
@@ -1386,23 +1339,23 @@ function setSyncGrid() {
     let headRow = document.createElement("tr");
 
     let upgradeTitle = document.createElement("th");
-    upgradeTitle.innerText = syncPairLocale.sync_grid_tile_upgrade_title;
+    upgradeTitle.innerText = jData.locale.syncPairs.sync_grid_tile_upgrade_title;
     headRow.appendChild(upgradeTitle);
 
     let effectTitle = document.createElement("th");
-    effectTitle.innerText = syncPairLocale.sync_grid_tile_description_title;
+    effectTitle.innerText = jData.locale.syncPairs.sync_grid_tile_description_title;
     headRow.appendChild(effectTitle);
 
     let energyTitle = document.createElement("th");
-    energyTitle.innerText = syncPairLocale.sync_grid_tile_required_energy_title;
+    energyTitle.innerText = jData.locale.syncPairs.sync_grid_tile_required_energy_title;
     headRow.appendChild(energyTitle);
 
     let spheresTitle = document.createElement("th");
-    spheresTitle.innerText = syncPairLocale.sync_grid_tile_required_orbs_title;
+    spheresTitle.innerText = jData.locale.syncPairs.sync_grid_tile_required_orbs_title;
     headRow.appendChild(spheresTitle);
 
     let trainerLevelTitle = document.createElement("th");
-    trainerLevelTitle.innerText = syncPairLocale.sync_grid_tile_required_pair_level_title;
+    trainerLevelTitle.innerText = jData.locale.syncPairs.sync_grid_tile_required_pair_level_title;
     headRow.appendChild(trainerLevelTitle);
 
     table.appendChild(headRow);
@@ -1412,26 +1365,26 @@ function setSyncGrid() {
     container.appendChild(table);
 }
 
-async function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
-    await setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation);
-    await setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
+function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
+    setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation);
+    setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
     setPairPassives(contentDiv, variation);
     setPairTeamSkills(contentDiv);
-    await setPairMoves(contentDiv, monsterId, variation);
+    setPairMoves(contentDiv, monsterId, variation);
 }
 
-async function createTab(monsterId, monTabs, tabContentDiv, pushState = false, isDefault = false, variation = null) {
+function createTab(monsterId, monTabs, tabContentDiv, pushState = false, isDefault = false, variation = null) {
     let monsterBaseId = 0;
     let formId = 0;
     let monsterName;
 
     if (variation) {
         formId = variation.formId;
-        monsterBaseId = await getMonsterBaseIdFromActorId(variation.actorId);
-        monsterName = await getNameByMonsterBaseId(monsterBaseId, formId);
+        monsterBaseId = getMonsterBaseIdFromActorId(variation.actorId);
+        monsterName = getNameByMonsterBaseId(monsterBaseId, formId);
     } else {
-        monsterBaseId = await getMonsterBaseIdFromMonsterId(monsterId);
-        monsterName = await getMonsterNameByMonsterId(monsterId);
+        monsterBaseId = getMonsterBaseIdFromMonsterId(monsterId);
+        monsterName = getMonsterNameByMonsterId(monsterId);
     }
 
     let miBtn = document.createElement("button");
@@ -1445,7 +1398,7 @@ async function createTab(monsterId, monTabs, tabContentDiv, pushState = false, i
     contentDiv.id = `${monsterId}-${monsterBaseId}-${formId}`;
     contentDiv.classList.add("tabContent");
 
-    await setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
+    setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
 
     tabContentDiv.appendChild(contentDiv);
 
@@ -1454,13 +1407,13 @@ async function createTab(monsterId, monTabs, tabContentDiv, pushState = false, i
     }
 }
 
-async function setPairInfos(id, pushState = false) {
-    let pairEvolutions = monsterEvolution.filter(me => me.trainerId === id);
+function setPairInfos(id, pushState = false) {
+    let pairEvolutions = jData.proto.monsterEvolution.filter(me => me.trainerId === id);
     let monsterIds = [];
     let pairVariations = {};
 
     let title = document.createElement("h1");
-    title.textContent = await getPairName(id);
+    title.textContent = getPairName(id);
 
     syncPairDiv.innerHTML = "";
     syncPairDiv.appendChild(title);
@@ -1473,22 +1426,22 @@ async function setPairInfos(id, pushState = false) {
     tabContentDiv.id = "tabContentDiv";
     syncPairDiv.appendChild(tabContentDiv);
 
-    monsterIds.push(trainer.find(t => t.trainerId === id).monsterId);
+    monsterIds.push(jData.proto.trainer.find(t => t.trainerId === id).monsterId);
     pairEvolutions.forEach(pe => monsterIds.push(pe.monsterIdNext));
 
     for (let i = 0; i < monsterIds.length; i++) {
         if (i === (monsterIds.length - 1)) {
-            await createTab(monsterIds[i], monTabs, tabContentDiv, pushState, true);
+            createTab(monsterIds[i], monTabs, tabContentDiv, pushState, true);
         } else {
-            await createTab(monsterIds[i], monTabs, tabContentDiv, pushState);
+            createTab(monsterIds[i], monTabs, tabContentDiv, pushState);
         }
 
-        let variations = monsterVariation.filter(mv => mv.monsterId === monsterIds[i]);
-        let enhancements = monsterEnhancement.filter(me => me.monsterIdCurrent === monsterIds[i] && me.type !== "2");
+        let variations = jData.proto.monsterVariation.filter(mv => mv.monsterId === monsterIds[i]);
+        let enhancements = jData.proto.monsterEnhancement.filter(me => me.monsterIdCurrent === monsterIds[i] && me.type !== "2");
 
         if (enhancements.length > 0) {
             enhancements.forEach(e => {
-                variations.push(...monsterVariation.filter(mv => mv.monsterId === e.monsterIdNext));
+                variations.push(...jData.proto.monsterVariation.filter(mv => mv.monsterId === e.monsterIdNext));
             });
         }
 
@@ -1497,7 +1450,7 @@ async function setPairInfos(id, pushState = false) {
 
             for (const v of variations) {
                 if (v.form !== 4)    // Ne pas inclure les Gigamax
-                    await createTab(monsterIds[i], monTabs, tabContentDiv, pushState, false, v)
+                    createTab(monsterIds[i], monTabs, tabContentDiv, pushState, false, v)
             }
         }
     }
@@ -1505,7 +1458,7 @@ async function setPairInfos(id, pushState = false) {
     setSyncGrid();
 
     if (isAdminMode) {
-        dataArea.value = await getPairBipCode(syncPairSelect.value);
+        dataArea.value = getPairBipCode(syncPairSelect.value);
     }
 }
 
@@ -1525,18 +1478,18 @@ function setUrlMonsterInfos(monsterId, baseId, formId, pushState) {
         window.history.pushState(null, '', url.toString());
 }
 
-async function setLatestPairs() {
+function setLatestPairs() {
     lastReleasePairsDiv = document.getElementById('lastReleasedPairs');
-    let newTrainers = trainer
-        .filter(t => schedule.map(s => s.scheduleId).includes(t.scheduleId))
+    let newTrainers = jData.proto.trainer
+        .filter(t => jData.proto.schedule.map(s => s.scheduleId).includes(t.scheduleId))
         .sort((a, b) => a.scheduleId.localeCompare(b.scheduleId));
 
     let h2 = document.createElement("h2");
-    h2.innerText = syncPairLocale.last_update;
+    h2.innerText = jData.locale.syncPairs.last_update;
     lastReleasePairsDiv.appendChild(h2);
 
     let addedH3 = document.createElement("h3");
-    addedH3.innerText = syncPairLocale.pairs_added;
+    addedH3.innerText = jData.locale.syncPairs.pairs_added;
     lastReleasePairsDiv.appendChild(addedH3);
 
     let ul = document.createElement("ul");
@@ -1546,10 +1499,10 @@ async function setLatestPairs() {
         let b = document.createElement("b");
         let anchor = document.createElement("a");
         anchor.href = '#';
-        anchor.textContent = await getPairName(tr.trainerId);
-        anchor.addEventListener("click", async () => {
+        anchor.textContent = getPairName(tr.trainerId);
+        anchor.addEventListener("click", () => {
             syncPairSelect.value = tr.trainerId;
-            await selectChange();
+            selectChange();
         });
 
         b.appendChild(anchor);
@@ -1560,17 +1513,17 @@ async function setLatestPairs() {
     lastReleasePairsDiv.appendChild(ul);
 
     let gridH3 = document.createElement("h3");
-    gridH3.innerText = syncPairLocale.extended_grids;
+    gridH3.innerText = jData.locale.syncPairs.extended_grids;
     lastReleasePairsDiv.appendChild(gridH3);
 
-    let updatedGridTrainer = [...new Set(abilityPanel.filter(ap => schedule.map(s => s.scheduleId).includes(ap.scheduleId)).map(ap => ap.trainerId))]
+    let updatedGridTrainer = [...new Set(jData.proto.abilityPanel.filter(ap => jData.proto.schedule.map(s => s.scheduleId).includes(ap.scheduleId)).map(ap => ap.trainerId))]
 
     updatedGridTrainer = updatedGridTrainer.map(tid => {
-        let trainerPanels = abilityPanel.filter(ap => ap.trainerId === tid);
+        let trainerPanels = jData.proto.abilityPanel.filter(ap => ap.trainerId === tid);
         return {
             "trainerId": tid,
             "new": trainerPanels.length,
-            "old": trainerPanels.filter(tp => !schedule.map(s => s.scheduleId).includes(tp.scheduleId)).length
+            "old": trainerPanels.filter(tp => !jData.proto.schedule.map(s => s.scheduleId).includes(tp.scheduleId)).length
         };
     });
 
@@ -1581,7 +1534,7 @@ async function setLatestPairs() {
         let b = document.createElement("b");
         let anchor = document.createElement("a");
         anchor.href = '#';
-        anchor.innerText = `${await getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})`;
+        anchor.innerText = `${getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})`;
         anchor.addEventListener("click", () => {
             syncPairSelect.value = ugt.trainerId;
             selectChange();
@@ -1595,7 +1548,7 @@ async function setLatestPairs() {
     lastReleasePairsDiv.appendChild(ul);
 }
 
-async function selectChange() {
+function selectChange() {
     const url = new URL(window.location);
     url.searchParams.delete('monsterId');
     url.searchParams.delete('baseId');
@@ -1604,10 +1557,10 @@ async function selectChange() {
 
     window.history.pushState(null, '', url.toString());
 
-    await setPairInfos(syncPairSelect.value, false);
+    setPairInfos(syncPairSelect.value, false);
 }
 
-async function urlStateChange() {
+function urlStateChange() {
     const url = new URL(window.location);
     const urlPairId = url.searchParams.get('pair');
 
@@ -1615,7 +1568,7 @@ async function urlStateChange() {
         syncPairSelect.value = urlPairId;
     }
 
-    await setPairInfos(syncPairSelect.value);
+    setPairInfos(syncPairSelect.value);
 
     const monsterId = url.searchParams.get('monsterId');
     const baseId = url.searchParams.get('baseId');
@@ -1632,11 +1585,9 @@ async function init() {
     toolsDiv = document.getElementById('adminTools');
 
     await buildHeader();
-    await initMovePassiveSkills();
     await getData();
-    await getCustomJSON();
 
-    document.getElementById("changePairLabel").innerText = syncPairLocale.change_pair;
+    document.getElementById("changePairLabel").innerText = jData.locale.syncPairs.change_pair;
 
     if(isAdminMode) {
         dataArea = document.getElementById("dataArea");
@@ -1653,24 +1604,24 @@ async function init() {
         copyBtn.addEventListener('click', () => navigator.clipboard.writeText(dataArea.value));
     }
 
-    await populateSelect();
+    populateSelect();
     setLatestPairs();
 
     syncPairSelect.addEventListener('change', selectChange);
 
-    await urlStateChange();
-    window.addEventListener('popstate', async () => await urlStateChange());
+    urlStateChange();
+    window.addEventListener('popstate', () => urlStateChange());
 }
 function getPairStatsRowBipCode(name, statValues, t, scale = 1) {
     const breakPointLevels = [1, 30, 45, 100, 120, 140, 200];
 
-    let string = `\t\t[tr][th]${commonLocales[name]}[/th]`;
+    let string = `\t\t[tr][th]${jData.locale.common[name]}[/th]`;
 
     let level = 150;
     let pointBIdx = breakPointLevels.findIndex((a) => a > level);
     let pointAIdx = pointBIdx - 1;
 
-    let buildupParameter = trainerBuildupParameter.filter(tbp => tbp.trainerId === t.trainerId);
+    let buildupParameter = jData.proto.trainerBuildupParameter.filter(tbp => tbp.trainerId === t.trainerId);
     let buildupBonus = 0;
 
     let numCols = 6 - t.rarity + 1;
@@ -1679,7 +1630,7 @@ function getPairStatsRowBipCode(name, statValues, t, scale = 1) {
         let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx])*(statValues[pointBIdx] - statValues[pointAIdx])/(breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
 
         if(i > 0) {
-            let buildupPowerups = trainerBuildupConfig.find(tbc => tbc.trainerBuildupConfigId === buildupParameter[i-1].trainerBuildupConfigId).nbPowerups || 0;
+            let buildupPowerups = jData.proto.trainerBuildupConfig.find(tbc => tbc.trainerBuildupConfigId === buildupParameter[i-1].trainerBuildupConfigId).nbPowerups || 0;
             buildupBonus += buildupPowerups * buildupParameter[i-1][name];
             statValue += buildupBonus;
         }
@@ -1705,9 +1656,9 @@ function getPairStatsRowBipCode(name, statValues, t, scale = 1) {
     return string;
 }
 
-async function getMonsterStatsBipCode(m, t, v = null) {
+function getMonsterStatsBipCode(m, t, v = null) {
     let string = `\t[item|nostyle][table]\n`
-        + `\t\t[tr][th|colspan=${t.rarity + 1}]${(v ? v.monsterName : await getMonsterNameByMonsterId(m.monsterId))}[/th][/tr]\n`
+        + `\t\t[tr][th|colspan=${t.rarity + 1}]${(v ? v.monsterName : getMonsterNameByMonsterId(m.monsterId))}[/th][/tr]\n`
         + `\t\t[tr][th]Stats max[/th]`;
 
     for (let i = t.rarity; i <= 6; i++) {
@@ -1765,15 +1716,15 @@ function getMoveBipCode(t, m, v = null) {
         }
 
         if(moveId > -1) {
-            let mov = move.find(m => m.moveId == moveId);
+            let mov = jData.proto.move.find(m => m.moveId == moveId);
             string += `\t[tr]\n`
-                + `\t\t[td]${moveNames[moveId].replace("\n", " ")}[/td]\n`
-                + `\t\t[td]${mov.type ? `[type=${removeAccents(motifTypeName[mov.type].toLowerCase())}|MX]` : "–"}[/td]\n`
+                + `\t\t[td]${jData.lsd.moveName[moveId].replace("\n", " ")}[/td]\n`
+                + `\t\t[td]${mov.type ? `[type=${removeAccents(jData.lsd.motifTypeName[mov.type].toLowerCase())}|MX]` : "–"}[/td]\n`
                 + `\t\t[td][type=${removeAccents(categoryToFR[mov.category].toLowerCase())}|MX][/td]\n`
                 + `\t\t[td]${mov.power ? `${mov.power}-${Math.trunc(mov.power*1.2)}` : "–"}[/td]\n`
                 + `\t\t[td]${mov.accuracy || "–"}[/td]\n`
                 + `\t\t[td]${mov.gaugeDrain ? `[img]/pages/jeuxvideo/pokemon-masters/images/jauge-capa-${mov.gaugeDrain}.png[/img]` : "–"}[/td]\n`
-                + `\t\t[td]${moveTargetType[targetToId[mov.target]] || "–"}[/td]\n`
+                + `\t\t[td]${jData.lsd.moveTargetType[targetToId[mov.target]] || "–"}[/td]\n`
                 + `\t\t[td]${getMoveDescr(moveId)}[/td]\n`
                 + `\t\t[td]${mov.uses ? `${mov.uses} fois par combat` : "–"}[/td]\n`
                 + `\t[/tr]\n`
@@ -1784,7 +1735,7 @@ function getMoveBipCode(t, m, v = null) {
     return string;
 }
 
-async function appendGridCategoryBipCode(panels, category) {
+function appendGridCategoryBipCode(panels, category) {
     panels = panels.filter(p => p.type === category)
         .reduce((acc, curr) => {
             let cell = acc.find(a => a.cellId === curr.cellId);
@@ -1803,18 +1754,16 @@ async function appendGridCategoryBipCode(panels, category) {
         }, [])
         .sort((a, b) => a.level - b.level || a.cellId - b.cellId);
 
-    let string = `\t[tr][th|bgcolor=${abilityTypeBGColor[category]}|colspan=5]${syncPairLocale.sync_grid_ability_type_title[category]}[/th][/tr]\n`;
+    let string = `\t[tr][th|bgcolor=${abilityTypeBGColor[category]}|colspan=5]${jData.locale.syncPairs.sync_grid_ability_type_title[category]}[/th][/tr]\n`;
 
     for (let p of panels) {
-        let amelioration = (jsonCache.getLsd("ability_name"))
-            .then(abilityName => abilityName[p.ability.type]
+        let amelioration = jData.lsd.abilityName[p.ability.type]
                 .replace("[Digit:5digits ]", "+" + p.ability.value)
                 .replace("[Name:Ability ]", getPassiveSkillName(p.ability.passiveId))
-                .replace("[Name:Move ]", moveNames[p.ability.moveId]).replace("\n", " ")
-            );
+                .replace("[Name:Move ]", jData.lsd.moveName[p.ability.moveId]).replace("\n", " ");
 
         string += `\t[tr]\n`
-            + `\t\t[td]${await amelioration}[/td]\n`
+            + `\t\t[td]${amelioration}[/td]\n`
             + `\t\t[td]${p.ability.passiveId ? getPassiveSkillDescr(p.ability.passiveId) : "–"}[/td]\n`
             + `\t\t[td]${p.energyCost || "–"}[/td]\n`
             + `\t\t[td]${p.orbCost} [img]/pages/jeuxvideo/pokemon-masters/images/plateau-duo-gemme/duo-sphere.png[/img][/td]\n`
@@ -1825,17 +1774,17 @@ async function appendGridCategoryBipCode(panels, category) {
     return string;
 }
 
-async function getPairBipCode(trainerId) {
-    let string = `[title]Pokémon Masters EX > ${await getPairName(trainerId)}[/title]\n`
+function getPairBipCode(trainerId) {
+    let string = `[title]Pokémon Masters EX > ${getPairName(trainerId)}[/title]\n`
         + `[nav]jeuxvideo/pokemon-masters/navigation[/nav]\n`
-        + `[h1]Pokémon Masters EX\nDuos Dex\n${await getPairName(trainerId)}[/h1]\n`
+        + `[h1]Pokémon Masters EX\nDuos Dex\n${getPairName(trainerId)}[/h1]\n`
         + `[include=jeuxvideo/pokemon-masters/duos/0-menu-deroulant]\n`
         + `[include=jeuxvideo/pokemon-masters/duos/menus-deroulants/A_MODIFIER]\n\n`
         + `[include=jeuxvideo/pokemon-masters/duos/0-sommaire-duo]\n\n`;
 
-    let t = trainer.find(t => t.trainerId === trainerId);
-    let trainerActorDress = await getActorDressFromTrainerId(trainerId);
-    let pairEvolutions = monsterEvolution.filter(me => me.trainerId === trainerId);
+    let t = jData.proto.trainer.find(t => t.trainerId === trainerId);
+    let trainerActorDress = getActorDressFromTrainerId(trainerId);
+    let pairEvolutions = jData.proto.monsterEvolution.filter(me => me.trainerId === trainerId);
     let monsterIds = [];
     let monsters = [];
     let pairVariations = {};
@@ -1844,35 +1793,35 @@ async function getPairBipCode(trainerId) {
 
     for (let i = 0; i < monsterIds.length; i++) {
         pairVariations[monsterIds[i]] = null;
-        let variations = monsterVariation.filter(mv => mv.monsterId === monsterIds[i] && mv.form !== 4);
+        let variations = jData.proto.monsterVariation.filter(mv => mv.monsterId === monsterIds[i] && mv.form !== 4);
 
-        let enhancements = monsterEnhancement.filter(me => me.monsterIdCurrent === monsterIds[i] && me.type !== "2");
+        let enhancements = jData.proto.monsterEnhancement.filter(me => me.monsterIdCurrent === monsterIds[i] && me.type !== "2");
 
         if (enhancements.length > 0) {
             enhancements.forEach(e => {
-                variations.push(...monsterVariation.filter(mv => mv.monsterId === e.monsterIdNext));
+                variations.push(...jData.proto.monsterVariation.filter(mv => mv.monsterId === e.monsterIdNext));
             });
         }
 
         if (variations.length > 0) {
-            pairVariations[monsterIds[i]] = variations.map(async v => {
-                v.monsterBaseId = await getMonsterBaseIdFromActorId(v.actorId);
-                v.monsterName = await getNameByMonsterBaseId(v.monsterBaseId, v.formId);
+            pairVariations[monsterIds[i]] = variations.map(v => {
+                v.monsterBaseId = getMonsterBaseIdFromActorId(v.actorId);
+                v.monsterName = getNameByMonsterBaseId(v.monsterBaseId, v.formId);
                 return v;
             });
         }
 
-        monsters.push(monster.find(m => m.monsterId === monsterIds[i]));
+        monsters.push(jData.proto.monster.find(m => m.monsterId === monsterIds[i]));
     }
 
     string += `[center][table]\n`
-        + `\t[tr][th|width=430px|colspan=4]${(await getTrainerName(trainerId)).replace("\n", "")}[/th][th|colspan=2|width=230px]`;
+        + `\t[tr][th|width=430px|colspan=4]${getTrainerName(trainerId).replace("\n", "")}[/th][th|colspan=2|width=230px]`;
 
     for (let i = 0; i < monsters.length; i++) {
         if (i > 0)
             string += ", ";
 
-        string += await getMonsterNameByMonsterId(monsters[i].monsterId);
+        string += getMonsterNameByMonsterId(monsters[i].monsterId);
 
         if (pairVariations[monsterIds[i]])
             pairVariations[monsterIds[i]].forEach(v => {
@@ -1883,42 +1832,42 @@ async function getPairBipCode(trainerId) {
     string += "[/th][/tr]\n"
         + "\t[tr]\n";
 
-    string += `\t[td${(await hasExUnlocked(trainerId) && trainerActorDress) ? "|rowspan=3" : ""}|colspan=4][img]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER.png[/img][/td]\n`
+    string += `\t[td${(hasExUnlocked(trainerId) && trainerActorDress) ? "|rowspan=3" : ""}|colspan=4][img]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER.png[/img][/td]\n`
         + `\t[td|colspan=2]`;
 
     for (let i = 0; i < monsters.length; i++) {
-        string += `[pokeimg=${await getPokemonNumberFromMonsterBaseId(monsters[i].monsterBaseId)}|MX]`;
+        string += `[pokeimg=${getPokemonNumberFromMonsterBaseId(monsters[i].monsterBaseId)}|MX]`;
 
         if (pairVariations[monsterIds[i]])
             for (const v of pairVariations[monsterIds[i]]) {
-                string += `[pokeimg=${await getPokemonNumberFromMonsterBaseId(monsters[i].monsterBaseId)}A_MODIFIER|MX]`;
+                string += `[pokeimg=${getPokemonNumberFromMonsterBaseId(monsters[i].monsterBaseId)}A_MODIFIER|MX]`;
             }
     }
 
     string += `[/td]\n\t[/tr]\n`;
 
-    if (await hasExUnlocked(trainerId) && trainerActorDress) {
+    if (hasExUnlocked(trainerId) && trainerActorDress) {
         string += `\t[tr][th|colspan=2]Tenue 6★ EX[/th][/tr]\n`
             + `\t[tr][td|colspan=2][img|w=230]/pages/jeuxvideo/pokemon-masters/images/personnages/A_MODIFIER-ex.png[/img][/td][/tr]\n`;
     }
 
     string += `\t[tr][th]Rôle[/th][th]Potentiel (Base)[/th][th]Type[/th][th]Faiblesse[/th][th]Origine[/th][th]Tenue[/th][/tr]\n`
         + `\t[tr]\n`
-        + `\t[td|width=100px][img]/pages/jeuxvideo/pokemon-masters/images/roles/${await getRoleUrlByTrainerId(trainerId)}.png[/img][br]${await getRoleByTrainerId(trainerId)}[/td]\n`
-        + `\t[td|width=100px]${"★".repeat(await getTrainerRarity(trainerId))}[/td]\n`
-        + `\t[td|width=100px][type=${removeAccents(motifTypeName[t.type].toLowerCase())}|MX][/td]\n`
-        + `\t[td|width=100px][type=${removeAccents(motifTypeName[t.weakness].toLowerCase())}|MX][/td]\n`
+        + `\t[td|width=100px][img]/pages/jeuxvideo/pokemon-masters/images/roles/${getRoleUrlByTrainerId(trainerId)}.png[/img][br]${getRoleByTrainerId(trainerId)}[/td]\n`
+        + `\t[td|width=100px]${"★".repeat(getTrainerRarity(trainerId))}[/td]\n`
+        + `\t[td|width=100px][type=${removeAccents(jData.lsd.motifTypeName[t.type].toLowerCase())}|MX][/td]\n`
+        + `\t[td|width=100px][type=${removeAccents(jData.lsd.motifTypeName[t.weakness].toLowerCase())}|MX][/td]\n`
         + `\t[td|width=200px]Pokémon A_MODIFIER[/td]\n`
         + `\t[td|width=200px]Pokémon A_MODIFIER[/td]\n`
         + `\t[/tr]\n`
         + `\t[tr][th|colspan=6]Descriptions[/th][/tr]\n`;
 
-    if (trainerDescriptions[trainerId])
-        string += `\t[tr][td|colspan=6]${agenderDescription(trainerDescriptions[trainerId].replaceAll("\n", " "))}[/td][/tr]\n`;
+    if (jData.lsd.trainerDescription[trainerId])
+        string += `\t[tr][td|colspan=6]${agenderDescription(jData.lsd.trainerDescription[trainerId].replaceAll("\n", " "))}[/td][/tr]\n`;
 
     monsters.map(m => m.monsterBaseId).forEach(mbId => {
-            if (monsterDescriptions[mbId])
-                string += `\t[tr][td|colspan=6]${monsterDescriptions[mbId].replaceAll("\n", " ")}[/td][/tr]\n`;
+            if (jData.lsd.monsterDescription[mbId])
+                string += `\t[tr][td|colspan=6]${jData.lsd.monsterDescription[mbId].replaceAll("\n", " ")}[/td][/tr]\n`;
         }
     );
 
@@ -1931,23 +1880,23 @@ async function getPairBipCode(trainerId) {
         + `[listh]\n`;
 
     for (const m of monsters) {
-        string += await getMonsterStatsBipCode(m, t);
+        string += getMonsterStatsBipCode(m, t);
 
         if (pairVariations[m.monsterId])
             for (const v of pairVariations[m.monsterId]) {
-                string += await getMonsterStatsBipCode(m, t, v);
+                string += getMonsterStatsBipCode(m, t, v);
             }
     }
 
-    if (await hasExRoleUnlocked(trainerId)) {
-        string += `\t[include=jeuxvideo/pokemon-masters/duos/include/role-ex-${await getExRoleUrlByTrainerId(trainerId)}]\n`;
+    if (hasExRoleUnlocked(trainerId)) {
+        string += `\t[include=jeuxvideo/pokemon-masters/duos/include/role-ex-${getExRoleUrlByTrainerId(trainerId)}]\n`;
     }
 
     string += `[/listh]\n\n`;
 
     string += `[ancre=talents][h2]Talents[/h2]\n`;
 
-    string += `[h3]${await getMonsterNameByMonsterId(monsterIds[monsterIds.length - 1])}[/h3]\n`;
+    string += `[h3]${getMonsterNameByMonsterId(monsterIds[monsterIds.length - 1])}[/h3]\n`;
     string += getPassiveSkillBipCode(t);
 
     monsterIds.forEach(mId => {
@@ -1962,29 +1911,29 @@ async function getPairBipCode(trainerId) {
     string += `[center][table]\n`
         + `\t[tr][th|colspan=2]Talents d'équipe (Niv. 1 à 4)[/th][/tr]\n`
         + `\t[tr][td|colspan=2]Créez une équipe avec au moins deux Duos qui partagent un même mot-clé pour activer son effet.[/td][/tr]\n`
-        + `\t[tr][th|width=200px]Nom[/th][th|width=400px]Effet (${await getRoleByTrainerId(trainerId, true)})[/th][/tr]\n`;
+        + `\t[tr][th|width=200px]Nom[/th][th|width=400px]Effet (${getRoleByTrainerId(trainerId, true)})[/th][/tr]\n`;
 
     for (let i = 1; i <= 5; i++) {
-        let ts = teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 1);
+        let ts = jData.proto.teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 1);
         let descr = []
-        descr.push(teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 3));
-        descr.push(teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 4));
+        descr.push(jData.proto.teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 3));
+        descr.push(jData.proto.teamSkill.find(tsk => tsk.teamSkillId == t[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 4));
 
         if (!ts)
             continue;
 
-        string += `\t[tr][td]${teamSkillTag[ts.teamSkillPropValue]}[/td][td]`;
+        string += `\t[tr][td]${jData.lsd.teamSkillTag[ts.teamSkillPropValue]}[/td][td]`;
 
-        let include = `[include=/jeuxvideo/pokemon-masters/duos/talents/mots-cles-${await getRoleUrlByTrainerId(trainerId, false)}]`;
+        let include = `[include=/jeuxvideo/pokemon-masters/duos/talents/mots-cles-${getRoleUrlByTrainerId(trainerId, false)}]`;
         if (i === 1) {
-            include = `[include=/jeuxvideo/pokemon-masters/duos/talents/type-${await getRoleUrlByTrainerId(trainerId, false)}]`;
+            include = `[include=/jeuxvideo/pokemon-masters/duos/talents/type-${getRoleUrlByTrainerId(trainerId, false)}]`;
         }
 
         const digitBlock = "[Digit:3digits ]";
 
         for (let i = 0; i < descr.length; i++) {
             if (descr[i]) {
-                let d = teamSkillEffect[descr[i].teamSkillPropValue].replace("\n", " ");
+                let d = jData.lsd.teamSkillEffect[descr[i].teamSkillPropValue].replace("\n", " ");
                 let index = d.indexOf(digitBlock);
                 d = d.replace(digitBlock, "X");
 
@@ -2003,7 +1952,7 @@ async function getPairBipCode(trainerId) {
 
     string += `[ancre=capacites][h2]Capacités[/h2]\n`
 
-    string += `[h3]${await getMonsterNameByMonsterId(monsterIds[monsterIds.length - 1])}[/h3]\n`;
+    string += `[h3]${getMonsterNameByMonsterId(monsterIds[monsterIds.length - 1])}[/h3]\n`;
     string += getMoveBipCode(t, monsters[monsters.length - 1]);
 
     monsters.forEach(m => {
@@ -2015,7 +1964,7 @@ async function getPairBipCode(trainerId) {
         }
     });
 
-    let gmaxVar = monsterVariation.find(mv => mv.monsterId === monsterIds[monsterIds.length - 1] && mv.form === 4);
+    let gmaxVar = jData.proto.monsterVariation.find(mv => mv.monsterId === monsterIds[monsterIds.length - 1] && mv.form === 4);
 
     if (gmaxVar) {
 
@@ -2027,13 +1976,13 @@ async function getPairBipCode(trainerId) {
             let moveId = gmaxVar[`moveDynamax${i}Id`];
 
             if (moveId > -1) {
-                let mov = move.find(m => m.moveId == moveId);
+                let mov = jData.proto.move.find(m => m.moveId == moveId);
                 string += `\t[tr]\n`
-                    + `\t\t[td]${moveNames[moveId].replace("\n", " ")}[/td]\n`
-                    + `\t\t[td]${mov.type ? `[type=${removeAccents(motifTypeName[mov.type].toLowerCase())}|MX]` : "–"}[/td]\n`
+                    + `\t\t[td]${jData.lsd.moveName[moveId].replace("\n", " ")}[/td]\n`
+                    + `\t\t[td]${mov.type ? `[type=${removeAccents(jData.lsd.motifTypeName[mov.type].toLowerCase())}|MX]` : "–"}[/td]\n`
                     + `\t\t[td][type=${removeAccents(categoryToFR[mov.category].toLowerCase())}|MX][/td]\n`
                     + `\t\t[td]${mov.power ? `${mov.power}-${Math.trunc(mov.power * 1.2)}` : "–"}[/td]\n`
-                    + `\t\t[td]${moveTargetType[targetToId[mov.target]] || "–"}[/td]\n`
+                    + `\t\t[td]${jData.lsd.moveTargetType[targetToId[mov.target]] || "–"}[/td]\n`
                     + `\t\t[td]${getMoveDescr(moveId)}[/td]\n`
                     + `\t[/tr]\n`
             }
@@ -2042,32 +1991,32 @@ async function getPairBipCode(trainerId) {
         string += `[/table][/center]\n`;
     }
 
-    let syncMove = move.find(mov => mov.moveId === monsters[monsters.length - 1].syncMoveId);
+    let syncMove = jData.proto.move.find(mov => mov.moveId === monsters[monsters.length - 1].syncMoveId);
 
     string += "\n[center][table]\n"
-        + `\t[tr][th|colspan=${6 + (await hasExUnlocked(trainerId)) + (await hasExRoleUnlocked(trainerId))}|width=1000px][img|w=32]/pages/jeuxvideo/pokemon-masters/images/icones-combat/capacite-duo.png[/img] Capacité Duo[/th][/tr]\n`
+        + `\t[tr][th|colspan=${6 + hasExUnlocked(trainerId) + hasExRoleUnlocked(trainerId)}|width=1000px][img|w=32]/pages/jeuxvideo/pokemon-masters/images/icones-combat/capacite-duo.png[/img] Capacité Duo[/th][/tr]\n`
         + `\t[tr][th|width=100px]Nom[/th][th|width=80px]Type[/th][th|width=80px]Catég.[/th][th|width=50px]Puis.[/th][th|width=200px]Effet[/th]`;
 
-    if (await hasExUnlocked(trainerId)) {
+    if (hasExUnlocked(trainerId)) {
         string += `[th|width=150px]Effet (EX)[/th]`;
     }
-    if (await hasExRoleUnlocked(trainerId)) {
+    if (hasExRoleUnlocked(trainerId)) {
         string += `[th|width=150px]Rôle EX[/th]`;
     }
 
     string += `[/tr]\n`
         + `\t[tr]\n`
-        + `\t\t[td]${moveNames[syncMove.moveId]}[/td]\n`
-        + `\t\t[td]${syncMove.type ? `[type=${removeAccents(motifTypeName[syncMove.type].toLowerCase())}|MX]` : "–"}[/td]\n`
+        + `\t\t[td]${jData.lsd.moveName[syncMove.moveId]}[/td]\n`
+        + `\t\t[td]${syncMove.type ? `[type=${removeAccents(jData.lsd.motifTypeName[syncMove.type].toLowerCase())}|MX]` : "–"}[/td]\n`
         + `\t\t[td][type=${removeAccents(categoryToFR[syncMove.category].toLowerCase())}|MX][/td]\n`
         + `\t\t[td]${syncMove.power ? `${syncMove.power}-${Math.trunc(syncMove.power * 1.2)}` : "–"}[/td]\n`
         + `\t\t[td]${getMoveDescr(syncMove.moveId)}[/td]\n`;
 
-    if (await hasExUnlocked(trainerId)) {
+    if (hasExUnlocked(trainerId)) {
         string += `\t\t[td]${exSyncEffect[t.role]}[/td]\n`;
     }
-    if (await hasExRoleUnlocked(trainerId)) {
-        string += `\t\t[td]${exSyncEffect[await getExRoleId(trainerId)]}[/td]\n`;
+    if (hasExRoleUnlocked(trainerId)) {
+        string += `\t\t[td]${exSyncEffect[getExRoleId(trainerId)]}[/td]\n`;
     }
 
     string += `\t[/tr]\n`
@@ -2077,12 +2026,12 @@ async function getPairBipCode(trainerId) {
         + `[center][table]\n`
         + `\t[tr][th|width=250px]Amélioration[/th][th|width=300px]Effet[/th][th|width=100px]Énergie requise[/th][th|width=100px]Duo-Sphères requises[/th][th|width=100px]Niveau des Capacités requis[/th][/tr]\n`;
 
-    let ap = abilityPanel.filter(ap => ap.trainerId === trainerId)
+    let ap = jData.proto.abilityPanel.filter(ap => ap.trainerId === trainerId)
         .map(ap => {
-            ap.ability = ability.find(a => a.abilityId === ap.abilityId);
+            ap.ability = jData.proto.ability.find(a => a.abilityId === ap.abilityId);
             ap.level = 1;
             ap.conditionIds.forEach(cid => {
-                let releaseCon = abilityReleaseCondition.find(arc => arc.conditionId === cid);
+                let releaseCon = jData.proto.abilityReleaseCondition.find(arc => arc.conditionId === cid);
 
                 switch(releaseCon.type) {
                     case 6:
@@ -2095,7 +2044,7 @@ async function getPairBipCode(trainerId) {
         });
 
     for (const key of Object.keys(abilityType)) {
-        string += await appendGridCategoryBipCode(ap, abilityType[key]);
+        string += appendGridCategoryBipCode(ap, abilityType[key]);
     }
 
     string += `[/table][/center]\n\n`;
@@ -2106,12 +2055,12 @@ async function getPairBipCode(trainerId) {
     return string;
 }
 
-async function downloadData() {
+function downloadData() {
     let e = document.createElement('a');
     e.href = window.URL.createObjectURL(
         new Blob([getPairBipCode(syncPairSelect.value)], {"type": "text/plain"})
     );
-    e.setAttribute('download', removeAccents(await getPairName(syncPairSelect.value)));
+    e.setAttribute('download', removeAccents(getPairName(syncPairSelect.value)));
     e.style.display = 'none';
 
     document.body.appendChild(e);
@@ -2119,13 +2068,13 @@ async function downloadData() {
     document.body.removeChild(e);
 }
 
-async function downloadAll() {
+function downloadAll() {
     let zip = new JSZip();
-    let trainerIds = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER")
+    let trainerIds = jData.proto.trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER")
         .map(t => t.trainerId);
 
     for (const tid of trainerIds) {
-        let filename = removeAccents(await getPairName(tid)).replace("/", "-") + '.txt';
+        let filename = removeAccents(getPairName(tid)).replace("/", "-") + '.txt';
         zip.file(filename, getPairBipCode(tid));
     }
 

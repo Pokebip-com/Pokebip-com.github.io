@@ -1,36 +1,24 @@
-let move;
-let moveAndPassiveSkillDigit;
+function preloadMovePassiveSkills() {
 
-let moveDescription;
-let moveDescriptionParts;
-let moveNames;
-let moveTargetType;
-let passiveSkillAndMoveNumber;
-let passiveSkillDescription;
-let passiveSkillDescriptionParts;
-let passiveSkillName;
-let passiveSkillNameParts;
-let tagNameWithPrepositions;
+    // PROTO
+    jsonCache.preloadProto("Move");
+    jsonCache.preloadProto("MoveAndPassiveSkillDigit");
 
-async function initMovePassiveSkills() {
-    move = await jsonCache.getProto("Move");
-    moveAndPassiveSkillDigit = await jsonCache.getProto("MoveAndPassiveSkillDigit");
-
-    moveDescription = await jsonCache.getLsd("move_description");
-    moveDescriptionParts = await jsonCache.getLsd("move_description_parts");
-    moveNames = await jsonCache.getLsd("move_name");
-    moveTargetType = await jsonCache.getLsd("move_target_type");
-
-    passiveSkillAndMoveNumber = await jsonCache.getLsd("passive_skill_and_move_number");
-    passiveSkillDescription = await jsonCache.getLsd("passive_skill_description");
-    passiveSkillDescriptionParts = await jsonCache.getLsd("passive_skill_description_parts");
-    passiveSkillName = await jsonCache.getLsd("passive_skill_name");
-    passiveSkillNameParts = await jsonCache.getLsd("passive_skill_name_parts");
-    tagNameWithPrepositions = await jsonCache.getLsd("tag_name_with_prepositions");
+    // LSD
+    jsonCache.preloadLsd("move_description");
+    jsonCache.preloadLsd("move_description_parts");
+    jsonCache.preloadLsd("move_name");
+    jsonCache.preloadLsd("move_target_type");
+    jsonCache.preloadLsd("passive_skill_and_move_number");
+    jsonCache.preloadLsd("passive_skill_description");
+    jsonCache.preloadLsd("passive_skill_description_parts");
+    jsonCache.preloadLsd("passive_skill_name");
+    jsonCache.preloadLsd("passive_skill_name_parts");
+    jsonCache.preloadLsd("tag_name_with_prepositions");
 }
 
 function getMoveDescr(id) {
-    let descr = moveDescription[id];
+    let descr = jData.lsd.moveDescription[id];
 
     const descrPartsRE = /\[Name:MoveDescriptionPartsIdTag Idx="(\w+)" ]/i;
     let idx = descrPartsRE.exec(descr);
@@ -38,7 +26,7 @@ function getMoveDescr(id) {
 
     if(idx !== null) {
         do {
-            descr = descr.replace(descrPartsRE, moveDescriptionParts[idx[1]]);
+            descr = descr.replace(descrPartsRE, jData.lsd.moveDescriptionParts[idx[1]]);
             descrPartsRE.lastIndex = 0;
         } while((idx = descrPartsRE.exec(descr)) !== null);
     }
@@ -50,13 +38,13 @@ function getMoveDescr(id) {
 }
 
 function getPassiveSkillName(id) {
-    let name = passiveSkillName[id];
+    let name = jData.lsd.passiveSkillName[id];
     const namePartsRE = /\[Name:PassiveSkillNameParts Idx="(\w+)" \]/i;
     let idx = namePartsRE.exec(name);
 
     if(idx !== null) {
          do {
-             name = name.replace(namePartsRE, passiveSkillNameParts[idx[1]]);
+             name = name.replace(namePartsRE, jData.lsd.passiveSkillNameParts[idx[1]]);
              name = name.replace(/\[Name:PassiveSkillNameDigit \]/i, (parseInt(id) - parseInt(idx[1])) + "");
              namePartsRE.lastIndex = 0;
          } while((idx = namePartsRE.exec(name)) !== null);
@@ -69,13 +57,13 @@ function getPassiveSkillName(id) {
 }
 
 function getPassiveSkillDescr(id) {
-    let descr = passiveSkillDescription[id];
+    let descr = jData.lsd.passiveSkillDescription[id];
     const descrPartsRE = /\[Name:PassiveSkillDescriptionPartsIdTag Idx="(\w+)" ]/i;
     let idx = descrPartsRE.exec(descr);
 
     if(idx !== null) {
         do {
-            descr = descr.replace(descrPartsRE, passiveSkillDescriptionParts[idx[1]]);
+            descr = descr.replace(descrPartsRE, jData.lsd.passiveSkillDescriptionParts[idx[1]]);
             descrPartsRE.lastIndex = 0;
         } while((idx = descrPartsRE.exec(descr)) !== null);
     }
@@ -111,17 +99,17 @@ function setParams(id, descr) {
 
         switch(type) {
             case "Digit":
-                replaceValue = passiveSkillAndMoveNumber[paramArray[params.Idx]];
+                replaceValue = jData.lsd.passiveSkillAndMoveNumber[paramArray[params.Idx]];
                 break;
 
             case "Name":
                 switch(subtype) {
                     case "ReferencedMessageTag":
-                        replaceValue = tagNameWithPrepositions[paramArray[params.Idx]];
+                        replaceValue = jData.lsd.tagNameWithPrepositions[paramArray[params.Idx]];
                         break;
 
                     case "MoveId":
-                        replaceValue = moveNames[params.Idx];
+                        replaceValue = jData.lsd.moveName[params.Idx];
                         break;
 
                     case "PassiveSkillId":
@@ -144,7 +132,7 @@ function setParams(id, descr) {
 }
 
 function getParamArray(id) {
-    let values = moveAndPassiveSkillDigit.find(mapsd => mapsd.id === id.toString());
+    let values = jData.proto.moveAndPassiveSkillDigit.find(mapsd => mapsd.id === id.toString());
     let paramArray = [];
 
     if(!values) {
@@ -181,7 +169,7 @@ function createPassiveTable() {
     table.appendChild(firstRow);
     passiveSkillsDiv.appendChild(table);
 
-    Object.keys(passiveSkillDescription).forEach(key => {
+    Object.keys(jData.lsd.passiveSkillDescription).forEach(key => {
         let row = document.createElement("tr");
 
         let nameCell = document.createElement("td");
@@ -211,10 +199,10 @@ function createPassiveTable() {
     table.appendChild(firstRow);
     moveDiv.appendChild(table);
 
-    Object.keys(moveDescription).forEach(key => {
+    Object.keys(jData.lsd.moveDescription).forEach(key => {
         let row = document.createElement("tr");
         let nameCell = document.createElement("td");
-        nameCell.innerText = moveNames[key];
+        nameCell.innerText = jData.lsd.moveName[key];
         row.appendChild(nameCell);
 
         let descriptionCell = document.createElement("td");

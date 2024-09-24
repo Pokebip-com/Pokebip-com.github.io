@@ -1,84 +1,56 @@
-let itemExchange;
-let itemSet;
-let progressEvent, progressEventRewardGroup;
-let storyQuest;
-
-let skillDeckItemConditionTeamSkillTagLot;
-let skillDeckItemEffect;
-let skillDeckItemEffectLot;
-let skillDeckItemLotParamCoefficient;
-let skillDeckItemNumLot;
-let skillDeckItemParamLot;
-let skillDeckItemSkillFeatherItem;
-let teamSkill;
-
-let skillDeckItemSkillFeatherItemName;
-let teamSkillEffect;
-let teamSkillTag;
-
-let schedule;
-let versions;
-
-let skillGearsLocale;
-
 let featherListDiv;
 let skillGearsDiv;
 
-
 async function getData() {
-    itemExchange = await jsonCache.getProto("ItemExchange");
 
-    itemSet = await jsonCache.getProto("ItemSet");
+    // PROTO
+    jsonCache.preloadProto("ItemExchange");
+    jsonCache.preloadProto("ItemSet");
+    jsonCache.preloadProto("ProgressEvent");
+    jsonCache.preloadProto("ProgressEventRewardGroup");
+    jsonCache.preloadProto("Schedule");
+    jsonCache.preloadProto("SkillDeckItemConditionTeamSkillTagLot");
+    jsonCache.preloadProto("SkillDeckItemEffectLot");
+    jsonCache.preloadProto("SkillDeckItemLotParamCoefficient");
+    jsonCache.preloadProto("SkillDeckItemNumLot");
+    jsonCache.preloadProto("SkillDeckItemParamLot");
+    jsonCache.preloadProto("SkillDeckItemSkillFeatherItem");
+    jsonCache.preloadProto("StoryQuest");
 
-    progressEvent = await jsonCache.getProto("ProgressEvent");
-    progressEventRewardGroup = await jsonCache.getProto("ProgressEventRewardGroup");
+    // LSD
+    jsonCache.preloadLsd("skill_deck_item_skill_feather_item_name");
+    jsonCache.preloadLsd("Team_skill_tag");
 
-    schedule = await jsonCache.getProto("Schedule");
+    // CUSTOM
+    jsonCache.preloadCustom("version_release_dates");
 
-    skillDeckItemConditionTeamSkillTagLot = await jsonCache.getProto("SkillDeckItemConditionTeamSkillTagLot");
+    // Locale
+    jsonCache.preloadLocale("skill-gears");
 
-    skillDeckItemEffect = await jsonCache.getProto("SkillDeckItemEffect");
+    // Other Preloads
+    preloadUtils(true);
+    preloadMovePassiveSkills()
 
-    skillDeckItemEffectLot = await jsonCache.getProto("SkillDeckItemEffectLot");
-
-    skillDeckItemLotParamCoefficient = await jsonCache.getProto("SkillDeckItemLotParamCoefficient");
-
-    skillDeckItemNumLot = await jsonCache.getProto("SkillDeckItemNumLot");
-
-    skillDeckItemParamLot = await jsonCache.getProto("SkillDeckItemParamLot");
-
-    skillDeckItemSkillFeatherItem = await jsonCache.getProto("SkillDeckItemSkillFeatherItem");
-
-    storyQuest = await jsonCache.getProto("StoryQuest");
-
-    skillDeckItemSkillFeatherItemName = await jsonCache.getLsd("skill_deck_item_skill_feather_item_name");
-
-    teamSkill = await jsonCache.getProto("TeamSkill");
-    teamSkillTag = await jsonCache.getLsd("team_skill_tag");
-    teamSkillEffect = await jsonCache.getLsd("team_skill_effect");
-}
-
-async function getCustomJSON() {
-    skillGearsLocale = await jsonCache.getLocale("skill-gears");
-    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
+    await jsonCache.runPreload();
+    orderByVersion(jData.custom.versionReleaseDates);
 }
 
 function getProgressEventRewardFeathers(featherList, lastVersionScheduleStarts) {
-    let itemSetIds = itemSet.filter(is => featherList.includes(is.item1)).map(is => is.itemSetId);
-    let progressEventEQGIds = progressEvent.map(pe => pe.questGroupId);
-    let lastVersionQuestGroups = storyQuest.filter(sq => lastVersionScheduleStarts.includes(sq.scheduleId) && progressEventEQGIds.includes(sq.questGroupId)).map(sq => sq.questGroupId);
+    let itemSetIds = jData.proto.itemSet.filter(is => featherList.includes(is.item1)).map(is => is.itemSetId);
+    let progressEventEQGIds = jData.proto.progressEvent.map(pe => pe.questGroupId);
+    let lastVersionQuestGroups = jData.proto.storyQuest.filter(sq => lastVersionScheduleStarts.includes(sq.scheduleId) && progressEventEQGIds.includes(sq.questGroupId)).map(sq => sq.questGroupId);
 
-    return progressEventRewardGroup.filter(perg => lastVersionQuestGroups.includes(perg.progressEventId) && itemSetIds.includes(perg.itemSetId)).map(perg => itemSet.find(is => is.itemSetId === perg.itemSetId).item1);
+    return jData.proto.progressEventRewardGroup.filter(perg => lastVersionQuestGroups.includes(perg.progressEventId) && itemSetIds.includes(perg.itemSetId)).map(perg => jData.proto.itemSet.find(is => is.itemSetId === perg.itemSetId).item1);
 }
 
 function getNewSpecialFeathers() {
-    let featherList = [...new Set(skillDeckItemSkillFeatherItem.filter(sdisfi => sdisfi.skillFeatherItemDescription === "9302").map(sdisfi => sdisfi.itemId))];
-    let lastVersionScheduleStarts = schedule.filter(s => s.startDate >= versions[0].releaseTimestamp).map(s => s.scheduleId);
-    let featherIds = itemExchange.filter(ie => featherList.includes(ie.itemId) && lastVersionScheduleStarts.includes(ie.scheduleId)).map(ie => ie.itemId);
+    let featherList = [...new Set(jData.proto.skillDeckItemSkillFeatherItem.filter(sdisfi => sdisfi.skillFeatherItemDescription === "9302").map(sdisfi => sdisfi.itemId))];
+    let lastVersionScheduleStarts = jData.proto.schedule.filter(s => s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp).map(s => s.scheduleId);
+    let featherIds = jData.proto.itemExchange.filter(ie => featherList.includes(ie.itemId) && lastVersionScheduleStarts.includes(ie.scheduleId)).map(ie => ie.itemId);
 
     featherIds.push(...getProgressEventRewardFeathers(featherList, lastVersionScheduleStarts));
 
-    return skillDeckItemSkillFeatherItem.filter(sdisfi => featherIds.includes(sdisfi.itemId));
+    return jData.proto.skillDeckItemSkillFeatherItem.filter(sdisfi => featherIds.includes(sdisfi.itemId));
 }
 
 function getFeatherItemImage(feather) {
@@ -103,7 +75,7 @@ function getFeatherLi(feather) {
     let link = document.createElement("a");
     link.onclick = () => printFeatherInfos(feather);
     link.href = `#feather_${feather.itemId}`;
-    link.innerHTML = `<b>${skillDeckItemSkillFeatherItemName[feather.itemId]}</b>`;
+    link.innerHTML = `<b>${jData.lsd.skillDeckItemSkillFeatherItemName[feather.itemId]}</b>`;
 
     newLi.classList.add("listh-click");
     newLi.onclick = () => link.click();
@@ -115,13 +87,13 @@ function getFeatherLi(feather) {
 function listFeatherInfos() {
 
     let newFeathers = getNewSpecialFeathers();
-    let normalFeathers = skillDeckItemSkillFeatherItem.filter(sdisfi => sdisfi.skillFeatherItemDescription === "9301");
-    let specialFeathers = skillDeckItemSkillFeatherItem.filter(sdisfi => !normalFeathers.includes(sdisfi));
+    let normalFeathers = jData.proto.skillDeckItemSkillFeatherItem.filter(sdisfi => sdisfi.skillFeatherItemDescription === "9301");
+    let specialFeathers = jData.proto.skillDeckItemSkillFeatherItem.filter(sdisfi => !normalFeathers.includes(sdisfi));
 
     if(newFeathers.length > 0) {
 
         let newFeathersH2 = document.createElement("h2");
-        newFeathersH2.innerText = skillGearsLocale.new_feathers;
+        newFeathersH2.innerText = jData.locale.skillGears.new_feathers;
         featherListDiv.appendChild(newFeathersH2);
 
         let newUl = document.createElement("ul");
@@ -135,7 +107,7 @@ function listFeatherInfos() {
     }
 
     let normalFeathersH2 = document.createElement("h2");
-    normalFeathersH2.innerText = skillGearsLocale.normal_feathers;
+    normalFeathersH2.innerText = jData.locale.skillGears.normal_feathers;
     featherListDiv.appendChild(normalFeathersH2);
 
     let normalUl = document.createElement("ul");
@@ -148,7 +120,7 @@ function listFeatherInfos() {
     featherListDiv.appendChild(normalUl);
 
     let specialFeathersH2 = document.createElement("h2");
-    specialFeathersH2.innerText = skillGearsLocale.special_feathers;
+    specialFeathersH2.innerText = jData.locale.skillGears.special_feathers;
     featherListDiv.appendChild(specialFeathersH2);
 
     let specialUl = document.createElement("ul");
@@ -175,11 +147,11 @@ function printSlotsTable(lots, div) {
     let slotsHeadTr = document.createElement("tr");
 
     let slotsHeadNumSlots = document.createElement("th");
-    slotsHeadNumSlots.innerText = skillGearsLocale.num_slots;
+    slotsHeadNumSlots.innerText = jData.locale.skillGears.num_slots;
     slotsHeadTr.appendChild(slotsHeadNumSlots);
 
     let slotsHeadChances = document.createElement("th");
-    slotsHeadChances.innerText = skillGearsLocale.chances;
+    slotsHeadChances.innerText = jData.locale.skillGears.chances;
     slotsHeadTr.appendChild(slotsHeadChances);
 
     slotsTHead.appendChild(slotsHeadTr);
@@ -210,10 +182,10 @@ function printSlotsTable(lots, div) {
 function printFeatherTeamSkills(feather, div) {
 
     let h3 = document.createElement("h3");
-    h3.innerText = skillGearsLocale.team_skills;
+    h3.innerText = jData.locale.skillGears.team_skills;
     div.appendChild(h3);
 
-    let slotsLots = skillDeckItemNumLot
+    let slotsLots = jData.proto.skillDeckItemNumLot
         .filter(sdinl => parseInt(sdinl.numLot) === feather.teamSkillTagNumLot)
         .sort((a, b) => a.numGuaranteedSlots - b.numGuaranteedSlots);
 
@@ -223,12 +195,12 @@ function printFeatherTeamSkills(feather, div) {
     ul.classList.add("listh-bipcode");
     div.appendChild(ul);
 
-    let teamSkillSet = skillDeckItemConditionTeamSkillTagLot.filter(x => x.setId === feather.teamSkillTagLotSetId);
+    let teamSkillSet = jData.proto.skillDeckItemConditionTeamSkillTagLot.filter(x => x.setId === feather.teamSkillTagLotSetId);
 
     for(let i = 0; i < teamSkillSet.length; i++) {
         let li = document.createElement("li");
         li.classList.add("listh-bipcode");
-        li.innerHTML = `<b>${teamSkillTag[teamSkillSet[i].teamSkillTagId]}</b>`;
+        li.innerHTML = `<b>${jData.lsd.teamSkillTag[teamSkillSet[i].teamSkillTagId]}</b>`;
         ul.appendChild(li);
     }
 
@@ -240,7 +212,7 @@ function printStatsTable(equipment, paramLots, ul) {
     li.classList.add("listh-no-style");
 
     let title = document.createElement("h1");
-    title.innerText = skillGearsLocale.equipment_name[equipment];
+    title.innerText = jData.locale.skillGears.equipment_name[equipment];
     li.appendChild(title);
 
     let table = document.createElement("table");
@@ -252,16 +224,16 @@ function printStatsTable(equipment, paramLots, ul) {
     let titleRow = document.createElement("tr");
 
     let statName = document.createElement("th");
-    statName.innerText = skillGearsLocale.stat_name_title;
+    statName.innerText = jData.locale.skillGears.stat_name_title;
 
     let statMin = document.createElement("th");
-    statMin.innerText = skillGearsLocale.stat_min_title;
+    statMin.innerText = jData.locale.skillGears.stat_min_title;
 
     let statMax = document.createElement("th");
-    statMax.innerText = skillGearsLocale.stat_max_title;
+    statMax.innerText = jData.locale.skillGears.stat_max_title;
 
     let chances = document.createElement("th");
-    chances.innerText = skillGearsLocale.chances;
+    chances.innerText = jData.locale.skillGears.chances;
 
     titleRow.appendChild(statName);
     titleRow.appendChild(statMin);
@@ -275,13 +247,13 @@ function printStatsTable(equipment, paramLots, ul) {
     let totalWeight = paramLots.map(pl => pl.entryWeight).reduce((a, b) => a + b, 0);
 
     paramLots.forEach(pl => {
-        let statCoeff = skillDeckItemLotParamCoefficient.find(sdilpc => sdilpc.stat === pl.stat);
+        let statCoeff = jData.proto.skillDeckItemLotParamCoefficient.find(sdilpc => sdilpc.stat === pl.stat);
         statCoeff = statCoeff ? statCoeff.coefficient : 1;
 
         let tr = document.createElement("tr");
 
         let statNameTh = document.createElement("th");
-        statNameTh.innerText = commonLocales[pl.stat];
+        statNameTh.innerText = jData.locale.common[pl.stat];
 
         let statMinTd = document.createElement("td");
         statMinTd.innerText = pl.minStat * statCoeff + "";
@@ -307,16 +279,16 @@ function printStatsTable(equipment, paramLots, ul) {
 function printFeatherStats(feather, div) {
 
     let h3 = document.createElement("h3");
-    h3.innerText = skillGearsLocale.stats;
+    h3.innerText = jData.locale.skillGears.stats;
     div.appendChild(h3);
 
-    let slotsLots = skillDeckItemNumLot
+    let slotsLots = jData.proto.skillDeckItemNumLot
         .filter(sdinl => parseInt(sdinl.numLot) === feather.statsNumLot)
         .sort((a, b) => a.numGuaranteedSlots - b.numGuaranteedSlots);
 
     printSlotsTable(slotsLots, div);
 
-    let paramLots = skillDeckItemParamLot
+    let paramLots = jData.proto.skillDeckItemParamLot
         .filter(sdipl => parseInt(sdipl.skillDeckItemNumLot) === feather.statsParamLot);
 
     let ul = document.createElement("ul");
@@ -332,10 +304,10 @@ function printFeatherStats(feather, div) {
 
 function printFeatherPassiveSkills(feather, div) {
     let h3 = document.createElement("h3");
-    h3.innerText = skillGearsLocale.passive_skills;
+    h3.innerText = jData.locale.skillGears.passive_skills;
     div.appendChild(h3);
 
-    let slotsLots = skillDeckItemNumLot
+    let slotsLots = jData.proto.skillDeckItemNumLot
         .filter(sdinl => parseInt(sdinl.numLot) === feather.skillNumLot)
         .sort((a, b) => a.numGuaranteedSlots - b.numGuaranteedSlots);
 
@@ -350,10 +322,10 @@ function printFeatherPassiveSkills(feather, div) {
     let tr = document.createElement("tr");
 
     let passiveName = document.createElement("th");
-    passiveName.innerText = skillGearsLocale.passive_name_title;
+    passiveName.innerText = jData.locale.skillGears.passive_name_title;
 
     let passiveDescr = document.createElement("th");
-    passiveDescr.innerText = skillGearsLocale.passive_descr_title;
+    passiveDescr.innerText = jData.locale.skillGears.passive_descr_title;
 
     tr.appendChild(passiveName);
     tr.appendChild(passiveDescr);
@@ -362,7 +334,7 @@ function printFeatherPassiveSkills(feather, div) {
 
     let tbody = document.createElement("tbody");
 
-    let lot = skillDeckItemEffectLot.filter(x => x.skillSetId === feather.skillSetId);
+    let lot = jData.proto.skillDeckItemEffectLot.filter(x => x.skillSetId === feather.skillSetId);
 
     for(let i = 0; i < lot.length; i++) {
         let tr = document.createElement("tr");
@@ -389,7 +361,7 @@ function printFeatherInfos(feather) {
     div.style.scrollMarginTop = "5em";
 
     let h2 = document.createElement("h2");
-    h2.innerText = skillDeckItemSkillFeatherItemName[feather.itemId];
+    h2.innerText = jData.lsd.skillDeckItemSkillFeatherItemName[feather.itemId];
     div.appendChild(h2);
 
     printFeatherTeamSkills(feather, div);
@@ -405,11 +377,9 @@ async function init() {
     //toolsDiv = document.getElementById('adminTools');
 
     await buildHeader();
-    await initMovePassiveSkills();
     await getData();
-    await getCustomJSON();
 
-    document.getElementById("pageTitle").innerText = commonLocales.submenu_skill_gear;
+    document.getElementById("pageTitle").innerText = jData.locale.common.submenu_skill_gear;
 
     // if(isAdminMode) {
     //     dataArea = document.getElementById("dataArea");
@@ -435,53 +405,6 @@ async function init() {
             tmp.click();
         }, 1000);
     }
-}
-
-function getPassiveSkillBipCode(t, v = null) {
-    let string = `[center][table]\n`
-        + `\t[tr][th|colspan=2]Talents passifs[/th][/tr]\n`
-        + `\t[tr][th|width=200px]Nom[/th][th|width=400px]Effet[/th][/tr]\n`;
-
-    for(let i = 1; i <= 4; i++) {
-        const passiveId = v && v[`passive${i}Id`] > 0 ? v[`passive${i}Id`] : t[`passive${i}Id`];
-
-        if(passiveId === 0)
-            continue;
-
-        string += `\t[tr][td]${getPassiveSkillName(passiveId)}[/td][td]${getPassiveSkillDescr(passiveId)}[/td][/tr]\n`;
-    }
-
-    string += `[/table][/center]\n\n`;
-    return string;
-}
-
-async function downloadData() {
-    let e = document.createElement('a');
-    e.href = window.URL.createObjectURL(
-        new Blob([getPairBipCode(syncPairSelect.value)], {"type": "text/plain"})
-    );
-    e.setAttribute('download', removeAccents(await getPairName(syncPairSelect.value)));
-    e.style.display = 'none';
-
-    document.body.appendChild(e);
-    e.click();
-    document.body.removeChild(e);
-}
-
-async function downloadAll() {
-    let zip = new JSZip();
-    let trainerIds = trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER")
-        .map(t => t.trainerId);
-
-    for (const tid of trainerIds) {
-        let filename = removeAccents(await getPairName(tid)).replace("/", "-") + '.txt';
-        zip.file(filename, getPairBipCode(tid));
-    }
-
-    zip.generateAsync({type: 'blob'})
-        .then(function (content) {
-            saveAs(content, "Team-Skills.zip");
-        });
 }
 
 init().then();

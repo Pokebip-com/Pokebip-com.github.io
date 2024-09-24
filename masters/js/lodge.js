@@ -7,17 +7,19 @@ let trainerNames, trainerVerboseNames, trainer, trainerBase;
 async function getData() {
     await buildHeader();
 
-    salonGuest = await jsonCache.getProto("SalonGuest");
-    salonGuestTopic = await jsonCache.getProto("SalonGuestTopic");
-    salonTopic = await jsonCache.getProto("SalonTopic");
+    // PROTO
+    jsonCache.preloadProto("SalonGuest");
+    jsonCache.preloadProto("SalonGuestTopic");
+    jsonCache.preloadProto("SalonTopic");
 
-    salonTopicName = await jsonCache.getLsd("salon_topic");
-    salonTopicCategory = await jsonCache.getLsd("salon_topic_category");
+    // LSD
+    jsonCache.preloadLsd("salon_topic");
+    jsonCache.preloadLsd("salon_topic_category");
 
-    trainer = await jsonCache.getProto("Trainer");
-    trainerBase = await jsonCache.getProto("TrainerBase");
-    trainerNames = await jsonCache.getLsd("trainer_name");
-    trainerVerboseNames = await jsonCache.getLsd("trainer_verbose_name");
+    // Preload utils
+    preloadUtils();
+
+    await jsonCache.runPreload();
 }
 
 function setLodgeTopics(guestId) {
@@ -27,26 +29,26 @@ function setLodgeTopics(guestId) {
     let appreciationEmojis = ["💗", "💖", "💔"];
     let topics = {};
 
-    Object.keys(salonTopicCategory).forEach(key => {
+    Object.keys(jData.lsd.salonTopicCategory).forEach(key => {
         topics[key] = {1: [], 2: [], 3: []};
     });
 
-    salonGuestTopic.filter(sgt => sgt.salonGuestId === guestId).forEach(sgt => {
-        let topic = salonTopic.find(st => st.salonTopicId === parseInt(sgt.topicId));
+    jData.proto.salonGuestTopic.filter(sgt => sgt.salonGuestId === guestId).forEach(sgt => {
+        let topic = jData.proto.salonTopic.find(st => st.salonTopicId === parseInt(sgt.topicId));
         topics[topic.salonTopicCategoryId][sgt.appreciation].push(topic);
     });
 
     let categoriesUl = document.createElement("ul");
     categoriesUl.classList.add("listh-bipcode");
 
-    Object.keys(salonTopicCategory).forEach(key => {
+    Object.keys(jData.lsd.salonTopicCategory).forEach(key => {
         let categoryLi = document.createElement("li");
         categoryLi.classList.add("listh-bipcode");
         categoryLi.style.textAlign = "left";
         categoryLi.style.padding = "0";
 
         let categoryTitle = document.createElement("h1");
-        categoryTitle.innerText = salonTopicCategory[key];
+        categoryTitle.innerText = jData.lsd.salonTopicCategory[key];
         categoryLi.appendChild(categoryTitle);
 
         let topicsDiv = document.createElement("div");
@@ -56,7 +58,7 @@ function setLodgeTopics(guestId) {
         Object.keys(topics[key]).forEach(appreciation => {
             topics[key][appreciation].forEach(topic => {
                 let topicName = document.createElement("span");
-                topicName.innerText = `${appreciationEmojis[appreciation-1]} ${salonTopicName[topic.salonTopicId].replace("\n", " ")} (${points[appreciation-1]} pts)`;
+                topicName.innerText = `${appreciationEmojis[appreciation-1]} ${jData.lsd.salonTopic[topic.salonTopicId].replace("\n", " ")} (${points[appreciation-1]} pts)`;
                 topicsDiv.appendChild(topicName);
                 topicsDiv.appendChild(document.createElement("br"));
             });
@@ -71,15 +73,14 @@ function setLodgeTopics(guestId) {
     lodgeTopicsDiv.appendChild(categoriesUl);
 }
 
-getData().then(async () => {
+getData().then(() => {
 
     let salonGuestSelect = document.getElementById("salonGuestSelect");
     lodgeTopicsDiv = document.getElementById("lodgeTopicsDiv");
 
-    (await Promise.all(salonGuest
-        .map(async sg => {
-            return {"name": await getTrainerName(sg.trainerId), "salonGuestId": sg.salonGuestId}
-        })))
+    jData.proto.salonGuest.map(sg => {
+            return {"name": getTrainerName(sg.trainerId), "salonGuestId": sg.salonGuestId}
+        })
         .sort((a, b) => a.name.localeCompare(b.name))
         .forEach(sg => {
             let option = new Option(sg.name, sg.salonGuestId);

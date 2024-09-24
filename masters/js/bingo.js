@@ -1,45 +1,47 @@
 let bingoList;
 let bingoMission, bingoReward;
 
-let banner;
-let itemSet;
-
-let bingoMissionGroup, bingoMissionReward, bingoMissionCard;
-
-let itemExchange, itemExchangeGroup;
-
 async function getData() {
     await buildHeader();
 
-    banner = await jsonCache.getProto("Banner");
-    itemSet = await jsonCache.getProto("ItemSet");
+    // PROTO
+    jsonCache.preloadProto("Banner");
+    jsonCache.preloadProto("BingoMissionCard");
+    jsonCache.preloadProto("BingoMissionGroup");
+    jsonCache.preloadProto("BingoMissionReward");
+    jsonCache.preloadProto("ItemSet");
+    jsonCache.preloadProto("Mission");
 
-    bingoMissionGroup = await jsonCache.getProto("BingoMissionGroup")
-        .then(bmg => {
-            bmg.sort((a, b) => b.bingoMissionCardId - a.bingoMissionCardId);
-            return Promise.all(bmg.map(async mg => {
-                mg.banner = banner.find(b => b.bannerId === mg.bannerId);
+    // LSD
+    jsonCache.preloadLsd("banner_text");
 
-                if (!mg.banner)
-                    return mg;
+    // Other Preloads
+    preloadUtils(true);
 
-                mg.banner.text1 = (await jsonCache.getLsd(`banner_text`))[mg.banner.text1Id] || "";
-                mg.banner.text2 = (await jsonCache.getLsd(`banner_text`))[mg.banner.text2Id] || "";
+    await jsonCache.runPreload();
+
+    jData.proto.bingoMissionGroup = jData.proto.bingoMissionGroup
+        .map(mg => {
+            mg.banner = jData.proto.banner.find(b => b.bannerId === mg.bannerId);
+
+            if(!mg.banner)
                 return mg;
-            }))
-        });
 
-    bingoMissionReward = await jsonCache.getProto("BingoMissionReward");
-    bingoMissionCard = await jsonCache.getProto("BingoMissionCard");
+            mg.banner.text1 = jData.lsd.bannerText[mg.banner.text1Id] || "";
+            mg.banner.text2 = jData.lsd.bannerText[mg.banner.text2Id] || "";
+
+            return mg;
+        })
+        .sort((a, b) => b.bingoMissionCardId - a.bingoMissionCardId);
 }
 
 function appendMission(td, mission) {
     //TODO: Afficher le texte des missions
 }
 
-async function appendReward(td, mission) {
+function appendReward(td, mission) {
     for (let i = 0; i < mission.itemSetIds.length; i++) {
-        let is = itemSet.find(is => is.itemSetId === mission.itemSetIds[i]);
+        let is = jData.proto.itemSet.find(is => is.itemSetId === mission.itemSetIds[i]);
         if (!is) continue;
 
         for(let j = 1; j <= 10; j++) {
@@ -47,29 +49,26 @@ async function appendReward(td, mission) {
                 continue;
 
             if(j > 1)
-                td.innerText += "\n";
+                td.innerHTML += "<br>";
 
-            td.innerText += `${await getItemName(is["item" + j])} (x${is["item" + j + "Quantity"]})\n`;
+            td.innerHTML += `${getItemName(is["item" + j])} (x${is["item" + j + "Quantity"]})\n`;
         }
     }
 }
 
-async function createBingoCard(bingoId) {
+function createBingoCard(bingoId) {
 
     bingoMission.innerHTML = "";
 
-    const missionGroup = bingoMissionGroup.find(bmg => bmg.bingoMissionGroupId.toString() === bingoId.toString());
+    const missionGroup = jData.proto.bingoMissionGroup.find(bmg => bmg.bingoMissionGroupId.toString() === bingoId.toString());
 
-    const missionCard = await jsonCache.getProto("BingoMissionCard").then(bmc => {
-        bmc = bmc.filter(bm => bm.bingoMissionCardId.toString() === missionGroup.bingoMissionCardId.toString())
-            .sort((a, b) => a.number - b.number);
-
-        return Promise.all(bmc.map(async bm => {
-            bm.mission = (await jsonCache.getProto("Mission"))
-                .find(m => m.missionId.toString() === bm.missionId.toString());
+    const missionCard = jData.proto.bingoMissionCard
+        .filter(bm => bm.bingoMissionCardId.toString() === missionGroup.bingoMissionCardId.toString())
+        .sort((a, b) => a.number - b.number)
+        .map(bm => {
+            bm.mission = jData.proto.mission.find(m => m.missionId.toString() === bm.missionId.toString());
             return bm;
-        }));
-    });
+        });
 
     // Taille d'une ligne/colonne de bingo
     const sqrSize = Math.sqrt(missionCard.length);
@@ -115,7 +114,7 @@ async function createBingoCard(bingoId) {
 
         for(let j = 0; j < sqrSize; j++) {
             let td = document.createElement("td");
-            await appendReward(td, missionCard[i * sqrSize + j].mission);
+            appendReward(td, missionCard[i * sqrSize + j].mission);
             tr.appendChild(td);
         }
 
@@ -128,22 +127,19 @@ async function createBingoCard(bingoId) {
 
 }
 
-async function createBingoRewards(bingoId) {
+function createBingoRewards(bingoId) {
 
     bingoReward.innerHTML = "";
 
-    const missionGroup = bingoMissionGroup.find(bmg => bmg.bingoMissionGroupId.toString() === bingoId.toString());
+    const missionGroup = jData.proto.bingoMissionGroup.find(bmg => bmg.bingoMissionGroupId.toString() === bingoId.toString());
 
-    const missionReward = await jsonCache.getProto("BingoMissionReward").then(bmr => {
-        bmr = bmr.filter(bm => bm.bingoMissionRewardId.toString() === missionGroup.bingoMissionRewardId.toString())
-            .sort((a, b) => a.nbLines - b.nbLines);
-
-        return Promise.all(bmr.map(async bm => {
-            bm.itemSet = (await jsonCache.getProto("ItemSet"))
-                .find(is => is.itemSetId.toString() === bm.itemSetId.toString());
+    const missionReward = jData.proto.bingoMissionReward
+        .filter(bmr => bmr.bingoMissionRewardId.toString() === missionGroup.bingoMissionRewardId.toString())
+        .sort((a, b) => a.nbLines - b.nbLines)
+        .map(bm => {
+            bm.itemSet = jData.proto.itemSet.find(is => is.itemSetId.toString() === bm.itemSetId.toString());
             return bm;
-        }));
-    });
+        });
 
     let table = document.createElement("table");
     table.classList.add("bipcode");
@@ -184,9 +180,9 @@ async function createBingoRewards(bingoId) {
                 continue;
 
             if(j > 1)
-                rewardsTd.innerText += "\n";
+                rewardsTd.innerHTML += "<br>";
 
-            rewardsTd.innerText += `${await getItemName(is["item" + j])} (x${is["item" + j + "Quantity"]})\n`;
+            rewardsTd.innerHTML += `${getItemName(is["item" + j])} (x${is["item" + j + "Quantity"]})\n`;
         }
 
         tr.appendChild(rewardsTd);
@@ -200,30 +196,30 @@ async function createBingoRewards(bingoId) {
 
 }
 
-async function setEventInfos(bingoId) {
+function setEventInfos(bingoId) {
 
-    await createBingoCard(bingoId);
-    await createBingoRewards(bingoId);
+    createBingoCard(bingoId);
+    createBingoRewards(bingoId);
 }
 
-async function getExchangeBipcodeTable() {
+function getExchangeBipcodeTable() {
     const bingoId = new URL(window.location).searchParams.get('bingoId');
     if(bingoId == null) return;
 
-    let exchange = itemExchange.filter(ie => ie.itemExchangeGroupId.toString() === bingoId.toString());
+    let exchange = jData.proto.itemExchange.filter(ie => ie.itemExchangeGroupId.toString() === bingoId.toString());
 
     let str = "[listh][item|nostyle][table]\n";
     str += "[tr][th|colspan=2]Objet[/th][th]Limite[/th][th]Échange contre[/th][/tr]\n";
 
     for(let i = 0; i < exchange.length; i++) {
-        let is = itemSet.find(is => is.itemSetId === exchange[i].itemSetId);
+        let is = jData.proto.itemSet.find(is => is.itemSetId === exchange[i].itemSetId);
         if(!is["item1"]) continue;
 
         str += "[tr]\n";
-        str += `\t[td][img]/pages/jeuxvideo/pokemon-masters/images/item-2/${await getNormalizedItemName(exchange[i].itemId)}.png[/img][/td]\n`;
-        str += `\t[td]${await getItemName(exchange[i].itemId)} x${exchange[i].quantity}[/td]\n`;
+        str += `\t[td][img]/pages/jeuxvideo/pokemon-masters/images/item-2/${getNormalizedItemName(exchange[i].itemId)}.png[/img][/td]\n`;
+        str += `\t[td]${getItemName(exchange[i].itemId)} x${exchange[i].quantity}[/td]\n`;
         str += `\t[td]${exchange[i].limit === -1 ? "-" : exchange[i].limit}[/td]\n`;
-        str += `\t[td]${await getItemName(is["item1"])} x${is["item1Quantity"]}[/td]\n`;
+        str += `\t[td]${getItemName(is["item1"])} x${is["item1Quantity"]}[/td]\n`;
         str += "[/tr]\n";
     }
 
@@ -232,19 +228,19 @@ async function getExchangeBipcodeTable() {
     return str;
 }
 
-async function populateSelect() {
-    for (let i = 0; i < bingoMissionGroup.length; i++) {
+function populateSelect() {
+    for (let i = 0; i < jData.proto.bingoMissionGroup.length; i++) {
 
-        if(bingoMissionGroup[i].banner == null) continue;
+        if(jData.proto.bingoMissionGroup[i].banner == null) continue;
 
-        let text1 = bingoMissionGroup[i].banner.text1;
-        let text2 = bingoMissionGroup[i].banner.text2;
+        let text1 = jData.proto.bingoMissionGroup[i].banner.text1;
+        let text2 = jData.proto.bingoMissionGroup[i].banner.text2;
 
         let text = `${text1} ${text2}`;
         if(text1 === "") text = text2;
         else if (text2 === "") text = text1;
 
-        let option = new Option(text.replace("\n", " "), bingoMissionGroup[i].bingoMissionGroupId);
+        let option = new Option(text.replace("\n", " "), jData.proto.bingoMissionGroup[i].bingoMissionGroupId);
         bingoList.appendChild(option);
     }
 
@@ -260,7 +256,7 @@ function selectChange() {
 
     window.history.pushState(null, '', url.toString());
 
-    setEventInfos(bingoList.value).then();
+    setEventInfos(bingoList.value);
 }
 
 function urlStateChange() {
@@ -271,7 +267,7 @@ function urlStateChange() {
         bingoList.value = urlBingoId;
     }
 
-    setEventInfos(bingoList.value).then();
+    setEventInfos(bingoList.value);
 }
 
 function setup() {
@@ -283,12 +279,11 @@ function setup() {
         document.getElementById("getBipcode").style.display = "block";
 
         document.getElementById("btnGetBipcode").addEventListener("click", (evt) => {
-            getExchangeBipcodeTable().then(bipCode => {
-                navigator.clipboard.writeText(bipCode);
-                evt.target.innerText = "Tableau copié dans le presse-papier";
+            let bipCode = getExchangeBipcodeTable()
+            navigator.clipboard.writeText(bipCode);
+            evt.target.innerText = "Tableau copié dans le presse-papier";
 
-                setTimeout(() => evt.target.innerText = "Copier le code du tableau", 5000);
-            });
+            setTimeout(() => evt.target.innerText = "Copier le code du tableau", 5000);
         });
     }
 

@@ -1,39 +1,35 @@
 let eventsList;
 let eventInfos;
 
-let banner;
-let itemSet;
-let progressEvent, progressEventRewardGroup;
-
-let eventName;
-
 async function getData() {
     await buildHeader();
 
-    banner = await jsonCache.getProto("Banner");
-    itemSet = await jsonCache.getProto("ItemSet");
-    progressEvent = (await jsonCache.getProto("ProgressEvent")).reverse();
-    progressEventRewardGroup = await jsonCache.getProto("ProgressEventRewardGroup");
+    // PROTO
+    jsonCache.preloadProto("Banner");
+    jsonCache.preloadProto("ItemSet");
+    jsonCache.preloadProto("ProgressEvent");
+    jsonCache.preloadProto("ProgressEventRewardGroup");
+    jsonCache.preloadProto("EventQuestGroup");
 
-    let eventQuestGroupBanners = (await jsonCache.getProto("EventQuestGroup"))
-        .filter(
-            entry => progressEvent
-                .map(pe => pe.questGroupId).includes(entry.questGroupId)
-        )
-        .map(entry => entry.bannerId);
+    // LSD
+    jsonCache.preloadLsd("event_name");
 
-    banner = banner.filter(b => eventQuestGroupBanners.includes(b.bannerId));
-    eventName = Object.fromEntries(
-        Object.entries(await jsonCache.getLsd("event_name"))
-            .filter(([k, _]) => progressEvent.map(pe => pe.eventName).includes(k)
+    // Other Preloads
+    preloadUtils(true);
+
+    await jsonCache.runPreload();
+
+    jData.lsd.eventName = Object.fromEntries(
+        Object.entries(jData.lsd.eventName)
+            .filter(([k, _]) => jData.proto.progressEvent.map(pe => pe.eventName).includes(k)
         )
     );
 }
 
-async function setEventInfos(eventId) {
+function setEventInfos(eventId) {
     eventInfos.innerHTML = "";
 
-    let rewardGroup = progressEventRewardGroup
+    let rewardGroup = jData.proto.progressEventRewardGroup
         .filter(pe => pe.progressEventId === eventId)
         .sort((pe1, pe2) => pe1.rewardStep - pe2.rewardStep);
 
@@ -64,7 +60,7 @@ async function setEventInfos(eventId) {
     let tbody = document.createElement("tbody");
 
     for(let i = 0; i < rewardGroup.length; i++) {
-        let is = itemSet.find(is => is.itemSetId === rewardGroup[i].itemSetId);
+        let is = jData.proto.itemSet.find(is => is.itemSetId === rewardGroup[i].itemSetId);
         if(!is["item1"]) continue;
 
         let tr = document.createElement("tr");
@@ -74,7 +70,7 @@ async function setEventInfos(eventId) {
         imageTd.appendChild(image);
 
         let nameTd = document.createElement("td");
-        nameTd.innerText = await getItemName(is["item1"]);
+        nameTd.innerText = getItemName(is["item1"]);
 
         let qtyTd = document.createElement("td");
         qtyTd.innerText = is["item1Quantity"];
@@ -92,11 +88,11 @@ async function setEventInfos(eventId) {
     eventInfos.appendChild(table);
 }
 
-async function getEventBipcodeTable() {
+function getEventBipcodeTable() {
     const eventId = new URL(window.location).searchParams.get('eventId');
     if(eventId == null) return;
 
-    let rewardGroup = progressEventRewardGroup
+    let rewardGroup = jData.proto.progressEventRewardGroup
         .filter(pe => pe.progressEventId === eventId)
         .sort((pe1, pe2) => pe1.rewardStep - pe2.rewardStep);
 
@@ -104,12 +100,12 @@ async function getEventBipcodeTable() {
     str += "[tr][th|colspan=2]Objet[/th][th]Quantité[/th][th]Points totaux requis[/th][/tr]\n";
 
     for(let i = 0; i < rewardGroup.length; i++) {
-        let is = itemSet.find(is => is.itemSetId === rewardGroup[i].itemSetId);
+        let is = jData.proto.itemSet.find(is => is.itemSetId === rewardGroup[i].itemSetId);
         if(!is["item1"]) continue;
 
         str += "[tr]\n";
-        str += `\t[td][img]/pages/jeuxvideo/pokemon-masters/images/item-2/${await getNormalizedItemName(is["item1"])}.png[/img][/td]\n`;
-        str += `\t[td]${await getItemName(is["item1"])}[/td]\n`;
+        str += `\t[td][img]/pages/jeuxvideo/pokemon-masters/images/item-2/${getNormalizedItemName(is["item1"])}.png[/img][/td]\n`;
+        str += `\t[td]${getItemName(is["item1"])}[/td]\n`;
         str += `\t[td]${is["item1Quantity"]}[/td]\n`;
         str += `\t[td]${rewardGroup[i].repeatedStep === "true" ? `Tous les ${rewardGroup[i].step} pts[br](au-delà de ${rewardGroup[i-1].step} pts)` : rewardGroup[i].step}[/td]\n`;
         str += "[/tr]\n";
@@ -121,9 +117,9 @@ async function getEventBipcodeTable() {
 }
 
 function populateSelect() {
-    for(let i = 0; i < progressEvent.length; i++) {
+    for(let i = 0; i < jData.proto.progressEvent.length; i++) {
 
-        let option = new Option(eventName[progressEvent[i].eventName], progressEvent[i].progressEventId)
+        let option = new Option(jData.lsd.eventName[jData.proto.progressEvent[i].eventName], jData.proto.progressEvent[i].progressEventId)
         eventsList.appendChild(option);
     }
 
@@ -150,7 +146,7 @@ function urlStateChange() {
         eventsList.value = urlEventId;
     }
 
-    setEventInfos(eventsList.value).then();
+    setEventInfos(eventsList.value);
 }
 
 function setup() {
@@ -161,12 +157,11 @@ function setup() {
         document.getElementById("getBipcode").style.display = "block";
 
         document.getElementById("btnGetBipcode").addEventListener("click", (evt) => {
-            getEventBipcodeTable().then(bipCode => {
-                navigator.clipboard.writeText(bipCode);
-                evt.target.innerText = "Tableau copié dans le presse-papier";
+            let bipCode = getEventBipcodeTable();
+            navigator.clipboard.writeText(bipCode);
+            evt.target.innerText = "Tableau copié dans le presse-papier";
 
-                setTimeout(() => evt.target.innerText = "Copier le code du tableau", 5000);
-            });
+            setTimeout(() => evt.target.innerText = "Copier le code du tableau", 5000);
         });
     }
 
