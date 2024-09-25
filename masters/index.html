@@ -21,15 +21,15 @@
       buildHeader();
       let firstLine = document.getElementById("firstLine");
       let secondLine = document.getElementById("secondLine");
-      let indexLocale;
 
       async function getIndexLocale() {
-        indexLocale = await jsonCache.getLocale("index");
+        jsonCache.preloadLocale("index");
+        await jsonCache.runPreload();
       }
 
       getIndexLocale().then(() => {
-        firstLine.innerText = indexLocale.firstLine;
-        secondLine.innerText = indexLocale.secondLine;
+        firstLine.innerText = jData.locale.index.firstLine;
+        secondLine.innerText = jData.locale.index.secondLine;
       });
     </script>
   </body>

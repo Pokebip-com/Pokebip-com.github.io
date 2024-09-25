@@ -45,6 +45,70 @@ const typeToFieldTextTag = {
     "18" : "121",
 }
 
+function preloadUtils(preloadItems = false) {
+
+    // Proto
+    jsonCache.preloadProto(`AbilityPanel`);
+    jsonCache.preloadProto(`ActorDress`);
+    jsonCache.preloadProto(`Monster`);
+    jsonCache.preloadProto(`MonsterBase`);
+    jsonCache.preloadProto(`Move`);
+    jsonCache.preloadProto(`ReplaceActorKeyword`);
+    jsonCache.preloadProto(`Trainer`);
+    jsonCache.preloadProto(`TrainerBase`);
+    jsonCache.preloadProto(`TrainerDress`);
+    jsonCache.preloadProto(`TrainerExRole`);
+    jsonCache.preloadProto(`TextTagValue`);
+
+    // Standard LSD
+    jsonCache.preloadLsd(`abnormal_state`);
+    jsonCache.preloadLsd(`monster_form`);
+    jsonCache.preloadLsd(`monster_name`);
+    jsonCache.preloadLsd(`motif_type_name`);
+    jsonCache.preloadLsd(`trainer_name`);
+    jsonCache.preloadLsd(`trainer_verbose_name`);
+
+    if(preloadItems) {
+        // Item Proto
+        jsonCache.preloadProto(`AbilityItem`);
+        jsonCache.preloadProto(`Item`);
+        jsonCache.preloadProto(`MoveLevelUpItem`);
+        jsonCache.preloadProto(`StoryQuest`);
+        jsonCache.preloadProto(`TrainerBuildupItem`);
+
+        // Item LSD
+        jsonCache.preloadLsd(`ability_item_name`);
+        jsonCache.preloadLsd(`bardge_item_name`);
+        jsonCache.preloadLsd(`breakthrough_item_name`);
+        jsonCache.preloadLsd(`deck_item_lvup_item_name`);
+        jsonCache.preloadLsd(`deck_item_name`);
+        jsonCache.preloadLsd(`expedition_boost_item_name`);
+        jsonCache.preloadLsd(`exrole_release_item_name`);
+        jsonCache.preloadLsd(`event_item_name`);
+        jsonCache.preloadLsd(`hero_customize_parts_name`);
+        jsonCache.preloadLsd(`jukebox_music_key_item_name`);
+        jsonCache.preloadLsd(`move_levelup_item_name`);
+        jsonCache.preloadLsd(`other_item_name`);
+        jsonCache.preloadLsd(`packed_item_name`);
+        jsonCache.preloadLsd(`potential_item_name`);
+        jsonCache.preloadLsd(`salon_exchange_item_name`);
+        jsonCache.preloadLsd(`salon_friendship_level_item_name`);
+        jsonCache.preloadLsd(`salon_goods_item_name`);
+        jsonCache.preloadLsd(`salon_help_item_name`);
+        jsonCache.preloadLsd(`salon_present_item_name`);
+        jsonCache.preloadLsd(`scout_server_ticket_item_name`);
+        jsonCache.preloadLsd(`scout_ticket_item_name`);
+        jsonCache.preloadLsd(`skill_deck_item_skill_feather_item_name`);
+        jsonCache.preloadLsd(`skill_deck_item_unchanged_pin_item_name`);
+        jsonCache.preloadLsd(`story_quest_name`);
+        jsonCache.preloadLsd(`trainer_buildup_item_name`);
+        jsonCache.preloadLsd(`trainer_rarity_up_item_name`);
+        jsonCache.preloadLsd(`training_item_name`);
+        jsonCache.preloadLsd(`treat_item_name`);
+        jsonCache.preloadLsd(`villa_item_name`);
+    }
+}
+
 function getAbilityType(ability) {
     switch(ability.type) {
         case 1:
@@ -67,7 +131,7 @@ function getAbilityType(ability) {
         case 9:
         case 10:
             //move power/accuracy boost
-            if(move.find(m => m.moveId === ability.moveId).group === "Sync") {
+            if(jData.proto.move.find(m => m.moveId === ability.moveId).group === "Sync") {
                 return abilityType[5];
             }
 
@@ -75,75 +139,69 @@ function getAbilityType(ability) {
     }
 }
 
-async function getPairPrettyPrint(trainerId) {
-    return `${await getStarsRarityString(trainerId)} ${await getPairName(trainerId)}`;
+function getPairPrettyPrint(trainerId) {
+    return `${getStarsRarityString(trainerId)} ${getPairName(trainerId)}`;
 }
 
-async function getPairName(trainerId) {
-    return `${await getTrainerName(trainerId)} & ${await getMonsterNameByTrainerId(trainerId)}`;
+function getPairName(trainerId) {
+    return `${getTrainerName(trainerId)} & ${getMonsterNameByTrainerId(trainerId)}`;
 }
 
-async function getStarsRarityString(trainerId) {
-    return `<span style="color: ${starsHex[await getTrainerRarity(trainerId)-1]}; -webkit-text-stroke: thin black;"><b>${"★".repeat(await getTrainerRarity(trainerId))}</b></span>`;
+function getStarsRarityString(trainerId) {
+    return `<span style="color: ${starsHex[getTrainerRarity(trainerId)-1]}; -webkit-text-stroke: thin black;"><b>${"★".repeat(getTrainerRarity(trainerId))}</b></span>`;
 }
 
-async function getPairPrettyPrintWithUrl(trainerId) {
-    return `<a href="./duo.html?pair=${trainerId}">${await getPairPrettyPrint(trainerId)}</a>`;
+function getPairPrettyPrintWithUrl(trainerId) {
+    return `<a href="./duo.html?pair=${trainerId}">${getPairPrettyPrint(trainerId)}</a>`;
 }
 
-async function getTrainerName(id) {
-    let trainerVerboseNames = await jsonCache.getLsd(`trainer_verbose_name`);
-    if (trainerVerboseNames[id])
-        return trainerVerboseNames[id].replace("\n", " ");
+function getTrainerName(id) {
+    if (jData.lsd.trainerVerboseName[id])
+        return jData.lsd.trainerVerboseName[id].replace("\n", " ");
 
-    let trainerNames = await jsonCache.getLsd(`trainer_name`);
-    let tr = (await jsonCache.getProto(`Trainer`))
-            .find(t => t.trainerId === id) || {};
-    let tb = (await jsonCache.getProto(`TrainerBase`))
-            .find(tba => tba.id === tr.trainerBaseId?.toString()) || {};
+    let tr = jData.proto.trainer.find(t => t.trainerId === id) || {};
+    let tb = jData.proto.trainerBase.find(tba => tba.id === tr.trainerBaseId?.toString()) || {};
 
-    return (trainerNames[tb.altTrainerNameId] || trainerNames[tb.trainerNameId] || commonLocales.base_trainer_name).replace("\n", " ");
+    return (jData.lsd.trainerName[tb.altTrainerNameId] || jData.lsd.trainerName[tb.trainerNameId] || jData.locale.common.base_trainer_name).replace("\n", " ");
 }
 
-async function getMonsterNameByTrainerId(id) {
-    let tr = (await jsonCache.getProto(`Trainer`)).find(t => t.trainerId === id) || {};
-    let mon = (await jsonCache.getProto(`Monster`)).find(m => m.monsterId.toString() === tr.monsterId?.toString()) || {};
-    let mb = (await jsonCache.getProto(`MonsterBase`)).find(mb => mb.monsterBaseId === mon.monsterBaseId) || {};
-    return (await jsonCache.getLsd(`monster_name`))[mb.monsterNameId] || "";
+function getMonsterNameByTrainerId(id) {
+    let tr = jData.proto.trainer.find(t => t.trainerId === id) || {};
+    let mon = jData.proto.monster.find(m => m.monsterId.toString() === tr.monsterId?.toString()) || {};
+    let mb = jData.proto.monsterBase.find(mb => mb.monsterBaseId === mon.monsterBaseId) || {};
+    return jData.lsd.monsterName[mb.monsterNameId] || "";
 }
 
-async function getMonsterNameByMonsterId(id) {
-    let mon = (await jsonCache.getProto(`Monster`)).find(m => m.monsterId.toString() === id.toString()) || {};
-    return await getNameByMonsterBaseId(mon.monsterBaseId);
+function getMonsterNameByMonsterId(id) {
+    let mon = jData.proto.monster.find(m => m.monsterId.toString() === id.toString()) || {};
+    return getNameByMonsterBaseId(mon.monsterBaseId);
 }
 
-async function getNameByMonsterBaseId(id, formId = 0) {
-    let mb = (await jsonCache.getProto(`MonsterBase`)).find(mb => mb.monsterBaseId === id) || {};
-    let name = (await jsonCache.getLsd(`monster_name`))[mb.monsterNameId] || "";
+function getNameByMonsterBaseId(id, formId = 0) {
+    let mb = jData.proto.monsterBase.find(mb => mb.monsterBaseId === id) || {};
+    let name = jData.lsd.monsterName[mb.monsterNameId] || "";
 
-    let monsterForms = await jsonCache.getLsd(`monster_form`);
-
-    if(formId > 0 && monsterForms[formId]) {
-        name += ` ${monsterForms[formId]}`;
+    if(formId > 0 && jData.lsd.monsterForm[formId]) {
+        name += ` ${jData.lsd.monsterForm[formId]}`;
     }
 
-    else if(mb.formId && mb.formId > 0 && monsterForms[mb.formId]) {
-        name += ` ${monsterForms[mb.formId]}`;
+    else if(mb.formId && mb.formId > 0 && jData.lsd.monsterForm[mb.formId]) {
+        name += ` ${jData.lsd.monsterForm[mb.formId]}`;
     }
     return name;
 
 }
 
-async function getTrainerActorId(trainerId) {
-    let trainerBaseId = (await jsonCache.getProto("Trainer")).find(t => t.trainerId === trainerId).trainerBaseId;
-    let actorId = (await jsonCache.getProto("TrainerBase")).find(tb => tb.id === trainerBaseId.toString()).actorId;
+function getTrainerActorId(trainerId) {
+    let trainerBaseId = jData.proto.trainer.find(t => t.trainerId === trainerId).trainerBaseId;
+    let actorId = jData.proto.trainerBase.find(tb => tb.id === trainerBaseId.toString()).actorId;
 
 
     if(actorId) {
-        let rak = (await jsonCache.getProto("ReplaceActorKeyword")).find(rak => rak.replacedActorId === actorId);
+        let rak = jData.proto.replaceActorKeyword.find(rak => rak.replacedActorId === actorId);
 
         if(rak) {
-            let replacingActorTrainer = (await jsonCache.getProto("TrainerBase")).find(tb => tb.actorId ===  rak.replacingActorId);
+            let replacingActorTrainer = jData.proto.trainerBase.find(tb => tb.actorId ===  rak.replacingActorId);
 
             if(replacingActorTrainer && (!replacingActorTrainer.isGeneric || rak.useGenericIfAvailable))
                 actorId = rak.replacingActorId;
@@ -153,47 +211,43 @@ async function getTrainerActorId(trainerId) {
     return actorId;
 }
 
-async function getActorDressFromTrainerId(trainerId) {
-    let val = (await jsonCache.getProto("TrainerDress")).find(td => td.trainerId == trainerId);
+function getActorDressFromTrainerId(trainerId) {
+    let val = jData.proto.trainerDress.find(td => td.trainerId == trainerId);
 
     if(!val)
         return null;
 
-    return (await jsonCache.getProto("ActorDress")).find(ad => ad.id == val.actorDressId);
+    return jData.proto.actorDress.find(ad => ad.id == val.actorDressId);
 }
 
-async function getFormIdFromActorId(actorId) {
-    return (await jsonCache.getProto("MonsterBase")).find(mb => mb.actorId === actorId).formId || -1;
+function getMonsterBaseIdFromMonsterId(monsterId) {
+    return jData.proto.monster.find(m => m.monsterId === monsterId).monsterBaseId;
 }
 
-async function getMonsterBaseIdFromMonsterId(monsterId) {
-    return (await jsonCache.getProto("Monster")).find(m => m.monsterId === monsterId).monsterBaseId;
+function getMonsterBaseIdFromActorId(actorId) {
+    return jData.proto.monsterBase.find(mb => mb.actorId === actorId).monsterBaseId || -1;
 }
 
-async function getMonsterBaseIdFromActorId(actorId) {
-    return (await jsonCache.getProto("MonsterBase")).find(mb => mb.actorId === actorId).monsterBaseId || -1;
+function getPokemonNumberFromMonsterBaseId(monsterBaseId) {
+    return jData.proto.monsterBase.find(mb => mb.monsterBaseId === monsterBaseId).actorNumber;
 }
 
-async function getPokemonNumberFromMonsterBaseId(monsterBaseId) {
-    return (await jsonCache.getProto("MonsterBase")).find(mb => mb.monsterBaseId === monsterBaseId).actorNumber;
+function getMonsterActorIdFromBaseId(baseId) {
+    return jData.proto.monsterBase.find(mb => mb.monsterBaseId === baseId).actorId;
 }
 
-async function getMonsterActorIdFromBaseId(baseId) {
-    return (await jsonCache.getProto("MonsterBase")).find(mb => mb.monsterBaseId === baseId).actorId;
+function getMonsterById(monsterId) {
+    return jData.proto.monster.find(m => m.monsterId === monsterId);
 }
 
-async function getMonsterById(monsterId) {
-    return (await jsonCache.getProto("Monster")).find(m => m.monsterId === monsterId);
+function getRoleByTrainerId(id, standard = false) {
+    const role = jData.proto.trainer.find(t => t.trainerId === id).role;
+
+    return standard ? jData.locale.common.role_name_standard[role] : jData.locale.common.role_names[role];
 }
 
-async function getRoleByTrainerId(id, standard = false) {
-    const role = (await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).role;
-
-    return standard ? commonLocales.role_name_standard[role] : commonLocales.role_names[role];
-}
-
-async function getRoleUrlByTrainerId(id, specification = true) {
-    const role = (await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).role;
+function getRoleUrlByTrainerId(id, specification = true) {
+    const role = jData.proto.trainer.find(t => t.trainerId === id).role;
 
     switch(role) {
         case 0:
@@ -205,12 +259,12 @@ async function getRoleUrlByTrainerId(id, specification = true) {
         case 1:
             return "attaquant-special";
         default:
-            return removeAccents(commonLocales.role_names[role].toLowerCase());
+            return removeAccents(jData.locale.common.role_names[role].toLowerCase());
     }
 }
 
-async function getExRoleUrlByTrainerId(id, specification = true) {
-    const role = (await jsonCache.getProto("TrainerExRole")).find(t => t.trainerId === id).role;
+function getExRoleUrlByTrainerId(id, specification = true) {
+    const role = jData.proto.trainerExRole.find(t => t.trainerId === id).role;
 
     switch(role) {
         case 0:
@@ -222,76 +276,78 @@ async function getExRoleUrlByTrainerId(id, specification = true) {
         case 1:
             return "attaquant-special";
         default:
-            return removeAccents(commonLocales.role_names[role].toLowerCase());
+            return removeAccents(jData.locale.common.role_names[role].toLowerCase());
     }
 }
 
-async function getTrainerTypeName(id) {
-    return (await jsonCache.getLsd("motif_type_name"))[(await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).type];
+function getTrainerTypeName(id) {
+    return jData.lsd.motifTypeName[jData.proto.trainer.find(t => t.trainerId === id).type];
 }
 
-async function getTrainerWeaknessName(id) {
-    return (await jsonCache.getLsd("motif_type_name"))[(await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).weakness];
+function getTrainerWeaknessName(id) {
+    return jData.lsd.motifTypeName[jData.proto.trainer.find(t => t.trainerId === id).weakness];
 }
 
-async function getTrainerRarity(id) {
-    return (await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).rarity;
+function getTrainerRarity(id) {
+    return jData.proto.trainer.find(t => t.trainerId === id).rarity;
 }
 
-async function hasExUnlocked(id) {
-    return (await jsonCache.getProto("Trainer")).find(t => t.trainerId === id).exScheduleId !== "NEVER";
+function hasExUnlocked(id) {
+    return jData.proto.trainer.find(t => t.trainerId === id).exScheduleId !== "NEVER";
 }
 
-async function hasExRoleUnlocked(id) {
-    return (await jsonCache.getProto("TrainerExRole")).find(t => t.trainerId === id) !== undefined;
+function hasExRoleUnlocked(id) {
+    return jData.proto.trainerExRole.find(t => t.trainerId === id) !== undefined;
 }
 
-async function getFieldEffect(type) {
-    return (await jsonCache.getLsd("abnormal_state"))[(await jsonCache.getProto("TextTagValue")).find(t => t.textTagValueId === typeToFieldTextTag[type]).value];
+function getFieldEffect(type) {
+    return jData.lsd.abnormalState[jData.proto.textTagValue.find(t => t.textTagValueId === typeToFieldTextTag[type]).value];
 }
 
-async function getExSyncEffect(roleId, type) {
+function getExSyncEffect(roleId, type) {
     switch(roleId) {
         case 0:
         case 1:
         case 2:
         case 3:
         case 4:
-            return commonLocales.ex_sync_effect[roleId];
+            return jData.locale.common.ex_sync_effect[roleId];
 
         case 5:
-            return commonLocales.ex_sync_effect[roleId].replace("[Name:FieldEffectType ]", await getFieldEffect(type));
+            return jData.locale.common.ex_sync_effect[roleId].replace("[Name:FieldEffectType ]", getFieldEffect(type));
 
         case 6:
-            return commonLocales.ex_sync_effect[roleId].replace("[Name:Type ]", (await jsonCache.getLsd("motif_type_name"))[type]);
+            return jData.locale.common.ex_sync_effect[roleId].replace("[Name:Type ]", jData.lsd.motifTypeName[type]);
     }
 }
 
-async function getExRoleText(id) {
-    const ter = (await jsonCache.getProto("TrainerExRole")).find(ter => ter.trainerId === id);
+function getExRoleText(id) {
+    const ter = jData.proto.trainerExRole.find(ter => ter.trainerId === id);
 
     if(ter)
-        return commonLocales.role_names[ter.role]
+        return jData.locale.common.role_names[ter.role]
 
     return "-";
 }
 
-async function getExRoleId(id) {
-    const ter = (await jsonCache.getProto("TrainerExRole")).find(ter => ter.trainerId === id);
+function getExRoleId(id) {
+    const ter = jData.proto.trainerExRole.find(ter => ter.trainerId === id);
 
     return ter ? ter.role : -1;
 }
 
 function getTrainerNumber(id) {
-    return Math.trunc(trainer[id][0].number/100);
+    const t = jData.proto.trainer.find(t => t.trainerId === id);
+
+    return t ? Math.trunc(t.number / 100) : -1;
 }
 
-async function getAbilityPanelQty(id) {
-    return (await jsonCache.getProto("AbilityPanel")).filter(ap => ap.trainerId === id && ap.version === 0).length || 0;
+function getAbilityPanelQty(id) {
+    return jData.proto.abilityPanel.filter(ap => ap.trainerId === id && ap.version === 0).length || 0;
 }
 
 function removeAccents(string) {
-    return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[)('.]/g, "");
 }
 
 function getDayMonthDate(date) {
@@ -328,7 +384,7 @@ class Version {
 
 function orderByVersion(data) {
 
-    return data.versions.sort((a, b) => {
+    return data.sort((a, b) => {
         const verA = new Version(a.version);
         const verB = new Version(b.version);
 
@@ -343,26 +399,25 @@ function orderByVersion(data) {
     });
 }
 
-async function getNormalizedItemName(itemId) {
-    return await getItemName(itemId)
-        .then(itemName => removeAccents(itemName).toLowerCase().replaceAll(" ", "-"));
+function getNormalizedItemName(itemId) {
+    return removeAccents(getItemName(itemId)).toLowerCase().replaceAll(" ", "-");
 }
 
-async function getItemName(itemId) {
+function getItemName(itemId, log = false) {
     let lsdName = "";
     let fieldName = itemId;
     let prefix = "";
-    let subCategory = (await jsonCache.getProto("Item")).find(i => i.itemId === itemId).subCategory;
-    subCategory = subCategory ? subCategory : -1;
+    let subCategory = jData.proto.item.find(i => i.itemId === itemId);
+    subCategory = subCategory && subCategory.subCategory ? subCategory.subCategory : -1;
     switch(subCategory) {
         // Trainer.pb
         case 1:
-            return await getPairName(itemId);
+            return getPairName(itemId);
 
         // StoryQuest.pb
         // story_quest_name_xx.lsd => quest_title_{id}
         case 3:
-            fieldName = (await jsonCache.getProto("StoryQuest")).find(sq => sq.storyQuestId === itemId).questNameId || "";
+            fieldName = jData.proto.storyQuest.find(sq => sq.storyQuestId === itemId).questNameId || "";
             lsdName = `story_quest_name`;
             break;
 
@@ -415,13 +470,13 @@ async function getItemName(itemId) {
 
         // TrainerBuildupItem.pb
         case 55:
-            const tbi = (await jsonCache.getProto("TrainerBuildupItem")).find(tbi => tbi.itemId === itemId);
-            return (await jsonCache.getLsd("trainer_buildup_item_name"))[tbi.trainerBuildupConfigId] + (tbi.trainerId.toString() === "-1" ? "" : ` (${await getPairName(tbi.trainerId)})`);
+            const tbi = jData.proto.trainerBuildupItem.find(tbi => tbi.itemId === itemId);
+            return jData.lsd.trainerBuildupItemName[tbi.trainerBuildupConfigId] + (tbi.trainerId.toString() === "-1" ? "" : ` (${getPairName(tbi.trainerId)})`);
 
         // AbilityItem.pb
         case 56:
-            const trainerId = (await jsonCache.getProto("AbilityItem")).find(ai => ai.itemId === itemId)["trainerId"] || -1;
-            return (await jsonCache.getLsd(`ability_item_name`))[trainerId === "0" ? "1" : "2"] + (trainerId === "0" ? "" : " (" + await getPairName(trainerId) + ")");
+            const trainerId = jData.proto.abilityItem.find(ai => ai.itemId === itemId)["trainerId"] || -1;
+            return jData.lsd.abilityItemName[trainerId === "0" ? "1" : "2"] + (trainerId === "0" ? "" : " (" + getPairName(trainerId) + ")");
 
         // MoveLevelUpItem.pb
         case 57:
@@ -429,15 +484,15 @@ async function getItemName(itemId) {
             if(valId <= 12)
                 valId++;
 
-            const moveLevelUpItem = (await jsonCache.getProto("MoveLevelUpItem")).find(mlui => mlui.itemId === itemId);
+            const moveLevelUpItem = jData.proto.moveLevelUpItem.find(mlui => mlui.itemId === itemId);
             switch (moveLevelUpItem.paramType) {
                 case 1:
                 case 2:
                 case 3:
-                    return (await jsonCache.getLsd("move_levelup_item_name"))[valId];
+                    return jData.lsd.moveLevelupItemName[valId];
 
                 case 4:
-                    return (await jsonCache.getLsd("move_levelup_item_name"))["60"] + ` (${await getPairName(moveLevelUpItem.param)})`;
+                    return jData.lsd.moveLevelupItemName["60"] + ` (${getPairName(moveLevelUpItem.param)})`;
             }
             break;
 
@@ -545,7 +600,8 @@ async function getItemName(itemId) {
         // RewardConfig.Pb
         // => item_set_id_at_duplication.{itemId} => ItemSetId => Item
         case 121:
-
+            fieldName = itemId.slice(4);
+            lsdName = `hero_customize_parts_name`
             break;
 
         // salon_help_item_name_xx.lsd
@@ -619,17 +675,14 @@ async function getItemName(itemId) {
             return "Unknown Item";
     }
 
-    if(lsdName === "")
+    if(lsdName === "") {
+        console.log(`Item category ${subCategory} not yet implemented...`);
+        console.log(`Item ID: ${itemId}`);
         return "Item category not yet implemented...";
+    }
 
-    return (prefix === "" ? "" : `${prefix} `) + (await jsonCache.getLsd(lsdName))[fieldName] || "Unknown Item";
+    return (prefix === "" ? "" : `${prefix} `) + jData.lsd[jsonCache.standardizeName(lsdName)][fieldName] || "Unknown Item";
 
-}
-
-function outlineBrackets(descr) {
-    // Met les balises restantes en gras souligné sur l'aperçu
-    return descr.replaceAll(/\[/gi, "<span style='color:yellowgreen;'><strong><u>[")
-        .replaceAll(/]/gi, "]</u></strong></span>");
 }
 
 function agenderDescription(descr) {

@@ -4,6 +4,12 @@ const pageUrl = new URL(window.location);
 let urlLang = pageUrl.searchParams.get("lang");
 
 let locale;
+let jData = {
+    "proto" : {},
+    "lsd" : {},
+    "locale" : {},
+    "custom" : {}
+};
 
 switch(urlLang) {
     case "fr":
@@ -55,50 +61,71 @@ class JsonCache {
     baseDir = ".";
 
     constructor() {
-        this.cache = new Map();
-        this.inProgressRequests = new Map();
+        this.preloadPromises = [];
+        this.preloadScopes = [];
     }
 
-    async getProto(protoName, hasEntries = true) {
-        return this.fetchData(`${this.baseDir}/data/proto/${protoName}.json`, hasEntries);
-    }
-
-    async getLsd(lsdName, hasEntries = false) {
-        return this.fetchData(`${this.baseDir}/data/lsd/${lsdName}_${lng}.json`, hasEntries);
-    }
-
-    async getLocale(localeName, hasEntries = false) {
-        return this.fetchData(`${this.baseDir}/data/locales/${lng}/${localeName}.json`, hasEntries);
-    }
-
-    async getCustom(customName, hasEntries = false) {
-        return this.fetchData(`${this.baseDir}/data/custom/${customName}.json`, hasEntries);
-    }
-
-    async fetchData(url, hasEntries = false) {
-        if (this.cache.has(url)) {
-            return this.cache.get(url);
-        }
-
-        if (this.inProgressRequests.has(url)) {
-            return this.inProgressRequests.get(url);
-        }
-
+    async fetchData(url, hasEntries = false, dataType = null, variableName = null) {
         const requestPromise = fetch(url)
             .then(async (response) => {
                 const data = hasEntries ? (await response.json()).entries : await response.json();
-                this.cache.set(url, data);
-                this.inProgressRequests.delete(url);
+                if(dataType && variableName) {
+                    jData[dataType][variableName] = data;
+                }
                 return data;
             })
             .catch((error) => {
-                this.inProgressRequests.delete(url);
                 throw error;
             });
 
-        this.inProgressRequests.set(url, requestPromise);
-
         return requestPromise;
+    }
+
+    preloadPromise(url, dataType, variableName, hasEntries = true) {
+        if(this.preloadScopes.includes(`${dataType}.${variableName}`) || Object.keys(jData[dataType]).includes(variableName)) {
+            return;
+        }
+
+        const promise = this.fetchData(url, hasEntries, dataType, variableName);
+        this.preloadScopes.push(`${dataType}.${variableName}`);
+        this.preloadPromises.push(promise);
+    }
+
+    preloadProto(protoName, variableName = null, hasEntries = true) {
+        variableName = variableName ? variableName : this.standardizeName(protoName);
+        this.preloadPromise(`${this.baseDir}/data/proto/${protoName}.json`, "proto", variableName, hasEntries);
+    }
+
+    preloadLsd(lsdName, variableName = null, hasEntries = false) {
+        variableName = variableName ? variableName : this.standardizeName(lsdName);
+        this.preloadPromise(`${this.baseDir}/data/lsd/${lsdName}_${lng}.json`, "lsd", variableName, hasEntries);
+    }
+
+    preloadLocale(localeName, variableName = null, hasEntries = false) {
+        variableName = variableName ? variableName : this.standardizeName(localeName);
+        this.preloadPromise(`${this.baseDir}/data/locales/${lng}/${localeName}.json`, "locale", variableName, hasEntries);
+    }
+
+    preloadCustom(customName, variableName = null, hasEntries = true) {
+        variableName = variableName ? variableName : this.standardizeName(customName);
+        this.preloadPromise(`${this.baseDir}/data/custom/${customName}.json`, "custom", variableName, hasEntries);
+    }
+
+    standardizeName(name) {
+        name = name.charAt(0).toLowerCase() + name.substring(1);
+        let splitName = name.split(/[-_]+/);
+        for(let i = 1; i < splitName.length; i++) {
+            splitName[i] = splitName[i].charAt(0).toUpperCase() + splitName[i].substring(1);
+            splitName[i] = splitName[i].replace(/_([a-z])/g, (match) => match.toUpperCase());
+        }
+
+        return splitName.join("");
+    }
+
+    async runPreload() {
+        await Promise.all(this.preloadPromises);
+        this.preloadScopes = [];
+        this.preloadPromises = [];
     }
 }
 
@@ -106,7 +133,6 @@ const jsonCache = new JsonCache();
 
 let lng = locale === "zh-TW" ? "zh-TW" : locale.substring(0, 2);
 if(!supportedLanguages.includes(lng)) lng = "en";
-let commonLocales;
 
 let body = document.getElementsByTagName("body")[0];
 const currentUrl = window.location.pathname.split("/").pop();
@@ -195,7 +221,8 @@ function getSubnav(data) {
 }
 
 async function getLocale() {
-    commonLocales = await jsonCache.getLocale("common");
+    jsonCache.preloadLocale("common");
+    await jsonCache.runPreload();
 }
 
 async function buildHeader(baseDir = ".") {
@@ -203,20 +230,20 @@ async function buildHeader(baseDir = ".") {
     await getLocale();
 
     let headerData = [
-        { "title": commonLocales.menu_schedule, "url": `${baseDir}/programme.html`, "drop": [] },
-        { "title" : commonLocales.menu_sync_pairs, "url": "", "drop": [
-                { "title" : commonLocales.submenu_pair_page, "url" : `${baseDir}/duo.html` },
-                { "title": commonLocales.submenu_pair_ex_role, "url": `${baseDir}/ex-role.html` },
-                { "title" : commonLocales.submenu_skill_gear, "url" : `${baseDir}/skill-gears.html` },
-                { "title" : commonLocales.submenu_lucky_skills, "url" : `${baseDir}/lucky-skills.html` },
+        { "title": jData.locale.common.menu_schedule, "url": `${baseDir}/programme.html`, "drop": [] },
+        { "title" : jData.locale.common.menu_sync_pairs, "url": "", "drop": [
+                { "title" : jData.locale.common.submenu_pair_page, "url" : `${baseDir}/duo.html` },
+                { "title": jData.locale.common.submenu_pair_ex_role, "url": `${baseDir}/ex-role.html` },
+                { "title" : jData.locale.common.submenu_skill_gear, "url" : `${baseDir}/skill-gears.html` },
+                { "title" : jData.locale.common.submenu_lucky_skills, "url" : `${baseDir}/lucky-skills.html` },
             ]
         },
-        { "title": commonLocales.menu_battle_rally, "url": "", "drop": [
-                { "title": commonLocales.submenu_rally_role_set, "url": `${baseDir}/rally/role-set.html` }
+        { "title": jData.locale.common.menu_battle_rally, "url": "", "drop": [
+                { "title": jData.locale.common.submenu_rally_role_set, "url": `${baseDir}/rally/role-set.html` }
             ]
         },
         {
-            "title": commonLocales.menu_language, "url": "", "drop": []
+            "title": jData.locale.common.menu_language, "url": "", "drop": []
         }
     ];
 
@@ -224,13 +251,16 @@ async function buildHeader(baseDir = ".") {
         let params = pageParams;
         params.delete("lang");
         params.append("lang", language);
-        headerData[3]["drop"].push({ "title": commonLocales[`submenu_language`][`${language}`], "url": pageUrl.toString().split("?")[0] + "?" + params.toString(), "dataLang" : `${language}` });
+        headerData[3]["drop"].push({ "title": jData.locale.common[`submenu_language`][`${language}`], "url": pageUrl.toString().split("?")[0] + "?" + params.toString(), "dataLang" : `${language}` });
     });
 
     let adminHeaderData = [
-        { "title" : commonLocales.adminmenu_title, "url": "", "drop": [
-                { "title" : commonLocales.adminsubmenu_discord, "url" : `${baseDir}/discord.html` },
-                //{ "title" : commonLocales.adminsubmenu_eventRewards, "url" : `${baseDir}/progress-events.html` },
+        { "title" : jData.locale.common.adminmenu_title, "url": "", "drop": [
+                { "title" : jData.locale.common.adminsubmenu_discord, "url" : `${baseDir}/discord.html` },
+                { "title" : jData.locale.common.adminsubmenu_eventRewards, "url" : `${baseDir}/progress-events.html` },
+                { "title" : jData.locale.common.adminsubmenu_itemExchange, "url" : `${baseDir}/item-exchange.html` },
+                { "title" : jData.locale.common.adminsubmenu_bingo, "url" : `${baseDir}/bingo.html` },
+                { "title" : jData.locale.common.adminsubmenu_lodge, "url" : `${baseDir}/lodge.html` },
             ]
         }
     ];

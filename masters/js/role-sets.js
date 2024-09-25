@@ -2,14 +2,16 @@ let roleSetsDiv;
 let toolboxDiv;
 let mainUl;
 
-let brRoleBonusSet;
-let roleSetLocale;
-
 async function getData() {
     await buildHeader("..");
 
-    brRoleBonusSet = await jsonCache.getProto("BattleRallyRoleBonusSet");
-    roleSetLocale = await jsonCache.getLocale("role-set");
+    // PROTO
+    jsonCache.preloadProto("BattleRallyRoleBonusSet");
+
+    // Locale
+    jsonCache.preloadLocale("role-set");
+
+    await jsonCache.runPreload();
 }
 
 function createSelectInput() {
@@ -66,7 +68,7 @@ function appendSelectRow(rowNum) {
     let label = document.createElement("label");
     label.setAttribute("for", `toolRow_${rowNum}_A`);
     label.style.fontWeight = "700";
-    label.innerText = `${roleSetLocale.floor} ${rowNum}`;
+    label.innerText = `${jData.locale.roleSet.floor} ${rowNum}`;
 
     let inputA = createSelectInput();
     inputA.id = `toolRow_${rowNum}_A`;
@@ -75,7 +77,7 @@ function appendSelectRow(rowNum) {
     inputB.id = `toolRow_${rowNum}_B`;
 
     let eraseBtn = document.createElement("button");
-    eraseBtn.innerText = roleSetLocale.reset;
+    eraseBtn.innerText = jData.locale.roleSet.reset;
     eraseBtn.addEventListener("click", () => {
         inputA.value = "";
         inputB.value = "";
@@ -107,15 +109,15 @@ getData().then(() => {
     toolboxDiv = document.getElementById("toolbox");
     mainUl = document.getElementById("mainUL");
 
-    document.getElementById("pageTitle").innerText = `${commonLocales.menu_battle_rally} > ${commonLocales.submenu_rally_role_set}`;
-    document.getElementById("fieldsetLegend").innerText = roleSetLocale.filters;
+    document.getElementById("pageTitle").innerText = `${jData.locale.common.menu_battle_rally} > ${jData.locale.common.submenu_rally_role_set}`;
+    document.getElementById("fieldsetLegend").innerText = jData.locale.roleSet.filters;
 
     let dataList = document.createElement("datalist");
     dataList.id = "roles-list";
 
-    for(let i = 1; i < Object.keys(commonLocales.role_name_standard).length; i++) {
+    for(let i = 1; i < Object.keys(jData.locale.common.role_name_standard).length; i++) {
         let option = document.createElement("option");
-        option.value = commonLocales.role_name_standard[i];
+        option.value = jData.locale.common.role_name_standard[i];
         dataList.appendChild(option);
     }
 
@@ -132,7 +134,7 @@ function setMainUL() {
     for(let set = 1;;set++) {
         let isSetVisible = true;
 
-        let setData = brRoleBonusSet.filter(brrbs => brrbs.setId === set);
+        let setData = jData.proto.battleRallyRoleBonusSet.filter(brrbs => brrbs.setId === set);
 
         if(setData.length === 0) {
             break;
@@ -158,11 +160,11 @@ function setMainUL() {
         for(let i = 0; i < setData.length; i++) {
             let inputA = document.getElementById(`toolRow_${i+1}_A`);
             let inputB = document.getElementById(`toolRow_${i+1}_B`);
-            let values = Object.values(commonLocales.role_name_standard);
+            let values = Object.values(jData.locale.common.role_name_standard);
 
             if(inputA && inputB && (
-                (values.includes(inputA.value) && inputA.value !== commonLocales.role_name_standard[setData[i].roleA])
-                || (values.includes(inputB.value) && inputB.value !== commonLocales.role_name_standard[setData[i].roleB])
+                (values.includes(inputA.value) && inputA.value !== jData.locale.common.role_name_standard[setData[i].roleA])
+                || (values.includes(inputB.value) && inputB.value !== jData.locale.common.role_name_standard[setData[i].roleB])
             )) {
                 isSetVisible = false;
                 break;
@@ -171,15 +173,15 @@ function setMainUL() {
             let tr = document.createElement("tr");
 
             let floor = document.createElement("td");
-            floor.innerHTML = `<b>${roleSetLocale.floor} ${setData[i].floor}</b>`;
+            floor.innerHTML = `<b>${jData.locale.roleSet.floor} ${setData[i].floor}</b>`;
             tr.appendChild(floor);
 
             let roleA = document.createElement("td");
-            roleA.innerText = commonLocales.role_name_standard[setData[i].roleA];
+            roleA.innerText = jData.locale.common.role_name_standard[setData[i].roleA];
             tr.appendChild(roleA);
 
             let roleB = document.createElement("td");
-            roleB.innerText = commonLocales.role_name_standard[setData[i].roleB];
+            roleB.innerText = jData.locale.common.role_name_standard[setData[i].roleB];
             tr.appendChild(roleB);
 
             table.appendChild(tr);

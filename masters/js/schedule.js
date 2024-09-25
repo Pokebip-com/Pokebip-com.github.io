@@ -1,16 +1,3 @@
-let abilityPanel;
-let banner;
-let championBattleRegion;
-let championBattleRegionOpeningSchedule;
-let eventBannerList;
-let eventQuestGroup;
-let itemExchange;
-let homeEventAppeal;
-let legendQuestGroup;
-let legendQuestGroupSchedule;
-let missionGroup;
-
-let schedule;
 let scoutIds;
 let championBattleAllPeriod;
 let cyclicRankingIds;
@@ -23,48 +10,6 @@ let mainStoryUpdate;
 let trainingAreaUpdate;
 let trainerRarityupBonusUpdate;
 
-let cyclicRankingEvent;
-let cyclicRankingQuestGroup;
-let cyclicRankingQuestGroupSchedule;
-
-let scout;
-let scoutEp;
-let scoutPickup;
-let storyQuest;
-
-let shopPurchasableItem;
-let shopTierPrices;
-
-let versions;
-
-let bannerText;
-let eventName;
-let itemSet;
-let loginBonus;
-let loginBonusReward;
-let loginBonusName;
-let jukeboxMusicName;
-let scoutPickupDescr;
-
-let monsterBase;
-let monster;
-let monsterNames;
-
-let motifTypeName;
-
-let salonGuests;
-
-let trainerBase;
-let trainerExRole;
-let trainer;
-let trainerNames;
-let trainerRarityupBonus;
-let trainerVerboseNames;
-
-let schedLocales;
-
-
-let cyclicRankingData;
 let treatedEvents;
 
 let scheduleDiv;
@@ -84,24 +29,74 @@ const CBEText1Id = 17503026;
 const CBEText2Id = 27503027;
 
 async function getData() {
-    abilityPanel = await jsonCache.getProto("AbilityPanel");
+    // LOCALES
+    jsonCache.preloadLocale("schedule");
 
-    banner = await jsonCache.getProto("Banner");
+    // PROTO
+    jsonCache.preloadProto("AbilityPanel");
+    jsonCache.preloadProto("Banner");
+    jsonCache.preloadProto("ChallengeToStrongTrainerQuestGroup");
+    jsonCache.preloadProto("ChampionBattleEvent");
+    jsonCache.preloadProto("ChampionBattleEventQuestGroup");
+    jsonCache.preloadProto("ChampionBattleRegion");
+    jsonCache.preloadProto("ChampionBattleRegionOpeningSchedule");
+    jsonCache.preloadProto("CyclicRankingEvent");
+    jsonCache.preloadProto("CyclicRankingQuestGroup");
+    jsonCache.preloadProto("CyclicRankingQuestGroupSchedule");
+    jsonCache.preloadProto("EventBanner");
+    jsonCache.preloadProto("EventQuestGroup");
+    jsonCache.preloadProto("HomeEventAppeal");
+    jsonCache.preloadProto("ItemExchange");
+    jsonCache.preloadProto("ItemSet");
+    jsonCache.preloadProto("LegendQuestGroup");
+    jsonCache.preloadProto("LegendQuestGroupSchedule");
+    jsonCache.preloadProto("LoginBonus");
+    jsonCache.preloadProto("LoginBonusReward");
+    jsonCache.preloadProto("MissionGroup");
+    jsonCache.preloadProto("Monster");
+    jsonCache.preloadProto("MonsterBase");
+    jsonCache.preloadProto("SalonGuest");
+    jsonCache.preloadProto("Schedule");
+    jsonCache.preloadProto("Scout");
+    jsonCache.preloadProto("ScoutEp");
+    jsonCache.preloadProto("ScoutPickup");
+    jsonCache.preloadProto("ShopPurchasableItem");
+    jsonCache.preloadProto("StoryQuest");
+    jsonCache.preloadProto("Trainer");
+    jsonCache.preloadProto("TrainerBase");
+    jsonCache.preloadProto("TrainerExRole");
+    jsonCache.preloadProto("TrainerRarityupBonus");
+    jsonCache.preloadProto("VillaQuestGroup");
 
-    eventQuestGroup = await jsonCache.getProto("EventQuestGroup");
+    // LSD
+    jsonCache.preloadLsd("banner_text");
+    jsonCache.preloadLsd("event_name");
+    jsonCache.preloadLsd("jukebox_music_name");
+    jsonCache.preloadLsd("login_bonus_name");
+    jsonCache.preloadLsd("monster_name");
+    jsonCache.preloadLsd("motif_type_name");
+    jsonCache.preloadLsd("scout_pickup_description");
+    jsonCache.preloadLsd("trainer_name");
+    jsonCache.preloadLsd("trainer_verbose_name");
 
+    // CUSTOM
+    jsonCache.preloadCustom("version_release_dates");
+    jsonCache.preloadCustom("shop_tier_prices");
+
+    // Utils files
+    preloadUtils(true);
+
+    await jsonCache.runPreload().then(() => processData());
+}
+
+function processData() {
     // On ne prend que les missions qui ne sont pas des missions d'événement
-    missionGroup = (await jsonCache.getProto("MissionGroup")).filter(mg => eventQuestGroup.filter(eqg => eqg.bannerId === mg.bannerId).length === 0);
+    jData.proto.missionGroup = jData.proto.missionGroup.filter(mg => jData.proto.eventQuestGroup.filter(eqg => eqg.bannerId === mg.bannerId).length === 0);
 
-    eventQuestGroup.push(...(await jsonCache.getProto("VillaQuestGroup")).map(vqg => vqg.bannerId = 1202001));
+    jData.proto.championBattleEventQuestGroup.map(cbeqg => {
+        cbeqg.bannerId = jData.proto.championBattleEvent.find(cbe => cbe.championBattleEventId === cbeqg.championBattleEventId).bannerId;
 
-    let champBattleEvent = await jsonCache.getProto("ChampionBattleEvent");
-    let champBattleEventQuestGroup = await jsonCache.getProto("ChampionBattleEventQuestGroup");
-
-    champBattleEventQuestGroup.map(cbeqg => {
-        cbeqg.bannerId = champBattleEvent.find(cbe => cbe.championBattleEventId === cbeqg.championBattleEventId).bannerId;
-
-        banner.map(ban => {
+        jData.proto.abilityPanel.map(ban => {
             if(ban.bannerId === cbeqg.bannerId) {
                 if(ban.text1Id == -1)
                     ban.text1Id = CBEText1Id;
@@ -111,110 +106,54 @@ async function getData() {
             }
         });
     });
-    eventQuestGroup.push(...champBattleEventQuestGroup);
 
-    championBattleRegion = await jsonCache.getProto("ChampionBattleRegion");
-    championBattleRegionOpeningSchedule = await jsonCache.getProto("ChampionBattleRegionOpeningSchedule");
+    jData.proto.eventQuestGroup.push(...jData.proto.challengeToStrongTrainerQuestGroup);
+    jData.proto.eventQuestGroup.push(...jData.proto.championBattleEventQuestGroup);
+    jData.proto.eventQuestGroup.push(...jData.proto.villaQuestGroup.map(vqg => vqg.bannerId = 1202001));
 
-    eventQuestGroup.push(...await jsonCache.getProto("ChallengeToStrongTrainerQuestGroup"));
+    jData.proto.cyclicRankingData = getBySpecificID(jData.proto.cyclicRankingQuestGroupSchedule, "scheduleId");
+    jData.proto.legendQuestGroup = getBySpecificID(jData.proto.legendQuestGroup, "questGroupId");
+    jData.proto.legendQuestGroupSchedule = getBySpecificID(jData.proto.legendQuestGroupSchedule, "scheduleId");
 
-    cyclicRankingEvent = await jsonCache.getProto("CyclicRankingEvent");
-    cyclicRankingQuestGroup = await jsonCache.getProto("CyclicRankingQuestGroup");
-    cyclicRankingQuestGroupSchedule = await jsonCache.getProto("CyclicRankingQuestGroupSchedule");
-    cyclicRankingData = getBySpecificID(cyclicRankingQuestGroupSchedule, "scheduleId");
-
-    scout = await jsonCache.getProto("Scout");
-    scoutEp = await jsonCache.getProto("ScoutEp");
-    scoutPickup = await jsonCache.getProto("ScoutPickup");
-    storyQuest = await jsonCache.getProto("StoryQuest");
-
-    salonGuests = await jsonCache.getProto("SalonGuest");
-
-    legendQuestGroup = getBySpecificID(await jsonCache.getProto("LegendQuestGroup"), "questGroupId");
-    legendQuestGroupSchedule = getBySpecificID(await jsonCache.getProto("LegendQuestGroupSchedule"), "scheduleId");
-
-    trainerRarityupBonus = await jsonCache.getProto("TrainerRarityupBonus");
-
-    schedule = await jsonCache.getProto("Schedule");
     getSchedule();
 
-    bannerText = await jsonCache.getLsd("banner_text");
-    eventBannerList = await jsonCache.getProto("EventBanner");
-    eventName = await jsonCache.getLsd("event_name");
+    const lastScheduleStartDate = Math.max(...new Set(jData.proto.schedule.map(s => s.startDate*1)));
 
-    itemExchange = await jsonCache.getProto("ItemExchange");
-
-    const lastScheduleStartDate = Math.max(...new Set(schedule.map(s => s.startDate*1)));
-
-    loginBonus = (await jsonCache.getProto("LoginBonus")).filter(lb => lb.startDate <= lastScheduleStartDate).map(lb => {
+    jData.proto.loginBonus = jData.proto.loginBonus.filter(lb => lb.startDate <= lastScheduleStartDate).map(lb => {
         lb.scheduleId = lb.loginBonusId;
         lb.startDate = lb.startDate.toString();
         lb.endDate = lb.endDate.toString();
         return lb;
     });
 
-    loginBonusIds = loginBonus.map(lb => lb.loginBonusId);
+    loginBonusIds = jData.proto.loginBonus.map(lb => lb.loginBonusId);
 
-    loginBonusName = await jsonCache.getLsd("login_bonus_name");
-
-    schedule.push(...loginBonus);
-
-    shopPurchasableItem = await jsonCache.getProto("ShopPurchasableItem");
-
-    loginBonusReward = await jsonCache.getProto("LoginBonusReward");
-
-    jukeboxMusicName = await jsonCache.getLsd("jukebox_music_name");
-
-    homeEventAppeal = await jsonCache.getProto("HomeEventAppeal");
-
-    scoutPickupDescr = await jsonCache.getLsd("scout_pickup_description");
-
-    monster = await jsonCache.getProto("Monster");
-    monsterBase = await jsonCache.getProto("MonsterBase");
-
-    trainer = await jsonCache.getProto("Trainer");
-    trainerBase = await jsonCache.getProto("TrainerBase");
-    trainerExRole = await jsonCache.getProto("TrainerExRole");
-
-    motifTypeName = await jsonCache.getLsd("motif_type_name");
-
-    monsterNames = await jsonCache.getLsd("monster_name");
-    trainerNames = await jsonCache.getLsd("trainer_name");
-    trainerVerboseNames = await jsonCache.getLsd("trainer_verbose_name");
-
-    itemSet = await jsonCache.getProto("ItemSet");
-}
-
-async function getCustomJSON() {
-    schedLocales = await jsonCache.getLocale("schedule");
-    shopTierPrices = (await jsonCache.getCustom("shop_tier_prices", true));
-    versions = await jsonCache.getCustom("version_release_dates").then(orderByVersion);
+    jData.proto.schedule.push(...jData.proto.loginBonus);
 }
 
 function getSchedule() {
 
-    scoutIds = scout.map(s => s.scheduleId);
-    eventIds = [...new Set(storyQuest.filter(sq => !sq.scheduleId.includes("_ChampionBattle_")).map(sq => sq.scheduleId))];
-    legendaryBattleIds = [...new Set(Object.keys(legendQuestGroupSchedule))];
-    salonGuestsUpdate = [...new Set(salonGuests.map(sg => sg.scheduleId))];
-    mainStoryUpdate = [...new Set(storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
-    trainingAreaUpdate = [...new Set(storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
-    championBattleAllPeriod = [...new Set(schedule.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
-    trainerRarityupBonusUpdate = [...new Set(trainerRarityupBonus.map(trb => trb.scheduleId))];
-    cyclicRankingIds = [...new Set(cyclicRankingQuestGroupSchedule.map(crqg => crqg.scheduleId))];
-    missionGroupIds = [...new Set(missionGroup.map(mg => mg.scheduleId))];
+    scoutIds = jData.proto.scout.map(s => s.scheduleId);
+    championBattleAllPeriod = [...new Set(jData.proto.schedule.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
+    cyclicRankingIds = [...new Set(jData.proto.cyclicRankingQuestGroupSchedule.map(crqg => crqg.scheduleId))];
+    eventIds = [...new Set(jData.proto.storyQuest.filter(sq => !sq.scheduleId.includes("_ChampionBattle_")).map(sq => sq.scheduleId))];
+    legendaryBattleIds = [...new Set(Object.keys(jData.proto.legendQuestGroupSchedule))];
+    mainStoryUpdate = [...new Set(jData.proto.storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
+    missionGroupIds = [...new Set(jData.proto.missionGroup.map(mg => mg.scheduleId))];
+    salonGuestsUpdate = [...new Set(jData.proto.salonGuest.map(sg => sg.scheduleId))];
+    trainingAreaUpdate = [...new Set(jData.proto.storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
+    trainerRarityupBonusUpdate = [...new Set(jData.proto.trainerRarityupBonus.map(trb => trb.scheduleId))];
 
-
-    let usableSchedule = schedule.filter(s =>
+    let usableSchedule = jData.proto.schedule.filter(s =>
         scoutIds.includes(s.scheduleId)
         || cyclicRankingIds.includes(s.scheduleId)
         || eventIds.includes(s.scheduleId)
         || legendaryBattleIds.includes(s.scheduleId)
-        || missionGroupIds.includes(s.scheduleId)
         || mainStoryUpdate.includes(s.scheduleId)
+        || missionGroupIds.includes(s.scheduleId)
+        || salonGuestsUpdate.includes(s.scheduleId)
         || trainingAreaUpdate.includes(s.scheduleId)
         || trainerRarityupBonusUpdate.includes(s.scheduleId)
-        || salonGuestsUpdate.includes(s.scheduleId)
         || s.scheduleId.startsWith("chara_")
         || s.scheduleId.includes("_Shop_")
         || s.scheduleId.endsWith("_musiccoin_FOREVER")
@@ -226,9 +165,9 @@ function getSchedule() {
             ))
     );
 
-    // console.log(schedule.entries.filter(s => s.startDate >= versions[0].releaseTimestamp && !usableSchedule.includes(s.scheduleId)));
+    // console.log(data.proto.schedule.entries.filter(s => s.startDate >= data.versions[0].releaseTimestamp && !usableSchedule.includes(s.scheduleId)));
 
-    schedule = usableSchedule;
+    jData.proto.schedule = usableSchedule;
 }
 
 function getBySpecificID(data, id) {
@@ -241,8 +180,8 @@ function getBySpecificID(data, id) {
 
 
 
-async function getScoutNewsText(schedule) {
-    let scheduleScouts = scout.filter(sc => sc.scheduleId === schedule.scheduleId);
+function getScoutNewsText(schedule) {
+    let scheduleScouts = jData.proto.scout.filter(sc => sc.scheduleId === schedule.scheduleId);
 
     if (scheduleScouts.length === 0)
         return;
@@ -250,13 +189,13 @@ async function getScoutNewsText(schedule) {
     let newsText = "";
 
     for (const schedScout of scheduleScouts) {
-        let scoutBanners = banner.filter(b => b.bannerId === schedScout.bannerId);
+        let scoutBanners = jData.proto.abilityPanel.filter(b => b.bannerId === schedScout.bannerId);
 
         scoutBanners.forEach(sb => {
-            newsText += `[h3]${bannerText[sb.text1Id].replaceAll("\n", " ")}`;
+            newsText += `[h3]${jData.lsd.bannerText[sb.text1Id].replaceAll("\n", " ")}`;
 
             if (sb.text2Id > -1) {
-                newsText += ` ${bannerText[sb.text2Id].replaceAll("\n", " ")}`;
+                newsText += ` ${jData.lsd.bannerText[sb.text2Id].replaceAll("\n", " ")}`;
             }
 
             newsText += "[/h3]\n\n";
@@ -264,7 +203,7 @@ async function getScoutNewsText(schedule) {
 
         newsText += "[center][img]-[/img][/center]\n\n";
 
-        let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
+        let sPickups = jData.proto.scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
 
         if (sPickups.length > 0) {
             newsText += "[listh]\n" +
@@ -273,31 +212,31 @@ async function getScoutNewsText(schedule) {
 
             for (const sp of sPickups) {
                 newsText += "\t[tr]\n" +
-                    `\t\t[td]${(getTrainerNumber(sp.trainerId))}[/td]\n` +
+                    `\t\t[td]${getTrainerNumber(sp.trainerId)}[/td]\n` +
                     `\t\t[td][url=/page/jeuxvideo/pokemon-masters/duos/LIEN-DU-DUO]` +
                     `[img|w=80]/pages/jeuxvideo/pokemon-masters/images/personnages/bustes/PERSO.png[/img]\n` +
-                    `\t\t[b]${(getTrainerName(sp.trainerId).replaceAll("\n", "[br]"))}[/b][/url][/td]\n` +
+                    `\t\t[b]${((getTrainerName(sp.trainerId)).replaceAll("\n", "[br]"))}[/b][/url][/td]\n` +
                     `\t\t[td]` +
                     `[img|w=80]/pages/icones/poke/MX/NUMERO.png[/img]\n` +
-                    `\t\t[b]${await getMonsterNameByTrainerId(sp.trainerId)}[/b][/td]\n` +
-                    `\t\t[td][type=${removeAccents((await getRoleByTrainerId(sp.trainerId)).toLowerCase()).replace(" ", "-")}|MX]`;
+                    `\t\t[b]${getMonsterNameByTrainerId(sp.trainerId)}[/b][/td]\n` +
+                    `\t\t[td][type=${removeAccents(getRoleByTrainerId(sp.trainerId).toLowerCase()).replace(" ", "-")}|MX]`;
 
-                let exRole = await getExRoleText(sp.trainerId);
+                let exRole = getExRoleText(sp.trainerId);
 
                 if (exRole !== null) {
                     newsText += `[br][type=${removeAccents(exRole.toLowerCase())}-ex|MX]`;
                 }
 
                 newsText += `[/td]\n` +
-                    `\t\t[td][type=${removeAccents(await getTrainerTypeName(sp.trainerId).toLowerCase())}|MX][/td]\n` +
-                    `\t\t[td]${"★".repeat(await getTrainerRarity(sp.trainerId))}`;
+                    `\t\t[td][type=${removeAccents(getTrainerTypeName(sp.trainerId).toLowerCase())}|MX][/td]\n` +
+                    `\t\t[td]${"★".repeat(getTrainerRarity(sp.trainerId))}`;
 
-                if ((await hasExUnlocked(sp.trainerId))) {
+                if (hasExUnlocked(sp.trainerId)) {
                     newsText += `[br][type=ex|MX]`;
                 }
 
                 newsText += `[/td]\n` +
-                    `\t\t[td]${await getAbilityPanelQty(sp.trainerId)} cases[/td]\n` +
+                    `\t\t[td]${getAbilityPanelQty(sp.trainerId)} cases[/td]\n` +
                     `\t[/tr]\n`;
             }
 
@@ -342,7 +281,7 @@ function getLoginBonusNewsText(schedule) {
 }
 
 function downloadData() {
-    let version = versions.find(v => v.version === versionSelect.value);
+    let version = jData.custom.versionReleaseDates.find(v => v.version === versionSelect.value);
     if(version === undefined)
         return;
 
@@ -501,7 +440,7 @@ function addCyclingRankingEvents(i, latestCyclicRankingSchedule) {
 
         cyclicRankingScheduleStartDates
             .map(parseInt)
-            .filter(sd => sd < versions[i].releaseTimestamp)
+            .filter(sd => sd < jData.custom.versionReleaseDates[i].releaseTimestamp)
             .map(sd => {
                 firstCRSchedule = Math.max(firstCRSchedule, sd);
             });
@@ -514,7 +453,7 @@ function addCyclingRankingEvents(i, latestCyclicRankingSchedule) {
 
         cyclicRankingScheduleStartDates
             .map(parseInt)
-            .filter(sd => sd >= versions[i].releaseTimestamp && (i === 0 || sd < versions[i-1].releaseTimestamp))
+            .filter(sd => sd >= jData.custom.versionReleaseDates[i].releaseTimestamp && (i === 0 || sd < jData.custom.versionReleaseDates[i-1].releaseTimestamp))
             .map(sd => {
                 lastCRSchedule = Math.max(lastCRSchedule, sd);
             });
@@ -528,7 +467,7 @@ function addCyclingRankingEvents(i, latestCyclicRankingSchedule) {
         let sdSelect = startDates[0];
 
         let cyclicRankingQuestGroupId, cyclingSeconds;
-        let lastStart = versions[i].schedule.map(s => s.startDate).sort((a, b) => b - a)[0];
+        let lastStart = jData.custom.versionReleaseDates[i].schedule.map(s => s.startDate).sort((a, b) => b - a)[0];
 
         let j = 0;
 
@@ -536,8 +475,8 @@ function addCyclingRankingEvents(i, latestCyclicRankingSchedule) {
             if(sdPointer === -1 || (sdPointer + 1) < startDates.length && startDates[sdPointer + 1] >= latestCyclicRankingSchedule.startDate) {
                 sdPointer++;
                 sdSelect = startDates[sdPointer];
-                cyclicRankingQuestGroupId = cyclicRankingData[latestCyclicRankingSchedule[sdSelect].scheduleId][0].questGroupId;
-                cyclingSeconds = cyclicRankingEvent.filter(ce => ce.damageChallengeBattleId === cyclicRankingQuestGroupId)[0].secondsBeforeCycling;
+                cyclicRankingQuestGroupId = jData.proto.cyclicRankingData[latestCyclicRankingSchedule[sdSelect].scheduleId][0].questGroupId;
+                cyclingSeconds = jData.proto.cyclicRankingEvent.filter(ce => ce.damageChallengeBattleId === cyclicRankingQuestGroupId)[0].secondsBeforeCycling;
             }
 
             let schedule = {...latestCyclicRankingSchedule[sdSelect]};
@@ -545,7 +484,7 @@ function addCyclingRankingEvents(i, latestCyclicRankingSchedule) {
 
             let idx = latestCyclicRankingSchedule[sdSelect].cycleIdx;
 
-            versions[i].schedule.push(schedule);
+            jData.custom.versionReleaseDates[i].schedule.push(schedule);
 
             latestCyclicRankingSchedule[sdSelect].startDate = "" + (parseInt(cyclingSeconds[idx]) + parseInt(latestCyclicRankingSchedule[sdSelect].startDate));
             latestCyclicRankingSchedule[sdSelect].cycleIdx = (idx+1) % cyclingSeconds.length;
@@ -560,10 +499,10 @@ function scheduleByVersion() {
 
     let latestCyclicRankingSchedule = {};
 
-    for(let i = versions.length - 2; i >= 0; i--) {
-        versions[i].schedule = schedule.filter(s =>
-                s.startDate >= versions[i].releaseTimestamp
-                && (i === 0 || s.startDate < versions[i-1].releaseTimestamp)
+    for(let i = jData.custom.versionReleaseDates.length - 2; i >= 0; i--) {
+        jData.custom.versionReleaseDates[i].schedule = jData.proto.schedule.filter(s =>
+                s.startDate >= jData.custom.versionReleaseDates[i].releaseTimestamp
+                && (i === 0 || s.startDate < jData.custom.versionReleaseDates[i-1].releaseTimestamp)
             )
             .map(s => {
                 s.isLegendaryBattle = false;
@@ -603,11 +542,11 @@ function scheduleByVersion() {
                     if(trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId)) {
                         s.isHomeAppeal = true;
                     }
-                    if(Object.keys(cyclicRankingData).includes(s.scheduleId)) {
+                    if(Object.keys(jData.proto.cyclicRankingData).includes(s.scheduleId)) {
                         s.isCyclicRanking = true;
                         latestCyclicRankingSchedule[s.startDate] = {...s};
                         latestCyclicRankingSchedule[s.startDate].originalSD = s.startDate;
-                        latestCyclicRankingSchedule[s.startDate].questGroupId = cyclicRankingData[s.scheduleId][0].questGroupId;
+                        latestCyclicRankingSchedule[s.startDate].questGroupId = jData.proto.cyclicRankingData[s.scheduleId][0].questGroupId;
                         latestCyclicRankingSchedule[s.startDate].cycleIdx = 0;
                     }
                 }
@@ -616,27 +555,27 @@ function scheduleByVersion() {
 
         addCyclingRankingEvents(i, latestCyclicRankingSchedule);
 
-        versions[i].schedule
+        jData.custom.versionReleaseDates[i].schedule
             .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.scheduleType.priority.localeCompare(b.scheduleType.priority));
     }
 
-    for(let i = 0; i < versions.length - 1; i++) {
-        let date = new Date(versions[i].releaseTimestamp*1000);
+    for(let i = 0; i < jData.custom.versionReleaseDates.length - 1; i++) {
+        let date = new Date(jData.custom.versionReleaseDates[i].releaseTimestamp*1000);
 
         let option = {};
-        option.value = versions[i].version;
-        option.text = `Version ${versions[i].version} (${date.toLocaleDateString(locale, {year: 'numeric', month: 'short', day: 'numeric'})})`;
+        option.value = jData.custom.versionReleaseDates[i].version;
+        option.text = `Version ${jData.custom.versionReleaseDates[i].version} (${date.toLocaleDateString(locale, {year: 'numeric', month: 'short', day: 'numeric'})})`;
         versionSelect.add(new Option(option.text, option.value));
     }
 }
 
 function printEndDate(timestamp) {
-    let endDate = timestamp === '32503680000' ? schedLocales.duration_permanent : new Intl.DateTimeFormat(locale, {dateStyle: 'full', timeStyle: 'short'}).format(new Date(timestamp*1000-1));
-    scheduleDiv.innerHTML += `<br /><br /><strong>${schedLocales.end_date} </strong> ${endDate}`;
+    let endDate = timestamp === '32503680000' ? jData.locale.schedule.duration_permanent : new Intl.DateTimeFormat(locale, {dateStyle: 'full', timeStyle: 'short'}).format(new Date(timestamp*1000-1));
+    scheduleDiv.innerHTML += `<br /><br /><strong>${jData.locale.schedule.end_date} </strong> ${endDate}`;
 }
 
-async function printScouts(schedule, titleText = "") {
-    let scheduleScouts = scout.filter(sc => sc.scheduleId === schedule.scheduleId);
+function printScouts(schedule, titleText = "") {
+    let scheduleScouts = jData.proto.scout.filter(sc => sc.scheduleId === schedule.scheduleId);
 
     if (scheduleScouts.length === 0)
         return;
@@ -644,13 +583,13 @@ async function printScouts(schedule, titleText = "") {
     scheduleDiv.innerHTML += titleText;
 
     for (const schedScout of scheduleScouts) {
-        let scoutBanners = banner.filter(b => b.bannerId === schedScout.bannerId);
+        let scoutBanners = jData.proto.banner.filter(b => b.bannerId === schedScout.bannerId);
 
         scoutBanners.forEach(sb => {
-            let h3 = `<h3>${bannerText[sb.text1Id]}`;
+            let h3 = `<h3>${jData.lsd.bannerText[sb.text1Id]}`;
 
             if (sb.text2Id > -1) {
-                h3 += ` ${bannerText[sb.text2Id]}`;
+                h3 += ` ${jData.lsd.bannerText[sb.text2Id]}`;
             }
 
             h3 += "</h3>";
@@ -658,28 +597,28 @@ async function printScouts(schedule, titleText = "") {
             scheduleDiv.innerHTML += h3;
 
             if (sb.bannerIdString !== "") {
-                scheduleDiv.innerHTML += `<img src="./data/banner/scout/${sb.bannerIdString}.png" class="bannerImg" />\n`;
+                scheduleDiv.innerHTML += `<img loading="lazy" src="./data/banner/scout/${sb.bannerIdString}.png" class="bannerImg" />\n`;
             }
         });
 
         printEndDate(schedule.endDate);
 
-        let sPickups = scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
+        let sPickups = jData.proto.scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
 
         if (sPickups.length > 0) {
-            scheduleDiv.innerHTML += `<br /><br /><b>${schedLocales.featured_sync_pairs}</b>\n`;
+            scheduleDiv.innerHTML += `<br /><br /><b>${jData.locale.schedule.featured_sync_pairs}</b>\n`;
 
             let ul = `<ul style='list-style-type: disc;'>\n`;
 
             for (const sp of sPickups) {
-                ul += `<li><b>${await getPairPrettyPrintWithUrl(sp.trainerId)}</b></li>\n`;
+                ul += `<li><b>${getPairPrettyPrintWithUrl(sp.trainerId)}</b></li>\n`;
             }
 
             ul += "</ul>\n";
             scheduleDiv.innerHTML += ul;
         }
 
-        let scoutEps = scoutEp.filter(sep => sep.scoutId === schedScout.scoutId && sep.u8 === 1);
+        let scoutEps = jData.proto.scoutEp.filter(sep => sep.scoutId === schedScout.scoutId && sep.u8 === 1);
 
         if (scoutEps.length > 0) {
             scoutEps.sort((a, b) => a.scoutEpId.localeCompare(b.scoutEpId));
@@ -687,7 +626,7 @@ async function printScouts(schedule, titleText = "") {
             let rewards = "";
 
             for(let j = 0; j < scoutEps.length; j++) {
-                let is = itemSet.find(iset => iset.itemSetId === scoutEps[j].itemSetId);
+                let is = jData.proto.itemSet.find(iset => iset.itemSetId === scoutEps[j].itemSetId);
 
                 if(!is)
                     continue;
@@ -698,7 +637,7 @@ async function printScouts(schedule, titleText = "") {
                     if(is[`item${i}`] === "0")
                         break;
 
-                    itemsArray.push(await getItemName(is[`item${i}`]) + " x" + is[`item${i}Quantity`]);
+                    itemsArray.push(getItemName(is[`item${i}`]) + " x" + is[`item${i}Quantity`]);
                 }
 
                 rewards += `<br /><b>${j+1}.</b> ${itemsArray.join(" + ")}`;
@@ -707,42 +646,42 @@ async function printScouts(schedule, titleText = "") {
             if(rewards === "")
                 break;
 
-            scheduleDiv.innerHTML += `<br /><b>${schedLocales.pair_pull_bonus_gift}</b>\n`;
+            scheduleDiv.innerHTML += `<br /><b>${jData.locale.schedule.pair_pull_bonus_gift}</b>\n`;
             scheduleDiv.innerHTML += rewards;
         }
     }
 }
 
-function printShopBanner(banner, schedule) {
-    let h3 = `<h3>${bannerText[banner.text1Id]}`;
+function printShopBanner(shopBanner, schedule) {
+    let h3 = `<h3>${jData.lsd.bannerText[shopBanner.text1Id]}`;
 
-    if(banner.text2Id > -1) {
-        h3 += ` ${bannerText[banner.text2Id]}`;
+    if(shopBanner.text2Id > -1) {
+        h3 += ` ${jData.lsd.bannerText[shopBanner.text2Id]}`;
     }
 
     h3 += "</h3>";
 
     scheduleDiv.innerHTML += h3;
 
-    if(banner.bannerIdString !== "") {
-        scheduleDiv.innerHTML += `<img src="./data/banner/event/${banner.bannerIdString}.png" class="bannerImg" />\n`;
+    if(shopBanner.bannerIdString !== "") {
+        scheduleDiv.innerHTML += `<img src="./data/banner/event/${shopBanner.bannerIdString}.png" class="bannerImg" />\n`;
     }
 
-    let purchasableItems = shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId);
+    let purchasableItems = jData.proto.shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId);
 
     if(purchasableItems.length > 0) {
 
-        scheduleDiv.innerHTML += `<br /><br /><b>${schedLocales.gem_packs}</b>\n`;
+        scheduleDiv.innerHTML += `<br /><br /><b>${jData.locale.schedule.gem_packs}</b>\n`;
 
         let ul = `<ul>\n`;
 
         purchasableItems.forEach(pi => {
             let matches = pi.internalName.match(/paidvc_[a-zA-Z]+([0-9]+)_([0-9]+)/i);
-            let price = shopTierPrices.find(stp => stp.tier.toString() === matches[1]);
+            let price = jData.custom.shopTierPrices.find(stp => stp.tier.toString() === matches[1]);
 
             price = price.euros || "??.??";
 
-            ul += `<li><b>${matches[2]} ${schedLocales.gems}</b> ${price}€ (${pi.limit}x)</li>\n`;
+            ul += `<li><b>${matches[2]} ${jData.locale.schedule.gems}</b> ${price}€ (${pi.limit}x)</li>\n`;
         });
 
         ul += `</ul>`;
@@ -754,10 +693,10 @@ function printShopBanner(banner, schedule) {
 }
 
 function printEventBanner(eventBanner, lastSchedule, titleText = "") {
-    let h3 = `<h3>${bannerText[eventBanner.text1Id]}`;
+    let h3 = `<h3>${jData.lsd.bannerText[eventBanner.text1Id]}`;
 
     if(eventBanner.text2Id > -1) {
-        h3 += ` ${bannerText[eventBanner.text2Id]}`;
+        h3 += ` ${jData.lsd.bannerText[eventBanner.text2Id]}`;
     }
 
     h3 += "</h3>";
@@ -774,7 +713,7 @@ function printEventBanner(eventBanner, lastSchedule, titleText = "") {
 }
 
 function printEvents(sched, titleText = "") {
-    let scheduleQuests = storyQuest.filter(quest => quest.scheduleId === sched.scheduleId);
+    let scheduleQuests = jData.proto.storyQuest.filter(quest => quest.scheduleId === sched.scheduleId);
 
     if(scheduleQuests.length === 0)
         return;
@@ -791,39 +730,39 @@ function printEvents(sched, titleText = "") {
         else {
             treatedEvents.push(qg);
 
-            let scheduleIds = [...new Set(storyQuest.filter(sq => sq.questGroupId === qg).map(sq => sq.scheduleId))];
+            let scheduleIds = [...new Set(jData.proto.storyQuest.filter(sq => sq.questGroupId === qg).map(sq => sq.scheduleId))];
 
             if(scheduleIds.length > 1) {
-                sched = schedule.find(s => s.scheduleId === scheduleIds[scheduleIds.length - 1]);
+                sched = jData.proto.schedule.find(s => s.scheduleId === scheduleIds[scheduleIds.length - 1]);
             }
         }
 
-        eventQuestGroup.filter(eventQG => eventQG.questGroupId == qg)
+        jData.proto.eventQuestGroup.filter(eventQG => eventQG.questGroupId == qg)
             .forEach(eventQG => {
-                let eventBanners = banner.filter(b => b.bannerId === eventQG.bannerId);
+                let eventBanners = jData.proto.banner.filter(b => b.bannerId === eventQG.bannerId);
 
                 eventBanners.forEach(eb => printEventBanner(eb, sched));
             });
     });
 }
 
-async function printPairChanges(sched, titleText = "") {
+function printPairChanges(sched, titleText = "") {
 
     const scheduleId = sched.scheduleId;
 
     // Ajout de cases dans le plateau
-    let panelChanges = [...new Set(abilityPanel.filter(ap => ap.scheduleId === scheduleId).map(ap => ap.trainerId))].map(tid => { return {"trainerId" : tid, "type": "panel", "text" : schedLocales.grid_additions}; });
+    let panelChanges = [...new Set(jData.proto.abilityPanel.filter(ap => ap.scheduleId === scheduleId).map(ap => ap.trainerId))].map(tid => { return {"trainerId" : tid, "type": "panel", "text" : jData.locale.schedule.grid_additions}; });
 
     // Sortie de duo
-    let trainerRelease = [...new Set(trainer.filter(ti => ti.scheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : schedLocales.pair_addition}; });
+    let trainerRelease = [...new Set(jData.proto.trainer.filter(ti => ti.scheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "add", "text" : jData.locale.schedule.pair_addition}; });
 
     // Sortie du 6EX
-    let trainerExRelease = [...new Set(trainer.filter(ti => ti.exScheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "ex", "text" : schedLocales.ex_addition}; });
+    let trainerExRelease = [...new Set(jData.proto.trainer.filter(ti => ti.exScheduleId === scheduleId).map(ti => ti.trainerId))].map(tid => { return {"trainerId" : tid, "type" : "ex", "text" : jData.locale.schedule.ex_addition}; });
 
     // Musique offerte au 6EX
-    const musicReleases = schedule.filter(s => trainerRarityupBonusUpdate.includes(s.scheduleId) && s.startDate === sched.startDate);
-    let trainerExMusicRelease = [...new Set(trainerRarityupBonus.filter(trb => musicReleases.map(mr => mr.scheduleId).includes(trb.scheduleId)).map(trb => {
-        let itSet = itemSet.find(is => is.itemSetId === trb.itemSetId);
+    const musicReleases = jData.proto.schedule.filter(s => trainerRarityupBonusUpdate.includes(s.scheduleId) && s.startDate === sched.startDate);
+    let trainerExMusicRelease = [...new Set(jData.proto.trainerRarityupBonus.filter(trb => musicReleases.map(mr => mr.scheduleId).includes(trb.scheduleId)).map(trb => {
+        let itSet = jData.proto.itemSet.find(is => is.itemSetId === trb.itemSetId);
         if(!itSet)
             return null;
 
@@ -833,16 +772,16 @@ async function printPairChanges(sched, titleText = "") {
             if(itSet[`item${i}`] === "0" || itSet[`item${i}Quantity`] === 0)
                 continue;
 
-            music = jukeboxMusicName[itSet[`item${i}`]];
+            music = jData.lsd.jukeboxMusicName[itSet[`item${i}`]];
             break;
         }
-        return { "trainerId" : trb.trainerId, "type" : "exMusic", "text" : `${schedLocales.ex_music} <i>${music}</i>.` };
+        return { "trainerId" : trb.trainerId, "type" : "exMusic", "text" : `${jData.locale.schedule.ex_music} <i>${music}</i>.` };
     }))];
 
     // Sortie du Rôle EX
-    let ExRoleRelease = [...new Set(trainerExRole.filter(ti => ti.scheduleId === scheduleId).map(ti => { return {"trainerId" : ti.trainerId, "role" : commonLocales.role_names[ti.role] }; }))].map(exRole => { return {"trainerId" : exRole.trainerId, "type" : "exRole", "text" : schedLocales.ex_role_release.replace("{{role}}", exRole.role)}; });
+    let ExRoleRelease = [...new Set(jData.proto.trainerExRole.filter(ti => ti.scheduleId === scheduleId).map(ti => { return {"trainerId" : ti.trainerId, "role" : jData.locale.common.role_names[ti.role] }; }))].map(exRole => { return {"trainerId" : exRole.trainerId, "type" : "exRole", "text" : jData.locale.schedule.ex_role_release.replace("{{role}}", exRole.role)}; });
 
-    let changes = trainerRelease.concat(trainerExRelease, trainerExMusicRelease, ExRoleRelease, panelChanges).sort(async (a, b) => (await getTrainerName(a.trainerId)).localeCompare(await getTrainerName(b.trainerId)));
+    let changes = trainerRelease.concat(trainerExRelease, trainerExMusicRelease, ExRoleRelease, panelChanges).sort((a, b) => (getTrainerName(a.trainerId)).localeCompare(getTrainerName(b.trainerId)));
 
     let lastTID = "";
 
@@ -864,15 +803,15 @@ async function printPairChanges(sched, titleText = "") {
 
         }
 
-        scheduleDiv.innerHTML += `<li><b>${await getPairPrettyPrintWithUrl(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
+        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
     }
 
     scheduleDiv.innerHTML += "</ul>";
 }
 
-async function printSalonGuest(scheduleId, titleText = "") {
-    let salonGuestList = [...new Set(salonGuests.filter(sg => sg.scheduleId === scheduleId).map(sg => sg.trainerId))].map(tid => {
-        return {"trainerId": tid, "type": "add", "text": schedLocales.lodge_addition};
+function printSalonGuest(scheduleId, titleText = "") {
+    let salonGuestList = [...new Set(jData.proto.salonGuest.filter(sg => sg.scheduleId === scheduleId).map(sg => sg.trainerId))].map(tid => {
+        return {"trainerId": tid, "type": "add", "text": jData.locale.schedule.lodge_addition};
     });
 
     if(salonGuestList.length === 0)
@@ -894,12 +833,12 @@ async function printSalonGuest(scheduleId, titleText = "") {
 
         }
 
-        scheduleDiv.innerHTML += `<li><b>${await getPairPrettyPrintWithUrl(salonGuestList[index].trainerId)} : </b> ${salonGuestList[index].text}</li>`;
+        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(salonGuestList[index].trainerId)} : </b> ${salonGuestList[index].text}</li>`;
     }
 }
 
 function printShopOffers(schedule, titleText = "") {
-    let eventBanners = eventBannerList.filter(eb => eb.scheduleId === schedule.scheduleId);
+    let eventBanners = jData.proto.eventBanner.filter(eb => eb.scheduleId === schedule.scheduleId);
 
     if(eventBanners.length === 0)
         return;
@@ -907,7 +846,7 @@ function printShopOffers(schedule, titleText = "") {
     scheduleDiv.innerHTML += titleText;
 
     eventBanners.forEach(eb => {
-        let banners = banner.filter(b => b.bannerId === eb.bannerId);
+        let banners = jData.proto.banner.filter(b => b.bannerId === eb.bannerId);
 
         banners.forEach(ban => printShopBanner(ban, schedule));
     });
@@ -915,9 +854,9 @@ function printShopOffers(schedule, titleText = "") {
 
 function printChampionBattle(sched, titleText = "") {
     let period = championBattleAllPeriod.find(cbap => sched.startDate >= cbap.startDate && sched.startDate < cbap.endDate);
-    let openingSchedule = championBattleRegionOpeningSchedule.find(cbros => cbros.scheduleId === period.scheduleId);
-    let cbr = championBattleRegion.find(cbr => cbr.championBattleRegionId === openingSchedule.championBattleRegionId);
-    let ban = banner.find(b => b.bannerId === cbr.bannerId);
+    let openingSchedule = jData.proto.championBattleRegionOpeningSchedule.find(cbros => cbros.scheduleId === period.scheduleId);
+    let cbr = jData.proto.championBattleRegion.find(cbr => cbr.championBattleRegionId === openingSchedule.championBattleRegionId);
+    let ban = jData.proto.banner.find(b => b.bannerId === cbr.bannerId);
 
     if (!ban) {
         return;
@@ -927,7 +866,7 @@ function printChampionBattle(sched, titleText = "") {
 }
 
 function printHomeAppealEvent(schedule, titleText = "") {
-    const eventAppeal = homeEventAppeal.filter(hea => hea.bannerScheduleId === schedule.scheduleId);
+    const eventAppeal = jData.proto.homeEventAppeal.filter(hea => hea.bannerScheduleId === schedule.scheduleId);
 
     if (eventAppeal.length === 0)
         return;
@@ -935,7 +874,7 @@ function printHomeAppealEvent(schedule, titleText = "") {
     scheduleDiv.innerHTML += titleText;
 
     eventAppeal.forEach(ea => {
-        let banners = banner.filter(b => b.bannerId === ea.bannerId);
+        let banners = jData.proto.banner.filter(b => b.bannerId === ea.bannerId);
 
         banners.forEach(ban => printEventBanner(ban, schedule));
     })
@@ -943,7 +882,7 @@ function printHomeAppealEvent(schedule, titleText = "") {
 
 function printCyclicRanking(schedule, titleText = "") {
     let secondsPassed = parseInt(schedule.startDate) - parseInt(schedule.originalSD);
-    let CRQuests = cyclicRankingQuestGroup.filter(crqg => crqg.questGroupId === schedule.questGroupId);
+    let CRQuests = jData.proto.cyclicRankingQuestGroup.filter(crqg => crqg.questGroupId === schedule.questGroupId);
     let CRQNum = 0;
 
     for(let i = 0; secondsPassed > 0; i++) {
@@ -954,7 +893,7 @@ function printCyclicRanking(schedule, titleText = "") {
     CRQNum = CRQNum % (CRQuests.length) + 1;
 
     let quest = CRQuests.find(crq => crq.cyclicRankingQuestNum === CRQNum);
-    let banners = banner.filter(b => b.bannerId === quest.bannerId);
+    let banners = jData.proto.banner.filter(b => b.bannerId === quest.bannerId);
 
     if(banners.length === 0)
         return;
@@ -966,7 +905,7 @@ function printCyclicRanking(schedule, titleText = "") {
 
 function printLegBat(schedule, titleText = "") {
     let titleTextPrinted = false;
-    let banners = banner.filter(b => b.bannerId === legendQuestGroup[legendQuestGroupSchedule[schedule.scheduleId][0].questGroupId][0].bannerId);
+    let banners = jData.proto.banner.filter(b => b.bannerId === jData.proto.legendQuestGroup[jData.proto.legendQuestGroupSchedule[schedule.scheduleId][0].questGroupId][0].bannerId);
 
     if (banners.length === 0)
         return;
@@ -977,7 +916,7 @@ function printLegBat(schedule, titleText = "") {
 }
 
 function printNewMissions(schedule, titleText = "") {
-    let miGr = missionGroup.filter(mg => mg.scheduleId === schedule.scheduleId);
+    let miGr = jData.proto.missionGroup.filter(mg => mg.scheduleId === schedule.scheduleId);
 
     if (miGr.length === 0) {
         return;
@@ -986,35 +925,35 @@ function printNewMissions(schedule, titleText = "") {
     scheduleDiv.innerHTML += titleText;
 
     miGr.forEach(mg => {
-        let banners = banner.filter(b => b.bannerId === mg.bannerId);
+        let banners = jData.proto.banner.filter(b => b.bannerId === mg.bannerId);
         banners.forEach(ban => printEventBanner(ban, schedule));
     });
 }
 
 function printNewMusics(scheduleId, titleText = "") {
-    let itemIds = itemExchange.filter(ie => ie.scheduleId === scheduleId).map(ie => ie.itemId);
+    let itemIds = jData.proto.itemExchange.filter(ie => ie.scheduleId === scheduleId).map(ie => ie.itemId);
 
     if (itemIds.length === 0)
         return;
 
     scheduleDiv.innerHTML += titleText;
 
-    scheduleDiv.innerHTML += `<b>${schedLocales.jukebox_music}</b>`;
+    scheduleDiv.innerHTML += `<b>${jData.locale.schedule.jukebox_music}</b>`;
 
     let ul = `<ul>\n`;
 
     itemIds.forEach(itemId => {
-        ul += `<li>${jukeboxMusicName[itemId]}</li>\n`;
+        ul += `<li>${jData.lsd.jukeboxMusicName[itemId]}</li>\n`;
     });
 
     ul += "</ul>";
     scheduleDiv.innerHTML += ul;
 }
 
-async function printLoginBonus(loginBonus, titleText = "") {
+function printLoginBonus(loginBonus, titleText = "") {
 
     if (loginBonus.bannerId > -1) {
-        let lbBanner = banner.filter(b => b.bannerId === loginBonus.bannerId);
+        let lbBanner = jData.proto.banner.filter(b => b.bannerId === loginBonus.bannerId);
 
         if (lbBanner.length === 0) {
             return;
@@ -1029,44 +968,44 @@ async function printLoginBonus(loginBonus, titleText = "") {
         switch (loginBonus.type) {
             // General Log-In Bonus
             case 0:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.standard_login_bonus;
+                entryStr += jData.lsd.loginBonusName[loginBonus.loginBonusNameId] || jData.locale.schedule.standard_login_bonus;
                 entryStr += "</h3>\n";
-                entryStr += `${schedLocales.standard_login_bonus_reset}\n`;
+                entryStr += `${jData.locale.schedule.standard_login_bonus_reset}\n`;
                 break;
 
             // Other Log-In Bonus
             case 1:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.special_login_bonus;
+                entryStr += jData.lsd.loginBonusName[loginBonus.loginBonusNameId] || jData.locale.schedule.special_login_bonus;
                 entryStr += "</h3>\n";
-                entryStr += `${schedLocales.unknown_bonus}\n`;
+                entryStr += `${jData.locale.schedule.unknown_bonus}\n`;
                 break;
 
             // Compensation/Cadeau de Rallye
             case 2:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.gift_compensation;
+                entryStr += jData.lsd.loginBonusName[loginBonus.loginBonusNameId] || jData.locale.schedule.gift_compensation;
                 entryStr += "</h3>\n";
-                entryStr += `${schedLocales.gift_compensation_descr}\n`;
+                entryStr += `${jData.locale.schedule.gift_compensation_descr}\n`;
                 break;
 
             // Bonus Retour
             case 3:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.welcome_back_rally;
+                entryStr += jData.lsd.loginBonusName[loginBonus.loginBonusNameId] || jData.locale.schedule.welcome_back_rally;
                 entryStr += "</h3>\n";
-                entryStr += `${schedLocales.welcome_back_rally_descr}\n`;
+                entryStr += `${jData.locale.schedule.welcome_back_rally_descr}\n`;
                 break;
 
             // Packs Diamants Journaliers
             case 4:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.daily_gem_packs;
+                entryStr += jData.lsd.loginBonusName[loginBonus.loginBonusNameId] || jData.locale.schedule.daily_gem_packs;
                 entryStr += "</h3>\n";
-                entryStr += `${schedLocales.daily_gem_packs}\n`;
+                entryStr += `${jData.locale.schedule.daily_gem_packs}\n`;
                 break;
 
             // Journée Pokémon Masters
             case 5:
-                entryStr += loginBonusName[loginBonus.loginBonusNameId] || schedLocales.pmd_login_bonus;
+                entryStr += jData.lsd.loginBonusName[loginBonus.loginBonusNameId] || jData.locale.schedule.pmd_login_bonus;
                 entryStr += "</h3>\n";
-                entryStr += `${schedLocales.pmd_login_bonus_descr}\n`;
+                entryStr += `${jData.locale.schedule.pmd_login_bonus_descr}\n`;
                 break;
         }
 
@@ -1075,17 +1014,17 @@ async function printLoginBonus(loginBonus, titleText = "") {
         printEndDate(loginBonus.endDate);
     }
 
-    const rewards = loginBonusReward.filter(lbr => lbr.rewardId === loginBonus.rewardId).sort((a, b) => a.day - b.day);
+    const rewards = jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === loginBonus.rewardId).sort((a, b) => a.day - b.day);
 
     if(rewards.length === 0) return;
 
-    scheduleDiv.innerHTML += `<br><br><b>${schedLocales.login_bonus_rewards}</b>`;
+    scheduleDiv.innerHTML += `<br><br><b>${jData.locale.schedule.login_bonus_rewards}</b>`;
     for (const lbr1 of rewards) {
         scheduleDiv.innerHTML += `<br><b>${lbr1.day}.</b>`;
-        let sets = itemSet.filter(is => is.itemSetId === lbr1.itemSetId)[0];
+        let sets = jData.proto.itemSet.filter(is => is.itemSetId === lbr1.itemSetId)[0];
         let i = 1;
         while (sets[`item${i}`] && sets[`item${i}`] !== "0") {
-            scheduleDiv.innerHTML += ` ${await getItemName(sets[`item${i}`])} x${sets[`item${i}Quantity`]}`;
+            scheduleDiv.innerHTML += ` ${getItemName(sets[`item${i}`])} x${sets[`item${i}Quantity`]}`;
             i++;
         }
     }
@@ -1141,31 +1080,31 @@ function printCalendars(startDates) {
             let calTrDays = document.createElement("tr");
 
             let calThMon = document.createElement("th");
-            calThMon.innerText = schedLocales.cal_monday;
+            calThMon.innerText = jData.locale.schedule.cal_monday;
             calTrDays.appendChild(calThMon);
 
             let calThTue = document.createElement("th");
-            calThTue.innerText = schedLocales.cal_tuesday;
+            calThTue.innerText = jData.locale.schedule.cal_tuesday;
             calTrDays.appendChild(calThTue);
 
             let calThWed = document.createElement("th");
-            calThWed.innerText = schedLocales.cal_wednesday;
+            calThWed.innerText = jData.locale.schedule.cal_wednesday;
             calTrDays.appendChild(calThWed);
 
             let calThThu = document.createElement("th");
-            calThThu.innerText = schedLocales.cal_thursday;
+            calThThu.innerText = jData.locale.schedule.cal_thursday;
             calTrDays.appendChild(calThThu);
 
             let calThFri = document.createElement("th");
-            calThFri.innerText = schedLocales.cal_friday;
+            calThFri.innerText = jData.locale.schedule.cal_friday;
             calTrDays.appendChild(calThFri);
 
             let calThSat = document.createElement("th");
-            calThSat.innerText = schedLocales.cal_saturday;
+            calThSat.innerText = jData.locale.schedule.cal_saturday;
             calTrDays.appendChild(calThSat);
 
             let calThSun = document.createElement("th");
-            calThSun.innerText = schedLocales.cal_sunday;
+            calThSun.innerText = jData.locale.schedule.cal_sunday;
             calTrDays.appendChild(calThSun);
 
             calThead.appendChild(calTrDays);
@@ -1217,8 +1156,8 @@ function printCalendars(startDates) {
     } while(date.getMonth() <= endDate.getMonth() && date.getFullYear() <= endDate.getFullYear());
 }
 
-async function setVersionInfos(id) {
-    let version = versions.find(v => v.version === id);
+function setVersionInfos(id) {
+    let version = jData.custom.versionReleaseDates.find(v => v.version === id);
 
     if (version === undefined)
         return;
@@ -1249,15 +1188,15 @@ async function setVersionInfos(id) {
                 case "scout":
                     if (scoutFlag) {
                         scoutFlag = false;
-                        titleText = `<h2>${schedLocales.scouts}</h2>`;
+                        titleText = `<h2>${jData.locale.schedule.scouts}</h2>`;
                     }
-                    await printScouts(sched, titleText);
+                    printScouts(sched, titleText);
                     break;
 
                 case "championBattle":
                     if (championBattleFlag) {
                         championBattleFlag = false;
-                        titleText = `<h2>${schedLocales.champion_stadium}</h2>`;
+                        titleText = `<h2>${jData.locale.schedule.champion_stadium}</h2>`;
                     }
                     printChampionBattle(sched, titleText);
                     break;
@@ -1265,7 +1204,7 @@ async function setVersionInfos(id) {
                 case "event":
                     if (eventFlag) {
                         eventFlag = false;
-                        titleText = `<h2>${schedLocales.events}</h2>`;
+                        titleText = `<h2>${jData.locale.schedule.events}</h2>`;
                     }
 
                     if (sched.isLegendaryBattle) {
@@ -1291,7 +1230,7 @@ async function setVersionInfos(id) {
                 case "shop":
                     if (shopFlag) {
                         shopFlag = false;
-                        titleText = `<h2>${schedLocales.gem_specials}</h2>`;
+                        titleText = `<h2>${jData.locale.schedule.gem_specials}</h2>`;
                     }
                     printShopOffers(sched, titleText);
                     break;
@@ -1299,23 +1238,23 @@ async function setVersionInfos(id) {
                 case "salon":
                     if (salonFlag) {
                         salonFlag = false;
-                        titleText = `<h2>${schedLocales.trainer_lodge}</h2>\n<img src="${salonBannerPath}" class="bannerImg" />`;
+                        titleText = `<h2>${jData.locale.schedule.trainer_lodge}</h2>\n<img src="${salonBannerPath}" class="bannerImg" />`;
                     }
-                    await printSalonGuest(sched.scheduleId, titleText);
+                    printSalonGuest(sched.scheduleId, titleText);
                     break;
 
                 case "chara":
                     if (charaFlag) {
                         charaFlag = false;
-                        titleText = `<h2>${schedLocales.pair_addition_update}</h2>`;
+                        titleText = `<h2>${jData.locale.schedule.pair_addition_update}</h2>`;
                     }
-                    await printPairChanges(sched, titleText);
+                    printPairChanges(sched, titleText);
                     break;
 
                 case "mission":
                     if (missionFlag) {
                         missionFlag = false;
-                        titleText = `<h2>${schedLocales.mission}</h2>`;
+                        titleText = `<h2>${jData.locale.schedule.mission}</h2>`;
                     }
                     printNewMissions(sched, titleText);
                     break;
@@ -1323,7 +1262,7 @@ async function setVersionInfos(id) {
                 case "music":
                     if (musicFlag) {
                         musicFlag = false;
-                        titleText = `<h2>${schedLocales.jukebox}</h2>`;
+                        titleText = `<h2>${jData.locale.schedule.jukebox}</h2>`;
                     }
                     printNewMusics(sched.scheduleId, titleText);
                     break;
@@ -1331,21 +1270,21 @@ async function setVersionInfos(id) {
                 case "loginBonus":
                     if (loginBonusFlag) {
                         loginBonusFlag = false;
-                        titleText = `<h2>${schedLocales.login_bonus}</h2>`;
+                        titleText = `<h2>${jData.locale.schedule.login_bonus}</h2>`;
                     }
-                    await printLoginBonus(sched, titleText);
+                    printLoginBonus(sched, titleText);
                     break;
             }
         }
     }
 }
 
-async function setVersion(id, setUrl = true) {
+function setVersion(id, setUrl = true) {
     versionSelect.value = id;
     nextContentBtn.href = "#"
     nextContentBtn.style.display = "none";
 
-    await setVersionInfos(id);
+    setVersionInfos(id);
 
     if (setUrl)
         setUrlEventID(versionSelect.value);
@@ -1371,10 +1310,10 @@ function changeHtmlTexts() {
     versionSelect.id = "versionSelect";
 
     document.getElementById("verSelDiv").appendChild(versionSelect);
-    document.getElementById("changeVersion").innerText = schedLocales.change_version;
-    document.getElementById("downloadDataLegend").innerText = schedLocales.download_data_legend;
-    document.getElementById("downloadData").innerText = schedLocales.download_data_btn;
-    document.getElementById("calendarTitle").innerText = schedLocales.calendar_title;
+    document.getElementById("changeVersion").innerText = jData.locale.schedule.change_version;
+    document.getElementById("downloadDataLegend").innerText = jData.locale.schedule.download_data_legend;
+    document.getElementById("downloadData").innerText = jData.locale.schedule.download_data_btn;
+    document.getElementById("calendarTitle").innerText = jData.locale.schedule.calendar_title;
 }
 
 async function init() {
@@ -1384,8 +1323,8 @@ async function init() {
     toolsDiv = document.getElementById('adminTools');
 
     await buildHeader();
-    await getCustomJSON();
-    await getData().then();
+    await getData();
+
     changeHtmlTexts();
 
     if(isAdminMode) {
@@ -1401,8 +1340,8 @@ async function init() {
     scheduleByVersion();
 
 
-    versionSelect.onchange = async function() {
-        await setVersion(versionSelect.value);
+    versionSelect.onchange = function() {
+        setVersion(versionSelect.value);
     };
 
     const url = new URL(window.location);
@@ -1412,7 +1351,7 @@ async function init() {
         versionSelect.value = urlVersionId;
     }
 
-    await setVersion(versionSelect.value, false);
+    setVersion(versionSelect.value, false);
 
     //downloadData()
 

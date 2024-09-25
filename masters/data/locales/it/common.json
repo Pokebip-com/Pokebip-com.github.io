@@ -1,6 +1,10 @@
 {
   "adminmenu_title": "Admin",
+  "adminsubmenu_bingo": "Bingo",
   "adminsubmenu_discord": "Discord Message",
+  "adminsubmenu_eventRewards": "Progress Event",
+  "adminsubmenu_itemExchange": "Item Exchange",
+  "adminsubmenu_lodge": "Lodge",
   "atk": "Attacco",
   "base_trainer_name": "Trainer (Scottie/Bettie)",
   "category_names": {

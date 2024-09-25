@@ -13,29 +13,26 @@ let trainerVerboseNames;
 async function getData() {
     await buildHeader();
 
-    monster = await jsonCache.getProto("Monster");
-    monsterBase = await jsonCache.getProto("MonsterBase");
+    // PROTO
+    jsonCache.preloadProto("TrainerExRole");
 
-    trainer = await jsonCache.getProto("Trainer");
-    trainerBase = await jsonCache.getProto("TrainerBase");
-    trainerExRole = (await jsonCache.getProto("TrainerExRole"))
-        .sort((a, b) => b.scheduleId.localeCompare(a.scheduleId));
+    preloadUtils();
 
-    monsterNames = await jsonCache.getLsd("monster_name");
-    trainerNames = await jsonCache.getLsd("trainer_name");
-    trainerVerboseNames = await jsonCache.getLsd("trainer_verbose_name");
+    await jsonCache.runPreload();
+
+    jData.proto.trainerExRole.sort((a, b) => b.scheduleId.localeCompare(a.scheduleId));
 }
 
-getData().then(async () => {
-    document.getElementById("pageTitle").innerText = commonLocales.submenu_pair_ex_role;
+getData().then(() => {
+    document.getElementById("pageTitle").innerText = jData.locale.common.submenu_pair_ex_role;
 
     exRoleDiv = document.getElementById("exRoleDiv");
 
     exRoleDiv.innerHTML += "<ul>";
-    for(let entry in trainerExRole) {
-        let role = commonLocales.role_names[trainerExRole[entry].role];
+    for(let entry in jData.proto.trainerExRole) {
+        let role = jData.locale.common.role_names[jData.proto.trainerExRole[entry].role];
 
-        exRoleDiv.innerHTML += `<li><b>${await getTrainerName(trainerExRole[entry].trainerId)} & ${await getMonsterNameByTrainerId(trainerExRole[entry].trainerId)} :</b> ${role}</li>`;
+        exRoleDiv.innerHTML += `<li><b>${getTrainerName(jData.proto.trainerExRole[entry].trainerId)} & ${getMonsterNameByTrainerId(jData.proto.trainerExRole[entry].trainerId)} :</b> ${role}</li>`;
     }
     exRoleDiv.innerHTML += "</ul>";
 });
