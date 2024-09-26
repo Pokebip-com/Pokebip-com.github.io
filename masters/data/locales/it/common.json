@@ -13,6 +13,7 @@
     "Status": "Status"
   },
   "def": "Difesa",
+  "enhancement": "(Enhancement)",
   "ex_sync_effect": {
     "0": "Targets all opponents.",
     "1": "Targets all opponents.",

@@ -271,21 +271,10 @@ function urlStateChange() {
 }
 
 function setup() {
+    document.getElementById("pageTitle").innerText = jData.locale.common.adminsubmenu_bingo;
     bingoList = document.getElementById("bingoList");
     bingoMission = document.getElementById("bingoMissionDiv");
     bingoReward = document.getElementById("bingoRewardDiv");
-
-    if (isAdminMode) {
-        document.getElementById("getBipcode").style.display = "block";
-
-        document.getElementById("btnGetBipcode").addEventListener("click", (evt) => {
-            let bipCode = getExchangeBipcodeTable()
-            navigator.clipboard.writeText(bipCode);
-            evt.target.innerText = "Tableau copié dans le presse-papier";
-
-            setTimeout(() => evt.target.innerText = "Copier le code du tableau", 5000);
-        });
-    }
 
     populateSelect();
 }

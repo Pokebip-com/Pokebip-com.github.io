@@ -121,7 +121,9 @@ function populateSelect() {
 
         if(jData.proto.itemExchangeGroup[i].banner == null) continue;
 
-        let option = new Option(jData.proto.itemExchangeGroup[i].banner.text1.replace("\n", " "), jData.proto.itemExchangeGroup[i].itemExchangeGroupId);
+        let text = jData.proto.itemExchangeGroup[i].banner.text1 + (jData.proto.itemExchangeGroup[i].banner.text2 ? " - " + jData.proto.itemExchangeGroup[i].banner.text2 : "");
+
+        let option = new Option(text.replace("\n", " "), jData.proto.itemExchangeGroup[i].itemExchangeGroupId);
         exchangeList.appendChild(option);
     }
 
@@ -152,20 +154,9 @@ function urlStateChange() {
 }
 
 function setup() {
+    document.getElementById("pageTitle").innerText = jData.locale.common.adminsubmenu_itemExchange;
     exchangeList = document.getElementById("exchangeList");
     exchangeInfos = document.getElementById("exchangeInfosDiv");
-
-    if (isAdminMode) {
-        document.getElementById("getBipcode").style.display = "block";
-
-        document.getElementById("btnGetBipcode").addEventListener("click", (evt) => {
-            let bipCode = getExchangeBipcodeTable();
-            navigator.clipboard.writeText(bipCode);
-            evt.target.innerText = "Tableau copié dans le presse-papier";
-
-            setTimeout(() => evt.target.innerText = "Copier le code du tableau", 5000);
-        });
-    }
 
     populateSelect();
 }

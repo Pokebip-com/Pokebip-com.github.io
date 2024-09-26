@@ -91,7 +91,11 @@ async function getData() {
 
 function processData() {
     // On ne prend que les missions qui ne sont pas des missions d'événement
-    jData.proto.missionGroup = jData.proto.missionGroup.filter(mg => jData.proto.eventQuestGroup.filter(eqg => eqg.bannerId === mg.bannerId).length === 0);
+    jData.proto.missionGroup = jData.proto.missionGroup
+        .filter(mg =>
+            jData.proto.eventQuestGroup.filter(eqg => eqg.bannerId === mg.bannerId).length === 0
+            && mg.bannerId > 0
+        );
 
     jData.proto.championBattleEventQuestGroup.map(cbeqg => {
         cbeqg.bannerId = jData.proto.championBattleEvent.find(cbe => cbe.championBattleEventId === cbeqg.championBattleEventId).bannerId;

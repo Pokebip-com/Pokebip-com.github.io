@@ -24,6 +24,8 @@ async function getData() {
             .filter(([k, _]) => jData.proto.progressEvent.map(pe => pe.eventName).includes(k)
         )
     );
+
+    jData.proto.progressEvent.reverse();
 }
 
 function setEventInfos(eventId) {
@@ -91,6 +93,7 @@ function setEventInfos(eventId) {
 function getEventBipcodeTable() {
     const eventId = new URL(window.location).searchParams.get('eventId');
     if(eventId == null) return;
+    console.log("test");
 
     let rewardGroup = jData.proto.progressEventRewardGroup
         .filter(pe => pe.progressEventId === eventId)
@@ -113,6 +116,7 @@ function getEventBipcodeTable() {
 
     str += "[/table][/item][/listh]";
 
+
     return str;
 }
 
@@ -125,8 +129,8 @@ function populateSelect() {
 
     eventsList.addEventListener("change", selectChange);
 
-    urlStateChange();
     window.addEventListener('popstate', urlStateChange);
+    urlStateChange();
 }
 
 function selectChange() {
@@ -135,7 +139,7 @@ function selectChange() {
 
     window.history.pushState(null, '', url.toString());
 
-    setEventInfos(eventsList.value).then();
+    setEventInfos(eventsList.value);
 }
 
 function urlStateChange() {
@@ -144,12 +148,15 @@ function urlStateChange() {
 
     if(urlEventId !== null) {
         eventsList.value = urlEventId;
+        setEventInfos(eventsList.value);
     }
-
-    setEventInfos(eventsList.value);
+    else {
+        selectChange();
+    }
 }
 
 function setup() {
+    document.getElementById("pageTitle").innerText = jData.locale.common.adminsubmenu_eventRewards;
     eventsList = document.getElementById("eventsList");
     eventInfos = document.getElementById("eventInfosDiv");
 

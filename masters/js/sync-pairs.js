@@ -20,6 +20,8 @@ let syncPairSelect;
 let syncPairDiv;
 let toolsDiv;
 
+let landingPairId;
+
 let syncLevel = 5;
 let maxEnergy = 60;
 
@@ -1495,6 +1497,10 @@ function setLatestPairs() {
     let ul = document.createElement("ul");
 
     for (const tr of newTrainers) {
+        if(!landingPairId) {
+            landingPairId = tr.trainerId;
+        }
+
         let li = document.createElement("li");
         let b = document.createElement("b");
         let anchor = document.createElement("a");
@@ -1566,16 +1572,20 @@ function urlStateChange() {
 
     if (urlPairId !== null) {
         syncPairSelect.value = urlPairId;
+
+        setPairInfos(syncPairSelect.value);
+
+        const monsterId = url.searchParams.get('monsterId');
+        const baseId = url.searchParams.get('baseId');
+        const formId = url.searchParams.get('formId');
+
+        if (monsterId && baseId && formId) {
+            switchTab(monsterId, baseId, formId, false);
+        }
     }
-
-    setPairInfos(syncPairSelect.value);
-
-    const monsterId = url.searchParams.get('monsterId');
-    const baseId = url.searchParams.get('baseId');
-    const formId = url.searchParams.get('formId');
-
-    if (monsterId && baseId && formId) {
-        switchTab(monsterId, baseId, formId, false);
+    else {
+        syncPairSelect.value = landingPairId;
+        selectChange();
     }
 }
 

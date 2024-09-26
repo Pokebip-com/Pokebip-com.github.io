@@ -1,9 +1,5 @@
 let lodgeTopicsDiv;
 
-let salonGuest, salonGuestTopic, salonTopic, salonTopicName, salonTopicCategory;
-
-let trainerNames, trainerVerboseNames, trainer, trainerBase;
-
 async function getData() {
     await buildHeader();
 
@@ -87,6 +83,7 @@ getData().then(() => {
             salonGuestSelect.appendChild(option);
         });
 
+
     salonGuestSelect.addEventListener("change", () => {
         let guestId = parseInt(salonGuestSelect.options[salonGuestSelect.selectedIndex].value);
 
@@ -98,11 +95,10 @@ getData().then(() => {
     });
 
     const url = new URL(window.location);
-    const guestId = url.searchParams.get('guestId');
-    if (guestId !== null) {
-        salonGuestSelect.value = guestId;
-        setLodgeTopics(parseInt(guestId));
-    } else {
-        setLodgeTopics(parseInt(salonGuestSelect.options[salonGuestSelect.selectedIndex].value));
-    }
+    const guestId = url.searchParams.get('guestId') || Math.max(...jData.proto.salonGuest.map(sg => parseInt(sg.salonGuestId)));
+    url.searchParams.set('guestId', guestId + "");
+    window.history.pushState(null, '', url.toString());
+
+    salonGuestSelect.value = guestId;
+    setLodgeTopics(parseInt(guestId));
 });

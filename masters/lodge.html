@@ -6,11 +6,37 @@
     <link rel="stylesheet" href="../css/pokebip.css">
     <link rel="stylesheet" href="../css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <style>
+        fieldset#toolbox {
+            max-width: 600px;
+            margin: 0 auto;
+            width: fit-content;
+        }
+
+        fieldset#toolbox p {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 540px;
+            padding: 2px 10px;
+            border-radius: 8px;
+            line-height: 1rem;
+        }
+    </style>
 </head>
 
 <body>
 <div id="contentDiv">
-    <select id="salonGuestSelect"></select>
+    <fieldset id="toolbox">
+        <p>
+            <label for="salonGuestSelect" style="margin-right: 10px;">Guest: </label>
+            <select id="salonGuestSelect"></select>
+        </p>
+        <p style="display: none;" id="getBipcode">
+            <button id="btnGetBipcode">Copier le code du tableau</button>
+        </p>
+    </fieldset>
 
     <div id="lodgeTopicsDiv"></div>
 </div>

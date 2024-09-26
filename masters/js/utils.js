@@ -71,7 +71,9 @@ function preloadUtils(preloadItems = false) {
     if(preloadItems) {
         // Item Proto
         jsonCache.preloadProto(`AbilityItem`);
+        jsonCache.preloadProto(`EventExchangeItem`);
         jsonCache.preloadProto(`Item`);
+        jsonCache.preloadProto(`MonsterEnhancement`);
         jsonCache.preloadProto(`MoveLevelUpItem`);
         jsonCache.preloadProto(`StoryQuest`);
         jsonCache.preloadProto(`TrainerBuildupItem`);
@@ -525,6 +527,11 @@ function getItemName(itemId, log = false) {
         // event_item_name_xx.lsd
         case 75:
             lsdName = `event_item_name`;
+
+            let eventExchangeItem = jData.proto.eventExchangeItem.find(ei => ei.itemId === itemId);
+            if(eventExchangeItem && eventExchangeItem.itemNameOverride !== "-1") {
+                fieldName = eventExchangeItem.itemNameOverride;
+            }
             break;
 
         // BattleRallyItem.pb
@@ -574,7 +581,10 @@ function getItemName(itemId, log = false) {
 
         // MonsterEnhancement.pb
         case 92:
-
+            let enhancement = jData.proto.monsterEnhancement.find(me => me.monsterEnhancementId === itemId);
+            if(enhancement) {
+                return `${getPairName(enhancement.trainerId)} ${jData.locale.common.enhancement}`;
+            }
             break;
 
         // skill_deck_item_skill_feather_item_name_xx.lsd
@@ -681,7 +691,7 @@ function getItemName(itemId, log = false) {
         return "Item category not yet implemented...";
     }
 
-    return (prefix === "" ? "" : `${prefix} `) + jData.lsd[jsonCache.standardizeName(lsdName)][fieldName] || "Unknown Item";
+    return (prefix === "" ? "" : `${prefix} `) + (jData.lsd[jsonCache.standardizeName(lsdName)][fieldName] || "Unknown Item");
 
 }
 

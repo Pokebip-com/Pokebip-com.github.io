@@ -13,6 +13,7 @@
     "Status": "Statut"
   },
   "def": "Défense",
+  "enhancement": "(Amélioration)",
   "ex_sync_effect": {
     "0": "Cible tous les ennemis.",
     "1": "Cible tous les ennemis.",
