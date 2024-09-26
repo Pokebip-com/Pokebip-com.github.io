@@ -258,7 +258,7 @@
     "20046600": "Agarra sus colas para electrificar los puños y luego soltar\npuñetazos devastadores.",
     "20046800": "Se dice que aparece en zonas pacíficas y las bendice\ncon sus dones.",
     "20047000": "A pesar de evitar a toda costa los combates, si ha de\nproteger a sus amigos, no duda en usar la hoja de la\ncola como una afilada espada.",
-    "20047100": "Congela su pelaje y lo convierte en afilados pinchos para\ndefenderse. Es capaz de reducir su temperatura corporal\nhasta -60 ºC.",
+    "20047100": "Congela su pelaje y lo convierte en afilados pinchos para\ndefenderse. Es capaz de reducir su temperatura corporal\nhasta -60 °C.",
     "20047500": "Puede presentir los movimientos de sus rivales y por eso\nataca siempre antes que ellos.",
     "20047600": "Manipula unas pequeñas unidades conocidas como\nmininarices, aunque estas a veces se pierden y no\nsaben cómo regresar a Probopass.",
     "20047700": "Se dice que recoge en su cuerpo flexible a los espíritus\nextraviados y los guía hasta casa.",
@@ -568,5 +568,8 @@
     "2009400000": "Los huesos de sus alas producen electricidad con las\ncorrientes de aire. Para cazar, se zambulle en el mar\ny electrocuta a su presa.",
     "2010000000": "Se dice que su cuerpo está formado por 1000 monedas.\nEs capaz de hacer buenas migas con cualquiera\nrápidamente por su sociabilidad.",
     "2009991100": "Vive en el interior de un viejo cofre desgastado. Al no\ntomarlo por un Pokémon, a veces termina a la venta por\nerror en tiendas de antigüedades.",
-    "2009991200": "Nació de una moneda imbuida de sentimientos. Al\nparecer, vaga de un lado para otro con el fin de regresar\nal cofre que una vez lo contuvo."
+    "2009991200": "Nació de una moneda imbuida de sentimientos. Al\nparecer, vaga de un lado para otro con el fin de regresar\nal cofre que una vez lo contuvo.",
+    "2009830000": "Solo el Bisharp más destacado entre las filas de cada gran\nejército tiene el honor de evolucionar a Kingambit.",
+    "2009140000": "Embelesa a quien lo ve con una danza que rebosa\nde exotismo y corta a sus rivales con sus plumas\nornamentales hechas de agua.",
+    "2009870000": "Sus rasgos distintivos se asemejan a los del espíritu de un\nreptil volador mencionado en una revista esotérica."
 }

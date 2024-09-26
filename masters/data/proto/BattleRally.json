@@ -1,3 +1,5 @@
 {"entries": [
-{ "battleRallyId": "100", "scheduleId": "6010_1W_Updata_BattleRally_FOREVER" }
+{ "battleRallyId": "100", "scheduleId": "6010_1W_Updata_BattleRally_FOREVER" },
+{ "battleRallyId": "110", "scheduleId": "6090_BattleRally_add_FOREVER" },
+{ "battleRallyId": "9000", "scheduleId": "6010_1W_Updata_BattleRally_FOREVER" }
 ]}

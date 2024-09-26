@@ -147,5 +147,6 @@
 { "textTagValueId": "133", "idx": "5", "effectTag": "3", "value": "10005" },
 { "textTagValueId": "134", "idx": "0", "effectTag": "5", "value": "1" },
 { "textTagValueId": "135", "idx": "0", "effectTag": "5", "value": "2" },
-{ "textTagValueId": "136", "idx": "0", "effectTag": "5", "value": "3" }
+{ "textTagValueId": "136", "idx": "0", "effectTag": "5", "value": "3" },
+{ "textTagValueId": "137", "idx": "0", "effectTag": "5", "value": "4" }
 ]}

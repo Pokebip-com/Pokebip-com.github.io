@@ -69,5 +69,11 @@
 { "itemId": "540000000068", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60087 },
 { "itemId": "540000000069", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60084 },
 { "itemId": "540000000070", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60085 },
-{ "itemId": "540000000071", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60086 }
+{ "itemId": "540000000071", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60086 },
+{ "itemId": "540000000072", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60088 },
+{ "itemId": "540000000073", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60089 },
+{ "itemId": "540000000074", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60090 },
+{ "itemId": "540000000075", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60091 },
+{ "itemId": "540000000076", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60092 },
+{ "itemId": "540000000077", "u2": "1", "imageId": "i051_0036_00", "rarity": 9, "potentialLotId": 60093 }
 ]}

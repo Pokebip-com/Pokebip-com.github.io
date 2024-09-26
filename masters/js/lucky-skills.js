@@ -140,7 +140,12 @@ function listLuckyCookiesInfos() {
     cookieListDiv.appendChild(normalCookiesH2);
     cookieListDiv.appendChild(normalUl);
 
-    printCookieInfos(newCookies[0]);
+    if(newCookies.length > 0) {
+        printCookieInfos(newCookies[0]);
+    }
+    else {
+        printCookieInfos(normalCookies[0]);
+    }
 }
 
 function printCookiePassiveSkills(cookie, div) {

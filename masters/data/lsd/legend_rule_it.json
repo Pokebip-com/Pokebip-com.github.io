@@ -70,5 +70,11 @@
     "legend_rule_6070_003": "Se non sono presenti effetti sul campo\navversario, la Difesa e la Difesa Speciale\ndegli avversari sono triplicate.",
     "legend_rule_6080_001": "I PS di Latios rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
     "legend_rule_6080_002": "I danni subiti dagli avversari diminuiscono\nin proporzione al totale delle modifiche\nalle loro statistiche.",
-    "legend_rule_6080_003": "Se l'Attacco, l'Attacco Speciale o la Difesa\nSpeciale degli avversari aumenta, le loro\nmosse, oppure le loro mosse e Unimosse,\nvengono potenziate."
+    "legend_rule_6080_003": "Se l'Attacco, l'Attacco Speciale o la Difesa\nSpeciale degli avversari aumenta, le loro\nmosse, oppure le loro mosse e Unimosse,\nvengono potenziate.",
+    "legend_rule_6090_001": "I PS di Pawmot rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
+    "legend_rule_6090_002": "Gli effetti sul campo attivati dagli avversari\nsono permanenti.",
+    "legend_rule_6090_003": "Quando gli avversari non sono affetti\nda variazioni di stato negative, la loro\nDifesa e la loro Difesa Speciale triplicano.",
+    "legend_rule_6090_011": "I PS di Ninetales rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
+    "legend_rule_6090_012": "Quando gli avversari non sono affetti\nda problemi di stato, la loro Difesa\ne Difesa Speciale triplicano.",
+    "legend_rule_6090_013": "Se l'Attacco, Attacco Speciale o Velocità \ndegli avversari aumentano, le loro mosse,\noppure le loro mosse e Unimosse, \nvengono potenziate."
 }

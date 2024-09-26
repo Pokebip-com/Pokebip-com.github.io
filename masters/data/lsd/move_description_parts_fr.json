@@ -784,5 +784,11 @@
     "999150": "Augmente l'Atq. Spé. et la Déf. Spé. de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
     "999149": "Permet à Carchacrok de devenir Méga-Carchacrok jusqu'à la fin du combat.",
     "999148": "Permet à Métalosse de devenir Méga-Métalosse jusqu'à la fin du combat.",
-    "999147": "Augmente la puissance de l'attaque quand un cercle s'applique au côté allié."
+    "999147": "Augmente la puissance de l'attaque quand un cercle s'applique au côté allié.",
+    "999146": "Quand l'[Name:ReferencedMessageTag ] du lanceur a été augmenté.",
+    "999145": "Quand l'[Name:ReferencedMessageTag ] du lanceur n'est pas augmenté.",
+    "999144": "Plus l'[Name:ReferencedMessageTag ] du lanceur a été augmenté, plus cette attaque est puissante.",
+    "999143": "Augmente l'[Name:ReferencedMessageTag Idx=\"1\" ] du lanceur d'un nombre de rangs égal au nombre de Pokémon mis K.O. dans votre équipe.",
+    "999142": "Annule toutes les augmentations de Vitesse du lanceur.",
+    "999141": "Baisse la [Name:ReferencedMessageTag Idx=\"2\" ] de la cible de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ] la première fois que cette capacité offensive est utilisée avec succès à chaque combat."
 }

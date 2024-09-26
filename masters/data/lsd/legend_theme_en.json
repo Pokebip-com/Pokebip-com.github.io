@@ -23,5 +23,7 @@
     "legend_theme_6050_001": "Change the weather from a sandstorm\nto something else! Lower your opponent’s Speed!",
     "legend_theme_6060_001": "The opponent’s Fissure and Earthquake are\npowered up! Avoid getting hit by attacks!",
     "legend_theme_6070_001": "Prepare for the opponent’s powerful\nstat increases! Use a Dark Damage Field!",
-    "legend_theme_6080_001": "Lower each opponent’s stats to\nnullify their damage reduction!"
+    "legend_theme_6080_001": "Lower each opponent’s stats to\nnullify their damage reduction!",
+    "legend_theme_6090_001": "Change the field! Attack while\napplying negative status changes!",
+    "legend_theme_6090_011": "Attack while inflicting status conditions! Lower\nyour opponent’s Attack, Sp. Atk, and Speed!"
 }

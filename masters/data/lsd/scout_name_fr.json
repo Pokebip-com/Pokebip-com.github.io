@@ -167,5 +167,10 @@
     "event_6060_1W_SuperTicket_05": "Appel Duo\nsaisonnier taux ↑",
     "event_6080_2W_MasterTicket_01": "Appel Duo garanti :\nMalva !",
     "event_6080_2W_MasterTicket_02": "Appel Duo garanti :\nChuck !",
-    "event_6080_2W_MasterTicket_03": "Appel Duo garanti :\nTrovato !"
+    "event_6080_2W_MasterTicket_03": "Appel Duo garanti :\nTrovato !",
+    "event_6090_3W_SuperTicket_01": "Appel Duo saisonn.\ntaux ↑ : Mashynn !",
+    "event_6090_3W_MasterTicket_01": "Appel Duo saisonn.\ngaranti : Mashynn !",
+    "event_6090_3W_SuperTicket_02": "Appel Duo saisonn.\ntaux ↑ : Anis !",
+    "event_6090_3W_MasterTicket_02": "Appel Duo saisonn.\ngaranti : Anis !",
+    "event_6090_3W_SuperTicket_03": "Appel Duo\nsaisonnier taux ↑"
 }

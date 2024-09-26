@@ -1,6 +1,6 @@
 {
-    "1": "Sirve para aumentar a [Digit:2digits ]★ el nivel de\nlos movimientos de una pareja de compis.",
-    "2": "Sirve para aumentar a [Digit:2digits ]★ el nivel de\nlos movimientos de una pareja de compis\nde [Name:Role ].",
+    "1": "Sirve para aumentar el nivel de los\nmovimientos de una pareja de compis con\nun número de ★ original de [Digit:2digits ]★.\n",
+    "2": "Sirve para aumentar el nivel de los\nmovimientos de una pareja de compis de\n[Name:Role ] con un número de ★ original de [Digit:2digits ]★.",
     "3": "Sirve para aumentar el nivel de los\nmovimientos de un Pokémon que\nhayas conseguido mediante un Huevo.",
     "4": "Sirve para aumentar el nivel de los\nmovimientos de [Name:TrainerName ]\ny [Name:PokemonName ]."
 }

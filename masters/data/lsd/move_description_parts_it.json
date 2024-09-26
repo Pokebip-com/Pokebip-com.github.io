@@ -280,7 +280,7 @@
     "999659": "Ogni utilizzo fa recuperare fino a circa il [Digit:2digits ]% dei PS massimi di chi la usa.",
     "999658": "Se subisce un attacco semplice fisico, la Difesa del bersaglio che l'ha sferrato viene ridotta di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999657": "Aumenta la Velocità di tutte le Unità alleate di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
-    "999656": "Abbassa di [Digit:1digit Idx=\"1\" ] il numero di azioni necessarie a chi la usa per sferrare un'Unimossa.",
+    "999656": "Abbassa di [Digit:1digit Idx=\"1\" ] il numero di azioni necessarie a chi la usa per sferrare l'Unimossa.",
     "999655": "Aumenta l'Attacco Speciale, la Difesa Speciale e la Velocità di tutte le Unità alleate, fino a un massimo di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ], in proporzione al livello mosse di chi la usa.",
     "999654": "Se Gardevoir di chi la usa si megaevolve, aggiunge anche [Digit:1digit Idx=\"1\" ] [IT:Qty S=\"barretta\" P=\"barrette\" ] alla barra mosse di chi la usa.",
     "999653": "Quando la Velocità di chi la usa viene aumentata, applica al suo Attacco lo stesso aumento.",
@@ -784,5 +784,11 @@
     "999150": "Aumenta l'Attacco Speciale e la Difesa Speciale di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999149": "Permette a Garchomp di megaevolversi. L'effetto svanisce al termine della lotta.",
     "999148": "Permette a Metagross di megaevolversi. L'effetto svanisce al termine della lotta.",
-    "999147": "Questo attacco aumenta di potenza quando al campo alleato è applicata una Cerchia."
+    "999147": "Questo attacco aumenta di potenza quando al campo alleato è applicata una Cerchia.",
+    "999146": "Quando l'[Name:ReferencedMessageTag ] di chi la usa viene aumentato.",
+    "999145": "Quando l'[Name:ReferencedMessageTag ] di chi la usa non viene aumentato.",
+    "999144": "Aumenta la potenza di questo attacco in proporzione all'aumento dell'[Name:ReferencedMessageTag ] di chi la usa.",
+    "999143": "Aumenta l'[Name:ReferencedMessageTag Idx=\"1\" ] di chi la usa di un numero di gradi pari al numero di Pokémon KO nella tua squadra.",
+    "999142": "Rimuove tutti gli aumenti della Velocità di chi la usa.",
+    "999141": "Riduce la [Name:ReferencedMessageTag Idx=\"2\" ] del bersaglio di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ] la prima volta che questo attacco semplice va a segno in ogni lotta."
 }

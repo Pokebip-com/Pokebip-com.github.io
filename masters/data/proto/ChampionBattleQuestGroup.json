@@ -1,0 +1,10 @@
+{"entries": [
+{ "questGroupId": 900101, "championBattleRegionId": 900001, "u3": 1, "questGroupName": "champion_battle_group_900101", "recommendedLevel": 45, "u6": 0, "u7": 10, "u8": "", "u9": "", "emblemItemId": "735208001010", "pointsPerArea": 0 },
+{ "questGroupId": 900102, "championBattleRegionId": 900001, "u3": 2, "questGroupName": "champion_battle_group_900102", "recommendedLevel": 125, "u6": 0, "u7": 20, "u8": "", "u9": "", "emblemItemId": "735208001020", "pointsPerArea": 3000 },
+{ "questGroupId": 900202, "championBattleRegionId": 900002, "u3": 2, "questGroupName": "champion_battle_group_900102", "recommendedLevel": 125, "u6": 0, "u7": 20, "u8": "", "u9": "bgm_field_champion_02", "emblemItemId": "735212001020", "pointsPerArea": 3000 },
+{ "questGroupId": 900302, "championBattleRegionId": 900003, "u3": 2, "questGroupName": "champion_battle_group_900102", "recommendedLevel": 125, "u6": 0, "u7": 40, "u8": "", "u9": "", "emblemItemId": "735303001000", "pointsPerArea": 3000 },
+{ "questGroupId": 900402, "championBattleRegionId": 900004, "u3": 2, "questGroupName": "champion_battle_group_900102", "recommendedLevel": 125, "u6": 0, "u7": 40, "u8": "", "u9": "", "emblemItemId": "735309001000", "pointsPerArea": 3000 },
+{ "questGroupId": 900502, "championBattleRegionId": 900005, "u3": 2, "questGroupName": "champion_battle_group_900102", "recommendedLevel": 125, "u6": 0, "u7": 40, "u8": "", "u9": "", "emblemItemId": "735404001000", "pointsPerArea": 3000 },
+{ "questGroupId": 900602, "championBattleRegionId": 900006, "u3": 2, "questGroupName": "champion_battle_group_900102", "recommendedLevel": 125, "u6": 0, "u7": 40, "u8": "", "u9": "", "emblemItemId": "735407004000", "pointsPerArea": 3000 },
+{ "questGroupId": 900702, "championBattleRegionId": 900007, "u3": 2, "questGroupName": "champion_battle_group_900102", "recommendedLevel": 125, "u6": 0, "u7": 40, "u8": "", "u9": "", "emblemItemId": "735501004000", "pointsPerArea": 3000 }
+]}

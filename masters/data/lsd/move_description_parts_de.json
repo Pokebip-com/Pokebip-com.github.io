@@ -784,5 +784,11 @@
     "999150": "Erhöht den Spezial-Angriff und die Spezial-Verteidigung aller verbündeten Gefährten um [Digit:1digit ].",
     "999149": "Löst bei Knakrack bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Knakrack aus.",
     "999148": "Löst bei Metagross bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Metagross aus.",
-    "999147": "Die Stärke dieses Angriffs steigt, wenn ein Freundeskreis auf der Anwender-Seite aktiv ist."
+    "999147": "Die Stärke dieses Angriffs steigt, wenn ein Freundeskreis auf der Anwender-Seite aktiv ist.",
+    "999146": "Wenn der [Name:ReferencedMessageTag ] des Anwenders erhöht ist.",
+    "999145": "Wenn der [Name:ReferencedMessageTag ] des Anwenders nicht erhöht ist.",
+    "999144": "Je stärker der [Name:ReferencedMessageTag ] des Anwenders erhöht wurde, desto mehr wird die Stärke dieses Angriffs erhöht.",
+    "999143": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] des Anwenders um die Anzahl der Pokémon in deinem Team, die kampfunfähig geworden sind.",
+    "999142": "Entfernt alle Erhöhungen der Initiative des Anwenders.",
+    "999141": "Senkt ein Mal pro Kampf den [Name:ReferencedMessageTag Idx=\"2\" ] des Zieles um [Digit:1digit Idx=\"3\" ], wenn dieser Angriff mit einer Attacke erstmals Erfolg hat."
 }

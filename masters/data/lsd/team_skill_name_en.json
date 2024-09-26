@@ -303,7 +303,7 @@
     "19918004": "Pallet Town Sprint",
     "10102004": "Fire Sprint",
     "10103005": "Water Field",
-    "10109006": "10109006",
+    "10109006": "Ground Multi",
     "10110005": "Flying Field",
     "10115006": "Dragon Multi",
     "10117004": "Steel Sprint",
@@ -326,5 +326,8 @@
     "19915006": "Rock Lover Multi",
     "19920005": "Battle Partner Field",
     "19951006": "Researcher Multi",
-    "19970004": "Alola Adventurer Sprint"
+    "19970004": "Alola Adventurer Sprint",
+    "10103004": "Water Sprint",
+    "10403004": "Glasses Sprint",
+    "19919004": "Veteran Trainer Sprint"
 }

@@ -784,5 +784,11 @@
     "999150": "같은 편 버디즈 전원의 특수공격과 특수방어가 [Digit:1digit ]단계 오른다",
     "999149": "배틀이 끝날 때까지 메가한카리아스가 된다",
     "999148": "배틀이 끝날 때까지 메가메타그로스가 된다",
-    "999147": "같은 편 전원의 필드가 서클 중 하나일 때는 위력이 오른다"
+    "999147": "같은 편 전원의 필드가 서클 중 하나일 때는 위력이 오른다",
+    "999146": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 올라가 있을 때",
+    "999145": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 올라가 있지 않을 때",
+    "999144": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 올라가 있는 만큼 위력이 오른다",
+    "999143": "자신의 팀에 있는 기절 상태의 포켓몬 수만큼 자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] 오른다",
+    "999142": "자신의 올라간 스피드를 모두 소비한다",
+    "999141": "처음 이 기술로 공격에 성공했을 때만 상대의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"3\" ]단계 떨어뜨린다"
 }

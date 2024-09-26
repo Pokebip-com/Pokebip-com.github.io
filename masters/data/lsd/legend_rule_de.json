@@ -70,5 +70,11 @@
     "legend_rule_6070_003": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
     "legend_rule_6080_001": "Fallen Latios’ KP das erste Mal auf 60 %,\nhält es mit dieser Anzahl an KP durch.",
     "legend_rule_6080_002": "Der Schaden des Gegners sinkt abhängig\nvon der Summe der erhöhten Statuswerte.",
-    "legend_rule_6080_003": "Die Attacken und Gefährtenattacken der\nGegner sind verstärkt, wenn ihr Angriff, ihr\nSp.-Ang., oder ihre Sp.-Vert. erhöht sind."
+    "legend_rule_6080_003": "Die Attacken und Gefährtenattacken der\nGegner sind verstärkt, wenn ihr Angriff, ihr\nSp.-Ang., oder ihre Sp.-Vert. erhöht sind.",
+    "legend_rule_6090_001": "Fallen Pamomamos KP das erste Mal auf\n60 %, hält es mit dieser Anzahl an KP durch.",
+    "legend_rule_6090_002": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
+    "legend_rule_6090_003": "Wenn der Gegner nicht von einer negativen\nStatusveränderung betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
+    "legend_rule_6090_011": "Fallen Vulnonas KP das erste Mal auf 70 %,\nhält es mit dieser Anzahl an KP durch.",
+    "legend_rule_6090_012": "Wenn der Gegner nicht von einem\nStatusproblem betroffen ist, sind seine Vert.\nund Sp.-Vert. verdreifacht.",
+    "legend_rule_6090_013": "Erhöht die Stärke von Attacken oder von\nAttacken und der GA des Geg., wenn sein\nAngriff, Sp.-Ang. oder Initiative erhöht ist."
 }

@@ -19,7 +19,7 @@ async function getData() {
 
     // LSD
     jsonCache.preloadLsd("skill_deck_item_skill_feather_item_name");
-    jsonCache.preloadLsd("Team_skill_tag");
+    jsonCache.preloadLsd("team_skill_tag");
 
     // CUSTOM
     jsonCache.preloadCustom("version_release_dates");
@@ -132,7 +132,12 @@ function listFeatherInfos() {
 
     featherListDiv.appendChild(specialUl);
 
-    printFeatherInfos(newFeathers[0]);
+    if(newFeathers.length > 0) {
+        printFeatherInfos(newFeathers[0]);
+    }
+    else {
+        printFeatherInfos(normalFeathers[0]);
+    }
 }
 
 function printSlotsTable(lots, div) {

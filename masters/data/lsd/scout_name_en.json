@@ -167,5 +167,10 @@
     "event_6060_1W_SuperTicket_05": "Seasonal Featured\nTicket Scout",
     "event_6080_2W_MasterTicket_01": "Malva\nGuaranteed Ticket Scout",
     "event_6080_2W_MasterTicket_02": "Chuck\nGuaranteed Ticket Scout",
-    "event_6080_2W_MasterTicket_03": "Trevor\nGuaranteed Ticket Scout"
+    "event_6080_2W_MasterTicket_03": "Trevor\nGuaranteed Ticket Scout",
+    "event_6090_3W_SuperTicket_01": "Iono Seasonal\nFeatured Ticket Scout",
+    "event_6090_3W_MasterTicket_01": "Iono Seasonal\nGuaranteed Ticket Scout",
+    "event_6090_3W_SuperTicket_02": "Shauntal Seasonal\nFeatured Ticket Scout",
+    "event_6090_3W_MasterTicket_02": "Shauntal Seasonal\nGuaranteed Ticket Scout",
+    "event_6090_3W_SuperTicket_03": "Seasonal Featured\nTicket Scout"
 }

@@ -190,7 +190,7 @@
     "999749": "El usuario se cura de retroceso, confusión y ataduras.",
     "999748": "Aumenta la Velocidad y la Precisión del usuario en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
     "999747": "Aumenta en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ] una de las siguientes características del usuario al azar: Ataque, Defensa, Defensa Especial, Velocidad, Precisión o Evasión.",
-    "999746": "Reduce la Defensa y la Defensa Especial del usuario en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
+    "999746": "Reduce la Defensa y la Defensa Especial del usuario en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
     "999745": "Si el Charizard del usuario ha megaevolucionado, aumenta el Ataque de dicho usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
     "999744": "Se reduce en [Digit:1digit ] el contador de movimientos compi de una pareja de compis aliada.",
     "999743": "Aumenta la Precisión y la probabilidad de asestar golpes críticos de una pareja de compis aliada en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ]. Cuando el bando del usuario está lleno de determinación, en su lugar las aumenta en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
@@ -784,5 +784,11 @@
     "999150": "Aumenta el Ataque Especial y la Defensa Especial de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
     "999149": "Evoluciona a Mega-Garchomp. Vuelve a la normalidad tras terminar el combate.",
     "999148": "Evoluciona a Mega-Metagross. Vuelve a la normalidad tras terminar el combate.",
-    "999147": "La potencia de este ataque aumenta cuando se aplica un círculo al bando aliado."
+    "999147": "La potencia de este ataque aumenta cuando se aplica un círculo al bando aliado.",
+    "999146": "Cuando el [Name:ReferencedMessageTag ] del usuario ha aumentado.",
+    "999145": "Cuando el [Name:ReferencedMessageTag ] del usuario no ha aumentado.",
+    "999144": "Cuanto más haya aumentado el [Name:ReferencedMessageTag ] del usuario, más aumenta la potencia de este ataque.",
+    "999143": "Aumenta el [Name:ReferencedMessageTag Idx=\"1\" ] del usuario el mismo número de niveles que Pokémon debilitados haya en tu equipo.",
+    "999142": "Elimina todos los aumentos de Velocidad del usuario.",
+    "999141": "Reduce la [Name:ReferencedMessageTag Idx=\"2\" ] del objetivo en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ] la primera vez que este movimiento de ataque acierta en cada combate."
 }

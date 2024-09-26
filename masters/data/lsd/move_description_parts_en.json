@@ -190,7 +190,7 @@
     "999749": "Removes the flinching, confused, and trapped conditions from the user.",
     "999748": "Raises the user’s Speed and accuracy by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
     "999747": "Raises one of the user’s following stats by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] at random: Attack, Defense, Sp. Def, Speed, accuracy, or evasiveness.",
-    "999746": "Lowers the user’s Defense and Sp. Def by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "999746": "Lowers the user’s Defense and Sp. Def by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
     "999745": "If the user’s Charizard has Mega Evolved, also raises the user’s Attack by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
     "999744": "Reduces the sync move countdown of an allied sync pair by [Digit:1digit ].",
     "999743": "Raises the accuracy and critical-hit rate of an allied sync pair by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ]. Raises accuracy and critical-hit rate of an allied sync pair by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] instead when the user’s team has a sync buff.",
@@ -784,5 +784,11 @@
     "999150": "Raises the Sp. Atk and Sp. Def of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
     "999149": "Become Mega Garchomp until the end of battle.",
     "999148": "Become Mega Metagross until the end of battle.",
-    "999147": "This attack’s power increases when a circle applies to the allied field of play."
+    "999147": "This attack’s power increases when a circle applies to the allied field of play.",
+    "999146": "When the user’s [Name:ReferencedMessageTag ] is increased.",
+    "999145": "When the user’s [Name:ReferencedMessageTag ] is not increased.",
+    "999144": "The more the user’s [Name:ReferencedMessageTag ] is increased, the greater the power of this attack.",
+    "999143": "Increases the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by a number of ranks equal to the number of fainted Pokémon on your team.",
+    "999142": "Removes all of the user’s Speed increases.",
+    "999141": "Lowers the target’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ] the first time this attack move is successful each battle."
 }
