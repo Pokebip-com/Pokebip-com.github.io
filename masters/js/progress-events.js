@@ -13,6 +13,7 @@ async function getData() {
 
     // LSD
     jsonCache.preloadLsd("event_name");
+    jsonCache.preloadLocale("progress-events");
 
     // Other Preloads
     preloadUtils(true);
@@ -44,14 +45,13 @@ function setEventInfos(eventId) {
     let tr = document.createElement("tr");
 
     let nameTh = document.createElement("th");
-    nameTh.innerText = "Objet";
-    nameTh.colSpan = "2";
+    nameTh.innerText = jData.locale["progressEvents"]["item"];
 
     let qtyTh = document.createElement("th");
-    qtyTh.innerText = "Quantité";
+    qtyTh.innerText = jData.locale["progressEvents"]["quantity"];
 
     let pointsTh = document.createElement("th");
-    pointsTh.innerText = "Points";
+    pointsTh.innerText = jData.locale["progressEvents"]["points"];
 
     tr.appendChild(nameTh);
     tr.appendChild(qtyTh);
@@ -66,10 +66,6 @@ function setEventInfos(eventId) {
         if(!is["item1"]) continue;
 
         let tr = document.createElement("tr");
-        let imageTd = document.createElement("td");
-        let image = document.createElement("img");
-        //image.src("");
-        imageTd.appendChild(image);
 
         let nameTd = document.createElement("td");
         nameTd.innerText = getItemName(is["item1"]);
@@ -78,9 +74,8 @@ function setEventInfos(eventId) {
         qtyTd.innerText = is["item1Quantity"];
 
         let pointsTd = document.createElement("td");
-        pointsTd.innerText = rewardGroup[i].repeatedStep === "true" ? `Tous les ${rewardGroup[i].step}` : rewardGroup[i].step;
+        pointsTd.innerText = rewardGroup[i].repeatedStep === "true" ? jData.locale["progressEvents"]["repeatedStep"].replace("{{points}}", rewardGroup[i].step) : rewardGroup[i].step;
 
-        tr.appendChild(imageTd);
         tr.appendChild(nameTd);
         tr.appendChild(qtyTd);
         tr.appendChild(pointsTd);
@@ -93,7 +88,6 @@ function setEventInfos(eventId) {
 function getEventBipcodeTable() {
     const eventId = new URL(window.location).searchParams.get('eventId');
     if(eventId == null) return;
-    console.log("test");
 
     let rewardGroup = jData.proto.progressEventRewardGroup
         .filter(pe => pe.progressEventId === eventId)

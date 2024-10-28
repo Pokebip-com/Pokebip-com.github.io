@@ -13,6 +13,9 @@ async function getData() {
     // LSD
     jsonCache.preloadLsd("banner_text");
 
+    // Locale
+    jsonCache.preloadLocale("item-exchange");
+
     // Other Preloads
     preloadUtils(true);
 
@@ -44,14 +47,14 @@ function setEventInfos(exchangeId) {
     let tr = document.createElement("tr");
 
     let nameTh = document.createElement("th");
-    nameTh.innerText = "Objet";
+    nameTh.innerText = jData.locale.itemExchange.item;
     nameTh.colSpan = "1";
 
     let qtyTh = document.createElement("th");
-    qtyTh.innerText = "Limite";
+    qtyTh.innerText = jData.locale.itemExchange.max;
 
     let pointsTh = document.createElement("th");
-    pointsTh.innerText = "Échange contre";
+    pointsTh.innerText = jData.locale.itemExchange.currency;
 
     tr.appendChild(nameTh);
     tr.appendChild(qtyTh);

@@ -1,0 +1,6 @@
+{
+  "item" : "Item",
+  "quantity" : "Quantity",
+  "points" : "Points",
+  "repeatedStep" : "Every {{points}}"
+}

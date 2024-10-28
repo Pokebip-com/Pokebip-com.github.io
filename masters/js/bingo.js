@@ -15,6 +15,9 @@ async function getData() {
     // LSD
     jsonCache.preloadLsd("banner_text");
 
+    // LOCALE
+    jsonCache.preloadLocale("bingo");
+
     // Other Preloads
     preloadUtils(true);
 
@@ -150,11 +153,11 @@ function createBingoRewards(bingoId) {
     let tr = document.createElement("tr");
 
     let linesTh = document.createElement("th");
-    linesTh.innerText = "Lignes";
+    linesTh.innerText = jData.locale.bingo.lines;
     tr.appendChild(linesTh);
 
     let rewardsTh = document.createElement("th");
-    rewardsTh.innerText = "Récompenses";
+    rewardsTh.innerText = jData.locale.bingo.rewards;
     tr.appendChild(rewardsTh);
 
     thead.appendChild(tr);
@@ -167,7 +170,7 @@ function createBingoRewards(bingoId) {
 
         let nbLines = missionReward[i%missionReward.length].nbLines;
 
-        linesTh.innerText = nbLines === 0 ? "Grille complète" : nbLines;
+        linesTh.innerText = nbLines === 0 ? jData.locale.bingo.full_grid : nbLines;
 
         tr.appendChild(linesTh);
 
