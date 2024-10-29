@@ -1,0 +1,20 @@
+{
+    "1": "아래 능력이 상승합니다",
+    "1_element_color_1": "・HP<attr color='E58009'>+[Digit:3digits ]</attr>",
+    "1_element_color_3": "・방어<attr color='E58009'>+[Digit:3digits ]</attr>",
+    "1_element_color_5": "・특수방어<attr color='E58009'>+[Digit:3digits ]</attr>",
+    "2": "모든 능력이 [Digit:3digits ]배가 됩니다",
+    "3": "기술의 위력이 상승합니다",
+    "4": "버디즈기술의 위력이 상승합니다",
+    "4_element": "버디즈다이맥스기술의 위력이 상승합니다",
+    "5": "초각성 패시브스킬이 해방됩니다",
+    "1_result": "아래 능력이 상승했습니다",
+    "2_result": "모든 능력이 [Digit:3digits ]배가 되었습니다",
+    "3_result": "기술의 위력이 상승했습니다",
+    "4_result": "버디즈기술의 위력이 상승했습니다",
+    "4_element_result": "버디즈다이맥스기술의 위력이 상승했습니다",
+    "5_result": "초각성 패시브스킬이 해방되었습니다",
+    "1_element_1": "・HP+[Digit:3digits ]",
+    "1_element_3": "・방어+[Digit:3digits ]",
+    "1_element_5": "・특수방어+[Digit:3digits ]"
+}

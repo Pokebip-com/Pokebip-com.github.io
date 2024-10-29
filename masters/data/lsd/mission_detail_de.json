@@ -280,5 +280,12 @@
     "override_detail_6040_1_10": "Dir steht die Abschlussprüfung bevor!\nIch hoffe auf einen großartigen\nKampf, der selbst bei einer\nNiederlage Spaß macht... So wie der,\nden ich gegen dieses beeindruckende\nKind ausgetragen habe, das die\nPrüfung in Paldea bestanden hat!\n\nHinweis: Schließe „Vs. Cay“ mit einem\nTeam ab, in dem mindestens ein\nGefährtengespann mit dem Attribut\n„Protagonist“ vertreten ist.",
     "201": "Erreiche einen bestimmten Rang im\nRahmen der Ranglistenergebnisse\ndes Super-Sparrings Nr. [Digit:6digits ].",
     "override_detail_6080_1_01": "Schließe folgendes Gebiet ein Mal mit\nmax. 1 Gefährtengesp. ab, dessen KP\nauf 0 gefallen sind: „Täglicher\nschwerer Kampf“ in „Episodenevent:\nGoldene Freundschaft auf Passio“",
-    "override_detail_6080_2_01": "Schließe 5 Mal mit diesen Gefährten\nim Team ein Gebiet ab, in dem\ngekämpft wird: Lilly (Jubiläum 2024)\n& Solgaleo"
+    "override_detail_6080_2_01": "Schließe 5 Mal mit diesen Gefährten\nim Team ein Gebiet ab, in dem\ngekämpft wird: Lilly (Jubiläum 2024)\n& Solgaleo",
+    "228": "Erhöhe den Super-Erwachen-Level\nvon [Digit:4digits Idx=\"1\" ] Gefährten auf Level [Digit:2digits Idx=\"2\" ].",
+    "override_detail_6100_1_01": "Schließe „Episodenevent: Reisende\naus längst vergangener Zeit“ einmal\nim Modus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Wiederholen“ spielen.",
+    "override_detail_6100_1_02": "Schließe „Feier zum Evoli-Tag: Die\nGeschichte der Evoli“ einmal im\nModus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Empfohlen“ spielen.",
+    "override_detail_6100_1_03": "Schließe „Feier zum Evoli-Tag: Die\nGeschichte der Evoli“ einmal im\nModus „Gemeinsam spielen“ ab.",
+    "override_detail_6100_1_04": "Schließe „Super-Sparring“ einmal im\nModus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Empfohlen“ spielen.",
+    "override_detail_6100_1_05": "Schließe „Episodenevent: Rätselhaftes\nDuo aus Kalo“ einmal im Modus\n„Allein spielen“ einmal ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Empfohlen“ spielen.",
+    "override_detail_6100_1_06": "Schließe „Episodenevent: Let’s Go!\nFinden wir das Wunder!“ einmal im\nModus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Wiederholen“ spielen."
 }

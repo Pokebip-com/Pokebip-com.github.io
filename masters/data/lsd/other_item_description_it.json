@@ -36,5 +36,7 @@
     "7702": "Permette di affrontare il Tour di lotta.\nAlla scadenza viene scambiato\nautomaticamente.",
     "7901": "Si usa nello scambio strumenti\ndel negozio.",
     "4505": "Si può scambiare con gettoni panruoletto.",
-    "600000": "Si può scambiare con degli strumenti\nnel negozio durante gli eventi."
+    "600000": "Si può scambiare con degli strumenti\nnel negozio durante gli eventi.",
+    "18001": "Fa salire di livello il risveglio di\n[Name:TrainerNameAndType ] & [Name:PokemonName ].",
+    "18000": "Si può scambiare con Caramella risveglio\ndedicata."
 }

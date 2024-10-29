@@ -36,5 +36,7 @@
     "7702": "Kann für eine Kampfrallye benutzt werden.\nHinweis: Ist der Nutzungszeitraum\nabgelaufen, wird das Item automatisch\neingetauscht und kann nicht länger\neingesetzt werden.",
     "7901": "Wird beim Item-Tausch im Laden benutzt.",
     "4505": "Können gegen Rollenkuchen-Münzen\neingetauscht werden.",
-    "600000": "Kann während Events im Laden gegen\nItems eingetauscht werden."
+    "600000": "Kann während Events im Laden gegen\nItems eingetauscht werden.",
+    "18001": "Erhöht den Super-Erwachen-Level von\n[Name:TrainerNameAndType ] & [Name:PokemonName ].",
+    "18000": "Können gegen Sonder-Super-Erwachen-\nBonbons eingetauscht werden."
 }

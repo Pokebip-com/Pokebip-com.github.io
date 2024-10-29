@@ -280,5 +280,12 @@
     "override_detail_6040_1_10": "C'est l'heure de la dernière épreuve !\nJ'veux l'combat du siècle, un combat\nque j'vais kiffer même si je perds...\nComme celui contre la d'mi portion\nqui a relevé les épreuves à Paldea !\n\n(Utilisez 1 Duo avec le mot-clé\n« Protagoniste »  pour terminer :\nCombat : Cayenn)",
     "201": "Atteignez un rang spécifique dans\nle classement final du combat\nféroce nº [Digit:6digits ].",
     "override_detail_6080_1_01": "Terminez la zone suivante une fois\nsans avoir plus d'un Duo mis K.O. :\n• « Combat difficile limité à une fois\npar jour ! » dans « Évènement\nsecondaire : Liens en or à Passio »",
-    "override_detail_6080_2_01": "Terminez une zone avec un combat\ncinq fois en utilisant le Duo\nsuivant :\n• Lilie (Anniversaire 2024) &\nSolgaleo"
+    "override_detail_6080_2_01": "Terminez une zone avec un combat\ncinq fois en utilisant le Duo\nsuivant :\n• Lilie (Anniversaire 2024) &\nSolgaleo",
+    "228": "Augmentez de [Digit:2digits Idx=\"2\" ] le niveau\nde transcendance de [Digit:4digits Idx=\"1\" ] Duo[FR:Qty Ref=\"1\" P=\"s\" ].",
+    "override_detail_6100_1_01": "Terminez une fois\n« Évènement secondaire :\nVoyageurs du passé » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « De retour ».)",
+    "override_detail_6100_1_02": "Terminez une fois « Journée Évoli :\nHistoires d'Évoli » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « À découvrir ».)",
+    "override_detail_6100_1_03": "Terminez une fois « Journée Évoli :\nHistoires d'Évoli » en coop.",
+    "override_detail_6100_1_04": "Terminez une fois le combat féroce\nen solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « À découvrir ».)",
+    "override_detail_6100_1_05": "Terminez une fois « Évènement\nsecondaire : La mystérieuse équipe\nde Kalos » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « À découvrir ».)",
+    "override_detail_6100_1_06": "Terminez une fois « Évènement\nsecondaire : Partons à sa recherche !\nLet's Go ! » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « De retour ».)"
 }

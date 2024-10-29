@@ -790,5 +790,22 @@
     "999144": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 올라가 있는 만큼 위력이 오른다",
     "999143": "자신의 팀에 있는 기절 상태의 포켓몬 수만큼 자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] 오른다",
     "999142": "자신의 올라간 스피드를 모두 소비한다",
-    "999141": "처음 이 기술로 공격에 성공했을 때만 상대의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"3\" ]단계 떨어뜨린다"
+    "999141": "처음 이 기술로 공격에 성공했을 때만 상대의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"3\" ]단계 떨어뜨린다",
+    "999139": "상대의 필드에 상태 이상이나 풀죽음 상태, 혼란 상태, 바인드 상태의 포켓몬이 있을 때",
+    "999138": "상대의 필드에 상태 이상이나 풀죽음 상태, 혼란 상태, 바인드 상태의 포켓몬이 없어졌을 때",
+    "999137": "상대가 마비 상태일 때는 상대의 [Name:ReferencedMessageTag ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"1\" ]단계 떨어뜨린다",
+    "999136": "상대가 화상 상태일 때는 상대의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"3\" ]단계 떨어뜨린다",
+    "999135": "상대가 풀죽음 상태일 때는 상대의 [Name:ReferencedMessageTag Idx=\"4\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"5\" ]단계 떨어뜨린다",
+    "999134": "상대가 독 상태나 맹독 상태일 때는 같은 편 버디즈 전원의 HP를 회복한다",
+    "999133": "상대가 바인드 상태일 때는 자신을 [Name:ReferencedMessageTag Idx=\"6\" ] 상태로 만든다",
+    "999132": "상대가 혼란 상태일 때는 자신의 [Name:ReferencedMessageTag Idx=\"7\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"8\" ]단계 오른다",
+    "999131": "상대가 혼란 상태일 때는 자신을 [Name:ReferencedMessageTag Idx=\"6\" ] 상태로 만든다",
+    "999130": "상대가 바인드 상태일 때는 자신의 [Name:ReferencedMessageTag Idx=\"7\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"8\" ]단계 오른다",
+    "999128": "상대의 스피드와 명중률을 [Digit:1digit ]단계 떨어뜨린다",
+    "999125": "이 기술로 공격할 때 자신의 \"[Name:MoveId Idx=\"18501\" ]\"의 남은 횟수가 1 이상일 때는 그 횟수를 1 줄이고 자신의 싱크로기술횟수를 1 회복한다",
+    "999124": "기술로 공격받을 때마다 위력이 오른다\n(1번 받을 때마다 위력 상승 +100%)\n(최대 위력 상승 600%)",
+    "999123": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"5\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"6\" ]단계 오른다",
+    "999122": "자신의 [Name:ReferencedMessageTag Idx=\"7\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"8\" ]단계 떨어뜨린다",
+    "999121": "같은 편의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 오른다",
+    "999120": "같은 편의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다"
 }

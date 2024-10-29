@@ -36,5 +36,7 @@
     "7702": "Permet de participer à un défi du rallye\nde combats. Une fois expirés, les objets\nsont automatiquement échangés\net ne peuvent plus être utilisés.",
     "7901": "Peut être échangé contre des objets\nà la boutique.",
     "4505": "Peut être échangé contre\ndes Médailles Roulé Rôle.",
-    "600000": "Peut être échangé contre des objets\npendant les évènements."
+    "600000": "Peut être échangé contre des objets\npendant les évènements.",
+    "18001": "Augmente le niveau de transcendance\nde [Name:TrainerNameAndType ]\net [Name:PokemonName ].",
+    "18000": "Peut être échangé contre des Bonbons\nTranscendance Personnels."
 }

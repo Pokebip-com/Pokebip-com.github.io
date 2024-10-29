@@ -496,6 +496,7 @@ function addCyclingRankingEvents(i, latestCyclicRankingSchedule) {
     }
 }
 
+//TODO Rework so only the selected version is processed
 function scheduleByVersion() {
     while(versionSelect.length > 0) {
         versionSelect.remove(0);

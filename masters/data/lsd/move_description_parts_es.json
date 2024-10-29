@@ -790,5 +790,22 @@
     "999144": "Cuanto más haya aumentado el [Name:ReferencedMessageTag ] del usuario, más aumenta la potencia de este ataque.",
     "999143": "Aumenta el [Name:ReferencedMessageTag Idx=\"1\" ] del usuario el mismo número de niveles que Pokémon debilitados haya en tu equipo.",
     "999142": "Elimina todos los aumentos de Velocidad del usuario.",
-    "999141": "Reduce la [Name:ReferencedMessageTag Idx=\"2\" ] del objetivo en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ] la primera vez que este movimiento de ataque acierta en cada combate."
+    "999141": "Reduce la [Name:ReferencedMessageTag Idx=\"2\" ] del objetivo en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ] la primera vez que este movimiento de ataque acierta en cada combate.",
+    "999139": "Cuando hay al menos 1 Pokémon que sufre problemas de estado, ha retrocedido, está confundido o bajo ataduras en el bando rival.",
+    "999138": "Cuando no quede ningún Pokémon que sufra problemas de estado, ha retrocedido, está confundido o bajo ataduras en el bando rival.",
+    "999137": "Reduce [Name:ReferencedMessageTag ] del objetivo en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ] cuando está paralizado.",
+    "999136": "Reduce [Name:ReferencedMessageTag Idx=\"2\" ] del objetivo en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ] cuando está quemado.",
+    "999135": "Reduce [Name:ReferencedMessageTag Idx=\"4\" ] del objetivo en [Digit:1digit Idx=\"5\" ] [ES:Qty Ref=\"5\" S=\"nivel\" P=\"niveles\" ] cuando ha retrocedido.",
+    "999134": "Recupera los PS de todos los compis aliados cuando el objetivo está envenenado o gravemente envenenado.",
+    "999133": "Aplica el [Name:ReferencedMessageTag Idx=\"6\" ] al usuario cuando el objetivo está bajo ataduras.",
+    "999132": "Aumenta el [Name:ReferencedMessageTag Idx=\"7\" ] del usuario en [Digit:1digit Idx=\"8\" ] [ES:Qty Ref=\"8\" S=\"nivel\" P=\"niveles\" ] cuando el objetivo está confuso.",
+    "999131": "Aplica el [Name:ReferencedMessageTag Idx=\"6\" ] al usuario cuando el objetivo está confuso.",
+    "999130": "Aumenta el [Name:ReferencedMessageTag Idx=\"7\" ] del usuario en [Digit:1digit Idx=\"8\" ] [ES:Qty Ref=\"8\" S=\"nivel\" P=\"niveles\" ] cuando el objetivo está bajo ataduras.",
+    "999128": "Reduce la Velocidad y la Precisión del objetivo en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+    "999125": "Si los PM restantes de [Name:MoveId Idx=\"18501\" ] del usuario son 1 o más cuando ataca con este movimiento, reduce dichos PM en 1 y recupera 1 PM de su movimiento sincro.",
+    "999124": "La potencia de este ataque aumenta cada vez que golpean al usuario con un movimiento de ataque.\n(Este ataque aumenta la potencia en un 100% cada vez que golpean al usuario, hasta un total del 600%).",
+    "999123": "Aumenta el [Name:ReferencedMessageTag Idx=\"5\" ] de todos los compis aliados en [Digit:1digit Idx=\"6\" ] [ES:Qty Ref=\"6\" S=\"nivel\" P=\"niveles\" ].",
+    "999122": "Reduce [Name:ReferencedMessageTag Idx=\"7\" ] del usuario en [Digit:1digit Idx=\"8\" ] [ES:Qty Ref=\"8\" S=\"nivel\" P=\"niveles\" ].",
+    "999121": "Aumenta el [Name:ReferencedMessageTag ] de un aliado en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
+    "999120": "Aumenta la [Name:ReferencedMessageTag Idx=\"2\" ] de un aliado en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ]."
 }

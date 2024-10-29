@@ -375,5 +375,10 @@
 { "itemExchangeGroupId": 2609020, "u2": 1, "scheduleId": "6090_1W_Event_AKU_Exchange_2", "bannerId": 1504005, "u5": 0 },
 { "itemExchangeGroupId": 2609030, "u2": 1, "scheduleId": "6090_2W_Event_artist_Exchange", "bannerId": 1609006, "u5": 0 },
 { "itemExchangeGroupId": 2609040, "u2": 1, "scheduleId": "6090_4W_Event_kur_Exchange", "bannerId": 1508008, "u5": 0 },
-{ "itemExchangeGroupId": 2609050, "u2": 1, "scheduleId": "6090_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 }
+{ "itemExchangeGroupId": 2609050, "u2": 1, "scheduleId": "6090_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 },
+{ "itemExchangeGroupId": 2610010, "u2": 1, "scheduleId": "6100_1W_Event_Nobokuda_Exchange", "bannerId": 1306005, "u5": 0 },
+{ "itemExchangeGroupId": 2610020, "u2": 1, "scheduleId": "6100_4W_Event_EV_Exchange", "bannerId": 1510007, "u5": 0 },
+{ "itemExchangeGroupId": 2610030, "u2": 1, "scheduleId": "6100_4W_Event_Hisui_Exchange", "bannerId": 1505001, "u5": 0 },
+{ "itemExchangeGroupId": 2610040, "u2": 1, "scheduleId": "6100_4W_Event_Ayumi_Exchange", "bannerId": 1510006, "u5": 0 },
+{ "itemExchangeGroupId": 2610050, "u2": 1, "scheduleId": "6100_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 }
 ]}

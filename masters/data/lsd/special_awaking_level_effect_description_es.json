@@ -1,0 +1,20 @@
+{
+    "1": "Aumenta las siguientes características:",
+    "1_element_color_1": "• PS <attr color='E58009'>+[Digit:3digits ]</attr>",
+    "1_element_color_3": "• Defensa <attr color='E58009'>+[Digit:3digits ]</attr>",
+    "1_element_color_5": "• Defensa Especial <attr color='E58009'>+[Digit:3digits ]</attr>",
+    "2": "Multiplica por [Digit:3digits ] todas las características.",
+    "3": "Aumenta la potencia de los movimientos.",
+    "4": "Aumenta la potencia de los movimientos compi.",
+    "4_element": "Aumenta la potencia de los movimientos\ncompi Dinamax.",
+    "5": "Desbloquea una habilidad pasiva del\npoder excelso.",
+    "1_result": "Se han aumentado las siguientes\ncaracterísticas:",
+    "2_result": "Se han multiplicado por [Digit:3digits ] todas las\ncaracterísticas.",
+    "3_result": "Se ha aumentado la potencia de los\nmovimientos.",
+    "4_result": "Se ha aumentado la potencia de los\nmovimientos compi.",
+    "4_element_result": "Se ha aumentado la potencia de los\nmovimientos compi Dinamax.",
+    "5_result": "Se ha desbloqueado una habilidad\npasiva del poder excelso.",
+    "1_element_1": "• PS +[Digit:3digits ]",
+    "1_element_3": "• Defensa +[Digit:3digits ]",
+    "1_element_5": "• Defensa Especial +[Digit:3digits ]"
+}

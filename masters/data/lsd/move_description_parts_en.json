@@ -790,5 +790,22 @@
     "999144": "The more the user’s [Name:ReferencedMessageTag ] is increased, the greater the power of this attack.",
     "999143": "Increases the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by a number of ranks equal to the number of fainted Pokémon on your team.",
     "999142": "Removes all of the user’s Speed increases.",
-    "999141": "Lowers the target’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ] the first time this attack move is successful each battle."
+    "999141": "Lowers the target’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ] the first time this attack move is successful each battle.",
+    "999139": "When there is at least one Pokémon affected by a status condition, flinching, confused, or trapped on the opponent’s field of play.",
+    "999138": "When there are no longer any Pokémon affected by a status condition, flinching, confused, or trapped on the opponent’s field of play.",
+    "999137": "Lowers the target’s [Name:ReferencedMessageTag ] by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when it is paralyzed.",
+    "999136": "Lowers the target’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] stat [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ] when it is burned.",
+    "999135": "Lowers the target’s [Name:ReferencedMessageTag Idx=\"4\" ] by [Digit:1digit Idx=\"5\" ] stat [EN:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ] when it is flinching.",
+    "999134": "Restores the HP of all allied sync pairs when the target is poisoned or badly poisoned.",
+    "999133": "Applies the [Name:ReferencedMessageTag Idx=\"6\" ] to the user when the target is trapped.",
+    "999132": "Increases the user’s [Name:ReferencedMessageTag Idx=\"7\" ] by [Digit:1digit Idx=\"8\" ] [EN:Qty Ref=\"8\" S=\"rank\" P=\"ranks\" ] when the target is confused.",
+    "999131": "Applies the [Name:ReferencedMessageTag Idx=\"6\" ] to the user when the target is confused.",
+    "999130": "Increases the user’s [Name:ReferencedMessageTag Idx=\"7\" ] by [Digit:1digit Idx=\"8\" ] [EN:Qty Ref=\"8\" S=\"rank\" P=\"ranks\" ] when the target is trapped.",
+    "999128": "Lowers the target’s Speed and accuracy by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "999125": "If the remaining MP for the user’s [Name:MoveId Idx=\"18501\" ] is one or more when attacking with this move, reduces those MP by one and restores one MP of its buddy move.",
+    "999124": "This attack’s power increases each time the user is hit by an attack move.\n(This attack powers up by 100% every time the user is hit. The maximum power-up is 600%.)",
+    "999123": "Increases the [Name:ReferencedMessageTag Idx=\"5\" ] of all allied sync pairs by [Digit:1digit Idx=\"6\" ] [EN:Qty Ref=\"6\" S=\"rank\" P=\"ranks\" ].",
+    "999122": "Lowers the user’s [Name:ReferencedMessageTag Idx=\"7\" ] by [Digit:1digit Idx=\"8\" ] stat [EN:Qty Ref=\"8\" S=\"rank\" P=\"ranks\" ].",
+    "999121": "Increases the [Name:ReferencedMessageTag ] of an ally by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "999120": "Raises an ally’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ]."
 }

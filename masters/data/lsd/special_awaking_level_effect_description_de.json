@@ -1,0 +1,20 @@
+{
+    "1": "Erhöht die folgenden Statuswerte:",
+    "1_element_color_1": "• KP<attr color='E58009'> +[Digit:3digits ]</attr>",
+    "1_element_color_3": "• Verteidigung<attr color='E58009'> +[Digit:3digits ]</attr>",
+    "1_element_color_5": "• Sp.-Vert.<attr color='E58009'> +[Digit:3digits ]</attr>",
+    "2": "Alle Statuswerte werden um das\n[Digit:3digits ]-fache verstärkt.",
+    "3": "Erhöht die Stärke von Attacken.",
+    "4": "Erhöht die Stärke von Gefährtenattacken.",
+    "4_element": "Erhöht die Stärke von G-D-Attacken.",
+    "5": "Schaltet eine Super-Erwachen-\nPassivfähigkeit frei.",
+    "1_result": "Die folgenden Statuswerte wurden\nerhöht:",
+    "2_result": "Alle Statuswerte werden um das\n[Digit:3digits ]-fache verstärkt.",
+    "3_result": "Attacken wurden verstärkt.",
+    "4_result": "Gefährtenattacken wurden verstärkt.",
+    "4_element_result": "G-D-Attacken wurden verstärkt.",
+    "5_result": "Super-Erwachen-Passivfähigkeit wurde\nfreigeschaltet.",
+    "1_element_1": "• KP +[Digit:3digits ]",
+    "1_element_3": "• Verteidigung +[Digit:3digits ]",
+    "1_element_5": "• Sp.-Vert. +[Digit:3digits ]"
+}

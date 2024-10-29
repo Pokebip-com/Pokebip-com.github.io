@@ -182,7 +182,7 @@
     "20030801": "Dicen que, a través de la meditación, Medicham\naumenta su energía interior y agudiza su sexto sentido.\nEste Pokémon suele pasar desapercibido mimetizándose\ncon el campo y las montañas.",
     "20031900": "Existe la creencia de que sus dientes traen buena suerte\nen la mar, por lo que se usan para la elaboración de\namuletos y adornos.",
     "20032000": "Nada con la boca abierta para engullir alimento y\ncantidades ingentes de agua de mar, cuyo exceso\nexpulsa luego por el espiráculo.",
-    "20032100": "Debido a su voraz apetito por los Pokémon pez, los\npescadores se ven obligados a controlar su número\nsiproliferan demasiado.",
+    "20032100": "Debido a su voraz apetito por los Pokémon pez, los\npescadores se ven obligados a controlar su número\nsi proliferan demasiado.",
     "20032200": "Numel tarda en percibir las cosas, no se entera ni\ncuando lo golpean, pero se da cuenta enseguida de\nsi tiene hambre. El cuerpo de este Pokémon es un\ncaldero de magma hirviendo.",
     "20032301": "Camerupt encierra un volcán en su interior y magma de\n10 000 °C le recorre el cuerpo. A veces, las jorobas de\nla espalda entran en erupción y escupen el abrasivo\nmagma.",
     "20032400": "El humo que expulsa por el dorso es indicativo de su\nestado de salud. Si las fumarolas brotan con fuerza,\nsignifica que está en plena forma.",
@@ -329,6 +329,7 @@
     "20059500": "No puede generar electricidad por sí mismo, así que se\nencarama a Pokémon grandes y absorbe su energía\nestática.",
     "20059900": "Genera la energía vital que necesita haciendo girar sus\ndos cuerpos.",
     "20060100": "Recarga su energía rápidamente haciendo girar con gran\nceleridad el engranaje equipado con un núcleo rojo.",
+    "20060400": "Pega la ventosa de su boca en su presa y la electrocuta\ncon sus colmillos.",
     "20060700": "Finge ser una luz guía en el camino, pero en realidad\nsolo quiere absorber la energía vital de quien lo sigue.",
     "20060900": "Sus llamas absorben el alma del enemigo y la abrasan,\ndejando solo su cuerpo inerte.",
     "20061000": "Usa sus colmillos para romper las bayas que come.\nEstos se regeneran una y otra vez, por eso son tan\nfuertes y afilados.",
@@ -571,5 +572,6 @@
     "2009991200": "Nació de una moneda imbuida de sentimientos. Al\nparecer, vaga de un lado para otro con el fin de regresar\nal cofre que una vez lo contuvo.",
     "2009830000": "Solo el Bisharp más destacado entre las filas de cada gran\nejército tiene el honor de evolucionar a Kingambit.",
     "2009140000": "Embelesa a quien lo ve con una danza que rebosa\nde exotismo y corta a sus rivales con sus plumas\nornamentales hechas de agua.",
-    "2009870000": "Sus rasgos distintivos se asemejan a los del espíritu de un\nreptil volador mencionado en una revista esotérica."
+    "2009870000": "Sus rasgos distintivos se asemejan a los del espíritu de un\nreptil volador mencionado en una revista esotérica.",
+    "2009790000": "Cuando su ira explosiva rebasó el punto crítico, adquirió\nun poder que lo libró para siempre de las limitaciones\nde su cuerpo material."
 }

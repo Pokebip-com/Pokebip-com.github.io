@@ -140,7 +140,7 @@
     "10243800000": "¡Desata tu poder!",
     "10019100000": "¡No existe ningún Pokémon\ndel que no puedas hacerte\namigo!",
     "10126100000": "¿Libramos un combate?",
-    "10217000000": "Me llamo... Ah, no, no os diré\nmi verdadero nombre.\nMi nombre en clave es\nHandsome.",
+    "10217000000": "Me llamo... Ah, no, no os\ndiré mi verdadero nombre.\nMi nombre en clave es\nHandsome.",
     "10222000000": "Tú... \n♪Tienes algo especial...♪",
     "10090100000": "Me hace mucha ilusión\ncomprobar cómo cambiará\nel mundo a partir de ahora.",
     "10091100000": "Para saber de qué madera\nestá hecho un Entrenador,\nno hay nada como combatir.",
@@ -286,5 +286,13 @@
     "10327000000": "¡Escuadrón Segin!\nQue no os puedan los\nnervios del directo.\n¡A por [ES:Gen Ref=\"255\" M=\"él\" F=\"ella\" ]!",
     "10318000000": "¡Que dé comienzo la\nbúsqueda del tesoro!\n¡En marcha y buen viaje!",
     "10296400000": "¡El directo de hoy es muuuy\nespecial porque voy a\nenseñaros en primicia mi\nnuevo modelito!",
-    "10024400000": "¡¿Habían revelado al fin la\nidentidad de la misteriosa\nsombra que aterrorizaba\nPassio?!"
+    "10024400000": "¡¿Habían revelado al fin la\nidentidad de la misteriosa\nsombra que aterrorizaba\nPassio?!",
+    "10108100000": "¡Empecemos sin más\ndilación la mayor batalla\nde la historia!",
+    "10109100000": "¡Vuestra combinación es\nde lo mejorcito que\nhe visto!",
+    "10330000000": "Se acabó el esconderse...\n¡¡Uaaaah!!",
+    "10187000000": "¿Sabes qué? Diría que\nhas madurado un poco.\nSe te nota en la cara...",
+    "10188000000": "¡Ja, ja, ja! Perdona, siempre\nte pegamos unos sustos\nde campeonato.",
+    "10004000008": "Al combatir, uno quiere\nvencer a toda costa, ¿no?",
+    "10020000008": "Las amistades que entablo\ncon la gente y los Pokémon\nson algo maravilloso.",
+    "10003000008": "Me gustaría ver con mis\npropios ojos todo el\npotencial de un Pokémon."
 }

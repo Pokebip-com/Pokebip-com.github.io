@@ -1,0 +1,20 @@
+{
+    "1": "下列能力會提升。",
+    "1_element_color_1": "・HP<attr color='E58009'>+[Digit:3digits ]</attr>",
+    "1_element_color_3": "・防禦<attr color='E58009'>+[Digit:3digits ]</attr>",
+    "1_element_color_5": "・特防<attr color='E58009'>+[Digit:3digits ]</attr>",
+    "2": "所有能力會變成[Digit:3digits ]倍。",
+    "3": "招式的威力會提升。",
+    "4": "拍組招式的威力會提升。",
+    "4_element": "拍組極巨化招式的威力會提升。",
+    "5": "超覺醒被動技能會開放。",
+    "1_result": "下列能力已提升。",
+    "2_result": "所有能力已變成[Digit:3digits ]倍。",
+    "3_result": "招式的威力已提升。",
+    "4_result": "拍組招式的威力已提升。",
+    "4_element_result": "拍組極巨化招式的威力已提升。",
+    "5_result": "超覺醒被動技能已開放。",
+    "1_element_1": "・HP+[Digit:3digits ]",
+    "1_element_3": "・防禦+[Digit:3digits ]",
+    "1_element_5": "・特防+[Digit:3digits ]"
+}

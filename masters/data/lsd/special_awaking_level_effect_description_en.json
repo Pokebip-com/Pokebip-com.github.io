@@ -1,0 +1,20 @@
+{
+    "1": "Raises stats:",
+    "1_element_color_1": "• HP<attr color='E58009'> +[Digit:3digits ]</attr>",
+    "1_element_color_3": "• Defense<attr color='E58009'> +[Digit:3digits ]</attr>",
+    "1_element_color_5": "• Sp. Def<attr color='E58009'> +[Digit:3digits ]</attr>",
+    "2": "Multiplies all stats by [Digit:3digits ].",
+    "3": "Powers up moves.",
+    "4": "Powers up sync moves.",
+    "4_element": "Powers up max moves.",
+    "5": "Unlocks a superawakened passive skill.",
+    "1_result": "Stats have been raised:",
+    "2_result": "All stats have been multiplied by [Digit:3digits ].",
+    "3_result": "Moves have been powered up.",
+    "4_result": "Sync moves have been powered up.",
+    "4_element_result": "Max moves have been powered up.",
+    "5_result": "Superawakened passive skill has been\nunlocked.",
+    "1_element_1": "• HP +[Digit:3digits ]",
+    "1_element_3": "• Defense +[Digit:3digits ]",
+    "1_element_5": "• Sp. Def +[Digit:3digits ]"
+}

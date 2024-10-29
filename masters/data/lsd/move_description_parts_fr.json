@@ -790,5 +790,22 @@
     "999144": "Plus l'[Name:ReferencedMessageTag ] du lanceur a été augmenté, plus cette attaque est puissante.",
     "999143": "Augmente l'[Name:ReferencedMessageTag Idx=\"1\" ] du lanceur d'un nombre de rangs égal au nombre de Pokémon mis K.O. dans votre équipe.",
     "999142": "Annule toutes les augmentations de Vitesse du lanceur.",
-    "999141": "Baisse la [Name:ReferencedMessageTag Idx=\"2\" ] de la cible de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ] la première fois que cette capacité offensive est utilisée avec succès à chaque combat."
+    "999141": "Baisse la [Name:ReferencedMessageTag Idx=\"2\" ] de la cible de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ] la première fois que cette capacité offensive est utilisée avec succès à chaque combat.",
+    "999139": "Quand au moins 1 Pokémon qui souffre d'une altération de statut, qui est apeuré, confus ou ligoté se trouve du côté ennemi.",
+    "999138": "Quand plus aucun Pokémon qui souffre d'une altération de statut, qui est apeuré, confus ou ligoté ne se trouve du côté ennemi.",
+    "999137": "Baisse [Name:ReferencedMessageTag ] de la cible de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] quand celle-ci est paralysée.",
+    "999136": "Baisse [Name:ReferencedMessageTag Idx=\"2\" ] de la cible de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ] quand celle-ci est brûlée.",
+    "999135": "Baisse [Name:ReferencedMessageTag Idx=\"4\" ] de la cible de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ] quand celle-ci est apeurée.",
+    "999134": "Restaure les PV de tous les Duos alliés quand la cible est empoisonnée ou gravement empoisonnée.",
+    "999133": "Applique l'[Name:ReferencedMessageTag Idx=\"6\" ] au lanceur quand la cible est ligotée.",
+    "999132": "Augmente l'[Name:ReferencedMessageTag Idx=\"7\" ] du lanceur de [Digit:1digit Idx=\"8\" ] [FR:Qty Ref=\"8\" S=\"rang\" P=\"rangs\" ] quand la cible est confuse.",
+    "999131": "Applique l'[Name:ReferencedMessageTag Idx=\"6\" ] au lanceur quand la cible est confuse.",
+    "999130": "Augmente l'[Name:ReferencedMessageTag Idx=\"7\" ] du lanceur de [Digit:1digit Idx=\"8\" ] [FR:Qty Ref=\"8\" S=\"rang\" P=\"rangs\" ] quand la cible est ligotée.",
+    "999128": "Baisse la Vitesse et la Précision de la cible de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
+    "999125": "Si les PPC restants de la capacité [Name:MoveId Idx=\"18501\" ] du lanceur sont de 1 ou plus quand il attaque avec cette capacité, réduit la quantité de ces PPC de 1 et sa capacité Synchro regagne 1 PPC.",
+    "999124": "La puissance de cette attaque augmente chaque fois que le lanceur subit une capacité offensive. \n(Cette attaque augmente de 100 % chaque fois que le lanceur est touché. L'augmentation maximum est de 600 %.)",
+    "999123": "Augmente l'[Name:ReferencedMessageTag Idx=\"5\" ] de tous les Duos alliés de [Digit:1digit Idx=\"6\" ] [FR:Qty Ref=\"6\" S=\"rang\" P=\"rangs\" ].",
+    "999122": "Baisse [Name:ReferencedMessageTag Idx=\"7\" ] du lanceur de [Digit:1digit Idx=\"8\" ] [FR:Qty Ref=\"8\" S=\"rang\" P=\"rangs\" ].",
+    "999121": "Augmente l'[Name:ReferencedMessageTag ] d'un allié de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
+    "999120": "Augmente la [Name:ReferencedMessageTag Idx=\"2\" ] d'un allié de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ]."
 }

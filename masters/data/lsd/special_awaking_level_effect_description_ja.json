@@ -1,0 +1,20 @@
+{
+    "1": "以下のステータスが上昇します",
+    "1_element_color_1": "・HP<attr color='E58009'>+[Digit:3digits ]</attr>",
+    "1_element_color_3": "・ぼうぎょ<attr color='E58009'>+[Digit:3digits ]</attr>",
+    "1_element_color_5": "・とくぼう<attr color='E58009'>+[Digit:3digits ]</attr>",
+    "2": "全てのステータスが[Digit:3digits ]倍になります",
+    "3": "わざの威力が上昇します",
+    "4": "バディーズわざの威力が上昇します",
+    "4_element": "バディーズダイマックスわざの威力が上昇します",
+    "5": "超覚醒パッシブスキルが解放されます",
+    "1_result": "以下のステータスが上昇しました",
+    "2_result": "全てのステータスが[Digit:3digits ]倍になりました",
+    "3_result": "わざの威力が上昇しました",
+    "4_result": "バディーズわざの威力が上昇しました",
+    "4_element_result": "バディーズダイマックスわざの威力が上昇しました",
+    "5_result": "超覚醒パッシブスキルが解放されました",
+    "1_element_1": "・HP+[Digit:3digits ]",
+    "1_element_3": "・ぼうぎょ+[Digit:3digits ]",
+    "1_element_5": "・とくぼう+[Digit:3digits ]"
+}

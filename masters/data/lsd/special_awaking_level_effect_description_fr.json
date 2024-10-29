@@ -1,0 +1,20 @@
+{
+    "1": "Augmente les stats suivantes :",
+    "1_element_color_1": "• PV<attr color='E58009'> + [Digit:3digits ]</attr>",
+    "1_element_color_3": "• Défense<attr color='E58009'> + [Digit:3digits ]</attr>",
+    "1_element_color_5": "• Déf. Spé.<attr color='E58009'> + [Digit:3digits ]</attr>",
+    "2": "Toutes les stats seront multipliées\npar [Digit:3digits ].",
+    "3": "Renforce la puissance des capacités.",
+    "4": "Renforce la puissance des capacités Duo.",
+    "4_element": "Renforce la puissance\ndes capacités Duo Dynamax.",
+    "5": "Débloque un talent passif transcendance.",
+    "1_result": "Les stats suivantes ont été augmentées :",
+    "2_result": "Toutes les stats ont été multipliées\npar [Digit:3digits ].",
+    "3_result": "La puissance des capacités\na été renforcée.",
+    "4_result": "La puissance des capacités Duo\na été renforcée.",
+    "4_element_result": "La puissance des capacités Duo Dynamax\na été renforcée.",
+    "5_result": "Talent passif transcendance débloqué.",
+    "1_element_1": "• PV + [Digit:3digits ]",
+    "1_element_3": "• Défense + [Digit:3digits ]",
+    "1_element_5": "• Déf. Spé. + [Digit:3digits ]"
+}

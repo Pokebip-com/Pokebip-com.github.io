@@ -36,5 +36,7 @@
     "7702": "Used to take on a Battle Rally challenge.\nNote: Once items expire, they are\nautomatically exchanged and can no\nlonger be used.",
     "7901": "Can be used in exchange for items in\nthe shop.",
     "4505": "Can be exchanged for roll cake coins.",
-    "600000": "Can be exchanged for items in the shop\nduring events."
+    "600000": "Can be exchanged for items in the shop\nduring events.",
+    "18001": "Can be used to level up\n[Name:TrainerNameAndType ] &\n[Name:PokemonName ]’s\nsuperawakening.",
+    "18000": "Can be exchanged for custom\nSuperawakening Candy."
 }

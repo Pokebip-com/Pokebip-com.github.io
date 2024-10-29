@@ -280,5 +280,12 @@
     "override_detail_6040_1_10": "Next up is the final test! I want a\ngreat battle, one that’ll feel good\neven to lose...just like the one I had\nagainst that interesting kid who\npassed the test back in Paldea!\n\n(Complete Challenge Rika with a team\nincluding at least one sync pair with\nthe Main Character theme.)",
     "201": "Reach a specific rank when the\nrankings are finalized in\nSuper Sparring No. [Digit:6digits ].",
     "override_detail_6080_1_01": "Complete the following area ×1\nwith no more than one sync pair\nfalling to 0 HP:\n“Daily Extreme Battle” in\n“Story Event: Golden Bonds on Pasio”",
-    "override_detail_6080_2_01": "Complete an area that has a\nbattle ×5 with the following\nsync pair on your team:\n• Lillie (Anniversary 2024) &\nSolgaleo"
+    "override_detail_6080_2_01": "Complete an area that has a\nbattle ×5 with the following\nsync pair on your team:\n• Lillie (Anniversary 2024) &\nSolgaleo",
+    "228": "Raise the superawakening level of\n[Digit:4digits Idx=\"1\" ] sync pair(s) to [Digit:2digits Idx=\"2\" ].",
+    "override_detail_6100_1_01": "Complete the single-player “Story\nEvent: Travelers from a Distant\nPast” ×1.\n(You can play the event by going to\nthe Reruns section.)",
+    "override_detail_6100_1_02": "Complete the single-player “Eevee\nDay Celebration: Eevee Tales” ×1.\n(You can play the event by going to\nthe Recommended section.)",
+    "override_detail_6100_1_03": "Complete the co-op “Eevee Day\nCelebration: Eevee Tales” ×1.",
+    "override_detail_6100_1_04": "Complete the single-player Super\nSparring ×1.\n(You can play the event by going to\nthe Recommended section.)",
+    "override_detail_6100_1_05": "Complete the single-player “Story\nEvent: Mysterious Kalos Duo” ×1.\n(You can play the event by going to\nthe Recommended section.)",
+    "override_detail_6100_1_06": "Complete the single-player “Story\nEvent: Let’s Go In Search of\nWonder” ×1.\n(You can play the event by going to\nthe Reruns section.)"
 }

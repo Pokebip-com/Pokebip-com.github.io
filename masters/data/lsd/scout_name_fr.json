@@ -172,5 +172,7 @@
     "event_6090_3W_MasterTicket_01": "Appel Duo saisonn.\ngaranti : Mashynn !",
     "event_6090_3W_SuperTicket_02": "Appel Duo saisonn.\ntaux ↑ : Anis !",
     "event_6090_3W_MasterTicket_02": "Appel Duo saisonn.\ngaranti : Anis !",
-    "event_6090_3W_SuperTicket_03": "Appel Duo\nsaisonnier taux ↑"
+    "event_6090_3W_SuperTicket_03": "Appel Duo\nsaisonnier taux ↑",
+    "event_6100_4W_forTicketEvent_05": "Appel Duo avec Bons A :\nCélébrons la Journée Évoli !",
+    "event_6100_4W_forTicketEvent_06": "Appel Duo avec Bons B :\nCélébrons la Journée Évoli !"
 }

@@ -790,5 +790,22 @@
     "999144": "自分の[Name:ReferencedMessageTag ]があがっているほど威力があがる",
     "999143": "自分のチームのひんし状態のポケモンと同じ数だけ自分の[Name:ReferencedMessageTag Idx=\"1\" ]をあげる",
     "999142": "自分のあがっている素早さをすべて消費する",
-    "999141": "初めてこの技での攻撃が成功したときだけ相手の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階さげる"
+    "999141": "初めてこの技での攻撃が成功したときだけ相手の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階さげる",
+    "999139": "相手の場に状態異常やひるみ状態やこんらん状態やバインド状態のポケモンがいるとき",
+    "999138": "相手の場に状態異常やひるみ状態やこんらん状態やバインド状態のポケモンがいなくなったとき",
+    "999137": "相手がまひ状態のときは相手の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階さげる",
+    "999136": "相手がやけど状態のときは相手の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階さげる",
+    "999135": "相手がひるみ状態のときは相手の[Name:ReferencedMessageTag Idx=\"4\" ]を[Digit:1digit Idx=\"5\" ]段階さげる",
+    "999134": "相手がどく状態かもうどく状態のときは味方のバディーズ全員のＨＰを回復する",
+    "999133": "相手がバインド状態のときは自分を[Name:ReferencedMessageTag Idx=\"6\" ]にする",
+    "999132": "相手がこんらん状態のときは自分の[Name:ReferencedMessageTag Idx=\"7\" ]を[Digit:1digit Idx=\"8\" ]段階あげる",
+    "999131": "相手がこんらん状態のときは自分を[Name:ReferencedMessageTag Idx=\"6\" ]にする",
+    "999130": "相手がバインド状態のときは自分の[Name:ReferencedMessageTag Idx=\"7\" ]を[Digit:1digit Idx=\"8\" ]段階あげる",
+    "999128": "相手の素早さと命中率を[Digit:1digit ]段階さげる",
+    "999125": "この技で攻撃するときに自分の「[Name:MoveId Idx=\"18501\" ]」の残り回数が１以上のときは　その回数を１減らして自分のシンクロわざの回数を１回復する",
+    "999124": "技で攻撃を受けるたびに威力があがる\n（１回受けるごとに威力上昇＋１００％）\n（最大で威力上昇６００％）",
+    "999123": "味方のバディーズ全員の[Name:ReferencedMessageTag Idx=\"5\" ]を[Digit:1digit Idx=\"6\" ]段階あげる",
+    "999122": "自分の[Name:ReferencedMessageTag Idx=\"7\" ]を[Digit:1digit Idx=\"8\" ]段階さげる",
+    "999121": "味方の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階あげる",
+    "999120": "味方の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階あげる"
 }

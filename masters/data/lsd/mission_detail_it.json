@@ -280,5 +280,12 @@
     "override_detail_6040_1_10": "Semo all'urtimissimo ostacolo! Vojo\n'na sfida che sia 'no spettacolo pure\nse perdo... Proprio come la tranvata\nche ho preso contro quella\ngnappoletta de Paldea!\n\nCompleta VS Capsi con in squadra\nalmeno un'Unità appartenente\nal gruppo \"Protagonisti\".",
     "201": "Raggiungi una posizione specifica\nnella classifica finale della [Digit:6digits ]ª\nedizione della Supercompetizione.",
     "override_detail_6080_1_01": "Completa una volta:\n• \"Lotta ad alta difficoltà (una al\ngiorno)!\" in \"Episodio - Legami aurei\".\nIl numero di Unità i cui PS sono stati\nridotti a 0 deve essere uno o meno.",
-    "override_detail_6080_2_01": "Completa 5 Guide area che\nprevedono delle lotte con\nla seguente Unità in squadra:\n• Lylia (anniversario 2024) & Solgaleo."
+    "override_detail_6080_2_01": "Completa 5 Guide area che\nprevedono delle lotte con\nla seguente Unità in squadra:\n• Lylia (anniversario 2024) & Solgaleo.",
+    "228": "Fai salire a [Digit:2digits Idx=\"2\" ] il livello risveglio di [Digit:4digits Idx=\"1\" ] Unità.",
+    "override_detail_6100_1_01": "Completa una volta \"Episodio -\nVisitatori dal passato\" in solitaria.\nPuoi completare l'evento nella sezione\n\"Riedizione\".",
+    "override_detail_6100_1_02": "Completa una volta \"Giornata\ndi Eevee - I ricordi degli Eevee\"\nin solitaria.\nPuoi completare l'evento nella sezione\n\"Consigliate\".",
+    "override_detail_6100_1_03": "Completa una volta \"Giornata\ndi Eevee - I ricordi degli Eevee\"\nin modalità multigiocatore.",
+    "override_detail_6100_1_04": "Completa una volta in solitaria\nla Supercompetizione.\nPuoi completare l'evento nella\nsezione \"Consigliate\".",
+    "override_detail_6100_1_05": "Completa una volta \"Episodio -\nUn duo misterioso da Kalos\"\nin solitaria.\nPuoi completare l'evento nella\nsezione \"Consigliate\".",
+    "override_detail_6100_1_06": "Completa una volta \"Episodio -\nLet's go, in cerca del prodigio!\"\nin solitaria.\nPuoi completare l'evento nella\nsezione \"Riedizione\"."
 }

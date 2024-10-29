@@ -1,5 +1,5 @@
 {
-    "legend_rule_2055_001": "Gli effetti sul campo attivati dagli avversari\ndurano a lungo.",
+    "legend_rule_2055_001": "Gli effetti sul campo attivati dagli avversari\nsono permanenti.",
     "legend_rule_2055_002": "Guarendo dal tentennamento, gli avversari\nguadagnano resistenza al tentennamento.",
     "legend_rule_2060_001": "Se non sono affetti da problemi di stato,\ngli avversari subiscono meno danni.",
     "legend_rule_2060_002": "Gli avversari guadagnano resistenza\nai problemi di stato da cui guariscono.",
@@ -43,7 +43,7 @@
     "legend_rule_5100_003": "I danni subiti da Entei diminuiscono\nin proporzione al totale delle modifiche\nalle sue statistiche.",
     "legend_rule_5110_001": "I PS di Articuno rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
     "legend_rule_5110_002": "Articuno ha Difesa triplicata quando entra in\ncampo. Se i suoi PS scendono sotto il 60%,\nviene invece triplicata la Difesa Speciale.",
-    "legend_rule_5110_003": "Quando l'avversario non è affetto\nda variazioni di stato negative, la sua\nDifesa e la sua Difesa Speciale triplicano.",
+    "legend_rule_5110_003": "Quando gli avversari non sono affetti\nda variazioni di stato negative, la loro\nDifesa e la loro Difesa Speciale triplicano.",
     "legend_rule_5120_001": "I PS di Staraptor rimangono al 40% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 40% o meno.",
     "legend_rule_5120_002": "Se Staraptor ha il 40% o meno dei suoi\nPS, non subisce danni da Campidanno di\nalcun tipo.",
     "legend_rule_5120_003": "Se non sono presenti effetti sul campo\navversario, la Difesa e la Difesa Speciale\ndegli avversari sono triplicate.",
