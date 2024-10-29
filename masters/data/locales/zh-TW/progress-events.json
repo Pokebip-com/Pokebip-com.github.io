@@ -1,6 +1,6 @@
 {
-  "item" : "Item",
-  "quantity" : "Quantity",
-  "points" : "Points",
-  "repeatedStep" : "Every {{points}}"
+  "item": "Item",
+  "points": "Points",
+  "quantity": "Quantity",
+  "repeatedStep": "Every {{points}}"
 }

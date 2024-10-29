@@ -1,6 +1,6 @@
 {
-  "item" : "Objet",
-  "quantity" : "Quantité",
-  "points" : "Points",
-  "repeatedStep" : "Tous les {{points}}"
+  "item": "Objet",
+  "points": "Points",
+  "quantity": "Quantité",
+  "repeatedStep": "Tous les {{points}}"
 }

@@ -1,0 +1,7 @@
+{"entries": [
+{ "specialAwakingConsumptionItemId": 1, "level": 1, "numSuperawakeningCandies": 1, "numTomes": 400, "numCodices": 100 },
+{ "specialAwakingConsumptionItemId": 2, "level": 2, "numSuperawakeningCandies": 1, "numTomes": 400, "numCodices": 100 },
+{ "specialAwakingConsumptionItemId": 3, "level": 3, "numSuperawakeningCandies": 1, "numTomes": 400, "numCodices": 100 },
+{ "specialAwakingConsumptionItemId": 4, "level": 4, "numSuperawakeningCandies": 1, "numTomes": 400, "numCodices": 100 },
+{ "specialAwakingConsumptionItemId": 5, "level": 5, "numSuperawakeningCandies": 1, "numTomes": 400, "numCodices": 100 }
+]}

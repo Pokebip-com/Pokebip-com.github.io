@@ -678,6 +678,11 @@ function getItemName(itemId, log = false) {
 
             break;
 
+        // SuperAwakingLevelUpItem.pb
+        case 180:
+
+            break;
+
         // Inconnus...
         case 91:
         case 900:

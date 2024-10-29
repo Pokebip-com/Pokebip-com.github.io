@@ -1,5 +1,5 @@
 {
-    "item" : "Item",
-    "max" : "Limit",
-    "currency" : "Currency"
+  "currency": "Currency",
+  "item": "Item",
+  "max": "Limit"
 }

@@ -236,6 +236,7 @@ async function buildHeader(baseDir = ".") {
                 { "title": jData.locale.common.submenu_pair_ex_role, "url": `${baseDir}/ex-role.html` },
                 { "title" : jData.locale.common.submenu_skill_gear, "url" : `${baseDir}/skill-gears.html` },
                 { "title" : jData.locale.common.submenu_lucky_skills, "url" : `${baseDir}/lucky-skills.html` },
+                { "title" : jData.locale.common.submenu_superawakening, "url" : `${baseDir}/superawakening.html` },
             ]
         },
         { "title": jData.locale.common.menu_battle_rally, "url": "", "drop": [
