@@ -75,6 +75,7 @@ function preloadUtils(preloadItems = false) {
         jsonCache.preloadProto(`Item`);
         jsonCache.preloadProto(`MonsterEnhancement`);
         jsonCache.preloadProto(`MoveLevelUpItem`);
+        jsonCache.preloadProto(`SpecialAwakingLevelUpItem`);
         jsonCache.preloadProto(`StoryQuest`);
         jsonCache.preloadProto(`TrainerBuildupItem`);
 
@@ -678,9 +679,15 @@ function getItemName(itemId, log = false) {
 
             break;
 
-        // SuperAwakingLevelUpItem.pb
+        // SpecialAwakingLevelUpItem.pb
         case 180:
+            let saLevelUpItem = jData.proto.specialAwakingLevelUpItem.find(salui => salui.itemId === itemId);
+            if(saLevelUpItem && saLevelUpItem.type === 2) {
+                return jData.lsd.otherItemName[parseInt(saLevelUpItem.itemId) - parseInt(saLevelUpItem.trainerId) + 1]
+                    + (saLevelUpItem.trainerId === "0" ? "" : " (" + getPairName(saLevelUpItem.trainerId) + ")");
+            }
 
+            lsdName = `other_item_name`;
             break;
 
         // Inconnus...

@@ -54,11 +54,11 @@ function listTrainers() {
         tr.appendChild(syncPairTd);
 
         let nameTd = document.createElement("td");
-        nameTd.innerText = getPassiveSkillName(jData.proto.trainerSpecialAwaking[i].passiveSkillChild);
+        nameTd.innerText = getPassiveSkillName(jData.proto.trainerSpecialAwaking[i].passiveSkillId);
         tr.appendChild(nameTd);
 
         let descriptionTd = document.createElement("td");
-        descriptionTd.innerText = getPassiveSkillDescr(jData.proto.trainerSpecialAwaking[i].passiveSkillChild);
+        descriptionTd.innerText = getPassiveSkillDescr(jData.proto.trainerSpecialAwaking[i].passiveSkillId);
         tr.appendChild(descriptionTd);
 
         table.appendChild(tr);
