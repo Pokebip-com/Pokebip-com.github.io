@@ -29,6 +29,9 @@
   "skills_title": "Skills",
   "stats": "Stats",
   "stats_settings": "Settings",
+  "superawakening": "Poder excelso",
+  "superawakening_effect": "Effect",
+  "superawakening_level": "Level",
   "sync_grid_ability_type_title": {
     "AdditionalMoveEffect": "Additional Move Effect",
     "MovePowerAccuracyBoost": "Move Boost",

@@ -29,6 +29,9 @@
   "skills_title": "Talents",
   "stats": "Statistiques",
   "stats_settings": "Paramètres",
+  "superawakening": "Transcendance",
+  "superawakening_effect": "Effet",
+  "superawakening_level": "Niveau",
   "sync_grid_ability_type_title": {
     "AdditionalMoveEffect": "Amélioration d'Effet de Capacité",
     "MovePowerAccuracyBoost": "Amélioration de Capacité",

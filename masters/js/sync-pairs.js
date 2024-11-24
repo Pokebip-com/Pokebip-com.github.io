@@ -37,15 +37,18 @@ async function getData() {
     jsonCache.preloadProto("MonsterEvolution");
     jsonCache.preloadProto("MonsterVariation");
     jsonCache.preloadProto("Schedule");
+    jsonCache.preloadProto("SpecialAwakingEffect");
     jsonCache.preloadProto("TeamSkill");
     jsonCache.preloadProto("Trainer");
     jsonCache.preloadProto("TrainerBuildupConfig");
     jsonCache.preloadProto("TrainerBuildupParameter");
+    jsonCache.preloadProto("TrainerSpecialAwaking");
 
     // LSD
     jsonCache.preloadLsd("ability_name");
     jsonCache.preloadLsd("monster_description");
     jsonCache.preloadLsd("motif_type_name");
+    jsonCache.preloadLsd("special_awaking_level_effect_description");
     jsonCache.preloadLsd("team_skill_tag");
     jsonCache.preloadLsd("team_skill_effect");
     jsonCache.preloadLsd("trainer_description");
@@ -465,6 +468,22 @@ function setPairPassives(contentDiv, variation = null) {
 
     table.appendChild(titleRow);
 
+    let specialAwaking = jData.proto.trainerSpecialAwaking.find(t => t.trainerId === syncPairSelect.value);
+
+    if(specialAwaking) {
+        let row = document.createElement("tr");
+
+        let nameCell = document.createElement("td");
+        nameCell.innerHTML = `<img src="./data/sync-grids/icons/transcendance.png" style="width: 25px; vertical-align: top;" /> ${getPassiveSkillName(specialAwaking['passiveSkillId'])}`;
+        row.appendChild(nameCell);
+
+        let descrCell = document.createElement("td");
+        descrCell.innerText = getPassiveSkillDescr(specialAwaking[`passiveSkillId`]);
+        row.appendChild(descrCell);
+
+        table.appendChild(row);
+    }
+
     for(let i = 1; i <= 5; i++) {
         const passiveId = variation && variation[`passive${i}Id`] > 0 ? variation[`passive${i}Id`] : tr[`passive${i}Id`];
 
@@ -481,6 +500,102 @@ function setPairPassives(contentDiv, variation = null) {
         descrCell.innerText = getPassiveSkillDescr(passiveId);
         row.appendChild(descrCell);
 
+        table.appendChild(row);
+    }
+
+    contentDiv.appendChild(table);
+}
+
+function setPairSuperAwakening(contentDiv) {
+    let trsa = jData.proto.trainerSpecialAwaking.find(t => t.trainerId === syncPairSelect.value);
+    const role = jData.proto.trainer.find(t => t.trainerId === syncPairSelect.value).role;
+
+    if(!trsa || !role)
+        return;
+
+    const saEffect = Object.groupBy(jData.proto.specialAwakingEffect.filter(sae => sae.roleId === role)
+        .sort((a, b) => a.specialAwakingLevel - b.specialAwakingLevel), ({specialAwakingLevel}) => specialAwakingLevel);
+
+    let specialAwakingH2 = document.createElement("h2");
+    specialAwakingH2.innerText = jData.locale.syncPairs.superawakening;
+    contentDiv.appendChild(specialAwakingH2);
+
+    let table = document.createElement("table");
+    table.classList.add("bipcode");
+    table.style.textAlign = "center";
+
+    //TODO
+    let headRow = document.createElement("tr");
+
+    let headLevel = document.createElement("th");
+    headLevel.innerText = jData.locale.syncPairs.superawakening_level;
+    headRow.appendChild(headLevel);
+
+    let headEffect = document.createElement("th");
+    headEffect.innerText = jData.locale.syncPairs.superawakening_effect;
+    headRow.appendChild(headEffect);
+
+    table.appendChild(headRow);
+
+    for(let i = 1; i <= Object.keys(saEffect).length; i++) {
+        let row = document.createElement("tr");
+
+        let levelCell = document.createElement("th");
+        levelCell.innerText = i;
+        row.appendChild(levelCell);
+
+        let effectCell = document.createElement("td");
+        let titleEffectShown = false;
+
+        for(let j = 0; j < saEffect[i].length; j++) {
+            switch(saEffect[i][j].specialAwakingLevelEffect) {
+                case 1:
+                    if(!titleEffectShown) {
+                        titleEffectShown = true;
+                        effectCell.innerText = jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}`]
+                            .replaceAll("\n", " ");
+                    }
+
+                    effectCell.innerHTML += "<br>" + jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}_element_${saEffect[i][j].arg1}`]
+                        .replace("[Digit:3digits ]", saEffect[i][j].arg2);
+                    break;
+
+                case 2:
+                    effectCell.innerText = jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}`]
+                        .replaceAll("\n", " ")
+                        .replace("[Digit:3digits ]", saEffect[i][j].arg2/100)
+                    break;
+
+                case 3:
+                    effectCell.innerText = jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}`]
+                        .replaceAll("\n", " ") + ` (x${saEffect[i][j].arg1/100})`;
+                    break;
+
+                case 4:
+                    effectCell.innerText = jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}`].replaceAll("\n", " ") + ` (x${saEffect[i][j].arg1/100})`;
+                    effectCell.innerHTML += "<br>" + jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}_element`].replaceAll("\n", " ") + ` (x${saEffect[i][j].arg1/100})`;
+                    break;
+
+                case 5:
+                    effectCell.innerText = jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}`]
+                        .replaceAll("\n", " ");
+                    break;
+            }
+        }
+
+        switch(saEffect[i].specialAwakingLevelEffect) {
+            case 1:
+                headEffect.innerText = jData.locale.syncPairs.superawakening_effect;
+                break;
+            case 2:
+                headEffect.innerText = jData.locale.syncPairs.superawakening_effect_2;
+                break;
+            case 3:
+                headEffect.innerText = jData.locale.syncPairs.superawakening_effect_3;
+                break;
+        }
+
+        row.appendChild(effectCell);
         table.appendChild(row);
     }
 
@@ -1370,6 +1485,7 @@ function setSyncGrid() {
 function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
     setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation);
     setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
+    setPairSuperAwakening(contentDiv);
     setPairPassives(contentDiv, variation);
     setPairTeamSkills(contentDiv);
     setPairMoves(contentDiv, monsterId, variation);
