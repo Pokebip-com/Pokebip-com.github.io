@@ -76,5 +76,8 @@
     "legend_rule_6090_003": "Cuando el rival no sufre efectos negativos,\nse triplican su Defensa y su Defensa Esp.",
     "legend_rule_6090_011": "La primera vez que los PS de Ninetales\nbajan al 70% o menos, se quedan a ese\nporcentaje.",
     "legend_rule_6090_012": "Cuando el rival no sufre problemas de\nestado, se triplican su Defensa y su Defensa\nEspecial.",
-    "legend_rule_6090_013": "Cuando aumentan la Velocidad, el Ataque o\nel Ataque Especial del rival, se potencian\no bien sus movimientos, o bien sus\nmovimientos y sus movimientos compi."
+    "legend_rule_6090_013": "Cuando aumentan la Velocidad, el Ataque o\nel Ataque Especial del rival, se potencian\no bien sus movimientos, o bien sus\nmovimientos y sus movimientos compi.",
+    "legend_rule_6110_001": "La primera vez que los PS de Latias bajan al\n60% o menos, se quedan a ese porcentaje.",
+    "legend_rule_6110_002": "Se potencian los movimientos, o bien los\nmovimientos y los movimientos compi del\nrival cuando se reducen las características\nde los aliados.",
+    "legend_rule_6110_003": "Se reduce el daño que recibe cada rival\ncuando aumentan su Defensa o su Defensa\nEspecial, o su Ataque o su Defensa,\nrespectivamente."
 }

@@ -76,5 +76,8 @@
     "legend_rule_6090_003": "Quand l'ennemi ne souffre pas\nd'un changement de statut négatif,\nsa Déf. et sa Déf. Spé. sont triplées.",
     "legend_rule_6090_011": "Les PV de Feunard restent à 70 %\nla première fois que ses PV chutent\nà 70 % ou moins.",
     "legend_rule_6090_012": "Quand l'ennemi ne souffre pas\nd'une altération de statut,\nsa Déf. et sa Déf. Spé. sont triplées.",
-    "legend_rule_6090_013": "La puissance des capacités de l'ennemi, de ses\ncapacités Duo, ou des deux, augmente quand\nson Atq., son Atq. Spé. ou sa Vitesse sont\naugmentées."
+    "legend_rule_6090_013": "La puissance des capacités de l'ennemi, de ses\ncapacités Duo, ou des deux, augmente quand\nson Atq., son Atq. Spé. ou sa Vitesse sont\naugmentées.",
+    "legend_rule_6110_001": "Les PV de Latias restent à 60 %\nla première fois que ses PV chutent\nà 60 % ou moins.",
+    "legend_rule_6110_002": "La puissance des capacités de l'ennemi, de ses\ncapacités Duo, ou des deux, augmente quand\nles stats des alliés sont baissées.",
+    "legend_rule_6110_003": "Quand la Défense ou la Défense Spéciale,\nou l'Attaque ou la Défense de chaque ennemi\nest augmentée, ils subissent moins de dégâts."
 }

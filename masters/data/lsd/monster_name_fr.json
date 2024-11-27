@@ -367,6 +367,7 @@
     "20039800": "Étouraptor",
     "20040000": "Castorno",
     "20040001": "Castorno",
+    "20040200": "Mélokrik",
     "20040500": "Luxray",
     "20040700": "Roserade",
     "20040701": "Roserade",
@@ -521,6 +522,7 @@
     "20064000": "Viridium",
     "20064111": "Boréas",
     "20064112": "Boréas",
+    "20064211": "Fulguris",
     "20064300": "Reshiram",
     "20064400": "Zekrom",
     "20064511": "Démétéros",
@@ -625,7 +627,9 @@
     "20087500": "Zéroïd",
     "20087700": "Mouscoto",
     "20087900": "Cancrelove",
+    "20087800": "Câblifère",
     "20088100": "Bamboiselle",
+    "20088000": "Katagami",
     "20087600": "Engloutyran",
     "20088211": "Magearna",
     "20000101": "Bulbizarre",
@@ -775,5 +779,6 @@
     "2009830000": "Scalpereur",
     "2009140000": "Palmaval",
     "2009870000": "Flotte-Mèche",
-    "2009790000": "Courrousinge"
+    "2009790000": "Courrousinge",
+    "2009320000": "Selutin"
 }

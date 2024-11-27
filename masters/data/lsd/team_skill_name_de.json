@@ -280,7 +280,7 @@
     "10306005": "Rivale (Feldwandler)",
     "19905004": "Schönheit (Initiator)",
     "10101004": "Normal (Initiator)",
-    "10303004": "Top Vier (Initiator)",
+    "10303004": "Top-Vier-Mitglied (Initiator)",
     "10304004": "Arenaleiter (Initiator)",
     "19968004": "Die Ruhe in Person (Initiator)",
     "10105004": "Pflanze (Initiator)",
@@ -334,5 +334,11 @@
     "10106004": "Eis (Initiator)",
     "10114004": "Geist (Initiator)",
     "10205005": "Einall (Feldwandler)",
-    "10401005": "MaMo (Feldwandler)"
+    "10401005": "MaMo (Feldwandler)",
+    "10102006": "Feuer (Variabel)",
+    "10118004": "Fee (Initiator)",
+    "10208006": "Galar (Variabel)",
+    "19932004": "Junge Damen (Initiator)",
+    "19958004": "Ausdruckskünstler (Initiator)",
+    "19968006": "Die Ruhe in Person (Variabel)"
 }

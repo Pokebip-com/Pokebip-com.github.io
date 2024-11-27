@@ -400,5 +400,10 @@
 { "salonTopicId": 20000381, "u1": 1, "salonTopicCategoryId": 5, "salonTopicName": "20000381" },
 { "salonTopicId": 20000382, "u1": 1, "salonTopicCategoryId": 6, "salonTopicName": "20000382" },
 { "salonTopicId": 20000383, "u1": 1, "salonTopicCategoryId": 6, "salonTopicName": "20000383" },
-{ "salonTopicId": 20000384, "u1": 1, "salonTopicCategoryId": 7, "salonTopicName": "20000384" }
+{ "salonTopicId": 20000384, "u1": 1, "salonTopicCategoryId": 7, "salonTopicName": "20000384" },
+{ "salonTopicId": 20000385, "u1": 1, "salonTopicCategoryId": 1, "salonTopicName": "20000385" },
+{ "salonTopicId": 20000386, "u1": 1, "salonTopicCategoryId": 2, "salonTopicName": "20000386" },
+{ "salonTopicId": 20000387, "u1": 1, "salonTopicCategoryId": 2, "salonTopicName": "20000387" },
+{ "salonTopicId": 20000388, "u1": 1, "salonTopicCategoryId": 4, "salonTopicName": "20000388" },
+{ "salonTopicId": 20000389, "u1": 1, "salonTopicCategoryId": 7, "salonTopicName": "20000389" }
 ]}

@@ -76,5 +76,8 @@
     "legend_rule_6090_003": "When the opponent is not affected by a\nnegative status change, its Defense and\nSp. Def are tripled.",
     "legend_rule_6090_011": "The first time Ninetales’s HP reaches 70% or\nlower, it endures with that HP.",
     "legend_rule_6090_012": "When the opponent is not affected by a\nstatus condition, its Defense and Sp. Def\nare tripled.",
-    "legend_rule_6090_013": "Powers up the opponent’s moves, sync\nmove, or both when their Attack, Sp. Atk, or\nSpeed is raised."
+    "legend_rule_6090_013": "Powers up the opponent’s moves, sync\nmove, or both when their Attack, Sp. Atk, or\nSpeed is raised.",
+    "legend_rule_6110_001": "The first time Latias’s HP reaches 60% or\nlower, it endures with that HP.",
+    "legend_rule_6110_002": "Powers up the opponent’s moves, sync move,\nor both when allies’ stats are lowered.",
+    "legend_rule_6110_003": "When each opponent’s Defense or Sp. Def—\nor Attack or Defense—is raised, the damage\nthey take is reduced."
 }

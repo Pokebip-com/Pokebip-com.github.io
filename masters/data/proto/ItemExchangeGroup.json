@@ -380,5 +380,15 @@
 { "itemExchangeGroupId": 2610020, "u2": 1, "scheduleId": "6100_4W_Event_EV_Exchange", "bannerId": 1510007, "u5": 0 },
 { "itemExchangeGroupId": 2610030, "u2": 1, "scheduleId": "6100_4W_Event_Hisui_Exchange", "bannerId": 1505001, "u5": 0 },
 { "itemExchangeGroupId": 2610040, "u2": 1, "scheduleId": "6100_4W_Event_Ayumi_Exchange", "bannerId": 1510006, "u5": 0 },
-{ "itemExchangeGroupId": 2610050, "u2": 1, "scheduleId": "6100_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 }
+{ "itemExchangeGroupId": 2610050, "u2": 1, "scheduleId": "6100_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 },
+{ "itemExchangeGroupId": 2611010, "u2": 1, "scheduleId": "6110_1W_Event_swordshield_Exchange_2", "bannerId": 1302003, "u5": 0 },
+{ "itemExchangeGroupId": 2611020, "u2": 1, "scheduleId": "6110_2W_Event_galar_Exchange", "bannerId": 1611006, "u5": 0 },
+{ "itemExchangeGroupId": 2611030, "u2": 1, "scheduleId": "6110_2W_Event_Season_Exchange_2", "bannerId": 1408006, "u5": 0 },
+{ "itemExchangeGroupId": 2611040, "u2": 1, "scheduleId": "6110_3W_Event_Campaign_Exchange", "bannerId": 1611008, "u5": 0 },
+{ "itemExchangeGroupId": 2611050, "u2": 1, "scheduleId": "6110_3W_Event_Christmas2023_Exchange", "bannerId": 1511006, "u5": 0 },
+{ "itemExchangeGroupId": 2611060, "u2": 1, "scheduleId": "6110_4W_Event_sakaki_get_Exchange", "bannerId": 1407503, "u5": 0 },
+{ "itemExchangeGroupId": 2611070, "u2": 1, "scheduleId": "6110_4W_Event_kasumi_get_Exchange", "bannerId": 1308005, "u5": 0 },
+{ "itemExchangeGroupId": 2611080, "u2": 1, "scheduleId": "6110_4W_Event_green_get_Exchange", "bannerId": 5401007, "u5": 0 },
+{ "itemExchangeGroupId": 2611090, "u2": 1, "scheduleId": "6110_4W_Event_kanto_Exchange", "bannerId": 1508001, "u5": 0 },
+{ "itemExchangeGroupId": 2611100, "u2": 1, "scheduleId": "6110_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 }
 ]}

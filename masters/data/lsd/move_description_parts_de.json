@@ -807,5 +807,12 @@
     "999123": "Erhöht den [Name:ReferencedMessageTag Idx=\"5\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"6\" ].",
     "999122": "Senkt [Name:ReferencedMessageTag Idx=\"7\" ] des Anwenders um [Digit:1digit Idx=\"8\" ].",
     "999121": "Erhöht den [Name:ReferencedMessageTag ] eines Verbündeten um [Digit:1digit Idx=\"1\" ].",
-    "999120": "Erhöht den [Name:ReferencedMessageTag Idx=\"2\" ] eines Verbündeten um [Digit:1digit Idx=\"3\" ]."
+    "999120": "Erhöht den [Name:ReferencedMessageTag Idx=\"2\" ] eines Verbündeten um [Digit:1digit Idx=\"3\" ].",
+    "999118": "Senkt zufällig einen der folgenden Statuswerte des Zieles um [Digit:1digit Idx=\"3\" ]: Angriff, Verteidigung, Spezial-Angriff, Spezial-Verteidigung, Initiative, Genauigkeit oder Fluchtwert. Erhöht den Statuswert des Anwenders um denselben Wert.",
+    "999117": "Erzeugt ein Mal pro Kampf einen [Name:ReferencedMessageTag Idx=\"1\" ], wenn dieser Angriff mit einer Attacke erstmals Erfolg hat. (Ein [Name:ReferencedMessageTag Idx=\"1\" ] verstärkt Angriffe vom Typ [Name:ReferencedMessageTag Idx=\"2\" ].)",
+    "999116": "Befreit einen Verbündeten von allen Statusproblemen und von Zurückschrecken, Verwirrung sowie Umschlingung.",
+    "999115": "Wenn die Gefährten deines Teams eine Gefährten-Dynamax-Attacke [Digit:1digit ]-mal einsetzen.",
+    "999114": "Erhöht die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ eines Verbündeten um [Digit:1digit Idx=\"1\" ].",
+    "999113": "Erhöht die Genauigkeit und die Volltrefferquote aller verbündeten Gefährten um [Digit:1digit Idx=\"2\" ].",
+    "999112": "Verursacht bei einem Verbündeten den [Name:ReferencedMessageTag Idx=\"1\" ]."
 }

@@ -307,8 +307,8 @@
     "event_6010_1W_FesPickup_01": "¡Llega Chase! ¡Brinda apoyo a sus\naliados con Análisis de Kanto!",
     "event_6010_1W_FesPickup_03": "¡Reclutamiento triple del\nPokéfestival! ¡Puedes reclutar\na las tres parejas de compis\ndestacadas!",
     "event_6010_2W_VarietyPickup_01": "¡Llega Pegaso con un nuevo compi\nPokémon! ¡Puedes conseguir\nregalos en el reclutamiento\ndestacado (solo 3), como billetes\nrecl. de compis garantizados!",
-    "event_6010_2W_SeasonPickup_02": "¡Victor se pone delantal!\n¡Puedes conseguir regalos en el\nreclutamiento destacado (solo 3),\ncomo billetes reclutamiento de\ncompis garantizados!",
-    "event_6010_2W_SeasonPickup_03": "¡Inverna se pone delantal!\n¡Puedes conseguir regalos en el\nreclutamiento destacado (solo 3),\ncomo billetes reclutamiento de\ncompis garantizados!",
+    "event_6010_2W_SeasonPickup_02": "¡Victor se pone delantal!\n¡Reclutamiento por fases en curso!\n¡Puedes conseguir billetes\nreclutamiento de compis\ngarantizados!",
+    "event_6010_2W_SeasonPickup_03": "¡Inverna se pone delantal!\n¡Reclutamiento por fases en curso!\n¡Puedes conseguir billetes\nreclutamiento de compis\ngarantizados!",
     "event_6010_3W_SeasonPickup_01": "¡Vuelven compis de temporada!\n¡Reclutamiento por fases en curso!",
     "event_6010_4W_FesPickup_02": "¡Llega Gladio (Traje S) en una\npareja de compis maestros!\n¡Puedes conseguir regalos en el\nreclutamiento destacado con joyas\nde pago!",
     "event_6010_4W_FesPickup_04": "¡Lylia vuelve al escenario con un\nvestido precioso!\n¡Puedes conseguir regalos en el\nreclutamiento destacado con joyas\nde pago!",
@@ -406,5 +406,14 @@
     "event_6100_4W_Variety_01": "¡Llegan tres parejas de compis\nvarios! ¡Puedes conseguir regalos\nen el reclutamiento por fases!",
     "event_6100_4W_Variety_02": "¡Vuelven cinco parejas de compis\nvarios! ¡Puedes conseguir regalos\nen el reclutamiento por fases!",
     "event_6100_4W_MasterFes_09": "¡Vuelve Adamas en una pareja de\ncompis maestros!\n¡Puedes conseguir regalos en el\nreclutamiento destacado con joyas\nde pago!",
-    "event_6100_4W_MasterFes_011": "¡Vuelve Nákara en una pareja de\ncompis maestros!\n¡Puedes conseguir regalos en el\nreclutamiento destacado con joyas\nde pago!"
+    "event_6100_4W_MasterFes_011": "¡Vuelve Nákara en una pareja de\ncompis maestros!\n¡Puedes conseguir regalos en el\nreclutamiento destacado con joyas\nde pago!",
+    "event_6110_1W_UltimateFes_01": "¡Lionel fortalece sus vínculos y\nllega en una archipareja de\ncompis! ¡Puedes conseguir regalos\nen el reclutamiento destacado con\njoyas de pago!",
+    "event_6110_1W_PokeFes_03": "¡Vuelve Damián! ¡Puede consumir\nBayas para inclinar la balanza \na su favor!",
+    "event_6110_1W_PokeFes_08": "¡Llega Percy! ¡Puede fortalecer a\ntodos sus aliados aplicando el\nefecto Siguiente Físico ↑!",
+    "event_6110_2W_Variety_01": "¡Roxy, Paul y Berto llegan como\ncompis varios! ¡Puedes echar un\nvistazo al reclutamiento por fases!\n",
+    "event_6110_2W_SpecialCos_04": "¡Vuelven compis con sus trajes\nespeciales! ¡Reclutamiento por\nfases en curso!",
+    "event_6110_3W_Season_01": "¡Lylia marcha triunfal con su traje\nmusical! ¡Puedes conseguir regalos\nen el reclutamiento por fases!",
+    "event_6110_3W_Season_05": "¡Antón marcha triunfal con su traje\nmusical! ¡Puedes conseguir regalos\nen el reclutamiento por fases!",
+    "event_6110_3W_Season_09": "¡Vuelven compis de temporada\ncon sus trajes invernales!\n¡Reclutamiento por fases en curso!",
+    "event_6110_4W_PokeFes_09": "¡Reclutamiento doble del\nPokéfestival! ¡Puedes reclutar a las\ndos parejas de compis destacadas!"
 }

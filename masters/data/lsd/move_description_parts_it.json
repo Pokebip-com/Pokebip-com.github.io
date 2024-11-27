@@ -192,7 +192,7 @@
     "999747": "Aumenta a caso di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ] una delle seguenti statistiche di chi la usa: Attacco, Difesa, Difesa Speciale, Velocità, precisione o elusione.",
     "999746": "Riduce la Difesa e la Difesa Speciale di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
     "999745": "Se Charizard di chi la usa si megaevolve, aumenta anche l'Attacco di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
-    "999744": "Abbassa di [Digit:1digit ] il numero di azioni necessarie per sferrare un'Unimossa a un'Unità alleata.",
+    "999744": "Abbassa di [Digit:1digit ] il numero di azioni necessarie per sferrare l'Unimossa a un'Unità alleata.",
     "999743": "Aumenta la precisione e la probabilità di mandare a segno brutti colpi di un'Unità alleata di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ]. Quando la tensione di chi la usa è stata aumentata, aumenta invece la precisione e la probabilità di mandare a segno brutti colpi di un'Unità alleata di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
     "999742": "Aumenta l'Attacco Speciale di un alleato di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
     "999741": "Aumenta la precisione di un alleato di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
@@ -744,7 +744,7 @@
     "999191": "Quando al campo alleato non è più applicata una Cerchia.",
     "999190": "Riduce la Difesa, la Difesa Speciale e l'elusione di tutte le Unità avversarie di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999189": "Causa una grandinata.",
-    "999188": "Abbassa di [Digit:1digit Idx=\"2\" ] il numero di azioni necessarie a chi la usa per sferrare un'Unimossa.",
+    "999188": "Abbassa di [Digit:1digit Idx=\"2\" ] il numero di azioni necessarie a chi la usa per sferrare l'Unimossa.",
     "999187": "Aumenta [Name:ReferencedMessageTag Idx=\"4\" ] di un alleato di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ].",
     "999186": "Ha una certa probabilità ([Digit:2digits Idx=\"1\" ]%) di ridurre [Name:ReferencedMessageTag Idx=\"2\" ] del bersaglio di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ].",
     "999185": "Trasforma la zona in una [Name:ReferencedMessageTag Idx=\"4\" ] la prima volta che questo attacco semplice va a segno in ogni lotta. (Una [Name:ReferencedMessageTag Idx=\"4\" ] aumenta la potenza degli attacchi di tipo [Name:ReferencedMessageTag Idx=\"5\" ].)",
@@ -807,5 +807,12 @@
     "999123": "Aumenta l'[Name:ReferencedMessageTag Idx=\"5\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"6\" ] [IT:Qty Ref=\"6\" S=\"grado\" P=\"gradi\" ].",
     "999122": "Riduce [Name:ReferencedMessageTag Idx=\"7\" ] di chi la usa di [Digit:1digit Idx=\"8\" ] [IT:Qty Ref=\"8\" S=\"grado\" P=\"gradi\" ].",
     "999121": "Aumenta l'[Name:ReferencedMessageTag ] di un alleato di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
-    "999120": "Aumenta la [Name:ReferencedMessageTag Idx=\"2\" ] di un alleato di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ]."
+    "999120": "Aumenta la [Name:ReferencedMessageTag Idx=\"2\" ] di un alleato di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ].",
+    "999118": "Riduce una statistica a caso del bersaglio di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ] tra le seguenti: Attacco, Difesa, Attacco Speciale, Difesa Speciale. Velocità, precisione o elusione. Aumenta le statistiche di chi la usa in egual misura.",
+    "999117": "Trasforma la zona in una [Name:ReferencedMessageTag Idx=\"1\" ] la prima volta che questo attacco semplice va a segno in ogni lotta. (Una [Name:ReferencedMessageTag Idx=\"1\" ] aumenta la potenza degli attacchi di tipo [Name:ReferencedMessageTag Idx=\"2\" ].)",
+    "999116": "Guarisce un alleato dai problemi di stato, dal tentennamento, dalla confusione e dall'imprigionamento.",
+    "999115": "Quando l'Unità nella tua squadra sferra una mossa UniDynamax [Digit:1digit ] [IT:Qty S=\"volta\" P=\"volte\" ].",
+    "999114": "Aumenta l'effetto \"Prossima mossa fisica ↑\" e l'effetto \"Prossima mossa speciale ↑\" di un alleato di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
+    "999113": "Aumenta la precisione e la probabilità di mandare a segno brutti colpi di tutte le Unità alleate di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
+    "999112": "Applica l'[Name:ReferencedMessageTag Idx=\"1\" ] a un alleato."
 }

@@ -807,5 +807,12 @@
     "999123": "味方のバディーズ全員の[Name:ReferencedMessageTag Idx=\"5\" ]を[Digit:1digit Idx=\"6\" ]段階あげる",
     "999122": "自分の[Name:ReferencedMessageTag Idx=\"7\" ]を[Digit:1digit Idx=\"8\" ]段階さげる",
     "999121": "味方の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階あげる",
-    "999120": "味方の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階あげる"
+    "999120": "味方の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階あげる",
+    "999118": "相手の攻撃と防御と特攻と特防と素早さと命中率と回避率の中からどれかひとつを[Digit:1digit Idx=\"3\" ]段階さげ同じ分だけ自分の能力をあげる",
+    "999117": "初めてこの技での攻撃が成功したときだけゾーンを[Name:ReferencedMessageTag Idx=\"1\" ]にする\n（[Name:ReferencedMessageTag Idx=\"1\" ]は[Name:ReferencedMessageTag Idx=\"2\" ]タイプの攻撃の威力をあげる）",
+    "999116": "味方の状態異常やひるみ状態やこんらん状態やバインド状態を解除する",
+    "999115": "自分のチームがバディーズダイマックスわざを[Digit:1digit ]回つかったとき",
+    "999114": "味方の次回物理技威力ブーストと次回特殊技威力ブーストをそれぞれ[Digit:1digit Idx=\"1\" ]段階あげる",
+    "999113": "味方のバディーズ全員の命中率と急所率を[Digit:1digit Idx=\"2\" ]段階あげる",
+    "999112": "味方を[Name:ReferencedMessageTag Idx=\"1\" ]にする"
 }

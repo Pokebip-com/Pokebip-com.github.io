@@ -367,6 +367,7 @@
     "20039800": "Staraptor",
     "20040000": "Bibarel",
     "20040001": "Bibarel",
+    "20040200": "Kricketune",
     "20040500": "Luxray",
     "20040700": "Roserade",
     "20040701": "Roserade",
@@ -521,6 +522,7 @@
     "20064000": "Virizion",
     "20064111": "Tornadus",
     "20064112": "Tornadus",
+    "20064211": "Thundurus",
     "20064300": "Reshiram",
     "20064400": "Zekrom",
     "20064511": "Landorus",
@@ -625,7 +627,9 @@
     "20087500": "Nihilego",
     "20087700": "Buzzwole",
     "20087900": "Pheromosa",
+    "20087800": "Xurkitree",
     "20088100": "Celesteela",
+    "20088000": "Kartana",
     "20087600": "Guzzlord",
     "20088211": "Magearna",
     "20000101": "Bulbasaur",
@@ -775,5 +779,6 @@
     "2009830000": "Kingambit",
     "2009140000": "Quaquaval",
     "2009870000": "Flutter Mane",
-    "2009790000": "Annihilape"
+    "2009790000": "Annihilape",
+    "2009320000": "Nacli"
 }

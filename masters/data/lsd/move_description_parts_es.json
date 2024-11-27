@@ -543,8 +543,8 @@
     "999396": "La potencia de este ataque aumenta cuando se aplica [Name:ReferencedMessageTag ] al bando rival.",
     "999395": "Aumenta [Name:ReferencedMessageTag ] de un aliado en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
     "999394": "Aumenta el [Name:ReferencedMessageTag Idx=\"2\" ] de un aliado en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ].",
-    "999393": "Cuando hay al menos 1 Pokémon con una resiliencia reducida en el bando rival.",
-    "999392": "Cuando ya no quede ningún Pokémon con una resiliencia reducida en el bando rival.",
+    "999393": "Cuando hay al menos 1 Pokémon con una resiliencia tipo reducida en el bando rival.",
+    "999392": "Cuando ya no quede ningún Pokémon con una resiliencia tipo reducida en el bando rival.",
     "999391": "Reduce el Ataque, Defensa y Velocidad del objetivo en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
     "999389": "Cuando hay al menos 1 Pokémon con la [Name:ReferencedMessageTag ] reducida en el bando rival.",
     "999388": "Cuando no quede ningún Pokémon con la [Name:ReferencedMessageTag ] reducida en el bando rival.",
@@ -807,5 +807,12 @@
     "999123": "Aumenta el [Name:ReferencedMessageTag Idx=\"5\" ] de todos los compis aliados en [Digit:1digit Idx=\"6\" ] [ES:Qty Ref=\"6\" S=\"nivel\" P=\"niveles\" ].",
     "999122": "Reduce [Name:ReferencedMessageTag Idx=\"7\" ] del usuario en [Digit:1digit Idx=\"8\" ] [ES:Qty Ref=\"8\" S=\"nivel\" P=\"niveles\" ].",
     "999121": "Aumenta el [Name:ReferencedMessageTag ] de un aliado en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
-    "999120": "Aumenta la [Name:ReferencedMessageTag Idx=\"2\" ] de un aliado en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ]."
+    "999120": "Aumenta la [Name:ReferencedMessageTag Idx=\"2\" ] de un aliado en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ].",
+    "999118": "Reduce en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ] una de estas características del objetivo al azar: Ataque, Defensa, Ataque Especial, Defensa Especial, Velocidad, Precisión o Evasión. Dicha característica aumenta en igual medida para el usuario.",
+    "999117": "Crea una [Name:ReferencedMessageTag Idx=\"1\" ] la primera vez que este movimiento de ataque acierta en cada combate. (Una [Name:ReferencedMessageTag Idx=\"1\" ] potencia los ataques de tipo [Name:ReferencedMessageTag Idx=\"2\" ]).",
+    "999116": "Cura todos los problemas de estado, de retroceso, confusión y ataduras de un aliado.",
+    "999115": "Cuando los compis de tu equipo usan un movimiento compi Dinamax [Digit:1digit ] [ES:Qty S=\"vez\" P=\"veces\" ].",
+    "999114": "Aumenta el efecto Siguiente Físico ↑ y el efecto Siguiente Especial ↑ de un aliado en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
+    "999113": "Aumenta la Precisión y la probabilidad de asestar golpes críticos de todos los compis aliados en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
+    "999112": "Aplica el [Name:ReferencedMessageTag Idx=\"1\" ] a un aliado."
 }

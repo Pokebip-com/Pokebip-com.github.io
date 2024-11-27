@@ -807,5 +807,12 @@
     "999123": "提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"5\" ][Digit:1digit Idx=\"6\" ]階段。",
     "999122": "降低自己的[Name:ReferencedMessageTag Idx=\"7\" ][Digit:1digit Idx=\"8\" ]階段。",
     "999121": "提高我方的[Name:ReferencedMessageTag ][Digit:1digit Idx=\"1\" ]階段。",
-    "999120": "提高我方的[Name:ReferencedMessageTag Idx=\"2\" ][Digit:1digit Idx=\"3\" ]階段。"
+    "999120": "提高我方的[Name:ReferencedMessageTag Idx=\"2\" ][Digit:1digit Idx=\"3\" ]階段。",
+    "999118": "降低對手的攻擊、防禦、特攻、特防、速度、命中率、閃避率中的一種能力[Digit:1digit Idx=\"3\" ]階段，並且等量提高自己的能力。",
+    "999117": "首次使出此招式攻擊成功時，會將領域變成[Name:ReferencedMessageTag Idx=\"1\" ]。\n（[Name:ReferencedMessageTag Idx=\"1\" ]會提高[Name:ReferencedMessageTag Idx=\"2\" ]屬性的攻擊的威力。）",
+    "999116": "解除我方的異常狀態與畏縮、混亂和束縛狀態。",
+    "999115": "我方隊伍使出[Digit:1digit ]次拍組極巨化招式時",
+    "999114": "分別提高我方的下次物理招式威力增強和下次特殊招式威力增強[Digit:1digit Idx=\"1\" ]階段。",
+    "999113": "提高我方全體拍組的命中率和擊中要害率[Digit:1digit Idx=\"2\" ]階段",
+    "999112": "讓我方變成[Name:ReferencedMessageTag Idx=\"1\" ]狀態。"
 }

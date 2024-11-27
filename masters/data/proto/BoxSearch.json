@@ -36,5 +36,6 @@
 { "boxSearchId": 509001, "scheduleId": "5090_2W_Event_Halloween2023_Boxsearch", "itemId": "750000000503", "bannerId": 1509005, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 10 },
 { "boxSearchId": 510001, "scheduleId": "5100_2W_Event_Iris_Exchange", "itemId": "750000000511", "bannerId": 1302005, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 10 },
 { "boxSearchId": 609001, "scheduleId": "6090_3W_Event_Halloween_box", "itemId": "750000000636", "bannerId": 1509005, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 10 },
-{ "boxSearchId": 609002, "scheduleId": "6090_1W_Event_happybox", "itemId": "750000000639", "bannerId": 1609002, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 1 }
+{ "boxSearchId": 609002, "scheduleId": "6090_1W_Event_happybox", "itemId": "750000000639", "bannerId": 1609002, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 1 },
+{ "boxSearchId": 611001, "scheduleId": "6110_1W_Event_swordshield_BoxSearch_1", "itemId": "750000000650", "bannerId": 1501009, "u5": "", "textId": "event_2100_1W_Box_01", "u7": 10, "u8": 10 }
 ]}

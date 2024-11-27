@@ -216,7 +216,7 @@
     "999723": "If the user’s Sharpedo has Mega Evolved, also raises the user’s Attack by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
     "999722": "Fully restores an ally’s HP.",
     "999721": "Removes all status conditions from an ally.",
-    "999720": "Removes the confused, flinching, and trapped conditions from an ally.",
+    "999720": "Removes the flinching, confused, and trapped conditions from an ally.",
     "999719": "The user takes on a phantom presence.",
     "999718": "After a set time, this presence fades and the user attacks.",
     "999717": "No other actions can be taken while in phantom presence.",
@@ -807,5 +807,12 @@
     "999123": "Increases the [Name:ReferencedMessageTag Idx=\"5\" ] of all allied sync pairs by [Digit:1digit Idx=\"6\" ] [EN:Qty Ref=\"6\" S=\"rank\" P=\"ranks\" ].",
     "999122": "Lowers the user’s [Name:ReferencedMessageTag Idx=\"7\" ] by [Digit:1digit Idx=\"8\" ] stat [EN:Qty Ref=\"8\" S=\"rank\" P=\"ranks\" ].",
     "999121": "Increases the [Name:ReferencedMessageTag ] of an ally by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
-    "999120": "Raises an ally’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ]."
+    "999120": "Raises an ally’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ].",
+    "999118": "Lowers one of the target’s following stats by [Digit:1digit Idx=\"3\" ] stat [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ] at random: Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness. Raises the user’s stat by the same amount.",
+    "999117": "Turns the field of play’s zone into a [Name:ReferencedMessageTag Idx=\"1\" ] the first time this attack move is successful each battle. (A [Name:ReferencedMessageTag Idx=\"1\" ] powers up [Name:ReferencedMessageTag Idx=\"2\" ]-type attacks.)",
+    "999116": "Removes all status conditions and the flinching, confused, and trapped conditions from an ally.",
+    "999115": "When your team’s sync pair uses a max move [Digit:1digit ] [EN:Qty S=\"time\" P=\"times\" ].",
+    "999114": "Increases the Physical Moves ↑ Next effect and Special Moves ↑ Next effect of an ally by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "999113": "Raises the accuracy and critical-hit rate of all allied sync pairs by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ].",
+    "999112": "Applies the [Name:ReferencedMessageTag Idx=\"1\" ] to an ally."
 }

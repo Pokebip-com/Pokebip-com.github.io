@@ -76,5 +76,8 @@
     "legend_rule_6090_003": "Quando gli avversari non sono affetti\nda variazioni di stato negative, la loro\nDifesa e la loro Difesa Speciale triplicano.",
     "legend_rule_6090_011": "I PS di Ninetales rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
     "legend_rule_6090_012": "Quando gli avversari non sono affetti\nda problemi di stato, la loro Difesa\ne Difesa Speciale triplicano.",
-    "legend_rule_6090_013": "Se l'Attacco, Attacco Speciale o Velocità \ndegli avversari aumentano, le loro mosse,\noppure le loro mosse e Unimosse, \nvengono potenziate."
+    "legend_rule_6090_013": "Se l'Attacco, Attacco Speciale o Velocità \ndegli avversari aumentano, le loro mosse,\noppure le loro mosse e Unimosse, \nvengono potenziate.",
+    "legend_rule_6110_001": "I PS di Latias rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
+    "legend_rule_6110_002": "Se le statistiche degli alleati diminuiscono,\nle mosse degli avversari, oppure le loro\nmosse e Unimosse, vengono potenziate.",
+    "legend_rule_6110_003": "I danni subiti da ciascun avversario vengono\nridotti se la sua Difesa o Difesa Speciale, o\nil suo Attacco o la sua Difesa, è aumentata."
 }

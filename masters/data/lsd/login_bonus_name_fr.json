@@ -189,5 +189,9 @@
     "inventory_campaign_6090_nan": "bonus de connexion (Révélation ! Crinière ou plumes ?)",
     "inventory_campaign_6100_mjicos": "bonus de connexion (Fraternité Ultime, attention au départ du train !)",
     "inventory_campaign_6100_jina": "bonus de connexion (La mystérieuse équipe de Kalos)",
-    "inventory_campaign_6100_EV": "bonus de connexion (Évoli plein d'énergie)"
+    "inventory_campaign_6100_EV": "bonus de connexion (Évoli plein d'énergie)",
+    "inventory_campaign_6110_aru": "bonus de connexion (Évènement combat spécial)",
+    "inventory_campaign_6110_christmas": "bonus de connexion (Joyeux ensemble musical)",
+    "inventory_campaign_6110_stamina": "bonus de connexion (Aide pour la Vigueur)",
+    "inventory_campaign_6110_present": "Une nuit de cadeaux musicale"
 }

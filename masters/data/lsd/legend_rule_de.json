@@ -76,5 +76,8 @@
     "legend_rule_6090_003": "Wenn der Gegner nicht von einer negativen\nStatusveränderung betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
     "legend_rule_6090_011": "Fallen Vulnonas KP das erste Mal auf 70 %,\nhält es mit dieser Anzahl an KP durch.",
     "legend_rule_6090_012": "Wenn der Gegner nicht von einem\nStatusproblem betroffen ist, sind seine Vert.\nund Sp.-Vert. verdreifacht.",
-    "legend_rule_6090_013": "Erhöht die Stärke von Attacken oder von\nAttacken und der GA des Geg., wenn sein\nAngriff, Sp.-Ang. oder Initiative erhöht ist."
+    "legend_rule_6090_013": "Erhöht die Stärke von Attacken oder von\nAttacken und der GA des Geg., wenn sein\nAngriff, Sp.-Ang. oder Initiative erhöht ist.",
+    "legend_rule_6110_001": "Fallen Latias’ KP das erste Mal auf 60 %,\nhält es mit dieser Anzahl an KP durch.",
+    "legend_rule_6110_002": "Erhöht die Stärke von Attacken oder von\nAttacken und der GA des Geg., wenn die\nWerte verbündeter Gefährten gesenkt sind.",
+    "legend_rule_6110_003": "Gegner erleiden weniger Schaden, wenn\nihre Vert./Sp.-Vert. oder ihr Ang./Vert.\nerhöht sind."
 }

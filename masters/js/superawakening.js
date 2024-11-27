@@ -4,15 +4,15 @@ let passivesDiv;
 
 async function getData() {
     // PROTO
-    jsonCache.preloadProto("PassiveSkillChild");
+    //jsonCache.preloadProto("PassiveSkillChild");
     jsonCache.preloadProto("Schedule");
     jsonCache.preloadProto("TrainerSpecialAwaking");
 
     // LSD
-    jsonCache.preloadLsd("potential_item_name");
+    //jsonCache.preloadLsd("potential_item_name");
 
     // CUSTOM
-    jsonCache.preloadCustom("version_release_dates");
+    // jsonCache.preloadCustom("version_release_dates");
 
     // Locale
     jsonCache.preloadLocale("special-awaking");
@@ -22,7 +22,13 @@ async function getData() {
     preloadMovePassiveSkills();
 
     await jsonCache.runPreload();
-    orderByVersion(jData.custom.versionReleaseDates);
+    // orderByVersion(jData.custom.versionReleaseDates);
+    jData.proto.trainerSpecialAwaking = jData.proto.trainerSpecialAwaking.map(tsa => {
+        tsa.startDate = jData.proto.schedule.find(s => s.scheduleId === tsa.scheduleId).startDate;
+        return tsa;
+    }).sort((a, b) => {
+        return b.startDate - a.startDate || a.trainerId - b.trainerId;
+    });
 }
 
 function listTrainers() {
@@ -44,6 +50,10 @@ function listTrainers() {
     descriptionTh.innerText = jData.locale.specialAwaking.th_passive_skill_descr;
     tr.appendChild(descriptionTh);
 
+    let dateTh = document.createElement("th");
+    dateTh.innerText = jData.locale.specialAwaking.th_start_date;
+    tr.appendChild(dateTh);
+
     thead.appendChild(tr);
     table.appendChild(thead);
 
@@ -60,6 +70,10 @@ function listTrainers() {
         let descriptionTd = document.createElement("td");
         descriptionTd.innerText = getPassiveSkillDescr(jData.proto.trainerSpecialAwaking[i].passiveSkillId);
         tr.appendChild(descriptionTd);
+
+        let dateTd = document.createElement("td");
+        dateTd.innerText = new Date(jData.proto.trainerSpecialAwaking[i].startDate*1000).toLocaleDateString();
+        tr.appendChild(dateTd);
 
         table.appendChild(tr);
     }

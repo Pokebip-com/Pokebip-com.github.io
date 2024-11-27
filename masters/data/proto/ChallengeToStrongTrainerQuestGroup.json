@@ -11,5 +11,6 @@
 { "questGroupId": "1100009", "u2": "", "bannerId": 1607005, "u4": 60700010, "u5": 60700010, "scheduleId": "6070_1W_Updata_UltimateBattle_FOREVER", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 },
 { "questGroupId": "1100010", "u2": "", "bannerId": 1608014, "u4": 60800010, "u5": 60800010, "scheduleId": "6080_2W_UltimateBattle_update_FOREVER", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 },
 { "questGroupId": "1100011", "u2": "", "bannerId": 1609005, "u4": 60900010, "u5": 60900010, "scheduleId": "6090_2W_UltimateBattle_update_FOREVER", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 },
-{ "questGroupId": "1100012", "u2": "", "bannerId": 1610005, "u4": 61000010, "u5": 61000010, "scheduleId": "6100_2W_UltimateBattle_update_FOREVER", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 }
+{ "questGroupId": "1100012", "u2": "", "bannerId": 1610005, "u4": 61000010, "u5": 61000010, "scheduleId": "6100_2W_UltimateBattle_update_FOREVER", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 },
+{ "questGroupId": "1100013", "u2": "", "bannerId": 1611003, "u4": 61100010, "u5": 61100010, "scheduleId": "6110_2W_UltimateBattle_update_FOREVER", "u7": "NEVER", "u8": "", "u9": -1, "u10": "", "u11": -1 }
 ]}
