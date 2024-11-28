@@ -856,6 +856,11 @@ function printShopBanner(shopBanner, schedule) {
 }
 
 function printEventBanner(eventBanner, lastSchedule, titleText = "") {
+    if(eventBanner.type === 25) {
+        eventBanner.text1Id = eventBanner.text1Id > -1 ? eventBanner.text1Id : 17605019;
+        eventBanner.text2Id = eventBanner.text2Id > -1 ? eventBanner.text2Id : 27605020;
+    }
+
     let h3 = `<h3>${jData.lsd.bannerText[eventBanner.text1Id]}`;
 
     if(eventBanner.text2Id > -1) {
