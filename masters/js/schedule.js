@@ -856,6 +856,8 @@ function printShopBanner(shopBanner, schedule) {
 }
 
 function printEventBanner(eventBanner, lastSchedule, titleText = "") {
+
+    // Événement Spécial - Match Spécial de Passio
     if(eventBanner.type === 25) {
         eventBanner.text1Id = eventBanner.text1Id > -1 ? eventBanner.text1Id : 17605019;
         eventBanner.text2Id = eventBanner.text2Id > -1 ? eventBanner.text2Id : 27605020;
