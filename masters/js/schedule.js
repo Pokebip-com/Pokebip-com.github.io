@@ -19,7 +19,7 @@ let startDateInput;
 let endDateInput;
 let downloadAll;
 
-//let latestCyclicRankingSchedule = {};
+let latestCyclicRankingSchedule = {};
 
 const scrollTopBtn = document.getElementById('scrollTop');
 const nextContentBtn = document.getElementById('nextContent');
@@ -438,66 +438,6 @@ function downloadData() {
     console.log(newsText);
 }
 
-function addCyclingRankingEvents(i, latestCyclicRankingSchedule) {
-    let cyclicRankingScheduleStartDates = Object.keys(latestCyclicRankingSchedule).sort((a, b) => a - b);
-
-    if (cyclicRankingScheduleStartDates.length <= 0) {
-        return;
-    }
-
-    let firstCRSchedule = 0;
-    cyclicRankingScheduleStartDates
-        .map(parseInt)
-        .filter(sd => sd < jData.custom.versionReleaseDates[i].releaseTimestamp)
-        .map(sd => {
-            firstCRSchedule = Math.max(firstCRSchedule, sd);
-        });
-
-    if(firstCRSchedule === 0) {
-        firstCRSchedule = cyclicRankingScheduleStartDates[0];
-    }
-
-    let lastCRSchedule = 0;
-
-    cyclicRankingScheduleStartDates
-        .map(parseInt)
-        .filter(sd => sd >= jData.custom.versionReleaseDates[i].releaseTimestamp && (i === 0 || sd < jData.custom.versionReleaseDates[i-1].releaseTimestamp))
-        .map(sd => {
-            lastCRSchedule = Math.max(lastCRSchedule, sd);
-        });
-
-    if(lastCRSchedule === 0) {
-        lastCRSchedule = cyclicRankingScheduleStartDates[cyclicRankingScheduleStartDates.length - 1];
-    }
-
-    let startDates = [...new Set(cyclicRankingScheduleStartDates.filter(sd => sd >= firstCRSchedule && sd <= lastCRSchedule))];
-    let sdPointer = -1;
-    let sdSelect = startDates[0];
-
-    let cyclicRankingQuestGroupId, cyclingSeconds;
-    let lastStart = jData.custom.versionReleaseDates[i].schedule.map(s => s.startDate).sort((a, b) => b - a)[0];
-
-    let j = 0;
-
-    while(latestCyclicRankingSchedule[sdSelect].startDate <= lastStart) {
-        if(sdPointer === -1 || (sdPointer + 1) < startDates.length && startDates[sdPointer + 1] >= latestCyclicRankingSchedule.startDate) {
-            sdPointer++;
-            sdSelect = startDates[sdPointer];
-            cyclicRankingQuestGroupId = jData.proto.cyclicRankingData[latestCyclicRankingSchedule[sdSelect].scheduleId][0].questGroupId;
-            cyclingSeconds = jData.proto.cyclicRankingEvent.filter(ce => ce.damageChallengeBattleId === cyclicRankingQuestGroupId)[0].secondsBeforeCycling;
-        }
-
-        let schedule = {...latestCyclicRankingSchedule[sdSelect]};
-        schedule.cyclingSeconds = [...cyclingSeconds];
-
-        let idx = latestCyclicRankingSchedule[sdSelect].cycleIdx;
-        jData.custom.versionReleaseDates[i].schedule.push(schedule);
-
-        latestCyclicRankingSchedule[sdSelect].startDate = "" + (parseInt(cyclingSeconds[idx]) + parseInt(latestCyclicRankingSchedule[sdSelect].startDate));
-        latestCyclicRankingSchedule[sdSelect].cycleIdx = (idx + 1) % cyclingSeconds.length;
-    }
-}
-
 function getCyclingRankingEvents(i) {
     if(jData.custom.versionReleaseDates[i].hasCyclingRankingEventData) {
         return;
@@ -606,62 +546,15 @@ function scheduleByVersion() {
         versionSelect.remove(0);
     }
 
-    let latestCyclicRankingSchedule = {};
-    for(let i = jData.custom.versionReleaseDates.length - 2; i >= 0; i--) {
-        jData.custom.versionReleaseDates[i].schedule = jData.proto.schedule.filter(s =>
-            s.startDate >= jData.custom.versionReleaseDates[i].releaseTimestamp
-            && (i === 0 || s.startDate < jData.custom.versionReleaseDates[i-1].releaseTimestamp)
-        )
-            .map(s => {
-                s.isLegendaryBattle = false;
-                s.isHomeAppeal = false;
-                s.isCyclicRanking = false;
-                if(scoutIds.includes(s.scheduleId)) {
-                    s.scheduleType = { "name" : "scout", "priority": "10" };
-                }
-                else if(salonGuestsUpdate.includes(s.scheduleId)) {
-                    s.scheduleType = { "name" : "salon", "priority": "30" };
-                }
-                else if(s.scheduleId.startsWith("chara_")) {
-                    s.scheduleType = { "name" : "chara", "priority": "40" };
-                }
-                else if(s.scheduleId.includes("_Shop_")) {
-                    s.scheduleType = { "name" : "shop", "priority": "50" };
-                }
-                else if(s.scheduleId.endsWith("_musiccoin_FOREVER")) {
-                    s.scheduleType = { "name" : "music", "priority": "60" };
-                }
-                else if(loginBonusIds.includes(s.scheduleId)) {
-                    s.scheduleType = { "name" : "loginBonus", "priority": "70" };
-                }
-                else if(s.scheduleId.includes("_ChampionBattle_")) {
-                    s.scheduleType = { "name" : "championBattle", "priority": "17" };
-                }
-                else if(missionGroupIds.includes(s.scheduleId)) {
-                    s.scheduleType = { "name" : "mission", "priority": "25" };
-                }
-                else {
-                    s.scheduleType = { "name" : "event", "priority": "20" };
-                    if(legendaryBattleIds.includes(s.scheduleId)) {
-                        s.isLegendaryBattle = true;
-                    }
-                    if(trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId)) {
-                        s.isHomeAppeal = true;
-                    }
-                    if(Object.keys(jData.proto.cyclicRankingData).includes(s.scheduleId)) {
-                        s.isCyclicRanking = true;
-                        latestCyclicRankingSchedule[s.startDate] = {...s};
-                        latestCyclicRankingSchedule[s.startDate].originalSD = s.startDate;
-                        latestCyclicRankingSchedule[s.startDate].questGroupId = jData.proto.cyclicRankingData[s.scheduleId][0].questGroupId;
-                        latestCyclicRankingSchedule[s.startDate].cycleIdx = 0;
-                    }
-                }
-                return s;
-            });
-        addCyclingRankingEvents(i, latestCyclicRankingSchedule);
-        jData.custom.versionReleaseDates[i].schedule
-            .sort((a, b) => a.startDate.localeCompare(b.startDate) || a.scheduleType.priority.localeCompare(b.scheduleType.priority));
-    }
+    jData.proto.schedule.filter(s => Object.keys(jData.proto.cyclicRankingData).includes(s.scheduleId))
+        .map(s => {
+            s.scheduleType = { "name" : "event", "priority": "20" };
+            s.isCyclicRanking = true;
+            latestCyclicRankingSchedule[s.startDate] = {...s};
+            latestCyclicRankingSchedule[s.startDate].originalSD = s.startDate;
+            latestCyclicRankingSchedule[s.startDate].questGroupId = jData.proto.cyclicRankingData[s.scheduleId][0].questGroupId;
+            latestCyclicRankingSchedule[s.startDate].cycleIdx = 0;
+        });
 
     for(let i = 0; i < jData.custom.versionReleaseDates.length - 1; i++) {
         let date = new Date(jData.custom.versionReleaseDates[i].releaseTimestamp*1000);
@@ -862,7 +755,7 @@ function printEventBanner(eventBanner, lastSchedule, titleText = "") {
         eventBanner.text1Id = eventBanner.text1Id > -1 ? eventBanner.text1Id : 17605019;
         eventBanner.text2Id = eventBanner.text2Id > -1 ? eventBanner.text2Id : 27605020;
     }
-
+    
     let h3 = `<h3>${jData.lsd.bannerText[eventBanner.text1Id]}`;
 
     if(eventBanner.text2Id > -1) {
