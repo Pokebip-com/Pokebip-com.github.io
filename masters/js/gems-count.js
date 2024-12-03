@@ -575,23 +575,15 @@ function setVersion(id, setUrl = true) {
     const idx = jData.custom.versionReleaseDates.findIndex(v => v.version === id);
     const ver = jData.custom.versionReleaseDates[idx];
     const endTimestamp = idx > 0 ? jData.custom.versionReleaseDates[idx - 1].releaseTimestamp + 3600 : lastScheduleStartDate + 86400;
-    const start = new Intl.DateTimeFormat(locale, {dateStyle: 'short', timeStyle: 'short'}).format(new Date((ver.releaseTimestamp + 3600) * 1000));
-    const end = new Intl.DateTimeFormat(locale, {dateStyle: 'short', timeStyle: 'short'}).format(new Date(endTimestamp * 1000-1));
+    const start = new Intl.DateTimeFormat(locale, {dateStyle: 'medium', timeStyle: 'short'}).format(new Date((ver.releaseTimestamp + 3600) * 1000));
+    const end = new Intl.DateTimeFormat(locale, {dateStyle: 'medium', timeStyle: 'short'}).format(new Date(endTimestamp * 1000-1));
 
-    document.getElementById("period").innerText = ` (${start} - ${end})`;
+    document.getElementById("period").innerHTML = `<br>${start} - ${end}`;
 
     getGemTable(id);
 
     if (setUrl)
         setUrlEventID(versionSelect.value);
-
-    if (window.location.hash !== "" && window.location.hash !== "#") {
-        setTimeout(function () {
-            let tmp = document.createElement("a");
-            tmp.href = window.location.hash;
-            tmp.click();
-        }, 1000);
-    }
 }
 
 function setUrlEventID(id) {
