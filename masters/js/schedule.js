@@ -723,6 +723,9 @@ function printShopBanner(shopBanner, schedule) {
 
         purchasableItems.forEach(pi => {
             let matches = pi.internalName.match(/paidvc_[a-zA-Z]+([0-9]+)_([0-9]+)/i);
+
+            if(!matches[1] || !matches[2]) return;
+
             let price = jData.custom.shopTierPrices.find(stp => stp.tier.toString() === matches[1]);
 
             price = price.euros || "??.??";
