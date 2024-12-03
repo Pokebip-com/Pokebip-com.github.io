@@ -402,6 +402,14 @@ function orderByVersion(data) {
     });
 }
 
+function getBySpecificID(data, id) {
+    return data.reduce(function (r, a) {
+        r[a[id]] = r[a[id]] || [];
+        r[a[id]].push(a);
+        return r;
+    }, {});
+}
+
 function getNormalizedItemName(itemId) {
     return removeAccents(getItemName(itemId)).toLowerCase().replaceAll(" ", "-");
 }

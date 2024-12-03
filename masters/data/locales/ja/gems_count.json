@@ -1,0 +1,12 @@
+{
+  "change_version": "Change version:",
+  "daily_missions": "デイリー",
+  "disclaimer": "<b>Disclaimer:</b> General login bonus count might be inaccurrate as older general login bonuses get deleted from the game's data and I don't account for login bonuses that have already started or are not finished when the version changes.",
+  "events": "イベント",
+  "login_bonus": "ログインボーナス",
+  "missions": "ミッション",
+  "shop": "ショップ",
+  "title_gems": "ダイヤ",
+  "title_name": "Name",
+  "title_total": "合計"
+}

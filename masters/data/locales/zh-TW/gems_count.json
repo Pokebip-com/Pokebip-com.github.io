@@ -1,0 +1,12 @@
+{
+  "change_version": "Change version:",
+  "daily_missions": "每日",
+  "disclaimer": "<b>Disclaimer:</b> General login bonus count might be inaccurrate as older general login bonuses get deleted from the game's data and I don't account for login bonuses that have already started or are not finished when the version changes.",
+  "events": "活動",
+  "login_bonus": "登入獎勵",
+  "missions": "任務",
+  "shop": "商店",
+  "title_gems": "鑽石",
+  "title_name": "Name",
+  "title_total": "總計"
+}

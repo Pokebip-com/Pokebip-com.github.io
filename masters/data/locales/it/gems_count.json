@@ -1,0 +1,12 @@
+{
+  "change_version": "Change version:",
+  "daily_missions": "Giornaliere",
+  "disclaimer": "<b>Disclaimer:</b> General login bonus count might be inaccurrate as older general login bonuses get deleted from the game's data and I don't account for login bonuses that have already started or are not finished when the version changes.",
+  "events": "Eventi",
+  "login_bonus": "Bonus\naccesso",
+  "missions": "Missioni",
+  "shop": "Negozio",
+  "title_gems": "Gemme",
+  "title_name": "Name",
+  "title_total": "Totale"
+}

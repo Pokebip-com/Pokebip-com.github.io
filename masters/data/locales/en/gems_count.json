@@ -1,0 +1,12 @@
+{
+  "change_version": "Change version:",
+  "daily_missions": "Daily",
+  "disclaimer": "<b>Disclaimer:</b> General login bonus count might be inaccurrate as older general login bonuses get deleted from the game's data and I don't account for login bonuses that have already started or are not finished when the version changes.",
+  "events": "Events",
+  "login_bonus": "Log-In\nBonus",
+  "missions": "Missions",
+  "shop": "Shop",
+  "title_gems": "Gems",
+  "title_name": "Name",
+  "title_total": "Total"
+}

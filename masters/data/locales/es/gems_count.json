@@ -1,0 +1,12 @@
+{
+  "change_version": "Change version:",
+  "daily_missions": "Diarias",
+  "disclaimer": "<b>Disclaimer:</b> General login bonus count might be inaccurrate as older general login bonuses get deleted from the game's data and I don't account for login bonuses that have already started or are not finished when the version changes.",
+  "events": "Eventos",
+  "login_bonus": "Bonificatión\nde inicio",
+  "missions": "Completadas",
+  "shop": "Tienda",
+  "title_gems": "Joyas",
+  "title_name": "Name",
+  "title_total": "Total"
+}

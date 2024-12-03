@@ -1,0 +1,12 @@
+{
+  "change_version": "Change version:",
+  "daily_missions": "일일",
+  "disclaimer": "<b>Disclaimer:</b> General login bonus count might be inaccurrate as older general login bonuses get deleted from the game's data and I don't account for login bonuses that have already started or are not finished when the version changes.",
+  "events": "이벤트",
+  "login_bonus": "로그인 보너스",
+  "missions": "미션",
+  "shop": "숍",
+  "title_gems": "다이아",
+  "title_name": "Name",
+  "title_total": "합계"
+}

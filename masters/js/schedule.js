@@ -102,7 +102,7 @@ function processData() {
     jData.proto.championBattleEventQuestGroup.map(cbeqg => {
         cbeqg.bannerId = jData.proto.championBattleEvent.find(cbe => cbe.championBattleEventId === cbeqg.championBattleEventId).bannerId;
 
-        jData.proto.abilityPanel.map(ban => {
+        jData.proto.banner.map(ban => {
             if(ban.bannerId === cbeqg.bannerId) {
                 if(ban.text1Id == -1)
                     ban.text1Id = CBEText1Id;
@@ -147,7 +147,7 @@ function getSchedule() {
     mainStoryUpdate = [...new Set(jData.proto.storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
     missionGroupIds = [...new Set(jData.proto.missionGroup.map(mg => mg.scheduleId))];
     salonGuestsUpdate = [...new Set(jData.proto.salonGuest.map(sg => sg.scheduleId))];
-    trainingAreaUpdate = [...new Set(jData.proto.storyQuest.filter(sq => sq.questType === 8).map(sq => sq.scheduleId))];
+    trainingAreaUpdate = [...new Set(jData.proto.storyQuest.filter(sq => sq.questType === "TrainingArea" || sq.questType === "TrainingArea2").map(sq => sq.scheduleId))];
     trainerRarityupBonusUpdate = [...new Set(jData.proto.trainerRarityupBonus.map(trb => trb.scheduleId))];
 
     let usableSchedule = jData.proto.schedule.filter(s =>
@@ -175,16 +175,6 @@ function getSchedule() {
 
     jData.proto.schedule = usableSchedule;
 }
-
-function getBySpecificID(data, id) {
-    return data.reduce(function (r, a) {
-        r[a[id]] = r[a[id]] || [];
-        r[a[id]].push(a);
-        return r;
-    }, {});
-}
-
-
 
 function getScoutNewsText(schedule) {
     let scheduleScouts = jData.proto.scout.filter(sc => sc.scheduleId === schedule.scheduleId);
@@ -755,7 +745,7 @@ function printEventBanner(eventBanner, lastSchedule, titleText = "") {
         eventBanner.text1Id = eventBanner.text1Id > -1 ? eventBanner.text1Id : 17605019;
         eventBanner.text2Id = eventBanner.text2Id > -1 ? eventBanner.text2Id : 27605020;
     }
-    
+
     let h3 = `<h3>${jData.lsd.bannerText[eventBanner.text1Id]}`;
 
     if(eventBanner.text2Id > -1) {
@@ -1084,7 +1074,7 @@ function printLoginBonus(loginBonus, titleText = "") {
     scheduleDiv.innerHTML += `<br><br><b>${jData.locale.schedule.login_bonus_rewards}</b>`;
     for (const lbr1 of rewards) {
         scheduleDiv.innerHTML += `<br><b>${lbr1.day}.</b>`;
-        let sets = jData.proto.itemSet.filter(is => is.itemSetId === lbr1.itemSetId)[0];
+        let sets = jData.proto.itemSet.find(is => is.itemSetId === lbr1.itemSetId);
         let i = 1;
         while (sets[`item${i}`] && sets[`item${i}`] !== "0") {
             scheduleDiv.innerHTML += ` ${getItemName(sets[`item${i}`])} x${sets[`item${i}Quantity`]}`;
