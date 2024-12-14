@@ -1250,7 +1250,7 @@
 { "moveId": 9847, "category": "Status", "u3": 1, "user": "Pokemon", "group": "Regular", "type": 0, "target": "AllyAll", "u8": 1, "gaugeDrain": 0, "power": 0, "accuracy": 0, "uses": 0, "tags": 1048576 },
 { "moveId": 9848, "category": "Status", "u3": 1, "user": "Pokemon", "group": "Regular", "type": 0, "target": "AllyAll", "u8": 1, "gaugeDrain": 0, "power": 0, "accuracy": 0, "uses": 0, "tags": 1048576 },
 { "moveId": 9849, "category": "Status", "u3": 1, "user": "Pokemon", "group": "Regular", "type": 0, "target": "AllyAll", "u8": 1, "gaugeDrain": 0, "power": 0, "accuracy": 0, "uses": 0, "tags": 1048576 },
-{ "moveId": 9864, "category": "Status", "u3": 1, "user": "Pokemon", "group": "Regular", "type": 0, "target": "OpponentSingle", "u8": 1, "gaugeDrain": 0, "power": 0, "accuracy": 0, "uses": 0, "tags": 1048576 },
+{ "moveId": 9864, "category": "Status", "u3": 1, "user": "Pokemon", "group": "Regular", "type": 0, "target": "OpponentAll", "u8": 1, "gaugeDrain": 0, "power": 0, "accuracy": 0, "uses": 0, "tags": 1048576 },
 { "moveId": 10000, "category": "Status", "u3": 2, "user": "Trainer", "group": "Regular", "type": 0, "target": "Self", "u8": 1, "gaugeDrain": 0, "power": 0, "accuracy": 0, "uses": 2, "tags": "none" },
 { "moveId": 10001, "category": "Status", "u3": 2, "user": "Trainer", "group": "Regular", "type": 0, "target": "AllyAll", "u8": 1, "gaugeDrain": 0, "power": 0, "accuracy": 0, "uses": 1, "tags": 8388608 },
 { "moveId": 10007, "category": "Status", "u3": 2, "user": "Trainer", "group": "Regular", "type": 0, "target": "AllySingle", "u8": 1, "gaugeDrain": 0, "power": 0, "accuracy": 0, "uses": 2, "tags": "none" },

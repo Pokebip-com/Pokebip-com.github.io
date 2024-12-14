@@ -6,6 +6,7 @@ let legendaryBattleIds;
 let missionGroupIds;
 let mainStoryUpdate;
 let trainingAreaUpdate;
+let shopPurchasableIds;
 
 let gemsCountDiv, versionSelect;
 let latestCyclicRankingSchedule = {};
@@ -15,6 +16,9 @@ const CBEText1Id = 17503026;
 const CBEText2Id = 27503027;
 
 const gemsItemId = "410000000001";
+
+let firstLoginBonusSchedule = "FOREVER_LOGINBONUS_END";
+let secondLoginBonusSchedule = "FOREVER_LOGINBONUS_2";
 
 let lastScheduleStartDate;
 
@@ -42,6 +46,7 @@ async function getData() {
     jsonCache.preloadProto("MissionGroup");
     jsonCache.preloadProto("QuestReward");
     jsonCache.preloadProto("Schedule");
+    jsonCache.preloadProto("ShopPurchasableItem");
     jsonCache.preloadProto("StoryQuest");
     jsonCache.preloadProto("VillaQuestGroup");
 
@@ -91,6 +96,10 @@ async function getData() {
     jData.proto.cyclicRankingData = getBySpecificID(jData.proto.cyclicRankingQuestGroupSchedule, "scheduleId");
     jData.proto.legendQuestGroup = getBySpecificID(jData.proto.legendQuestGroup, "questGroupId");
     jData.proto.legendQuestGroupSchedule = getBySpecificID(jData.proto.legendQuestGroupSchedule, "scheduleId");
+
+    // Regular login bonuses shifts
+    firstLoginBonusSchedule = jData.proto.schedule.find(s => s.scheduleId === "FOREVER_LOGINBONUS_END");
+    secondLoginBonusSchedule = jData.proto.schedule.find(s => s.scheduleId === "FOREVER_LOGINBONUS_2");
 
     orderByVersion(jData.custom.versionReleaseDates);
 
@@ -142,6 +151,7 @@ function getSchedule() {
     mainStoryUpdate = [...new Set(jData.proto.storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
     missionGroupIds = [...new Set(jData.proto.missionGroup.map(mg => mg.scheduleId))];
     trainingAreaUpdate = [...new Set(jData.proto.storyQuest.filter(sq => sq.questType === "TrainingArea" || sq.questType === "TrainingArea2").map(sq => sq.scheduleId))];
+    shopPurchasableIds = [...new Set(jData.proto.shopPurchasableItem.filter(sq => parseInt(sq.freeGemsQty) > 0).map(sp => sp.scheduleId))];
 
     const usableSchedule = jData.proto.schedule.filter(s =>
         eventIds.includes(s.scheduleId) ||
@@ -149,6 +159,7 @@ function getSchedule() {
         mainStoryUpdate.includes(s.scheduleId) ||
         missionGroupIds.includes(s.scheduleId) ||
         trainingAreaUpdate.includes(s.scheduleId) ||
+        shopPurchasableIds.includes(s.scheduleId) ||
         (s.scheduleId.includes("_ChampionBattle_") &&
             !(s.scheduleId.endsWith("_AllPeriod") ||
                 s.scheduleId.endsWith("_Emblem") ||
@@ -205,9 +216,12 @@ function getVersionSchedule(versionId) {
         return  a.scheduleType.priority.localeCompare(b.scheduleType.priority) || a.startDate.localeCompare(b.startDate)
     });
 
+    const endDate = idx === 0 ? (lastScheduleStartDate + 86400-1) : (jData.custom.versionReleaseDates[idx-1].releaseTimestamp + 3600-1);
+
+    //TODO AJOUTER LES BINGO MISSIONS AUX MISSIONS
     jData.custom.versionReleaseDates[idx].events = getEvents(jData.custom.versionReleaseDates[idx]);
-    jData.custom.versionReleaseDates[idx].loginBonus = getLoginBonus(jData.custom.versionReleaseDates[idx]);
-    jData.custom.versionReleaseDates[idx].shop = getShopAndDailyMissions(jData.custom.versionReleaseDates[idx], idx === 0 ? (lastScheduleStartDate + 86400) : (jData.custom.versionReleaseDates[idx-1].releaseTimestamp + 3600));
+    jData.custom.versionReleaseDates[idx].loginBonus = getLoginBonus(jData.custom.versionReleaseDates[idx], endDate);
+    jData.custom.versionReleaseDates[idx].shop = getShopAndDailyMissions(jData.custom.versionReleaseDates[idx], endDate);
     jData.custom.versionReleaseDates[idx].missions = getMissions(jData.custom.versionReleaseDates[idx]);
 }
 
@@ -273,8 +287,44 @@ function getEvents(version) {
     );
 }
 
-function getLoginBonus(version) {
-    return version.schedule.filter(s => s.scheduleType.name === "loginBonus")
+function getRegularBonusDay(day, regularBonusStartDay) {
+    if(day < regularBonusStartDay) {
+        return day + regularBonusStartDay;
+    }
+    return day - (regularBonusStartDay - 1);
+}
+
+function getLoginBonus(version, endDate) {
+    const start = version.releaseTimestamp + 3600;
+    const regularBonusStartDay = new Date(firstLoginBonusSchedule.startDate*1000).getUTCDay();
+    const firstDayToCount = getRegularBonusDay(new Date((start-(6*3600))*1000).getUTCDay(), regularBonusStartDay);
+
+    const bonusRewards = [
+        jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === "release_normal_loginbonus_1").sort((a, b) => a.day - b.day),
+        jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === "release_normal_loginbonus_2").sort((a, b) => a.day - b.day)
+    ];
+
+    let regularLoginBonus = {
+        "name": (jData.lsd.loginBonusName["regular_login_bonus"] || "unknown").replace("\n", " "),
+        "gemCount": 0,
+        "schedule": {
+            "scheduleId": "regular_login_bonus",
+            "startDate": start,
+            "endDate": endDate
+        }
+    };
+    let bonusRewardIdx = (start >= secondLoginBonusSchedule.startDate ? 1 : 0);
+
+    for(let i = start, currentDay = firstDayToCount; i < endDate; i += 86400, currentDay++) {
+        if(currentDay === 8) {
+            currentDay = 1;
+            bonusRewardIdx = (i >= secondLoginBonusSchedule.startDate ? 1 : 0);
+        }
+
+        regularLoginBonus.gemCount += getGemsCountFromItemSet(bonusRewards[bonusRewardIdx][currentDay-1].itemSetId);
+    }
+
+    const specialLoginBonus = version.schedule.filter(s => s.scheduleType.name === "loginBonus" && !s.scheduleId.startsWith("release_normal_loginbonus_"))
         .map(s =>  {
             let obj = {
                 "name": (jData.lsd.loginBonusName[s.loginBonusNameId] || "unknown").replace("\n", " "),
@@ -283,7 +333,9 @@ function getLoginBonus(version) {
             }
 
             return obj;
-        }).reduce((acc, cur) => {
+        });
+
+    return [regularLoginBonus].concat(specialLoginBonus).reduce((acc, cur) => {
             if(!acc.find(lb => lb.name === cur.name)) {
                 if(cur.gemCount === 0)
                     return acc;
@@ -298,29 +350,47 @@ function getLoginBonus(version) {
 }
 
 function getShopAndDailyMissions(version, endDate) {
-    let obj = {};
-
-    obj[jData.lsd.paidVirtualCurrency["4310009"]] = 0;  // Daily
-    obj[jData.lsd.paidVirtualCurrency["4310010"]] = 0;  // Weekly
-    obj[jData.lsd.paidVirtualCurrency["4310011"]] = 0;  // Monthly
+    let freeShopGemsPacks = jData.proto.shopPurchasableItem
+        .filter(sp => parseInt(sp.freeGemsQty) > 0)
+        .map(sp => {
+            sp.schedule = jData.proto.schedule.find(s => s.scheduleId === "update_3100_1W_Shop_pack_FOREVER");
+            sp.gemCount = 0;
+            return sp;
+        }).sort((a, b) => parseInt(a.freeGemsQty) - parseInt(b.freeGemsQty));
 
     version.dailyMissions = [];
 
-    for(let start = new Date((version.releaseTimestamp + 3600) * 1000), end = new Date(endDate * 1000);start < end; start.setDate(start.getDate() + 1), obj[jData.lsd.paidVirtualCurrency["4310009"]] += 20) {
-
+    for(let start = new Date((version.releaseTimestamp + 3600) * 1000), end = new Date(endDate * 1000);start < end; start.setDate(start.getDate() + 1)) {
         if(start.getDay() === 1) {
-            obj[jData.lsd.paidVirtualCurrency["4310010"]] += 100;
+            freeShopGemsPacks.map(sp => {
+                if(sp.refreshInterval === "Weekly" && sp.schedule.startDate <= start.getTime()/1000 && sp.schedule.endDate >= start.getTime()/1000) {
+                    sp.gemCount += parseInt(sp.freeGemsQty);
+                }
+                return sp;
+            });
         }
 
         if(start.getDate() === 1) {
-            obj[jData.lsd.paidVirtualCurrency["4310011"]] += 300;
+            freeShopGemsPacks.map(sp => {
+                if(sp.refreshInterval === "Monthly" && sp.schedule.startDate <= start.getTime()/1000 && sp.schedule.endDate >= start.getTime()/1000) {
+                    sp.gemCount += parseInt(sp.freeGemsQty);
+                }
+                return sp;
+            });
         }
+
+        freeShopGemsPacks.map(sp => {
+            if(sp.refreshInterval === "Daily" && sp.schedule.startDate <= start.getTime()/1000 && sp.schedule.endDate >= start.getTime()/1000) {
+                sp.gemCount += parseInt(sp.freeGemsQty);
+            }
+            return sp;
+        });
 
         version.dailyMissions.push(getMissionsDetailsFromSchedule(jData.proto.schedule.find(s => s.scheduleId === "5080_DAILY_MISSION_START"), jData.locale.gemsCount.daily_missions));
     }
 
-    return Object.keys(obj).map(k => {
-        return { "name": k, "gemCount": obj[k] };
+    return freeShopGemsPacks.map(sp => {
+        return { "name": jData.lsd.paidVirtualCurrency[sp.paidVcName], "gemCount": sp.gemCount };
     });
 }
 
@@ -345,6 +415,7 @@ function getMissionsDetailsFromSchedule(s, missionName = undefined) {
 }
 
 function getMissions(version) {
+    //TODO AJOUTER LES BINGO
     return version.schedule.filter(s => s.scheduleType.name === "mission")
         .map(s => getMissionsDetailsFromSchedule(s)).concat(version.dailyMissions)
         .reduce((acc, cur) => {
@@ -543,7 +614,6 @@ function getEventCount(event) {
 function getLoginBonusCount(schedule) {
     let count = 0;
 
-    //TODO - Prendre en compte les login bonus qui commencent AVANT la date de la version + Grouper les bonus de connexion normal
     const loginBonus = jData.proto.loginBonus.find(lb => lb.loginBonusId === schedule.scheduleId);
     const rewards = jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === loginBonus.rewardId);
 
