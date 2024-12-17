@@ -1,7 +1,7 @@
 {
   "change_version": "Change version:",
   "daily_missions": "Daily",
-  "disclaimer": "<b>Disclaimer:</b> General login bonus count might be inaccurrate as older general login bonuses get deleted from the game's data and I don't account for login bonuses that have already started or are not finished when the version changes.",
+  "disclaimer": "<b>Disclaimer:</b> Page is still WIP. Doesn't take special gifts and compensations into account. Some gem counts for older versions may be inaccurrate. For instance, some events might have had their rewards updated since their first release, or some events might not be taken into account either because I have not developped a way to show their gem count or because they are not in the game data anymore.",
   "events": "Events",
   "login_bonus": "Log-In\nBonus",
   "missions": "Missions",

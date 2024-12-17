@@ -1,3 +1,4 @@
+let bingoMissionGroups;
 let championBattleAllPeriod;
 let cyclicRankingIds;
 let eventIds;
@@ -28,6 +29,9 @@ let totalGemsCount = 0;
 async function getData() {
     // PROTO
     jsonCache.preloadProto("Banner");
+    jsonCache.preloadProto("BingoMissionCard");
+    jsonCache.preloadProto("BingoMissionGroup");
+    jsonCache.preloadProto("BingoMissionReward");
     jsonCache.preloadProto("ChallengeToStrongTrainerQuestGroup");
     jsonCache.preloadProto("ChampionBattleEvent");
     jsonCache.preloadProto("ChampionBattleEventQuestGroup");
@@ -152,6 +156,7 @@ function getSchedule() {
     missionGroupIds = [...new Set(jData.proto.missionGroup.map(mg => mg.scheduleId))];
     trainingAreaUpdate = [...new Set(jData.proto.storyQuest.filter(sq => sq.questType === "TrainingArea" || sq.questType === "TrainingArea2").map(sq => sq.scheduleId))];
     shopPurchasableIds = [...new Set(jData.proto.shopPurchasableItem.filter(sq => parseInt(sq.freeGemsQty) > 0).map(sp => sp.scheduleId))];
+    bingoMissionGroups = [...new Set(jData.proto.bingoMissionGroup.map(bmg => bmg.scheduleId))];
 
     const usableSchedule = jData.proto.schedule.filter(s =>
         eventIds.includes(s.scheduleId) ||
@@ -160,6 +165,7 @@ function getSchedule() {
         missionGroupIds.includes(s.scheduleId) ||
         trainingAreaUpdate.includes(s.scheduleId) ||
         shopPurchasableIds.includes(s.scheduleId) ||
+        bingoMissionGroups.includes(s.scheduleId) ||
         (s.scheduleId.includes("_ChampionBattle_") &&
             !(s.scheduleId.endsWith("_AllPeriod") ||
                 s.scheduleId.endsWith("_Emblem") ||
@@ -189,12 +195,17 @@ function getVersionSchedule(versionId) {
         s.isLegendaryBattle = false;
         s.isHomeAppeal = false;
         s.isVilla = false;
+        s.isBingo = false;
 
         if(loginBonusIds.includes(s.scheduleId)) {
             s.scheduleType = { "name" : "loginBonus", "priority": "500" };
         }
         else if(s.scheduleId.includes("_ChampionBattle_")) {
             s.scheduleType = { "name" : "championBattle", "priority": "-1" };
+        }
+        else if(bingoMissionGroups.includes(s.scheduleId)) {
+            s.isBingo = true;
+            s.scheduleType = { "name" : "mission", "priority": "750" };
         }
         else if(missionGroupIds.includes(s.scheduleId)) {
             s.scheduleType = { "name" : "mission", "priority": "750" };
@@ -394,18 +405,52 @@ function getShopAndDailyMissions(version, endDate) {
     });
 }
 
-function getMissionsDetailsFromSchedule(s, missionName = undefined) {
-    const missionGroup = jData.proto.missionGroup.find(mg => mg.scheduleId === s.scheduleId);
-    const name = missionName ?? getBannerText(jData.proto.banner.find(b => b.bannerId === missionGroup.bannerId));
-    const missionList = jData.proto.mission.filter(m => m.missionGroupId === missionGroup.missionGroupId);
-
-    let count = getGemsCountFromItemSet(missionGroup.itemSetId);
+function getCountOfMissionList(missionList) {
+    let count = 0;
 
     for(const mission of missionList) {
         for(const itemSetId of mission.itemSetIds) {
             count += getGemsCountFromItemSet(itemSetId);
         }
     }
+
+    return count;
+}
+
+function getCountOfBingoRewards(bingoMissionList) {
+    let count = 0;
+
+    for(const bingoMission of bingoMissionList) {
+        count += getGemsCountFromItemSet(bingoMission.itemSetId);
+    }
+
+    return count;
+}
+
+function getBingoMissionsDetailsFromSchedule(s) {
+    const bingoMissionGroup = jData.proto.bingoMissionGroup.find(bmg => bmg.scheduleId === s.scheduleId);
+    const name = getBannerText(jData.proto.banner.find(b => b.bannerId === bingoMissionGroup.bannerId));
+    const missionList = jData.proto.bingoMissionCard
+        .filter(bmc => bmc.bingoMissionCardId === bingoMissionGroup.bingoMissionCardId)
+        .map(bmc => jData.proto.mission.find(m => m.missionId === bmc.missionId));
+    const bingoRewards = jData.proto.bingoMissionReward
+        .filter(bmr => bmr.bingoMissionRewardId === bingoMissionGroup.bingoMissionRewardId);
+
+    const count = getCountOfMissionList(missionList) + getCountOfBingoRewards(bingoRewards);
+
+    return {
+        "name": name,
+        "gemCount": count,
+        "schedule": s
+    };
+}
+
+function getMissionsDetailsFromSchedule(s, missionName = undefined) {
+    const missionGroup = jData.proto.missionGroup.find(mg => mg.scheduleId === s.scheduleId);
+    const name = missionName ?? getBannerText(jData.proto.banner.find(b => b.bannerId === missionGroup.bannerId));
+    const missionList = jData.proto.mission.filter(m => m.missionGroupId === missionGroup.missionGroupId);
+
+    const count = getGemsCountFromItemSet(missionGroup.itemSetId) + getCountOfMissionList(missionList);
 
     return {
         "name": name,
@@ -417,7 +462,7 @@ function getMissionsDetailsFromSchedule(s, missionName = undefined) {
 function getMissions(version) {
     //TODO AJOUTER LES BINGO
     return version.schedule.filter(s => s.scheduleType.name === "mission")
-        .map(s => getMissionsDetailsFromSchedule(s)).concat(version.dailyMissions)
+        .map(s => s.isBingo ? getBingoMissionsDetailsFromSchedule(s) : getMissionsDetailsFromSchedule(s)).concat(version.dailyMissions)
         .reduce((acc, cur) => {
         if(!acc.find(mg => mg.name === cur.name)) {
             if(cur.gemCount === 0)
@@ -559,7 +604,7 @@ function getEventName(event) {
 
         if(eqg.length === 0) {
             console.log("UNDEFINED EVENT", event);
-            return "UNDEFINED EVENT";
+            return "UNDEFINED EVENT (Will be fixed later)";
         }
         banner = jData.proto.banner.find(b => b.bannerId === eqg[0].bannerId);
     }
@@ -586,7 +631,7 @@ function getBannerText(banner) {
         return text.replace("\n", " ");
     }
 
-    return "UNDEFINED BANNER TEXT";
+    return "UNDEFINED BANNER TEXT (Will be fixed later)";
 }
 
 function getEventCount(event) {

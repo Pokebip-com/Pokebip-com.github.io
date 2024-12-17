@@ -1,7 +1,7 @@
 {
   "change_version": "Changer de version :",
   "daily_missions": "Missions journalières",
-  "disclaimer": "<b>Disclaimer:</b> Le compte du bonus de connexion normal pourrait être inexact car les anciens bonus de connexion normal sont régulièrement supprimés des données du jeu et je ne tiens pas compte des bonus qui ont déjà commencé ou ne sont pas terminés lors d'un changement de version.",
+  "disclaimer": "<b>Disclaimer:</b> Cette page est encore en cours de développement. Ne prend pas en compte les cadeaux et compensations. Certains comptes de diamants pourraient être inexacts, notamment pour les versions plus anciennes. Par exemple, les récompenses de certains événements pourraient avoir été modifiées depuis leur sortie, ou alors certains événements pourraient ne pas être pris en compte, soit parce que je n'ai pas développé de moyen d'afficher leur nombre de diamants, soit car leurs informations ne figurent plus dans les données du jeu.",
   "events": "Évènements",
   "login_bonus": "Bonus de\nconnexion",
   "missions": "Missions",
