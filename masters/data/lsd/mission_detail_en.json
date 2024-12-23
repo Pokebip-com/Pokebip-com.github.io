@@ -282,10 +282,22 @@
     "override_detail_6080_1_01": "Complete the following area ×1\nwith no more than one sync pair\nfalling to 0 HP:\n“Daily Extreme Battle” in\n“Story Event: Golden Bonds on Pasio”",
     "override_detail_6080_2_01": "Complete an area that has a\nbattle ×5 with the following\nsync pair on your team:\n• Lillie (Anniversary 2024) &\nSolgaleo",
     "228": "Raise the superawakening level of\n[Digit:4digits Idx=\"1\" ] sync pair(s) to [Digit:2digits Idx=\"2\" ].",
+    "229": "Create a photo with [Digit:2digits ] or more sync pairs that share each of the following themes:",
+    "229_element": "• [Name:TeamSkillTag ]",
     "override_detail_6100_1_01": "Complete the single-player “Story\nEvent: Travelers from a Distant\nPast” ×1.\n(You can play the event by going to\nthe Reruns section.)",
     "override_detail_6100_1_02": "Complete the single-player “Eevee\nDay Celebration: Eevee Tales” ×1.\n(You can play the event by going to\nthe Recommended section.)",
     "override_detail_6100_1_03": "Complete the co-op “Eevee Day\nCelebration: Eevee Tales” ×1.",
     "override_detail_6100_1_04": "Complete the single-player Super\nSparring ×1.\n(You can play the event by going to\nthe Recommended section.)",
     "override_detail_6100_1_05": "Complete the single-player “Story\nEvent: Mysterious Kalos Duo” ×1.\n(You can play the event by going to\nthe Recommended section.)",
-    "override_detail_6100_1_06": "Complete the single-player “Story\nEvent: Let’s Go In Search of\nWonder” ×1.\n(You can play the event by going to\nthe Reruns section.)"
+    "override_detail_6100_1_06": "Complete the single-player “Story\nEvent: Let’s Go In Search of\nWonder” ×1.\n(You can play the event by going to\nthe Reruns section.)",
+    "override_detail_6120_1_01": "First, let’s use the photo creator\nto freely look at the world through\na lens!\n\n(You can take photos by going to Photo Creator in the Poryphone menu.)",
+    "override_detail_6120_1_02": "Next, try taking a photo of someone\nwho’s a Gym Leader like me.",
+    "override_detail_6120_1_03": "Next, I want to see some strong\nTrainers! Try taking a photo of a\nChampion!",
+    "override_detail_6120_1_04": "Hmmm. For your next subject...\nHow should I describe it... I’d like a\nphoto of someone who’s always\ncheerful and energetic—and loves\nPokémon. So...someone like you!\n\n(Take a photo of a sync pair that has the Main Character theme.)",
+    "override_detail_6120_1_05": "Next, we have a request from Looker!\nHe wants a photo of a villain! But I’m\nnot sure they’ll let you just snap a\nphoto of them, so it could be tricky.\nBe careful, OK?",
+    "override_detail_6120_1_06": "I got a request for a photo for a\nPokémon research paper! That means\nI’ll need a photo with a researcher\nin it, please!",
+    "override_detail_6120_1_07": "Let’s make a work of art that shows\nwhat Pokémon battles on Pasio are\nlike! For the photo’s subject,\nI recommend a sync pair who’s\noverflowing with passionate spirit!",
+    "override_detail_6120_1_08": "The beauty of a well-trained body is\na common motif in art! Try taking a\nphoto of a body builder sync pair!",
+    "override_detail_6120_1_09": "I’d like a photo of an artistic person—\nsomeone who expresses themselves\nvia photos, music, painting, and such.\nBut ask for permission before showing\ntheir work in your photo!",
+    "override_detail_6120_1_10": "It’s quite difficult to capture motion\nin photos, like how a cape billows in\nthe wind! It’d be fantastic if you took\na good photo of that! Do your best!"
 }

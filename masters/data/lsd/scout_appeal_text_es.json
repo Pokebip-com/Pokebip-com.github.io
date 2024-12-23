@@ -79,7 +79,7 @@
     "event_3100_2W_FesPickup_02": "¡Dianta e Iris han vuelto! ¡Tienes\nla oportunidad de unir fuerzas con\nlas Campeonas de Kalos y Teselia!",
     "event_3110_1W_FesPickup_01": "¡Llega Samina (Traje S) en una\npareja de compis maestros!\n¡Tras usar su movimiento compi,\nsus ataques afectan a todo el\nbando rival!",
     "event_3110_3W_SeasonPickup_01": "¡Vuelve Lionel con un conjunto \ninvernal bien calentito y listo para\nsubir a 6★ EX!\n¡Puedes conseguir regalos en el\nreclutamiento por fases!",
-    "event_3110_3W_SeasonPickup_02": "¡Cathy, con un refinado vestido\ninvernal, está lista para  subir a\n6★ EX!\n¡Puedes conseguir regalos en el \nreclutamiento por fases!",
+    "event_3110_3W_SeasonPickup_02": "¡Cathy, con un refinado vestido\ninvernal, está lista para subir a\n6★ EX!\n¡Puedes conseguir regalos en el\nreclutamiento por fases!",
     "event_3110_4W_Normal_01": "¡Llega Sonia lista para subir a\n6★ EX! ¡También está disponible\nel reclutamiento ×6 (solo 3)!",
     "event_3110_3W_GuaranteeRarity5_01": "¡Vuelven las parejas de compis de\ntemporada con trajes invernales!\n¡Tienes la oportunidad de unir\nfuerzas con ellos!",
     "event_3110_1W_Normal_01": "¡Llega Aza con un impecable\nkimono y listo para subir a 6★ EX!\n¡También está disponible\nel reclutamiento ×6 (solo 3)!",
@@ -415,5 +415,16 @@
     "event_6110_3W_Season_01": "¡Lylia marcha triunfal con su traje\nmusical! ¡Puedes conseguir regalos\nen el reclutamiento por fases!",
     "event_6110_3W_Season_05": "¡Antón marcha triunfal con su traje\nmusical! ¡Puedes conseguir regalos\nen el reclutamiento por fases!",
     "event_6110_3W_Season_09": "¡Vuelven compis de temporada\ncon sus trajes invernales!\n¡Reclutamiento por fases en curso!",
-    "event_6110_4W_PokeFes_09": "¡Reclutamiento doble del\nPokéfestival! ¡Puedes reclutar a las\ndos parejas de compis destacadas!"
+    "event_6110_4W_PokeFes_09": "¡Reclutamiento doble del\nPokéfestival! ¡Puedes reclutar a las\ndos parejas de compis destacadas!",
+    "event_6120_0W_Mix_02": "¡Llega León! ¡Puede crear una\nZona Tierra para atacar con su\nmovimiento sincro!",
+    "event_6120_1W_Season_06": "¡Roy arranca el año con un traje\nnuevo! ¡Puedes conseguir regalos\nen el reclutamiento por fases!",
+    "event_6120_1W_Season_07": "¡Pola arranca el año con un traje\nnuevo! ¡Puedes conseguir regalos\nen el reclutamiento por fases!",
+    "event_6120_1W_Season_08": "¡Vuelven compis de temporada con\ntrajes de Año Nuevo!\n¡Reclutamiento por fases en curso!",
+    "event_6120_2W_Variety_01": "¡Ya está aquí el Team Rocket!\n¡Tienes la oportunidad de unir\nfuerzas con Giovanni y los\nEjecutivos del Team Rocket!",
+    "event_6120_2W_PokeFes_03": "¡Es la ocasión de unir fuerzas con\ncompis de tipo Hielo y Roca!\n¡Vuelven tres parejas de\nfesticompis de estos tipos!",
+    "event_6120_3W_PokeFes_01": "¡Llega Melo! ¡Puede infligir mucho\ndaño con su movimiento sincro\nLlama Embrujada Abrasadora!",
+    "event_6120_3W_PokeFes_02": "¡Llega Henzo! ¡Puede reducir la\nResiliencia Veneno de todos los\nrivales con su movimiento sincro\nPolución Aciaga!",
+    "event_6120_3W_PokeFes_03": "¡Reclutamiento doble del\nPokéfestival! ¡Puedes reclutar a las\ndos parejas de compis destacadas!",
+    "event_6120_4W_MasterFes_03": "¡Vuelve N portando un atuendo\nespectacular y con nuevas casillas\nen su Tablero de la Piedra Compi!",
+    "event_6120_1W_MasterFes_01": "¡Llega Giovanni (Traje S, voraz) en\nuna pareja de compis maestros!\n¡Puedes conseguir regalos en el\nreclutamiento destacado con joyas\nde pago!"
 }

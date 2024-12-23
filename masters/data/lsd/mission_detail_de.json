@@ -282,10 +282,22 @@
     "override_detail_6080_1_01": "Schließe folgendes Gebiet ein Mal mit\nmax. 1 Gefährtengesp. ab, dessen KP\nauf 0 gefallen sind: „Täglicher\nschwerer Kampf“ in „Episodenevent:\nGoldene Freundschaft auf Passio“",
     "override_detail_6080_2_01": "Schließe 5 Mal mit diesen Gefährten\nim Team ein Gebiet ab, in dem\ngekämpft wird: Lilly (Jubiläum 2024)\n& Solgaleo",
     "228": "Erhöhe den Super-Erwachen-Level\nvon [Digit:4digits Idx=\"1\" ] Gefährten auf Level [Digit:2digits Idx=\"2\" ].",
+    "229": "Mache ein Foto mit [Digit:2digits ] oder mehr\nGefährten, welche die folgenden\nAttribute teilen:",
+    "229_element": "• [Name:TeamSkillTag ]",
     "override_detail_6100_1_01": "Schließe „Episodenevent: Reisende\naus längst vergangener Zeit“ einmal\nim Modus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Wiederholen“ spielen.",
     "override_detail_6100_1_02": "Schließe „Feier zum Evoli-Tag: Die\nGeschichte der Evoli“ einmal im\nModus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Empfohlen“ spielen.",
     "override_detail_6100_1_03": "Schließe „Feier zum Evoli-Tag: Die\nGeschichte der Evoli“ einmal im\nModus „Gemeinsam spielen“ ab.",
     "override_detail_6100_1_04": "Schließe „Super-Sparring“ einmal im\nModus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Empfohlen“ spielen.",
     "override_detail_6100_1_05": "Schließe „Episodenevent: Rätselhaftes\nDuo aus Kalo“ einmal im Modus\n„Allein spielen“ einmal ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Empfohlen“ spielen.",
-    "override_detail_6100_1_06": "Schließe „Episodenevent: Let’s Go!\nFinden wir das Wunder!“ einmal im\nModus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Wiederholen“ spielen."
+    "override_detail_6100_1_06": "Schließe „Episodenevent: Let’s Go!\nFinden wir das Wunder!“ einmal im\nModus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Wiederholen“ spielen.",
+    "override_detail_6120_1_01": "Lass uns zuallererst das Fotostudio\nnutzen, damit du dir die Welt durch\nein Objektiv ansehen kannst!\n\n(Du kannst Fotos machen, indem du\ndas Fotostudio über das Poryfon-Menü\naufrufst.)",
+    "override_detail_6120_1_02": "Probiere als Nächstes ein Foto von\neiner Person zu machen, die genau\nwie ich eine Arenaleiterin ist.",
+    "override_detail_6120_1_03": "Jetzt möchte ich ein paar besonders\nstarke Trainer sehen! Versuch mal, ein\nFoto von einem Champ zu machen!",
+    "override_detail_6120_1_04": "Hmmm... Für dein nächstes Foto...\nWie formuliere ich das am besten? Ich\nmöchte ein Foto von einer Person, die\nstets gute Laune hat, energiegeladen\nist und Pokémon ganz besonders lieb\nhat! Also jemand wie... du!\n\n(Mache ein Foto von einem Gefährten\nmit dem Attribut „Protagonist“.)",
+    "override_detail_6120_1_05": "Als Nächstes haben wir eine Bitte von\nLeBelle! Er möchte ein Foto von einem\nSchurken! Sie werden es bestimmt\nnicht zulassen, dass du sie einfach so\nfotografierst, also... Sei vorsichtig, ja?",
+    "override_detail_6120_1_06": "Ich wurde darum gebeten, ein Foto\nfür einen Pokémon-Forschungsbericht\nzu machen! Ich bräuchte dafür bitte\nein Bild von einem Forscher oder\neiner Forscherin!",
+    "override_detail_6120_1_07": "Lass uns ein Kunstwerk kreieren, das\ndie Essenz der Pokémon-Kämpfe auf\nPassio einfängt! Als Motiv kann ich dir\nGefährtengespanne empfehlen, die als\nHeißblütige Kämpfer bekannt sind!",
+    "override_detail_6120_1_08": "Stahlhartes Training war schon immer\nbeliebtes Motiv in der Kunst! Versuch\ndich mal an einem Foto von einem\nSparringspartner-Gefährten!",
+    "override_detail_6120_1_09": "Ich hätte gerne ein Foto von einer\nkünstlerischen Person. Jemand, der\nseine Gefühle durch Fotografie, Musik\noder Malerei zum Ausdruck bringt.\nFrag aber bitte um Erlaubnis, falls ihre\nWerke in deinem Bild zu sehen sind!",
+    "override_detail_6120_1_10": "Es ist äußerst schwer, Bewegungen\nin Bildern einzufangen. Ähnlich wie\nbei einem Cape, das im Wind flattert!\nEs wäre toll, wenn du davon ein Bild\nmachen könntest! Gib dein Bestes!"
 }

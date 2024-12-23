@@ -578,5 +578,17 @@
 { "itemId": "556110060005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10248000000" },
 { "itemId": "556110070005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10245000003" },
 { "itemId": "556110080005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10244000001" },
-{ "itemId": "556110090005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10246000001" }
+{ "itemId": "556110090005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10246000001" },
+{ "itemId": "556120001005", "trainerBuildupConfigId": 5, "scheduleId": "6120_1W_Updata_nobishiro", "u4": "", "trainerId": "-1" },
+{ "itemId": "556120010005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10140110000" },
+{ "itemId": "556120020005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10320000000" },
+{ "itemId": "556120030005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10328000000" },
+{ "itemId": "556120040005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10257410000" },
+{ "itemId": "556120050005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10303400000" },
+{ "itemId": "556120060005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10244000002" },
+{ "itemId": "556120070005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10160000001" },
+{ "itemId": "556120080005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10162000002" },
+{ "itemId": "556120090005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10351000000" },
+{ "itemId": "556120100004", "trainerBuildupConfigId": 4, "scheduleId": "FOREVER", "u4": "", "trainerId": "10351000000" },
+{ "itemId": "556120110003", "trainerBuildupConfigId": 3, "scheduleId": "FOREVER", "u4": "", "trainerId": "10351000000" }
 ]}

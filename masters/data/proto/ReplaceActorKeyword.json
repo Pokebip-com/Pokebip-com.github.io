@@ -10,6 +10,7 @@
 { "replacedActorId": "ch0264_01_voicechangesatoshi", "replacingActorId": "ch0264_00_satoshi", "useGenericIfAvailable": false, "u4": 0, "u5": 0 },
 { "replacedActorId": "ch0266_00_shadowtriad2", "replacingActorId": "ch0265_00_shadowtriad1", "useGenericIfAvailable": true, "u4": 1, "u5": 0 },
 { "replacedActorId": "ch0267_00_shadowtriad3", "replacingActorId": "ch0265_00_shadowtriad1", "useGenericIfAvailable": true, "u4": 1, "u5": 0 },
+{ "replacedActorId": "ch0351_00_shione", "replacingActorId": "ch0660_00_furisodegirl", "useGenericIfAvailable": true, "u4": 0, "u5": 0 },
 { "replacedActorId": "ch0651_78_nanase", "replacingActorId": "ch0531_70_sightseerf", "useGenericIfAvailable": false, "u4": 0, "u5": 0 },
 { "replacedActorId": "ch0652_68_sayoko", "replacingActorId": "ch0521_60_hexmaniac", "useGenericIfAvailable": true, "u4": 0, "u5": 0 },
 { "replacedActorId": "ch0653_68_kirika", "replacingActorId": "ch0610_60_furisodegirl", "useGenericIfAvailable": true, "u4": 0, "u5": 0 },

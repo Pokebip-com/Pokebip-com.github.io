@@ -79,5 +79,8 @@
     "legend_rule_6090_013": "Cuando aumentan la Velocidad, el Ataque o\nel Ataque Especial del rival, se potencian\no bien sus movimientos, o bien sus\nmovimientos y sus movimientos compi.",
     "legend_rule_6110_001": "La primera vez que los PS de Latias bajan al\n60% o menos, se quedan a ese porcentaje.",
     "legend_rule_6110_002": "Se potencian los movimientos, o bien los\nmovimientos y los movimientos compi del\nrival cuando se reducen las características\nde los aliados.",
-    "legend_rule_6110_003": "Se reduce el daño que recibe cada rival\ncuando aumentan su Defensa o su Defensa\nEspecial, o su Ataque o su Defensa,\nrespectivamente."
+    "legend_rule_6110_003": "Se reduce el daño que recibe cada rival\ncuando aumentan su Defensa o su Defensa\nEspecial, o su Ataque o su Defensa,\nrespectivamente.",
+    "legend_rule_6120_001": "La primera vez que los PS de Regice bajan\nal 80% o menos y la primera vez que bajan\nal 50% o menos, se quedan a esos\nrespectivos porcentajes.",
+    "legend_rule_6120_002": "Los efectos de entorno activados por el rival\nduran todo el combate.",
+    "legend_rule_6120_003": "El rival recupera PS cuando falla un\nmovimiento aliado que apunta al rival."
 }

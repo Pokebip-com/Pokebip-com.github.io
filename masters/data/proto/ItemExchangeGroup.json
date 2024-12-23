@@ -390,5 +390,10 @@
 { "itemExchangeGroupId": 2611070, "u2": 1, "scheduleId": "6110_4W_Event_kasumi_get_Exchange", "bannerId": 1308005, "u5": 0 },
 { "itemExchangeGroupId": 2611080, "u2": 1, "scheduleId": "6110_4W_Event_green_get_Exchange", "bannerId": 5401007, "u5": 0 },
 { "itemExchangeGroupId": 2611090, "u2": 1, "scheduleId": "6110_4W_Event_kanto_Exchange", "bannerId": 1508001, "u5": 0 },
-{ "itemExchangeGroupId": 2611100, "u2": 1, "scheduleId": "6110_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 }
+{ "itemExchangeGroupId": 2611100, "u2": 1, "scheduleId": "6110_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 },
+{ "itemExchangeGroupId": 2612010, "u2": 1, "scheduleId": "6120_1W_Campaign_shin_Exchange", "bannerId": 5612001, "u5": 0 },
+{ "itemExchangeGroupId": 2612020, "u2": 1, "scheduleId": "6120_1W_Event_sho_Exchange", "bannerId": 1512001, "u5": 0 },
+{ "itemExchangeGroupId": 2612030, "u2": 1, "scheduleId": "6120_3W_Event_homnez_Exchange", "bannerId": 1510001, "u5": 0 },
+{ "itemExchangeGroupId": 2612040, "u2": 1, "scheduleId": "6120_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 },
+{ "itemExchangeGroupId": 2612050, "u2": 1, "scheduleId": "6120_4W_Event_hot_Exchange", "bannerId": 1602013, "u5": 0 }
 ]}

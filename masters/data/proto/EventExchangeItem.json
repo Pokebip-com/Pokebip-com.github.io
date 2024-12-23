@@ -610,5 +610,15 @@
 { "itemId": "750000000668", "descriptionId": 600000, "imageId": "i075_0019_00", "u4": 0, "storyQuestId": "610871", "trainerId": "-1", "scheduleId": "6110_4W_Event_sakaki_get_Exchange", "itemNameOverride": "750000000139" },
 { "itemId": "750000000669", "descriptionId": 600000, "imageId": "i075_0005_00", "u4": 0, "storyQuestId": "610872", "trainerId": "-1", "scheduleId": "6110_4W_Event_kasumi_get_Exchange", "itemNameOverride": "750000000147" },
 { "itemId": "750000000670", "descriptionId": 600000, "imageId": "i075_0007_00", "u4": 0, "storyQuestId": "610873", "trainerId": "-1", "scheduleId": "6110_4W_Event_green_get_Exchange", "itemNameOverride": "750000000148" },
-{ "itemId": "750000000680", "descriptionId": 600014, "imageId": "i075_0061_01", "u4": 0, "storyQuestId": "610841", "trainerId": "-1", "scheduleId": "6100_1W_Event_Subway", "itemNameOverride": "750000000680" }
+{ "itemId": "750000000671", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "610891", "trainerId": "-1", "scheduleId": "6120_1W_Event_sak", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000672", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "610892", "trainerId": "-1", "scheduleId": "6120_1W_Event_kibpop", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000673", "descriptionId": 600000, "imageId": "i075_0049_01", "u4": 0, "storyQuestId": "610893", "trainerId": "-1", "scheduleId": "6120_1W_Event_sho_Exchange", "itemNameOverride": "750000000377" },
+{ "itemId": "750000000674", "descriptionId": 600000, "imageId": "i075_0049_02", "u4": 0, "storyQuestId": "610893", "trainerId": "-1", "scheduleId": "6120_1W_Event_sho_Exchange", "itemNameOverride": "750000000378" },
+{ "itemId": "750000000675", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "610897", "trainerId": "-1", "scheduleId": "6120_3W_Event_shumer", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000676", "descriptionId": 600000, "imageId": "i075_0006_00", "u4": 0, "storyQuestId": "610898", "trainerId": "-1", "scheduleId": "6120_3W_Event_homnez_Exchange", "itemNameOverride": "750000000373" },
+{ "itemId": "750000000677", "descriptionId": 600000, "imageId": "i075_0001_00", "u4": 0, "storyQuestId": "610901", "trainerId": "-1", "scheduleId": "6120_4W_Event_hot_Exchange", "itemNameOverride": "750000000379" },
+{ "itemId": "750000000678", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "610900", "trainerId": "-1", "scheduleId": "6120_4W_Event_PokemasDay_Exchange", "itemNameOverride": "750000000181" },
+{ "itemId": "750000000679", "descriptionId": 600053, "imageId": "i075_0048_01", "u4": 0, "storyQuestId": "610902", "trainerId": "-1", "scheduleId": "6120_1W_Campaign_shin_Exchange", "itemNameOverride": "-1" },
+{ "itemId": "750000000680", "descriptionId": 600014, "imageId": "i075_0061_01", "u4": 0, "storyQuestId": "610841", "trainerId": "-1", "scheduleId": "6100_1W_Event_Subway", "itemNameOverride": "750000000680" },
+{ "itemId": "750000000704", "descriptionId": 600002, "imageId": "i075_0061_01", "u4": 0, "storyQuestId": "610894", "trainerId": "-1", "scheduleId": "6120_2W_Event_roc_lan", "itemNameOverride": "-1" }
 ]}

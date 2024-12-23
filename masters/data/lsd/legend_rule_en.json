@@ -79,5 +79,8 @@
     "legend_rule_6090_013": "Powers up the opponent’s moves, sync\nmove, or both when their Attack, Sp. Atk, or\nSpeed is raised.",
     "legend_rule_6110_001": "The first time Latias’s HP reaches 60% or\nlower, it endures with that HP.",
     "legend_rule_6110_002": "Powers up the opponent’s moves, sync move,\nor both when allies’ stats are lowered.",
-    "legend_rule_6110_003": "When each opponent’s Defense or Sp. Def—\nor Attack or Defense—is raised, the damage\nthey take is reduced."
+    "legend_rule_6110_003": "When each opponent’s Defense or Sp. Def—\nor Attack or Defense—is raised, the damage\nthey take is reduced.",
+    "legend_rule_6120_001": "The first time Regice’s HP reaches 80% and\n30% or lower, it endures with that HP.",
+    "legend_rule_6120_002": "The opponent’s field effects are permanent.",
+    "legend_rule_6120_003": "Restores the opponent’s HP when an ally’s\nattack move targeting the opponent misses."
 }

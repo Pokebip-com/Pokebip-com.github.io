@@ -282,10 +282,22 @@
     "override_detail_6080_1_01": "Terminez la zone suivante une fois\nsans avoir plus d'un Duo mis K.O. :\n• « Combat difficile limité à une fois\npar jour ! » dans « Évènement\nsecondaire : Liens en or à Passio »",
     "override_detail_6080_2_01": "Terminez une zone avec un combat\ncinq fois en utilisant le Duo\nsuivant :\n• Lilie (Anniversaire 2024) &\nSolgaleo",
     "228": "Augmentez de [Digit:2digits Idx=\"2\" ] le niveau\nde transcendance de [Digit:4digits Idx=\"1\" ] Duo[FR:Qty Ref=\"1\" P=\"s\" ].",
+    "229": "Prenez une photo avec [Digit:2digits ] Duo[FR:Qty P=\"s\" ]\nou plus, qui ont tous les mots-clés\nsuivants en commun :",
+    "229_element": "• [Name:TeamSkillTag ]",
     "override_detail_6100_1_01": "Terminez une fois\n« Évènement secondaire :\nVoyageurs du passé » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « De retour ».)",
     "override_detail_6100_1_02": "Terminez une fois « Journée Évoli :\nHistoires d'Évoli » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « À découvrir ».)",
     "override_detail_6100_1_03": "Terminez une fois « Journée Évoli :\nHistoires d'Évoli » en coop.",
     "override_detail_6100_1_04": "Terminez une fois le combat féroce\nen solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « À découvrir ».)",
     "override_detail_6100_1_05": "Terminez une fois « Évènement\nsecondaire : La mystérieuse équipe\nde Kalos » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « À découvrir ».)",
-    "override_detail_6100_1_06": "Terminez une fois « Évènement\nsecondaire : Partons à sa recherche !\nLet's Go ! » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « De retour ».)"
+    "override_detail_6100_1_06": "Terminez une fois « Évènement\nsecondaire : Partons à sa recherche !\nLet's Go ! » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « De retour ».)",
+    "override_detail_6120_1_01": "Pour commencer, utilise le créateur\nde photo comme bon te semble pour\nvoir le monde à travers l'objectif !\n\n(Vous pouvez prendre des photos\nen ouvrant le créateur de photo\nà partir du menu du Porygophone.)",
+    "override_detail_6120_1_02": "Ensuite, essaie de prendre une photo\nd'un Champion ou d'une Championne\nd'Arène comme moi !",
+    "override_detail_6120_1_03": "Maintenant, je veux voir de puissants\nDresseurs ! Essaie de prendre\nune photo d'un Maître !",
+    "override_detail_6120_1_04": "Pour ton projet sujet... Comment\ndire... J'aimerais voir quelqu'un\nde joyeux et énergique, et qui\nadore les Pokémon. Quelqu'un\nun peu comme toi, en fait !\n\n(Prenez une photo d'un Duo avec\nle mot-clé « Protagoniste ».)",
+    "override_detail_6120_1_05": "La prochaine photo a été demandée\npar Beladonis ! Il aimerait le portrait\nd'un membre d'une organisation\nmaléfique ! Mais je ne suis pas sûre\nque ton sujet se laissera facilement\nprendre en photo, alors fais bien\nattention, d'accord ?",
+    "override_detail_6120_1_06": "On m'a demandé une photo pour\nun article de recherche sur les\nPokémon ! Donc il me faudrait\nune photo d'un chercheur ou\nd'une chercheuse, s'il te plaît !",
+    "override_detail_6120_1_07": "Créons une scène montrant ce à quoi\nressemblent les combats Pokémon\nà Passio ! Pour la prochaine photo,\nje recommande un Duo au cœur\nardent !",
+    "override_detail_6120_1_08": "La beauté des muscles est un sujet\nartistique assez récurrent ! Essaie\nde photographier un Duo comprenant\nune personne au corps athlétique !",
+    "override_detail_6120_1_09": "Ensuite, je veux une photo d'un sujet\nfaisant partie du milieu artistique...\nQuelqu'un qui s'exprime à travers la\nphotographie, la musique, la peinture,\nce genre de choses. N'oublie pas\nde demander la permission d'inclure\nleurs œuvres dans ta photo !",
+    "override_detail_6120_1_10": "Il est assez difficile de capturer\nle mouvement, comme celui d'une\ncape flottant au vent, par exemple !\nCe serait fantastique si tu arrivais\nà photographier ça ! Montre-moi\nde quoi tu es capable !"
 }

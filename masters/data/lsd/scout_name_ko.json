@@ -181,5 +181,11 @@
     "event_6110_3W_MasterTicket_04": "릴리에 시즌 한정 확정 B서치",
     "event_6110_3W_SuperTicket_07": "호일 시즌 한정 출현율업 B서치",
     "event_6110_3W_MasterTicket_08": "호일 시즌 한정 확정 B서치",
-    "event_6110_3W_SuperTicket_011": "시즌 한정 출현율업 B서치"
+    "event_6110_3W_SuperTicket_011": "시즌 한정 출현율업 B서치",
+    "event_6120_1W_SuperTicket_06": "금랑 시즌 한정 출현율업 B서치",
+    "event_6120_1W_MasterTicket_06": "금랑 시즌 한정 확정 B서치",
+    "event_6120_1W_SuperTicket_07": "뽀삐 시즌 한정 출현율업 B서치",
+    "event_6120_1W_MasterTicket_07": "뽀삐 시즌 한정 확정 B서치",
+    "event_6120_1W_SuperTicket_08": "시즌 한정 출현율업 B서치",
+    "event_6120_2W_MasterTicket_01": "로켓단 ★5 확정 티켓 전용 B서치"
 }

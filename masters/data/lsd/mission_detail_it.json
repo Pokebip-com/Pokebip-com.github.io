@@ -282,10 +282,22 @@
     "override_detail_6080_1_01": "Completa una volta:\n• \"Lotta ad alta difficoltà (una al\ngiorno)!\" in \"Episodio - Legami aurei\".\nIl numero di Unità i cui PS sono stati\nridotti a 0 deve essere uno o meno.",
     "override_detail_6080_2_01": "Completa 5 Guide area che\nprevedono delle lotte con\nla seguente Unità in squadra:\n• Lylia (anniversario 2024) & Solgaleo.",
     "228": "Fai salire a [Digit:2digits Idx=\"2\" ] il livello risveglio di [Digit:4digits Idx=\"1\" ] Unità.",
+    "229": "Scatta una foto con [Digit:2digits ] o più Unità\nappartenenti a ciascuno dei seguenti\ngruppi:",
+    "229_element": "• [Name:TeamSkillTag ]",
     "override_detail_6100_1_01": "Completa una volta \"Episodio -\nVisitatori dal passato\" in solitaria.\nPuoi completare l'evento nella sezione\n\"Riedizione\".",
     "override_detail_6100_1_02": "Completa una volta \"Giornata\ndi Eevee - I ricordi degli Eevee\"\nin solitaria.\nPuoi completare l'evento nella sezione\n\"Consigliate\".",
     "override_detail_6100_1_03": "Completa una volta \"Giornata\ndi Eevee - I ricordi degli Eevee\"\nin modalità multigiocatore.",
     "override_detail_6100_1_04": "Completa una volta in solitaria\nla Supercompetizione.\nPuoi completare l'evento nella\nsezione \"Consigliate\".",
     "override_detail_6100_1_05": "Completa una volta \"Episodio -\nUn duo misterioso da Kalos\"\nin solitaria.\nPuoi completare l'evento nella\nsezione \"Consigliate\".",
-    "override_detail_6100_1_06": "Completa una volta \"Episodio -\nLet's go, in cerca del prodigio!\"\nin solitaria.\nPuoi completare l'evento nella\nsezione \"Riedizione\"."
+    "override_detail_6100_1_06": "Completa una volta \"Episodio -\nLet's go, in cerca del prodigio!\"\nin solitaria.\nPuoi completare l'evento nella\nsezione \"Riedizione\".",
+    "override_detail_6120_1_01": "Per prima cosa, usiamo la modalità\nfoto per guardare liberamente\nil mondo con una lente!\n\nPuoi scattare delle foto andando\nin Modalità foto nel menu\ndel Porygofono.",
+    "override_detail_6120_1_02": "Ora, scatta una foto che abbia\ncome soggetto un Capopalestra,\ncome la sottoscritta!",
+    "override_detail_6120_1_03": "Adesso, voglio ammirare qualche\nAllenatore forte! Fotografa\nun Campione o una Campionessa!",
+    "override_detail_6120_1_04": "Per il prossimo soggetto pensavo...\nCome dire... Vorrei che raffigurassi\nqualcuno che sprizzi gioia ed energia\ne che ami i Pokémon, un po' come te!\n\nScatta una foto a un'Unità che\nappartiene al gruppo \"Protagonisti\".",
+    "override_detail_6120_1_05": "La prossima richiesta arriva da\nBellocchio! Vorrebbe che fotografassi\nun membro dei gruppi malvagi! Certo,\ndubito che si lascino fotografare come\nse nulla fosse. Fa' attenzione!",
+    "override_detail_6120_1_06": "Mi è giunta una richiesta per\nuna relazione sui Pokémon!\nAvrò bisogno che scatti una foto\ndi uno studioso!",
+    "override_detail_6120_1_07": "Diamo vita a un'istantanea che metta\nin risalto lo spirito delle lotte Pokémon\na Pasio! Come prossimo soggetto, \nproporrei un'Unità dallo strabordante\nspirito combattivo!",
+    "override_detail_6120_1_08": "Il fascino di un corpo tonico è\nmolto rappresentato nell'arte.\nFotografa un'Unità che rispecchi\nl'espressione \"In corpore sano\"!",
+    "override_detail_6120_1_09": "Vorrei ammirare qualcuno dotato di\ntalento creativo, capace di esprimersi\ntramite fotografia, musica o pittura.\nMa ricordati di chiedere il permesso\ndi immortalare le sue opere!",
+    "override_detail_6120_1_10": "È complicato raffigurare con una foto\nil senso di movimento, come,\nad esempio, quello di un mantello\nsvolazzante! Ma sarebbe fantastico,\nse tu ci riuscissi! Metticela tutta!"
 }

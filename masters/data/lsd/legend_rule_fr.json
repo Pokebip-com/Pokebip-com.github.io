@@ -79,5 +79,8 @@
     "legend_rule_6090_013": "La puissance des capacités de l'ennemi, de ses\ncapacités Duo, ou des deux, augmente quand\nson Atq., son Atq. Spé. ou sa Vitesse sont\naugmentées.",
     "legend_rule_6110_001": "Les PV de Latias restent à 60 %\nla première fois que ses PV chutent\nà 60 % ou moins.",
     "legend_rule_6110_002": "La puissance des capacités de l'ennemi, de ses\ncapacités Duo, ou des deux, augmente quand\nles stats des alliés sont baissées.",
-    "legend_rule_6110_003": "Quand la Défense ou la Défense Spéciale,\nou l'Attaque ou la Défense de chaque ennemi\nest augmentée, ils subissent moins de dégâts."
+    "legend_rule_6110_003": "Quand la Défense ou la Défense Spéciale,\nou l'Attaque ou la Défense de chaque ennemi\nest augmentée, ils subissent moins de dégâts.",
+    "legend_rule_6120_001": "Les PV de Regice restent à 80 % et 30 %\nla première fois que ses PV chutent\nà 80 % et 30 % ou moins.",
+    "legend_rule_6120_002": "Les effets sur le terrain déclenchés\npar l'ennemi durent tout le combat.",
+    "legend_rule_6120_003": "Restaure les PV de l'ennemi quand\nla capacité offensive d'un allié\nqui vise l'ennemi échoue."
 }
