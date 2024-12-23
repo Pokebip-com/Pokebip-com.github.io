@@ -3,7 +3,6 @@
   "adminsubmenu_bingo": "Bingo",
   "adminsubmenu_discord": "Message Discord",
   "adminsubmenu_eventRewards": "Progress Event",
-  "adminsubmenu_gem_count": "Diamants",
   "adminsubmenu_itemExchange": "Item Exchange",
   "adminsubmenu_lodge": "Lodge",
   "atk": "Attaque",
@@ -50,6 +49,7 @@
   "spa": "Atq. Spé.",
   "spd": "Déf. Spé.",
   "spe": "Vitesse",
+  "submenu_gem_count": "Diamants (BETA)",
   "submenu_language": {
     "de": "Deutsch",
     "en": "English",
@@ -64,6 +64,7 @@
   "submenu_pair_ex_role": "Rôles EX",
   "submenu_pair_page": "Fiches",
   "submenu_rally_role_set": "Sets de rôles",
+  "submenu_schedule": "Calendrier",
   "submenu_skill_gear": "Équipements de talent",
   "submenu_superawakening": "Transcendance"
 }

@@ -3,7 +3,6 @@
   "adminsubmenu_bingo": "Bingo",
   "adminsubmenu_discord": "Discord Message",
   "adminsubmenu_eventRewards": "Progress Event",
-  "adminsubmenu_gem_count": "Gemme",
   "adminsubmenu_itemExchange": "Item Exchange",
   "adminsubmenu_lodge": "Lodge",
   "atk": "Attacco",
@@ -50,6 +49,7 @@
   "spa": "Att. Sp.",
   "spd": "Dif. Sp.",
   "spe": "Velocità",
+  "submenu_gem_count": "Gemme (BETA)",
   "submenu_language": {
     "de": "Deutsch",
     "en": "English",
@@ -64,6 +64,7 @@
   "submenu_pair_ex_role": "EX Roles",
   "submenu_pair_page": "Information",
   "submenu_rally_role_set": "Role Sets",
+  "submenu_schedule": "Calendar",
   "submenu_skill_gear": "Skill Gears",
   "submenu_superawakening": "Risveglio"
 }

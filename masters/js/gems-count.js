@@ -9,7 +9,7 @@ let mainStoryUpdate;
 let trainingAreaUpdate;
 let shopPurchasableIds;
 
-let gemsCountDiv, versionSelect;
+let gemsCountDiv, versionSelect, saveImgBtn;
 let latestCyclicRankingSchedule = {};
 
 // Textes des bannières du Combat de Maître Spécial
@@ -124,11 +124,15 @@ async function getData() {
 }
 
 function changeHtmlTexts() {
+    document.getElementById("pageTitle").innerText = jData.locale.common.submenu_gem_count;
+    document.getElementById("disclaimer").innerHTML = jData.locale.gemsCount.disclaimer;
+
     versionSelect = document.createElement("select");
     versionSelect.id = "versionSelect";
 
     document.getElementById("verSelDiv").appendChild(versionSelect);
     document.getElementById("changeVersion").innerText = jData.locale.gemsCount.change_version;
+    saveImgBtn.innerText = jData.locale.gemsCount.save_image_text;
 }
 
 function scheduleByVersion() {
@@ -485,7 +489,14 @@ function getGemTable(id) {
 
     gemsCountDiv.innerHTML = "";
 
+    let tableDiv = document.createElement("div");
+    tableDiv.id = "gemsCountTableDiv";
+    tableDiv.style.width = "fit-content";
+    tableDiv.style.margin = "0 auto";
+    gemsCountDiv.appendChild(tableDiv);
+
     let table = document.createElement("table");
+    table.id = "gemsCountTable";
     table.classList.add("bipcode");
     table.style.textAlign = "center";
 
@@ -530,7 +541,7 @@ function getGemTable(id) {
 
     table.appendChild(totalTr);
 
-    gemsCountDiv.appendChild(table);
+    tableDiv.appendChild(table);
 }
 
 function appendCategory(table, category, name) {
@@ -683,6 +694,8 @@ function getGemsCountFromItemSet(itemSetId) {
 }
 
 function setVersion(id, setUrl = true) {
+    saveImgBtn.disabled = true;
+
     versionSelect.value = id;
 
     getVersionSchedule(id);
@@ -697,6 +710,8 @@ function setVersion(id, setUrl = true) {
 
     getGemTable(id);
 
+    saveImgBtn.disabled = false;
+
     if (setUrl)
         setUrlEventID(versionSelect.value);
 }
@@ -710,12 +725,17 @@ function setUrlEventID(id) {
 
 async function init() {
     gemsCountDiv = document.getElementById("gemsCountDiv");
+    saveImgBtn = document.getElementById("saveImageBtn");
+
+    saveImgBtn.addEventListener("click", function() {
+        domtoimage.toPng(document.getElementById("gemsCountTable"))
+            .then(function (dataUrl) {
+                saveAs(dataUrl, "gemCount.png");
+            })
+    });
 
     await buildHeader();
     await getData();
-
-    document.getElementById("pageTitle").innerText = jData.locale.common.adminsubmenu_gem_count;
-    document.getElementById("disclaimer").innerHTML = jData.locale.gemsCount.disclaimer;
 
     changeHtmlTexts();
 

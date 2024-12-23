@@ -1026,7 +1026,7 @@ function setTileBackground(div) {
     }
 
     if(div.getAttribute("selected") !== null) {
-        div.style.backgroundImage = `url('./data/sync-grids/selected-overlay.png'), url('./data/sync-grids/icons/${tileIcon}-selected.png'), url('./data/sync-grids/${panelType}-selected.png')`;
+        div.style.backgroundImage = `url('./data/sync-grids/selected-overlay.png'), url('./data/sync-grids/icons/${tileIcon + (panelType === 'arceuspanel' ? '' : '-selected')}.png'), url('./data/sync-grids/${panelType}-selected.png')`;
         div.style.backgroundRepeat = "no-repeat, no-repeat, no-repeat";
         div.style.backgroundSize = "contain, contain, contain";
         return;
@@ -1066,16 +1066,19 @@ function changeSelection(div) {
 }
 
 function setGridPicker(ap, gridPickerDiv) {
+    let gridWrapper = document.createElement("div");
     let gridDiv = document.createElement("div");
+
     let pickerDiv = document.createElement("div");
 
     gridPickerDiv.style.display = "flex";
     gridPickerDiv.style.justifyContent = "center";
 
-    gridDiv.style.margin = "auto 25px";
+    gridWrapper.style.margin = "auto 25px";
     pickerDiv.style.margin = "auto 25px";
 
-    gridPickerDiv.appendChild(gridDiv);
+    gridWrapper.appendChild(gridDiv);
+    gridPickerDiv.appendChild(gridWrapper);
     gridPickerDiv.appendChild(pickerDiv);
 
     let maxX = 0, maxY = 0, maxZ = 0, minX = 0, minY = 0, minZ = 0;
@@ -1236,6 +1239,7 @@ function setGridPicker(ap, gridPickerDiv) {
     gridDiv.style.position = "relative";
     gridDiv.style.display = "inline-block";
     gridDiv.style.verticalAlign = "middle";
+    gridDiv.id = "gridDiv";
 
     let controlTbl = document.createElement("table");
     controlTbl.classList.add("bipcode");
@@ -1394,6 +1398,54 @@ function setGridPicker(ap, gridPickerDiv) {
 
     tr.appendChild(tilesCell);
     controlTbl.appendChild(tr);
+
+    tr = document.createElement("tr");
+    let toolsTitle = document.createElement("th");
+    toolsTitle.innerText = jData.locale.syncPairs.sync_grid_tools;
+    toolsTitle.colSpan = 2;
+
+    tr.appendChild(toolsTitle);
+    controlTbl.appendChild(tr);
+
+    tr = document.createElement("tr");
+
+    let resetCell = document.createElement("td");
+    resetCell.id = "resetCell";
+
+    let resetButton = document.createElement("button");
+    resetButton.innerText = jData.locale.syncPairs.sync_grid_reset;
+    resetButton.classList.add("blueBtn");
+    resetButton.addEventListener("click",
+        () => [...document.querySelectorAll("svg[selected]")]
+            .forEach(svg => {
+                suppressCellData(svg);
+                setTileBackground(svg);
+            })
+    );
+
+    resetCell.appendChild(resetButton);
+
+    tr.appendChild(resetCell);
+
+    let exportCell = document.createElement("td");
+    exportCell.id = "exportCell";
+
+    let exportButton = document.createElement("button");
+    exportButton.innerText = jData.locale.syncPairs.sync_grid_export;
+    exportButton.classList.add("orangeBtn");
+    exportButton.addEventListener("click", () =>
+        domtoimage.toPng(document.getElementById("gridDiv"))
+            .then(function (dataUrl) {
+                saveAs(dataUrl, "sync-grid.png");
+            })
+    );
+
+    exportCell.appendChild(exportButton);
+
+    tr.appendChild(exportCell);
+
+    controlTbl.appendChild(tr);
+
 
     pickerDiv.appendChild(controlTbl);
 

@@ -167,11 +167,33 @@
             background-color: #23b20e;
         }
 
+        button.orangeBtn {
+            background: url("./data/sync-grids/btnOrange.png") no-repeat;
+        }
+
+        button.blueBtn {
+            background: url("./data/sync-grids/btnBlue.png") no-repeat;
+        }
+
+        button.orangeBtn, button.blueBtn {
+            background-size: 100% 40px;
+            border: 0;
+            width: 100%;
+            height: 40px;
+            color: white;
+            text-shadow: 2px 2px 2px black, -1px -1px 2px black, 2px -1px 2px black, -1px 2px 2px black;
+        }
+
+        button.orangeBtn:active, button.blueBtn:active {
+            transform: translateY(2px);
+        }
+
     </style>
 
     <link rel="stylesheet" href="../css/pokebip.css">
     <link rel="stylesheet" href="../css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/dist/FileSaver.min.js"></script>
     <script src="./js/dist/jszip.min.js"></script>
 </head>

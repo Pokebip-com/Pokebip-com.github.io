@@ -230,7 +230,10 @@ async function buildHeader(baseDir = ".") {
     await getLocale();
 
     let headerData = [
-        { "title": jData.locale.common.menu_schedule, "url": `${baseDir}/programme.html`, "drop": [] },
+        { "title": jData.locale.common.menu_schedule, "url": "", "drop": [
+                { "title": jData.locale.common.submenu_schedule, "url": `${baseDir}/programme.html` },
+                { "title" : jData.locale.common.submenu_gem_count, "url" : `${baseDir}/gems.html` },
+            ] },
         { "title" : jData.locale.common.menu_sync_pairs, "url": "", "drop": [
                 { "title" : jData.locale.common.submenu_pair_page, "url" : `${baseDir}/duo.html` },
                 { "title": jData.locale.common.submenu_pair_ex_role, "url": `${baseDir}/ex-role.html` },
@@ -262,7 +265,6 @@ async function buildHeader(baseDir = ".") {
                 { "title" : jData.locale.common.adminsubmenu_itemExchange, "url" : `${baseDir}/item-exchange.html` },
                 { "title" : jData.locale.common.adminsubmenu_bingo, "url" : `${baseDir}/bingo.html` },
                 { "title" : jData.locale.common.adminsubmenu_lodge, "url" : `${baseDir}/lodge.html` },
-                { "title" : jData.locale.common.adminsubmenu_gem_count, "url" : `${baseDir}/gems.html` },
             ]
         }
     ];

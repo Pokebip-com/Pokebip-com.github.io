@@ -102,6 +102,7 @@
     <link rel="stylesheet" href="../../css/pokebip.css">
     <link rel="stylesheet" href="../../css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/dist/FileSaver.min.js"></script>
     <script src="./js/dist/jszip.min.js"></script>
 </head>
@@ -112,6 +113,7 @@
     <fieldset id="toolbox">
         <p>
             <label for="verSelDiv"><b id="changeVersion"></b></label> <span id="verSelDiv"></span>
+            <button id="saveImageBtn" disabled></button>
         </p>
         <p style="display: none;" id="getBipcode">
             <button id="btnGetBipcode">Copier le code du tableau</button>
