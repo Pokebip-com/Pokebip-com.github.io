@@ -524,7 +524,6 @@ function setPairSuperAwakening(contentDiv) {
     table.classList.add("bipcode");
     table.style.textAlign = "center";
 
-    //TODO
     let headRow = document.createElement("tr");
 
     let headLevel = document.createElement("th");

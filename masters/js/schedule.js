@@ -1208,8 +1208,7 @@ function printCalendars(startDates) {
         }
 
         calTable.appendChild(calDaysTr);
-
-    } while(date.getMonth() <= endDate.getMonth() && date.getFullYear() <= endDate.getFullYear());
+    } while(date <= endDate && (date.getMonth() <= endDate.getMonth() || date.getFullYear() <= endDate.getFullYear()));
 }
 
 function setVersionInfos(id) {
