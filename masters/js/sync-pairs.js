@@ -14,6 +14,8 @@ let abilityTypeBGColor = {
     "SyncMove" : "#BF80FF"
 };
 
+const gymStartScheduleId = "7010_1W_Gym_start";
+
 let dataArea;
 let lastReleasePairsDiv;
 let syncPairSelect;
@@ -64,8 +66,9 @@ async function getData() {
 
     await jsonCache.runPreload()
     orderByVersion(jData.custom.versionReleaseDates);
+
     jData.proto.schedule = jData.proto.schedule
-        .filter(s => s.scheduleId.startsWith("chara_") && s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp);
+        .filter(s => s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp && (s.scheduleId.startsWith("chara_") || s.scheduleId === gymStartScheduleId));
 }
 
 function populateSelect() {
@@ -1649,7 +1652,16 @@ function setUrlMonsterInfos(monsterId, baseId, formId, pushState) {
 
 function setLatestPairs() {
     lastReleasePairsDiv = document.getElementById('lastReleasedPairs');
+
     let newTrainers = jData.proto.trainer
+        .map(t => {
+            // Scout Method 4 === Gym, ScheduleId at FOREVER === Release of the update
+            if(t.scoutMethod === 4 && t.scheduleId === "FOREVER") {
+                t.scheduleId = gymStartScheduleId;
+            }
+
+            return t;
+        })
         .filter(t => jData.proto.schedule.map(s => s.scheduleId).includes(t.scheduleId))
         .sort((a, b) => a.scheduleId.localeCompare(b.scheduleId));
 

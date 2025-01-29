@@ -25,6 +25,7 @@ const scrollTopBtn = document.getElementById('scrollTop');
 const nextContentBtn = document.getElementById('nextContent');
 
 const salonBannerPath = `./data/banner/event/update_4090_0W_Regular_01.png`;
+const gymStartScheduleId = "7010_1W_Gym_start";
 
 // Textes des bannières du Combat de Maître Spécial
 const CBEText1Id = 17503026;
@@ -134,11 +135,19 @@ function processData() {
 
     loginBonusIds = jData.proto.loginBonus.map(lb => lb.loginBonusId);
 
+    jData.proto.trainer = jData.proto.trainer.map(tr => {
+        // Dresseurs ajoutés avec la fonctionnalité des arènes
+        if(tr.scoutMethod === 4 && tr.scheduleId === "FOREVER") {
+            tr.scheduleId = gymStartScheduleId;
+        }
+
+        return tr;
+    });
+
     jData.proto.schedule.push(...jData.proto.loginBonus);
 }
 
 function getSchedule() {
-
     scoutIds = jData.proto.scout.map(s => s.scheduleId);
     championBattleAllPeriod = [...new Set(jData.proto.schedule.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
     cyclicRankingIds = [...new Set(jData.proto.cyclicRankingQuestGroupSchedule.map(crqg => crqg.scheduleId))];
@@ -151,7 +160,8 @@ function getSchedule() {
     trainerRarityupBonusUpdate = [...new Set(jData.proto.trainerRarityupBonus.map(trb => trb.scheduleId))];
 
     let usableSchedule = jData.proto.schedule.filter(s =>
-        scoutIds.includes(s.scheduleId)
+        s.scheduleId === gymStartScheduleId
+        || scoutIds.includes(s.scheduleId)
         || cyclicRankingIds.includes(s.scheduleId)
         || eventIds.includes(s.scheduleId)
         || legendaryBattleIds.includes(s.scheduleId)
@@ -171,7 +181,7 @@ function getSchedule() {
             ))
     );
 
-    // console.log(data.proto.schedule.entries.filter(s => s.startDate >= data.versions[0].releaseTimestamp && !usableSchedule.includes(s.scheduleId)));
+    // console.log(jData.proto.schedule.filter(s => s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp && !usableSchedule.includes(s.scheduleId)));
 
     jData.proto.schedule = usableSchedule;
 }
@@ -578,7 +588,7 @@ function getVersionSchedule(versionId) {
         else if(salonGuestsUpdate.includes(s.scheduleId)) {
             s.scheduleType = { "name" : "salon", "priority": "30" };
         }
-        else if(s.scheduleId.startsWith("chara_")) {
+        else if(s.scheduleId.startsWith("chara_") || s.scheduleId === gymStartScheduleId) {
             s.scheduleType = { "name" : "chara", "priority": "40" };
         }
         else if(s.scheduleId.includes("_Shop_")) {
@@ -643,7 +653,7 @@ function printScouts(schedule, titleText = "") {
             scheduleDiv.innerHTML += h3;
 
             if (sb.bannerIdString !== "") {
-                scheduleDiv.innerHTML += `<img loading="lazy" src="./data/banner/scout/${sb.bannerIdString}.png" class="bannerImg" />\n`;
+                scheduleDiv.innerHTML += `<img loading="lazy" src="./data/banner/scout/${sb.bannerIdString}.png" onerror="this.src = './data/banner/event/${sb.bannerIdString}.png';" class="bannerImg" />\n`;
             }
         });
 
@@ -710,7 +720,7 @@ function printShopBanner(shopBanner, schedule) {
     scheduleDiv.innerHTML += h3;
 
     if(shopBanner.bannerIdString !== "") {
-        scheduleDiv.innerHTML += `<img src="./data/banner/event/${shopBanner.bannerIdString}.png" class="bannerImg" />\n`;
+        scheduleDiv.innerHTML += `<img src="./data/banner/event/${shopBanner.bannerIdString}.png" onerror="this.src = './data/banner/scout/${shopBanner.bannerIdString}.png';" class="bannerImg" />\n`;
     }
 
     let purchasableItems = jData.proto.shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId);
@@ -762,7 +772,7 @@ function printEventBanner(eventBanner, lastSchedule, titleText = "") {
     scheduleDiv.innerHTML += h3;
 
     if(eventBanner.bannerIdString !== "") {
-        scheduleDiv.innerHTML += `<img src="./data/banner/event/${eventBanner.bannerIdString}.png" class="bannerImg" />\n`;
+        scheduleDiv.innerHTML += `<img src="./data/banner/event/${eventBanner.bannerIdString}.png" onerror="this.src = './data/banner/scout/${eventBanner.bannerIdString}.png';" class="bannerImg" />\n`;
     }
 
     printEndDate(lastSchedule.endDate);
@@ -1219,7 +1229,7 @@ function setVersionInfos(id) {
 
     scheduleDiv.innerHTML = "";
 
-    let scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag, musicFlag, loginBonusFlag, championBattleFlag,
+    let dayFlag, scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag, musicFlag, loginBonusFlag, championBattleFlag,
         missionFlag;
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
@@ -1227,23 +1237,31 @@ function setVersionInfos(id) {
 
     for (const timestamp of startDates) {
 
-        scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = musicFlag = loginBonusFlag = championBattleFlag = missionFlag = true;
+        dayFlag = scoutFlag = eventFlag = shopFlag = salonFlag = charaFlag = musicFlag = loginBonusFlag = championBattleFlag = missionFlag = true;
         treatedEvents = [];
 
         let date = new Date(timestamp * 1000);
-        scheduleDiv.innerHTML += `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat(locale, {
-            dateStyle: 'full',
-            timeStyle: 'short'
-        }).format(date)}</h1>\n`;
+        // scheduleDiv.innerHTML += `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat(locale, {
+        //     dateStyle: 'full',
+        //     timeStyle: 'short'
+        // }).format(date)}</h1>\n`;
 
         for (const sched of version.schedule.filter(schedule => schedule.startDate === timestamp)) {
             let titleText = ""
+
+            if(dayFlag) {
+                dayFlag = false;
+                titleText = `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat(locale, {
+                    dateStyle: 'full',
+                    timeStyle: 'short'
+                }).format(date)}</h1>\n`
+            }
 
             switch (sched.scheduleType.name) {
                 case "scout":
                     if (scoutFlag) {
                         scoutFlag = false;
-                        titleText = `<h2>${jData.locale.schedule.scouts}</h2>`;
+                        titleText += `<h2>${jData.locale.schedule.scouts}</h2>`;
                     }
                     printScouts(sched, titleText);
                     break;
@@ -1251,7 +1269,7 @@ function setVersionInfos(id) {
                 case "championBattle":
                     if (championBattleFlag) {
                         championBattleFlag = false;
-                        titleText = `<h2>${jData.locale.schedule.champion_stadium}</h2>`;
+                        titleText += `<h2>${jData.locale.schedule.champion_stadium}</h2>`;
                     }
                     printChampionBattle(sched, titleText);
                     break;
@@ -1259,7 +1277,7 @@ function setVersionInfos(id) {
                 case "event":
                     if (eventFlag) {
                         eventFlag = false;
-                        titleText = `<h2>${jData.locale.schedule.events}</h2>`;
+                        titleText += `<h2>${jData.locale.schedule.events}</h2>`;
                     }
 
                     if (sched.isLegendaryBattle) {
@@ -1285,7 +1303,7 @@ function setVersionInfos(id) {
                 case "shop":
                     if (shopFlag) {
                         shopFlag = false;
-                        titleText = `<h2>${jData.locale.schedule.gem_specials}</h2>`;
+                        titleText += `<h2>${jData.locale.schedule.gem_specials}</h2>`;
                     }
                     printShopOffers(sched, titleText);
                     break;
@@ -1293,7 +1311,7 @@ function setVersionInfos(id) {
                 case "salon":
                     if (salonFlag) {
                         salonFlag = false;
-                        titleText = `<h2>${jData.locale.schedule.trainer_lodge}</h2>\n<img src="${salonBannerPath}" class="bannerImg" />`;
+                        titleText += `<h2>${jData.locale.schedule.trainer_lodge}</h2>\n<img src="${salonBannerPath}" class="bannerImg" />`;
                     }
                     printSalonGuest(sched.scheduleId, titleText);
                     break;
@@ -1301,7 +1319,7 @@ function setVersionInfos(id) {
                 case "chara":
                     if (charaFlag) {
                         charaFlag = false;
-                        titleText = `<h2>${jData.locale.schedule.pair_addition_update}</h2>`;
+                        titleText += `<h2>${jData.locale.schedule.pair_addition_update}</h2>`;
                     }
                     printPairChanges(sched, titleText);
                     break;
@@ -1309,7 +1327,7 @@ function setVersionInfos(id) {
                 case "mission":
                     if (missionFlag) {
                         missionFlag = false;
-                        titleText = `<h2>${jData.locale.schedule.mission}</h2>`;
+                        titleText += `<h2>${jData.locale.schedule.mission}</h2>`;
                     }
                     printNewMissions(sched, titleText);
                     break;
@@ -1317,7 +1335,7 @@ function setVersionInfos(id) {
                 case "music":
                     if (musicFlag) {
                         musicFlag = false;
-                        titleText = `<h2>${jData.locale.schedule.jukebox}</h2>`;
+                        titleText += `<h2>${jData.locale.schedule.jukebox}</h2>`;
                     }
                     printNewMusics(sched.scheduleId, titleText);
                     break;
@@ -1325,7 +1343,7 @@ function setVersionInfos(id) {
                 case "loginBonus":
                     if (loginBonusFlag) {
                         loginBonusFlag = false;
-                        titleText = `<h2>${jData.locale.schedule.login_bonus}</h2>`;
+                        titleText += `<h2>${jData.locale.schedule.login_bonus}</h2>`;
                     }
                     printLoginBonus(sched, titleText);
                     break;

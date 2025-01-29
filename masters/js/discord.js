@@ -1,6 +1,8 @@
 let discordMsgTxt;
 let firstMsgTxt;
 
+const gymStartScheduleId = "7010_1W_Gym_start";
+
 async function getData() {
     await buildHeader();
 
@@ -24,7 +26,7 @@ async function getData() {
     orderByVersion(jData.custom.versionReleaseDates);
 
     jData.proto.schedule = jData.proto.schedule
-        .filter(s => s.scheduleId.startsWith("chara_") && s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp);
+        .filter(s => s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp && (s.scheduleId.startsWith("chara_") || s.scheduleId === gymStartScheduleId));
 
     jData.proto.trainerExRole.sort((a, b) => b.scheduleId.localeCompare(a.scheduleId));
 
@@ -39,6 +41,14 @@ function appendNewPairs(txtArea, isLink = false) {
     }
 
     let newTrainers = jData.proto.trainer
+        .map(t => {
+            // Scout Method 4 === Gym, ScheduleId at FOREVER === Release of the update
+            if(t.scoutMethod === 4 && t.scheduleId === "FOREVER") {
+                t.scheduleId = gymStartScheduleId;
+            }
+
+            return t;
+        })
         .filter(t => jData.proto.schedule.map(s => s.scheduleId).includes(t.scheduleId))
         .sort((a, b) => a.scheduleId.localeCompare(b.scheduleId));
 
