@@ -290,6 +290,10 @@
     "override_detail_6100_1_04": "Complete the single-player Super\nSparring ×1.\n(You can play the event by going to\nthe Recommended section.)",
     "override_detail_6100_1_05": "Complete the single-player “Story\nEvent: Mysterious Kalos Duo” ×1.\n(You can play the event by going to\nthe Recommended section.)",
     "override_detail_6100_1_06": "Complete the single-player “Story\nEvent: Let’s Go In Search of\nWonder” ×1.\n(You can play the event by going to\nthe Reruns section.)",
+    "230": "Log in to the gym [Digit:3digits ] [EN:Qty S=\"day\" P=\"days\" ].",
+    "231": "Reach a best score of [Digit:9digits ] pts\nin a high score event.",
+    "232": "Reach a best score of [Digit:9digits ] pts\nin a Ranked Damage Event.",
+    "233": "Reach a [Digit:9digits ]-win streak in the\nLegendary Gauntlet.",
     "override_detail_6120_1_01": "First, let’s use the photo creator\nto freely look at the world through\na lens!\n\n(You can take photos by going to Photo Creator in the Poryphone menu.)",
     "override_detail_6120_1_02": "Next, try taking a photo of someone\nwho’s a Gym Leader like me.",
     "override_detail_6120_1_03": "Next, I want to see some strong\nTrainers! Try taking a photo of a\nChampion!",
@@ -299,5 +303,6 @@
     "override_detail_6120_1_07": "Let’s make a work of art that shows\nwhat Pokémon battles on Pasio are\nlike! For the photo’s subject,\nI recommend a sync pair who’s\noverflowing with passionate spirit!",
     "override_detail_6120_1_08": "The beauty of a well-trained body is\na common motif in art! Try taking a\nphoto of a body builder sync pair!",
     "override_detail_6120_1_09": "I’d like a photo of an artistic person—\nsomeone who expresses themselves\nvia photos, music, painting, and such.\nBut ask for permission before showing\ntheir work in your photo!",
-    "override_detail_6120_1_10": "It’s quite difficult to capture motion\nin photos, like how a cape billows in\nthe wind! It’d be fantastic if you took\na good photo of that! Do your best!"
+    "override_detail_6120_1_10": "It’s quite difficult to capture motion\nin photos, like how a cape billows in\nthe wind! It’d be fantastic if you took\na good photo of that! Do your best!",
+    "override_detail_7010_1_01": "Complete the Daily Region Rotation."
 }

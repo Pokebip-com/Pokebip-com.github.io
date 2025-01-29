@@ -48,5 +48,6 @@
 { "championBattleRegionOpeningId": 50, "championBattleRegionId": 900002, "scheduleId": "6090_1W_ChampionBattle_AllPeriod" },
 { "championBattleRegionOpeningId": 51, "championBattleRegionId": 900007, "scheduleId": "6100_1W_ChampionBattle_AllPeriod" },
 { "championBattleRegionOpeningId": 52, "championBattleRegionId": 900003, "scheduleId": "6110_1W_ChampionBattle_AllPeriod" },
-{ "championBattleRegionOpeningId": 53, "championBattleRegionId": 900001, "scheduleId": "6120_1W_ChampionBattle_AllPeriod" }
+{ "championBattleRegionOpeningId": 53, "championBattleRegionId": 900001, "scheduleId": "6120_1W_ChampionBattle_AllPeriod" },
+{ "championBattleRegionOpeningId": 54, "championBattleRegionId": 900004, "scheduleId": "7010_1W_ChampionBattle_AllPeriod" }
 ]}

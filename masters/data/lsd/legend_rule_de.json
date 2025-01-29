@@ -82,5 +82,8 @@
     "legend_rule_6110_003": "Gegner erleiden weniger Schaden, wenn\nihre Vert./Sp.-Vert. oder ihr Ang./Vert.\nerhöht sind.",
     "legend_rule_6120_001": "Fallen Regices KP das erste Mal auf 80 %\nund 30 %, hält es mit der jeweiligen Anzahl\nan KP durch.",
     "legend_rule_6120_002": "Vom Gegner ausgelöste Seiten-Effekte\nwirken permanent.",
-    "legend_rule_6120_003": "Stellt die KP des Gegners wieder her, wenn\nder Angriff eines Verbündeten, der auf den\nGegner abzielt, fehlschlägt."
+    "legend_rule_6120_003": "Stellt die KP des Gegners wieder her, wenn\nder Angriff eines Verbündeten, der auf den\nGegner abzielt, fehlschlägt.",
+    "legend_rule_7010_001": "Fallen Galagladis KP das erste Mal auf 60 %,\nhält es mit dieser Anzahl an KP durch.",
+    "legend_rule_7010_002": "Wenn die Sp.-Vert. des Gegners erhöht ist,\nsind seine Vert. und Sp.-Vert. verdreifacht.",
+    "legend_rule_7010_003": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht."
 }

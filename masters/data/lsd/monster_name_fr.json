@@ -437,6 +437,7 @@
     "20048711": "Giratina",
     "20048800": "Cresselia",
     "20049100": "Darkrai",
+    "20049211": "Shaymin",
     "20049212": "Shaymin",
     "20049400": "Victini",
     "20049500": "Vipélierre",
@@ -510,6 +511,7 @@
     "20060900": "Lugulabre",
     "20061000": "Coupenotte",
     "20061200": "Tranchodon",
+    "20061400": "Polagriffe",
     "20061500": "Hexagel",
     "20061700": "Limaspeed",
     "20062000": "Shaofouine",
@@ -720,6 +722,7 @@
     "2008620031": "Ixon",
     "2008630031": "Berserkatt",
     "2008650031": "Palarticho",
+    "2008660031": "M. Glaquette",
     "2008670031": "Tutétékri",
     "2008691111": "Charmilly",
     "2008710000": "Wattapik",
@@ -788,5 +791,12 @@
     "2009790000": "Courrousinge",
     "2009320000": "Selutin",
     "2009360000": "Carmadura",
-    "2009660000": "Vrombotor"
+    "2009660000": "Vrombotor",
+    "2008691717": "Charmilly",
+    "2010071100": "Koraidon",
+    "2010071200": "Koraidon",
+    "2010081100": "Miraidon",
+    "2010081200": "Miraidon",
+    "2009760000": "Délestin",
+    "2009560000": "Cléopsytra"
 }

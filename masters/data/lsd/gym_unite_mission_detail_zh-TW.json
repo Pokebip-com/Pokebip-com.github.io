@@ -1,0 +1,19 @@
+{
+    "1": "登入道館天數共[Digit:3digits ]天\n（計算道館成員的達成數）",
+    "2": "挑戰「每日挑戰：地區對戰！」並成功過關共[Digit:6digits ]次\n（計算道館成員的達成數）",
+    "3": "在訓練家沙龍進行交流共[Digit:6digits ]次\n（計算道館成員的達成數）",
+    "4": "共使用活力×[Digit:6digits ]\n（計算道館成員的達成數）",
+    "5": "成功過關對戰共[Digit:6digits ]次\n（計算道館成員的達成數）",
+    "11": "成功過關下列任一對戰共[Digit:6digits ]次\n（計算道館成員的達成數）",
+    "11_element": "・[Name:QuestPlayType ]的「[Name:QuestTitle ]」",
+    "6": "獲得下列道具共[Digit:6digits ]個\n（計算道館成員的達成數）",
+    "6_element": "・[Name:Item ]",
+    "7": "讓下列得分戰活動的最佳得分達到共[Digit:9digits ]pt以上\n（計算道館成員的達成數）",
+    "7_element": "・[Name:QuestGroupTitle ]",
+    "8": "讓傳說冒險的最高連勝數達到共[Digit:9digits ]連勝以上\n（計算道館成員的達成數）",
+    "8_element": "・[Name:QuestGroupTitle ]",
+    "9": "讓下列傷害排名的最佳得分達到共[Digit:9digits ]pt以上\n（計算道館成員的達成數）",
+    "9_element": "・[Name:QuestGroupTitle ]",
+    "10": "成功過關下列任一任務[Digit:6digits ]次\n（計算道館成員的達成數）",
+    "10_element": "・期間限定的個人任務[Digit:6digits ]"
+}

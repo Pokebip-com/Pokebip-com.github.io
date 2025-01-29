@@ -290,6 +290,10 @@
     "override_detail_6100_1_04": "Schließe „Super-Sparring“ einmal im\nModus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Empfohlen“ spielen.",
     "override_detail_6100_1_05": "Schließe „Episodenevent: Rätselhaftes\nDuo aus Kalo“ einmal im Modus\n„Allein spielen“ einmal ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Empfohlen“ spielen.",
     "override_detail_6100_1_06": "Schließe „Episodenevent: Let’s Go!\nFinden wir das Wunder!“ einmal im\nModus „Allein spielen“ ab.\n\nHinweis: Du kannst das Event über\nden Reiter „Wiederholen“ spielen.",
+    "230": "Logge dich an [Digit:3digits ] [DE:Qty S=\"Tag\" P=\"Tagen\" ] in die\nTrainer-Arena ein.",
+    "231": "Erziele eine Bestpunktzahl von\n[Digit:9digits ] in einem Highscore-Event.",
+    "232": "Erziele eine Bestpunktzahl von\n[Digit:9digits ] in einem\nZeitschaden-Rangkampf.",
+    "233": "Erreiche eine Gewinnserie von\n[Digit:9digits ] im Legenden-Turnier.",
     "override_detail_6120_1_01": "Lass uns zuallererst das Fotostudio\nnutzen, damit du dir die Welt durch\nein Objektiv ansehen kannst!\n\n(Du kannst Fotos machen, indem du\ndas Fotostudio über das Poryfon-Menü\naufrufst.)",
     "override_detail_6120_1_02": "Probiere als Nächstes ein Foto von\neiner Person zu machen, die genau\nwie ich eine Arenaleiterin ist.",
     "override_detail_6120_1_03": "Jetzt möchte ich ein paar besonders\nstarke Trainer sehen! Versuch mal, ein\nFoto von einem Champ zu machen!",
@@ -299,5 +303,6 @@
     "override_detail_6120_1_07": "Lass uns ein Kunstwerk kreieren, das\ndie Essenz der Pokémon-Kämpfe auf\nPassio einfängt! Als Motiv kann ich dir\nGefährtengespanne empfehlen, die als\nHeißblütige Kämpfer bekannt sind!",
     "override_detail_6120_1_08": "Stahlhartes Training war schon immer\nbeliebtes Motiv in der Kunst! Versuch\ndich mal an einem Foto von einem\nSparringspartner-Gefährten!",
     "override_detail_6120_1_09": "Ich hätte gerne ein Foto von einer\nkünstlerischen Person. Jemand, der\nseine Gefühle durch Fotografie, Musik\noder Malerei zum Ausdruck bringt.\nFrag aber bitte um Erlaubnis, falls ihre\nWerke in deinem Bild zu sehen sind!",
-    "override_detail_6120_1_10": "Es ist äußerst schwer, Bewegungen\nin Bildern einzufangen. Ähnlich wie\nbei einem Cape, das im Wind flattert!\nEs wäre toll, wenn du davon ein Bild\nmachen könntest! Gib dein Bestes!"
+    "override_detail_6120_1_10": "Es ist äußerst schwer, Bewegungen\nin Bildern einzufangen. Ähnlich wie\nbei einem Cape, das im Wind flattert!\nEs wäre toll, wenn du davon ein Bild\nmachen könntest! Gib dein Bestes!",
+    "override_detail_7010_1_01": "Schließe die täglichen\nRegionskämpfe ab."
 }

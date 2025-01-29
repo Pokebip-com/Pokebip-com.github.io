@@ -275,6 +275,7 @@
     "20048711": "Vive en el Mundo Distorsión, un mundo opuesto al\nnuestro y cuyas leyes desafían el sentido común.",
     "20048800": "Sus alas emiten un velo de partículas brillantes. Se dice\nque representa un cuarto lunar.",
     "20049100": "Defiende su territorio de personas y Pokémon\nhaciéndoles dormir y provocándoles pesadillas.",
+    "20049211": "Puede disolver las toxinas del aire para transformar\ntierra yerma en campos de flores.",
     "20049212": "Puede disolver las toxinas del aire para transformar\ntierra yerma en campos de flores.",
     "20049400": "Pokémon que atrae la victoria. Dicen que el Entrenador\nque lo lleve saldrá vencedor de cualquier batalla.",
     "20049500": "Cuando recibe los rayos de sol, se mueve mucho más\nrápido que de costumbre. Usa mejor sus lianas que sus\nmanos.",
@@ -338,6 +339,7 @@
     "20060900": "Sus llamas absorben el alma del enemigo y la abrasan,\ndejando solo su cuerpo inerte.",
     "20061000": "Usa sus colmillos para romper las bayas que come.\nEstos se regeneran una y otra vez, por eso son tan\nfuertes y afilados.",
     "20061200": "Es gentil, pero no perdona a todo el que ose invadir su\nterritorio. Su mayor baza son sus colmillos, que cortan el\nacero.",
+    "20061400": "Adoran los mares gélidos del norte. Congelan su aliento\npara crear sendas por las que caminar sobre las aguas.",
     "20061500": "Nació entre nubes de nieve. Atrapa a sus presas con\nuna cadena hecha de hielo cristalizado.",
     "20061700": "Se siente ligero una vez liberado de su caparazón.\nLucha y se mueve como un ninja.",
     "20062500": "Por fuerte que sea un Bisharp, la más mínima mella en\nla hoja de su cabeza es deshonrosa y motivo de\ndestitución como líder de su grupo.",
@@ -381,6 +383,7 @@
     "20071000": "Este violento Pokémon escupe veneno a los rivales que\nse le acercan. Sin embargo, por algún extraño motivo,\nse lleva muy bien con Dhelmise.",
     "20075700": "Comprime el agua que traga y la convierte en\nproyectiles de tal potencia que atraviesan incluso\ngruesas placas de metal.",
     "20073200": "Extiende su gorguera y genera energía eléctrica\nsuficiente para cubrir el consumo de electricidad\nde un rascacielos entero.",
+    "20073800": "Según algunas teorías, este Pokémon no es una\nrecreación exacta del de épocas pasadas, ya que\ndebería estar recubierto de plumas.",
     "20073900": "Vivía en zonas gélidas en épocas pasadas y, según\ndicen, el sonido que emite provoca la aparición de\nauroras boreales nocturnas.",
     "20074000": "El descubrimiento de un Aurorus en perfecto estado de\nconservación en el interior de un iceberg se convirtió en\nnoticia.",
     "20076700": "Cuando se enfrasca en un combate lo da todo sin\ntitubear un segundo, aunque se enfrente a un Pokémon\nde tipo Dragón más grande que él.",
@@ -414,6 +417,7 @@
     "20080100": "Los artesanos intentan exterminarlo porque se come\nlas ramas de los Corsola, que ellos solo recogen al\ndesprenderse de forma natural.",
     "20084000": "No se inmuta por nada. Mastica tierra y la mezcla con\nsu saliva para crear un lodo singular.",
     "20085100": "Pasa la mayor parte del tiempo en el agua. Si atrapa\nalguna presa sin tener hambre, la almacena en la\nburbuja de su cabeza.",
+    "20086900": "Se hace pasar por Pokémon de tipo Bicho como\nmecanismo de defensa. Los pétalos de sus brazos\ntienen un filo muy agudo.",
     "20080400": "Duerme a su presa y le arrebata la vitalidad con sus\nbrazos. Si otro Shiinotic se encuentra en apuros, le\ntransmite sus fuerzas.",
     "20085200": "Es capaz de derribar un árbol con su fuerza. Se\ncomunica con sus congéneres mediante el olor que\nemite el órgano de su parte posterior.",
     "20085300": "Agita violentamente los brazos como amenaza. Quien\npresencie este gesto debe huir en el acto si aprecia su\nvida.",
@@ -584,5 +588,8 @@
     "2009790000": "Cuando su ira explosiva rebasó el punto crítico, adquirió\nun poder que lo libró para siempre de las limitaciones\nde su cuerpo material.",
     "2009320000": "Surgen de estratos salinos subterráneos. Antaño se los\ntenía en alta estima, pues compartían su sal, un mineral\npor entonces muy preciado.",
     "2009360000": "Porta una armadura reforzada con energía psíquica e\nígnea. Ataca lanzando bolas de fuego incandescentes.",
-    "2009660000": "Posee ocho cilindros, con los que genera energía haciendo\nestallar el gas que produce al mezclar los minerales de\nlas rocas con su veneno."
+    "2009660000": "Posee ocho cilindros, con los que genera energía haciendo\nestallar el gas que produce al mezclar los minerales de\nlas rocas con su veneno.",
+    "2010071100": "Parece tratarse de Reyalado, la criatura que, según lo\nnarrado en un antiguo diario, fue capaz de dividir la\ntierra con sus puños.",
+    "2010081100": "Parece tratarse de la criatura Ferromandra, que, según\nunos viejos escritos, transformó la tierra en cenizas con\nsus rayos.",
+    "2009060000": "Su sedoso pelaje se asemeja en composición a las\nplantas. Se lava la cara con diligencia para que no se\nle seque."
 }

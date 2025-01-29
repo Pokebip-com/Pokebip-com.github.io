@@ -1,0 +1,15 @@
+{
+    "100000": "[Digit:6digits ] Arena-Punkte erreicht!\nNächster Arena-Rang auf [Name:GymRank ] angehoben.",
+    "100100": "Saison endet in [Digit:2digits ] [DE:Qty S=\"Tag\" P=\"Tagen.\" ]",
+    "100200": "Die Saison ist abgeschlossen!\nArena-Punkte erreicht: [Digit:6digits ] Pkt.",
+    "100300": "[Name:PlayerNickname ] hat die Leitung\nübernommen.",
+    "100400": "Arena „[Name:GymName ]“ beigetreten",
+    "100500": "Arena-Mission (Saison) abgeschlossen!\n[Name:GymMissionDetail ]",
+    "101000": "Arena-Mission (Zeitlich begrenzt) abgeschlossen!\n[Name:GymMissionDetail ]",
+    "101600": "Eine zeitlich begrenzte Mission ist im Gang!",
+    "101700": "Eine neue Saison hat begonnen!",
+    "101800": "In der Arena eingeloggt.",
+    "200000": "[Digit:8digits ] Punkte im Zeitschaden-Rangkampf\nerreicht!",
+    "200100": "[Digit:8digits ] Punkte im Highscore-Event erreicht!",
+    "200200": "[Digit:7digits ] Siege in Folge im Legenden-Turnier\nerzielt!"
+}

@@ -1,0 +1,19 @@
+{
+    "1": "Effettua l'accesso a una Palestra\nun totale di [Digit:3digits ] [IT:Qty S=\"volta\" P=\"volte\" ].\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "2": "Completa la lotta regionale giornaliera\nun totale di [Digit:6digits ] [IT:Qty S=\"volta\" P=\"volte\" ].\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "3": "Completa una conversazione\nnel Salotto Allenatori un totale di [Digit:6digits ] [IT:Qty S=\"volta\" P=\"volte\" ].\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "4": "Usa la Vitalità un totale di [Digit:6digits ] [IT:Qty S=\"volta\" P=\"volte\" ].\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "5": "Completa un totale di [Digit:6digits ] [IT:Qty S=\"lotta\" P=\"lotte\" ].\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "11": "Completa [Digit:6digits ] Guid[IT:Qty S=\"a\" P=\"e\" ] area\ntra le seguenti.\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "11_element": "• [Name:QuestPlayType ]\nin modalità [Name:QuestTitle ]",
+    "6": "Ottieni il seguente strumento\nun totale di [Digit:6digits ] [IT:Qty S=\"volta\" P=\"volte\" ].\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "6_element": "• [Name:Item ]",
+    "7": "Ottieni un punteggio migliore\ntotalizzando [Digit:9digits ] o più punti \nnel seguente evento lotta a punti.\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "7_element": "• [Name:QuestGroupTitle ]",
+    "8": "Ottieni [Digit:9digits ] vittorie consecutive\nnella Sfida Leggendaria.\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "8_element": "• [Name:QuestGroupTitle ]",
+    "9": "Ottieni un punteggio migliore\ntotalizzando [Digit:9digits ] o più punti \nnella seguente Gara turbodanno.\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "9_element": "• [Name:QuestGroupTitle ]",
+    "10": "Completa una delle seguenti missioni\nun totale di [Digit:6digits ] [IT:Qty S=\"volta\" P=\"volte\" ].\n\nIl conteggio include gli altri membri\ndella Palestra.",
+    "10_element": "Missione in solitaria\na tempo limitato ×[Digit:6digits ]"
+}

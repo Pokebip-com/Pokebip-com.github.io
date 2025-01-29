@@ -74,5 +74,10 @@
     "90001": "Zweisegmentform",
     "90002": "Truhenform",
     "90003": "Wanderform",
-    "60036": "Orangeblütler"
+    "60036": "Orangeblütler",
+    "40005": "Landform",
+    "90004": "Vollkommene Gestalt",
+    "90005": "Gehemmte Gestalt",
+    "90006": "Kompletter Modus",
+    "90007": "Begrenzter Modus"
 }

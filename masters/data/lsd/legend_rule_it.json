@@ -82,5 +82,8 @@
     "legend_rule_6110_003": "I danni subiti da ciascun avversario vengono\nridotti se la sua Difesa o Difesa Speciale, o\nil suo Attacco o la sua Difesa, è aumentata.",
     "legend_rule_6120_001": "I PS di Regice restano all'80% o al 30% la\nprima volta che subisce danni che farebbero\nscendere i suoi PS all'80% o al 30% o meno.",
     "legend_rule_6120_002": "Gli effetti sul campo attivati dagli avversari\nsono permanenti.",
-    "legend_rule_6120_003": "L'avversario recupera PS quando l'attacco\nsemplice di un alleato contro l'avversario\nfallisce."
+    "legend_rule_6120_003": "L'avversario recupera PS quando l'attacco\nsemplice di un alleato contro l'avversario\nfallisce.",
+    "legend_rule_7010_001": "I PS di Gallade rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
+    "legend_rule_7010_002": "Se la Difesa Speciale degli avversari\nè aumentata, la loro Difesa e la loro\nDifesa Speciale sono triplicate.",
+    "legend_rule_7010_003": "Se non sono presenti effetti sul campo\navversario, la Difesa e la Difesa Speciale\ndegli avversari sono triplicate."
 }

@@ -1,0 +1,15 @@
+{
+    "100000": "Ottenuti [Digit:6digits ] punti Palestra!\nIl prossimo rango Palestra è salito a [Name:GymRank ].",
+    "100100": "La stagione terminerà tra [Digit:2digits ] [IT:Qty S=\"giorno\" P=\"giorni\" ].",
+    "100200": "La stagione è terminata!\nPunti Palestra ottenuti: [Digit:6digits ]",
+    "100300": "[Name:PlayerNickname ] ha assunto il ruolo\ndi leader.",
+    "100400": "Iscrizione alla Palestra [Name:GymName ].",
+    "100500": "Missione Palestra stagionale completata!\n[Name:GymMissionDetail ]",
+    "101000": "Missione Palestra a tempo limitato completata!\n[Name:GymMissionDetail ]",
+    "101600": "È disponibile una missione a tempo limitato!",
+    "101700": "È iniziata una nuova stagione!",
+    "101800": "Accesso alla Palestra effettuato.",
+    "200000": "[Digit:8digits ] punti ottenuti\nin una Gara turbodanno!",
+    "200100": "[Digit:8digits ] punti ottenuti\nin un evento lotta a punti!",
+    "200200": "[Digit:7digits ] vittorie consecutive ottenute\nnella Sfida Leggendaria!"
+}

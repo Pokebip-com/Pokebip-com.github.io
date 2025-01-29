@@ -437,6 +437,7 @@
     "20048711": "Giratina",
     "20048800": "Cresselia",
     "20049100": "Darkrai",
+    "20049211": "Shaymin",
     "20049212": "Shaymin",
     "20049400": "Victini",
     "20049500": "Serpifeu",
@@ -510,6 +511,7 @@
     "20060900": "Skelabra",
     "20061000": "Milza",
     "20061200": "Maxax",
+    "20061400": "Siberio",
     "20061500": "Frigometri",
     "20061700": "Hydragil",
     "20062000": "Wie-Shu",
@@ -720,6 +722,7 @@
     "2008620031": "Barrikadax",
     "2008630031": "Mauzinger",
     "2008650031": "Lauchzelot",
+    "2008660031": "Pantifrost",
     "2008670031": "Oghnatoll",
     "2008691111": "Pokusan",
     "2008710000": "Britzigel",
@@ -788,5 +791,12 @@
     "2009790000": "Epitaff",
     "2009320000": "Geosali",
     "2009360000": "Crimanzo",
-    "2009660000": "Knattatox"
+    "2009660000": "Knattatox",
+    "2008691717": "Pokusan",
+    "2010071100": "Koraidon",
+    "2010071200": "Koraidon",
+    "2010081100": "Miraidon",
+    "2010081200": "Miraidon",
+    "2009760000": "Agiluza",
+    "2009560000": "Psiopatra"
 }

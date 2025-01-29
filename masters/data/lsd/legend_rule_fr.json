@@ -82,5 +82,8 @@
     "legend_rule_6110_003": "Quand la Défense ou la Défense Spéciale,\nou l'Attaque ou la Défense de chaque ennemi\nest augmentée, ils subissent moins de dégâts.",
     "legend_rule_6120_001": "Les PV de Regice restent à 80 % et 30 %\nla première fois que ses PV chutent\nà 80 % et 30 % ou moins.",
     "legend_rule_6120_002": "Les effets sur le terrain déclenchés\npar l'ennemi durent tout le combat.",
-    "legend_rule_6120_003": "Restaure les PV de l'ennemi quand\nla capacité offensive d'un allié\nqui vise l'ennemi échoue."
+    "legend_rule_6120_003": "Restaure les PV de l'ennemi quand\nla capacité offensive d'un allié\nqui vise l'ennemi échoue.",
+    "legend_rule_7010_001": "Les PV de Gallame restent à 60 %\nla première fois que ses PV chutent\nà 60 % ou moins.",
+    "legend_rule_7010_002": "Quand la Déf. Spé. de l'ennemi est augmentée,\nsa Déf. et sa Déf. Spé. sont triplées.",
+    "legend_rule_7010_003": "Quand l'ennemi n'est pas affecté par un effet\nsur le terrain, sa Déf. et sa Déf. Spé. sont triplées."
 }

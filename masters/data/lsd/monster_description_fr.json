@@ -275,6 +275,7 @@
     "20048711": "Il vit dans le Monde Distorsion, un monde à l'opposé\ndu nôtre qui échappe au sens commun.",
     "20048800": "Ses ailes libèrent un rideau de particules brillantes.\nCe Pokémon symboliserait le croissant de lune.",
     "20049100": "Il endort humains et Pokémon, et leur fait avoir\ndes cauchemars pour les chasser de son territoire.",
+    "20049211": "Il peut dissoudre les toxines dans l'air pour transformer\nun désert en un champ de fleurs luxuriantes.",
     "20049212": "Il peut dissoudre les toxines dans l'air pour transformer\nun désert en un champ de fleurs luxuriantes.",
     "20049400": "Un Pokémon qui amène la victoire. On dit que\nles Dresseurs qui le possèdent peuvent gagner\nn'importe quel combat.",
     "20049500": "La lumière du soleil augmente fortement son agilité.\nSes lianes sont plus habiles que ses mains.",
@@ -338,6 +339,7 @@
     "20060900": "Les victimes des flammes de Lugulabre voient leur âme\naspirée jusqu'à ce que leur corps ne soit plus que coquille\nvide.",
     "20061000": "Il broie les Baies à grands coups de crocs. Ceux-ci\nrepoussent plusieurs fois, toujours plus forts et aiguisés.",
     "20061200": "Il est doux, mais ne pardonne pas à ceux qui viennent\nsaccager son territoire. Ses crocs peuvent découper de\nl'acier.",
+    "20061400": "Il aime les mers glaciales du nord. Il y trace son chemin\nen créant des îlots de glace pour éviter de nager.",
     "20061500": "Né d'un nuage neigeux, il attrape ses proies à l'aide\nde sa chaîne faite de cristaux de givre.",
     "20061700": "Il s'est bien allégé en se débarrassant de sa lourde\ncarapace. Il se bat avec l'agilité d'un ninja.",
     "20062500": "Peu importe la puissance du Scalproie, il abdique de\nson rôle de chef si la lame de sa tête subit la moindre\nébréchure.",
@@ -381,6 +383,7 @@
     "20071000": "Les étourdis qui divaguent du côté de chez lui se font\nchasser à grands jets de poison. Curieusement, il adore\nSinistrail.",
     "20075700": "Il aspire de l'eau et la projette sous pression pour\nattaquer. Le jet est si puissant qu'il perce même\nd'épaisses plaques d'acier.",
     "20073200": "L'électricité que produit un seul Iguolta en agitant\nsa collerette suffit à alimenter un immeuble entier.",
+    "20073800": "La reconstitution de Pokémon est un art imparfait.\nD'aucuns pensent même qu'il était en fait couvert\nd'une robe semblable à un plumage.",
     "20073900": "Amagara vivait jadis dans les terres glacées. On dit que\nlorsqu'il pousse un cri, une aurore boréale nimbe le ciel\nnocturne.",
     "20074000": "Un Dragmara a été retrouvé dans un glacier, en parfait\nétat de conservation, ce qui a fait la une des actualités.",
     "20076700": "Une fois le combat entamé, il n'hésite pas\nune seconde, même contre un Pokémon\nde type Dragon dix fois plus gros que lui.",
@@ -414,6 +417,7 @@
     "20080100": "Son amour des cornes de Corayon lui vaut l'hostilité\ndes artisans qui les récoltent dans la nature pour en\nfaire des objets.",
     "20084000": "Il reste calme et impassible en toutes circonstances.\nIl mélange sa salive à de la terre pour créer une boue\nspéciale dans sa bouche.",
     "20085100": "Il passe la plupart de son temps dans l'eau. S'il est\nrassasié, il peut conserver ses proies dans sa bulle\npour les manger plus tard.",
+    "20086900": "C'est pour se protéger qu'il se fait passer pour\nun Pokémon Insecte. Les pétales de ses bras\nsont extrêmement coupants.",
     "20080400": "Il endort ses victimes puis aspire leur énergie vitale avec\nses doigts. Il aide ses congénères affaiblis en partageant\ncette énergie avec eux.",
     "20085200": "Il est si fort qu'il peut abattre un grand arbre.\nL'odeur que dégage l'organe sur son derrière lui\npermet de communiquer avec ses semblables.",
     "20085300": "Il fait de grands gestes avec ses pattes pour intimider\net mettre en garde ses ennemis. Mieux vaut alors prendre\nses jambes à son cou !",
@@ -584,5 +588,8 @@
     "2009790000": "Quand sa colère a franchi un seuil critique,\nil a acquis une puissance qui l'a émancipé\ndes limites de son corps.",
     "2009320000": "Ce Pokémon est né dans des couches souterraines\nde sel gemme. Connu pour partager son précieux\nsel, il était très apprécié autrefois.",
     "2009360000": "Ce Pokémon porte une armure renforcée par\nde l'énergie de type Psy et de type Feu. Il lance\ndes boules de feu à très haute température.",
-    "2009660000": "Il produit de l'énergie en faisant exploser dans\nses huit cylindres un mélange gazeux qui contient\nune substance toxique et des minéraux."
+    "2009660000": "Il produit de l'énergie en faisant exploser dans\nses huit cylindres un mélange gazeux qui contient\nune substance toxique et des minéraux.",
+    "2010071100": "Il s'agirait d'« Ailes-Royales », une créature qui,\nd'après un vieux récit d'exploration, aurait fendu\nla terre par la force de ses poings.",
+    "2010081100": "Il semble être le « Serpent-de-Fer » mentionné\ndans un livre ancien. Il aurait réduit la terre\nen cendres en la foudroyant.",
+    "2009060000": "Ce Pokémon lave assidûment son visage pour\néviter qu'il ne s'assèche. La composition de son\npelage soyeux est proche de celle des plantes."
 }

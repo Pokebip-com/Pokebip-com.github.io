@@ -1,0 +1,19 @@
+{
+    "1": "Connectez-vous à l'Arène [Digit:3digits ] jour[FR:Qty P=\"s\" ] au total.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "2": "Terminez un combat régional quotidien\n[Digit:6digits ] fois au total.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "3": "Interagissez dans le Salon des Dresseurs\n[Digit:6digits ] fois au total.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "4": "Utilisez de la Vigueur [Digit:6digits ] fois au total.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "5": "Finissez [Digit:6digits ] combat[FR:Qty P=\"s\" ] au total.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "11": "Finissez l'une des zones suivantes\n[Digit:6digits ] fois au total.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "11_element": "• « [Name:QuestTitle ] » en [Name:QuestPlayType ]",
+    "6": "Obtenez l'objet spécifié [Digit:6digits ] fois au total.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "6_element": "[Name:Item ]",
+    "7": "Obtenez un meilleur score total\nde [Digit:9digits ] points ou plus dans\nl'évènement meilleur score suivant.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "7_element": "[Name:QuestGroupTitle ]",
+    "8": "Obtenez un record de [Digit:9digits ] victoires\nconsécutives dans l'Aventure Légendaire.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "8_element": "[Name:QuestGroupTitle ]",
+    "9": "Obtenez un meilleur score total\nde [Digit:9digits ] points ou plus dans\nle classement par dégâts suivant.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "9_element": "[Name:QuestGroupTitle ]",
+    "10": "Finissez l'une des missions spécifiées\n[Digit:6digits ] fois au total.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "10_element": "Mission solo à durée limitée × [Digit:6digits ]"
+}

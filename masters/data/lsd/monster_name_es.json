@@ -437,6 +437,7 @@
     "20048711": "Giratina",
     "20048800": "Cresselia",
     "20049100": "Darkrai",
+    "20049211": "Shaymin",
     "20049212": "Shaymin",
     "20049400": "Victini",
     "20049500": "Snivy",
@@ -510,6 +511,7 @@
     "20060900": "Chandelure",
     "20061000": "Axew",
     "20061200": "Haxorus",
+    "20061400": "Beartic",
     "20061500": "Cryogonal",
     "20061700": "Accelgor",
     "20062000": "Mienshao",
@@ -720,6 +722,7 @@
     "2008620031": "Obstagoon",
     "2008630031": "Perrserker",
     "2008650031": "Sirfetch'd",
+    "2008660031": "Mr. Rime",
     "2008670031": "Runerigus",
     "2008691111": "Alcremie",
     "2008710000": "Pincurchin",
@@ -788,5 +791,12 @@
     "2009790000": "Annihilape",
     "2009320000": "Nacli",
     "2009360000": "Armarouge",
-    "2009660000": "Revavroom"
+    "2009660000": "Revavroom",
+    "2008691717": "Alcremie",
+    "2010071100": "Koraidon",
+    "2010071200": "Koraidon",
+    "2010081100": "Miraidon",
+    "2010081200": "Miraidon",
+    "2009760000": "Veluza",
+    "2009560000": "Espathra"
 }

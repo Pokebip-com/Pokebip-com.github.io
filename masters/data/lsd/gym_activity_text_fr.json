@@ -1,0 +1,15 @@
+{
+    "100000": "Vous avez atteint [Digit:6digits ] points d'Arène !\nProchain rang d'Arène élevé au [Name:GymRank ].",
+    "100100": "La saison se terminera dans [Digit:2digits ] jour[FR:Qty P=\"s\" ].",
+    "100200": "La saison est terminée !\nPoints d'Arène obtenus : [Digit:6digits ] pts",
+    "100300": "[Name:PlayerNickname ] est à présent leader.",
+    "100400": "A rejoint l'Arène [Name:GymName ].",
+    "100500": "Mission d'Arène saisonnière terminée !\n[Name:GymMissionDetail ]",
+    "101000": "Mission d'Arène à durée limitée terminée !\n[Name:GymMissionDetail ]",
+    "101600": "Une mission à durée limitée est en cours !",
+    "101700": "Une nouvelle saison a commencé !",
+    "101800": "Connecté(e) à l'Arène",
+    "200000": "[Digit:8digits ] points atteints dans\nun classement par dégâts !",
+    "200100": "[Digit:8digits ] points atteints dans\nun évènement meilleur score !",
+    "200200": "[Digit:7digits ] victoires consécutives dans\nl'Aventure Légendaire !"
+}

@@ -275,6 +275,7 @@
     "20048711": "Vive nel Mondo Distorto che, sfidando l'ordine cosmico,\nsi trova sul lato opposto al nostro.",
     "20048800": "Volando rilascia un velo di particelle brillanti. Si dice che\nrappresenti la luna crescente.",
     "20049100": "Respinge umani e Pokémon dal suo territorio inducendoli\na un sonno profondo e provocando incubi.",
+    "20049211": "Può dissolvere le tossine nell'aria per mutare all'istante\nuna terra arida in un rigoglioso campo fiorito.",
     "20049212": "Può dissolvere le tossine nell'aria per mutare all'istante\nuna terra arida in un rigoglioso campo fiorito.",
     "20049400": "Pokémon che porta la vittoria. Si dice che l'Allenatore che\nha con sé Victini possa vincere qualsiasi lotta.",
     "20049500": "Quando è esposto alla luce solare può muoversi più\nvelocemente. Usa le sue liane meglio dei suoi stessi arti.",
@@ -338,6 +339,7 @@
     "20060900": "Le fiamme di Chandelure risucchiano lo spirito e lasciano\nil corpo come un guscio vuoto.",
     "20061000": "Mangia le bacche sminuzzandole con i denti,\nche ricrescono costantemente, diventando sempre\npiù forti e affilati.",
     "20061200": "Ha un carattere gentile, ma non perdona chi devasta\nil suo territorio. Le sue zanne possono tagliare l'acciaio.",
+    "20061400": "Predilige i freddi mari del nord. Crea strade di ghiaccio\nsoffiando con il suo alito gelido sulla superficie del mare.",
     "20061500": "È nato nelle nuvole cariche di neve. Cattura le prede\ncon una catena fatta di cristalli di ghiaccio.",
     "20061700": "Liberatosi della pesante conchiglia, è diventato leggero.\nLotta con le movenze proprie di un ninja.",
     "20062500": "Per quanto sia forte, se la lama sulla sua testa viene\nintaccata deve rinunciare al comando del gruppo.",
@@ -381,6 +383,7 @@
     "20071000": "È spietato e spruzza un liquido velenoso sui Pokémon ostili\nche gli si avvicinano. Per qualche strano motivo, va\nd'accordo solo con Dhelmise.",
     "20075700": "Assorbe acqua che comprime e rilascia in un getto con\nuna pressione tale da perforare anche spesse lastre\nd'acciaio.",
     "20073200": "Può produrre energia elettrica aprendo il collare. Un solo\nPokémon di questa specie sarebbe in grado di illuminare\nun intero grattacielo.",
+    "20073800": "Sembra che non si riesca a rigenerarlo alla perfezione.\nSecondo alcune teorie il suo corpo era ricoperto da un\nmanto simile a un piumaggio.",
     "20073900": "In passato abitava nelle terre più fredde. Si dice che\nquando emette il suo verso, nel cielo notturno compaia\nl'aurora boreale.",
     "20074000": "Di recente ha fatto notizia il ritrovamento di un esemplare\nin perfetto stato di conservazione intrappolato in un\niceberg.",
     "20076700": "Nella lotta, parte all'attacco senza esitare un istante,\nanche quando si trova di fronte imponenti Pokémon\ndi tipo Drago.",
@@ -414,6 +417,7 @@
     "20080100": "Poiché mangia i coralli dei Corsola, non è visto di buon\nocchio dagli artigiani che raccolgono e lavorano i rametti\ncaduti spontaneamente.",
     "20084000": "Rimane calmo e imperturbabile in qualsiasi circostanza.\nProduce un fango speciale mescolando nella sua bocca\nterra e saliva.",
     "20085100": "Se ne sta per lo più in acqua. Quando è sazio, conserva\nle prede che ha catturato nella bolla che ha in testa.",
+    "20086900": "Cerca di farsi passare per Pokémon Coleottero per\nproteggersi. I petali delle sue braccia sono estremamente\naffilati.",
     "20080400": "Addormenta la preda e utilizza le estremità delle\nsue braccia per rubarle l'energia vitale, che può\nanche trasmettere ai compagni in difficoltà.",
     "20085200": "Riesce a spezzare anche gli alberi più grossi. Comunica\ncon i suoi simili usando l'odore che emana da un organo\nche ha sul posteriore.",
     "20085300": "Agita energicamente le braccia in segno di minaccia o\ndi avvertimento. L'unica via di scampo è darsela a gambe.",
@@ -584,5 +588,8 @@
     "2009790000": "Superando i livelli critici di rabbia, ha ottenuto il potere\ndi andare oltre i vincoli del suo corpo fisico.",
     "2009320000": "È nato nei giacimenti sotterranei di salgemma.\nIn passato era tenuto in grande considerazione\npoiché condivideva il suo prezioso sale.",
     "2009360000": "Questo Pokémon indossa un'armatura rinforzata\ndall'energia Psico e Fuoco. Lancia palle di fuoco\nincandescenti contro i suoi nemici.",
-    "2009660000": "Produce energia facendo esplodere nei suoi otto cilindri\nun gas che forma mescolando tossine e minerali\ndelle rocce."
+    "2009660000": "Produce energia facendo esplodere nei suoi otto cilindri\nun gas che forma mescolando tossine e minerali\ndelle rocce.",
+    "2010071100": "Sembra si tratti del Realato che, stando a un antico diario\ndi viaggio, scisse la terra con i suoi pugni.",
+    "2010081100": "Sembra che sia il Serpeferrea di cui si parla\nin un vecchio libro. Si dice che con i suoi fulmini\nabbia tramutato la terra in cenere.",
+    "2009060000": "Il suo pelo vellutato ha una composizione simile a quella\ndelle piante. Si lava il muso di frequente per evitare\nche si disidrati."
 }

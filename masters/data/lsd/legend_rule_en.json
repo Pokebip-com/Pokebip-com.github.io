@@ -82,5 +82,8 @@
     "legend_rule_6110_003": "When each opponent’s Defense or Sp. Def—\nor Attack or Defense—is raised, the damage\nthey take is reduced.",
     "legend_rule_6120_001": "The first time Regice’s HP reaches 80% and\n30% or lower, it endures with that HP.",
     "legend_rule_6120_002": "The opponent’s field effects are permanent.",
-    "legend_rule_6120_003": "Restores the opponent’s HP when an ally’s\nattack move targeting the opponent misses."
+    "legend_rule_6120_003": "Restores the opponent’s HP when an ally’s\nattack move targeting the opponent misses.",
+    "legend_rule_7010_001": "The first time Gallade’s HP reaches 60% or\nlower, it endures with that HP.",
+    "legend_rule_7010_002": "When the opponent’s Sp. Def is raised,\nits Defense and Sp. Def are tripled.",
+    "legend_rule_7010_003": "When the opponent is not affected by a\nfield effect, its Defense and Sp. Def\nare tripled."
 }

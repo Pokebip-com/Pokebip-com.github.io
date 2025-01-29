@@ -1,0 +1,15 @@
+{
+    "100000": "道館點數已達[Digit:6digits ]pt！\n下一個道館等級已提升至[Name:GymRank ]",
+    "100100": "離賽季結束還剩[Digit:2digits ]天",
+    "100200": "賽季已結束！\n獲得的道館點數為[Digit:6digits ]pt！",
+    "100300": "[Name:PlayerNickname ]\n成為館主了",
+    "100400": "已加入[Name:GymName ]道館",
+    "100500": "已達成道館任務（賽季）\n「[Name:GymMissionDetail ]」！",
+    "101000": "已達成道館任務（期間限定）\n「[Name:GymMissionDetail ]」！",
+    "101600": "期間限定任務開跑了！",
+    "101700": "新賽季開始了！",
+    "101800": "已登入道館",
+    "200000": "在傷害排名中\n達成了[Digit:8digits ]pt！",
+    "200100": "在得分戰活動中\n達成了[Digit:8digits ]pt！",
+    "200200": "在傳說冒險中\n達成了[Digit:7digits ]連勝！"
+}

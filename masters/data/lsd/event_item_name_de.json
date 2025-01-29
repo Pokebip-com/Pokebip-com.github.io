@@ -359,7 +359,7 @@
     "750000000396": "Boxmünze",
     "750000000397": "Event-Coupon W",
     "750000000398": "Funkelnder Sticker",
-    "750000000399": "Xerneas-Kristall",
+    "750000000399": "Xerneas-Sphäre",
     "750000000404": "Event-Coupon X",
     "750000000406": "Event-Coupon Y",
     "750000000407": "Event-Coupon Z",
@@ -470,7 +470,7 @@
     "750000000515": "Event-Coupon U",
     "750000000516": "Event-Coupon V",
     "750000000517": "Event-Coupon W",
-    "750000000518": "Xerneas-Kristall",
+    "750000000518": "Xerneas-Sphäre",
     "750000000519": "Funkelnder Sticker",
     "750000000520": "Event-Coupon X",
     "750000000521": "Event-Coupon Y",
@@ -581,5 +581,8 @@
     "750000000639": "Heiter-Boxmünze",
     "750000000679": "Jahreswechsel-Ticket",
     "750000000680": "Passio-Metro-Siegesmarke",
+    "750000000682": "Brief",
+    "750000000683": "Charlies Blumenstrauß",
+    "750000000684": "Erikas Blumenstrauß",
     "750000000704": "Rocket-Vorstand-Siegesmarke"
 }

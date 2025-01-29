@@ -1,0 +1,15 @@
+{
+    "100000": "체육관포인트가 [Digit:6digits ]pt가 되었습니다!\n다음 체육관 랭크가 [Name:GymRank ][Kor:Particle char=\"ni\" ] 올랐습니다",
+    "100100": "시즌 종료까지 앞으로 [Digit:2digits ]일 남았습니다",
+    "100200": "시즌이 종료되었습니다!\n획득한 체육관포인트는 [Digit:6digits ]pt입니다!",
+    "100300": "[Name:PlayerNickname ][Kor:Particle char=\"ga\" ]\n리더가 되었습니다",
+    "100400": "[Name:GymName ]체육관에 가입했습니다",
+    "100500": "체육관 미션(시즌)\n\"[Name:GymMissionDetail ]\"[Kor:Particle char=\"wo\" ]\n달성했습니다!",
+    "101000": "체육관 미션(기간 한정)\n\"[Name:GymMissionDetail ]\"[Kor:Particle char=\"wo\" ]\n달성했습니다!",
+    "101600": "기간 한정 미션이 개최되었습니다!",
+    "101700": "새로운 시즌이 시작되었습니다!",
+    "101800": "체육관에 로그인했습니다",
+    "200000": "데미지 랭킹에서\n[Digit:8digits ]pt를 달성했습니다!",
+    "200100": "스코어어택 이벤트에서\n[Digit:8digits ]pt를 달성했습니다!",
+    "200200": "레전드 어드벤처에서\n[Digit:7digits ]연승을 달성했습니다!"
+}

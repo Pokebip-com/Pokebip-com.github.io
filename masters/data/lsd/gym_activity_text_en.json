@@ -1,0 +1,15 @@
+{
+    "100000": "[Digit:6digits ] gym points reached!\nNext gym rank raised to [Name:GymRank ].",
+    "100100": "Season ends in [Digit:2digits ] [EN:Qty S=\"day\" P=\"days\" ].",
+    "100200": "The season has ended!\nGym points earned: [Digit:6digits ] pts",
+    "100300": "[Name:PlayerNickname ] is now the leader.",
+    "100400": "Joined [Name:GymName ] Gym.",
+    "100500": "Gym mission (season) complete!\n[Name:GymMissionDetail ]",
+    "101000": "Gym mission (limited time) complete!\n[Name:GymMissionDetail ]",
+    "101600": "A limited-time mission is under way!",
+    "101700": "A new season has begun!",
+    "101800": "Logged in to the gym.",
+    "200000": "[Digit:8digits ] points reached in a\nRanked Damage Event!",
+    "200100": "[Digit:8digits ] points reached in a high score event!",
+    "200200": "A [Digit:7digits ]-win streak reached in the\nLegendary Gauntlet!"
+}

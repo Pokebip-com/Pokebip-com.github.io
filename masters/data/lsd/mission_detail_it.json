@@ -290,6 +290,10 @@
     "override_detail_6100_1_04": "Completa una volta in solitaria\nla Supercompetizione.\nPuoi completare l'evento nella\nsezione \"Consigliate\".",
     "override_detail_6100_1_05": "Completa una volta \"Episodio -\nUn duo misterioso da Kalos\"\nin solitaria.\nPuoi completare l'evento nella\nsezione \"Consigliate\".",
     "override_detail_6100_1_06": "Completa una volta \"Episodio -\nLet's go, in cerca del prodigio!\"\nin solitaria.\nPuoi completare l'evento nella\nsezione \"Riedizione\".",
+    "230": "Accedi alla Palestra per [Digit:3digits ] giorn[IT:Qty S=\"o\" P=\"i\" ].",
+    "231": "Raggiungi un miglior punteggio\npari ad almeno [Digit:9digits ] punti\nin un evento lotta a punti.",
+    "232": "Raggiungi un miglior punteggio\npari ad almeno [Digit:9digits ] punti\nin un evento Gara turbodanno.",
+    "233": "Raggiungi almeno [Digit:9digits ] vittori[IT:Qty S=\"a\" P=\"e\" ]\nconsecutiv[IT:Qty S=\"a\" P=\"e\" ] nella Sfida Leggendaria.",
     "override_detail_6120_1_01": "Per prima cosa, usiamo la modalità\nfoto per guardare liberamente\nil mondo con una lente!\n\nPuoi scattare delle foto andando\nin Modalità foto nel menu\ndel Porygofono.",
     "override_detail_6120_1_02": "Ora, scatta una foto che abbia\ncome soggetto un Capopalestra,\ncome la sottoscritta!",
     "override_detail_6120_1_03": "Adesso, voglio ammirare qualche\nAllenatore forte! Fotografa\nun Campione o una Campionessa!",
@@ -299,5 +303,6 @@
     "override_detail_6120_1_07": "Diamo vita a un'istantanea che metta\nin risalto lo spirito delle lotte Pokémon\na Pasio! Come prossimo soggetto, \nproporrei un'Unità dallo strabordante\nspirito combattivo!",
     "override_detail_6120_1_08": "Il fascino di un corpo tonico è\nmolto rappresentato nell'arte.\nFotografa un'Unità che rispecchi\nl'espressione \"In corpore sano\"!",
     "override_detail_6120_1_09": "Vorrei ammirare qualcuno dotato di\ntalento creativo, capace di esprimersi\ntramite fotografia, musica o pittura.\nMa ricordati di chiedere il permesso\ndi immortalare le sue opere!",
-    "override_detail_6120_1_10": "È complicato raffigurare con una foto\nil senso di movimento, come,\nad esempio, quello di un mantello\nsvolazzante! Ma sarebbe fantastico,\nse tu ci riuscissi! Metticela tutta!"
+    "override_detail_6120_1_10": "È complicato raffigurare con una foto\nil senso di movimento, come,\nad esempio, quello di un mantello\nsvolazzante! Ma sarebbe fantastico,\nse tu ci riuscissi! Metticela tutta!",
+    "override_detail_7010_1_01": "Completa una delle lotte\nregionali giornaliere."
 }

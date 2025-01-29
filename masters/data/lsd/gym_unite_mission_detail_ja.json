@@ -1,0 +1,19 @@
+{
+    "1": "合計[Digit:3digits ]日ジムログインしよう\n（ジムメンバーの達成数をカウント）",
+    "2": "「毎日挑戦　地方バトル！」を合計[Digit:6digits ]回クリアしよう\n（ジムメンバーの達成数をカウント）",
+    "3": "トレーナーズサロンの交流を合計[Digit:6digits ]回しよう\n（ジムメンバーの達成数をカウント）",
+    "4": "スタミナを合計[Digit:6digits ]使おう\n（ジムメンバーの達成数をカウント）",
+    "5": "バトルを合計[Digit:6digits ]回クリアしよう\n（ジムメンバーの達成数をカウント）",
+    "11": "以下のいずれかを合計[Digit:6digits ]回クリアしよう\n（ジムメンバーの達成数をカウント）",
+    "11_element": "・[Name:QuestPlayType ]の「[Name:QuestTitle ]」",
+    "6": "以下のどうぐを合計[Digit:6digits ]個獲得しよう\n（ジムメンバーの達成数をカウント）",
+    "6_element": "・[Name:Item ]",
+    "7": "以下のスコアアタックイベントのベストスコアを合計[Digit:9digits ]pt以上にしよう\n（ジムメンバーの達成数をカウント）",
+    "7_element": "・[Name:QuestGroupTitle ]",
+    "8": "レジェンドアドベンチャーの最大連勝数を合計[Digit:9digits ]連勝以上にしよう\n（ジムメンバーの達成数をカウント）",
+    "8_element": "・[Name:QuestGroupTitle ]",
+    "9": "以下のダメージランキングのベストスコアを合計[Digit:9digits ]pt以上にしよう\n（ジムメンバーの達成数をカウント）",
+    "9_element": "・[Name:QuestGroupTitle ]",
+    "10": "以下のいずれかのミッションを[Digit:6digits ]回達成しよう\n（ジムメンバーの達成数をカウント）",
+    "10_element": "・期間限定の個人ミッション[Digit:6digits ]"
+}

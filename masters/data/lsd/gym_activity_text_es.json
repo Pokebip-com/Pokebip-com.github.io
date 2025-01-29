@@ -1,0 +1,15 @@
+{
+    "100000": "¡Se han alcanzado [Digit:6digits ] puntos de gimnasio!\nEl siguiente rango del gimnasio será [Name:GymRank ].",
+    "100100": "La temporada finaliza dentro de [Digit:2digits ] día[ES:Qty P=\"s\" ].",
+    "100200": "¡La temporada ha finalizado!\nPuntos de gimnasio conseguidos: [Digit:6digits ].",
+    "100300": "Ahora [Name:PlayerNickname ] es líder.",
+    "100400": "Nuevo miembro del Gimnasio [Name:GymName ].",
+    "100500": "¡Misión de gimnasio de temporada completada:\n[Name:GymMissionDetail ]!",
+    "101000": "¡Misión de gimnasio por tiempo limitado\ncompletada: [Name:GymMissionDetail ]!",
+    "101600": "¡Misión por tiempo limitado en curso!",
+    "101700": "¡Ha comenzado una nueva temporada!",
+    "101800": "Se ha conectado al gimnasio.",
+    "200000": "¡Se ha[ES:Qty P=\"n\" ] alcanzado [Digit:8digits ] punto[ES:Qty P=\"s\" ]\nen la Maratón de Daño!",
+    "200100": "¡Se ha[ES:Qty P=\"n\" ] alcanzado [Digit:8digits ] punto[ES:Qty P=\"s\" ]\nen un evento de puntuación máxima!",
+    "200200": "¡Se ha alcanzado una racha de [Digit:7digits ] victorias\nen la Aventura Legendaria!"
+}

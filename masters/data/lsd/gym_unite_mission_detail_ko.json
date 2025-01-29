@@ -1,0 +1,19 @@
+{
+    "1": "체육관에 합계 [Digit:3digits ]일 로그인하자\n(체육관 멤버의 달성 수를 카운트)",
+    "2": "\"매일 도전 지방 배틀!\"을 합계 [Digit:6digits ]회 클리어하자\n(체육관 멤버의 달성 수를 카운트)",
+    "3": "트레이너즈 살롱의 교류를 합계 [Digit:6digits ]회 진행하자\n(체육관 멤버의 달성 수를 카운트)",
+    "4": "스태미나를 합계 [Digit:6digits ] 사용하자\n(체육관 멤버의 달성 수를 카운트)",
+    "5": "배틀을 합계 [Digit:6digits ]회 클리어하자\n(체육관 멤버의 달성 수를 카운트)",
+    "11": "아래 중 하나를 합계 [Digit:6digits ]회 클리어하자\n(체육관 멤버의 달성 수를 카운트)",
+    "11_element": "・[Name:QuestPlayType ]의 \"[Name:QuestTitle ]\"",
+    "6": "아래 도구를 합계 [Digit:6digits ]개 획득하자\n(체육관 멤버의 달성 수를 카운트)",
+    "6_element": "・[Name:Item ]",
+    "7": "아래 스코어어택 이벤트의 베스트 스코어를 합계 [Digit:9digits ]pt 이상 달성하자\n(체육관 멤버의 달성 수를 카운트)",
+    "7_element": "・[Name:QuestGroupTitle ]",
+    "8": "레전드 어드벤처의 최대 연승 수를 합계 [Digit:9digits ]연승 이상 달성하자\n(체육관 멤버의 달성 수를 카운트)",
+    "8_element": "・[Name:QuestGroupTitle ]",
+    "9": "아래 데미지 랭킹의 베스트 스코어를 합계 [Digit:9digits ]pt 이상 달성하자\n(체육관 멤버의 달성 수를 카운트)",
+    "9_element": "・[Name:QuestGroupTitle ]",
+    "10": "아래 중 하나의 미션을 [Digit:6digits ]회 달성하자\n(체육관 멤버의 달성 수를 카운트)",
+    "10_element": "・기간 한정 개인 미션 [Digit:6digits ]"
+}

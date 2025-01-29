@@ -275,6 +275,7 @@
     "20048711": "Es lebt in einer Zerrwelt, die auf der Kehrseite der\nunseren liegt und die sich aller Logik entzieht.",
     "20048800": "Seine Flügel geben schimmernde Partikel ab, die wie\nein Schleier herabrieseln. Man sagt, es verkörpere die\nMondsichel.",
     "20049100": "Es vertreibt Eindringlinge aus seinem Revier, indem es sie\nin Schlaf versetzt und mit Alpträumen quält.",
+    "20049211": "Es kann die Luft von Giften reinigen und Ödland in ein\nüppig blühendes Blumenfeld verwandeln.",
     "20049212": "Es kann die Luft von Giften reinigen und Ödland in ein\nüppig blühendes Blumenfeld verwandeln.",
     "20049400": "Ein siegverheißendes Pokémon. Man sagt, Trainer, die ein\nVictini in ihrem Team haben, seien unschlagbar.",
     "20049500": "Im Sonnenlicht erhöht sich das Tempo seiner Bewegungen.\nEs ist mit seinen Schlingen geschickter als mit den Händen.",
@@ -338,6 +339,7 @@
     "20060900": "Es saugt die Seele eines jeden auf, der in seinen\nFeuerkranz gerät, bis nur noch eine leere Hülle\nvon ihm übrig ist.",
     "20061000": "Es knackt mit seinen Hauern Nüsse. Brechen seine\nFangzähne ab, wächst an ihrer Stelle ein stärkeres\nErsatzpaar.",
     "20061200": "Hat eine eher sanfte Natur, doch bei Eindringlingen\nkennt es keine Gnade. Seine Stoßzähne durchbohren\nsogar Eisen.",
+    "20061400": "Es liebt die kalten Meere im Norden und überquert ihre\nFlächen auf Stegen, die es mit seinem gefrorenen Atem\nbaut.",
     "20061500": "Es fängt seine Beute mit Ketten, die sich aus\nEiskristallen zusammensetzen. Entstanden ist\nes aus einer Schneewolke.",
     "20061700": "Seit es die schwere Muschel abgestreift hat, ist es viel\nleichter. Nun gleichen seine Kampfbewegungen denen\neines Ninja.",
     "20062500": "Es heißt, dass ein Caesurio ungeachtet seiner Stärke\nseinen Rang als Anführer abtreten muss, wenn die\nKlinge an seinem Kopf schartig wird.",
@@ -381,6 +383,7 @@
     "20071000": "Ein boshaftes Pokémon, das alle, die sich ihm nähern,\nmit Gift bespritzt. Einzig mit Moruda versteht es sich\naus unbekannten Gründen gut.",
     "20075700": "Es saugt Wasser auf und feuert dieses mit hohem Druck\nals Strahl ab. Dieser ist so stark, dass er dicke Eisenplatten\ndurchlöchern kann.",
     "20073200": "Die Strommenge, die ein Elezard mit ausgebreiteten\nHautlappen durch Umwandlung von Sonnenstrahlen\nerzeugt, genügt zur Versorgung eines Wolkenkratzers.",
+    "20073800": "Es kann nicht originalgetreu aus Fossilien zurückverwandelt\nwerden. Theorien zufolge umgab seinen Körper einst eine\nArt Federkleid.",
     "20073900": "Vor Urzeiten lebte es in kalten Gebieten. Es heißt,\nwenn Amarino seine Stimme erklingen lässt, erscheinen\nPolarlichter.",
     "20074000": "Kürzlich sorgte der Fund eines in einem Eisberg\neingeschlossenen, perfekt konservierten Amagargas\naus der Urzeit für Schlagzeilen.",
     "20076700": "Kommt es zum Kampf, stürzt es sich furchtlos ins\nGefecht, selbst wenn sein Gegner ein vielfach\ngrößeres Drachen-Pokémon ist.",
@@ -414,6 +417,7 @@
     "20080100": "Die Arme von Corasonn sind seine Leibspeise.\nHandwerker, die natürlich abgefallene Arme von\nCorasonn verarbeiten, mögen sie deshalb nicht.",
     "20084000": "Dieses unerschütterliche und stets gelassene Pokémon\nproduziert aus seinem Speichel und Erde einen speziellen\nSchlamm in seinem Maul.",
     "20085100": "Es verlässt das Wasser nur sehr selten. Wenn es satt ist,\nbewahrt es erledigte Beute in der Wasserblase auf seinem\nKopf auf.",
+    "20086900": "Es tarnt sich zu seinem eigenen Schutz als\nKäfer-Pokémon. Die Blütenblätter an seinen\nbeiden Armen sind scharfkantig.",
     "20080400": "Es lullt seine Gegner in den Schlaf und raubt ihnen über\nseine Fingerspitzen die Lebenskraft. Diese schickt es\nschwächelnden Kameraden.",
     "20085200": "Es ist stark genug, um große Baumstämme zu zerbrechen.\nÜber Düfte aus dem Organ am Hinterteil kommuniziert es\nmit Artgenossen.",
     "20085300": "Wenn es wild mit seinen Armen wedelt, ist das eine\nwarnende Drohgebärde. Wem sein Leben lieb ist,\nsollte schleunigst die Flucht ergreifen.",
@@ -584,5 +588,8 @@
     "2009790000": "Als sein geballter Zorn einen kritischen Punkt überschritt,\nerlangte es Macht, die weit über die Grenzen seines\nphysischen Körpers hinausgeht.",
     "2009320000": "Es entstand in unterirdischen Salzschichten. Da es\nkostbares Salz mit den Menschen teilt, wurde es früher\nganz besonders geschätzt.",
     "2009360000": "Es trägt eine Rüstung, die mit Psycho- sowie\nFeuer-Energie verstärkt wurde, und verschießt glühend\nheiße Feuerbälle.",
-    "2009660000": "Mit seinen nunmehr acht Zylindern lässt es ein Gasgemisch\naus Gift und Gesteinsmineralien explodieren, um daraus\nEnergie zu gewinnen."
+    "2009660000": "Mit seinen nunmehr acht Zylindern lässt es ein Gasgemisch\naus Gift und Gesteinsmineralien explodieren, um daraus\nEnergie zu gewinnen.",
+    "2010071100": "Offenbar ist dies die Kreatur Schwingenkönig, von der es\nin einem alten Expeditionsbericht hieß, sie habe die Erde\nmit bloßen Fäusten gespalten.",
+    "2010081100": "Offenbar ist dies das Objekt Eisenschlange, das in einer\nalten Schrift erwähnt wurde. Es soll das Land mit Blitzen\nzu Asche verwandelt haben.",
+    "2009060000": "Die Zusammensetzung seines weichen Fells ähnelt der von\nPflanzen. Es reinigt penibel sein Gesicht, um zu\nverhindern, dass dieses austrocknet."
 }
