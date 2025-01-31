@@ -118,6 +118,18 @@
         <p style="display: none;" id="getBipcode">
             <button id="btnGetBipcode">Copier le code du tableau</button>
         </p>
+        <div id="adminTools" style="display: none; margin-top: 10px; line-height: 1.6rem; width: fit-content; border-radius: 8px;">
+            <legend><b id="downloadDataLegend">Plage personnalisée</b></legend>
+            <p style="display: table-row;">
+                <label for="startDate" style="display: table-cell; text-align: right;"><b>Début (UTC) :</b></label> <input type="date" id="startDate" style="display: table-cell; margin-left: 5px;" />
+            </p>
+            <p style="display: table-row;">
+                <label for="endDate" style="display: table-cell; text-align: right;"><b>Fin (UTC) :</b></label> <input type="date" id="endDate" style="display: table-cell; margin-left: 5px;" />
+            </p>
+            <p style="display: table-row;">
+                <label for="sendDates" style="display: table-cell; text-align: right;"></label> <button id="sendDates" style="display: table-cell; margin-left: 5px;">Envoyer</button>
+            </p>
+        </div>
     </fieldset>
     <div><p id="disclaimer"></p></div>
     <div id="gemsCountDiv"></div>

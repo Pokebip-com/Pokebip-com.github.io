@@ -21,6 +21,7 @@ const gemsItemId = "410000000001";
 let firstLoginBonusSchedule = "FOREVER_LOGINBONUS_END";
 let secondLoginBonusSchedule = "FOREVER_LOGINBONUS_2";
 
+let customPeriodSchedule = {};
 let lastScheduleStartDate;
 
 let totalGemsCount = 0;
@@ -109,7 +110,7 @@ async function getData() {
 
     getSchedule();
 
-    lastScheduleStartDate = lastScheduleStartDate = Math.max(...new Set(jData.proto.schedule.map(s => s.startDate*1)));
+    lastScheduleStartDate = Math.max(...new Set(jData.proto.schedule.map(s => s.startDate*1)));
 
     jData.proto.loginBonus = jData.proto.loginBonus.filter(lb => lb.startDate <= lastScheduleStartDate).map(lb => {
         lb.scheduleId = lb.loginBonusId;
@@ -184,6 +185,58 @@ function getSchedule() {
     jData.proto.schedule = usableSchedule;
 }
 
+function getScheduleInfos(s) {
+    s.isLegendaryBattle = false;
+    s.isHomeAppeal = false;
+    s.isVilla = false;
+    s.isBingo = false;
+
+    if(loginBonusIds.includes(s.scheduleId)) {
+        s.scheduleType = { "name" : "loginBonus", "priority": "500" };
+    }
+    else if(s.scheduleId.includes("_ChampionBattle_")) {
+        s.scheduleType = { "name" : "championBattle", "priority": "-1" };
+    }
+    else if(bingoMissionGroups.includes(s.scheduleId)) {
+        s.isBingo = true;
+        s.scheduleType = { "name" : "mission", "priority": "750" };
+    }
+    else if(missionGroupIds.includes(s.scheduleId)) {
+        s.scheduleType = { "name" : "mission", "priority": "750" };
+    }
+    else {
+        s.scheduleType = { "name" : "event", "priority": "1000" };
+
+        if(legendaryBattleIds.includes(s.scheduleId)) {
+            s.isLegendaryBattle = true;
+        }
+        if(trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId)) {
+            s.isHomeAppeal = true;
+        }
+    }
+    return s;
+}
+
+function getPeriodSchedule(start, end) {
+    customPeriodSchedule = {
+        "start": start,
+        "releaseTimestamp": start - 3600,
+        "end": end,
+        "schedule": jData.proto.schedule.filter(s => s.startDate >= start && s.endDate <= end)
+        .map(getScheduleInfos).filter(s => s.scheduleType.name !== "championBattle")
+    };
+
+    customPeriodSchedule.schedule = customPeriodSchedule.schedule.sort((a, b) => {
+        return  a.scheduleType.priority.localeCompare(b.scheduleType.priority) || a.startDate.localeCompare(b.startDate)
+    });
+
+    customPeriodSchedule.events = getEvents(customPeriodSchedule);
+    customPeriodSchedule.loginBonus = getLoginBonus(customPeriodSchedule, end);
+    customPeriodSchedule.shop = getShopAndDailyMissions(customPeriodSchedule, end);
+    customPeriodSchedule.missions = getMissions(customPeriodSchedule);
+}
+
+
 function getVersionSchedule(versionId) {
     let ver = jData.custom.versionReleaseDates.find(vrd => vrd.version === versionId);
 
@@ -195,37 +248,7 @@ function getVersionSchedule(versionId) {
     ver.schedule = jData.proto.schedule.filter(s =>
         s.startDate >= ver.releaseTimestamp
         && (idx === 0 || s.startDate < jData.custom.versionReleaseDates[idx-1].releaseTimestamp)
-    ).map(s => {
-        s.isLegendaryBattle = false;
-        s.isHomeAppeal = false;
-        s.isVilla = false;
-        s.isBingo = false;
-
-        if(loginBonusIds.includes(s.scheduleId)) {
-            s.scheduleType = { "name" : "loginBonus", "priority": "500" };
-        }
-        else if(s.scheduleId.includes("_ChampionBattle_")) {
-            s.scheduleType = { "name" : "championBattle", "priority": "-1" };
-        }
-        else if(bingoMissionGroups.includes(s.scheduleId)) {
-            s.isBingo = true;
-            s.scheduleType = { "name" : "mission", "priority": "750" };
-        }
-        else if(missionGroupIds.includes(s.scheduleId)) {
-            s.scheduleType = { "name" : "mission", "priority": "750" };
-        }
-        else {
-            s.scheduleType = { "name" : "event", "priority": "1000" };
-
-            if(legendaryBattleIds.includes(s.scheduleId)) {
-                s.isLegendaryBattle = true;
-            }
-            if(trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId)) {
-                s.isHomeAppeal = true;
-            }
-        }
-        return s;
-    }).filter(s => s.scheduleType.name !== "championBattle");
+    ).map(getScheduleInfos).filter(s => s.scheduleType.name !== "championBattle");
 
     jData.custom.versionReleaseDates[idx].schedule = ver.schedule.sort((a, b) => {
         return  a.scheduleType.priority.localeCompare(b.scheduleType.priority) || a.startDate.localeCompare(b.startDate)
@@ -360,7 +383,7 @@ function getLoginBonus(version, endDate) {
             }
             return acc;
         }, []).sort((a, b) =>
-            a.schedule.startDate.localeCompare(b.schedule.startDate) || a.name.localeCompare(b.name)
+            parseInt(a.schedule.startDate) - parseInt(b.schedule.startDate) || a.name.localeCompare(b.name)
         );
 }
 
@@ -481,8 +504,7 @@ function getMissions(version) {
     );
 }
 
-function getGemTable(id) {
-    let version = jData.custom.versionReleaseDates.find(v => v.version === id);
+function getGemTable(version) {
 
     if(version === undefined)
         return;
@@ -693,6 +715,23 @@ function getGemsCountFromItemSet(itemSetId) {
     return count;
 }
 
+function setPeriod(start, end) {
+    saveImgBtn.disabled = true;
+
+    getPeriodSchedule(start, end);
+
+    const startStr = new Intl.DateTimeFormat(locale, {dateStyle: 'medium', timeStyle: 'short'}).format(new Date(start * 1000));
+    const endStr = new Intl.DateTimeFormat(locale, {dateStyle: 'medium', timeStyle: 'short'}).format(new Date(end * 1000-1));
+
+    document.getElementById("period").innerHTML = `<br>${startStr} - ${endStr}`;
+
+    console.log(customPeriodSchedule);
+
+    getGemTable(customPeriodSchedule);
+
+    saveImgBtn.disabled = false;
+}
+
 function setVersion(id, setUrl = true) {
     saveImgBtn.disabled = true;
 
@@ -708,7 +747,7 @@ function setVersion(id, setUrl = true) {
 
     document.getElementById("period").innerHTML = `<br>${start} - ${end}`;
 
-    getGemTable(id);
+    getGemTable(ver);
 
     saveImgBtn.disabled = false;
 
@@ -727,6 +766,14 @@ async function init() {
     gemsCountDiv = document.getElementById("gemsCountDiv");
     saveImgBtn = document.getElementById("saveImageBtn");
 
+    const url = new URL(window.location);
+    const urlVersionId = url.searchParams.get('version');
+    const startDate = url.searchParams.get('startDate');
+    let endDate = url.searchParams.get('endDate');
+
+    const startDateInput = document.getElementById("startDate");
+    const endDateInput = document.getElementById("endDate");
+
     saveImgBtn.addEventListener("click", function() {
         domtoimage.toPng(document.getElementById("gemsCountTable"))
             .then(function (dataUrl) {
@@ -734,25 +781,44 @@ async function init() {
             })
     });
 
+    document.getElementById("sendDates").addEventListener("click", () => {
+
+        const start = new Date(startDateInput.value).setUTCHours(6)/1000;
+        const end = (endDateInput.value === "" ? lastScheduleStartDate : new Date(endDateInput.value).setHours(6)/1000);
+
+        const url = new URL(window.location);
+        url.searchParams.set('startDate', start);
+        url.searchParams.set('endDate', end);
+        window.history.pushState(null, '', url.toString());
+
+        setPeriod(start, end);
+    })
+
     await buildHeader();
     await getData();
 
     changeHtmlTexts();
-
     scheduleByVersion();
+
+    if(isAdminMode) {
+        document.getElementById("adminTools").style.display = "table";
+    }
+
 
     versionSelect.onchange = function() {
         setVersion(versionSelect.value);
     };
 
-    const url = new URL(window.location);
-    const urlVersionId = url.searchParams.get('version');
-
-    if(urlVersionId !== null) {
-        versionSelect.value = urlVersionId;
+    if(startDate && startDate !== "") {
+        setPeriod(startDate, endDate);
     }
+    else {
+        if (urlVersionId !== null) {
+            versionSelect.value = urlVersionId;
+        }
 
-    setVersion(versionSelect.value, false);
+        setVersion(versionSelect.value, false);
+    }
 }
 
 init().then();
