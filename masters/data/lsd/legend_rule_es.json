@@ -85,5 +85,8 @@
     "legend_rule_6120_003": "El rival recupera PS cuando falla un\nmovimiento aliado que apunta al rival.",
     "legend_rule_7010_001": "La primera vez que los PS de Gallade bajan\nal 60% o menos, se quedan a ese\nporcentaje.",
     "legend_rule_7010_002": "Cuando aumenta la Defensa Esp. del rival,\nse triplican su Defensa y su Defensa Esp.",
-    "legend_rule_7010_003": "Cuando el rival no está afectado por efectos\nde entorno, se triplican su Defensa y su\nDefensa Especial."
+    "legend_rule_7010_003": "Cuando el rival no está afectado por efectos\nde entorno, se triplican su Defensa y su\nDefensa Especial.",
+    "legend_rule_7020_001": "La primera vez que los PS de Ludicolo bajan\nal 60% o menos, se quedan a ese\nporcentaje.",
+    "legend_rule_7020_002": "Cuando el rival no sufre cambios de estado,\nse triplican su Defensa y su Defensa Esp.",
+    "legend_rule_7020_003": "Cuanto más aumentan las características de\nLudicolo, más se reduce el daño que recibe."
 }

@@ -97,6 +97,7 @@
     "40000365": "Kanto Circle (Defensive)",
     "40000366": "Johto Circle (Physical)",
     "40000368": "Johto Circle (Defensive)",
+    "40000369": "Hoenn Circle (Physical)",
     "40000370": "Hoenn Circle (Special)",
     "40000371": "Hoenn Circle (Defensive)",
     "40000373": "Sinnoh Circle (Special)",
@@ -137,5 +138,6 @@
     "51000009": "the Ground theme",
     "51000011": "the Psychic theme",
     "51000015": "the Dragon theme",
+    "51000016": "the Dark theme",
     "51000017": "the Steel theme"
 }

@@ -344,7 +344,7 @@
     "20000325": "Ciudad Loza",
     "20000326": "La Torre de los\nCielos",
     "20000327": "Los Pilotos",
-    "20000328": "Las trampas de los\nGimnasios",
+    "20000328": "Las trampas de los\ngimnasios",
     "20000329": "Kira",
     "20000330": "Luka",
     "20000331": "La Cadena Roja",
@@ -415,5 +415,7 @@
     "20000396": "Los pañuelos",
     "20000397": "El Bastión Batalla",
     "20000398": "Brillar",
-    "20000399": "La juventud"
+    "20000399": "La juventud",
+    "20000400": "El Prisma Rojo",
+    "20000401": "Villa Raíz"
 }

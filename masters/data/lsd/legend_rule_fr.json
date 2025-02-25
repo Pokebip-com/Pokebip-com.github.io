@@ -85,5 +85,8 @@
     "legend_rule_6120_003": "Restaure les PV de l'ennemi quand\nla capacité offensive d'un allié\nqui vise l'ennemi échoue.",
     "legend_rule_7010_001": "Les PV de Gallame restent à 60 %\nla première fois que ses PV chutent\nà 60 % ou moins.",
     "legend_rule_7010_002": "Quand la Déf. Spé. de l'ennemi est augmentée,\nsa Déf. et sa Déf. Spé. sont triplées.",
-    "legend_rule_7010_003": "Quand l'ennemi n'est pas affecté par un effet\nsur le terrain, sa Déf. et sa Déf. Spé. sont triplées."
+    "legend_rule_7010_003": "Quand l'ennemi n'est pas affecté par un effet\nsur le terrain, sa Déf. et sa Déf. Spé. sont triplées.",
+    "legend_rule_7020_001": "Les PV de Ludicolo restent à 60 %\nla première fois que ses PV chutent\nà 60 % ou moins.",
+    "legend_rule_7020_002": "Quand l'ennemi n'est pas affecté par un tourment,\nsa Déf. et sa Déf. Spé. sont triplées.",
+    "legend_rule_7020_003": "Plus les stats de Ludicolo sont augmentées,\nplus les dégâts qu'il subit sont réduits."
 }

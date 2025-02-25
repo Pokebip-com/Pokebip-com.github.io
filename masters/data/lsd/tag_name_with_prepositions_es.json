@@ -97,6 +97,7 @@
     "40000365": "Círculo de Kanto (Defensivo)",
     "40000366": "Círculo de Johto (Físico)",
     "40000368": "Círculo de Johto (Defensivo)",
+    "40000369": "Círculo de Hoenn (Físico)",
     "40000370": "Círculo de Hoenn (Especial)",
     "40000371": "Círculo de Hoenn (Defensivo)",
     "40000373": "Círculo de Sinnoh (Especial)",
@@ -137,5 +138,6 @@
     "51000009": "el distintivo \"Tierra\"",
     "51000011": "el distintivo \"Psíquico\"",
     "51000015": "el distintivo \"Dragón\"",
+    "51000016": "el distintivo \"Siniestro\"",
     "51000017": "el distintivo \"Acero\""
 }

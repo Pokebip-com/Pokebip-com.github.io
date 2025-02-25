@@ -853,5 +853,15 @@
     "999074": "In addition, raises the user’s [Name:ReferencedMessageTag Idx=\"4\" ] by [Digit:1digit Idx=\"5\" ] stat [EN:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ] when the weather is sunny.",
     "999073": "Raises the Defense and evasiveness of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
     "999072": "Raises the Attack, Defense, Sp. Atk, and Sp. Def of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "999071": "Lowers the target’s [Name:ReferencedMessageTag Idx=\"1\" ] by [Digit:1digit Idx=\"2\" ] stat [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] when the weather is EX sunny.",
+    "999070": "Applies the [Name:ReferencedMessageTag Idx=\"3\" ] to the user when the weather is EX sunny.",
+    "999069": "When the weather turns EX rainy.",
+    "999068": "When the weather condition is no longer EX rainy.",
+    "999067": "Restores [Digit:1digit ] MP of the user’s buddy move when the target does not have a sync buff.",
+    "999066": "This attack’s power is doubled when the target has a sync buff.",
+    "999065": "Reduces the user’s sync move countdown by [Digit:1digit Idx=\"1\" ] when the target has a sync buff.",
+    "999064": "Raises the [Name:ReferencedMessageTag ] of all allied sync pairs by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "999063": "Grants the following effect 10 times:",
+    "999062": "Lowers one of the target’s following stats by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] at random: Attack, Defense, Sp. Atk, Sp. Def, or Speed.",
     "999060": "Lowers the target’s [Name:ReferencedMessageTag Idx=\"4\" ] by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ]."
 }

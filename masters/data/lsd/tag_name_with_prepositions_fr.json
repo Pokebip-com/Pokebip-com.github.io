@@ -97,6 +97,7 @@
     "40000365": "Cercle de Kanto défensif",
     "40000366": "Cercle de Johto Physique",
     "40000368": "Cercle de Johto Défensif",
+    "40000369": "Cercle de Hoenn Physique",
     "40000370": "Cercle de Hoenn Spécial",
     "40000371": "Cercle de Hoenn défensif",
     "40000373": "Cercle de Sinnoh spécial",
@@ -137,5 +138,6 @@
     "51000009": "le mot-clé Sol",
     "51000011": "le mot-clé Psy",
     "51000015": "le mot-clé Dragon",
+    "51000016": "le mot-clé Ténèbres",
     "51000017": "le mot-clé Acier"
 }

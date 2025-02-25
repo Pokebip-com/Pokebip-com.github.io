@@ -39,5 +39,13 @@
     "600000": "Peut être échangé contre des objets\npendant les évènements.",
     "18001": "Augmente le niveau de transcendance\nde [Name:TrainerNameAndType ]\net [Name:PokemonName ].",
     "18000": "Peut être échangé contre des Bonbons\nTranscendance Personnels.",
-    "19101": "À utiliser dans l'espace d'échange\nde l'Arène des Dresseurs."
+    "19101": "À utiliser dans l'espace d'échange\nde l'Arène des Dresseurs.",
+    "75600001": "Utilisé comme renforcement spécial\npour Giovanni et Mewtwo.",
+    "75600003": "Utilisé comme renforcement spécial\npour Silver et Ho-Oh.",
+    "75600004": "Utilisé comme renforcement spécial\npour Amaryllis et Rayquaza.",
+    "75600005": "Utilisé comme renforcement spécial\npour Ghetis et Kyurem.",
+    "75600002": "Utilisé comme renforcement spécial\npour Hélio et Palkia.",
+    "75600006": "Utilisé comme renforcement spécial\npour Platane et Xerneas.",
+    "75600007": "Utilisé comme renforcement spécial pour\nle personnage principal & Solgaleo.",
+    "75600008": "Utilisé comme renforcement spécial\npour Nabil et Zamazenta."
 }

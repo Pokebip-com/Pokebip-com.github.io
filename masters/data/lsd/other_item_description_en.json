@@ -39,5 +39,13 @@
     "600000": "Can be exchanged for items in the shop\nduring events.",
     "18001": "Can be used to level up\n[Name:TrainerNameAndType ] &\n[Name:PokemonName ]’s\nsuperawakening.",
     "18000": "Can be exchanged for custom\nSuperawakening Candy.",
-    "19101": "Used at the exchange in Trainer Gyms."
+    "19101": "Used at the exchange in Trainer Gyms.",
+    "75600001": "Used to give Giovanni & Mewtwo a\nspecial power boost.",
+    "75600003": "Used to give Silver & Ho-Oh a\nspecial power boost.",
+    "75600004": "Used to give Zinnia & Rayquaza a\nspecial power boost.",
+    "75600005": "Used to give Ghetsis & Kyurem a\nspecial power boost.",
+    "75600002": "Used to give Cyrus & Palkia a\nspecial power boost.",
+    "75600006": "Used to give Professor Sycamore &\nXerneas a special power boost.",
+    "75600007": "Used to give Main Character & Solgaleo a\nspecial power boost.",
+    "75600008": "Used to give Hop & Zamazenta a\nspecial power boost."
 }

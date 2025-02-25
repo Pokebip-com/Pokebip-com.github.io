@@ -853,5 +853,15 @@
     "999074": "Además, aumenta [Name:ReferencedMessageTag Idx=\"4\" ] del usuario en [Digit:1digit Idx=\"5\" ] [ES:Qty Ref=\"5\" S=\"nivel\" P=\"niveles\" ] cuando está soleado.",
     "999073": "Aumenta la Defensa y la Evasión de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
     "999072": "Aumenta el Ataque, la Defensa, el Ataque Especial y la Defensa Especial de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+    "999071": "Reduce [Name:ReferencedMessageTag Idx=\"1\" ] del objetivo en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ] cuando está soleado EX.",
+    "999070": "Aplica el [Name:ReferencedMessageTag Idx=\"3\" ] al usuario cuando está soleado EX.",
+    "999069": "Cuando el tiempo cambia a lluvia EX.",
+    "999068": "Cuando el tiempo ya no es lluvia EX.",
+    "999067": "Recupera [Digit:1digit ] PM del movimiento sincro del usuario cuando el objetivo no está lleno de determinación.",
+    "999066": "Duplica la potencia de este ataque cuando el objetivo está lleno de determinación.",
+    "999065": "Se reduce en [Digit:1digit Idx=\"1\" ] el contador de movimientos compi del usuario cuando el objetivo está lleno de determinación.",
+    "999064": "Aumenta la [Name:ReferencedMessageTag ] de todos los compis aliados en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
+    "999063": "Otorga el efecto siguiente 10 veces:",
+    "999062": "Reduce en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ] una de estas características del objetivo al azar: Ataque, Defensa, Ataque Especial, Defensa Especial o Velocidad.",
     "999060": "Reduce [Name:ReferencedMessageTag Idx=\"4\" ] del objetivo en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ]."
 }

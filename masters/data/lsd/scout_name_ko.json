@@ -192,5 +192,7 @@
     "event_7010_1W_MasterTicket_01": "미정 시즌 한정 확정 B서치",
     "event_7010_1W_SuperTicket_03": "민화 시즌 한정 출현율업 B서치",
     "event_7010_1W_MasterTicket_03": "민화 시즌 한정 확정 B서치",
-    "event_7010_1W_SuperTicket_04": "시즌 한정 출현율업 B서치"
+    "event_7010_1W_SuperTicket_04": "시즌 한정 출현율업 B서치",
+    "event_7020_1W_MasterTicket_02": "특별 콜라보 기념 호브 확정 버라이어티 B서치",
+    "event_7020_3W_MasterTicket_02": "특별 콜라보 기념 심향 확정 버라이어티 B서치"
 }

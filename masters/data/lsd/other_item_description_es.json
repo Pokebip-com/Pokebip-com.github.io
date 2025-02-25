@@ -39,5 +39,13 @@
     "600000": "Sirve para canjear objetos de evento.",
     "18001": "Sirve para aumentar el nivel del poder\nexcelso de [Name:TrainerNameAndType ]\ny [Name:PokemonName ].",
     "18000": "Se pueden canjear por\nPiruletas Poder Excelso.",
-    "19101": "Puede usarse en el canje del Gimnasio\nde Entrenadores."
+    "19101": "Puede usarse en el canje del Gimnasio\nde Entrenadores.",
+    "75600001": "Sirve para aplicar una mejora especial a\nGiovanni y Mewtwo.",
+    "75600003": "Sirve para aplicar una mejora especial a\nPlata y Ho-Oh.",
+    "75600004": "Sirve para aplicar una mejora especial a\nTristana y Rayquaza.",
+    "75600005": "Sirve para aplicar una mejora especial a\nGhechis y Kyurem.",
+    "75600002": "Sirve para aplicar una mejora especial a\nHelio y Palkia.",
+    "75600006": "Sirve para aplicar una mejora especial al\nProfesor Ciprés y Xerneas.",
+    "75600007": "Sirve para aplicar una mejora especial\n[ES:Gen Ref=\"255\" M=\"al\" F=\"a la\" ] protagonista y Solgaleo.",
+    "75600008": "Sirve para aplicar una mejora especial a\nPaul y Zamazenta."
 }

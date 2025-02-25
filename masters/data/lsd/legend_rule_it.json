@@ -85,5 +85,8 @@
     "legend_rule_6120_003": "L'avversario recupera PS quando l'attacco\nsemplice di un alleato contro l'avversario\nfallisce.",
     "legend_rule_7010_001": "I PS di Gallade rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
     "legend_rule_7010_002": "Se la Difesa Speciale degli avversari\nè aumentata, la loro Difesa e la loro\nDifesa Speciale sono triplicate.",
-    "legend_rule_7010_003": "Se non sono presenti effetti sul campo\navversario, la Difesa e la Difesa Speciale\ndegli avversari sono triplicate."
+    "legend_rule_7010_003": "Se non sono presenti effetti sul campo\navversario, la Difesa e la Difesa Speciale\ndegli avversari sono triplicate.",
+    "legend_rule_7020_001": "I PS di Ludicolo rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
+    "legend_rule_7020_002": "Quando gli avversari non sono affetti\nda variazioni di stato (impedimenti), la loro\nDifesa e la loro Difesa Speciale triplicano.",
+    "legend_rule_7020_003": "I danni subiti da Ludicolo diminuiscono\nin proporzione al totale delle modifiche\nalle sue statistiche."
 }

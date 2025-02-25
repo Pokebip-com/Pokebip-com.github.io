@@ -207,5 +207,7 @@
 { "storyQuestId": "1030610000606110", "maxPairs": 9 },
 { "storyQuestId": "1030610000606120", "maxPairs": 9 },
 { "storyQuestId": "1030611000604060", "maxPairs": 9 },
-{ "storyQuestId": "1030611000604070", "maxPairs": 9 }
+{ "storyQuestId": "1030611000604070", "maxPairs": 9 },
+{ "storyQuestId": "1030702000607060", "maxPairs": 9 },
+{ "storyQuestId": "1030702000607070", "maxPairs": 9 }
 ]}

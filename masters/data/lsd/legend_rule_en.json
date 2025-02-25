@@ -85,5 +85,8 @@
     "legend_rule_6120_003": "Restores the opponent’s HP when an ally’s\nattack move targeting the opponent misses.",
     "legend_rule_7010_001": "The first time Gallade’s HP reaches 60% or\nlower, it endures with that HP.",
     "legend_rule_7010_002": "When the opponent’s Sp. Def is raised,\nits Defense and Sp. Def are tripled.",
-    "legend_rule_7010_003": "When the opponent is not affected by a\nfield effect, its Defense and Sp. Def\nare tripled."
+    "legend_rule_7010_003": "When the opponent is not affected by a\nfield effect, its Defense and Sp. Def\nare tripled.",
+    "legend_rule_7020_001": "The first time Ludicolo’s HP reaches 60% or\nlower, it endures with that HP.",
+    "legend_rule_7020_002": "When the opponent is not affected by\ninterference, its Defense and Sp. Def\nare tripled.",
+    "legend_rule_7020_003": "Ludicolo gains more damage reduction the\nmore its stats have been raised in total."
 }

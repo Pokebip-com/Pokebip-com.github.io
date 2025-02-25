@@ -853,5 +853,15 @@
     "999074": "Außerdem wird [Name:ReferencedMessageTag Idx=\"4\" ] des Anwenders bei starkem Sonnenlicht um [Digit:1digit Idx=\"5\" ] erhöht.",
     "999073": "Erhöht die Verteidigung und den Fluchtwert aller verbündeten Gefährten um [Digit:1digit ].",
     "999072": "Erhöht den Angriff, die Verteidigung, den Spezial-Angriff und die Spezial-Verteidigung aller verbündeten Gefährten um [Digit:1digit ].",
+    "999071": "Senkt bei Sonne EX [Name:ReferencedMessageTag Idx=\"1\" ] des Zieles um [Digit:1digit Idx=\"2\" ].",
+    "999070": "Verursacht bei Sonne EX beim Anwender den [Name:ReferencedMessageTag Idx=\"3\" ].",
+    "999069": "Wenn Regen EX beginnt.",
+    "999068": "Wenn die Wetterbedingung Regen EX nicht mehr aktiv ist.",
+    "999067": "Füllt [Digit:1digit ] [DE:Qty S=\"Attackeneinsatzpunkt\" P=\"Attackeneinsatzpunkte\" ] (AEP) der Sync-Attacke des Anwenders auf, wenn die Spannung des Zieles nicht gestiegen ist.",
+    "999066": "Die Stärke dieses Angriffs wird verdoppelt, wenn die Spannung des Zieles gestiegen ist.",
+    "999065": "Reduziert den Wert des Gefährtenattacken-\nCountdowns des Anwenders um [Digit:1digit Idx=\"1\" ], wenn die Spannung des Zieles gestiegen ist.",
+    "999064": "Erhöht den [Name:ReferencedMessageTag ] aller verbündeten Gefährten um [Digit:1digit Idx=\"1\" ].",
+    "999063": "Löst den folgenden Effekt 10-mal aus:",
+    "999062": "Senkt zufällig einen der folgenden Statuswerte des Zieles um [Digit:1digit ]: Angriff, Verteidigung, Spezial-Angriff, Spezial-Verteidigung oder Initiative.",
     "999060": "Senkt [Name:ReferencedMessageTag Idx=\"4\" ] des Zieles um [Digit:1digit Idx=\"1\" ]."
 }

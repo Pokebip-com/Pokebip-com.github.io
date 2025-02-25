@@ -39,5 +39,13 @@
     "600000": "Si può scambiare con degli strumenti\nnel negozio durante gli eventi.",
     "18001": "Fa salire di livello il risveglio di\n[Name:TrainerNameAndType ] & [Name:PokemonName ].",
     "18000": "Si può scambiare con Caramella risveglio\ndedicata.",
-    "19101": "Si usa nello scambio delle Palestre\nAllenatori."
+    "19101": "Si usa nello scambio delle Palestre\nAllenatori.",
+    "75600001": "Si usa per far ottenere un rinforzo\nspeciale a Giovanni & Mewtwo.",
+    "75600003": "Si usa per far ottenere un rinforzo\nspeciale ad Argento & Ho-Oh.",
+    "75600004": "Si usa per far ottenere un rinforzo\nspeciale a Lyris & Rayquaza.",
+    "75600005": "Si usa per far ottenere un rinforzo\nspeciale a Ghecis & Kyurem.",
+    "75600002": "Si usa per far ottenere un rinforzo\nspeciale a Cyrus & Palkia.",
+    "75600006": "Si usa per far ottenere un rinforzo\nspeciale a Platan & Xerneas.",
+    "75600007": "Si usa per far ottenere un rinforzo\nspeciale a Protagonista & Solgaleo.",
+    "75600008": "Si usa per far ottenere un rinforzo\nspeciale a Hop & Zamazenta."
 }

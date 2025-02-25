@@ -415,5 +415,7 @@
 { "salonTopicId": 20000396, "u1": 1, "salonTopicCategoryId": 5, "salonTopicName": "20000396" },
 { "salonTopicId": 20000397, "u1": 1, "salonTopicCategoryId": 6, "salonTopicName": "20000397" },
 { "salonTopicId": 20000398, "u1": 1, "salonTopicCategoryId": 7, "salonTopicName": "20000398" },
-{ "salonTopicId": 20000399, "u1": 1, "salonTopicCategoryId": 7, "salonTopicName": "20000399" }
+{ "salonTopicId": 20000399, "u1": 1, "salonTopicCategoryId": 7, "salonTopicName": "20000399" },
+{ "salonTopicId": 20000400, "u1": 1, "salonTopicCategoryId": 2, "salonTopicName": "20000400" },
+{ "salonTopicId": 20000401, "u1": 1, "salonTopicCategoryId": 6, "salonTopicName": "20000401" }
 ]}

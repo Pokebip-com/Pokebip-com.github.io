@@ -97,6 +97,7 @@
     "40000365": "Kantos Freundeskreis (Verteidigung)",
     "40000366": "Johtos Freundeskreis (Physisch)",
     "40000368": "Johtos Freundeskreis (Verteidigung)",
+    "40000369": "Hoenns Freundeskreis (Physisch)",
     "40000370": "Hoenns Freundeskreis (Spezial)",
     "40000371": "Hoenns Freundeskreis (Verteidigung)",
     "40000373": "Sinnohs Freundeskreis (Spezial)",
@@ -137,5 +138,6 @@
     "51000009": "das Boden-Attribut",
     "51000011": "das Psycho-Attribut",
     "51000015": "das Drachen-Attribut",
+    "51000016": "das Unlicht-Attribut",
     "51000017": "das Stahl-Attribut"
 }

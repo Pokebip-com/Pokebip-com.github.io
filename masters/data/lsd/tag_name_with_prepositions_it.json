@@ -97,6 +97,7 @@
     "40000365": "Cerchia di Kanto (difensiva)",
     "40000366": "Cerchia di Johto (danni fisici)",
     "40000368": "Cerchia di Johto (difensiva)",
+    "40000369": "Cerchia di Hoenn (danni fisici)",
     "40000370": "Cerchia di Hoenn (danni speciali)",
     "40000371": "Cerchia di Hoenn (difensiva)",
     "40000373": "Cerchia di Sinnoh (danni speciali)",
@@ -137,5 +138,6 @@
     "51000009": "del gruppo \"Terra\"",
     "51000011": "del gruppo \"Psico\"",
     "51000015": "del gruppo \"Drago\"",
+    "51000016": "del gruppo \"Buio\"",
     "51000017": "del gruppo \"Acciaio\""
 }

@@ -56,7 +56,7 @@
     "29990037": "Concursantes",
     "29990043": "Primos de Alola",
     "29990044": "Viejos conocidos",
-    "20030015": "Capitanes y Kahunas",
+    "20030015": "Capitanes y Kahuna",
     "20030016": "Custodios de Batalla",
     "20040012": "Dos coletas",
     "29990051": "Investigadores",
@@ -81,5 +81,7 @@
     "29990070": "Aventureros de Alola",
     "29990071": "Aventureros de Galar",
     "20040013": "Traje especial",
-    "29990072": "Huevo"
+    "29990072": "Huevo",
+    "20040014": "Architraje",
+    "20030017": "Team Star"
 }

@@ -85,5 +85,8 @@
     "legend_rule_6120_003": "Stellt die KP des Gegners wieder her, wenn\nder Angriff eines Verbündeten, der auf den\nGegner abzielt, fehlschlägt.",
     "legend_rule_7010_001": "Fallen Galagladis KP das erste Mal auf 60 %,\nhält es mit dieser Anzahl an KP durch.",
     "legend_rule_7010_002": "Wenn die Sp.-Vert. des Gegners erhöht ist,\nsind seine Vert. und Sp.-Vert. verdreifacht.",
-    "legend_rule_7010_003": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht."
+    "legend_rule_7010_003": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
+    "legend_rule_7020_001": "Fallen Kappalores’ KP das erste Mal auf\n60 %, hält es mit dieser Anzahl an KP durch.",
+    "legend_rule_7020_002": "Wenn der Gegner nicht von einer Störung\nbetroffen ist, sind seine Verteidigung und\nSpezial-Verteidigung verdreifacht.",
+    "legend_rule_7020_003": "Der Schaden von Kappalores sinkt abhängig\nvon der Summe der erhöhten Statuswerte."
 }
