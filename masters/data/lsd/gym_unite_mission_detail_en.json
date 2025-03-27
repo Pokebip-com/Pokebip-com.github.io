@@ -5,15 +5,16 @@
     "4": "Use a total of [Digit:6digits ] stamina.\n(This count includes other gym members.)",
     "5": "Complete a total of [Digit:6digits ] [EN:Qty S=\"battle\" P=\"battles\" ].\n(This count includes other gym members.)",
     "11": "Complete any of the following a total of\n[Digit:6digits ] [EN:Qty S=\"time\" P=\"times\" ].\n(This count includes other gym members.)",
-    "11_element": "[Name:QuestPlayType ]: [Name:QuestTitle ]",
+    "11_element": "・[Name:QuestTitle ]: [Name:QuestPlayType ]",
     "6": "Obtain the following item a total of [Digit:6digits ] [EN:Qty S=\"time\" P=\"times\" ].\n(This count includes other gym members.)",
     "6_element": "[Name:Item ]",
-    "7": "Obtain a best score total of [Digit:9digits ] points or more in the following high score event.\n(This count includes other gym members.)",
+    "7": "Obtain a best score total of [Digit:9digits ] or more points in the following high score event.\n(This count includes other gym members.)",
     "7_element": "[Name:QuestGroupTitle ]",
     "8": "Achieve a longest win streak total of [Digit:9digits ] in the Legendary Gauntlet.\n(This count includes other gym members.)",
     "8_element": "[Name:QuestGroupTitle ]",
-    "9": "Obtain a best score total of [Digit:9digits ] points or more in the following Ranked Damage Event.\n(This count includes other gym members.)",
+    "9": "Obtain a best score total of [Digit:9digits ] or more points in the following Ranked Damage Event.\n(This count includes other gym members.)",
     "9_element": "[Name:QuestGroupTitle ]",
     "10": "Complete one of the following missions\n[Digit:6digits ] [EN:Qty S=\"time\" P=\"times\" ].\n(This count includes other gym members.)",
-    "10_element": "Limited-time solo mission ×[Digit:6digits ]"
+    "10_element": "Mission [Digit:6digits ]",
+    "10_element_1": "[Name:EventName ]"
 }

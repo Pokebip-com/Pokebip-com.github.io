@@ -226,6 +226,7 @@
     "ch0080_00_yamaotoko_10": "el Montañero Leopoldo",
     "ch0080_00_yamaotoko_11": "el Montañero Yan",
     "ch0080_00_yamaotoko_12": "el Montañero Timoteo",
+    "ch0080_00_yamaotoko_13": "el Montañero Celso",
     "ch0080_00_yamaotoko_51": "el Montañero Wilfredo",
     "ch0081_00_enjif_01": "la Preescolar Elena",
     "ch0081_00_enjif_02": "la Preescolar Sara",
@@ -337,6 +338,8 @@
     "ch0626_00_magma_shitappam_00": "el Recluta del Equipo Magma",
     "ch0627_00_magma_shitappaf_00": "la Recluta del Equipo Magma",
     "ch0530_00_sightseerm_01": "el Veraneante Marco",
+    "ch0531_00_sightseerf_01": "la Veraneante Marisa",
+    "ch0521_00_hexmaniac_01": "la Bruja Lucrecia",
     "ch0608_00_plasma_shitappam_00": "el Recluta del Equipo Plasma",
     "ch0609_00_plasma_shitappaf_00": "la Recluta del Equipo Plasma",
     "ch0611_00_flare_shitappam_00": "el Recluta del Team Flare",
@@ -347,5 +350,11 @@
     "ch0648_00_etherf_00": "la Empleada de la Fundación Æther",
     "ch0280_00_yellm_00": "el Recluta del Team Yell",
     "ch0281_00_yellf_00": "la Recluta del Team Yell",
-    "ch0654_00_pokekidf_01": "la Pokéchica Anita"
+    "ch0654_00_pokekidf_01": "la Pokéchica Anita",
+    "ch0269_00_ayumi": "Elaine",
+    "ch0133_00_shilver": "Plata",
+    "ch0130_00_serena": "Serena",
+    "ch0018_00_chris": "Cristi",
+    "ch0100_00_kyohei": "Rizzo",
+    "ch0003_00_calme": "Kalm"
 }

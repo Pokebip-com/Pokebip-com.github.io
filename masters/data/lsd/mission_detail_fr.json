@@ -291,8 +291,8 @@
     "override_detail_6100_1_05": "Terminez une fois « Évènement\nsecondaire : La mystérieuse équipe\nde Kalos » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « À découvrir ».)",
     "override_detail_6100_1_06": "Terminez une fois « Évènement\nsecondaire : Partons à sa recherche !\nLet's Go ! » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « De retour ».)",
     "230": "Connectez-vous à l'Arène [Digit:3digits ] [FR:Qty S=\"jour\" P=\"jours\" ].",
-    "231": "Atteignez un meilleur score\nde [Digit:9digits ] points dans\nun évènement meilleur score.",
-    "232": "Atteignez un meilleur score\nde [Digit:9digits ] points dans un\névènement classement par dégâts.",
+    "231": "Atteignez un meilleur score\nde [Digit:9digits ] point[FR:Qty P=\"s\" ] dans\nun évènement meilleur score.",
+    "232": "Atteignez un meilleur score\nde [Digit:9digits ] point[FR:Qty P=\"s\" ] dans un\névènement classement par dégâts.",
     "233": "Remportez [Digit:9digits ] victoires\nconsécutives dans l'Aventure\nLégendaire.",
     "override_detail_6120_1_01": "Pour commencer, utilise le créateur\nde photo comme bon te semble pour\nvoir le monde à travers l'objectif !\n\n(Vous pouvez prendre des photos\nen ouvrant le créateur de photo\nà partir du menu du Porygophone.)",
     "override_detail_6120_1_02": "Ensuite, essaie de prendre une photo\nd'un Champion ou d'une Championne\nd'Arène comme moi !",
@@ -304,5 +304,6 @@
     "override_detail_6120_1_08": "La beauté des muscles est un sujet\nartistique assez récurrent ! Essaie\nde photographier un Duo comprenant\nune personne au corps athlétique !",
     "override_detail_6120_1_09": "Ensuite, je veux une photo d'un sujet\nfaisant partie du milieu artistique...\nQuelqu'un qui s'exprime à travers la\nphotographie, la musique, la peinture,\nce genre de choses. N'oublie pas\nde demander la permission d'inclure\nleurs œuvres dans ta photo !",
     "override_detail_6120_1_10": "Il est assez difficile de capturer\nle mouvement, comme celui d'une\ncape flottant au vent, par exemple !\nCe serait fantastique si tu arrivais\nà photographier ça ! Montre-moi\nde quoi tu es capable !",
-    "override_detail_7010_1_01": "Terminez un combat\nrégional quotidien."
+    "override_detail_7010_1_01": "Terminez un combat\nrégional quotidien.",
+    "77_element_1": "[Name:EventName ]"
 }

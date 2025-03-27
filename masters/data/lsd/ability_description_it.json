@@ -8,5 +8,6 @@
     "7": "[Name:AbilityDescription ]",
     "8": "Mossa: [Name:Move ]\n[Name:AbilityDescription ]",
     "9": "[Name:Move ]: potenza [Digit:5digits ]",
-    "10": "[Name:Move ]: precisione [Digit:5digits ]"
+    "10": "[Name:Move ]: precisione [Digit:5digits ]",
+    "11": "[Name:MoveDescription ]"
 }

@@ -4,7 +4,7 @@
 { "itemCategoryId": 3, "subcategories": [ 82 ] },
 { "itemCategoryId": 4, "subcategories": [ 45, 65, 66, 86, 89, 95, 77, 79 ] },
 { "itemCategoryId": 5, "subcategories": [ 75 ] },
-{ "itemCategoryId": 6, "subcategories": [ 56 ] },
+{ "itemCategoryId": 6, "subcategories": [ 56, 200 ] },
 { "itemCategoryId": 7, "subcategories": [ 55, 57, 58, 68, 69, 180 ] },
 { "itemCategoryId": 8, "subcategories": [ 130, 131, 140, 141, 135, 136, 152, 153, 151, 150 ] }
 ]}

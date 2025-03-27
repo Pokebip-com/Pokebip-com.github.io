@@ -214,6 +214,7 @@
     "20019501": "Quagsire",
     "20019600": "Espeon",
     "20019700": "Umbreon",
+    "20019900": "Slowking",
     "20020300": "Girafarig",
     "20020500": "Forretress",
     "20020801": "Steelix",
@@ -404,6 +405,7 @@
     "20044600": "Munchlax",
     "20044800": "Lucario",
     "20044851": "Mega Lucario",
+    "20045000": "Hippowdon",
     "20045001": "Hippowdon",
     "20045200": "Drapion",
     "20045300": "Croagunk",
@@ -582,6 +584,7 @@
     "20073511": "Pumpkaboo",
     "20073614": "Gourgeist",
     "20075100": "Avalugg",
+    "20071600": "Noibat",
     "20076200": "Noivern",
     "20076800": "Xerneas",
     "20076900": "Yveltal",
@@ -806,5 +809,10 @@
     "2009760000": "Veluza",
     "2009560000": "Espathra",
     "2009270000": "Dachsbun",
-    "2009410000": "Kilowattrel"
+    "2009410000": "Kilowattrel",
+    "2006280041": "Braviary",
+    "2001570041": "Typhlosion",
+    "2009670000": "Cyclizar",
+    "2009150000": "Lechonk",
+    "2009160100": "Oinkologne"
 }

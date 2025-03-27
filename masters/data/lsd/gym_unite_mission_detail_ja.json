@@ -15,5 +15,6 @@
     "9": "以下のダメージランキングのベストスコアを合計[Digit:9digits ]pt以上にしよう\n（ジムメンバーの達成数をカウント）",
     "9_element": "・[Name:QuestGroupTitle ]",
     "10": "以下のいずれかのミッションを[Digit:6digits ]回達成しよう\n（ジムメンバーの達成数をカウント）",
-    "10_element": "・期間限定の個人ミッション[Digit:6digits ]"
+    "10_element": "・ミッション[Digit:6digits ]",
+    "10_element_1": "[Name:EventName ]"
 }

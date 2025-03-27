@@ -15,5 +15,6 @@
     "9": "아래 데미지 랭킹의 베스트 스코어를 합계 [Digit:9digits ]pt 이상 달성하자\n(체육관 멤버의 달성 수를 카운트)",
     "9_element": "・[Name:QuestGroupTitle ]",
     "10": "아래 중 하나의 미션을 [Digit:6digits ]회 달성하자\n(체육관 멤버의 달성 수를 카운트)",
-    "10_element": "・기간 한정 개인 미션 [Digit:6digits ]"
+    "10_element": "・미션[Digit:6digits ]",
+    "10_element_1": "[Name:EventName ]"
 }

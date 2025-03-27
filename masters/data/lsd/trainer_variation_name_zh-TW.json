@@ -226,6 +226,7 @@
     "ch0080_00_yamaotoko_10": "登山男格蘭特",
     "ch0080_00_yamaotoko_11": "登山男揚尼克",
     "ch0080_00_yamaotoko_12": "登山男艾利賽歐",
+    "ch0080_00_yamaotoko_13": "登山男剛藏",
     "ch0080_00_yamaotoko_51": "登山男泰史",
     "ch0081_00_enjif_01": "幼稚園小朋友音海",
     "ch0081_00_enjif_02": "幼稚園小朋友郁實",
@@ -337,6 +338,8 @@
     "ch0626_00_magma_shitappam_00": "熔岩隊手下",
     "ch0627_00_magma_shitappaf_00": "熔岩隊手下",
     "ch0530_00_sightseerm_01": "觀光客隆野",
+    "ch0531_00_sightseerf_01": "觀光客良麗",
+    "ch0521_00_hexmaniac_01": "靈異迷克萊兒",
     "ch0608_00_plasma_shitappam_00": "等離子隊手下",
     "ch0609_00_plasma_shitappaf_00": "等離子隊手下",
     "ch0611_00_flare_shitappam_00": "閃焰隊手下",
@@ -347,5 +350,11 @@
     "ch0648_00_etherf_00": "以太基金會職員",
     "ch0280_00_yellm_00": "吶喊隊手下",
     "ch0281_00_yellf_00": "吶喊隊手下",
-    "ch0654_00_pokekidf_01": "寶可夢小朋友艾茗"
+    "ch0654_00_pokekidf_01": "寶可夢小朋友艾茗",
+    "ch0269_00_ayumi": "步美",
+    "ch0133_00_shilver": "小銀",
+    "ch0130_00_serena": "莎莉娜",
+    "ch0018_00_chris": "克麗絲",
+    "ch0100_00_kyohei": "共平",
+    "ch0003_00_calme": "卡魯穆"
 }

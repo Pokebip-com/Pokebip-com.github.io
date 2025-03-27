@@ -27,6 +27,8 @@ let landingPairId;
 let syncLevel = 5;
 let maxEnergy = 60;
 
+const NOT_IMPLEMENTED = [ "10101420000" ];
+
 async function getData() {
 
     // PROTO
@@ -1591,6 +1593,21 @@ function setPairInfos(id, pushState = false) {
 
     syncPairDiv.innerHTML = "";
     syncPairDiv.appendChild(title);
+
+    if(NOT_IMPLEMENTED.includes(id)) {
+        let warning = document.createElement("div");
+        warning.style.backgroundColor = "red";
+        warning.style.color = "white";
+        warning.style.textAlign = "center";
+        warning.style.fontSize = "2em";
+        warning.style.padding = "5px";
+        warning.style.fontWeight = "bold";
+        warning.style.marginBottom = "20px";
+
+        warning.innerText = "WARNING : This sync pair has some new features that are not fully supported yet. Some information might change after I'm done adding support for it!";
+
+        syncPairDiv.appendChild(warning);
+    }
 
     let monTabs = document.createElement("div");
     monTabs.classList.add("tab");

@@ -15,5 +15,6 @@
     "9": "讓下列傷害排名的最佳得分達到共[Digit:9digits ]pt以上\n（計算道館成員的達成數）",
     "9_element": "・[Name:QuestGroupTitle ]",
     "10": "成功過關下列任一任務[Digit:6digits ]次\n（計算道館成員的達成數）",
-    "10_element": "・期間限定的個人任務[Digit:6digits ]"
+    "10_element": "・任務[Digit:6digits ]",
+    "10_element_1": "[Name:EventName ]"
 }

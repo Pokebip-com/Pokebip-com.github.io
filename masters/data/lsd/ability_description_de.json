@@ -8,5 +8,6 @@
     "7": "[Name:AbilityDescription ]",
     "8": "Zielattacke: [Name:Move ]\n[Name:AbilityDescription ]",
     "9": "[Name:Move ]: Stärke↑ [Digit:5digits ]",
-    "10": "[Name:Move ]: Genauigkeit↑ [Digit:5digits ]"
+    "10": "[Name:Move ]: Genauigkeit↑ [Digit:5digits ]",
+    "11": "[Name:MoveDescription ]"
 }

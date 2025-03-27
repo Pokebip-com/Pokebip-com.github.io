@@ -88,5 +88,8 @@
     "legend_rule_7010_003": "Cuando el rival no está afectado por efectos\nde entorno, se triplican su Defensa y su\nDefensa Especial.",
     "legend_rule_7020_001": "La primera vez que los PS de Ludicolo bajan\nal 60% o menos, se quedan a ese\nporcentaje.",
     "legend_rule_7020_002": "Cuando el rival no sufre cambios de estado,\nse triplican su Defensa y su Defensa Esp.",
-    "legend_rule_7020_003": "Cuanto más aumentan las características de\nLudicolo, más se reduce el daño que recibe."
+    "legend_rule_7020_003": "Cuanto más aumentan las características de\nLudicolo, más se reduce el daño que recibe.",
+    "legend_rule_7030_001": "La primera vez que los PS de Archeops\nbajan al 30% o menos y la primera vez que\nlos PS de Haxorus bajan al 40% o menos,\nse quedan a esos respectivos porcentajes.",
+    "legend_rule_7030_002": "Se potencian los movimientos, o bien los\nmovimientos y los movimientos compi del\nrival cuando no hay ningún efecto en el\nbando aliado.",
+    "legend_rule_7030_003": "Se quintuplican la Defensa y la Defensa\nEspecial de Archeops cuando este no sufre\nproblemas de estado, y las de Haxorus\ncuando la Defensa de este ha aumentado."
 }

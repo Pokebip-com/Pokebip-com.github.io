@@ -248,6 +248,7 @@
     "20043000": "Il ne pardonne jamais la trahison ou la défaite\nd'un subordonné. Le bien-être de l'ensemble\nde la volée en dépend.",
     "20043300": "Il produit un bruit de sonnerie à chaque bond. Il assourdit\nl'ennemi avec ses cris à haute fréquence.",
     "20043700": "Il a longtemps été célébré pour avoir apporté la pluie.\nOn le trouve parfois enterré dans le sol.",
+    "20044200": "Un Pokémon composé de 108 esprits. Il provient\nd'une fissure dans une clé de voûte étrange.",
     "20044300": "Il saute sur tout ce qui bouge pour y planter ses dents.\nCette manie lui vaut quelques blessures, mais il n'en a\nque faire.",
     "20044501": "Il vole à la vitesse du son en quête de nourriture.\nDrattak et lui se disputent souvent leurs proies\ndans des combats aériens impressionnants.",
     "20044800": "Il peut canaliser son énergie mentale pour déchaîner\ndes auras mystérieuses capables de réduire d'énormes\nrochers en miettes.",
@@ -324,6 +325,7 @@
     "20057900": "Ses bras, faits d'une matière conduisant ses pouvoirs\npsychiques, sont assez puissants pour broyer des rochers.",
     "20058100": "Un Pokémon gracieux, mais aussi robuste. Il peut voler\ndes milliers de kilomètres grâce à ses ailes puissantes.",
     "20058400": "Ses deux bouches peuvent souffler du blizzard.\nSa capacité à créer de la neige à volonté le rend\npopulaire auprès des skieurs et snowboarders.",
+    "20058511": "Son pelage change selon la saison, et dans une moindre\nmesure en fonction de l'humidité et de la température.",
     "20058512": "Son pelage change selon la saison, et dans une moindre\nmesure en fonction de l'humidité et de la température.",
     "20058614": "Il change d'habitat selon les saisons. Les gens constatent\nle passage des saisons en regardant ses ramures.",
     "20058700": "Il plane dans les airs une fois qu'il est chargé en\nélectricité. Les nuits où le tonnerre gronde, des\ncentaines d'Emolga se regroupent dans le ciel.",
@@ -408,6 +410,7 @@
     "20084800": "Il est tout excité quand il est témoin d'une danse qu'il\nne connaît pas. Il s'entraîne alors comme un forcené\njusqu'à la maîtriser à la perfection.",
     "20084900": "Pour lui, le combat est une performance artistique.\nIl chante et danse de toute son âme pour abattre\nses proies.",
     "20080900": "Ils communiquent entre eux en se frappant mutuellement\nsur le bec. La force et la cadence des coups en disent\nlong sur leur état d'esprit.",
+    "20082700": "D'un naturel très patient, il ne peut toutefois s'empêcher\nde bondir sur son plat favori, Rattata, s'il en voit un.",
     "20086000": "Il concentre le froid dans ses pinces avant de frapper.\nSes coups sont suffisamment puissants pour réduire\nun épais mur de glace en morceaux.",
     "20082514": "Il fait fondre le cœur de ses ennemis avec une danse\ngracieuse, et profite de leur inattention pour les frapper\nd'une malédiction mortelle.",
     "20083500": "Il déteste la pluie car elle mouille le pollen.\nQuand la météo se dégrade, il se cache alors\ndans le creux d'un arbre et attend sans bouger.",
@@ -593,5 +596,9 @@
     "2010081100": "Il semble être le « Serpent-de-Fer » mentionné\ndans un livre ancien. Il aurait réduit la terre\nen cendres en la foudroyant.",
     "2009060000": "Ce Pokémon lave assidûment son visage pour\néviter qu'il ne s'assèche. La composition de son\npelage soyeux est proche de celle des plantes.",
     "2009270000": "Il est très apprécié depuis longtemps dans\nles villages agricoles, car le délicieux parfum\nqu'il dégage aide à faire croître le blé.",
-    "2009410000": "Lorsqu'il gonfle son sac gulaire, l'intensité\ndu courant électrique qu'il produit augmente.\nIl peut parcourir 700 km par jour en planant."
+    "2009410000": "Lorsqu'il gonfle son sac gulaire, l'intensité\ndu courant électrique qu'il produit augmente.\nIl peut parcourir 700 km par jour en planant.",
+    "2006280041": "De taille imposante, ce preux volatile chasse\nen lançant de terribles cris de guerre. Il propage\ndes ondes de choc dans les lacs, puis se saisit\ndes proies remontées à la surface.",
+    "2009670000": "Des fresques vieilles de 10 000 ans laissent\npenser que ce Pokémon transporte des êtres\nhumains sur son dos depuis les temps anciens.",
+    "2001570041": "On dit qu'il purifie les âmes perdues à l'aide\nde ses flammes avant de les envoyer dans\nl'au-delà. Je pense que sa forme est influencée\npar la montagne sacrée située au cœur de Hisui.",
+    "2009150000": "Il ne mange que des mets raffinés. Son corps\ndégage une odeur d'herbes que les Pokémon\nInsecte exècrent."
 }

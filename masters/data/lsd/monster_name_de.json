@@ -214,6 +214,7 @@
     "20019501": "Morlord",
     "20019600": "Psiana",
     "20019700": "Nachtara",
+    "20019900": "Laschoking",
     "20020300": "Girafarig",
     "20020500": "Forstellka",
     "20020801": "Stahlos",
@@ -404,6 +405,7 @@
     "20044600": "Mampfaxo",
     "20044800": "Lucario",
     "20044851": "Mega-Lucario",
+    "20045000": "Hippoterus",
     "20045001": "Hippoterus",
     "20045200": "Piondragi",
     "20045300": "Glibunkel",
@@ -582,6 +584,7 @@
     "20073511": "Irrbis",
     "20073614": "Pumpdjinn",
     "20075100": "Arktilas",
+    "20071600": "eF-eM",
     "20076200": "UHaFnir",
     "20076800": "Xerneas",
     "20076900": "Yveltal",
@@ -806,5 +809,10 @@
     "2009760000": "Agiluza",
     "2009560000": "Psiopatra",
     "2009270000": "Backel",
-    "2009410000": "Voltrean"
+    "2009410000": "Voltrean",
+    "2006280041": "Washakwil",
+    "2001570041": "Tornupto",
+    "2009670000": "Mopex",
+    "2009150000": "Ferkuli",
+    "2009160100": "Fragrunz"
 }

@@ -226,6 +226,7 @@
     "ch0080_00_yamaotoko_10": "Wanderer Jonathan",
     "ch0080_00_yamaotoko_11": "Wanderer Leonard",
     "ch0080_00_yamaotoko_12": "Wanderer Roderik",
+    "ch0080_00_yamaotoko_13": "Wanderer Frohwin",
     "ch0080_00_yamaotoko_51": "Wanderer Dietrich",
     "ch0081_00_enjif_01": "Vorschülerin Alma",
     "ch0081_00_enjif_02": "Vorschülerin Vroni",
@@ -337,6 +338,8 @@
     "ch0626_00_magma_shitappam_00": "Magma Rüpel",
     "ch0627_00_magma_shitappaf_00": "Magma Rüpel",
     "ch0530_00_sightseerm_01": "Urlauber Ulf",
+    "ch0531_00_sightseerf_01": "Urlauberin Gabi",
+    "ch0521_00_hexmaniac_01": "Hexe Claire",
     "ch0608_00_plasma_shitappam_00": "Plasma Rüpel",
     "ch0609_00_plasma_shitappaf_00": "Plasma Rüpel",
     "ch0611_00_flare_shitappam_00": "Flare Rüpel",
@@ -347,5 +350,11 @@
     "ch0648_00_etherf_00": "Personal der Æther Foundation",
     "ch0280_00_yellm_00": "Yell Rüpel",
     "ch0281_00_yellf_00": "Yell Rüpel",
-    "ch0654_00_pokekidf_01": "Poké-Kind Glenda"
+    "ch0654_00_pokekidf_01": "Poké-Kind Glenda",
+    "ch0269_00_ayumi": "Elaine",
+    "ch0133_00_shilver": "Silber",
+    "ch0130_00_serena": "Serena",
+    "ch0018_00_chris": "Krista",
+    "ch0100_00_kyohei": "Tony",
+    "ch0003_00_calme": "Kalem"
 }

@@ -214,6 +214,7 @@
     "20019501": "Maraiste",
     "20019600": "Mentali",
     "20019700": "Noctali",
+    "20019900": "Roigada",
     "20020300": "Girafarig",
     "20020500": "Foretress",
     "20020801": "Steelix",
@@ -404,6 +405,7 @@
     "20044600": "Goinfrex",
     "20044800": "Lucario",
     "20044851": "Méga-Lucario",
+    "20045000": "Hippodocus",
     "20045001": "Hippodocus",
     "20045200": "Drascore",
     "20045300": "Cradopaud",
@@ -582,6 +584,7 @@
     "20073511": "Pitrouille",
     "20073614": "Banshitrouye",
     "20075100": "Séracrawl",
+    "20071600": "Sonistrelle",
     "20076200": "Bruyverne",
     "20076800": "Xerneas",
     "20076900": "Yveltal",
@@ -806,5 +809,10 @@
     "2009760000": "Délestin",
     "2009560000": "Cléopsytra",
     "2009270000": "Briochien",
-    "2009410000": "Fulgulairo"
+    "2009410000": "Fulgulairo",
+    "2006280041": "Gueriaigle",
+    "2001570041": "Typhlosion",
+    "2009670000": "Motorizard",
+    "2009150000": "Gourmelet",
+    "2009160100": "Fragroin"
 }

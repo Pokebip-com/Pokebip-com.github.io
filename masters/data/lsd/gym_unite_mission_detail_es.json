@@ -15,5 +15,6 @@
     "9": "Alcanzad una puntuación de [Digit:9digits ] punto[ES:Qty P=\"s\" ] en la siguiente Maratón de Daño (se cuenta el total de todos los miembros del gimnasio).",
     "9_element": "• [Name:QuestGroupTitle ]",
     "10": "Completad cualquiera de las siguientes misiones [Digit:6digits ] ve[ES:Qty S=\"z\" P=\"ces\" ] (se cuenta el total de todos los miembros del gimnasio).",
-    "10_element": "• Misión en solitario por tiempo limitado [Digit:6digits ]"
+    "10_element": "• Misión [Digit:6digits ]",
+    "10_element_1": "• [Name:EventName ]"
 }

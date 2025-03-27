@@ -42,5 +42,13 @@
 { "scheduleId": "7020_1W_TitleSplash", "u2": 0, "actorId": "ch0019_90_yuki", "u4": "21" },
 { "scheduleId": "7020_1W_TitleSplash", "u2": 0, "actorId": "ch0090_10_daigo", "u4": "21" },
 { "scheduleId": "7020_1W_TitleSplash", "u2": 0, "actorId": "ch0126_90_haruka", "u4": "21" },
-{ "scheduleId": "7020_3W_TitleSplash", "u2": 0, "actorId": "ch0089_90_n", "u4": "22" }
+{ "scheduleId": "7020_3W_TitleSplash", "u2": 0, "actorId": "ch0089_90_n", "u4": "22" },
+{ "scheduleId": "7030_1W_TitleSplash", "u2": 0, "actorId": "ch0101_10_mei", "u4": "23" },
+{ "scheduleId": "7030_1W_TitleSplash", "u2": 0, "actorId": "ch0290_00_teru", "u4": "23" },
+{ "scheduleId": "7030_1W_TitleSplash", "u2": 0, "actorId": "ch0352_00_taro", "u4": "23" },
+{ "scheduleId": "7030_3W_TitleSplash", "u2": 0, "actorId": "ch0101_10_mei", "u4": "24" },
+{ "scheduleId": "7030_3W_TitleSplash", "u2": 0, "actorId": "ch0148_10_matsuba", "u4": "24" },
+{ "scheduleId": "7030_3W_TitleSplash", "u2": 0, "actorId": "ch0245_90_mary", "u4": "24" },
+{ "scheduleId": "7030_3W_TitleSplash", "u2": 0, "actorId": "ch0290_00_teru", "u4": "24" },
+{ "scheduleId": "7030_3W_TitleSplash", "u2": 0, "actorId": "ch0352_00_taro", "u4": "24" }
 ]}

@@ -5,15 +5,16 @@
     "4": "Setzt insgesamt [Digit:6digits ] [DE:Qty S=\"Einheit\" P=\"Einheiten\" ] Ausdauer\nein.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
     "5": "Schließt insgesamt [Digit:6digits ] [DE:Qty S=\"Kampf\" P=\"Kämpfe\" ] ab.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
     "11": "Schließt eines der folgenden Gebiete\n[Digit:6digits ] Mal ab.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
-    "11_element": "• [Name:QuestTitle ]\nim [Name:QuestPlayType ]",
+    "11_element": "• [Name:QuestTitle ] im [Name:QuestPlayType ]",
     "6": "Erlangt das folgende Item [Digit:6digits ] Mal.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
     "6_element": "[Name:Item ]",
-    "7": "Erreicht eine Bestpunktzahl von mindestens\n[Digit:9digits ] Punkten im folgenden\nHighscore-Event.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
+    "7": "Erreicht eine Bestpunktzahl von mindestens\n[Digit:9digits ] Punkt(en) im folgenden\nHighscore-Event.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
     "7_element": "[Name:QuestGroupTitle ]",
     "8": "Erzielt eine Gewinnserie von insgesamt\n[Digit:9digits ] Siegen im Legenden-Turnier.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
     "8_element": "[Name:QuestGroupTitle ]",
-    "9": "Erreicht eine Bestpunktzahl von mindestens\n[Digit:9digits ] Punkten im folgenden\nZeitschaden-Rangkampf.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
+    "9": "Erreicht eine Bestpunktzahl von mindestens\n[Digit:9digits ] Punkt(en) im folgenden\nZeitschaden-Rangkampf.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
     "9_element": "[Name:QuestGroupTitle ]",
     "10": "Schließt eine der folgenden Missionen\n[Digit:6digits ] Mal ab.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
-    "10_element": "Zeitlich begrenzte Einzel-Mission ×[Digit:6digits ]"
+    "10_element": "• Mission [Digit:6digits ]",
+    "10_element_1": "[Name:EventName ]"
 }

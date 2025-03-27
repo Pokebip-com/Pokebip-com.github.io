@@ -88,5 +88,8 @@
     "legend_rule_7010_003": "Se non sono presenti effetti sul campo\navversario, la Difesa e la Difesa Speciale\ndegli avversari sono triplicate.",
     "legend_rule_7020_001": "I PS di Ludicolo rimangono al 60% la prima\nvolta che subisce danni che farebbero\nscendere i suoi PS al 60% o meno.",
     "legend_rule_7020_002": "Quando gli avversari non sono affetti\nda variazioni di stato (impedimenti), la loro\nDifesa e la loro Difesa Speciale triplicano.",
-    "legend_rule_7020_003": "I danni subiti da Ludicolo diminuiscono\nin proporzione al totale delle modifiche\nalle sue statistiche."
+    "legend_rule_7020_003": "I danni subiti da Ludicolo diminuiscono\nin proporzione al totale delle modifiche\nalle sue statistiche.",
+    "legend_rule_7030_001": "I PS di Archeops restano al 30% e i PS\ndi Haxorus restano al 40% la prima volta\nche subiscono danni che farebbero scendere\ni loro PS al 30% o al 40% o meno.",
+    "legend_rule_7030_002": "Se non ci sono effetti alleati sul campo\nalleato, le mosse degli avversari, oppure le\nloro mosse e Unimosse, vengono potenziate.",
+    "legend_rule_7030_003": "Quando Archeops non è affetto\nda un problema di stato, o quando\nla Difesa di Haxorus aumenta, la sua Difesa\ne la sua Difesa Speciale quintuplicano."
 }

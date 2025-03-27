@@ -88,5 +88,8 @@
     "legend_rule_7010_003": "Wenn der Gegner nicht von einem\nSchadenfeld betroffen ist, sind seine\nVert. und Sp.-Vert. verdreifacht.",
     "legend_rule_7020_001": "Fallen Kappalores’ KP das erste Mal auf\n60 %, hält es mit dieser Anzahl an KP durch.",
     "legend_rule_7020_002": "Wenn der Gegner nicht von einer Störung\nbetroffen ist, sind seine Verteidigung und\nSpezial-Verteidigung verdreifacht.",
-    "legend_rule_7020_003": "Der Schaden von Kappalores sinkt abhängig\nvon der Summe der erhöhten Statuswerte."
+    "legend_rule_7020_003": "Der Schaden von Kappalores sinkt abhängig\nvon der Summe der erhöhten Statuswerte.",
+    "legend_rule_7030_001": "Fallen Aeropteryx’ KP das erste Mal auf\n30 % oder Maxax’ auf 40 %, halten sie mit\nder jeweiligen Anzahl an KP durch.",
+    "legend_rule_7030_002": "Erhöht die Stärke von Att. oder von Att. und\nder GA des Geg., wenn Verbündete nicht v.\nEffekten der Anwender-Seite betroffen sind.",
+    "legend_rule_7030_003": "Wenn Aeropteryx nicht von Statusproblemen\nbetroffen ist oder Maxax’ Vert. erhöht ist,\nwerden ihre Vert. & Sp.-Vert. verfünffacht."
 }

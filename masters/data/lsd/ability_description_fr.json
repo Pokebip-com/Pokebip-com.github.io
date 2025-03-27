@@ -8,5 +8,6 @@
     "7": "[Name:AbilityDescription ]",
     "8": "Capacité : [Name:Move ]\n[Name:AbilityDescription ]",
     "9": "[Name:Move ] : Puissance [Digit:5digits ]",
-    "10": "[Name:Move ] : Précision [Digit:5digits ]"
+    "10": "[Name:Move ] : Précision [Digit:5digits ]",
+    "11": "[Name:MoveDescription ]"
 }

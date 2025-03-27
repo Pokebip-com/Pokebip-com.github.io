@@ -15,5 +15,6 @@
     "9": "Obtenez un meilleur score total\nde [Digit:9digits ] points ou plus dans\nle classement par dégâts suivant.\n(Ce total inclut les autres membres\nde l'Arène.)",
     "9_element": "[Name:QuestGroupTitle ]",
     "10": "Finissez l'une des missions spécifiées\n[Digit:6digits ] fois au total.\n(Ce total inclut les autres membres\nde l'Arène.)",
-    "10_element": "Mission solo à durée limitée × [Digit:6digits ]"
+    "10_element": "Mission [Digit:6digits ]",
+    "10_element_1": "[Name:EventName ]"
 }

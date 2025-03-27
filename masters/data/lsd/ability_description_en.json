@@ -8,5 +8,6 @@
     "7": "[Name:AbilityDescription ]",
     "8": "Move: [Name:Move ]\n[Name:AbilityDescription ]",
     "9": "[Name:Move ]: Power ↑ [Digit:5digits ]",
-    "10": "[Name:Move ]: Accuracy ↑ [Digit:5digits ]"
+    "10": "[Name:Move ]: Accuracy ↑ [Digit:5digits ]",
+    "11": "[Name:MoveDescription ]"
 }

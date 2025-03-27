@@ -248,6 +248,7 @@
     "20043000": "Für Untergebene, die versagen oder es verraten, hat es\nkeine Gnade übrig. Das ist nötig, um die Disziplin in der\nGruppe aufrechtzuerhalten.",
     "20043300": "Jedes Mal, wenn es hüpft, entsteht ein klingender Laut.\nSeine hohen Schreie machen die Gegner taub.",
     "20043700": "Man verehrt sie schon seit Urzeiten als Regenmacher.\nManchmal findet man eines von ihnen im Boden\nvergraben.",
+    "20044200": "Ein Pokémon, das aus 108 Geistern besteht. Es ist an einen\nSpalt in einem mysteriösen Stein gebunden.",
     "20044300": "Wenn sich etwas in seiner Nähe bewegt, stürzt es sich\ndarauf und beißt fest zu, auch wenn es sich dabei selbst\nverletzt.",
     "20044501": "Es geht mit Schallgeschwindigkeit fliegend auf die Jagd\nund leistet sich mit Brutalanda Luftkämpfe um das Vorrecht\nauf die Beute.",
     "20044800": "Unter starker Konzentration kann es rätselhafte Wellen\nvon sich geben, die man Aura nennt. Damit kann es\nsogar große Felsen pulverisieren.",
@@ -324,6 +325,7 @@
     "20057900": "Seine Arme bestehen aus einer speziellen Flüssigkeit.\nDank seiner Psycho-Kräfte kann es mit ihnen Felsen\nzerschmettern.",
     "20058100": "Sie wirken zerbrechlich, aber ihre starken Schwingen\ntragen sie in einem Stück bis zu 1 000 km weit.",
     "20058400": "Aus seinen zwei Mündern stößt es Eisböen aus.\nDa es praktisch überall Schnee erzeugen kann,\nist es bei Snowboardern und Skifahrern beliebt.",
+    "20058511": "Unabhängig von der Jahreszeit ändert sich seine Farbe\nauch bei wechselnder Temperatur oder Luftfeuchtigkeit\nleicht.",
     "20058512": "Unabhängig von der Jahreszeit ändert sich seine Farbe\nauch bei wechselnder Temperatur oder Luftfeuchtigkeit\nleicht.",
     "20058614": "An seinem Geweih kann man ablesen, wann eine neue\nJahreszeit beginnt. Sein Revier wechselt mit jeder neuen\nJahreszeit.",
     "20058700": "Es speichert Strom, um damit durch die Lüfte zu segeln.\nEin nächtliches Blitzgewitter stellt sich manchmal als ein\nSchwarm Emolga heraus.",
@@ -408,6 +410,7 @@
     "20084800": "Sieht es einen Tanz, den es nicht kennt, wird es ganz\naufgeregt. Dann übt es fleißig, bis es ihn gemeistert hat.",
     "20084900": "Für Primarene ist jeder Kampf wie eine Aufführung.\nEs erlegt seine Beute mithilfe von anmutigem Gesang\nund Tanzschritten.",
     "20080900": "Sie kommunizieren miteinander, indem sie ihre Schnäbel\ngegeneinanderschlagen. Stärke und Anzahl der Schläge\nübermitteln ihre Gefühle.",
+    "20082700": "Dieses Pokémon ist eigentlich sehr geduldig. Sieht es\njedoch ein Rattfratz, seine Leibspeise, stürzt es sich\nvöllig außer Kontrolle auf es.",
     "20086000": "Es speichert kalte Luft in seinen Scheren. Wenn es mit\ndiesen um sich schlägt, kann es selbst dicke Eiswände\nzerbröckeln.",
     "20082514": "Sein anmutiger Tanz betört den Gegner. Diese\nUnachtsamkeit nutzt es, um fatale Flüche auf\nihn herabregnen zu lassen.",
     "20083500": "Es hasst Regen, weil dadurch der Blütenstaub nass wird.\nZiehen Regenwolken auf, versteckt es sich in Baumhöhlen\nund wartet regungslos.",
@@ -593,5 +596,9 @@
     "2010081100": "Offenbar ist dies das Objekt Eisenschlange, das in einer\nalten Schrift erwähnt wurde. Es soll das Land mit Blitzen\nzu Asche verwandelt haben.",
     "2009060000": "Die Zusammensetzung seines weichen Fells ähnelt der von\nPflanzen. Es reinigt penibel sein Gesicht, um zu\nverhindern, dass dieses austrocknet.",
     "2009270000": "Da der wohlige Duft, den sein Körper verströmt, das\nWachstum von Weizen begünstigt, schätzt man dieses\nPokémon in Bauerndörfern sehr.",
-    "2009410000": "Dieses Pokémon verstärkt seine Elektrizität durch Aufblasen\ndes Kehlsacks. Es nutzt den Wind, um innerhalb eines\nTages 700 km weit zu fliegen."
+    "2009410000": "Dieses Pokémon verstärkt seine Elektrizität durch Aufblasen\ndes Kehlsacks. Es nutzt den Wind, um innerhalb eines\nTages 700 km weit zu fliegen.",
+    "2006280041": "Mit entsetzlichem Kampfgeschrei geht dieses\nerbarmungslose, riesige Vogel-Pokémon auf Jagd.\nEs erzeugt Stoßwellen über Seen, um sodann die\nemportreibende Beute zu ergreifen.",
+    "2009670000": "Seit uralten Zeiten soll es Menschen auf seinem Rücken\nreiten lassen. Darstellungen davon finden sich auf\n10 000 Jahre alten Wandmalereien.",
+    "2001570041": "Ich vermute, dass die Energie des heiligen Berges im\nZentrum Hisuis sein Äußeres beeinflusst hat. Es heißt,\nes reinige verlorene Seelen in seinen Flammen, um sie\nsodann ins Jenseits zu führen.",
+    "2009150000": "Es nimmt nur erlesene Kost zu sich. Sein Körper sondert\neinen kräuterartigen Geruch ab, den Käfer-Pokémon\nabstoßend finden."
 }

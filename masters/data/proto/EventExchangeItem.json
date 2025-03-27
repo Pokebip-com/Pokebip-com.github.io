@@ -644,5 +644,8 @@
 { "itemId": "750000000702", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "610947", "trainerId": "-1", "scheduleId": "7020_5W_Event_PokemasDay_Exchange", "itemNameOverride": "750000000181" },
 { "itemId": "750000000703", "descriptionId": 600000, "imageId": "i075_0018_00", "u4": 0, "storyQuestId": "610948", "trainerId": "-1", "scheduleId": "7020_5W_Event_Button_Exchange_1", "itemNameOverride": "750000000169" },
 { "itemId": "750000000704", "descriptionId": 600002, "imageId": "i075_0061_01", "u4": 0, "storyQuestId": "610894", "trainerId": "-1", "scheduleId": "6120_2W_Event_roc_lan", "itemNameOverride": "-1" },
-{ "itemId": "750000000705", "descriptionId": 600050, "imageId": "i075_0058_01", "u4": 0, "storyQuestId": "610911", "trainerId": "10008410000", "scheduleId": "7010_1W_Event_ThanksDay_scenario_even_acquiring_mission_item _2", "itemNameOverride": "750000000682" }
+{ "itemId": "750000000705", "descriptionId": 600050, "imageId": "i075_0058_01", "u4": 0, "storyQuestId": "610911", "trainerId": "10008410000", "scheduleId": "7010_1W_Event_ThanksDay_scenario_even_acquiring_mission_item _2", "itemNameOverride": "750000000682" },
+{ "itemId": "750000000706", "descriptionId": 600000, "imageId": "i075_0017_00", "u4": 0, "storyQuestId": "610963", "trainerId": "-1", "scheduleId": "7030_1W_Event_syoteru_Exchange", "itemNameOverride": "750000000574" },
+{ "itemId": "750000000707", "descriptionId": 600000, "imageId": "i075_0007_00", "u4": 0, "storyQuestId": "610966", "trainerId": "-1", "scheduleId": "7030_3W_Event_TrainersFile_Exchange", "itemNameOverride": "750000000575" },
+{ "itemId": "750000000708", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "610969", "trainerId": "-1", "scheduleId": "7030_4W_Event_PokemasDay_Exchange", "itemNameOverride": "750000000181" }
 ]}

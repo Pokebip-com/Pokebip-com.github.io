@@ -80,5 +80,6 @@
 { "trainerRarityupBonusId": "7020392", "trainerId": "10329000000", "itemSetId": "7020392", "scheduleId": "7020_4W_BSearch_ortiga_music" },
 { "trainerRarityupBonusId": "7020393", "trainerId": "10089900000", "itemSetId": "7020393", "scheduleId": "7020_3W_BSearch_Fes_music" },
 { "trainerRarityupBonusId": "7020394", "trainerId": "10019900000", "itemSetId": "7020394", "scheduleId": "7020_1W_BSearch_Master_2_music" },
-{ "trainerRarityupBonusId": "7020395", "trainerId": "10126900000", "itemSetId": "7020395", "scheduleId": "7020_1W_BSearch_Master_1_music" }
+{ "trainerRarityupBonusId": "7020395", "trainerId": "10126900000", "itemSetId": "7020395", "scheduleId": "7020_1W_BSearch_Master_1_music" },
+{ "trainerRarityupBonusId": "7030003", "trainerId": "10352000000", "itemSetId": "7030003", "scheduleId": "7030_1W_Music_tar_FOREVER" }
 ]}

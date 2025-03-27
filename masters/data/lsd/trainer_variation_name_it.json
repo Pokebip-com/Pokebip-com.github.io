@@ -226,6 +226,7 @@
     "ch0080_00_yamaotoko_10": "Grant (Montanaro)",
     "ch0080_00_yamaotoko_11": "Jannik (Montanaro)",
     "ch0080_00_yamaotoko_12": "Emilio (Montanaro)",
+    "ch0080_00_yamaotoko_13": "Gosto (Montanaro)",
     "ch0080_00_yamaotoko_51": "Tullio (Montanaro)",
     "ch0081_00_enjif_01": "Tosca (Bimba)",
     "ch0081_00_enjif_02": "Giorgia (Bimba)",
@@ -337,6 +338,8 @@
     "ch0626_00_magma_shitappam_00": "Recluta del Team Magma",
     "ch0627_00_magma_shitappaf_00": "Recluta del Team Magma",
     "ch0530_00_sightseerm_01": "Marcello (Vacanziere)",
+    "ch0531_00_sightseerf_01": "Biancamaria (Vacanziera)",
+    "ch0521_00_hexmaniac_01": "Amaltea (Streghetta)",
     "ch0608_00_plasma_shitappam_00": "Recluta del Team Plasma",
     "ch0609_00_plasma_shitappaf_00": "Recluta del Team Plasma",
     "ch0611_00_flare_shitappam_00": "Recluta del Team Flare",
@@ -347,5 +350,11 @@
     "ch0648_00_etherf_00": "Dipendente della Fondazione Æther",
     "ch0280_00_yellm_00": "Recluta del Team Yell",
     "ch0281_00_yellf_00": "Recluta del Team Yell",
-    "ch0654_00_pokekidf_01": "Lara (Poké Bimba)"
+    "ch0654_00_pokekidf_01": "Lara (Poké Bimba)",
+    "ch0269_00_ayumi": "Elaine",
+    "ch0133_00_shilver": "Argento",
+    "ch0130_00_serena": "Serena",
+    "ch0018_00_chris": "Kristy",
+    "ch0100_00_kyohei": "Sanzo",
+    "ch0003_00_calme": "Calem"
 }

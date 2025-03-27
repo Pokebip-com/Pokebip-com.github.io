@@ -88,5 +88,8 @@
     "legend_rule_7010_003": "Quand l'ennemi n'est pas affecté par un effet\nsur le terrain, sa Déf. et sa Déf. Spé. sont triplées.",
     "legend_rule_7020_001": "Les PV de Ludicolo restent à 60 %\nla première fois que ses PV chutent\nà 60 % ou moins.",
     "legend_rule_7020_002": "Quand l'ennemi n'est pas affecté par un tourment,\nsa Déf. et sa Déf. Spé. sont triplées.",
-    "legend_rule_7020_003": "Plus les stats de Ludicolo sont augmentées,\nplus les dégâts qu'il subit sont réduits."
+    "legend_rule_7020_003": "Plus les stats de Ludicolo sont augmentées,\nplus les dégâts qu'il subit sont réduits.",
+    "legend_rule_7030_001": "Les PV d'Aéroptéryx restent à 30 %\net les PV de Tranchodon restent à 40 %\nla première fois que leurs PV chutent\nà 30 % et 40 % ou moins.",
+    "legend_rule_7030_002": "La puissance des capacités de l'ennemi, de ses\ncapacités Duo, ou des deux, augmente quand\nles alliés ne sont pas affectés par le côté allié.",
+    "legend_rule_7030_003": "Quand Aéroptéryx ne subit pas d'altération de\nstatut, ou quand la Défense de Tranchodon\nest augmentée, leur Défense et Déf. Spé.\nsont multipliées par cinq."
 }
