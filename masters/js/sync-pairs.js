@@ -27,7 +27,7 @@ let landingPairId;
 let syncLevel = 5;
 let maxEnergy = 60;
 
-const NOT_IMPLEMENTED = [ "10101420000" ];
+const NOT_IMPLEMENTED = [ "10101420000", "10286000001" ];
 
 async function getData() {
 
