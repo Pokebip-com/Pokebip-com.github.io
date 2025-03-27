@@ -37,7 +37,8 @@
     "MovePowerAccuracyBoost": "Move Boost",
     "Passive": "Passive",
     "StatsBoost": "Stat Boost",
-    "SyncMove": "Sync Move upgrade"
+    "SyncMove": "Sync Move upgrade",
+    "LearnMove": "Learn Move"
   },
   "sync_grid_energy": "Energy",
   "sync_grid_energy_level": "Max energy cap",
@@ -47,7 +48,7 @@
   "sync_grid_tile_description_title": "Effect",
   "sync_grid_tile_description_tooltip": "Effect",
   "sync_grid_tile_energy_tooltip": "Energy",
-  "sync_grid_tile_orbs_tooltip": "Sync orbs",
+  "sync_grid_tile_items_tooltip": "Required items",
   "sync_grid_tile_required_energy_title": "Required energy",
   "sync_grid_tile_required_orbs_title": "Required sync orbs",
   "sync_grid_tile_required_pair_level_title": "Required move level",

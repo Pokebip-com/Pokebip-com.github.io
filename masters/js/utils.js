@@ -81,6 +81,7 @@ function preloadUtils(preloadItems = false) {
 
         // Item LSD
         jsonCache.preloadLsd(`ability_item_name`);
+        jsonCache.preloadLsd(`academy_item_name`);
         jsonCache.preloadLsd(`bardge_item_name`);
         jsonCache.preloadLsd(`breakthrough_item_name`);
         jsonCache.preloadLsd(`deck_item_lvup_item_name`);
@@ -139,6 +140,10 @@ function getAbilityType(ability) {
             }
 
             return abilityType[4];
+
+        case 11:
+            //Learn Move
+            return abilityType[6];
     }
 }
 
@@ -696,6 +701,10 @@ function getItemName(itemId, log = false) {
             }
 
             lsdName = `other_item_name`;
+            break;
+
+        case 200:
+            lsdName = `academy_item_name`;
             break;
 
         // Inconnus...

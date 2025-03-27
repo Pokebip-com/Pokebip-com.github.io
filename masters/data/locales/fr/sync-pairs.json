@@ -37,7 +37,8 @@
     "MovePowerAccuracyBoost": "Amélioration de Capacité",
     "Passive": "Amélioration de Talent",
     "StatsBoost": "Amélioration de Stat",
-    "SyncMove": "Amélioration de Capacité Duo"
+    "SyncMove": "Amélioration de Capacité Duo",
+    "LearnMove": "Capacité supplémentaire"
   },
   "sync_grid_energy": "Énergie",
   "sync_grid_energy_level": "Niveau d'energie max",
@@ -47,7 +48,7 @@
   "sync_grid_tile_description_title": "Effet",
   "sync_grid_tile_description_tooltip": "Effet ",
   "sync_grid_tile_energy_tooltip": "Énergie ",
-  "sync_grid_tile_orbs_tooltip": "Duo-Sphères ",
+  "sync_grid_tile_items_tooltip": "Objets requis",
   "sync_grid_tile_required_energy_title": "Énergie requise",
   "sync_grid_tile_required_orbs_title": "Duo-Sphères requises",
   "sync_grid_tile_required_pair_level_title": "Niveau des capacités requis",

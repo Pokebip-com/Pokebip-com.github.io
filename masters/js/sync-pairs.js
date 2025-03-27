@@ -3,7 +3,8 @@ let abilityType = {
     "2" : "Passive",
     "3" : "AdditionalMoveEffect",
     "4" : "MovePowerAccuracyBoost",
-    "5" : "SyncMove"
+    "5" : "SyncMove",
+    "6" : "LearnMove"
 };
 
 let abilityTypeBGColor = {
@@ -11,7 +12,8 @@ let abilityTypeBGColor = {
     "MovePowerAccuracyBoost" : "#47D147",
     "AdditionalMoveEffect" : "#FF0066",
     "Passive" : "#FFC266",
-    "SyncMove" : "#BF80FF"
+    "SyncMove" : "#BF80FF",
+    "LearnMove" : "#FF80BF"
 };
 
 const gymStartScheduleId = "7010_1W_Gym_start";
@@ -34,6 +36,7 @@ async function getData() {
     // PROTO
     jsonCache.preloadProto("Ability");
     jsonCache.preloadProto("AbilityPanel");
+    jsonCache.preloadProto("AbilityPanelReleaseItemSet");
     jsonCache.preloadProto("AbilityReleaseCondition");
     jsonCache.preloadProto("ExRoleStatusUp");
     jsonCache.preloadProto("Monster");
@@ -63,7 +66,7 @@ async function getData() {
     // Custom
     jsonCache.preloadCustom("version_release_dates");
 
-    preloadUtils();
+    preloadUtils(true);
     preloadMovePassiveSkills();
 
     await jsonCache.runPreload()
@@ -640,6 +643,35 @@ function setPairTeamSkills(contentDiv) {
     contentDiv.appendChild(table);
 }
 
+function getTooltipMoveData(moveId) {
+    let mov = jData.proto.move.find(m => m.moveId == moveId);
+    let p = document.createElement("p");
+
+    p.innerHTML += `<b>${jData.locale.syncPairs.move_description}:</b> ${getMoveDescr(moveId)}<br />`;
+
+    if(mov.type > 0) {
+        p.innerHTML += `<b>${jData.locale.syncPairs.move_type}:</b> ${jData.lsd.motifTypeName[mov.type]}<br />`;
+    }
+    p.innerHTML += `<b>${jData.locale.syncPairs.move_category}:</b> ${jData.locale.common.category_names[mov.category]}<br />`;
+    if(mov.gaugeDrain) {
+        p.innerHTML += `<b>${jData.locale.syncPairs.move_gauge}:</b> ${mov.gaugeDrain}<br />`;
+    }
+    if(mov.power > 0) {
+        p.innerHTML += `<b>${jData.locale.syncPairs.move_power}:</b> ${mov.power + " - " + Math.floor(mov.power*1.2)}<br />`;
+    }
+    if(mov.accuracy) {
+        p.innerHTML += `<b>${jData.locale.syncPairs.move_accuracy}:</b> ${mov.accuracy}<br />`;
+    }
+    if(jData.lsd.moveTargetType[targetToId[mov.target]]) {
+        p.innerHTML += `<b>${jData.locale.syncPairs.move_target}:</b> ${jData.lsd.moveTargetType[targetToId[mov.target]]}<br />`;
+    }
+    if(mov.uses) {
+        p.innerHTML += `<b>${jData.locale.syncPairs.move_uses}:</b> ${mov.uses}<br />`;
+    }
+
+    return p;
+}
+
 function getMoveRow(moveId) {
     let mov = jData.proto.move.find(m => m.moveId == moveId);
 
@@ -949,6 +981,9 @@ function appendGridCategory(table, panels, category) {
     panels = panels.filter(p => p.type === category)
         .sort((a, b) => a.level - b.level || a.cellId - b.cellId);
 
+    if(panels.length === 0)
+        return;
+
     let headRow = document.createElement("tr");
 
     let categoryName = document.createElement("th");
@@ -977,7 +1012,15 @@ function appendGridCategory(table, panels, category) {
         tr.appendChild(ameliorationCell);
 
         let effectCell = document.createElement("td");
-        effectCell.innerText = p.ability.passiveId ? getPassiveSkillDescr(p.ability.passiveId) : "—";
+        if(p.ability.type === 11) {
+            effectCell.appendChild(getTooltipMoveData(p.ability.moveId));
+        }
+        else if(p.ability.passiveId) {
+            effectCell.innerText = getPassiveSkillDescr(p.ability.passiveId);
+        }
+        else {
+            effectCell.innerText = "—";
+        }
         tr.appendChild(effectCell);
 
         let energyCell = document.createElement("td");
@@ -1209,6 +1252,10 @@ function setGridPicker(ap, gridPickerDiv) {
                     svg.setAttribute("data-category", "movepowerup");
                 }
                 break;
+
+            case 11:
+                //learn move
+                svg.setAttribute("data-category", "learnmove");
         }
 
         if (panel.conditionIds.filter(cid => cid >= 16 && cid <= 19).length > 0) {
@@ -1217,6 +1264,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
         svg.setAttribute("data-energy", panel.energyCost);
         svg.setAttribute("data-orbs", panel.orbCost);
+        svg.setAttribute("data-items", panel.items.join(","));
         svg.setAttribute("data-cellId", panel.cellId);
 
         let text = jData.lsd.abilityName[panel.ability.type]
@@ -1225,14 +1273,18 @@ function setGridPicker(ap, gridPickerDiv) {
             .replace("[Name:Move ]", jData.lsd.moveName[panel.ability.moveId]).replace("\n", " ");
 
         svg.setAttribute("data-tileName", text);
-        titleP.innerHTML = `<b>${text}</b>\n`;
+        titleP.innerHTML = `<b>${text}</b>`;
         tooltip.appendChild(titleP);
 
-        if(panel.ability.passiveId) {
+        if(panel.ability.type === 11) {
+            tooltip.appendChild(getTooltipMoveData(panel.ability.moveId));
+        }
+        else if(panel.ability.passiveId) {
             tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_description_tooltip}:</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
         }
 
-        tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_orbs_tooltip}:</b> ${panel.orbCost} - <b>${jData.locale.syncPairs.sync_grid_tile_energy_tooltip}:</b> ${panel.energyCost}</p>`;
+        tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_items_tooltip}:</b><br />${panel.items.join("<br />")}</p>`;
+        tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_energy_tooltip}:</b> ${panel.energyCost}</p>`
 
         setTileBackground(svg);
         gridDiv.appendChild(svg);
@@ -1474,6 +1526,14 @@ function setSyncGrid() {
                         ap.level = releaseCon.parameter;
                 }
             });
+            ap.items = [];
+            if(ap.orbCost > 0) {
+                ap.items.push(`${jData.lsd.abilityItemName["2"]} x${ap.orbCost}`);
+            }
+            ap.releaseItemSet = jData.proto.abilityPanelReleaseItemSet.find(a => a.abilityPanelId === ap.cellId);
+            for(let i = 1; ap.releaseItemSet && ap.releaseItemSet[`item${i}`] !== "0" && i <= 3; i++) {
+                ap.items.push(`${getItemName(ap.releaseItemSet[`item${i}`])} x${ap.releaseItemSet[`item${i}Qty`]}`);
+            }
             ap.type = getAbilityType(ap.ability);
             ap.isNew = charaScheduleId.includes(ap.scheduleId);
             return ap;
