@@ -171,7 +171,7 @@ function getSchedule() {
         || trainingAreaUpdate.includes(s.scheduleId)
         || trainerRarityupBonusUpdate.includes(s.scheduleId)
         || s.scheduleId.startsWith("chara_")
-        || s.scheduleId.includes("_Shop_")
+        || (s.scheduleId.includes("_Shop_") && !s.scheduleId.includes("_gymstamp_"))
         || s.scheduleId.endsWith("_musiccoin_FOREVER")
         || (s.scheduleId.includes("_ChampionBattle_")
             && !(s.scheduleId.endsWith("_AllPeriod")
@@ -488,6 +488,8 @@ function getCyclingRankingEvents(i) {
     // Début effectif de la période de calcul (la plus tardive entre les deux timestamps)
     const periodStart = Math.max(releaseTimestamp, initialTimestamp);
     const periodEnd = parseInt(jData.custom.versionReleaseDates[i].schedule.map(s => s.startDate).sort((a, b) => b - a)[0]);
+
+    console.log(jData.custom.versionReleaseDates[0].schedule.sort((a, b) => a.startDate - b.startDate));
 
     // Calcul du temps écoulé depuis le premier événement jusqu'à la période de calcul
     let elapsedTime = periodStart - initialTimestamp;

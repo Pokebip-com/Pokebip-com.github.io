@@ -110,7 +110,19 @@ async function getData() {
 
     getSchedule();
 
-    lastScheduleStartDate = Math.max(...new Set(jData.proto.schedule.map(s => s.startDate*1)));
+    //lastScheduleStartDate = Math.max(...new Set(jData.proto.schedule.map(s => s.startDate*1)));
+
+    let scheduleStartDates = [...new Set(jData.proto.schedule.sort((s1, s2) => s2.startDate - s1.startDate))];
+
+    for(let i = 0; ; i++) {
+        if(scheduleStartDates[i].scheduleId.includes("gym_season")) {
+            continue;
+        }
+        lastScheduleStartDate = scheduleStartDates[i].startDate*1;
+        break;
+    }
+
+    console.log();
 
     jData.proto.loginBonus = jData.proto.loginBonus.filter(lb => lb.startDate <= lastScheduleStartDate).map(lb => {
         lb.scheduleId = lb.loginBonusId;
