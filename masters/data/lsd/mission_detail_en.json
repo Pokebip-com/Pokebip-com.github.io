@@ -305,5 +305,7 @@
     "override_detail_6120_1_09": "I’d like a photo of an artistic person—\nsomeone who expresses themselves\nvia photos, music, painting, and such.\nBut ask for permission before showing\ntheir work in your photo!",
     "override_detail_6120_1_10": "It’s quite difficult to capture motion\nin photos, like how a cape billows in\nthe wind! It’d be fantastic if you took\na good photo of that! Do your best!",
     "override_detail_7010_1_01": "Complete the Daily Region Rotation.",
-    "77_element_1": "[Name:EventName ]"
+    "77_element_1": "[Name:EventName ]",
+    "override_detail_7040_1_01": "Complete a single-player battle\nin the special event for all types\n“Super Sparring: Aim for the Top” ×1.\n\n(You can play the event by going to\nthe Recommended section.)",
+    "override_detail_7040_1_02": "Complete a single-player battle\nin the special event for all types\n“Super Sparring: Aim for the Top” ×3.\n\n(You can play the event by going to\nthe Recommended section.)"
 }

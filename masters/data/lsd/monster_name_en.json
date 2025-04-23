@@ -342,6 +342,7 @@
     "20036300": "Spheal",
     "20036400": "Sealeo",
     "20036500": "Walrein",
+    "20036900": "Relicanth",
     "20037100": "Bagon",
     "20037300": "Salamence",
     "20037600": "Metagross",
@@ -380,6 +381,7 @@
     "20040800": "Cranidos",
     "20040900": "Rampardos",
     "20041000": "Shieldon",
+    "20041100": "Bastiodon",
     "20041311": "Wormadam",
     "20041600": "Vespiquen",
     "20041900": "Floatzel",
@@ -535,6 +537,7 @@
     "20064111": "Tornadus",
     "20064112": "Tornadus",
     "20064211": "Thundurus",
+    "20064212": "Thundurus",
     "20064300": "Reshiram",
     "20064400": "Zekrom",
     "20064511": "Landorus",
@@ -605,6 +608,7 @@
     "20080900": "Toucannon",
     "20082700": "Gumshoos",
     "20086000": "Crabominable",
+    "20082512": "Oricorio",
     "20082514": "Oricorio",
     "20083500": "Ribombee",
     "20082800": "Rockruff",
@@ -814,5 +818,8 @@
     "2001570041": "Typhlosion",
     "2009670000": "Cyclizar",
     "2009150000": "Lechonk",
-    "2009160100": "Oinkologne"
+    "2009160100": "Oinkologne",
+    "2010060000": "Iron Valiant",
+    "2010210000": "Raging Bolt",
+    "2009530000": "Rellor"
 }

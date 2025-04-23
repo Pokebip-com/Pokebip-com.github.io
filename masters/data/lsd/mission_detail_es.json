@@ -305,5 +305,7 @@
     "override_detail_6120_1_09": "Me gustaría que captures el retrato\nde alguien expresivo que tenga como\nafición la fotografía, la música o la\npintura. ¡Pero no te olvides de\npedirles permiso si vas a sacar\nfotos de alguna de sus obras!",
     "override_detail_6120_1_10": "¡Fotografiar objetos en movimiento,\ncomo podría ser una capa ondeando\nal viento, puede ser muy complicado!\nSería increíble si consiguieses sacar\nuna foto así. ¡A por todas!",
     "override_detail_7010_1_01": "Completa los combates diarios\npor regiones.",
-    "77_element_1": "[Name:EventName ]"
+    "77_element_1": "[Name:EventName ]",
+    "override_detail_7040_1_01": "Completa un combate de un jugador\nen el evento especial de todos los\ntipos \"Entrenamientotal: ¡A la cima!\"\nuna vez.\n\nNota: Puedes jugar el evento en la\nsección \"Recomendados\".",
+    "override_detail_7040_1_02": "Completa un combate de un jugador\nen el evento especial de todos los\ntipos \"Entrenamientotal: ¡A la cima!\"\ntres veces.\n\nNota: Puedes jugar el evento en la\nsección \"Recomendados\"."
 }

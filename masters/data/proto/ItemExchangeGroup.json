@@ -410,6 +410,10 @@
 { "itemExchangeGroupId": 2703015, "u2": 1, "scheduleId": "7030_3W_Event_Aca_Exchange", "bannerId": 1703006, "u5": 0 },
 { "itemExchangeGroupId": 2703020, "u2": 1, "scheduleId": "7030_3W_Event_TrainersFile_Exchange", "bannerId": 1506006, "u5": 0 },
 { "itemExchangeGroupId": 2703030, "u2": 1, "scheduleId": "7030_4W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 },
+{ "itemExchangeGroupId": 2704010, "u2": 1, "scheduleId": "7040_1W_Event3_exchange", "bannerId": 1704002, "u5": 0 },
+{ "itemExchangeGroupId": 2704020, "u2": 1, "scheduleId": "7040_2W_Event1_Exchange", "bannerId": 1602012, "u5": 0 },
+{ "itemExchangeGroupId": 2704030, "u2": 1, "scheduleId": "7040_4W_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 },
+{ "itemExchangeGroupId": 2704040, "u2": 1, "scheduleId": "7040_5W_Event1_Exchange", "bannerId": 1601011, "u5": 0 },
 { "itemExchangeGroupId": 2720010, "u2": 1, "scheduleId": "7020_1W_Event_MultiBattle_Exchange", "bannerId": 1702005, "u5": 0 },
 { "itemExchangeGroupId": 2720040, "u2": 1, "scheduleId": "7020_5W_Event_PokemasDay_Exchange", "bannerId": 1501008, "u5": 0 },
 { "itemExchangeGroupId": 2720050, "u2": 1, "scheduleId": "7020_5W_Event_Button_Exchange_1", "bannerId": 1510003, "u5": 0 }

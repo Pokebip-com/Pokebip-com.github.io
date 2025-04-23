@@ -342,6 +342,7 @@
     "20036300": "Obalie",
     "20036400": "Phogleur",
     "20036500": "Kaimorse",
+    "20036900": "Relicanth",
     "20037100": "Draby",
     "20037300": "Drattak",
     "20037600": "Métalosse",
@@ -380,6 +381,7 @@
     "20040800": "Kranidos",
     "20040900": "Charkos",
     "20041000": "Dinoclier",
+    "20041100": "Bastiodon",
     "20041311": "Cheniselle",
     "20041600": "Apireine",
     "20041900": "Mustéflott",
@@ -535,6 +537,7 @@
     "20064111": "Boréas",
     "20064112": "Boréas",
     "20064211": "Fulguris",
+    "20064212": "Fulguris",
     "20064300": "Reshiram",
     "20064400": "Zekrom",
     "20064511": "Démétéros",
@@ -605,6 +608,7 @@
     "20080900": "Bazoucan",
     "20082700": "Argouste",
     "20086000": "Crabominable",
+    "20082512": "Plumeline",
     "20082514": "Plumeline",
     "20083500": "Rubombelle",
     "20082800": "Rocabot",
@@ -814,5 +818,8 @@
     "2001570041": "Typhlosion",
     "2009670000": "Motorizard",
     "2009150000": "Gourmelet",
-    "2009160100": "Fragroin"
+    "2009160100": "Fragroin",
+    "2010060000": "Garde-de-Fer",
+    "2010210000": "Ire-Foudre",
+    "2009530000": "Léboulérou"
 }

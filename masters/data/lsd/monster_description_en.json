@@ -30,7 +30,9 @@
     "20003400": "Nidoking’s thick tail packs enormously destructive power. With one swing, it can topple a metal transmission tower. Once this Pokémon goes on a rampage, there is no stopping it.",
     "20003500": "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves.",
     "20003600": "It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.",
+    "20003800": "It is vindictive and relentless by nature. Those who cross it even once will be cursed for a thousand years, along with their descendants.",
     "20003900": "Recordings of Jigglypuff’s strange lullabies can be purchased from department stores. These CDs can be found near the bedding area.",
+    "20004000": "Thanks to its bouncy body and fine fur, this Pokémon is sought after. Holding one in your arms while you sleep feels great.",
     "20004100": "It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.",
     "20004200": "Every once in a while, you’ll see a Golbat that’s missing some fangs. This happens when hunger drives it to try biting a Steel-type Pokémon.",
     "20004501": "Vileplume’s toxic pollen triggers atrocious allergy attacks. That’s why it is advisable never to approach any attractive flowers in a jungle, however pretty they may be.",
@@ -354,6 +356,7 @@
     "20064000": "Its head sprouts horns as sharp as blades. Using whirlwind-like movements, it confounds and swiftly cuts opponents.",
     "20064111": "The lower half of its body is wrapped in a cloud of energy. It zooms through the sky at 200 mph.",
     "20064112": "In every direction it flies, creating winds so powerful, they blow everything away.",
+    "20064212": "The spikes on its tail discharge immense bolts of lightning. It flies around the Unova region firing off lightning bolts.",
     "20064300": "This legendary Pokémon can scorch the world with fire. It helps those who want to build a world of truth.",
     "20064400": "This legendary Pokémon can scorch the world with lightning. It assists those who want to build an ideal world.",
     "20064511": "Lands visited by Landorus grant such bountiful crops that it has been hailed as “The Guardian of the Fields.”",
@@ -389,6 +392,7 @@
     "20073900": "It lived in cold areas in ancient times. It’s said that when Amaura whinnies, auroras appear in the night sky.",
     "20074000": "An Aurorus was found frozen solid within a glacier, just as it appeared long ago, which became quite a big event in the news.",
     "20076700": "Once a fight breaks out, it will unflinchingly charge at dragon Pokémon that are many times larger than itself.",
+    "20076100": "It overwhelms opponents with quick moves, but sometimes it showboats for too long when it’s using a special move and gets itself into a pinch.",
     "20076600": "Some say that deep beneath the surface of the world, a pack of Carbink live with their queen in a kingdom of jewels.",
     "20076300": "It uses its horns to check out its surroundings. They’re very sensitive, so if you grab them, it will feel a strong shock and be unable to move.",
     "20076000": "Although it’s unclear why it collects keys, giving it a key makes Klefki very happy. However, it apparently only likes master keys.",
@@ -600,5 +604,9 @@
     "2006280041": "Screaming a bloodcurdling battle cry, this huge and ferocious bird Pokémon goes out on the hunt. It blasts lakes with shock waves, then scoops up any prey that float to the water’s surface.",
     "2009670000": "Apparently Cyclizar has been allowing people to ride on its back since ancient times. Depictions of this have been found in 10,000-year-old murals.",
     "2001570041": "Said to purify lost, forsaken souls with its flames and guide them to the afterlife. I believe its form has been influenced by the energy of the sacred mountain towering at Hisui’s center.",
-    "2009150000": "This Pokémon spurns all but the finest of foods. Its body gives off an herblike scent that bug Pokémon detest."
+    "2009150000": "This Pokémon spurns all but the finest of foods. Its body gives off an herblike scent that bug Pokémon detest.",
+    "2009160100": "This Pokémon sends a flowerlike scent wafting about. Well-developed muscles in its legs allow it to leap more than 16 feet with no trouble at all.",
+    "2010060000": "It has some similarities to a mad scientist’s invention covered in a paranormal magazine.",
+    "2010210000": "It’s said to incinerate everything around it with lightning launched from its fur. Very little is known about this creature.",
+    "2009530000": "This Pokémon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life."
 }

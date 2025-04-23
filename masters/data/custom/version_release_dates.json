@@ -1,8 +1,16 @@
 {
   "entries": [
     {
+      "version": "2.56.0",
+      "releaseTimestamp": 1745384400
+    },
+    {
       "version": "2.55.0",
       "releaseTimestamp": 1743051600
+    },
+    {
+      "version": "2.54.0",
+      "releaseTimestamp": 1740459600000
     },
     {
       "version": "2.53.0",

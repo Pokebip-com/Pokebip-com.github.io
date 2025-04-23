@@ -30,7 +30,9 @@
     "20003400": "Nidokings Schweif ist enorm stark. Mit einer Bewegung\nkann es einen metallenen Sendemast zum Einsturz\nbringen. Wenn es in Rage gerät, ist es nur schwer\naufzuhalten.",
     "20003500": "Dieses beliebte Pokémon hat Seltenheitswert.\nWer leichtsinnig damit prahlt, eins zu haben,\nkönnte in das Visier von Dieben geraten.",
     "20003600": "Es hört eine fallende Nadel aus 1 km Entfernung und\nlebt daher tief in den Bergen, weit weg vom Lärm\nder Menschen und anderer Pokémon.",
+    "20003800": "Dieses Pokémon ist sehr rachsüchtig. Wer seinen Groll\nprovoziert, den verfolgt bis in seine Nachkommenschaft\nein tausendjähriger Fluch.",
     "20003900": "In der Bettenabteilung von Kaufhäusern erhält man auch\nCDs mit Pummeluffs wundersam einlullendem Gesang.",
+    "20004000": "Dank seines elastischen Körpers und feinen Fells ist es\nsehr beliebt. Es fühlt sich herrlich an, mit Knuddeluff in\nden Armen einzuschlafen.",
     "20004100": "Da es keine Augäpfel hat, ist es blind. Mithilfe von\nUltraschallwellen, die es aus dem Mund aussendet,\nerkundet es seine Umgebung.",
     "20004200": "Um seinen Hunger zu stillen, versucht es mitunter auch,\nin Stahl-Pokémon zu beißen, und bricht sich dabei die\nReißzähne ab.",
     "20004501": "Giflors giftige Pollen rufen böse allergische Anfälle hervor.\nDeshalb ist es ratsam, sich keiner schönen Blume im\nDschungel zu nähern, so anziehend sie auch sein mag.",
@@ -354,6 +356,7 @@
     "20064000": "Das Horn an seinem Kopf ist eine scharfe Klinge.\nNeckt seine Gegner mit quirligen Bewegungen\nund greift blitzartig an.",
     "20064111": "Sein Unterkörper ist in eine wolkenartige Energieschicht\ngehüllt. Es jagt mit bis zu 300 km/h durch die Lüfte.",
     "20064112": "Es fliegt den gesamten Globus ab. Der Wind, den es dabei\nerzeugt, ist so stark, dass er alles aus den Angeln hebt.",
+    "20064212": "Es greift mit elektrischer Ladung aus den Dornen seiner\nRute an und bombardiert Einall aus der Luft mit Blitzen.",
     "20064300": "Ein Legendäres Pokémon mit der Macht, die Welt mit\nseinen Flammen einzuäschern. Hilft allen, die nach\nWirklichkeit streben.",
     "20064400": "Ein Legendäres Pokémon mit der Macht, die Welt durch\nDonner einzuäschern. Hilft allen, die einer Welt der\nWünsche harren.",
     "20064511": "Da an Orten, wo es sich blicken lässt, mit reicher Ernte\nzu rechnen ist, nennt man es auch den „Herrn des\nAckerbaus“.",
@@ -389,6 +392,7 @@
     "20073900": "Vor Urzeiten lebte es in kalten Gebieten. Es heißt,\nwenn Amarino seine Stimme erklingen lässt, erscheinen\nPolarlichter.",
     "20074000": "Kürzlich sorgte der Fund eines in einem Eisberg\neingeschlossenen, perfekt konservierten Amagargas\naus der Urzeit für Schlagzeilen.",
     "20076700": "Kommt es zum Kampf, stürzt es sich furchtlos ins\nGefecht, selbst wenn sein Gegner ein vielfach\ngrößeres Drachen-Pokémon ist.",
+    "20076100": "Es dominiert seine Gegner mit flinken Attacken.\nOft wird es ihm aber zum Verhängnis, dass es\nseine Spezialtechniken zu lange in Szene setzt.",
     "20076600": "Tief unter der Erde gibt es angeblich ein Königreich aus\nDiamanten, in dem Rocara zusammen mit ihrer Königin\nleben.",
     "20076300": "Mit seinen Fühlern tastet es die Umgebung ab. Es ist so\nempfindlich, dass es in Schockstarre verfällt, wenn man\nes in die Hand nimmt.",
     "20076000": "Niemand weiß, weshalb es Schlüssel sammelt,\naber schenkt man ihm einen, freut es sich sehr.\nEs akzeptiert allerdings nur Generalschlüssel.",
@@ -600,5 +604,9 @@
     "2006280041": "Mit entsetzlichem Kampfgeschrei geht dieses\nerbarmungslose, riesige Vogel-Pokémon auf Jagd.\nEs erzeugt Stoßwellen über Seen, um sodann die\nemportreibende Beute zu ergreifen.",
     "2009670000": "Seit uralten Zeiten soll es Menschen auf seinem Rücken\nreiten lassen. Darstellungen davon finden sich auf\n10 000 Jahre alten Wandmalereien.",
     "2001570041": "Ich vermute, dass die Energie des heiligen Berges im\nZentrum Hisuis sein Äußeres beeinflusst hat. Es heißt,\nes reinige verlorene Seelen in seinen Flammen, um sie\nsodann ins Jenseits zu führen.",
-    "2009150000": "Es nimmt nur erlesene Kost zu sich. Sein Körper sondert\neinen kräuterartigen Geruch ab, den Käfer-Pokémon\nabstoßend finden."
+    "2009150000": "Es nimmt nur erlesene Kost zu sich. Sein Körper sondert\neinen kräuterartigen Geruch ab, den Käfer-Pokémon\nabstoßend finden.",
+    "2009160100": "Es verbreitet ein blumiges Aroma. Mit seinen gut\nausgebildeten Beinmuskeln kann es leicht über 5 m weit\nspringen.",
+    "2010060000": "Es weist einige Ähnlichkeiten mit der Erfindung eines\nverrückten Wissenschaftlers auf, die in einer esoterischen\nZeitschrift erwähnt wurde.",
+    "2010210000": "Man sagt, dass es mit den Blitzen, die es aus seinem Fell\nabfeuert, alles in seiner Umgebung zu Asche verbrennt.\nGenaueres ist nicht bekannt.",
+    "2009530000": "Es vermischt Erde und Sand mit Psycho-Kräften, um eine\nSchlammkugel zu formen. Diese schätzt es mehr als sein\neigenes Leben."
 }

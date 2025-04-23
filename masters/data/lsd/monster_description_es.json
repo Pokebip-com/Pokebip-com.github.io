@@ -30,7 +30,9 @@
     "20003400": "La gruesa cola de Nidoking encierra una fuerza\nrealmente destructora. Con una vez que la agite, es\ncapaz de tumbar una torre metálica de transmisión.\nUna vez que este Pokémon se desboca, no hay quien\nlo pare.",
     "20003500": "Es muy popular y la escasez de ejemplares lo hace muy\nvalioso. Quien presume mucho de tener uno se arriesga\na que se lo roben.",
     "20003600": "Su fino oído puede percibir la caída de un alfiler a\nun kilómetro de distancia. Por eso prefiere vivir en las\nmontañas, lejos del mundanal ruido.",
+    "20003800": "Un Pokémon extraordinariamente vengativo. Si recibe\nuna afrenta, su rencor puede perdurar durante un\nmilenio y trascender generaciones.",
     "20003900": "En la sección de muebles de dormitorio de los grandes\nalmacenes se pueden encontrar discos recopilatorios de\nnanas cantadas por Jigglypuff.",
+    "20004000": "Su cuerpo flexible y su pelaje suave y sedoso lo hacen\nmuy popular. Muchos encuentran reconfortante dormir\nabrazándolo.",
     "20004100": "Como carece de ojos y no puede ver, emite\nultrasonidos que le permiten escrutar el entorno\ny orientarse.",
     "20004200": "En ocasiones se ven ejemplares a los que les falta algún\ncolmillo por haber intentado morder a un Pokémon de\ntipo Acero, presas del hambre.",
     "20004501": "El polen que contienen las esporas tóxicas de Vileplume\ncausa unos ataques de alergia muy agudos. Por eso, no\nes aconsejable acercarse a ninguna flor selvática, por\nmuy bonita que sea.",
@@ -354,6 +356,7 @@
     "20064000": "Sus cuernos son hojas afiladas. Sacude a sus enemigos\ncon sus relampagueantes movimientos y los reduce.",
     "20064111": "La parte inferior de su cuerpo, similar a una nube, está\nrecubierta de un campo de energía. Vuela a 300 km/h.",
     "20064112": "Le gusta ir volando de un lado a otro, generando\ntempestades tan potentes que pueden echar abajo\nuna casa.",
+    "20064212": "Lanza descargas eléctricas por las púas de su cola.\nSobrevuela Teselia dejando caer rayos.",
     "20064300": "Pokémon legendario capaz de abrasar el mundo con sus\nllamas. Ayuda a quienes persiguen un mundo veraz.",
     "20064400": "Pokémon legendario capaz de chamuscar el mundo con\nsus rayos. Ayuda a quienes persiguen un mundo de\nideales.",
     "20064511": "Lo consideran una deidad de las cosechas porque los\ncultivos crecen en abundancia en las tierras por las que\npasa.",
@@ -389,6 +392,7 @@
     "20073900": "Vivía en zonas gélidas en épocas pasadas y, según\ndicen, el sonido que emite provoca la aparición de\nauroras boreales nocturnas.",
     "20074000": "El descubrimiento de un Aurorus en perfecto estado de\nconservación en el interior de un iceberg se convirtió en\nnoticia.",
     "20076700": "Cuando se enfrasca en un combate lo da todo sin\ntitubear un segundo, aunque se enfrente a un Pokémon\nde tipo Dragón más grande que él.",
+    "20076100": "Deja atónito al rival con sus rápidos ataques, pero se\nluce tanto antes de dar el golpe definitivo que a veces\nsale mal parado.",
     "20076600": "Se dice que en las profundidades subterráneas viven\ngrupos enteros de Carbink con su reina rodeados de\ntoda suerte de joyas.",
     "20076300": "Palpa los alrededores con sus cuernos. Estos son tan\nsensibles que se queda paralizado si alguien se los\nagarra.",
     "20076000": "Su afán por coleccionar llaves es un misterio y se alegra\nmucho si le regalan una, pero si esta no es una llave\nmaestra, se le tuerce la cara.",
@@ -600,5 +604,9 @@
     "2006280041": "Esta enorme ave emite un espeluznante graznido de\nguerra cuando sale de caza. Lanza ondas contra los lagos\ny atrapa a las presas que afloran a la superficie.",
     "2009670000": "Según parece, ha permitido que los humanos monten en\nél desde tiempos remotos. Aparece en pinturas rupestres\nde hace diez mil años.",
     "2001570041": "Mi teoría es que la montaña sagrada que se yergue en\nel centro de Hisui ha influido en su apariencia. Se dice\nque purifica con sus llamas a las almas errantes y las\nconduce al otro mundo.",
-    "2009150000": "Se alimenta únicamente de los más selectos manjares.\nSu cuerpo despide un olor herbáceo que los Pokémon de\ntipo Bicho detestan."
+    "2009150000": "Se alimenta únicamente de los más selectos manjares.\nSu cuerpo despide un olor herbáceo que los Pokémon de\ntipo Bicho detestan.",
+    "2009160100": "Desprende una fragancia floral. Puede saltar más de 5 m\nfácilmente gracias a los músculos tan desarrollados de\nsus patas.",
+    "2010060000": "Comparte varios rasgos con el invento de un científico\nloco que apareció en un artículo de una revista esotérica.",
+    "2010210000": "Se dice que calcina todo cuanto lo rodea con los rayos\nque libera su pelaje. Aparte de eso, se sabe muy poco\nsobre esta criatura.",
+    "2009530000": "Mezcla tierra, arena y energía psíquica para crear una\nbola de barro que atesora por encima de su propia vida."
 }

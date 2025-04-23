@@ -305,5 +305,7 @@
     "override_detail_6120_1_09": "Vorrei ammirare qualcuno dotato di\ntalento creativo, capace di esprimersi\ntramite fotografia, musica o pittura.\nMa ricordati di chiedere il permesso\ndi immortalare le sue opere!",
     "override_detail_6120_1_10": "È complicato raffigurare con una foto\nil senso di movimento, come,\nad esempio, quello di un mantello\nsvolazzante! Ma sarebbe fantastico,\nse tu ci riuscissi! Metticela tutta!",
     "override_detail_7010_1_01": "Completa una delle lotte\nregionali giornaliere.",
-    "77_element_1": "[Name:EventName ]"
+    "77_element_1": "[Name:EventName ]",
+    "override_detail_7040_1_01": "Completa una lotta in modalità\nsingola nell'evento speciale per tutti\ni tipi di danno \"Supercompetizione -\nPuntiamo alla vetta!\"\n\nPuoi completare l'evento nella\nsezione \"Consigliate\".",
+    "override_detail_7040_1_02": "Completa tre lotte in modalità singola\nnell'evento speciale per tutti i tipi\ndi danno \"Supercompetizione -\nPuntiamo alla vetta!\"\n\nPuoi completare l'evento nella\nsezione \"Consigliate\"."
 }

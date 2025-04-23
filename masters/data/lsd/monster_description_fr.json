@@ -30,7 +30,9 @@
     "20003400": "L'épaisse queue de Nidoking est d'une puissance\nincroyable. En un seul coup, il peut renverser une\ntour métallique. Lorsque ce Pokémon se déchaîne,\nplus rien ne peut l'arrêter.",
     "20003500": "Il est très rare en dépit de sa popularité. Ne le laissez\npas sans surveillance, car il risquerait de se faire dérober\npar un voleur de Pokémon !",
     "20003600": "Il préfère vivre au fond des montagnes, loin des humains\net des Pokémon, car il peut entendre une aiguille tomber\nà un kilomètre de distance.",
+    "20003800": "Un Pokémon très rancunier. S'il est offensé,\nson ressentiment peut poursuivre le coupable\net sa descendance pendant un millénaire.",
     "20003900": "Les rayons literie des magasins proposent généralement\ndes CD de berceuses chantées par des Rondoudou.",
+    "20004000": "Il est célébré pour son corps élastique et son pelage\nsoyeux. Quel bonheur que de faire une sieste en serrant\nun Grodoudou contre soi !",
     "20004100": "Dépourvu d'yeux, il se repère dans l'espace\ngrâce aux ultrasons qu'il émet avec sa bouche.",
     "20004200": "On rencontre parfois des Nosferalto édentés que la faim\na poussés à attaquer un Pokémon de type Acier.",
     "20004501": "Le pollen toxique de Rafflesia déclenche d'affreuses\nréactions allergiques. C'est pourquoi il est conseillé\nde ne jamais s'approcher des jolies fleurs trouvées\ndans la jungle, même lorsqu'elles sont magnifiques.",
@@ -354,6 +356,7 @@
     "20064000": "Ses cornes sont des lames effilées. Il lacère ses ennemis\ndans un mouvement tourbillonnant.",
     "20064111": "Le bas de son corps est entouré d'une masse d'énergie\nsemblable à un nuage. Il vole dans le ciel à 300 km/h.",
     "20064112": "Il voyage aux quatre vents. Son passage\nprovoque des tempêtes qui balayent tout\naux alentours.",
+    "20064212": "Sa queue lance des décharges électriques.\nIl vole dans le ciel d'Unys et fait tomber des éclairs.",
     "20064300": "Un Pokémon légendaire assez puissant pour embraser\nle monde entier. Il soutient les défenseurs de la Réalité.",
     "20064400": "Un Pokémon légendaire assez puissant pour foudroyer\nle monde entier. Il soutient ceux qui suivent leur Idéal.",
     "20064511": "Il fait fructifier les cultures partout où il passe, c'est\npourquoi on l'appelle « le dieu des moissons ».",
@@ -389,6 +392,7 @@
     "20073900": "Amagara vivait jadis dans les terres glacées. On dit que\nlorsqu'il pousse un cri, une aurore boréale nimbe le ciel\nnocturne.",
     "20074000": "Un Dragmara a été retrouvé dans un glacier, en parfait\nétat de conservation, ce qui a fait la une des actualités.",
     "20076700": "Une fois le combat entamé, il n'hésite pas\nune seconde, même contre un Pokémon\nde type Dragon dix fois plus gros que lui.",
+    "20076100": "Il terrasse ses adversaires grâce à sa vitesse,\nmais se pavane tant avant de lancer sa botte\nsecrète qu'il se retrouve parfois en difficulté.",
     "20076600": "Au plus profond de la terre se trouverait un royaume\nde pierres précieuses où vivent la reine des Strassie\net son peuple.",
     "20076300": "Ses cornes lui permettent d'inspecter les alentours.\nElles sont si sensibles que tout son corps se fige\nsi on les pince.",
     "20076000": "Nul ne sait pourquoi il collectionne les clés, mais il est\naux anges dès qu'on lui en donne une. Il n'accepte\ntoutefois que les passe-partout.",
@@ -600,5 +604,9 @@
     "2006280041": "De taille imposante, ce preux volatile chasse\nen lançant de terribles cris de guerre. Il propage\ndes ondes de choc dans les lacs, puis se saisit\ndes proies remontées à la surface.",
     "2009670000": "Des fresques vieilles de 10 000 ans laissent\npenser que ce Pokémon transporte des êtres\nhumains sur son dos depuis les temps anciens.",
     "2001570041": "On dit qu'il purifie les âmes perdues à l'aide\nde ses flammes avant de les envoyer dans\nl'au-delà. Je pense que sa forme est influencée\npar la montagne sacrée située au cœur de Hisui.",
-    "2009150000": "Il ne mange que des mets raffinés. Son corps\ndégage une odeur d'herbes que les Pokémon\nInsecte exècrent."
+    "2009150000": "Il ne mange que des mets raffinés. Son corps\ndégage une odeur d'herbes que les Pokémon\nInsecte exècrent.",
+    "2009160100": "Il dégage un agréable parfum fleuri. Les muscles\nbien développés de ses jambes lui permettent de\nsauter des obstacles de cinq mètres avec aisance.",
+    "2010060000": "Il ressemble un peu à l'invention d'un cerveau\ndément mentionnée dans une revue consacrée\naux phénomènes paranormaux.",
+    "2010210000": "On raconte que la foudre qui s'échappe\nde sa fourrure peut brûler tout ce qui\nl'entoure, mais on en sait peu sur lui.",
+    "2009530000": "Il confectionne une boule de boue en mélangeant\nde la terre, du sable et de l'énergie de type Psy.\nÀ ses yeux, elle importe plus que sa propre vie."
 }

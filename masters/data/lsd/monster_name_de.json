@@ -342,6 +342,7 @@
     "20036300": "Seemops",
     "20036400": "Seejong",
     "20036500": "Walraisa",
+    "20036900": "Relicanth",
     "20037100": "Kindwurm",
     "20037300": "Brutalanda",
     "20037600": "Metagross",
@@ -380,6 +381,7 @@
     "20040800": "Koknodon",
     "20040900": "Rameidon",
     "20041000": "Schilterus",
+    "20041100": "Bollterus",
     "20041311": "Burmadame",
     "20041600": "Honweisel",
     "20041900": "Bojelin",
@@ -535,6 +537,7 @@
     "20064111": "Boreos",
     "20064112": "Boreos",
     "20064211": "Voltolos",
+    "20064212": "Voltolos",
     "20064300": "Reshiram",
     "20064400": "Zekrom",
     "20064511": "Demeteros",
@@ -605,6 +608,7 @@
     "20080900": "Tukanon",
     "20082700": "Manguspektor",
     "20086000": "Krawell",
+    "20082512": "Choreogel",
     "20082514": "Choreogel",
     "20083500": "Bandelby",
     "20082800": "Wuffels",
@@ -814,5 +818,8 @@
     "2001570041": "Tornupto",
     "2009670000": "Mopex",
     "2009150000": "Ferkuli",
-    "2009160100": "Fragrunz"
+    "2009160100": "Fragrunz",
+    "2010060000": "Eisenkrieger",
+    "2010210000": "Furienblitz",
+    "2009530000": "Relluk"
 }

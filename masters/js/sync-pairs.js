@@ -1543,7 +1543,7 @@ function setSyncGrid() {
 
             if(cell) {
                 if(cell.version < curr.version) {
-                    acc = acc.filter(_ => cellId !== curr.cellId);
+                    acc = acc.filter(a => a.cellId !== curr.cellId);
                     acc.push(curr);
                 }
 

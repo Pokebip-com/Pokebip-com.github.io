@@ -30,7 +30,9 @@
     "20003400": "La possente coda di Nidoking è dotata di un enorme\npotere distruttivo. Con un solo colpo riesce ad abbattere\nun pilone metallico. Quando si scatena non c'è modo di\nfermare la sua furia.",
     "20003500": "Questo Pokémon molto popolare è piuttosto raro\ne prezioso. È meglio evitare di metterlo troppo in\nmostra, o si corre il rischio di farselo rubare.",
     "20003600": "Può sentire il rumore di uno spillo che cade a 1 km\ndi distanza. Per questo vive in recessi montani, lontano\nda esseri umani e Pokémon.",
+    "20003800": "È molto ostinato e vendicativo. Chi si attira il suo rancore\ncade vittima di una maledizione millenaria che si\ntrasmette anche ai discendenti.",
     "20003900": "Ai grandi magazzini nel reparto camera da letto\nsono in vendita dei CD con la registrazione della\nmisteriosa ninnananna cantata da Jigglypuff.",
+    "20004000": "È molto amato per l'elasticità del suo corpo\ne la morbidezza della sua pelliccia. Dormire abbracciati\na questo Pokémon è molto piacevole.",
     "20004100": "Non ha occhi e non può vedere, ma è in grado di\npercepire l'ambiente circostante emettendo ultrasuoni\ndalla bocca.",
     "20004200": "A volte si vedono dei Golbat senza canini perché,\nspinti dalla fame, hanno provato ad azzannare\nun Pokémon di tipo Acciaio.",
     "20004501": "Il polline velenoso di Vileplume scatena paurose reazioni\nallergiche. Per questo motivo si consiglia di non\navvicinarsi mai a nessun fiore di bosco, per quanto\nbello possa essere.",
@@ -354,6 +356,7 @@
     "20064000": "Le corna della testa sono lame affilate. Muovendosi come\nun turbine, scuote e falcia fulmineo i nemici.",
     "20064111": "Ha la parte inferiore del corpo avvolta in una nuvola\ndi energia. Sfreccia nei cieli a 300 km/h.",
     "20064112": "Vola nei cieli in perenne girovagare e produce un vento\ncosì forte da spazzare via ogni cosa incontri.",
+    "20064212": "Lancia scariche elettriche dagli aculei della coda.\nVola per i cieli di Unima scagliando fulmini.",
     "20064300": "Questo Pokémon leggendario può rendere il mondo\nun inferno di fiamme. Aiuta chi vuole costruire un mondo\ndi verità.",
     "20064400": "Questo Pokémon leggendario può riempire il mondo\ndi fulmini e saette. Aiuta chi vuole costruire un mondo\nideale.",
     "20064511": "Poiché le terre che visita producono abbondanti raccolti,\nè considerato una benedizione per i campi.",
@@ -389,6 +392,7 @@
     "20073900": "In passato abitava nelle terre più fredde. Si dice che\nquando emette il suo verso, nel cielo notturno compaia\nl'aurora boreale.",
     "20074000": "Di recente ha fatto notizia il ritrovamento di un esemplare\nin perfetto stato di conservazione intrappolato in un\niceberg.",
     "20076700": "Nella lotta, parte all'attacco senza esitare un istante,\nanche quando si trova di fronte imponenti Pokémon\ndi tipo Drago.",
+    "20076100": "Prevale sul nemico grazie alla sua rapidità, ma a volte\nper mettersi in mostra aspetta troppo a lanciare l'attacco\nfinale e si trova in difficoltà.",
     "20076600": "Corre voce che nelle profondità della terra ci sia un regno\nfatto di pietre preziose dove vivono i Carbink assieme alla\nloro regina.",
     "20076300": "I corni con cui sonda l'ambiente circostante sono così\nsensibili che, se qualcuno glieli afferra, il Pokémon resta\npietrificato per lo shock.",
     "20076000": "Per qualche motivo che nessuno sa, colleziona chiavi.\nÈ felicissimo quando gliene regalano una, ma attenzione:\naccetta solo i passe-partout.",
@@ -600,5 +604,9 @@
     "2006280041": "Enorme e feroce volatile che nel cacciare leva\nun tremendo grido di guerra. Sferza gli specchi d'acqua\ncon onde d'urto e ghermisce le prede in tal modo\ncondotte a galla.",
     "2009670000": "Sembra che trasportasse esseri umani sul dorso\ngià nell'antichità. È rappresentato in pitture rupestri\nrisalenti a 10.000 anni fa.",
     "2001570041": "Reputo l'atmosfera del monte sacro che si erge nel cuore\ndi Hisui causa del suo mutato aspetto. Si dice mondi\nle anime smarrite con le proprie vampe per condurle\nverso l'aldilà.",
-    "2009150000": "Si nutre esclusivamente del cibo più pregiato. Il suo corpo\nemette un odore di erbe che i Pokémon Coleottero\ndetestano."
+    "2009150000": "Si nutre esclusivamente del cibo più pregiato. Il suo corpo\nemette un odore di erbe che i Pokémon Coleottero\ndetestano.",
+    "2009160100": "Emana un profumo simile a quello dei fiori.\nPuò spiccare facilmente salti di oltre cinque metri\ngrazie alle zampe dai muscoli ben sviluppati.",
+    "2010060000": "Presenta caratteristiche simili a quelle\ndi un'invenzione di uno scienziato pazzo\ndescritta in una rivista di paranormale.",
+    "2010210000": "Si dice che incenerisca i dintorni con i fulmini\nche erompono dalla sua pelliccia. Questo è\ntutto ciò che si sa su questo Pokémon.",
+    "2009530000": "Mischiando energia Psico a terra e sabbia crea\nuna palla di fango che considera più preziosa\ndella sua stessa vita."
 }

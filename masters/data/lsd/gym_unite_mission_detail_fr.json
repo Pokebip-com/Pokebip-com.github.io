@@ -10,7 +10,7 @@
     "6_element": "[Name:Item ]",
     "7": "Obtenez un meilleur score total\nde [Digit:9digits ] points ou plus dans\nl'évènement meilleur score suivant.\n(Ce total inclut les autres membres\nde l'Arène.)",
     "7_element": "[Name:QuestGroupTitle ]",
-    "8": "Obtenez un record de [Digit:9digits ] victoires\nconsécutives dans l'Aventure Légendaire.\n(Ce total inclut les autres membres\nde l'Arène.)",
+    "8": "Obtenez un record de [Digit:9digits ] victoire[FR:Qty P=\"s\" ]\n[FR:Qty P=\"consécutives\" ] dans l'Aventure Légendaire.\n(Ce total inclut les autres membres\nde l'Arène.)",
     "8_element": "[Name:QuestGroupTitle ]",
     "9": "Obtenez un meilleur score total\nde [Digit:9digits ] points ou plus dans\nle classement par dégâts suivant.\n(Ce total inclut les autres membres\nde l'Arène.)",
     "9_element": "[Name:QuestGroupTitle ]",
