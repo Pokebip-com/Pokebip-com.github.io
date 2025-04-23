@@ -756,10 +756,11 @@ function printShopBanner(shopBanner, schedule) {
 function printEventBanner(eventBanner, lastSchedule, titleText = "") {
 
     // Événement Spécial - Match Spécial de Passio
-    if(eventBanner.type === 25) {
-        eventBanner.text1Id = eventBanner.text1Id > -1 ? eventBanner.text1Id : 17605019;
-        eventBanner.text2Id = eventBanner.text2Id > -1 ? eventBanner.text2Id : 27605020;
-    }
+    // if(eventBanner.type === 25) {
+    //     console.log(eventBanner);
+    //     eventBanner.text1Id = eventBanner.text1Id > -1 ? eventBanner.text1Id : 17605019;
+    //     eventBanner.text2Id = eventBanner.text2Id > -1 ? eventBanner.text2Id : 27605020;
+    // }
 
     let h3 = `<h3>${jData.lsd.bannerText[eventBanner.text1Id]}`;
 
@@ -788,7 +789,12 @@ function printEvents(sched, titleText = "") {
 
     scheduleDiv.innerHTML += titleText;
 
+    if(sched.scheduleId === "7040_1W_Event2") {
+        console.log("YES");
+    }
+
     let questGroups = [...new Set(scheduleQuests.map(sq => sq.questGroupId))];
+    let bannerSched;
 
     questGroups.forEach(qg => {
 
@@ -800,8 +806,10 @@ function printEvents(sched, titleText = "") {
 
             let scheduleIds = [...new Set(jData.proto.storyQuest.filter(sq => sq.questGroupId === qg).map(sq => sq.scheduleId))];
 
-            if(scheduleIds.length > 1) {
-                sched = jData.proto.schedule.find(s => s.scheduleId === scheduleIds[scheduleIds.length - 1]);
+            if (scheduleIds.length > 1) {
+                bannerSched = jData.proto.schedule.find(s => s.scheduleId === scheduleIds[scheduleIds.length - 1]);
+            } else {
+                bannerSched = sched;
             }
         }
 
@@ -809,7 +817,7 @@ function printEvents(sched, titleText = "") {
             .forEach(eventQG => {
                 let eventBanners = jData.proto.banner.filter(b => b.bannerId === eventQG.bannerId);
 
-                eventBanners.forEach(eb => printEventBanner(eb, sched));
+                eventBanners.forEach(eb => printEventBanner(eb, bannerSched));
             });
     });
 }
