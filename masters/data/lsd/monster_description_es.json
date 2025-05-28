@@ -76,6 +76,7 @@
     "20010100": "Los Electrode se alimentan de la electricidad de la\natmósfera. En días de tormenta con rayos, es fácil verlos\nexplotando por todos lados tras haber consumido\ndemasiada electricidad.",
     "20010200": "Seis criaturas en una. Si Exeggcute pierde alguno de\nlos huevos que lo componen, este volverá a crecer a la\nmañana siguiente.",
     "20010300": "Ataca al rival con poderes psíquicos. Como tiene tres\ncabezas, la potencia de sus ataques se ve triplicada.",
+    "20010361": "Es el orgullo de la región de Alola. Aparece\nrepresentado en obras de arte y edificios a lo largo\nde la historia.",
     "20010561": "La región de Alola, tan frondosa y fértil, no resulta un\nentorno acogedor para Marowak. Manipula el fuego\npara mantenerse vivo.",
     "20011000": "A Weezing le encantan los gases que emanan de los\ndesperdicios que quedan en la cocina. Este Pokémon\nbusca casas sucias y descuidadas para crear su hogar.\nDe noche, cuando los habitantes de la casa duermen,\nva a por la basura.",
     "20011200": "Rhydon tiene un cuerno capaz de horadar hasta un\ndiamante en bruto y con una sacudida de la cola puede\nderribar un edificio. La piel de este Pokémon es muy\nfuerte; ni los disparos de un cañón le arañarían.",
@@ -346,6 +347,7 @@
     "20061400": "Adoran los mares gélidos del norte. Congelan su aliento\npara crear sendas por las que caminar sobre las aguas.",
     "20061500": "Nació entre nubes de nieve. Atrapa a sus presas con\nuna cadena hecha de hielo cristalizado.",
     "20061700": "Se siente ligero una vez liberado de su caparazón.\nLucha y se mueve como un ninja.",
+    "20062100": "La piel roja de su cara es más dura que una roca.\nLa usa para atacar a sus enemigos cuando los acorrala\nen cuevas angostas.",
     "20062500": "Por fuerte que sea un Bisharp, la más mínima mella en\nla hoja de su cabeza es deshonrosa y motivo de\ndestitución como líder de su grupo.",
     "20062600": "Embiste con la cabeza sin distinción. Su potencia es\ncapaz de hacer descarrilar un tren en marcha.",
     "20062800": "Las cicatrices que surcan su frente demuestran su valor,\npero las de su espalda son motivo de mofa por parte de\nsu bandada.",
@@ -385,6 +387,7 @@
     "20074612": "Han permanecido junto a estirpes de reyes durante\ngeneraciones. Mediante su poder espectral pueden\ncontrolar a humanos y a Pokémon.",
     "20074200": "Escupe hebras pegajosas de color blanco y textura\nparecida a la del algodón de azúcar, con las que\nenvuelve al enemigo y le impide que se mueva.",
     "20074300": "Puede rastrear hasta el más débil de los olores. Hace\nuso de su fino olfato para ayudar a los pasteleros más\nexquisitos.",
+    "20074800": "Al evolucionar, los dos Binacle se dividen y dan lugar a\nsiete criaturas que se aglomeran formando un Barbaracle\ny suman su poder al combatir.",
     "20071000": "Este violento Pokémon escupe veneno a los rivales que\nse le acercan. Sin embargo, por algún extraño motivo,\nse lleva muy bien con Dhelmise.",
     "20075700": "Comprime el agua que traga y la convierte en\nproyectiles de tal potencia que atraviesan incluso\ngruesas placas de metal.",
     "20073200": "Extiende su gorguera y genera energía eléctrica\nsuficiente para cubrir el consumo de electricidad\nde un rascacielos entero.",
@@ -543,6 +546,7 @@
     "2008670031": "Su cuerpo, similar a una sombra, no debe tocarse bajo\nningún concepto o se visualizarán los horribles recuerdos\nimpregnados en la imagen.",
     "2008691111": "Obsequia bayas decoradas con nata a aquellos\nEntrenadores en los que confía.",
     "2008710000": "Libera electricidad por la punta de las púas. Con sus\nafilados dientes raspa las algas pegadas a las rocas para\ningerirlas.",
+    "2008730000": "La temperatura de sus alas es de -180 °C. Sobrevuela el\ncampo esparciendo sus gélidas escamas, como si de nieve\nse tratase.",
     "2008751100": "Se enfría constantemente la cara con hielo por su escasa\nresistencia al calor. Utiliza el pelo de la cabeza para\npescar en el mar.",
     "2008751200": "El hielo de la cabeza se ha deshecho y ha revelado un\nrostro apenado que cautiva a numerosas personas.",
     "2008771100": "Siempre tiene apetito, sin importar lo mucho que coma.\nLleva con sumo cuidado las semillas que ha tostado con\nsu propia electricidad.",
@@ -608,5 +612,7 @@
     "2009160100": "Desprende una fragancia floral. Puede saltar más de 5 m\nfácilmente gracias a los músculos tan desarrollados de\nsus patas.",
     "2010060000": "Comparte varios rasgos con el invento de un científico\nloco que apareció en un artículo de una revista esotérica.",
     "2010210000": "Se dice que calcina todo cuanto lo rodea con los rayos\nque libera su pelaje. Aparte de eso, se sabe muy poco\nsobre esta criatura.",
-    "2009530000": "Mezcla tierra, arena y energía psíquica para crear una\nbola de barro que atesora por encima de su propia vida."
+    "2009530000": "Mezcla tierra, arena y energía psíquica para crear una\nbola de barro que atesora por encima de su propia vida.",
+    "20086513": "Forma que adopta Necrozma al nutrirse de la luz de\nLunala. Atrapa al enemigo con sus enormes garras y usa\nla fuerza bruta para hacerlo trizas.",
+    "2009730000": "Al parecer, se anudan la base del cuello para impedir\nque la energía que tienen almacenada en el estómago\nescape por el pico."
 }

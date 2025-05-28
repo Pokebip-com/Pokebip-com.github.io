@@ -489,7 +489,7 @@ function getCyclingRankingEvents(i) {
     const periodStart = Math.max(releaseTimestamp, initialTimestamp);
     const periodEnd = parseInt(jData.custom.versionReleaseDates[i].schedule.map(s => s.startDate).sort((a, b) => b - a)[0]);
 
-    console.log(jData.custom.versionReleaseDates[0].schedule.sort((a, b) => a.startDate - b.startDate));
+    // console.log(jData.custom.versionReleaseDates[0].schedule.sort((a, b) => a.startDate - b.startDate));
 
     // Calcul du temps écoulé depuis le premier événement jusqu'à la période de calcul
     let elapsedTime = periodStart - initialTimestamp;
@@ -788,10 +788,6 @@ function printEvents(sched, titleText = "") {
         return;
 
     scheduleDiv.innerHTML += titleText;
-
-    if(sched.scheduleId === "7040_1W_Event2") {
-        console.log("YES");
-    }
 
     let questGroups = [...new Set(scheduleQuests.map(sq => sq.questGroupId))];
     let bannerSched;

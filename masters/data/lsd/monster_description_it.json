@@ -76,6 +76,7 @@
     "20010100": "Electrode si nutre dell'elettricità presente nell'atmosfera.\nQuando i fulmini solcano il cielo, è possibile scorgere\nmolti di questi Pokémon esplodere per aver ingerito\nun'eccessiva dose di elettricità.",
     "20010200": "Ciascun Pokémon è formato da sei individui.\nAnche se dovesse sparirne uno per qualche motivo,\nla mattina dopo sarebbero di nuovo sei.",
     "20010300": "Attacca l'avversario emettendo onde psicocinetiche\nda ogni testa. La potenza complessiva risulta triplicata.",
+    "20010361": "Exeggutor è l'orgoglio di Alola. La sua immagine\nè raffigurata in diversi dipinti ed edifici storici.",
     "20010561": "La lussureggiante regione di Alola è un posto inospitale\nper Marowak, che per sopravvivere ha imparato a servirsi\ndel fuoco.",
     "20011000": "Weezing adora i gas emanati dai resti alimentari in\ndecomposizione. Si sente a suo agio in case sudicie\ne maltenute. La notte, mentre dormono tutti, lui si aggira\nfurtivo tra i rifiuti domestici.",
     "20011200": "Il corno di Rhydon riesce a fracassare anche un diamante\ngrezzo. Un colpo della sua coda abbatte un edificio.\nLa pelle-armatura di questo Pokémon è così coriacea\nda essere immune anche alle cannonate.",
@@ -346,6 +347,7 @@
     "20061400": "Predilige i freddi mari del nord. Crea strade di ghiaccio\nsoffiando con il suo alito gelido sulla superficie del mare.",
     "20061500": "È nato nelle nuvole cariche di neve. Cattura le prede\ncon una catena fatta di cristalli di ghiaccio.",
     "20061700": "Liberatosi della pesante conchiglia, è diventato leggero.\nLotta con le movenze proprie di un ninja.",
+    "20062100": "La pelle rossa del muso è più dura della pietra.\nAffronta i nemici in grotte anguste lanciandosi contro\ndi loro e colpendoli a testate.",
     "20062500": "Per quanto sia forte, se la lama sulla sua testa viene\nintaccata deve rinunciare al comando del gruppo.",
     "20062600": "Sferra testate contro tutto e tutti. Ha una forza distruttiva\ntale da far deragliare un treno in corsa.",
     "20062800": "Gli esemplari con più cicatrici sul volto sono considerati\ni più valorosi. Quelli con cicatrici sul dorso, al contrario,\nsono derisi dal gruppo.",
@@ -385,6 +387,7 @@
     "20074612": "Ha accompagnato generazioni di re. È in grado\ndi controllare e manipolare esseri umani e Pokémon\ncol suo potere spettrale.",
     "20074200": "Immobilizza il nemico avvolgendolo in filamenti bianchi,\ndolci e appiccicosi, simili a zucchero filato.",
     "20074300": "È dotato di un olfatto sensibilissimo che gli permette di\ndistinguere anche gli odori più sottili. Si serve di questo\ntalento per aiutare i pasticcieri.",
+    "20074800": "Con l'evoluzione, i due Binacle si moltiplicano\ne il Pokémon lotta con la forza di sette Binacle.",
     "20071000": "È spietato e spruzza un liquido velenoso sui Pokémon ostili\nche gli si avvicinano. Per qualche strano motivo, va\nd'accordo solo con Dhelmise.",
     "20075700": "Assorbe acqua che comprime e rilascia in un getto con\nuna pressione tale da perforare anche spesse lastre\nd'acciaio.",
     "20073200": "Può produrre energia elettrica aprendo il collare. Un solo\nPokémon di questa specie sarebbe in grado di illuminare\nun intero grattacielo.",
@@ -543,6 +546,7 @@
     "2008670031": "Non bisogna toccare il suo corpo simile a un'ombra,\no si vedranno i propri ricordi più terribili imprigionati\nnel suo motivo.",
     "2008691111": "Agli Allenatori di cui si fida regala bacche decorate\ncon la panna.",
     "2008710000": "Sprigiona elettricità dalla punta dei suoi aculei. \nUsa i denti affilati per raschiare dalle rocce\nle alghe di cui si nutre.",
+    "2008730000": "La temperatura delle sue ali è di -180 °C. Sorvola pianure\ne montagne lasciando cadere le sue scaglie gelide come\nfossero fiocchi di neve.",
     "2008751100": "Raffredda costantemente la testa con del\nghiaccio perché non sopporta il caldo. Usa il\npelo che ha sul capo per pescare le sue prede.",
     "2008751200": "Assume questa forma quando il ghiaccio che\nricopre il suo volto va in frantumi. Molti vanno\nmatti per la sua buffa espressione corrucciata.",
     "2008771100": "Indipendentemente da quanto mangia, è sempre\naffamato. Tiene molto ai semi che ha arrostito\ncon l'elettricità e li porta sempre con sé.",
@@ -608,5 +612,7 @@
     "2009160100": "Emana un profumo simile a quello dei fiori.\nPuò spiccare facilmente salti di oltre cinque metri\ngrazie alle zampe dai muscoli ben sviluppati.",
     "2010060000": "Presenta caratteristiche simili a quelle\ndi un'invenzione di uno scienziato pazzo\ndescritta in una rivista di paranormale.",
     "2010210000": "Si dice che incenerisca i dintorni con i fulmini\nche erompono dalla sua pelliccia. Questo è\ntutto ciò che si sa su questo Pokémon.",
-    "2009530000": "Mischiando energia Psico a terra e sabbia crea\nuna palla di fango che considera più preziosa\ndella sua stessa vita."
+    "2009530000": "Mischiando energia Psico a terra e sabbia crea\nuna palla di fango che considera più preziosa\ndella sua stessa vita.",
+    "20086513": "Necrozma assume questa forma quando si nutre\ndella luce di Lunala. Afferra il nemico con i suoi\nenormi artigli e lo fa a pezzi con la sua potenza.",
+    "2009730000": "Sembra che il nodo che fa alla base del collo serva\na evitare che l'energia accumulata nel suo stomaco\nfuoriesca dal becco."
 }

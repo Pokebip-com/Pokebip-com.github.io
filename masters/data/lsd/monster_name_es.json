@@ -130,6 +130,7 @@
     "20010100": "Electrode",
     "20010200": "Exeggcute",
     "20010300": "Exeggutor",
+    "20010361": "Exeggutor",
     "20010400": "Cubone",
     "20010500": "Marowak",
     "20010561": "Marowak",
@@ -206,8 +207,10 @@
     "20017801": "Xatu",
     "20018100": "Ampharos",
     "20018151": "Mega-Ampharos",
+    "20018200": "Bellossom",
     "20018300": "Marill",
     "20018400": "Azumarill",
+    "20018600": "Politoed",
     "20018700": "Hoppip",
     "20018800": "Skiploom",
     "20018900": "Jumpluff",
@@ -511,6 +514,7 @@
     "20059100": "Amoonguss",
     "20059200": "Frillish",
     "20059300": "Jellicent",
+    "20059301": "Jellicent",
     "20059500": "Joltik",
     "20059800": "Ferrothorn",
     "20059900": "Klink",
@@ -739,6 +743,7 @@
     "2008670031": "Runerigus",
     "2008691111": "Alcremie",
     "2008710000": "Pincurchin",
+    "2008730000": "Frosmoth",
     "2008751100": "Eiscue",
     "2008751200": "Eiscue",
     "2008771100": "Morpeko",
@@ -821,5 +826,7 @@
     "2009160100": "Oinkologne",
     "2010060000": "Ferropaladín",
     "2010210000": "Electrofuria",
-    "2009530000": "Rellor"
+    "2009530000": "Rellor",
+    "20086513": "Necrozma",
+    "2009730000": "Flamigo"
 }

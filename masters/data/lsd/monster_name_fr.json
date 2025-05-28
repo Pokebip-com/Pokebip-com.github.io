@@ -130,6 +130,7 @@
     "20010100": "Électrode",
     "20010200": "Noeunoeuf",
     "20010300": "Noadkoko",
+    "20010361": "Noadkoko",
     "20010400": "Osselait",
     "20010500": "Ossatueur",
     "20010561": "Ossatueur",
@@ -206,8 +207,10 @@
     "20017801": "Xatu",
     "20018100": "Pharamp",
     "20018151": "Méga-Pharamp",
+    "20018200": "Joliflor",
     "20018300": "Marill",
     "20018400": "Azumarill",
+    "20018600": "Tarpaud",
     "20018700": "Granivol",
     "20018800": "Floravol",
     "20018900": "Cotovol",
@@ -511,6 +514,7 @@
     "20059100": "Gaulet",
     "20059200": "Viskuse",
     "20059300": "Moyade",
+    "20059301": "Moyade",
     "20059500": "Statitik",
     "20059800": "Noacier",
     "20059900": "Tic",
@@ -739,6 +743,7 @@
     "2008670031": "Tutétékri",
     "2008691111": "Charmilly",
     "2008710000": "Wattapik",
+    "2008730000": "Beldeneige",
     "2008751100": "Bekaglaçon",
     "2008751200": "Bekaglaçon",
     "2008771100": "Morpeko",
@@ -821,5 +826,7 @@
     "2009160100": "Fragroin",
     "2010060000": "Garde-de-Fer",
     "2010210000": "Ire-Foudre",
-    "2009530000": "Léboulérou"
+    "2009530000": "Léboulérou",
+    "20086513": "Necrozma",
+    "2009730000": "Flamenroule"
 }

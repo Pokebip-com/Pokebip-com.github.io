@@ -282,5 +282,17 @@
 { "setId": "300082", "teamSkillTagId": 20030016, "u2": "", "u3": "", "scheduleId": "FOREVER" },
 { "setId": "300083", "teamSkillTagId": 20010007, "u2": "", "u3": "", "scheduleId": "FOREVER" },
 { "setId": "300083", "teamSkillTagId": 20020008, "u2": "", "u3": "", "scheduleId": "FOREVER" },
-{ "setId": "300083", "teamSkillTagId": 20030006, "u2": "", "u3": "", "scheduleId": "FOREVER" }
+{ "setId": "300083", "teamSkillTagId": 20030006, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300084", "teamSkillTagId": 20010017, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300084", "teamSkillTagId": 20020007, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300084", "teamSkillTagId": 20030010, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300085", "teamSkillTagId": 20010014, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300085", "teamSkillTagId": 20020007, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300085", "teamSkillTagId": 20030010, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300086", "teamSkillTagId": 20010010, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300086", "teamSkillTagId": 20020009, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300086", "teamSkillTagId": 20030003, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300087", "teamSkillTagId": 20010005, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300087", "teamSkillTagId": 20010008, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "setId": "300087", "teamSkillTagId": 20020009, "u2": "", "u3": "", "scheduleId": "FOREVER" }
 ]}

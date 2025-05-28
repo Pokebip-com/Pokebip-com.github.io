@@ -148,5 +148,20 @@
 { "damageChallengeRankingId": "7040", "betterThan": 899999, "medalImgName": "score_rank_04_03", "scoreRankId": "40003", "u1": 2, "medalCategory": 4 },
 { "damageChallengeRankingId": "7040", "betterThan": 949999, "medalImgName": "score_rank_05_01", "scoreRankId": "50001", "u1": 3, "medalCategory": 5 },
 { "damageChallengeRankingId": "7040", "betterThan": 999999, "medalImgName": "score_rank_05_02", "scoreRankId": "50002", "u1": 3, "medalCategory": 5 },
-{ "damageChallengeRankingId": "7040", "betterThan": 1049999, "medalImgName": "score_rank_05_03", "scoreRankId": "50003", "u1": 3, "medalCategory": 5 }
+{ "damageChallengeRankingId": "7040", "betterThan": 1049999, "medalImgName": "score_rank_05_03", "scoreRankId": "50003", "u1": 3, "medalCategory": 5 },
+{ "damageChallengeRankingId": "7050", "betterThan": 99999, "medalImgName": "score_rank_01_01", "scoreRankId": "10001", "u1": 1, "medalCategory": 1 },
+{ "damageChallengeRankingId": "7050", "betterThan": 199999, "medalImgName": "score_rank_01_02", "scoreRankId": "10002", "u1": 1, "medalCategory": 1 },
+{ "damageChallengeRankingId": "7050", "betterThan": 299999, "medalImgName": "score_rank_01_03", "scoreRankId": "10003", "u1": 1, "medalCategory": 1 },
+{ "damageChallengeRankingId": "7050", "betterThan": 399999, "medalImgName": "score_rank_02_01", "scoreRankId": "20001", "u1": 1, "medalCategory": 2 },
+{ "damageChallengeRankingId": "7050", "betterThan": 499999, "medalImgName": "score_rank_02_02", "scoreRankId": "20002", "u1": 1, "medalCategory": 2 },
+{ "damageChallengeRankingId": "7050", "betterThan": 599999, "medalImgName": "score_rank_02_03", "scoreRankId": "20003", "u1": 1, "medalCategory": 2 },
+{ "damageChallengeRankingId": "7050", "betterThan": 649999, "medalImgName": "score_rank_03_01", "scoreRankId": "30001", "u1": 2, "medalCategory": 3 },
+{ "damageChallengeRankingId": "7050", "betterThan": 699999, "medalImgName": "score_rank_03_02", "scoreRankId": "30002", "u1": 2, "medalCategory": 3 },
+{ "damageChallengeRankingId": "7050", "betterThan": 749999, "medalImgName": "score_rank_03_03", "scoreRankId": "30003", "u1": 2, "medalCategory": 3 },
+{ "damageChallengeRankingId": "7050", "betterThan": 799999, "medalImgName": "score_rank_04_01", "scoreRankId": "40001", "u1": 2, "medalCategory": 4 },
+{ "damageChallengeRankingId": "7050", "betterThan": 849999, "medalImgName": "score_rank_04_02", "scoreRankId": "40002", "u1": 2, "medalCategory": 4 },
+{ "damageChallengeRankingId": "7050", "betterThan": 899999, "medalImgName": "score_rank_04_03", "scoreRankId": "40003", "u1": 2, "medalCategory": 4 },
+{ "damageChallengeRankingId": "7050", "betterThan": 949999, "medalImgName": "score_rank_05_01", "scoreRankId": "50001", "u1": 3, "medalCategory": 5 },
+{ "damageChallengeRankingId": "7050", "betterThan": 999999, "medalImgName": "score_rank_05_02", "scoreRankId": "50002", "u1": 3, "medalCategory": 5 },
+{ "damageChallengeRankingId": "7050", "betterThan": 1049999, "medalImgName": "score_rank_05_03", "scoreRankId": "50003", "u1": 3, "medalCategory": 5 }
 ]}

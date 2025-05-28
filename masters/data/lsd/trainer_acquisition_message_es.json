@@ -187,7 +187,7 @@
     "pvoice_ch0158_00_carnet/system011": "Os lo imploro, pues mi corazón lo anhela...\n¡Sin demora mostradme cuán radiante es\nvuestro espíritu!",
     "pvoice_ch0113_00_mikan/system011": "¡Cuánto me alegro de que me honres con tu\namistad! Esto... ¡por favor, lucha a mi lado!",
     "pvoice_ch0004_00_toko/system011": "¡Formar equipo contigo es lo más! ¡Venga,\nvamos a por otro combate!",
-    "pvoice_ch0048_00_gima/system011": "Claro que me hay cosas que me hacen feliz,\npero nunca hay que dejar que el rival lea\ntus emociones.",
+    "pvoice_ch0048_00_gima/system011": "Claro que hay cosas que me hacen feliz,\npero nunca hay que dejar que el rival lea\ntus emociones.",
     "pvoice_ch0259_00_sania/system001": "¡Encantada de conocerte! Me llamo Sonia y\nhe estado viajando para desentrañar los\nmayores misterios de Galar.",
     "pvoice_ch0106_80_kamitsure/system001": "¿Has venido a sudar la gota gorda? ¡Te voy\na dejar patidifus[ES:Gen Ref=\"255\" M=\"o\" F=\"a\" ]!",
     "pvoice_ch0249_40_rulina/system001": "Soy Cathy. Llevémonos la victoria a casa y\npasemos juntos estas fechas tan importantes.",
@@ -463,5 +463,13 @@
     "pvoice_ch0304_00_aoki/system011": "Por la presente, yo, Laureano, te emplazo\na un combate Pokémon ahora mismo.",
     "pvoice_ch0080_00_yamaotoko/system001": "Me encantan las montañas. ¡Y mi\nperseverancia montañera no tiene rival!",
     "pvoice_ch0026_00_akane/system011": "¡Confía en mí y en mi despampanante\nPokémon! ¡Nuestra belleza es supereficaz!",
-    "pvoice_ch0012_00_corni/system011": "¡Venga! ¡Junt[ES:Gen Ref=\"255\" M=\"o\" F=\"a\" ]s mejoraremos un montón!"
+    "pvoice_ch0012_00_corni/system011": "¡Venga! ¡Junt[ES:Gen Ref=\"255\" M=\"o\" F=\"a\" ]s mejoraremos un montón!",
+    "pvoice_ch0122_90_yo/system001": "¡Alola! Me llamo Elio y voy a brillar tanto\ncomo el sol.",
+    "pvoice_ch0123_90_mizuki/system001": "¡Alola, soy Selene! ¡Te mostraré un vínculo\nque brilla incluso de noche!",
+    "pvoice_ch0304_40_aoki/system001": "Por la presente, yo, Laureano, te emplazo\na un combate Pokémon ahora mismo.",
+    "pvoice_ch0358_00_nelke/system001": "¿No nos conocemos? Llámame Cael, colegui.",
+    "pvoice_ch0138_00_orchid2/system001": "Deja que me presente. Me llamo Gabriel\nOak. Me dedico a investigar las formas\nregionales de los Pokémon.",
+    "pvoice_ch0092_00_iris/system011": "¡Hola! ¡Soy yo, Iris! ¡Pasemos tiempo junt[ES:Gen Ref=\"255\" M=\"os\" F=\"as\" ]!",
+    "pvoice_ch0255_00_melon/system011": "¡Me contentaré con ver cuánto mejoras!",
+    "pvoice_ch0254_00_gordie/system011": "Tu habilidad me ha demostrado que no me\nequivoqué al aceptar tu invitación."
 }

@@ -76,6 +76,7 @@
     "20010100": "Lektrobal ernährt sich von Elektrizität aus der Atmosphäre.\nAn Tagen, an denen es blitzt, explodiert dieses Pokémon\ndauernd, da es zu viel Elektrizität zu sich nimmt.",
     "20010200": "Dieses Pokémon besteht aus sechs Individuen. Geht eines\nverloren, sind es am nächsten Morgen trotzdem auf jeden\nFall wieder sechs.",
     "20010300": "Gegen Feinde setzt es Psycho-Kräfte ein. Seine drei Köpfe\ngreifen unabhängig voneinander an, wodurch sich der\nGesamtangriff verdreifacht.",
+    "20010361": "Alola-Kokowei ist der ganze Stolz der Einwohner\nAlolas. Deshalb ziert sein Abbild auch sehr viele\ngeschichtsträchtige Gemälde und Gebäude.",
     "20010561": "Die vielfältige Flora der Alola-Region ist ein gefährliches\nTerrain für Knogga. Alola-Knogga kämpfen deshalb mit\nFeuer, um zu überleben.",
     "20011000": "Smogmog liebt die Gase verrottender, fauler\nKüchenabfälle. Dieses Pokémon sucht sich ein\nvernachlässigtes, schmutziges Gebäude und\nrichtet sich dort häuslich ein. Nachts, wenn\ndie Menschen schlafen, wühlt es im Müll.",
     "20011200": "Mit seinem Horn kann Rizeros selbst Diamanten\nzerbrechen. Ein einziger Hieb mit seinem Schweif\nkann ein Haus zum Einsturz bringen. Die Haut\ndieses Pokémon ist so hart, dass nicht einmal\nKanonenkugeln Kratzer hinterlassen.",
@@ -346,6 +347,7 @@
     "20061400": "Es liebt die kalten Meere im Norden und überquert ihre\nFlächen auf Stegen, die es mit seinem gefrorenen Atem\nbaut.",
     "20061500": "Es fängt seine Beute mit Ketten, die sich aus\nEiskristallen zusammensetzen. Entstanden ist\nes aus einer Schneewolke.",
     "20061700": "Seit es die schwere Muschel abgestreift hat, ist es viel\nleichter. Nun gleichen seine Kampfbewegungen denen\neines Ninja.",
+    "20062100": "Seine rote Kopfhaut ist fester als Stein. Es jagt seine\nGegner durch enge Höhlengänge und stürmt mit dem\nKopf voran auf sie zu.",
     "20062500": "Es heißt, dass ein Caesurio ungeachtet seiner Stärke\nseinen Rang als Anführer abtreten muss, wenn die\nKlinge an seinem Kopf schartig wird.",
     "20062600": "Rammt seine Gegner ohne Rücksicht auf Verluste mit dem\nKopf und vermag damit sogar Züge zum Entgleisen zu\nbringen.",
     "20062800": "Unter Washakwil gelten Narben an der Stirnseite\nals Beweis für Mut. Diejenigen, die viele Narben\nauf der Rückseite vorweisen, werden verhöhnt.",
@@ -385,6 +387,7 @@
     "20074612": "Generationen von Königen hatten dieses Pokémon an ihrer\nSeite. Mit seiner mysteriösen Kraft kann es Menschen und\nPokémon gleichermaßen kontrollieren.",
     "20074200": "Es stößt weiße Fäden aus, die so süß und klebrig wie\nZuckerwatte sind. Mit ihnen umwickelt es den Gegner\nund hindert ihn daran, sich zu bewegen.",
     "20074300": "Es verfügt über einen feinen Geruchssinn, mit dem es\nselbst die schwächsten Gerüche erkennen kann. Es hilft\ndeshalb oft in Konditoreien aus.",
+    "20074800": "Es entsteht bei der entwicklungsbedingten Aufspaltung der\nbeiden Bithora in sieben Vertreter ihrer Art. Gemeinsam\nverfügen sie über die siebenfache Stärke.",
     "20071000": "Ein boshaftes Pokémon, das alle, die sich ihm nähern,\nmit Gift bespritzt. Einzig mit Moruda versteht es sich\naus unbekannten Gründen gut.",
     "20075700": "Es saugt Wasser auf und feuert dieses mit hohem Druck\nals Strahl ab. Dieser ist so stark, dass er dicke Eisenplatten\ndurchlöchern kann.",
     "20073200": "Die Strommenge, die ein Elezard mit ausgebreiteten\nHautlappen durch Umwandlung von Sonnenstrahlen\nerzeugt, genügt zur Versorgung eines Wolkenkratzers.",
@@ -543,6 +546,7 @@
     "2008670031": "Man sollte seinen schattenhaften Körper nicht berühren,\nsonst zeigt es einem die schauerlichen Erinnerungen, die\nin sein Bild eingraviert wurden.",
     "2008691111": "Es macht einem Trainer, dem es vertraut, mit Beeren samt\nSahnedekoration eine Freude.",
     "2008710000": "Aus den Spitzen seiner Stacheln setzt es Elektrizität frei.\nMit seinen scharfen Zähnen schabt es Algen von Steinen\nab und frisst sie.",
+    "2008730000": "Seine Flügel sind -180 °C kalt. Während es über Felder\nund Berge fliegt, verstreut es mit Kälte versetzten\nFlügelstaub, der wie Schnee aussieht.",
     "2008751100": "Es kühlt sein Gesicht ständig mit Eis, da dieses Hitze nicht\ngut verträgt. Das Haar auf dem Kopf hängt es ins Meer\nund angelt sich damit Beute.",
     "2008751200": "Nun, da der Eisblock um seinen Kopf zerbrochen ist,\nkommt sein verdrossener Gesichtsausdruck zum Vorschein,\nder viele Menschen bezaubert.",
     "2008771100": "Egal, wie viel es auch frisst, es wird sofort wieder\nhungrig. Es röstet Samen mit seiner Elektrizität und trägt\ndiese dann vorsichtig mit sich herum.",
@@ -608,5 +612,7 @@
     "2009160100": "Es verbreitet ein blumiges Aroma. Mit seinen gut\nausgebildeten Beinmuskeln kann es leicht über 5 m weit\nspringen.",
     "2010060000": "Es weist einige Ähnlichkeiten mit der Erfindung eines\nverrückten Wissenschaftlers auf, die in einer esoterischen\nZeitschrift erwähnt wurde.",
     "2010210000": "Man sagt, dass es mit den Blitzen, die es aus seinem Fell\nabfeuert, alles in seiner Umgebung zu Asche verbrennt.\nGenaueres ist nicht bekannt.",
-    "2009530000": "Es vermischt Erde und Sand mit Psycho-Kräften, um eine\nSchlammkugel zu formen. Diese schätzt es mehr als sein\neigenes Leben."
+    "2009530000": "Es vermischt Erde und Sand mit Psycho-Kräften, um eine\nSchlammkugel zu formen. Diese schätzt es mehr als sein\neigenes Leben.",
+    "20086513": "Necrozma nimmt diese Form an, wenn es das Licht von\nLunala verschlingt. Es packt und zerreißt Gegner mit\nseinen gewaltigen Krallen.",
+    "2009730000": "Dieses Pokémon verknotet offenbar seinen Hals am\nAnsatz, damit die im Bauch gespeicherte Energie nicht\nüber den Schnabel entweicht."
 }
