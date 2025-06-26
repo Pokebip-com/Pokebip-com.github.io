@@ -34,7 +34,7 @@
     "10032000000": "Líder con más de 50 años de carrera, conocido como\nel Entrenador del Invierno. Debe su salud a una dura\nrutina de combates matinales.",
     "10033000000": "Líder de Gimnasio experto en tipo Tierra y empresario\nminero en Teselia. Algo brusco, pero su honestidad\nincuestionable se ha ganado el corazón de sus\nempleados.",
     "10034000000": "Capitana de Alola que adora viajar en busca de\ninspiración para plasmar la amistad entre Pokémon\ny humanos en sus obras.",
-    "10035000000": "Experto en tipo Eléctrico, este cauto Líder tiene\nun gimnasio lleno de obstáculos. En combates,\nsu especialidad consiste en paralizar al rival.",
+    "10035000000": "Experto en tipo Eléctrico, este cauto líder tiene\nun gimnasio lleno de obstáculos. En combates,\nsu especialidad consiste en paralizar al rival.",
     "10036000000": "Uno de los Capitanes de Alola y genio de la\nelectrónica que crea inventos sin cesar, a cual\nmás fascinante.",
     "10037000000": "Un anciano y afable Líder de Gimnasio de tipo Planta\ncuyo oficio de jardinero le ha mantenido en forma,\npor lo que es capaz de viajar a pie en busca de los\nmejores tés.",
     "10038000000": "Líder de Gimnasio de tipo Roca y minero apasionado\npor coleccionar fósiles. Siente un profundo respeto\nhacia Acerón, su padre y también Líder de Gimnasio.",
@@ -157,7 +157,7 @@
     "10160000000": "Esta Capitana de Akala es una extraordinaria pescadora,\ncomo su padre. Es bastante hogareña y le encanta pasar\ntiempo en familia o cuidar de sus dos hermanas gemelas.",
     "10149000000": "Este Capitán de Akala es además aspirante a bailarín\nprofesional. Se dedica a aprender los pasos de baile\ntradicionales de la región de Alola.",
     "10008000001": "Entrenadora que adora a los Pokémon de tipo Planta e\nimpartir clases de arreglos florales. Ejerce como Líder\nde Gimnasio en Kanto.",
-    "10035000001": "Experto en tipo Eléctrico, este cauto Líder tiene\nun gimnasio lleno de obstáculos. En combates,\nsu especialidad consiste en paralizar al rival.",
+    "10035000001": "Experto en tipo Eléctrico, este cauto líder tiene\nun gimnasio lleno de obstáculos. En combates,\nsu especialidad consiste en paralizar al rival.",
     "10148000001": "Este líder especializado en tipo Fantasma ha entrenado\nmuchas veces en secreto en el Gimnasio de Iris, por lo\nque ahora es capaz de ver lo que otros no pueden.",
     "10062000001": "Miembro del Alto Mando, inteligente y tranquila, que\nsiente una gran pasión por los Pokémon. Muestra\npredilección por el tipo Siniestro, debido a su\nnaturaleza fuerte y salvaje.",
     "10129000001": "Esta joven de sonrisa enigmática y envuelta en misterio\nes la Cronista heredera del legado del Clan Meteoro.\nViajó por la región de Hoenn con el objetivo de cumplir\nla misión que le fue encomendada.",
@@ -523,5 +523,10 @@
     "10092000001": "Joven y pizpireta Entrenadora, cuya familia convive con\nPokémon dragón. Su extraordinaria destreza le ha\npermitido proclamarse Campeona pese a su temprana\nedad.",
     "10246000002": "Entrenador y candidato a Líder de Gimnasio originario de\nGalar. Es un joven con potencial de carácter mordaz que\nfanfarronea sobre formar parte de la élite, aunque su\nactitud parece haber cambiado tras pasar su día a día\nengullido por un huracán rosa.",
     "10255000001": "Líder del Gimnasio de tipo Hielo de Galar desde que se\nencontraba en la veintena. Es una reconocida instructora\nde excelentes cualidades, aunque sus métodos resultan\nsumamente estrictos.",
-    "10254000001": "Líder del Gimnasio de tipo Roca de Galar. Cuenta con una\nlegión de fans debido a su gran popularidad y talento, y\nsiempre busca la victoria con un estilo de lucha refinado."
+    "10254000001": "Líder del Gimnasio de tipo Roca de Galar. Cuenta con una\nlegión de fans debido a su gran popularidad y talento, y\nsiempre busca la victoria con un estilo de lucha refinado.",
+    "10112900000": "Eco ha conseguido extraer todo el potencial de su\nArchipiedra Compi y ha recibido el amparo de Arceus. Al\ncombatir contra su rival, saca a relucir su alma argéntea.",
+    "10133910000": "Plata ha conseguido extraer todo el potencial de su\nArchipiedra Compi y ha recibido el amparo de Arceus.\nCombate contra su rival con su reluciente corazón de oro.",
+    "10091400000": "Cintia está pasando unas agradables vacaciones junto al\nmar. Su compi, Milotic, es más que una cara bonita: es\ntambién una aliada fiable con la que ha vivido muchos\ncombates.",
+    "10016420000": "Gerania está pasando unas agradables vacaciones junto\nal mar. Su mayor sueño es dar la vuelta al mundo con\nJumpluff, arrastradas por los vientos estacionales.",
+    "10247000001": "Este Campeón de Galar tiene una fuerza imbatible.\nSu inigualable carisma hace que sea venerado como una\nsuperestrella. La única pega que tiene es su terrible\nsentido de la orientación."
 }

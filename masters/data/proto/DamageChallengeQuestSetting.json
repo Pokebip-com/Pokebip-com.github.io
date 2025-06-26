@@ -65,5 +65,8 @@
 { "storyQuestId": "1030470400303010", "damageChallengeRule": 50600004, "trainerBaseId": "10036400", "cyclicRankingQuestNum": 0 },
 { "storyQuestId": "1030470500301010", "damageChallengeRule": "none", "trainerBaseId": "10013900", "cyclicRankingQuestNum": 0 },
 { "storyQuestId": "1030470500302010", "damageChallengeRule": 50600011, "trainerBaseId": "10024500", "cyclicRankingQuestNum": 0 },
-{ "storyQuestId": "1030470500303010", "damageChallengeRule": 50600003, "trainerBaseId": "10028900", "cyclicRankingQuestNum": 0 }
+{ "storyQuestId": "1030470500303010", "damageChallengeRule": 50600003, "trainerBaseId": "10028900", "cyclicRankingQuestNum": 0 },
+{ "storyQuestId": "1030470600501010", "damageChallengeRule": "none", "trainerBaseId": "10024400", "cyclicRankingQuestNum": 0 },
+{ "storyQuestId": "1030470600502010", "damageChallengeRule": 50600011, "trainerBaseId": "10009900", "cyclicRankingQuestNum": 0 },
+{ "storyQuestId": "1030470600503010", "damageChallengeRule": "_6060_002", "trainerBaseId": "10014700", "cyclicRankingQuestNum": 0 }
 ]}

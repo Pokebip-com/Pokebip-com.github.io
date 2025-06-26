@@ -214,5 +214,11 @@
     "event_7050_2W_MasterTicket_04": "네르케 스페셜 코스튬 확정 B서치",
     "event_7050_3W_MasterTicket_03": "송호 오 확정 버라이어티 B서치",
     "event_7050_4W_MasterTicket_01": "마쿠와 확정 버라이어티 B서치",
-    "event_7050_4W_MasterTicket_02": "멜론 확정 버라이어티 B서치"
+    "event_7050_4W_MasterTicket_02": "멜론 확정 버라이어티 B서치",
+    "event_7060_1W_SuperTicket_03": "난천 시즌 한정 출현율업 B서치",
+    "event_7060_1W_MasterTicket_04": "난천 시즌 한정 확정 B서치",
+    "event_7060_1W_SuperTicket_08": "풍란 시즌 한정 출현율업 B서치",
+    "event_7060_1W_MasterTicket_09": "풍란 시즌 한정 확정 B서치",
+    "event_7060_1W_SuperTicket_012": "시즌 한정 출현율업 B서치",
+    "event_7060_4W_SuperTicket_03": "버라이어티 출현율업 B서치"
 }

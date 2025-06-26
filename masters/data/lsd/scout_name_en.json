@@ -214,5 +214,11 @@
     "event_7050_2W_MasterTicket_04": "Clive Costume Guaranteed Ticket Scout",
     "event_7050_3W_MasterTicket_03": "Samson Oak Guaranteed Variety Scout",
     "event_7050_4W_MasterTicket_01": "Gordie Guaranteed Variety Scout",
-    "event_7050_4W_MasterTicket_02": "Melony Guaranteed Variety Scout"
+    "event_7050_4W_MasterTicket_02": "Melony Guaranteed Variety Scout",
+    "event_7060_1W_SuperTicket_03": "Cynthia Seasonal Featured Ticket Scout",
+    "event_7060_1W_MasterTicket_04": "Cynthia Seasonal Guaranteed Ticket Scout",
+    "event_7060_1W_SuperTicket_08": "Skyla Seasonal Featured Ticket Scout",
+    "event_7060_1W_MasterTicket_09": "Skyla Seasonal Guaranteed Ticket Scout",
+    "event_7060_1W_SuperTicket_012": "Seasonal Featured Ticket Scout",
+    "event_7060_4W_SuperTicket_03": "Variety Featured Ticket Scout"
 }

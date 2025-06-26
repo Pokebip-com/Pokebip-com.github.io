@@ -660,5 +660,12 @@
 { "itemId": "750000000718", "descriptionId": 600000, "imageId": "i075_0017_00", "u4": 0, "storyQuestId": "611005", "trainerId": "-1", "scheduleId": "7050_1W_Event3_Exchange", "itemNameOverride": "750000000582" },
 { "itemId": "750000000719", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611007", "trainerId": "-1", "scheduleId": "7050_2W_Event1", "itemNameOverride": "750000000611" },
 { "itemId": "750000000720", "descriptionId": 600000, "imageId": "i075_0002_00", "u4": 0, "storyQuestId": "611010", "trainerId": "-1", "scheduleId": "7050_4W_Event_TrainersFile_Exchange", "itemNameOverride": "750000000583" },
-{ "itemId": "750000000721", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611011", "trainerId": "-1", "scheduleId": "7050_4W_PokemasDay_Exchange", "itemNameOverride": "750000000181" }
+{ "itemId": "750000000721", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611011", "trainerId": "-1", "scheduleId": "7050_4W_PokemasDay_Exchange", "itemNameOverride": "750000000181" },
+{ "itemId": "750000000722", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611021", "trainerId": "-1", "scheduleId": "7060_1W_Event_1", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000723", "descriptionId": 600000, "imageId": "i075_0045_01", "u4": 0, "storyQuestId": "611022", "trainerId": "-1", "scheduleId": "7060_1W_Event_2_Exchange", "itemNameOverride": "750000000472" },
+{ "itemId": "750000000724", "descriptionId": 600000, "imageId": "i075_0045_02", "u4": 0, "storyQuestId": "611022", "trainerId": "-1", "scheduleId": "7060_1W_Event_2_Exchange", "itemNameOverride": "750000000473" },
+{ "itemId": "750000000725", "descriptionId": 600000, "imageId": "i075_0005_00", "u4": 0, "storyQuestId": "611024", "trainerId": "-1", "scheduleId": "7060_2W_Event_2_Exchange", "itemNameOverride": "750000000602" },
+{ "itemId": "750000000726", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611030", "trainerId": "-1", "scheduleId": "7060_3W_Event_2", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000727", "descriptionId": 600000, "imageId": "i075_0001_00", "u4": 0, "storyQuestId": "611032", "trainerId": "-1", "scheduleId": "7060_4W_Event_2_Exchange", "itemNameOverride": "750000000604" },
+{ "itemId": "750000000728", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611033", "trainerId": "-1", "scheduleId": "7060_4W_Event_3_Exchange", "itemNameOverride": "750000000181" }
 ]}

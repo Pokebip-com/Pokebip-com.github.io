@@ -30,6 +30,7 @@
 { "SalonMemorialArtItemId": "1512008", "ArtworkCategory": "No_2000_Plus", "NumberID": "2008", "scheduleId": "6080_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0002_0007_00", "sort": "-200109", "u8": "0" },
 { "SalonMemorialArtItemId": "1512009", "ArtworkCategory": "No_2000_Plus", "NumberID": "2009", "scheduleId": "6080_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0002_0009_00", "sort": "-200110", "u8": "0" },
 { "SalonMemorialArtItemId": "1512010", "ArtworkCategory": "No_2000_Plus", "NumberID": "2010", "scheduleId": "6080_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0002_0010_00", "sort": "-200111", "u8": "0" },
+{ "SalonMemorialArtItemId": "1512011", "ArtworkCategory": "No_2000_Plus", "NumberID": "2011", "scheduleId": "7060_1W_Event1_art_FOREVER", "u5": 1, "ImageID": "i151_0002_0011_00", "sort": "-200112", "u8": "0" },
 { "SalonMemorialArtItemId": "151300010", "ArtworkCategory": "No_3000_Plus", "NumberID": "3000", "scheduleId": "FOREVER", "u5": 1, "ImageID": "i151_0003_0001_00", "sort": "-300101", "u8": "0" },
 { "SalonMemorialArtItemId": "151300020", "ArtworkCategory": "No_3000_Plus", "NumberID": "3001", "scheduleId": "FOREVER", "u5": 1, "ImageID": "i151_0003_0002_00", "sort": "-300102", "u8": "0" },
 { "SalonMemorialArtItemId": "151300030", "ArtworkCategory": "No_3000_Plus", "NumberID": "3002", "scheduleId": "FOREVER", "u5": 1, "ImageID": "i151_0003_0003_00", "sort": "-300103", "u8": "0" },

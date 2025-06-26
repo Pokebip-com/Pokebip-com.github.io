@@ -214,5 +214,11 @@
     "event_7050_2W_MasterTicket_04": "ネルケ スペコス 確定Ｂサーチ",
     "event_7050_3W_MasterTicket_03": "ナリヤ・オーキド確定 バラエティＢサーチ",
     "event_7050_4W_MasterTicket_01": "マクワ確定 バラエティＢサーチ",
-    "event_7050_4W_MasterTicket_02": "メロン確定 バラエティＢサーチ"
+    "event_7050_4W_MasterTicket_02": "メロン確定 バラエティＢサーチ",
+    "event_7060_1W_SuperTicket_03": "シロナ シーズン限定 出現率アップＢサーチ",
+    "event_7060_1W_MasterTicket_04": "シロナ シーズン限定 確定Ｂサーチ",
+    "event_7060_1W_SuperTicket_08": "フウロ シーズン限定 出現率アップＢサーチ",
+    "event_7060_1W_MasterTicket_09": "フウロ シーズン限定 確定Ｂサーチ",
+    "event_7060_1W_SuperTicket_012": "シーズン限定 出現率アップＢサーチ",
+    "event_7060_4W_SuperTicket_03": "バラエティ 出現率アップＢサーチ"
 }
