@@ -275,7 +275,7 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
 
     tr.appendChild(th);
 
-    let pointBIdx = breakPointLevels.findIndex((a) => a > level);
+    let pointBIdx = breakPointLevels.findIndex((a) => a >= level);
     let pointAIdx = pointBIdx - 1;
 
     let buildupParameter = jData.proto.trainerBuildupParameter.filter(tbp => tbp.trainerId === syncPairSelect.value);
@@ -387,6 +387,7 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
     defaultLevels.appendChild(new Option("", "135"));
     defaultLevels.appendChild(new Option("", "140"));
     defaultLevels.appendChild(new Option("", "150"));
+    defaultLevels.appendChild(new Option("", "200"));
     toolFieldset.appendChild(defaultLevels);
 
     let lvlP = document.createElement("p");
@@ -401,9 +402,9 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
 
     let lvlInput = document.createElement("input");
     lvlInput.type = "number";
-    lvlInput.value = "150";
+    lvlInput.value = "200";
     lvlInput.min = "1";
-    lvlInput.max = "150";
+    lvlInput.max = "200";
     lvlInput.id = "levelInput";
     lvlInput.style.display = "table-cell";
     lvlInput.style.marginLeft = "5px";
@@ -769,6 +770,10 @@ function getSyncMoveRow(syncMoveId, tr) {
     powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power * 1.2)}` : "—";
     row.appendChild(powerCell);
 
+    let targetCell = document.createElement("td");
+    targetCell.innerText = jData.lsd.moveTargetType[targetToId[mov.target]] || "—";
+    row.appendChild(targetCell);
+
     let effectCell = document.createElement("td");
     effectCell.innerText = getMoveDescr(syncMoveId);
     row.appendChild(effectCell);
@@ -933,7 +938,7 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
 
     let titleSync = document.createElement("th");
     titleSync.innerText = jData.locale.syncPairs.sync_move;
-    titleSync.colSpan = 5 + hasExUnlocked(syncPairSelect.value) + hasExRoleUnlocked(syncPairSelect.value);
+    titleSync.colSpan = 6 + hasExUnlocked(syncPairSelect.value) + hasExRoleUnlocked(syncPairSelect.value);
     titleRow.appendChild(titleSync);
     table.appendChild(titleRow);
 
@@ -954,6 +959,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     let syncHeadPower = document.createElement("th");
     syncHeadPower.innerText = jData.locale.syncPairs.move_power;
     headRow.appendChild(syncHeadPower);
+
+    let syncHeadTarget = document.createElement("th");
+    syncHeadTarget.innerText = jData.locale.syncPairs.move_target;
+    headRow.appendChild(syncHeadTarget);
 
     let syncHeadEffect = document.createElement("th");
     syncHeadEffect.innerText = jData.locale.syncPairs.move_description;
@@ -1885,8 +1894,8 @@ function getPairStatsRowBipCode(name, statValues, t, scale = 1) {
 
     let string = `\t\t[tr][th]${jData.locale.common[name]}[/th]`;
 
-    let level = 150;
-    let pointBIdx = breakPointLevels.findIndex((a) => a > level);
+    let level = 200;
+    let pointBIdx = breakPointLevels.findIndex((a) => a >= level);
     let pointAIdx = pointBIdx - 1;
 
     let buildupParameter = jData.proto.trainerBuildupParameter.filter(tbp => tbp.trainerId === t.trainerId);
