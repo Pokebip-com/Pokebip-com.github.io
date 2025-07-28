@@ -928,6 +928,69 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
         contentDiv.appendChild(table);
     }
 
+    // Capacité Teracristal
+    let teraMove = jData.proto.monsterVariation.find(mv => mv.monsterId === monsterId && mv.terastalMoveId > 0);
+
+    if (teraMove) {
+        contentDiv.appendChild(document.createElement("br"));
+
+        let table = document.createElement("table");
+        table.classList.add("bipcode");
+        table.style.textAlign = "center";
+
+        let titleRow = document.createElement("tr");
+
+        let titleTera = document.createElement("th");
+        titleTera.innerText = jData.locale.syncPairs.tera_move;
+        titleTera.colSpan = 9;
+        titleRow.appendChild(titleTera);
+        table.appendChild(titleRow);
+
+        let headRow = document.createElement("tr");
+
+        let headName = document.createElement("th");
+        headName.innerText = jData.locale.syncPairs.move_name;
+        headRow.appendChild(headName);
+
+        let headType = document.createElement("th");
+        headType.innerText = jData.locale.syncPairs.move_type;
+        headRow.appendChild(headType);
+
+        let headCategory = document.createElement("th");
+        headCategory.innerText = jData.locale.syncPairs.move_category;
+        headRow.appendChild(headCategory);
+
+        let headPower = document.createElement("th");
+        headPower.innerText = jData.locale.syncPairs.move_power;
+        headRow.appendChild(headPower);
+
+        let headAccuracy = document.createElement("th");
+        headAccuracy.innerText = jData.locale.syncPairs.move_accuracy;
+        headRow.appendChild(headAccuracy);
+
+        let headGauges = document.createElement("th");
+        headGauges.innerText = jData.locale.syncPairs.move_gauge;
+        headRow.appendChild(headGauges);
+
+        let headTarget = document.createElement("th");
+        headTarget.innerText = jData.locale.syncPairs.move_target;
+        headRow.appendChild(headTarget);
+
+        let headEffect = document.createElement("th");
+        headEffect.innerText = jData.locale.syncPairs.move_description;
+        headRow.appendChild(headEffect);
+
+        let headLimit = document.createElement("th");
+        headLimit.innerText = jData.locale.syncPairs.move_uses;
+        headRow.appendChild(headLimit);
+
+        table.appendChild(headRow);
+
+        table.appendChild(getMoveRow(teraMove.terastalMoveId));
+
+        contentDiv.appendChild(table);
+    }
+
     contentDiv.appendChild(document.createElement("br"));
 
     table = document.createElement("table");
