@@ -64,7 +64,7 @@ function listTrainers() {
         tr.appendChild(syncPairTd);
 
         let nameTd = document.createElement("td");
-        nameTd.innerText = getPassiveSkillName(jData.proto.trainerSpecialAwaking[i].passiveSkillId);
+        nameTd.innerHTML = getDetailedPassiveSkillName(jData.proto.trainerSpecialAwaking[i].passiveSkillId);
         tr.appendChild(nameTd);
 
         let descriptionTd = document.createElement("td");

@@ -483,7 +483,7 @@ function setPairPassives(contentDiv, variation = null) {
         let row = document.createElement("tr");
 
         let nameCell = document.createElement("td");
-        nameCell.innerHTML = `<img src="./data/sync-grids/icons/transcendance.png" style="width: 25px; vertical-align: top;" /> ${getPassiveSkillName(specialAwaking['passiveSkillId'])}`;
+        nameCell.innerHTML = `<img src="./data/sync-grids/icons/transcendance.png" style="width: 25px; vertical-align: top;" /> ${getDetailedPassiveSkillName(specialAwaking['passiveSkillId'])}`;
         row.appendChild(nameCell);
 
         let descrCell = document.createElement("td");
@@ -502,7 +502,7 @@ function setPairPassives(contentDiv, variation = null) {
         let row = document.createElement("tr");
 
         let nameCell = document.createElement("td");
-        nameCell.innerText = getPassiveSkillName(passiveId);
+        nameCell.innerHTML = getDetailedPassiveSkillName(passiveId);
         row.appendChild(nameCell);
 
         let descrCell = document.createElement("td");

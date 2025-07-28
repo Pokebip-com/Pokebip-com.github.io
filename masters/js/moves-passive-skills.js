@@ -1,8 +1,8 @@
 function preloadMovePassiveSkills() {
-
     // PROTO
     jsonCache.preloadProto("Move");
     jsonCache.preloadProto("MoveAndPassiveSkillDigit");
+    jsonCache.preloadProto("PassiveSkillChild");
 
     // LSD
     jsonCache.preloadLsd("move_description");
@@ -54,6 +54,32 @@ function getPassiveSkillName(id) {
         name = setParams(id, name);
 
     return name;
+}
+
+function getDetailedPassiveSkillName(id) {
+    let children = jData.proto.passiveSkillChild.find(psc => psc.passiveSkillId === id);
+    let name = getPassiveSkillName(id);
+
+    if(!children)
+        return name;
+
+    let childrenNames = children.passiveSkillChildIds.map(pc => getPassiveSkillName(pc)).join("<br>");
+
+    let container = document.createElement("span");
+    container.classList.add("custom-tooltip-container");
+
+    let trigger = document.createElement("span");
+    trigger.classList.add("custom-tooltip-trigger");
+    trigger.innerHTML = name;
+    container.appendChild(trigger);
+
+    let tooltip = document.createElement("span");
+    tooltip.classList.add("custom-tooltip-text");
+    tooltip.innerHTML = childrenNames;
+    container.appendChild(tooltip);
+
+    return container.outerHTML;
+
 }
 
 function getPassiveSkillDescr(id) {
