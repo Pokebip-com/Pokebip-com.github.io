@@ -34,11 +34,11 @@
   "superawakening_level": "Niveau",
   "sync_grid_ability_type_title": {
     "AdditionalMoveEffect": "Amélioration d'Effet de Capacité",
+    "LearnMove": "Capacité supplémentaire",
     "MovePowerAccuracyBoost": "Amélioration de Capacité",
     "Passive": "Amélioration de Talent",
     "StatsBoost": "Amélioration de Stat",
-    "SyncMove": "Amélioration de Capacité Duo",
-    "LearnMove": "Capacité supplémentaire"
+    "SyncMove": "Amélioration de Capacité Duo"
   },
   "sync_grid_energy": "Énergie",
   "sync_grid_energy_level": "Niveau d'energie max",
@@ -56,13 +56,13 @@
   "sync_grid_tiles": "cases",
   "sync_grid_title": "Plateau Duo-Gemme",
   "sync_grid_tools": "Outils",
-  "tera_move": "Capacity Téracristal",
   "sync_move": "Capacité Duo",
   "sync_move_ex_role_title": "Rôle EX",
   "sync_move_ex_title": "Effet (EX)",
   "sync_orbs": "Duo-Sphères",
   "sync_pair_level": "Niveau des capacités",
   "team_skills": "Talents d'équipe",
+  "tera_move": "Capacité Téracristal",
   "type": "Type",
   "weakness": "Faiblesse"
 }

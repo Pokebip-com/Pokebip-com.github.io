@@ -49,14 +49,45 @@ function getNewCookies() {
 }
 
 function getCookieItemImage(cookie) {
+    return getItemImage(cookie.rarity, cookie.imageId);
+}
+
+function getItemImage(rarity, imageId) {
     let img = document.createElement("img");
-    img.style.backgroundImage = `url(./data/item/Frame/128/if01_0${cookie.rarity}_128.png)`;
+    img.style.backgroundImage = `url(./data/item/Frame/128/if01_0${rarity}_128.png)`;
     img.style.backgroundSize = "64px 64px";
 
-    img.src = `./data/item/${cookie.imageId}/${cookie.imageId}_128.png`;
+    img.src = `./data/item/${imageId}/${imageId}_128.png`;
     img.style.width = "64px";
     img.style.height = "64px";
     return img;
+}
+
+function getCookieName(cookie) {
+    if(cookie.potentialItemName === "")
+        return jData.lsd.potentialItemName[cookie.itemId];
+
+    return jData.lsd.potentialItemName[cookie.potentialItemName].replace("[Name:TrainerNameAndType ]", getTrainerName(cookie.trainerId));
+}
+
+function getLotLi(lot) {
+    let newLi = document.createElement("li");
+    newLi.classList.add("listh-bipcode");
+    newLi.style.width = "100px";
+    newLi.appendChild(getItemImage(9, "i051_0041_00"));
+
+    newLi.appendChild(document.createElement("br"));
+
+    let link = document.createElement("a");
+    link.onclick = () => printLotInfos(lot);
+    link.href = `#lot_${lot.lotId}`;
+    link.innerHTML = `<b>${jData.lsd.potentialItemName["540000000139"].replace("[Name:TrainerNameAndType ]", `[${jData.locale.common.role_name_standard[lot.role]}]`)}</b>`;
+
+    newLi.classList.add("listh-click");
+    newLi.onclick = () => link.click();
+    newLi.appendChild(link);
+
+    return newLi;
 }
 
 function getCookieLi(cookie) {
@@ -70,7 +101,7 @@ function getCookieLi(cookie) {
     let link = document.createElement("a");
     link.onclick = () => printCookieInfos(cookie);
     link.href = `#cookie_${cookie.itemId}`;
-    link.innerHTML = `<b>${jData.lsd.potentialItemName[cookie.itemId]}</b>`;
+    link.innerHTML = `<b>${getCookieName(cookie)}</b>`;
 
     newLi.classList.add("listh-click");
     newLi.onclick = () => link.click();
@@ -83,9 +114,13 @@ function listLuckyCookiesInfos() {
 
     let newCookies = getNewCookies();
 
+    const towerRoleLotIds = [{"lotId": 707004, "role": "1"}, {"lotId": 707005, "role": "2"}, {"lotId": 707006, "role": "3"}, {"lotId": 707007, "role": "4"}, {"lotId": 707008, "role": "5"}, {"lotId": 707028, "role": "6"}];
+    const roleTiedLotIds = towerRoleLotIds.map(lot => lot.lotId);
+
     let normalCookies = jData.proto.potentialItem.filter(pi => pi.rarity < 9);
     let guaranteedCookies = jData.proto.potentialItem.filter(pi => pi.rarity === 9 && pi.u2 !== "1");
-    let trainerCookies = jData.proto.potentialItem.filter(pi => pi.rarity === 9 && pi.u2 === "1");
+    let trainerCookies = jData.proto.potentialItem.filter(pi => pi.rarity === 9 && pi.u2 === "1" && (pi.potentialItemName !== "540000000139" && pi.potentialItemName !== "540000000138"));
+    let towerCookies = jData.proto.potentialItem.filter(pi => !roleTiedLotIds.includes(pi.potentialLotId) && pi.rarity === 9 && pi.u2 === "1" && (pi.potentialItemName === "540000000139" || pi.potentialItemName === "540000000138"));
 
     if(newCookies.length > 0) {
 
@@ -133,10 +168,26 @@ function listLuckyCookiesInfos() {
         trainerUl.appendChild(getCookieLi(trainerCookies[i]));
     }
 
+    let towerCookiesH2 = document.createElement("h2");
+    towerCookiesH2.innerText = jData.locale.luckySkills.tower_cookies;
+
+    let towerCookiesUl = document.createElement("ul");
+    towerCookiesUl.classList.add("listh-bipcode");
+
+    for(let i = 0; i < towerRoleLotIds.length; i++) {
+        towerCookiesUl.appendChild(getLotLi(towerRoleLotIds[i]));
+    }
+
+    for(let i = 0; i < towerCookies.length; i++) {
+        towerCookiesUl.appendChild(getCookieLi(towerCookies[i]));
+    }
+
     cookieListDiv.appendChild(guaranteedCookiesH2);
     cookieListDiv.appendChild(guaranteedUl);
     cookieListDiv.appendChild(trainerCookiesH2);
     cookieListDiv.appendChild(trainerUl);
+    cookieListDiv.appendChild(towerCookiesH2);
+    cookieListDiv.appendChild(towerCookiesUl);
     cookieListDiv.appendChild(normalCookiesH2);
     cookieListDiv.appendChild(normalUl);
 
@@ -148,7 +199,7 @@ function listLuckyCookiesInfos() {
     }
 }
 
-function printCookiePassiveSkills(cookie, div) {
+function printLotPassiveSkills(lotId, div) {
 
     let table = document.createElement("table");
     table.classList.add("bipcode");
@@ -175,7 +226,7 @@ function printCookiePassiveSkills(cookie, div) {
 
     let tbody = document.createElement("tbody");
 
-    let lot = jData.proto.potentialLot.filter(pl => parseInt(pl.potentialLotId) === cookie.potentialLotId);
+    let lot = jData.proto.potentialLot.filter(pl => parseInt(pl.potentialLotId) === lotId);
     let lotFullRate = lot.reduce((acc, val) => acc + val.rate, 0);
 
     for(let i = 0; i < lot.length; i++) {
@@ -201,6 +252,46 @@ function printCookiePassiveSkills(cookie, div) {
     div.appendChild(table);
 }
 
+function printLotInfos(lot) {
+    passivesDiv.innerHTML = "";
+    let div = document.createElement("div");
+    div.id = `lot_${lot.lotId}`;
+    div.style.scrollMarginTop = "5em";
+
+    let h2 = document.createElement("h2");
+    h2.innerText = jData.lsd.potentialItemName["540000000139"].replace("[Name:TrainerNameAndType ]", `[${jData.locale.common.role_name_standard[lot.role]}]`);
+    div.appendChild(h2);
+
+    printLotPassiveSkills(lot.lotId, div);
+
+    let br = document.createElement("br");
+    div.appendChild(br);
+
+    let h3 = document.createElement("h3");
+    h3.innerText = jData.locale.common.menu_sync_pairs;
+    div.appendChild(h3);
+
+    let ul = document.createElement("ul");
+    ul.classList.add("listh-bipcode");
+    div.appendChild(ul);
+
+    let syncPairsList = jData.proto.potentialItem.filter(pi => pi.potentialLotId === lot.lotId).map(pi => { return { "trainerId": pi.trainerId, "name": getPairName(pi.trainerId)}; }).sort((a, b) => a.name.localeCompare(b.name));
+
+    for(let i = 0; i < syncPairsList.length; i++) {
+        let li = document.createElement("li");
+        li.classList.add("listh-bipcode");
+        if(window.location.hostname === "localhost") {
+            li.innerHTML = `<b><a href="http://localhost:63342/Pokebip-com.github.io/masters/duo.html?pair=${syncPairsList[i].trainerId}">${syncPairsList[i].name}</a></b>`;
+        }
+        else {
+            li.innerHTML = `<b><a href="${window.location.protocol}//${window.location.hostname}/masters/duo.html?pair=${syncPairsList[i].trainerId}">${syncPairsList[i].name}</a></b>`;
+        }
+        ul.appendChild(li);
+    }
+
+    passivesDiv.appendChild(div);
+}
+
 function printCookieInfos(cookie) {
     passivesDiv.innerHTML = "";
     let div = document.createElement("div");
@@ -208,10 +299,10 @@ function printCookieInfos(cookie) {
     div.style.scrollMarginTop = "5em";
 
     let h2 = document.createElement("h2");
-    h2.innerText = jData.lsd.potentialItemName[cookie.itemId];
+    h2.innerText = getCookieName(cookie);
     div.appendChild(h2);
 
-    printCookiePassiveSkills(cookie, div);
+    printLotPassiveSkills(cookie.potentialLotId, div);
 
     passivesDiv.appendChild(div);
 }

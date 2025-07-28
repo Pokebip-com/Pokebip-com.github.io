@@ -34,11 +34,11 @@
   "superawakening_level": "Level",
   "sync_grid_ability_type_title": {
     "AdditionalMoveEffect": "Additional Move Effect",
+    "LearnMove": "Learn Move",
     "MovePowerAccuracyBoost": "Move Boost",
     "Passive": "Passive",
     "StatsBoost": "Stat Boost",
-    "SyncMove": "Sync Move upgrade",
-    "LearnMove": "Learn Move"
+    "SyncMove": "Sync Move upgrade"
   },
   "sync_grid_energy": "Energy",
   "sync_grid_energy_level": "Max energy cap",
@@ -56,13 +56,13 @@
   "sync_grid_tiles": "tiles",
   "sync_grid_title": "Sync Grid",
   "sync_grid_tools": "Tools",
-  "tera_move": "Terastal Move",
   "sync_move": "Sync Move",
   "sync_move_ex_role_title": "EX Role",
   "sync_move_ex_title": "Effect (EX)",
   "sync_orbs": "Sync Orbs",
   "sync_pair_level": "Move Level",
   "team_skills": "Team Skills",
+  "tera_move": "Terastal Move",
   "type": "Type",
   "weakness": "Weakness"
 }
