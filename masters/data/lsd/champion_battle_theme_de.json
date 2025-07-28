@@ -24,5 +24,8 @@
     "score_attack_battle_theme_5060_010": "Gegner immun gegen\nStatusprobleme/Störung",
     "score_attack_battle_theme_5060_011": "Problemfreie Gegner\nnehmen stark reduzierten\nSchaden",
     "damage_challenge_theme_6060_001": "Starke Schadensreduktion\nbei Attacken von Mitstreitern",
-    "damage_challenge_theme_6060_002": "Starke Schadensreduktion\nbei GAs und G-D-Att. von\nMitstreitern"
+    "damage_challenge_theme_6060_002": "Starke Schadensreduktion\nbei GAs und G-D-Att. von\nMitstreitern",
+    "passio_tower_theme_7070_001": "Gegner erleiden keinen\nSchaden durch\nSpezial-Angriffe",
+    "passio_tower_theme_7070_002": "Gegner erleiden keinen\nSchaden durch\nphysische Angriffe",
+    "passio_tower_theme_7070_003": "Problemfreie Gegner\nerleiden keinen Schaden"
 }

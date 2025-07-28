@@ -21,7 +21,7 @@
     "999955": "Become Mega Lopunny until the end of battle.",
     "999952": "Applies the Restrain effect to the target and the user.",
     "999948": "The damage is taken even when the attack fails.",
-    "999944": "Applies the Supereffective ↑ Next effect to the user.",
+    "999944": "Applies the Supereffective ↑ Next effect to the user.",
     "999939": "The more the target’s Speed is lowered, the greater the power of this attack.",
     "999928": "Ignores the target’s raised stats.",
     "999925": "Applies the Gradual Healing effect to all allied sync pairs.",
@@ -919,5 +919,12 @@
     "999007": "Applies the [Name:ReferencedMessageTag ] to the user the first time its sync move is used each battle.",
     "999006": "Uses a maximum of [Digit:1digit ] [EN:Qty S=\"slot\" P=\"slots\" ] of the user’s move gauge. This attack’s power increases based on the amount used.",
     "999005": "Turns the field of play’s zone into an [Name:ReferencedMessageTag Idx=\"2\" ].",
-    "999004": "(An [Name:ReferencedMessageTag Idx=\"2\" ] powers up [Name:ReferencedMessageTag Idx=\"3\" ]-type attacks.)"
+    "999004": "(An [Name:ReferencedMessageTag Idx=\"2\" ] powers up [Name:ReferencedMessageTag Idx=\"3\" ]-type attacks.)",
+    "999003": "Lowers one of the target’s following stats by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] at random: Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness.",
+    "999002": "(The same stat is lowered for all opposing sync pairs.)",
+    "999001": "In addition, has a chance ([Digit:2digits Idx=\"1\" ]%) of granting all of the following effects:",
+    "999000": "This attack’s power is doubled.",
+    "998999": "Turns the field of play’s terrain into [Name:ReferencedMessageTag ] the first time this attack move is successful each battle.",
+    "998998": "Restores the HP of all allied sync pairs by approximately [Digit:2digits Idx=\"2\" ]% of their maximum HP.",
+    "998997": "Removes all status conditions and the flinching, confused, and trapped conditions from all allied sync pairs."
 }

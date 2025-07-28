@@ -220,5 +220,10 @@
     "event_7060_1W_SuperTicket_08": "Appel Duo saisonnier taux ↑ : Carolina !",
     "event_7060_1W_MasterTicket_09": "Appel Duo saisonnier garanti : Carolina !",
     "event_7060_1W_SuperTicket_012": "Appel Duo saisonnier taux ↑",
-    "event_7060_4W_SuperTicket_03": "Appel Duo commun taux ↑"
+    "event_7060_4W_SuperTicket_03": "Appel Duo commun taux ↑",
+    "event_7070_2W_SuperTicket_03": "Appel Duo Look Spécial taux ↑ : Iris !",
+    "event_7070_2W_MasterTicket_04": "Appel Duo Look Spécial garanti : Iris !",
+    "event_7070_2W_SuperTicket_08": "Appel Duo Look Spécial taux ↑ : Gladio !",
+    "event_7070_2W_MasterTicket_09": "Appel Duo Look Spécial garanti : Gladio !",
+    "event_7070_3W_SuperTicket_03": "Appel Duo commun taux ↑"
 }

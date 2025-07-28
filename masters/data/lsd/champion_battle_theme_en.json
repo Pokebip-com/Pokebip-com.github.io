@@ -24,5 +24,8 @@
     "score_attack_battle_theme_5060_010": "Opponents are immune\nto status conditions and\ninterference",
     "score_attack_battle_theme_5060_011": "Damage taken by\nunaffected opponents\nis significantly reduced",
     "damage_challenge_theme_6060_001": "Ally move damage significantly reduced",
-    "damage_challenge_theme_6060_002": "Ally sync move and max move damage\nsignificantly reduced"
+    "damage_challenge_theme_6060_002": "Ally sync move and max move damage\nsignificantly reduced",
+    "passio_tower_theme_7070_001": "Opponents won’t take damage from\nspecial attacks",
+    "passio_tower_theme_7070_002": "Opponents won’t take damage from\nphysical attacks",
+    "passio_tower_theme_7070_003": "Unaffected opponents won’t take damage"
 }

@@ -24,5 +24,8 @@
     "score_attack_battle_rule_5060_010": "El equipo rival es inmune a los problemas de\nestado, al retroceso, a la confusión y a las\nataduras.",
     "score_attack_battle_rule_5060_011": "El equipo rival recibe un 80% menos de daño\ncuando no le afecta ningún problema ni cambio\nde estado.",
     "damage_challenge_rule_6060_001": "Se reduce en un 80% el daño que inflige tu\nequipo con movimientos.",
-    "damage_challenge_rule_6060_002": "Se reduce en un 80% el daño que inflige tu\nequipo con movimientos compi y movimientos\ncompi Dinamax."
+    "damage_challenge_rule_6060_002": "Se reduce en un 80% el daño que inflige tu\nequipo con movimientos compi y movimientos\ncompi Dinamax.",
+    "passio_tower_rule_7070_001": "El equipo rival no recibe daño producido por los\nataques especiales.",
+    "passio_tower_rule_7070_002": "El equipo rival no recibe daño producido por los\nataques físicos.",
+    "passio_tower_rule_7070_003": "El equipo rival no recibe daño cuando no le\nafecta ningún problema ni cambio de estado."
 }

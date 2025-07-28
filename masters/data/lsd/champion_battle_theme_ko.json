@@ -24,5 +24,8 @@
     "score_attack_battle_theme_5060_010": "상대는 상태 이상과\n방해 상태를 무효화",
     "score_attack_battle_theme_5060_011": "상대는 비상태이상방해시\n대폭 데미지 경감",
     "damage_challenge_theme_6060_001": "같은 편의 기술\n데미지가 대폭 감소",
-    "damage_challenge_theme_6060_002": "같은 편의 B기술과 BD기술\n데미지가 대폭 감소"
+    "damage_challenge_theme_6060_002": "같은 편의 B기술과 BD기술\n데미지가 대폭 감소",
+    "passio_tower_theme_7070_001": "상대는 특수공격으로\n데미지를 입지 않음",
+    "passio_tower_theme_7070_002": "상대는 물리공격으로\n데미지를 입지 않음",
+    "passio_tower_theme_7070_003": "상대는 비상태이상방해시\n데미지를 입지 않음"
 }

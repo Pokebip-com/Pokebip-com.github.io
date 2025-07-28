@@ -24,5 +24,8 @@
     "score_attack_battle_theme_5060_010": "Avversari immuni a\nproblemi di stato e\nimpedimenti",
     "score_attack_battle_theme_5060_011": "Danni subiti ridotti di molto\nper gli avversari non affetti da\nproblemi di stato o impedimenti",
     "damage_challenge_theme_6060_001": "Danni inflitti ridotti di molto per le mosse alleate",
-    "damage_challenge_theme_6060_002": "Danni inflitti ridotti di molto per le Unimosse\ne le mosse UniDynamax alleate"
+    "damage_challenge_theme_6060_002": "Danni inflitti ridotti di molto per le Unimosse\ne le mosse UniDynamax alleate",
+    "passio_tower_theme_7070_001": "Gli avversari non subiscono danni\ndagli attacchi speciali",
+    "passio_tower_theme_7070_002": "Gli avversari non subiscono danni\ndagli attacchi fisici",
+    "passio_tower_theme_7070_003": "Gli avversari non affetti da problemi di stato\no impedimenti non subiscono danni"
 }

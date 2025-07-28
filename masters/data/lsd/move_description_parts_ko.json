@@ -919,5 +919,12 @@
     "999007": "처음 버디즈기술을 사용했을 때만 자신을 [Name:ReferencedMessageTag ] 상태로 만든다",
     "999006": "자신의 기술게이지를 최대 [Digit:1digit ]까지 사용한다\n사용한 양에 따라 위력이 오른다",
     "999005": "존을 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ni\" ] 만든다",
-    "999004": "([Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ha\" ] [Name:ReferencedMessageTag Idx=\"3\" ]타입 공격의 위력이 오른다)"
+    "999004": "([Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ha\" ] [Name:ReferencedMessageTag Idx=\"3\" ]타입 공격의 위력이 오른다)",
+    "999003": "상대의 공격과 방어, 특수공격, 특수방어, 스피드, 명중률, 회피율 중 한 가지를 [Digit:1digit ]단계 떨어뜨린다",
+    "999002": "(상대 버디즈 전원의 같은 능력이 떨어진다)",
+    "999001": "[Digit:2digits Idx=\"1\" ]% 확률로 추가로 아래의 모든 효과를 발휘한다",
+    "999000": "위력이 2배가 된다",
+    "998999": "처음 이 기술로 공격에 성공했을 때만 필드를 [Name:ReferencedMessageTag ][Kor:Particle char=\"ni\" ] 만든다",
+    "998998": "같은 편 버디즈 전원의 HP를 최대 HP의 약 [Digit:2digits Idx=\"2\" ]%만큼 회복한다",
+    "998997": "같은 편 버디즈 전원의 상태 이상이나 풀죽음 상태, 혼란 상태, 바인드 상태를 해제한다"
 }

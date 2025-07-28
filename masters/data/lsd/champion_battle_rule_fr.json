@@ -24,5 +24,8 @@
     "score_attack_battle_rule_5060_010": "Protège les ennemis des altérations de statut,\nde la peur, de la confusion, et du ligotage.",
     "score_attack_battle_rule_5060_011": "Réduit les dégâts subis par les ennemis\nlorsqu'ils ne souffrent par d'une altération\nde statut ou d'un tourment de 80 %.",
     "damage_challenge_rule_6060_001": "Réduit les dégâts que les alliés infligent\navec les capacités de 80 %.",
-    "damage_challenge_rule_6060_002": "Réduit les dégâts que les alliés infligent avec\nles capacités Duo et les capacités Duo Dynamax\nde 80 %."
+    "damage_challenge_rule_6060_002": "Réduit les dégâts que les alliés infligent avec\nles capacités Duo et les capacités Duo Dynamax\nde 80 %.",
+    "passio_tower_rule_7070_001": "Les ennemis ne subissent aucun dégât\nde capacités offensives spéciales.",
+    "passio_tower_rule_7070_002": "Les ennemis ne subissent aucun dégât\nde capacités offensives physiques.",
+    "passio_tower_rule_7070_003": "Les ennemis ne souffrant pas d'une altération de\nstatut ou d'un tourment ne subissent aucun dégât."
 }

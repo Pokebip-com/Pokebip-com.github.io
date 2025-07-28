@@ -24,5 +24,8 @@
     "score_attack_battle_rule_5060_010": "Gegner sind immun gegen Statusprobleme,\nZurückschrecken, Verwirrung und Umschlingung.",
     "score_attack_battle_rule_5060_011": "Gegner erleiden 80 % weniger Schaden, wenn\nsie nicht von Statusproblemen oder Störungen\nbetroffen sind.",
     "damage_challenge_rule_6060_001": "Verbündete fügen mit Attacken 80 % weniger\nSchaden zu.",
-    "damage_challenge_rule_6060_002": "Verbündete fügen mit Gefährtenattacken und\nGefährten-Dynamax-Attacken 80 % weniger\nSchaden zu."
+    "damage_challenge_rule_6060_002": "Verbündete fügen mit Gefährtenattacken und\nGefährten-Dynamax-Attacken 80 % weniger\nSchaden zu.",
+    "passio_tower_rule_7070_001": "Gegner erleiden keinen Schaden durch\nSpezial-Angriffe.",
+    "passio_tower_rule_7070_002": "Gegner erleiden keinen Schaden durch physische\nAngriffe.",
+    "passio_tower_rule_7070_003": "Gegner erleiden keinen Schaden, wenn sie\nnicht von Statusproblemen oder Störungen\nbetroffen sind."
 }

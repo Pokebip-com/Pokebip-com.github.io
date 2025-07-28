@@ -24,5 +24,8 @@
     "score_attack_battle_rule_5060_010": "Le Unità avversarie sono immuni ai problemi\ndi stato, al tentennamento, alla confusione\ne all'imprigionamento.",
     "score_attack_battle_rule_5060_011": "Se non sono affetti da problemi di stato\no impedimenti, gli avversari subiscono\nl'80% di danni in meno.",
     "damage_challenge_rule_6060_001": "I danni inflitti dalle Unità alleate usando\nle mosse si abbassano dell'80%.",
-    "damage_challenge_rule_6060_002": "I danni inflitti dalle Unità alleate usando\nUnimosse o mosse UniDynamax\nsi abbassano dell'80%."
+    "damage_challenge_rule_6060_002": "I danni inflitti dalle Unità alleate usando\nUnimosse o mosse UniDynamax\nsi abbassano dell'80%.",
+    "passio_tower_rule_7070_001": "Le Unità avversarie subiscono zero danni\ndagli attacchi speciali.",
+    "passio_tower_rule_7070_002": "Le Unità avversarie subiscono zero danni\ndagli attacchi fisici.",
+    "passio_tower_rule_7070_003": "Se non sono affette da problemi di stato\no impedimenti, le Unità avversarie\nsubiscono zero danni."
 }

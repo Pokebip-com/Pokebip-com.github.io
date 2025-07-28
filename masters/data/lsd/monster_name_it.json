@@ -488,6 +488,7 @@
     "20053700": "Seismitoad",
     "20053800": "Throh",
     "20053900": "Sawk",
+    "20054100": "Swadloon",
     "20054200": "Leavanny",
     "20054400": "Whirlipede",
     "20054500": "Scolipede",
@@ -533,6 +534,7 @@
     "20061400": "Beartic",
     "20061500": "Cryogonal",
     "20061700": "Accelgor",
+    "20061900": "Mienfoo",
     "20062000": "Mienshao",
     "20062100": "Druddigon",
     "20062500": "Bisharp",
@@ -834,5 +836,8 @@
     "2010210000": "Furiatonante",
     "2009530000": "Rellor",
     "20086513": "Necrozma",
-    "2009730000": "Flamigo"
+    "2009730000": "Flamigo",
+    "2010131100": "Sinistcha",
+    "2010190000": "Hydrapple",
+    "2010121100": "Poltchageist"
 }

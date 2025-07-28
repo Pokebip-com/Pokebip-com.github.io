@@ -919,5 +919,12 @@
     "999007": "Applique l'[Name:ReferencedMessageTag ] au lanceur la première fois qu'il utilise une capacité Duo à chaque combat.",
     "999006": "Consomme jusqu'à [Digit:1digit ] [FR:Qty S=\"segment\" P=\"segments\" ] de la Jauge Capacité du lanceur. Augmente la puissance de cette attaque en fonction de la quantité de segments consommés.",
     "999005": "Transforme la zone en une [Name:ReferencedMessageTag Idx=\"2\" ].",
-    "999004": "(Une [Name:ReferencedMessageTag Idx=\"2\" ] renforce les attaques de type [Name:ReferencedMessageTag Idx=\"3\" ].)"
+    "999004": "(Une [Name:ReferencedMessageTag Idx=\"2\" ] renforce les attaques de type [Name:ReferencedMessageTag Idx=\"3\" ].)",
+    "999003": "Baisse aléatoirement une des stats suivantes de la cible de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] : Attaque, Défense, Atq. Spé., Déf. Spé., Vitesse, Précision ou Esquive.",
+    "999002": "(La même stat est baissée pour tous les Duos ennemis.)",
+    "999001": "[Digit:2digits Idx=\"1\" ] % de chances que tous les effets suivants s'appliquent également :",
+    "999000": "Cette attaque est deux fois plus puissante.",
+    "998999": "Transforme le champ en un [Name:ReferencedMessageTag ] la première fois que cette capacité offensive est utilisée avec succès à chaque combat.",
+    "998998": "Restaure environ [Digit:2digits Idx=\"2\" ] % des PV maximums de tous les Duos alliés.",
+    "998997": "Soigne tous les Duos alliés de toutes les altérations de statut et de la peur, de la confusion et du ligotage."
 }

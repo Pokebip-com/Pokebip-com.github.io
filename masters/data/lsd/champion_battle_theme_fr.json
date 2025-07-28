@@ -24,5 +24,8 @@
     "score_attack_battle_theme_5060_010": "Ennemis immunisés contre\nles altérations de statut\net les tourments",
     "score_attack_battle_theme_5060_011": "Ennemis sans altération\nde statut ou tourment :\ndégâts massivement réduits",
     "damage_challenge_theme_6060_001": "Capacités des alliés :\ndégâts massivement réduits",
-    "damage_challenge_theme_6060_002": "Capacités Duo et capacités Duo Dynamax\ndes alliés : dégâts massivement réduits"
+    "damage_challenge_theme_6060_002": "Capacités Duo et capacités Duo Dynamax\ndes alliés : dégâts massivement réduits",
+    "passio_tower_theme_7070_001": "Capacités offensives spéciales :\naucun dégât infligé aux ennemis",
+    "passio_tower_theme_7070_002": "Capacités offensives physiques :\naucun dégât infligé aux ennemis",
+    "passio_tower_theme_7070_003": "Ennemis sans altération de statut ou tourment :\naucun dégât subi"
 }

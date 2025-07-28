@@ -24,5 +24,8 @@
     "score_attack_battle_theme_5060_010": "相手は状態異常と\n妨害状態を無効化する",
     "score_attack_battle_theme_5060_011": "相手は非異常妨害時\nダメージを大幅に軽減する",
     "damage_challenge_theme_6060_001": "味方の技の\nダメージが大幅に減少する",
-    "damage_challenge_theme_6060_002": "味方のＢ技ＢＤ技の\nダメージが大幅に減少する"
+    "damage_challenge_theme_6060_002": "味方のＢ技ＢＤ技の\nダメージが大幅に減少する",
+    "passio_tower_theme_7070_001": "相手は特殊攻撃で\nダメージを受けない",
+    "passio_tower_theme_7070_002": "相手は物理攻撃で\nダメージを受けない",
+    "passio_tower_theme_7070_003": "相手は非異常妨害時\nダメージを受けない"
 }

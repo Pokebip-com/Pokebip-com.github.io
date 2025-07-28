@@ -919,5 +919,12 @@
     "999007": "Verursacht ein Mal pro Kampf beim Anwender den [Name:ReferencedMessageTag ], wenn er erstmals seine Gefährtenattacke einsetzt.",
     "999006": "Verbraucht maximal [Digit:1digit ] [DE:Qty S=\"Segment\" P=\"Segmente\" ] der Attackenleiste deines Teams. Die Stärke dieses Angriffs steigt je nachdem, wie viel von der Leiste verbraucht wurde.",
     "999005": "Erzeugt einen [Name:ReferencedMessageTag Idx=\"2\" ].",
-    "999004": "(Ein [Name:ReferencedMessageTag Idx=\"2\" ] verstärkt Angriffe vom Typ [Name:ReferencedMessageTag Idx=\"3\" ].)"
+    "999004": "(Ein [Name:ReferencedMessageTag Idx=\"2\" ] verstärkt Angriffe vom Typ [Name:ReferencedMessageTag Idx=\"3\" ].)",
+    "999003": "Senkt zufällig einen der folgenden Statuswerte des Zieles um [Digit:1digit ]: Angriff, Verteidigung, Spezial-Angriff, Spezial-Verteidigung, Initiative, Genauigkeit oder Fluchtwert.",
+    "999002": "(Derselbe Statuswert wird für alle gegnerischen Gefährten gesenkt.)",
+    "999001": "Hat eine [Digit:2digits Idx=\"1\" ] %-Chance zusätzlich alle folgenden Effekte auszulösen:",
+    "999000": "Die Stärke dieses Angriffs wird verdoppelt.",
+    "998999": "Erzeugt ein Mal pro Kampf ein [Name:ReferencedMessageTag ], wenn dieser Angriff mit einer Attacke erstmals Erfolg hat.",
+    "998998": "Stellt bei allen verbündeten Gefährten etwa [Digit:2digits Idx=\"2\" ] % ihrer maximalen KP wieder her.",
+    "998997": "Befreit alle verbündeten Gefährten von allen Statusproblemen und von Zurückschrecken, Verwirrung sowie Umschlingung."
 }

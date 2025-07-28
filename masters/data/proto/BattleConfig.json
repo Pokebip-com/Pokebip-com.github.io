@@ -99,6 +99,7 @@
 { "battleParameterId": "synchro_move_rank.power_scale.3", "value": "110", "coords": "" },
 { "battleParameterId": "synchro_move_rank.power_scale.4", "value": "115", "coords": "" },
 { "battleParameterId": "synchro_move_rank.power_scale.5", "value": "120", "coords": "" },
+{ "battleParameterId": "terastal_type_move_power_scale", "value": "150", "coords": "" },
 { "battleParameterId": "time_recovery_default_battle_speed", "value": "1", "coords": "" },
 { "battleParameterId": "time_recovery_force_battle_speed", "value": "200", "coords": "" },
 { "battleParameterId": "time_recovery_max_battle_speed", "value": "200", "coords": "" },

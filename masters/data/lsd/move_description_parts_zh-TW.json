@@ -919,5 +919,12 @@
     "999007": "首次使出拍組招式時，會讓自己變成[Name:ReferencedMessageTag ]狀態。",
     "999006": "使用最多[Digit:1digit ]條自己的招式計量槽。\n威力會根據使用的量而提高。",
     "999005": "將領域變成[Name:ReferencedMessageTag Idx=\"2\" ]。",
-    "999004": "（[Name:ReferencedMessageTag Idx=\"2\" ]會提高[Name:ReferencedMessageTag Idx=\"3\" ]屬性的攻擊的威力。）"
+    "999004": "（[Name:ReferencedMessageTag Idx=\"2\" ]會提高[Name:ReferencedMessageTag Idx=\"3\" ]屬性的攻擊的威力。）",
+    "999003": "降低對手的攻擊、防禦、特攻、特防、速度、命中率、閃避率中的一種能力[Digit:1digit ]階段。",
+    "999002": "（降低對手全體拍組的相同能力。）",
+    "999001": "有[Digit:2digits Idx=\"1\" ]％的機率還會再發揮下列所有效果。",
+    "999000": "威力會變成２倍。",
+    "998999": "首次使出此招式攻擊成功時，會將場地變成[Name:ReferencedMessageTag ]。",
+    "998998": "回復我方全體拍組的ＨＰ，約為最大ＨＰ的[Digit:2digits Idx=\"2\" ]％。",
+    "998997": "解除我方全體拍組的異常狀態與畏縮、混亂和束縛狀態。"
 }

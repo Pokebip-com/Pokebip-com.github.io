@@ -24,5 +24,8 @@
     "score_attack_battle_theme_5060_010": "Equipo rival inmune a\nproblemas de estado y\ncambios de estado",
     "score_attack_battle_theme_5060_011": "Reducción de daño para\nequipo rival sin cambios\nni problemas de estado",
     "damage_challenge_theme_6060_001": "Reducción de daño de los movimientos de tu\nequipo",
-    "damage_challenge_theme_6060_002": "Reducción de daño de los movimientos compi y\nlos movimientos compi Dinamax de tu equipo"
+    "damage_challenge_theme_6060_002": "Reducción de daño de los movimientos compi y\nlos movimientos compi Dinamax de tu equipo",
+    "passio_tower_theme_7070_001": "Equipo rival inmune al daño producido por los\nataques especiales",
+    "passio_tower_theme_7070_002": "Equipo rival inmune al daño producido por los\nataques físicos",
+    "passio_tower_theme_7070_003": "Equipo rival inmune al daño cuando no le\nafectan problemas ni cambios de estado"
 }

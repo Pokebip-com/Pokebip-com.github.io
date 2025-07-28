@@ -919,5 +919,12 @@
     "999007": "Aplica el [Name:ReferencedMessageTag ] al usuario la primera vez que usa su movimiento compi en cada combate.",
     "999006": "Consume hasta [Digit:1digit ] [ES:Qty S=\"punto\" P=\"puntos\" ] de la barra de movimientos del usuario. La potencia de este ataque aumenta según la cantidad de puntos consumida.",
     "999005": "Crea una [Name:ReferencedMessageTag Idx=\"2\" ].",
-    "999004": "(Una [Name:ReferencedMessageTag Idx=\"2\" ] potencia los ataques de tipo [Name:ReferencedMessageTag Idx=\"3\" ])."
+    "999004": "(Una [Name:ReferencedMessageTag Idx=\"2\" ] potencia los ataques de tipo [Name:ReferencedMessageTag Idx=\"3\" ]).",
+    "999003": "Reduce en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ] una de estas características del objetivo al azar: Ataque, Defensa, Ataque Especial, Defensa Especial, Velocidad, Precisión o Evasión.",
+    "999002": "(Dicha característica se reduce en igual medida para todos los compis rivales).",
+    "999001": "Además, hay una probabilidad del [Digit:2digits Idx=\"1\" ]% de otorgar todos los efectos siguientes:",
+    "999000": "Duplica la potencia de este ataque.",
+    "998999": "Crea un [Name:ReferencedMessageTag ] la primera vez que este movimiento de ataque acierta en cada combate.",
+    "998998": "Recupera aproximadamente un [Digit:2digits Idx=\"2\" ]% de los PS máximos de todos los compis aliados.",
+    "998997": "Cura todos los problemas de estado, de retroceso, confusión y ataduras de todos los compis aliados."
 }

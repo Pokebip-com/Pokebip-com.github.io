@@ -24,5 +24,8 @@
     "score_attack_battle_rule_5060_010": "對手不會陷入異常狀態、畏縮狀態、混亂狀態\n和束縛狀態。",
     "score_attack_battle_rule_5060_011": "當對手未陷入異常狀態或妨害狀態時，\n會減輕所受到的傷害８０％。",
     "damage_challenge_rule_6060_001": "我方用招式給予的傷害會減少８０％。",
-    "damage_challenge_rule_6060_002": "我方用拍組招式和拍組極巨化招式\n給予的傷害會減少８０％。"
+    "damage_challenge_rule_6060_002": "我方用拍組招式和拍組極巨化招式\n給予的傷害會減少８０％。",
+    "passio_tower_rule_7070_001": "對手因特殊攻擊\n受到的傷害會變成０。",
+    "passio_tower_rule_7070_002": "對手因物理攻擊\n受到的傷害會變成０。",
+    "passio_tower_rule_7070_003": "當對手未陷入異常狀態或妨害狀態時，\n受到的傷害會變成０。"
 }

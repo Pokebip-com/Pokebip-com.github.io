@@ -24,5 +24,8 @@
     "score_attack_battle_theme_5060_010": "對手的異常狀態\n和妨害狀態無效化",
     "score_attack_battle_theme_5060_011": "對手非異常及妨害時\n大幅減輕傷害",
     "damage_challenge_theme_6060_001": "我方招式的傷害\n大幅減少",
-    "damage_challenge_theme_6060_002": "我方拍組招式和拍組極巨化招式的\n傷害大幅減少"
+    "damage_challenge_theme_6060_002": "我方拍組招式和拍組極巨化招式的\n傷害大幅減少",
+    "passio_tower_theme_7070_001": "對手不會受到特殊攻擊所造成的傷害",
+    "passio_tower_theme_7070_002": "對手不會受到物理攻擊所造成的傷害",
+    "passio_tower_theme_7070_003": "對手非異常或妨害時\n不會受到傷害"
 }
