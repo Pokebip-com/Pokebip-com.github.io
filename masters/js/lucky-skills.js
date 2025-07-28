@@ -233,7 +233,7 @@ function printLotPassiveSkills(lotId, div) {
         let tr = document.createElement("tr");
 
         let passiveName = document.createElement("td");
-        passiveName.innerText = getPassiveSkillName(lot[i].potentialId);
+        passiveName.innerHTML = getDetailedPassiveSkillName(lot[i].potentialId);
 
         let passiveDescr = document.createElement("td");
         passiveDescr.innerText = getPassiveSkillDescr(lot[i].potentialId);
