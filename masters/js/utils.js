@@ -71,10 +71,13 @@ function preloadUtils(preloadItems = false) {
     if(preloadItems) {
         // Item Proto
         jsonCache.preloadProto(`AbilityItem`);
+        jsonCache.preloadProto(`AcademyItem`);
         jsonCache.preloadProto(`EventExchangeItem`);
+        jsonCache.preloadProto(`ExRoleReleaseItem`);
         jsonCache.preloadProto(`Item`);
         jsonCache.preloadProto(`MonsterEnhancement`);
         jsonCache.preloadProto(`MoveLevelUpItem`);
+        jsonCache.preloadProto(`PotentialItem`);
         jsonCache.preloadProto(`SpecialAwakingLevelUpItem`);
         jsonCache.preloadProto(`StoryQuest`);
         jsonCache.preloadProto(`TrainerBuildupItem`);
@@ -419,12 +422,71 @@ function getNormalizedItemName(itemId) {
     return removeAccents(getItemName(itemId)).toLowerCase().replaceAll(" ", "-");
 }
 
+function getItemImage(imageId, rarity = null, dataUrl = "./data") {
+    let img = document.createElement("img");
+
+    if(rarity !== null) {
+        img.style.backgroundImage = `url(${dataUrl}/item/Frame/128/if01_0${rarity}_128.png)`;
+        img.style.backgroundSize = "64px 64px";
+    }
+
+    img.src = `${dataUrl}/item/${imageId}/${imageId}_128.png`;
+    img.style.width = "64px";
+    img.style.height = "64px";
+    return img;
+}
+
+function getItemSubCategory(itemId) {
+    return jData.proto.item.find(i => i.itemId === itemId).subCategory || -1;
+}
+
+function getItemImageId(itemId) {
+    switch(getItemSubCategory(itemId)) {
+        case 3:
+            return "i003_0001_00";
+
+        case 4:
+        case 6:
+        case 7:
+        case 9:
+        case 10:
+        case 41:
+        case 45:
+        case 53:
+        case 58:
+        case 60:
+        case 65:
+        case 66:
+        case 67:
+        case 78:
+        case 79:
+        case 95:
+        case 111:
+        case 112:
+        case 134:
+        case 221:
+            return jData.proto.otherItem.find(oi => oi.otherItemId === itemId).imageId || "null";
+
+        case 51:
+            return jData.proto.breakThroughItem.find(bti => bti.itemId === breakthroughItemNameId).imageId || "null";
+
+        case 52:
+            return jData.proto.trainingItem.find(ti => ti.itemId === trainingItemNameId).imageId || "null";
+
+        case 57:
+            return jData.proto.moveLevelUpItem.find(mli => mli.itemId === itemId).imageId || "null";
+
+        case 59:
+            return jData.proto.exRoleReleaseItem.find(erri => erri.itemId === itemId).imageName || "null";
+
+    }
+}
+
 function getItemName(itemId, log = false) {
     let lsdName = "";
     let fieldName = itemId;
     let prefix = "";
-    let subCategory = jData.proto.item.find(i => i.itemId === itemId);
-    subCategory = subCategory && subCategory.subCategory ? subCategory.subCategory : -1;
+    let subCategory = getItemSubCategory(itemId);
     switch(subCategory) {
         // Trainer.pb
         case 1:
@@ -457,6 +519,7 @@ function getItemName(itemId, log = false) {
         case 111:
         case 112:
         case 134:
+        case 221:
             lsdName = `other_item_name`;
             break;
 
@@ -481,6 +544,15 @@ function getItemName(itemId, log = false) {
 
         // potential_item_name_xx.lsd
         case 54:
+            const potentialItem = jData.proto.potentialItem.find(pi => pi.itemId === itemId);
+
+            if(potentialItem.potentialItemName === "") {
+                lsdName = `potential_item_name`;
+                break;
+            }
+
+            return jData.lsd.potentialItemName[potentialItem.potentialItemName].replace("[Name:TrainerNameAndType ]", getTrainerName(potentialItem.trainerId));
+
             lsdName = `potential_item_name`;
             break;
 
@@ -514,8 +586,8 @@ function getItemName(itemId, log = false) {
 
         // exrole_release_item_name_xx.lsd
         case 59:
-            lsdName = `exrole_release_item_name`;
-            break;
+            let tid = jData.proto.exRoleReleaseItem.find(erri => erri.exRoleItemId === itemId).trainerId;
+            return jData.lsd.exroleReleaseItemName[itemId.toString()] + (tid === "-1" ? "" : ` (${getPairName(tid)})`);
 
         // MonsterEvolution.pb
         case 61:
@@ -705,6 +777,12 @@ function getItemName(itemId, log = false) {
 
         case 200:
             lsdName = `academy_item_name`;
+            let itemType = jData.proto.academyItem.find(ai => ai.academyItemNameId === itemId).itemName;
+            fieldName = jData.proto.academyItem.find(ai => ai.itemName === itemType).academyItemNameId;
+            break;
+
+        case 220:
+            lsdName = `passio_tower_random_reward_box_name`;
             break;
 
         // Inconnus...
