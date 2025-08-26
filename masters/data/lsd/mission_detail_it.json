@@ -345,5 +345,13 @@
     "247_element": "• [Name:TowerName ].",
     "248": "Completa [Digit:6digits ] pian[IT:Qty S=\"o\" P=\"i\" ] in una\ndelle seguenti Torri di Pasio:",
     "248_element": "• [Name:TowerName ].",
+    "override_detail_7080_1_01": "Completa una volta \"VS leggende\nviventi\" con Giovanni & Mewtwo\nin squadra.\n\nPuoi fare squadra con Giovanni\n& Mewtwo completando il capitolo\n\"L'ombra in agguato\" della storia\n\"I Pokémon leggendari\".",
+    "override_detail_7080_1_02": "Completa una volta \"VS leggende\nviventi\" con Argento & Ho-Oh\nin squadra.\n\nPuoi fare squadra con Argento\n& Ho-Oh completando il capitolo\n\"Ali per un cuore puro\" della storia\n\"I Pokémon leggendari\".",
+    "override_detail_7080_1_03": "Completa una volta \"VS leggende\nviventi\" con Lyris & Rayquaza\nin squadra.\n\nPuoi fare squadra con Lyris\n& Rayquaza completando il capitolo\n\"Il padrone dei cieli\" della storia\n\"I Pokémon leggendari\".",
+    "override_detail_7080_1_04": "Completa una volta \"VS leggende\nviventi\" con Cyrus & Palkia\nin squadra.\n\nPuoi fare squadra con Cyrus & Palkia\ncompletando il capitolo \"Spiriti\nin un nuovo mondo\" della storia\n\"I Pokémon leggendari\".",
+    "override_detail_7080_1_05": "Completa una volta \"VS leggende\nviventi\" con Ghecis & Kyurem\nin squadra.\n\nPuoi fare squadra con Ghecis\n& Kyurem completando il capitolo\n\"Padre... o nemico?\" della storia\n\"I Pokémon leggendari\".",
+    "override_detail_7080_1_06": "Completa una volta \"VS leggende\nviventi\" con Platan & Xerneas\nin squadra.\n\nPuoi fare squadra con Platan\n& Xerneas completando il capitolo\n\"Chi dà e chi prende\" della storia\n\"I Pokémon leggendari\".",
+    "override_detail_7080_1_07": "Completa una volta \"VS leggende\nviventi\" con Protagonista & Solgaleo\nin squadra.\n\nPuoi fare squadra con Protagonista\n& Solgaleo completando il capitolo\n\"La creatura eliofaga\" della storia\n\"I Pokémon leggendari\".",
+    "override_detail_7080_1_08": "Completa una volta \"VS leggende\nviventi\" con Hop & Zamazenta\nin squadra.\n\nPuoi fare squadra con Hop\n& Zamazenta completando il capitolo\n\"Lo scudo che ulula all'eternità\"\ndella storia \"I Pokémon leggendari\".",
     "249": "Sconfiggi [Digit:6digits ] Superquattro\nnella Lotta dei Campioni in difficoltà\n\"Difficile L. 1\".\nIl progresso delle missioni si ripristina\nogni settimana."
 }

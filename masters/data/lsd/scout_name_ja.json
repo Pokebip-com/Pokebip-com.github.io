@@ -225,5 +225,9 @@
     "event_7070_2W_MasterTicket_04": "アイリス スペコス 確定Ｂサーチ",
     "event_7070_2W_SuperTicket_08": "グラジオ スペコス 出現率アップＢサーチ",
     "event_7070_2W_MasterTicket_09": "グラジオ スペコス 確定Ｂサーチ",
-    "event_7070_3W_SuperTicket_03": "バラエティ 出現率アップＢサーチ"
+    "event_7070_3W_SuperTicket_03": "バラエティ 出現率アップＢサーチ",
+    "event_7080_2W_MasterTicket_03": "バラエティ 確定Ｂサーチ",
+    "event_7080_4W_SuperTicket_03": "テル スペコス 出現率アップＢサーチ",
+    "event_7080_4W_MasterTicket_04": "テル スペコス 確定Ｂサーチ",
+    "event_7080_4W_SuperTicket_08": "マスターフェス限定 出現率アップＢサーチ"
 }

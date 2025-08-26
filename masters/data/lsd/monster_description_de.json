@@ -142,6 +142,7 @@
     "20022901": "Es bekämpft seine Gegner mit giftigen Flammen.\nErlegte Beute wird im Rudel gerecht aufgeteilt.",
     "20023000": "Seedraking lebt in den Tiefen des Ozeans, die ansonsten\nverwaist sind. Lange hat man geglaubt, dass das Gähnen\ndieses Pokémon Strudel auslöst.",
     "20023100": "Um sich ein Nest zu bauen, gräbt Phanpy am Flussufer ein\nLoch ins Erdreich. Es markiert die Umgebung seines Nests\nmithilfe seines Rüssels, damit seine Artgenossen wissen,\ndass dieses Gebiet vergeben ist.",
+    "20023700": "Kapoera dreht sich auf dem Kopf stehend um die eigene\nAchse und teilt Tritte aus. Seine Technik ist eine\nbemerkenswerte Mischung aus Angriff und Verteidigung.\nEs bewegt sich drehend schneller voran als laufend.",
     "20024100": "Es gibt täglich 20 l Milch. Je besser die Qualität\ndes Grases ist, desto schmackhafter ist sie.",
     "20024200": "Sein Ei ist eine Kostbarkeit, denn es heißt, wer davon\nesse, werde glücklich. Auf dem Markt erzielt es deshalb\nSpitzenpreise.",
     "20024300": "Raikou ist so schnell wie der Blitz. Das Gebrüll dieses\nPokémon sendet Schockwellen aus, die wie Donnerschläge\ndurch die Luft beben und den Boden erschüttern.",
@@ -278,6 +279,7 @@
     "20048400": "Man sagt, es lebe in einem Spalt in einer\nParalleldimension. Es wird in der Mythologie\nerwähnt.",
     "20048600": "Man sagt, es habe Pokémon aus einem Eisberg, Felsen\nund Magma nach seinem Abbild geschaffen.",
     "20048711": "Es lebt in einer Zerrwelt, die auf der Kehrseite der\nunseren liegt und die sich aller Logik entzieht.",
+    "20048712": "Es lebt in einer Zerrwelt, die auf der Kehrseite der\nunseren liegt und die sich aller Logik entzieht.",
     "20048800": "Seine Flügel geben schimmernde Partikel ab, die wie\nein Schleier herabrieseln. Man sagt, es verkörpere die\nMondsichel.",
     "20049100": "Es vertreibt Eindringlinge aus seinem Revier, indem es sie\nin Schlaf versetzt und mit Alpträumen quält.",
     "20049211": "Es kann die Luft von Giften reinigen und Ödland in ein\nüppig blühendes Blumenfeld verwandeln.",
@@ -310,6 +312,7 @@
     "20053700": "Wenn es die Beulen auf seinem Kopf zum Schwingen\nbringt, tobt je nach Umgebung entweder das Wasser\noder die Erde bebt.",
     "20053800": "Zurrt es seinen Gürtel fest, gewinnt es an Kraft. Wilde\nExemplare flechten sich ihren Gürtel in Handarbeit aus\nRanken.",
     "20053900": "Es lebt zurückgezogen in den Bergen und trainiert Tag\nund Nacht, um seinen Karateschlag zu perfektionieren.",
+    "20054100": "Es wandelt herabgefallenes Laub in Nährstoffe um.\nIn Wäldern, wo es Folikon gibt, fühlen sich Pflanzen\npudelwohl.",
     "20054200": "Begegnet es einem jungen Pokémon, näht es ihm mit den\nklebrigen Fäden aus seinem Mund ein Kleid aus Blättern.",
     "20054400": "Von einem harten Schutzpanzer umgeben. Es greift seine\nGegner an, indem es mit Karacho wie ein Rad in sie\nhineinrollt.",
     "20054500": "Lähmt seine Beute, indem es sie mit den Zacken an\nseinem Hals aufspießt. Mit einer Ladung Gift gibt es\nihr den Rest.",
@@ -359,6 +362,7 @@
     "20064000": "Das Horn an seinem Kopf ist eine scharfe Klinge.\nNeckt seine Gegner mit quirligen Bewegungen\nund greift blitzartig an.",
     "20064111": "Sein Unterkörper ist in eine wolkenartige Energieschicht\ngehüllt. Es jagt mit bis zu 300 km/h durch die Lüfte.",
     "20064112": "Es fliegt den gesamten Globus ab. Der Wind, den es dabei\nerzeugt, ist so stark, dass er alles aus den Angeln hebt.",
+    "20064211": "Es greift mit elektrischer Ladung aus den Dornen seiner\nRute an und bombardiert Einall aus der Luft mit Blitzen.",
     "20064212": "Es greift mit elektrischer Ladung aus den Dornen seiner\nRute an und bombardiert Einall aus der Luft mit Blitzen.",
     "20064300": "Ein Legendäres Pokémon mit der Macht, die Welt mit\nseinen Flammen einzuäschern. Hilft allen, die nach\nWirklichkeit streben.",
     "20064400": "Ein Legendäres Pokémon mit der Macht, die Welt durch\nDonner einzuäschern. Hilft allen, die einer Welt der\nWünsche harren.",
@@ -617,5 +621,7 @@
     "20086513": "Necrozma nimmt diese Form an, wenn es das Licht von\nLunala verschlingt. Es packt und zerreißt Gegner mit\nseinen gewaltigen Krallen.",
     "2009730000": "Dieses Pokémon verknotet offenbar seinen Hals am\nAnsatz, damit die im Bauch gespeicherte Energie nicht\nüber den Schnabel entweicht.",
     "2010190000": "Es entfaltet seine wahre Stärke, wenn sich die\nzusammenlebende launische Gruppe sogenannter\n„Schlangel“ ausnahmsweise mal einig ist.",
-    "2010131100": "Es gibt sich als Tee aus und versucht jenen, die es\nversehentlich trinken, die Lebensenergie auszusaugen.\nAllerdings wird es oft durchschaut."
+    "2010131100": "Es gibt sich als Tee aus und versucht jenen, die es\nversehentlich trinken, die Lebensenergie auszusaugen.\nAllerdings wird es oft durchschaut.",
+    "2009090000": "Sein Flammensack ist noch klein, weshalb überquellende\nEnergie über die Vertiefung an seinem Kopf flackernd\nfreigesetzt wird.",
+    "2009120000": "Vor langer Zeit kam es von weit her und ließ sich in\nPaldea nieder. Über sein Gefieder sondert es ein Gel ab,\ndas Wasser und Schmutz abweist."
 }

@@ -231,6 +231,9 @@
 { "teamSkillEffectId": "40010001", "teamSkillId": 19970005, "u3": 3, "teamSkillGrowthId": 15, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40010001", "teamSkillId": 19972002, "u3": 3, "teamSkillGrowthId": 6, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40010001", "teamSkillId": 19972003, "u3": 4, "teamSkillGrowthId": 8, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
+{ "teamSkillEffectId": "40010001", "teamSkillId": 19973002, "u3": 3, "teamSkillGrowthId": 6, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
+{ "teamSkillEffectId": "40010001", "teamSkillId": 19973003, "u3": 4, "teamSkillGrowthId": 8, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
+{ "teamSkillEffectId": "40010001", "teamSkillId": 19973005, "u3": 3, "teamSkillGrowthId": 15, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40010001", "teamSkillId": 19980002, "u3": 3, "teamSkillGrowthId": 6, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40010001", "teamSkillId": 19980003, "u3": 4, "teamSkillGrowthId": 8, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40010001", "teamSkillId": 19980005, "u3": 3, "teamSkillGrowthId": 15, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
@@ -477,6 +480,8 @@
 { "teamSkillEffectId": "40030001", "teamSkillId": 19970004, "u3": 3, "teamSkillGrowthId": 13, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40030001", "teamSkillId": 19972001, "u3": 3, "teamSkillGrowthId": 5, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40030001", "teamSkillId": 19972003, "u3": 3, "teamSkillGrowthId": 7, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
+{ "teamSkillEffectId": "40030001", "teamSkillId": 19973003, "u3": 3, "teamSkillGrowthId": 7, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
+{ "teamSkillEffectId": "40030001", "teamSkillId": 19973004, "u3": 3, "teamSkillGrowthId": 13, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40030001", "teamSkillId": 19980001, "u3": 3, "teamSkillGrowthId": 5, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40030001", "teamSkillId": 19980003, "u3": 3, "teamSkillGrowthId": 7, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40030001", "teamSkillId": 19980004, "u3": 3, "teamSkillGrowthId": 13, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
@@ -598,6 +603,8 @@
 { "teamSkillEffectId": "40040001", "teamSkillId": 19968005, "u3": 4, "teamSkillGrowthId": 16, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40040001", "teamSkillId": 19970004, "u3": 4, "teamSkillGrowthId": 14, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40040001", "teamSkillId": 19970005, "u3": 4, "teamSkillGrowthId": 16, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
+{ "teamSkillEffectId": "40040001", "teamSkillId": 19973004, "u3": 4, "teamSkillGrowthId": 14, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
+{ "teamSkillEffectId": "40040001", "teamSkillId": 19973005, "u3": 4, "teamSkillGrowthId": 16, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40040001", "teamSkillId": 19980004, "u3": 4, "teamSkillGrowthId": 14, "u5": 0, "u6": 0, "u7": 0, "u8": 0 },
 { "teamSkillEffectId": "40040001", "teamSkillId": 19980005, "u3": 4, "teamSkillGrowthId": 16, "u5": 0, "u6": 0, "u7": 0, "u8": 0 }
 ]}

@@ -220,6 +220,8 @@
     "20019600": "Espeon",
     "20019700": "Umbreon",
     "20019900": "Slowking",
+    "20020200": "Wobbuffet",
+    "20020201": "Wobbuffet",
     "20020300": "Girafarig",
     "20020500": "Forretress",
     "20020801": "Steelix",
@@ -444,6 +446,7 @@
     "20047700": "Dusknoir",
     "20047800": "Froslass",
     "20047911": "Rotom",
+    "20047912": "Rotom",
     "20048000": "Uxie",
     "20048100": "Mesprit",
     "20048200": "Azelf",
@@ -452,10 +455,12 @@
     "20048500": "Heatran",
     "20048600": "Regigigas",
     "20048711": "Giratina",
+    "20048712": "Giratina",
     "20048800": "Cresselia",
     "20049100": "Darkrai",
     "20049211": "Shaymin",
     "20049212": "Shaymin",
+    "20049311": "Arceus",
     "20049400": "Victini",
     "20049500": "Snivy",
     "20049600": "Servine",
@@ -839,5 +844,7 @@
     "2009730000": "Flamigo",
     "2010131100": "Sinistcha",
     "2010190000": "Hydrapple",
-    "2010121100": "Poltchageist"
+    "2010121100": "Poltchageist",
+    "2009051100": "Enamorus",
+    "2000590041": "Arcanine"
 }

@@ -345,5 +345,13 @@
     "247_element": "• [Name:TowerName ]",
     "248": "Schließe insgesamt [Digit:6digits ] [DE:Qty S=\"Ebene\" P=\"Ebenen\" ] in\neinem der folgenden Türme ab:",
     "248_element": "• [Name:TowerName ]",
+    "override_detail_7080_1_01": "Bilde ein Team mit Giovanni & Mewtu und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir Giovanni & Mewtu durch den Abschluss des Legenden-Abenteuers „Der Strippenzieher“ der Hauptgeschichte in dein Team holen.",
+    "override_detail_7080_1_02": "Bilde ein Team mit Silber & Ho-Oh und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir Silber & Ho-Oh durch den Abschluss des Legenden-Abenteuers „Die Regenbogen-Schwingen“ der Hauptgeschichte in dein Team holen.",
+    "override_detail_7080_1_03": "Bilde ein Team mit Amalia & Rayquaza und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir Amalia & Rayquaza durch den Abschluss des Legenden-Abenteuers „Der Herrscher des Himmels“ der Hauptgeschichte in dein Team holen.",
+    "override_detail_7080_1_04": "Bilde ein Team mit Zyrus & Palkia und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir Zyrus & Palkia durch den Abschluss des Legenden-Abenteuers „Neue Welt, neue Gefühle“ der Hauptgeschichte in dein Team holen.",
+    "override_detail_7080_1_05": "Bilde ein Team mit G-Cis & Kyurem und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir G-Cis & Kyurem durch den Abschluss des Legenden-Abenteuers „Vater oder Feind“ der Hauptgeschichte in dein Team holen.",
+    "override_detail_7080_1_06": "Bilde ein Team mit Professor Platan & Xerneas und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir Professor Platan & Xerneas durch den Abschluss des Legenden-Abenteuers „Geben und Nehmen“ der Hauptgeschichte in dein Team holen.",
+    "override_detail_7080_1_07": "Bilde ein Team mit Protagonist & Solgaleo und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir Protagonist & Solgaleo durch den Abschluss des Legenden-Abenteuers „Der Sonnenverschlinger“ der Hauptgeschichte in dein Team holen.",
+    "override_detail_7080_1_08": "Bilde ein Team mit Hop & Zamazenta und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir Hop & Zamazenta durch den Abschluss des Legenden-Abenteuers „Wackerer Schild der Ewigkeit“ der Hauptgeschichte in dein Team holen.",
     "249": "Besiege [Digit:6digits ] [DE:Qty S=\"Mitglied\" P=\"Mitglieder\" ] der\nTop Vier im Champkampf auf dem\nSchwierigkeitsgrad Schwer Lv.1.\n(Fortschritt wird wöchentlich\nzurückgesetzt.)"
 }

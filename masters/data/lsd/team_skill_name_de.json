@@ -373,5 +373,9 @@
     "10301006": "Protagonist (Variabel)",
     "19920006": "Teamkämpfer (Variabel)",
     "19952006": "Pokéathleten (Variabel)",
-    "10107005": "Kampf (Feldwandler)"
+    "10107005": "Kampf (Feldwandler)",
+    "19973002": "Hisui-Abenteurer (Helfer)",
+    "19973003": "Hisui-Abenteurer (Taktiker)",
+    "19973004": "Hisui-Abenteurer (Initiator)",
+    "19973005": "Hisui-Abenteurer (Feldwandler)"
 }

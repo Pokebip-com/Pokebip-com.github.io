@@ -24,7 +24,7 @@
     "inventory_campaign_2030_mainstory": "campagna storia",
     "inventory_campaign_2050_mainstory": "bonus accesso campagna storia",
     "inventory_campaign_2050_pokemonwotanosimou": "divertiamoci con i Pokémon!",
-    "inventory_campaign_2050_hikari": "bonus accesso per la stella della Gara",
+    "inventory_campaign_2050_hikari": "bonus accesso La stella della gara",
     "inventory_campaign_2050_isshu": "bonus accesso campagna di Unima",
     "inventory_campaign_2060_matsuba": "bonus accesso AllenaSpettro con Angelo",
     "inventory_campaign_2060_serena": "bonus accesso Dolceparty con Serena",
@@ -221,5 +221,8 @@
     "inventory_campaign_7070_event2": "bonus accesso per la vigilia del sesto anniversario",
     "inventory_campaign_7070_event3": "10 giorni di omaggi: Ticket 10 ricerche Unità in regalo!",
     "inventory_campaign_7070_event4": "bonus accesso evento accademico",
-    "inventory_campaign_7070_event5": "bonus accesso evento accademico"
+    "inventory_campaign_7070_event5": "bonus accesso evento accademico",
+    "inventory_campaign_7080_event1": "bonus accesso per il sesto anniversario",
+    "inventory_campaign_7080_event2": "bonus accesso Festival Teracristal",
+    "inventory_campaign_7080_event3": "bonus accesso evento lotta speciale"
 }

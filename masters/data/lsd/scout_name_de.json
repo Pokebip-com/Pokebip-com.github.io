@@ -225,5 +225,9 @@
     "event_7070_2W_MasterTicket_04": "Garantierte G-Suche:\nLilia (Kostüm)",
     "event_7070_2W_SuperTicket_08": "Fokus-G-Suche:\nGladio (Kostüm)",
     "event_7070_2W_MasterTicket_09": "Garantierte G-Suche:\nGladio (Kostüm)",
-    "event_7070_3W_SuperTicket_03": "Sonder-\nFokus-G-Suche"
+    "event_7070_3W_SuperTicket_03": "Sonder-\nFokus-G-Suche",
+    "event_7080_2W_MasterTicket_03": "Garantierte\nSonder-G-Suche",
+    "event_7080_4W_SuperTicket_03": "Fokus-G-Suche:\nLumius (Kostüm)",
+    "event_7080_4W_MasterTicket_04": "Garantierte G-Suche:\nLumius (Kostüm)",
+    "event_7080_4W_SuperTicket_08": "Meisterfestival-\nFokus-G-Suche"
 }

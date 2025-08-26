@@ -220,6 +220,8 @@
     "20019600": "Mentali",
     "20019700": "Noctali",
     "20019900": "Roigada",
+    "20020200": "Qulbutoké",
+    "20020201": "Qulbutoké",
     "20020300": "Girafarig",
     "20020500": "Foretress",
     "20020801": "Steelix",
@@ -444,6 +446,7 @@
     "20047700": "Noctunoir",
     "20047800": "Momartik",
     "20047911": "Motisma",
+    "20047912": "Motisma",
     "20048000": "Créhelf",
     "20048100": "Créfollet",
     "20048200": "Créfadet",
@@ -452,10 +455,12 @@
     "20048500": "Heatran",
     "20048600": "Regigigas",
     "20048711": "Giratina",
+    "20048712": "Giratina",
     "20048800": "Cresselia",
     "20049100": "Darkrai",
     "20049211": "Shaymin",
     "20049212": "Shaymin",
+    "20049311": "Arceus",
     "20049400": "Victini",
     "20049500": "Vipélierre",
     "20049600": "Lianaja",
@@ -839,5 +844,7 @@
     "2009730000": "Flamenroule",
     "2010131100": "Théffroyable",
     "2010190000": "Pomdorochi",
-    "2010121100": "Poltchageist"
+    "2010121100": "Poltchageist",
+    "2009051100": "Amovénus",
+    "2000590041": "Arcanin"
 }

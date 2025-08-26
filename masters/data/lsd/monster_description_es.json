@@ -142,6 +142,7 @@
     "20022901": "Remata a sus rivales exhalando llamas tóxicas. Si abate\nuna presa, la compartirá a partes iguales con el resto de\nla manada.",
     "20023000": "Kingdra vive en lo más profundo del océano, donde no\nhabita ninguna otra especie. Siempre se ha pensado que\nsu bostezo causaba las corrientes en remolino que se\ndan en el océano.",
     "20023100": "Phanpy cava un agujero profundo para hacer su nido en\nel suelo, en la ribera de los ríos, y marca con la trompa\nla zona para que el resto vea que ese terreno ya está\nocupado.",
+    "20023700": "Hitmontop hace el pino con la cabeza y se pone a girar\nrápido al tiempo que reparte patadas. Esta es una\ntécnica ofensiva y defensiva a la vez. Este Pokémon se\ndesplaza más rápido girando sobre sí que caminando.",
     "20024100": "Produce 20 litros de leche al día, que es más sabrosa\ncuanto mejor sea el pasto.",
     "20024200": "Se dice que los huevos de Blissey están tan ricos que\ndan la felicidad a quien los prueba. Por eso alcanzan\nprecios exorbitantes.",
     "20024300": "Raikou tiene la velocidad del rayo. Los rugidos de este\nPokémon emiten ondas de choque que se esparcen\nvibrando por el aire y sacuden el suelo como si fueran\nauténticas descargas de rayo.",
@@ -278,6 +279,7 @@
     "20048400": "Se dice que vive en una dimensión espacial paralela.\nAparece en la mitología.",
     "20048600": "Se dice que usó rocas, magma y un hielo especial de\nmontaña para crear Pokémon con su aspecto.",
     "20048711": "Vive en el Mundo Distorsión, un mundo opuesto al\nnuestro y cuyas leyes desafían el sentido común.",
+    "20048712": "Vive en el Mundo Distorsión, un mundo opuesto al\nnuestro y cuyas leyes desafían el sentido común.",
     "20048800": "Sus alas emiten un velo de partículas brillantes. Se dice\nque representa un cuarto lunar.",
     "20049100": "Defiende su territorio de personas y Pokémon\nhaciéndoles dormir y provocándoles pesadillas.",
     "20049211": "Puede disolver las toxinas del aire para transformar\ntierra yerma en campos de flores.",
@@ -310,6 +312,7 @@
     "20053700": "Aumenta la potencia de sus puñetazos haciendo vibrar\nsus puños. Es capaz de quebrar una roca de un solo\ngolpe.",
     "20053800": "Aumenta su potencia si se aprieta el cinturón. Un Throh\nsalvaje teje su propio cinturón usando lianas.",
     "20053900": "Para lograr dominar las técnicas de kárate más letales,\nse retiran a las montañas y entrenan día y noche.",
+    "20054100": "La vegetación abunda en los bosques que habita. Este\nPokémon transforma las hojas caídas en nutrientes.",
     "20054200": "Si se encuentra con un Pokémon joven, segrega por la\nboca hilos pegadizos con los que le teje una prenda de\nropa.",
     "20054400": "Lo protege un duro caparazón. Gira como una rueda\ny realiza brutales placajes contra sus enemigos.",
     "20054500": "Atenaza a sus presas con las garras que sobresalen de\nsu cuello hasta que no se pueden mover y las remata\ncon veneno.",
@@ -359,6 +362,7 @@
     "20064000": "Sus cuernos son hojas afiladas. Sacude a sus enemigos\ncon sus relampagueantes movimientos y los reduce.",
     "20064111": "La parte inferior de su cuerpo, similar a una nube, está\nrecubierta de un campo de energía. Vuela a 300 km/h.",
     "20064112": "Le gusta ir volando de un lado a otro, generando\ntempestades tan potentes que pueden echar abajo\nuna casa.",
+    "20064211": "Lanza descargas eléctricas por las púas de su cola.\nSobrevuela Teselia dejando caer rayos.",
     "20064212": "Lanza descargas eléctricas por las púas de su cola.\nSobrevuela Teselia dejando caer rayos.",
     "20064300": "Pokémon legendario capaz de abrasar el mundo con sus\nllamas. Ayuda a quienes persiguen un mundo veraz.",
     "20064400": "Pokémon legendario capaz de chamuscar el mundo con\nsus rayos. Ayuda a quienes persiguen un mundo de\nideales.",
@@ -617,5 +621,7 @@
     "20086513": "Forma que adopta Necrozma al nutrirse de la luz de\nLunala. Atrapa al enemigo con sus enormes garras y usa\nla fuerza bruta para hacerlo trizas.",
     "2009730000": "Al parecer, se anudan la base del cuello para impedir\nque la energía que tienen almacenada en el estómago\nescape por el pico.",
     "2010190000": "Unos Viborappli caprichosos que comparten morada.\nEn raras ocasiones se ponen de acuerdo y son capaces de\nmostrar su verdadera fuerza.",
-    "2010131100": "Se hace pasar por té matcha para que algún incauto lo\nbeba y así absorber su energía vital, pero su plan suele\nfracasar."
+    "2010131100": "Se hace pasar por té matcha para que algún incauto lo\nbeba y así absorber su energía vital, pero su plan suele\nfracasar.",
+    "2009090000": "Como su saca de fuego es pequeña, la energía ígnea que\nrebosa se libera por la muesca de su cabeza en forma\nde una trémula llama.",
+    "2009120000": "Un Pokémon llegado hace tiempo desde tierras lejanas\ny ya establecido en la región. El gel que secreta por las\nplumas repele el agua y la mugre."
 }

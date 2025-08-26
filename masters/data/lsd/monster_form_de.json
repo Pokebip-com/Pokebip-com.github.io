@@ -84,5 +84,10 @@
     "90008": "Weiblich",
     "70030": "Morgenschwingen",
     "90009": "Simple Form (Tera-Typ Pflanze)",
-    "90010": "Tera-Typ Kampf"
+    "90010": "Tera-Typ Kampf",
+    "90011": "Tera-Typ Drache",
+    "90012": "Tera-Typ Gestein",
+    "90013": "Hisui-Form (Tera-Typ Gift)",
+    "40006": "Urform",
+    "50008": "Sommerform"
 }

@@ -1,0 +1,11 @@
+{"entries": [
+{ "trainerRarityUpItemNameId": "680000000001", "imageId": "i068_0001_00", "rarity": 9, "trainerId": "-1", "trainerRarityUpItemDescriptionId": "680000000001" },
+{ "trainerRarityUpItemNameId": "680000000002", "imageId": "i068_0002_00", "rarity": 9, "trainerId": "10140000000", "trainerRarityUpItemDescriptionId": "680000000002" },
+{ "trainerRarityUpItemNameId": "680000000003", "imageId": "i068_0002_00", "rarity": 9, "trainerId": "10194000000", "trainerRarityUpItemDescriptionId": "680000000002" },
+{ "trainerRarityUpItemNameId": "680000000004", "imageId": "i068_0002_00", "rarity": 9, "trainerId": "10133000000", "trainerRarityUpItemDescriptionId": "680000000002" },
+{ "trainerRarityUpItemNameId": "680000000005", "imageId": "i068_0002_00", "rarity": 9, "trainerId": "10129000000", "trainerRarityUpItemDescriptionId": "680000000002" },
+{ "trainerRarityUpItemNameId": "680000000006", "imageId": "i068_0002_00", "rarity": 9, "trainerId": "10195000000", "trainerRarityUpItemDescriptionId": "680000000002" },
+{ "trainerRarityUpItemNameId": "680000000007", "imageId": "i068_0002_00", "rarity": 9, "trainerId": "10136000000", "trainerRarityUpItemDescriptionId": "680000000002" },
+{ "trainerRarityUpItemNameId": "680000000008", "imageId": "i068_0002_00", "rarity": 9, "trainerId": "18000120000", "trainerRarityUpItemDescriptionId": "680000000002" },
+{ "trainerRarityUpItemNameId": "680000000009", "imageId": "i068_0002_00", "rarity": 9, "trainerId": "10244000000", "trainerRarityUpItemDescriptionId": "680000000002" }
+]}

@@ -225,5 +225,9 @@
     "event_7070_2W_MasterTicket_04": "Iris Costume Guaranteed Ticket Scout",
     "event_7070_2W_SuperTicket_08": "Gladion Costume Featured Ticket Scout",
     "event_7070_2W_MasterTicket_09": "Gladion Costume Guaranteed Ticket Scout",
-    "event_7070_3W_SuperTicket_03": "Variety Featured Ticket Scout"
+    "event_7070_3W_SuperTicket_03": "Variety Featured Ticket Scout",
+    "event_7080_2W_MasterTicket_03": "Variety Guaranteed Ticket Scout",
+    "event_7080_4W_SuperTicket_03": "Rei Costume Featured Ticket Scout",
+    "event_7080_4W_MasterTicket_04": "Rei Costume Guaranteed Ticket Scout",
+    "event_7080_4W_SuperTicket_08": "Master Fair Featured Ticket Scout"
 }

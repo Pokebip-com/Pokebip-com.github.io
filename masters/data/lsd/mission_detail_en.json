@@ -252,7 +252,7 @@
     "178": "Use [Digit:6digits ] stamina with\nthe following Trainers\non your team:",
     "178_element": "• [Name:TrainerName ]",
     "179": "Unlock [Digit:6digits ] [EN:Qty S=\"song\" P=\"songs\" ].",
-    "180": "Power up [Digit:6digits ] sync pairs to 6★ EX.",
+    "180": "Power up [Digit:6digits ] sync [EN:Qty S=\"pair\" P=\"pairs\" ] to 6★ EX!",
     "181": "Raise player rank to [Digit:6digits ].",
     "182": "Log in [Digit:6digits ] [EN:Qty S=\"day\" P=\"days\" ].",
     "183": "Complete “Challenge\nSygna Suit Red”\non Victory Road.",
@@ -345,5 +345,13 @@
     "247_element": "• [Name:TowerName ]",
     "248": "Complete [Digit:6digits ] [EN:Qty S=\"floor\" P=\"floors\" ] in any of the\nfollowing towers:",
     "248_element": "• [Name:TowerName ]",
+    "override_detail_7080_1_01": "Form a team with Giovanni & Mewtwo, and complete Challenge the Living Legends once.\nNote: You can team up with Giovanni & Mewtwo by completing the main story’s Legendary Adventures: Lurking Shadow.",
+    "override_detail_7080_1_02": "Form a team with Silver & Ho-Oh, and complete Challenge the Living Legends once.\nNote: You can team up with Silver & Ho-Oh by completing the main story’s Legendary Adventures: Pure Hearts and Rainbow Wings.",
+    "override_detail_7080_1_03": "Form a team with Zinnia & Rayquaza, and complete Challenge the Living Legends once.\nNote: You can team up with Zinnia & Rayquaza by completing the main story’s Legendary Adventures: The Dragon That Rules the Sky.",
+    "override_detail_7080_1_04": "Form a team with Cyrus & Palkia, and complete Challenge the Living Legends once.\nNote: You can team up with Cyrus & Palkia by completing the main story’s Legendary Adventures: New World Dilemma.",
+    "override_detail_7080_1_05": "Form a team with Ghetsis & Kyurem, and complete Challenge the Living Legends once.\nNote: You can team up with Ghetsis & Kyurem by completing the main story’s Legendary Adventures: Father or Foe.",
+    "override_detail_7080_1_06": "Form a team with Professor Sycamore & Xerneas, and complete Challenge the Living Legends once.\nNote: You can team up with Professor Sycamore & Xerneas by completing the main story’s Legendary Adventures: Give and Take.",
+    "override_detail_7080_1_07": "Form a team with Main Character & Solgaleo, and complete Challenge the Living Legends once.\nNote: You can team up with Main Character & Solgaleo by completing the main story’s Legendary Adventures: The Beast That Devours the Sun.",
+    "override_detail_7080_1_08": "Form a team with Hop & Zamazenta, and complete Challenge the Living Legends once.\nNote: You can team up with Hop & Zamazenta by completing the main story’s Legendary Adventures: Howling Shield of Eternity.",
     "249": "Defeat [Digit:6digits ] Elite Four [EN:Qty S=\"member\" P=\"members\" ] in\nthe Champion Stadium on Hard Lv. 1.\n(Mission progress resets every week.)"
 }

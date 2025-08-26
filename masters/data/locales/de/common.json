@@ -26,6 +26,7 @@
   "hp": "KP",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",
+  "menu_pasio_towers": "Passio-Türme",
   "menu_schedule": "Schedule",
   "menu_sync_pairs": "Sync Pairs",
   "role_name_standard": {
@@ -66,5 +67,6 @@
   "submenu_rally_role_set": "Role Sets",
   "submenu_schedule": "Calendar",
   "submenu_skill_gear": "Skill Gears",
-  "submenu_superawakening": "Super-Erwachen"
+  "submenu_superawakening": "Super-Erwachen",
+  "submenu_towers_rewards": "Rewards"
 }

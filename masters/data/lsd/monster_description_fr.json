@@ -142,6 +142,7 @@
     "20022901": "Il crache des flammes empoisonnées pour achever\nses proies, qu'il partage avec les autres membres\nde sa meute.",
     "20023000": "Hyporoi vit au fin fond des profondeurs océaniques\ngénéralement inhabitées. On a longtemps cru que\nle bâillement de ce Pokémon créait les tourbillons\ndans les océans.",
     "20023100": "Pour faire son nid, Phanpy creuse un trou au bord\nd'une rivière. Il délimite la zone autour de son nid\navec sa trompe pour prévenir les autres que ce\nterritoire est le sien.",
+    "20023700": "Kapoera tournoie à toute vitesse sur sa tête, tout en\ndonnant des coups de pied. Cette technique combine\ndes attaques offensives et défensives. Ce Pokémon\nse déplace plus vite sur la tête qu'en marchant.",
     "20024100": "Les 20 litres de lait qu'il produit chaque jour gagneront\nen saveur et en caractère s'il vit dans un pâturage\nde bonne qualité.",
     "20024200": "Ses œufs sont si bons qu'il suffirait d'en manger un\npour trouver le bonheur. Au marché, c'est le produit\nqui se vend le plus cher.",
     "20024300": "Raikou incarne la vitesse de l'éclair. Les rugissements de\nce Pokémon libèrent des ondes de choc provenant du ciel\net frappant le sol avec la puissance de la foudre.",
@@ -278,6 +279,7 @@
     "20048400": "On dit qu'il hante une faille d'une dimension parallèle\nà la nôtre. Il apparaît dans la mythologie.",
     "20048600": "On dit qu'il a créé des Pokémon à son image\nà partir de glace, de roche et de magma.",
     "20048711": "Il vit dans le Monde Distorsion, un monde à l'opposé\ndu nôtre qui échappe au sens commun.",
+    "20048712": "Il vit dans le Monde Distorsion, un monde à l'opposé\ndu nôtre qui échappe au sens commun.",
     "20048800": "Ses ailes libèrent un rideau de particules brillantes.\nCe Pokémon symboliserait le croissant de lune.",
     "20049100": "Il endort humains et Pokémon, et leur fait avoir\ndes cauchemars pour les chasser de son territoire.",
     "20049211": "Il peut dissoudre les toxines dans l'air pour transformer\nun désert en un champ de fleurs luxuriantes.",
@@ -310,6 +312,7 @@
     "20053700": "Son coup de poing est plus fort quand il fait vibrer la\npustule dessus. Il peut briser un gros rocher d'un coup.",
     "20053800": "Quand il noue sa ceinture, il devient plus puissant.\nLes Judokrak sauvages tressent leur ceinture avec\ndes lianes.",
     "20053900": "Pour accéder à la maîtrise ultime du karaté, il se retire\ndans les montagnes et s'entraîne nuit et jour.",
+    "20054100": "Dans les forêts où il vit, la végétation pousse bien\ncar il transforme les feuilles mortes en engrais.",
     "20054200": "Il fabrique des vêtements de feuilles pour les Pokémon\nencore jeunes grâce à son fil de soie adhésif.",
     "20054400": "Protégé par sa solide carapace, il fonce sur ses ennemis\nen roulant comme un pneu.",
     "20054500": "Il paralyse l'ennemi avec les griffes de son cou avant\nde mettre fin au combat grâce à son poison virulent.",
@@ -359,6 +362,7 @@
     "20064000": "Ses cornes sont des lames effilées. Il lacère ses ennemis\ndans un mouvement tourbillonnant.",
     "20064111": "Le bas de son corps est entouré d'une masse d'énergie\nsemblable à un nuage. Il vole dans le ciel à 300 km/h.",
     "20064112": "Il voyage aux quatre vents. Son passage\nprovoque des tempêtes qui balayent tout\naux alentours.",
+    "20064211": "Sa queue lance des décharges électriques.\nIl vole dans le ciel d'Unys et fait tomber des éclairs.",
     "20064212": "Sa queue lance des décharges électriques.\nIl vole dans le ciel d'Unys et fait tomber des éclairs.",
     "20064300": "Un Pokémon légendaire assez puissant pour embraser\nle monde entier. Il soutient les défenseurs de la Réalité.",
     "20064400": "Un Pokémon légendaire assez puissant pour foudroyer\nle monde entier. Il soutient ceux qui suivent leur Idéal.",
@@ -617,5 +621,7 @@
     "20086513": "La forme que Necrozma prend lorsqu'il absorbe\nla lumière de Lunala. Il attrape et déchiquette\nses adversaires à l'aide de ses longues griffes.",
     "2009730000": "On pense qu'il fait un nœud à la base de son cou\nafin d'empêcher l'énergie qu'il accumule dans\nson ventre de s'échapper par son bec.",
     "2010190000": "Ces « Verochi » capricieux vivent sous le même\n« toit ». En de rares occasions, ils parviennent\nà s'entendre et libèrent tout leur potentiel.",
-    "2010131100": "Il se fait passer pour un bol de thé afin d'aspirer\nla force vitale de quiconque ferait l'erreur de le\nboire, mais en général, personne n'est dupe."
+    "2010131100": "Il se fait passer pour un bol de thé afin d'aspirer\nla force vitale de quiconque ferait l'erreur de le\nboire, mais en général, personne n'est dupe.",
+    "2009090000": "Sa poche à flammes est trop petite pour contenir\ntoute l'énergie qu'il produit. Le surplus s'échappe\nen vacillant par la cavité sur sa tête.",
+    "2009120000": "Originaire d'une contrée lointaine, il est venu\ns'installer dans la région il y a longtemps. Ses ailes\nsécrètent un gel qui repousse l'eau et les saletés."
 }

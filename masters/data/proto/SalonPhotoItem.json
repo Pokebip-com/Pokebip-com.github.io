@@ -105,5 +105,7 @@
 { "salonPhotoItemId": 1320104, "trainerId": "10247000000", "photoType": 1, "itemFrameId": 9, "u5": 1, "u6": 1, "imageId": "i132_0001_00", "scheduleId": "7060_1W_Salon_uppdate_FOREVER", "u9": "18446744073708751115" },
 { "salonPhotoItemId": 1320105, "trainerId": "10247000000", "photoType": 2, "itemFrameId": 9, "u5": 1, "u6": 1, "imageId": "i132_0002_00", "scheduleId": "7060_1W_Salon_uppdate_FOREVER", "u9": "18446744073708751114" },
 { "salonPhotoItemId": 1320106, "trainerId": "10120000000", "photoType": 1, "itemFrameId": 9, "u5": 1, "u6": 1, "imageId": "i132_0001_00", "scheduleId": "7070_1W_Salon_uppdate_FOREVER", "u9": "18446744073708851115" },
-{ "salonPhotoItemId": 1320107, "trainerId": "10120000000", "photoType": 2, "itemFrameId": 9, "u5": 1, "u6": 1, "imageId": "i132_0002_00", "scheduleId": "7070_1W_Salon_uppdate_FOREVER", "u9": "18446744073708851114" }
+{ "salonPhotoItemId": 1320107, "trainerId": "10120000000", "photoType": 2, "itemFrameId": 9, "u5": 1, "u6": 1, "imageId": "i132_0002_00", "scheduleId": "7070_1W_Salon_uppdate_FOREVER", "u9": "18446744073708851114" },
+{ "salonPhotoItemId": 1320108, "trainerId": "10356000000", "photoType": 1, "itemFrameId": 9, "u5": 1, "u6": 1, "imageId": "i132_0001_00", "scheduleId": "7080_1W_Salon_uppdate_FOREVER", "u9": "18446744073708651015" },
+{ "salonPhotoItemId": 1320109, "trainerId": "10356000000", "photoType": 2, "itemFrameId": 9, "u5": 1, "u6": 1, "imageId": "i132_0002_00", "scheduleId": "7080_1W_Salon_uppdate_FOREVER", "u9": "18446744073708651014" }
 ]}

@@ -1,0 +1,7 @@
+{"entries": [
+{ "configName": "max_play_count", "value": "20" },
+{ "configName": "open_date", "value": "1753678800" },
+{ "configName": "recovery_time_per_play_count", "value": "28800" },
+{ "configName": "tutorial_give_item_id", "value": "660000000010" },
+{ "configName": "tutorial_give_item_num", "value": "1" }
+]}

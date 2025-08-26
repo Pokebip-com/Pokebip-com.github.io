@@ -26,6 +26,7 @@
   "hp": "PV",
   "menu_battle_rally": "Rallye",
   "menu_language": "Langue",
+  "menu_pasio_towers": "Tours de Passio",
   "menu_schedule": "Programme",
   "menu_sync_pairs": "Duos",
   "role_name_standard": {
@@ -66,5 +67,6 @@
   "submenu_rally_role_set": "Sets de rôles",
   "submenu_schedule": "Calendrier",
   "submenu_skill_gear": "Équipements de talent",
-  "submenu_superawakening": "Transcendance"
+  "submenu_superawakening": "Transcendance",
+  "submenu_towers_rewards": "Récompenses"
 }

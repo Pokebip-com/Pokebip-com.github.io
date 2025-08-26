@@ -83,5 +83,6 @@
 { "teamSkillTagId": "29990069", "teamSkillTagType": -1, "u3": 999, "u4": 700000, "scheduleId": "event_3020_1W_FOREVER" },
 { "teamSkillTagId": "29990070", "teamSkillTagType": -1, "u3": 999, "u4": 710000, "scheduleId": "update_3050_ForcedUpdate_FOREVER" },
 { "teamSkillTagId": "29990071", "teamSkillTagType": -1, "u3": 999, "u4": 720000, "scheduleId": "chara_3070_3W_FOREVER" },
-{ "teamSkillTagId": "29990072", "teamSkillTagType": -1, "u3": 999, "u4": 730000, "scheduleId": "chara_7010_0220_FOREVER" }
+{ "teamSkillTagId": "29990072", "teamSkillTagType": -1, "u3": 999, "u4": 730000, "scheduleId": "chara_7010_0220_FOREVER" },
+{ "teamSkillTagId": "29990073", "teamSkillTagType": -1, "u3": 999, "u4": 740000, "scheduleId": "chara_7080_0828_FOREVER" }
 ]}

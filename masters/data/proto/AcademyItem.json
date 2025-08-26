@@ -1,0 +1,22 @@
+{"entries": [
+{ "academyItemNameId": "20070300001", "u2": 1, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300001", "academyEventId": 610961 },
+{ "academyItemNameId": "20070300002", "u2": 2, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300002", "academyEventId": 610961 },
+{ "academyItemNameId": "20070300003", "u2": 3, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300003", "academyEventId": 610961 },
+{ "academyItemNameId": "20070300004", "u2": 4, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300004", "academyEventId": 610961 },
+{ "academyItemNameId": "20070300005", "u2": 5, "abilityItemDescription": "2", "rarity": 9, "itemName": "21070300005", "academyEventId": 610961 },
+{ "academyItemNameId": "20070300006", "u2": 1, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300001", "academyEventId": 610965 },
+{ "academyItemNameId": "20070300007", "u2": 2, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300002", "academyEventId": 610965 },
+{ "academyItemNameId": "20070300008", "u2": 3, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300003", "academyEventId": 610965 },
+{ "academyItemNameId": "20070300009", "u2": 4, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300004", "academyEventId": 610965 },
+{ "academyItemNameId": "20070300010", "u2": 5, "abilityItemDescription": "2", "rarity": 9, "itemName": "21070300005", "academyEventId": 610965 },
+{ "academyItemNameId": "20070700001", "u2": 1, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300001", "academyEventId": 611046 },
+{ "academyItemNameId": "20070700002", "u2": 2, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300002", "academyEventId": 611046 },
+{ "academyItemNameId": "20070700003", "u2": 3, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300003", "academyEventId": 611046 },
+{ "academyItemNameId": "20070700004", "u2": 4, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300004", "academyEventId": 611046 },
+{ "academyItemNameId": "20070700005", "u2": 5, "abilityItemDescription": "2", "rarity": 9, "itemName": "21070300005", "academyEventId": 611046 },
+{ "academyItemNameId": "20070800001", "u2": 1, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300001", "academyEventId": 611100 },
+{ "academyItemNameId": "20070800002", "u2": 2, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300002", "academyEventId": 611100 },
+{ "academyItemNameId": "20070800003", "u2": 3, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300003", "academyEventId": 611100 },
+{ "academyItemNameId": "20070800004", "u2": 4, "abilityItemDescription": "2", "rarity": 3, "itemName": "21070300004", "academyEventId": 611100 },
+{ "academyItemNameId": "20070800005", "u2": 5, "abilityItemDescription": "2", "rarity": 9, "itemName": "21070300005", "academyEventId": 611100 }
+]}

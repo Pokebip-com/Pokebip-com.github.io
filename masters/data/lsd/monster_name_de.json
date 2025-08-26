@@ -220,6 +220,8 @@
     "20019600": "Psiana",
     "20019700": "Nachtara",
     "20019900": "Laschoking",
+    "20020200": "Woingenau",
+    "20020201": "Woingenau",
     "20020300": "Girafarig",
     "20020500": "Forstellka",
     "20020801": "Stahlos",
@@ -444,6 +446,7 @@
     "20047700": "Zwirrfinst",
     "20047800": "Frosdedje",
     "20047911": "Rotom",
+    "20047912": "Rotom",
     "20048000": "Selfe",
     "20048100": "Vesprit",
     "20048200": "Tobutz",
@@ -452,10 +455,12 @@
     "20048500": "Heatran",
     "20048600": "Regigigas",
     "20048711": "Giratina",
+    "20048712": "Giratina",
     "20048800": "Cresselia",
     "20049100": "Darkrai",
     "20049211": "Shaymin",
     "20049212": "Shaymin",
+    "20049311": "Arceus",
     "20049400": "Victini",
     "20049500": "Serpifeu",
     "20049600": "Efoserp",
@@ -839,5 +844,7 @@
     "2009730000": "Flaminkno",
     "2010131100": "Fatalitcha",
     "2010190000": "Hydrapfel",
-    "2010121100": "Mortcha"
+    "2010121100": "Mortcha",
+    "2009051100": "Cupidos",
+    "2000590041": "Arkani"
 }

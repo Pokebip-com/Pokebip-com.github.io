@@ -1,0 +1,20 @@
+{"entries": [
+{ "towerId": 101, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10000900", "passioTowerNameId": "101", "motifTypeNameId": 1 },
+{ "towerId": 102, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10024700", "passioTowerNameId": "102", "motifTypeNameId": 2 },
+{ "towerId": 103, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10012200", "passioTowerNameId": "103", "motifTypeNameId": 3 },
+{ "towerId": 104, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10011500", "passioTowerNameId": "104", "motifTypeNameId": 4 },
+{ "towerId": 105, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10010100", "passioTowerNameId": "105", "motifTypeNameId": 5 },
+{ "towerId": 106, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10029400", "passioTowerNameId": "106", "motifTypeNameId": 6 },
+{ "towerId": 107, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10025000", "passioTowerNameId": "107", "motifTypeNameId": 7 },
+{ "towerId": 108, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10005400", "passioTowerNameId": "108", "motifTypeNameId": 8 },
+{ "towerId": 109, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10030200", "passioTowerNameId": "109", "motifTypeNameId": 9 },
+{ "towerId": 110, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10001600", "passioTowerNameId": "110", "motifTypeNameId": 10 },
+{ "towerId": 111, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10011400", "passioTowerNameId": "111", "motifTypeNameId": 11 },
+{ "towerId": 112, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10004500", "passioTowerNameId": "112", "motifTypeNameId": 12 },
+{ "towerId": 113, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10005100", "passioTowerNameId": "113", "motifTypeNameId": 13 },
+{ "towerId": 114, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10000700", "passioTowerNameId": "114", "motifTypeNameId": 14 },
+{ "towerId": 115, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10011100", "passioTowerNameId": "115", "motifTypeNameId": 15 },
+{ "towerId": 116, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10004800", "passioTowerNameId": "116", "motifTypeNameId": 16 },
+{ "towerId": 117, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10009000", "passioTowerNameId": "117", "motifTypeNameId": 17 },
+{ "towerId": 118, "unlockItemId": "660000000010", "u3": 1, "showcasedTrainerBaseId": "10015800", "passioTowerNameId": "118", "motifTypeNameId": 18 }
+]}

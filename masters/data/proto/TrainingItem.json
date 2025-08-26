@@ -1,0 +1,6 @@
+{"entries": [
+{ "trainingItemNameId": "520000000001", "trainingItemDescriptionId": "520000000001", "imageId": "i052_0001_00", "rarity": 1 },
+{ "trainingItemNameId": "520000000002", "trainingItemDescriptionId": "520000000001", "imageId": "i052_0001_01", "rarity": 2 },
+{ "trainingItemNameId": "520000000003", "trainingItemDescriptionId": "520000000001", "imageId": "i052_0001_02", "rarity": 3 },
+{ "trainingItemNameId": "520000000004", "trainingItemDescriptionId": "520000000001", "imageId": "i052_0001_03", "rarity": 4 }
+]}

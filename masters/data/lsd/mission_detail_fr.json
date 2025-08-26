@@ -252,7 +252,7 @@
     "178": "Utilisez [Digit:6digits ]\nde Vigueur avec les\nDresseurs suivants\ndans votre équipe :",
     "178_element": "• [Name:TrainerName ]",
     "179": "Débloquez [Digit:6digits ] morceau[FR:Qty P=\"x\" ].",
-    "180": "Passez le potentiel\nde [Digit:6digits ] Duos\nà 6★ EX.",
+    "180": "Passez le potentiel de [Digit:6digits ] Duo[FR:Qty P=\"s\" ]\nà 6★ EX !",
     "181": "Atteignez le rang de joueur [Digit:6digits ].",
     "182": "Connectez-vous pendant [Digit:6digits ] jour[FR:Qty P=\"s\" ].",
     "183": "Terminez « Combat : Red\n(Look Ultime) » sur\nla Route Victoire.",
@@ -345,5 +345,13 @@
     "247_element": "• [Name:TowerName ]",
     "248": "Terminez [Digit:6digits ] étage[FR:Qty P=\"s\" ] dans\nl'une des tours suivantes :",
     "248_element": "• [Name:TowerName ]",
+    "override_detail_7080_1_01": "Faites équipe avec Giovanni & Mewtwo et terminez une fois « Combat : Les légendes vivantes ».\n(Vous pouvez faire équipe avec Giovanni & Mewtwo en terminant le chapitre « L'ombre menaçante » du scénario principal dans « Les Pokémon légendaires ».)",
+    "override_detail_7080_1_02": "Faites équipe avec Silver & Ho-Oh et terminez une fois « Combat : Les légendes vivantes ».\n(Vous pouvez faire équipe avec Silver & Ho-Oh en terminant le chapitre « Les ailes arc-en-ciel et le cœur pur » du scénario principal dans « Les Pokémon légendaires ».)",
+    "override_detail_7080_1_03": "Faites équipe avec Amaryllis & Rayquaza et terminez une fois « Combat : Les légendes vivantes ».\n(Vous pouvez faire équipe avec Amaryllis & Rayquaza en terminant le chapitre « Le dragon du ciel » du scénario principal dans « Les Pokémon légendaires ».)",
+    "override_detail_7080_1_04": "Faites équipe avec Hélio & Palkia et terminez une fois « Combat : Les légendes vivantes ».\n(Vous pouvez faire équipe avec Hélio & Palkia en terminant le chapitre « Émotions du nouveau monde » du scénario principal dans « Les Pokémon légendaires ».)",
+    "override_detail_7080_1_05": "Faites équipe avec Ghetis & Kyurem et terminez une fois « Combat : Les légendes vivantes ».\n(Vous pouvez faire équipe avec Ghetis & Kyurem en terminant le chapitre « Père ou adversaire » du scénario principal dans « Les Pokémon légendaires ».)",
+    "override_detail_7080_1_06": "Faites équipe avec le Professeur Platane & Xerneas et terminez une fois « Combat : Les légendes vivantes ».\n(Vous pouvez faire équipe avec le Professeur Platane & Xerneas en terminant le chapitre « Ils donnent, ils prennent » du scénario principal dans « Les Pokémon légendaires ».)",
+    "override_detail_7080_1_07": "Faites équipe avec le personnage principal & Solgaleo et terminez une fois « Combat : Les légendes vivantes ».\n(Vous pouvez faire équipe avec le personnage principal & Solgaleo en terminant le chapitre « Celui qui dévore le soleil » du scénario principal dans « Les Pokémon légendaires ».)",
+    "override_detail_7080_1_08": "Faites équipe avec Nabil & Zamazenta et terminez une fois « Combat : Les légendes vivantes ».\n(Vous pouvez faire équipe avec Nabil & Zamazenta en terminant le chapitre « Bouclier rouge de l'éternité » du scénario principal dans « Les Pokémon légendaires ».)",
     "249": "Remportez la victoire contre\n[Digit:6digits ] membre[FR:Qty P=\"s\" ] du Conseil 4 dans\nle Combat de Maître en difficulté\n« Difficile N. 1 ». (Progression\nréinitialisée chaque semaine)"
 }

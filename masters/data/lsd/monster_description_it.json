@@ -142,6 +142,7 @@
     "20022901": "Mette KO il nemico sputando fiamme che contengono\nuna tossina. Divide equamente le prede con il resto\ndel branco.",
     "20023000": "Kingdra vive negli abissi oceanici di solito privi di ogni\nforma di vita. Si crede che uno sbadiglio di Kingdra\ngeneri correnti oceaniche spiraliformi.",
     "20023100": "Phanpy crea il suo nido scavando delle fosse profonde\nnel terreno in riva al fiume. Delimita l'area attorno al nido\nusando la proboscide per indicare la sua proprietà.",
+    "20023700": "Hitmontop rotea sulla testa ad alta velocità sferrando calci\nviolenti. Questa tecnica è molto efficace sia in attacco che\nin difesa. Il Pokémon si muove molto più velocemente\nroteando che non camminando.",
     "20024100": "Produce 20 litri di latte al giorno. Più alta è la qualità\ndel pascolo, più gustoso sarà il latte.",
     "20024200": "Le sue uova sono talmente deliziose che si dice rendano\nfelice chiunque le mangi. Per questo hanno prezzi altissimi\nsul mercato.",
     "20024300": "Raikou rappresenta la velocità del fulmine. Il suo ruggito\ncrea terrificanti onde d'urto nell'aria e scuote il suolo\ncome se fosse percosso dalla furia di un fulmine durante\nil temporale.",
@@ -278,6 +279,7 @@
     "20048400": "Si dice che viva in una dimensione parallela alla nostra.\nAppare nella mitologia.",
     "20048600": "Si dice che abbia creato dei Pokémon simili a sé usando\nuna montagna ghiacciata, rocce e magma.",
     "20048711": "Vive nel Mondo Distorto che, sfidando l'ordine cosmico,\nsi trova sul lato opposto al nostro.",
+    "20048712": "Vive nel Mondo Distorto che, sfidando l'ordine cosmico,\nsi trova sul lato opposto al nostro.",
     "20048800": "Volando rilascia un velo di particelle brillanti. Si dice che\nrappresenti la luna crescente.",
     "20049100": "Respinge umani e Pokémon dal suo territorio inducendoli\na un sonno profondo e provocando incubi.",
     "20049211": "Può dissolvere le tossine nell'aria per mutare all'istante\nuna terra arida in un rigoglioso campo fiorito.",
@@ -310,6 +312,7 @@
     "20053700": "Facendo vibrare le protuberanze sui pugni, ne raddoppia\nla potenza. Frantuma enormi massi con un colpo.",
     "20053800": "La cintura da karate lo rende più forte. I Throh selvatici\nsi costruiscono le cinture usando piante rampicanti.",
     "20053900": "Si allena senza posa, giorno e notte, sui monti\nper potenziare al massimo i suoi colpi di karate.",
+    "20054100": "Le foreste in cui vive Swadloon sono lussureggianti,\npoiché trasforma le foglie morte in sostanze nutritive.",
     "20054200": "Quando incontra un giovane Pokémon gli fa un vestito\ndi foglie che cuce con il filo appiccicoso prodotto dalla\nbocca.",
     "20054400": "È protetto da un guscio resistente. Si scaglia contro\nil nemico rotolando come uno pneumatico.",
     "20054500": "Trafigge la preda con gli aculei del collo e dopo averla\nimmobilizzata la finisce con le sue tossine.",
@@ -359,6 +362,7 @@
     "20064000": "Le corna della testa sono lame affilate. Muovendosi come\nun turbine, scuote e falcia fulmineo i nemici.",
     "20064111": "Ha la parte inferiore del corpo avvolta in una nuvola\ndi energia. Sfreccia nei cieli a 300 km/h.",
     "20064112": "Vola nei cieli in perenne girovagare e produce un vento\ncosì forte da spazzare via ogni cosa incontri.",
+    "20064211": "Lancia scariche elettriche dagli aculei della coda.\nVola per i cieli di Unima scagliando fulmini.",
     "20064212": "Lancia scariche elettriche dagli aculei della coda.\nVola per i cieli di Unima scagliando fulmini.",
     "20064300": "Questo Pokémon leggendario può rendere il mondo\nun inferno di fiamme. Aiuta chi vuole costruire un mondo\ndi verità.",
     "20064400": "Questo Pokémon leggendario può riempire il mondo\ndi fulmini e saette. Aiuta chi vuole costruire un mondo\nideale.",
@@ -617,5 +621,7 @@
     "20086513": "Necrozma assume questa forma quando si nutre\ndella luce di Lunala. Afferra il nemico con i suoi\nenormi artigli e lo fa a pezzi con la sua potenza.",
     "2009730000": "Sembra che il nodo che fa alla base del collo serva\na evitare che l'energia accumulata nel suo stomaco\nfuoriesca dal becco.",
     "2010190000": "Un gruppo di Appliserpi capricciose che occupa\nun'unica dimora. Nelle rare occasioni in cui si\ntrovano d'accordo, sfoderano la loro vera forza.",
-    "2010131100": "Finge di essere del tè e cerca di farsi bere da\nqualche malcapitato per rubargli l'energia\nvitale, ma spesso viene scoperto."
+    "2010131100": "Finge di essere del tè e cerca di farsi bere da\nqualche malcapitato per rubargli l'energia\nvitale, ma spesso viene scoperto.",
+    "2009090000": "La sua sacca ignea è piccola e l'energia trabocca,\nfuoriuscendo sotto forma di fiammelle tremule\nda una fessura sulla testa.",
+    "2009120000": "Giunto da lontano, si è stabilito nella regione\nin tempi antichi. Le sue piume secernono un gel\nche lo protegge dall'acqua e dallo sporco."
 }
