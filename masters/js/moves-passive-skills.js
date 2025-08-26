@@ -57,7 +57,7 @@ function getPassiveSkillName(id) {
 }
 
 function getDetailedPassiveSkillName(id) {
-    let children = jData.proto.passiveSkillChild.find(psc => psc.passiveSkillId === id);
+    let children = jData.proto.passiveSkillChild.find(psc => psc.passiveSkillId.toString() === id.toString());
     let name = getPassiveSkillName(id);
 
     if(!children)

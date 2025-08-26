@@ -1169,8 +1169,11 @@ function changeSelection(div) {
         let cellId = div.getAttribute("data-cellId");
         let tilesCell = document.getElementById("tilesCell");
         let tileDiv = document.createElement("div");
+
+        const passiveId = div.getAttribute("data-passiveId");
+
         tileDiv.id = `tile-${cellId}`;
-        tileDiv.innerText = div.getAttribute("data-tileName");
+        tileDiv.innerHTML = passiveId === "0" ? div.getAttribute("data-tileName") : getDetailedPassiveSkillName(passiveId);
         tileDiv.style.background = "rgba(0, 0, 0, 0.1)";
         tileDiv.style.margin = "3px auto";
 
@@ -1338,6 +1341,7 @@ function setGridPicker(ap, gridPickerDiv) {
         svg.setAttribute("data-orbs", panel.orbCost);
         svg.setAttribute("data-items", panel.items.join(","));
         svg.setAttribute("data-cellId", panel.cellId);
+        svg.setAttribute("data-passiveId", panel.ability.passiveId);
 
         let text = jData.lsd.abilityName[panel.ability.type]
             .replace("[Digit:5digits ]", "+" + panel.ability.value)
