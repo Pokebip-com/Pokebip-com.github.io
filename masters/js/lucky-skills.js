@@ -49,18 +49,7 @@ function getNewCookies() {
 }
 
 function getCookieItemImage(cookie) {
-    return getItemImage(cookie.rarity, cookie.imageId);
-}
-
-function getItemImage(rarity, imageId) {
-    let img = document.createElement("img");
-    img.style.backgroundImage = `url(./data/item/Frame/128/if01_0${rarity}_128.png)`;
-    img.style.backgroundSize = "64px 64px";
-
-    img.src = `./data/item/${imageId}/${imageId}_128.png`;
-    img.style.width = "64px";
-    img.style.height = "64px";
-    return img;
+    return getItemImage(cookie.imageId, cookie.rarity);
 }
 
 function getCookieName(cookie) {
@@ -74,7 +63,7 @@ function getLotLi(lot) {
     let newLi = document.createElement("li");
     newLi.classList.add("listh-bipcode");
     newLi.style.width = "100px";
-    newLi.appendChild(getItemImage(9, "i051_0041_00"));
+    newLi.appendChild(getItemImage("i051_0041_00", 9));
 
     newLi.appendChild(document.createElement("br"));
 
@@ -118,9 +107,9 @@ function listLuckyCookiesInfos() {
     const roleTiedLotIds = towerRoleLotIds.map(lot => lot.lotId);
 
     let normalCookies = jData.proto.potentialItem.filter(pi => pi.rarity < 9);
-    let guaranteedCookies = jData.proto.potentialItem.filter(pi => pi.rarity === 9 && pi.u2 !== "1");
-    let trainerCookies = jData.proto.potentialItem.filter(pi => pi.rarity === 9 && pi.u2 === "1" && (pi.potentialItemName !== "540000000139" && pi.potentialItemName !== "540000000138"));
-    let towerCookies = jData.proto.potentialItem.filter(pi => !roleTiedLotIds.includes(pi.potentialLotId) && pi.rarity === 9 && pi.u2 === "1" && (pi.potentialItemName === "540000000139" || pi.potentialItemName === "540000000138"));
+    let guaranteedCookies = jData.proto.potentialItem.filter(pi => pi.rarity === 9 && pi.itemDescription !== "1");
+    let trainerCookies = jData.proto.potentialItem.filter(pi => pi.rarity === 9 && pi.itemDescription === "1" && (pi.potentialItemName !== "540000000139" && pi.potentialItemName !== "540000000138"));
+    let towerCookies = jData.proto.potentialItem.filter(pi => !roleTiedLotIds.includes(pi.potentialLotId) && pi.rarity === 9 && pi.itemDescription === "1" && (pi.potentialItemName === "540000000139" || pi.potentialItemName === "540000000138"));
 
     if(newCookies.length > 0) {
 
