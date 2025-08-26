@@ -702,7 +702,7 @@ function printScouts(schedule, titleText = "") {
             }
 
             if(rewards === "")
-                break;
+                continue;
 
             scheduleDiv.innerHTML += `<br /><b>${jData.locale.schedule.pair_pull_bonus_gift}</b>\n`;
             scheduleDiv.innerHTML += rewards;

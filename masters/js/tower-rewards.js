@@ -1,16 +1,19 @@
-let roleSetsDiv;
-let toolboxDiv;
-let mainUl;
+let rewardsDiv;
 
 async function getData() {
     await buildHeader("..");
 
     // PROTO
-    jsonCache.preloadProto("BattleRallyRoleBonusSet");
+    jsonCache.preloadProto("PassioTowerRandomBox");
+    jsonCache.preloadProto("PassioTowerRandomReward");
+
+    // LSD
+    jsonCache.preloadLsd("passio_tower_random_reward_box_name");
 
     // Locale
-    jsonCache.preloadLocale("role-set");
+    jsonCache.preloadLocale("tower-rewards");
 
+    preloadUtils(true);
     await jsonCache.runPreload();
 }
 
@@ -105,28 +108,87 @@ function appendSelectRow(rowNum) {
 }
 
 getData().then(() => {
-    roleSetsDiv = document.getElementById("roleSetsDiv");
-    toolboxDiv = document.getElementById("toolbox");
-    mainUl = document.getElementById("mainUL");
+    rewardsDiv = document.getElementById("rewardsDiv");
 
-    document.getElementById("pageTitle").innerText = `${jData.locale.common.menu_battle_rally} > ${jData.locale.common.submenu_rally_role_set}`;
-    document.getElementById("fieldsetLegend").innerText = jData.locale.roleSet.filters;
+    document.getElementById("pageTitle").innerText = `${jData.locale.common.menu_pasio_towers} > ${jData.locale.common.submenu_towers_rewards}`;
 
-    let dataList = document.createElement("datalist");
-    dataList.id = "roles-list";
-
-    for(let i = 1; i < Object.keys(jData.locale.common.role_name_standard).length; i++) {
-        let option = document.createElement("option");
-        option.value = jData.locale.common.role_name_standard[i];
-        dataList.appendChild(option);
-    }
-
-    document.getElementById("contentDiv").appendChild(dataList);
-
-    appendSelectRow(1);
-
-    setMainUL();
+    setContent();
 });
+
+function setContent() {
+    const boxesWeight = jData.proto.passioTowerRandomReward.reduce((total, reward) => total + reward.weight, 0);
+
+    jData.proto.passioTowerRandomReward.forEach(chest => {
+
+        let img = getItemImage(chest.imageId, chest.rarity, "../data");
+
+        console.log(img);
+
+        let h2 = document.createElement("h3");
+        h2.appendChild(img);
+        h2.innerHTML += ` ${getItemName(chest.itemId)}`;
+
+        rewardsDiv.appendChild(h2);
+
+        getRewardsDetails(chest, boxesWeight);
+    });
+}
+
+function getRewardsDetails(chest, boxesWeight) {
+    const chances = (chest.weight / boxesWeight) * 100;
+    const rewardsList = jData.proto.passioTowerRandomBox.filter(box => box.itemId === chest.itemId);
+    const itemsWeight = rewardsList.reduce((total, box) => total + box.weight, 0);
+
+    let p = document.createElement("p");
+    p.innerText = `${chances.toFixed(2)}%`;
+    rewardsDiv.appendChild(p);
+
+    let p2 = document.createElement("p");
+    p2.innerText = `Total Weight: ${itemsWeight}`;
+    rewardsDiv.appendChild(p2);
+
+    let table = document.createElement("table");
+    table.classList.add("bipcode");
+
+    let thead = document.createElement("thead");
+    let theadRow = document.createElement("tr");
+
+    let itemTh = document.createElement("th");
+    itemTh.innerText = "Reward";
+    itemTh.colSpan = 2;
+    theadRow.appendChild(itemTh);
+
+    let chancesTh = document.createElement("th");
+    chancesTh.innerText = "Chances";
+    theadRow.appendChild(chancesTh);
+
+    thead.appendChild(theadRow);
+    table.appendChild(thead);
+
+    let tbody = document.createElement("tbody");
+
+    rewardsList.forEach(reward => {
+        let tr = document.createElement("tr");
+
+        let imgTd = document.createElement("td");
+        let img = getItemImage(reward.imageId, reward.rarity, "../data");
+        imgTd.appendChild(img);
+        tr.appendChild(imgTd);
+
+        let itemTd = document.createElement("td");
+        itemTd.innerText = `${getItemName(reward.rewardId)} x${reward.quantity}`;
+        tr.appendChild(itemTd);
+
+        let chancesTd = document.createElement("td");
+        chancesTd.innerText = `${((reward.weight / itemsWeight) * 100).toFixed(2)}%`;
+        tr.appendChild(chancesTd);
+
+        tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+    rewardsDiv.appendChild(table);
+}
 
 function setMainUL() {
     mainUl.innerHTML = "";
