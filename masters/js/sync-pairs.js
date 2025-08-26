@@ -1074,9 +1074,9 @@ function appendGridCategory(table, panels, category) {
 
         let ameliorationCell = document.createElement("td");
 
-        ameliorationCell.innerText = jData.lsd.abilityName[p.ability.type]
+        ameliorationCell.innerHTML = jData.lsd.abilityName[p.ability.type]
                 .replace("[Digit:5digits ]", "+" + p.ability.value)
-                .replace("[Name:Ability ]", getPassiveSkillName(p.ability.passiveId))
+                .replace("[Name:Ability ]", getDetailedPassiveSkillName(p.ability.passiveId))
                 .replace("[Name:Move ]", jData.lsd.moveName[p.ability.moveId]).replace("\n", " ");
 
 
