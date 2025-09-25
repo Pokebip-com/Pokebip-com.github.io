@@ -63,7 +63,7 @@ function getDetailedPassiveSkillName(id) {
     if(!children)
         return name;
 
-    let childrenNames = children.passiveSkillChildIds.map(pc => getPassiveSkillName(pc)).join("<br>");
+    let childrenNames = children.passiveSkillChildIds.map(pc => getPassiveSkillName(pc)).filter(psn => psn).join("<br>");
 
     let container = document.createElement("span");
     container.classList.add("custom-tooltip-container");
