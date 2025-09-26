@@ -97,6 +97,8 @@
 { "trainerId": "10302000000", "scheduleId": "chara_6120_0101_FOREVER", "passiveSkillId": 32018401 },
 { "trainerId": "10303000000", "scheduleId": "chara_6100_1031_FOREVER", "passiveSkillId": 32011401 },
 { "trainerId": "10304000000", "scheduleId": "chara_6120_0101_FOREVER", "passiveSkillId": 32018501 },
+{ "trainerId": "10311000000", "scheduleId": "chara_7090_1002_FOREVER", "passiveSkillId": 32021201 },
+{ "trainerId": "10312000000", "scheduleId": "chara_7090_0930_FOREVER", "passiveSkillId": 32021101 },
 { "trainerId": "10317000000", "scheduleId": "chara_6120_0101_FOREVER", "passiveSkillId": 32018801 },
 { "trainerId": "10318000000", "scheduleId": "chara_6110_1201_FOREVER", "passiveSkillId": 32014201 },
 { "trainerId": "10320000000", "scheduleId": "chara_6120_0115_FOREVER", "passiveSkillId": 32019001 },
@@ -104,6 +106,7 @@
 { "trainerId": "10328000000", "scheduleId": "chara_6120_0117_FOREVER", "passiveSkillId": 32019101 },
 { "trainerId": "10329000000", "scheduleId": "chara_7020_0320_FOREVER", "passiveSkillId": 32019501 },
 { "trainerId": "10330000000", "scheduleId": "chara_6100_1109_FOREVER", "passiveSkillId": 32015801 },
+{ "trainerId": "10338000000", "scheduleId": "chara_7090_1004_FOREVER", "passiveSkillId": 32021001 },
 { "trainerId": "10352000000", "scheduleId": "chara_7030_0331_FOREVER", "passiveSkillId": 32019601 },
 { "trainerId": "10356000000", "scheduleId": "chara_7070_0729_FOREVER", "passiveSkillId": 32020501 },
 { "trainerId": "18000000000", "scheduleId": "FOREVER", "passiveSkillId": 32020901 }

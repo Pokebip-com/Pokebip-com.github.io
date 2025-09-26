@@ -946,5 +946,15 @@
     "998980": "味方のバディーズ全員の特攻と命中率を[Digit:1digit ]段階あげる",
     "998979": "自分を物理技ブレイク状態と特殊技ブレイク状態にする",
     "998978": "自分の攻撃と急所率を[Digit:1digit ]段階あげる",
+    "998977": "自分の攻撃と防御と素早さを[Digit:1digit ]段階あげる",
+    "998976": "初めてこの技での攻撃が成功したときだけゾーンを[Name:ReferencedMessageTag Idx=\"3\" ]にする",
+    "998975": "（[Name:ReferencedMessageTag Idx=\"3\" ]は[Name:ReferencedMessageTag Idx=\"4\" ]タイプの攻撃の威力をあげる）",
+    "998974": "自分のボルテージが０のとき",
+    "998973": "自分のボルテージが[Digit:1digit ]以上のとき",
+    "998972": "自分の攻撃と防御と特攻と素早さを[Digit:1digit Idx=\"1\" ]段階あげる",
+    "998971": "初めてこの技での攻撃が成功したときだけ相手を[Name:ReferencedMessageTag Idx=\"1\" ]にする",
+    "998970": "味方のバディーズ全員の防御と特防を[Digit:1digit Idx=\"7\" ]段階あげる",
+    "998968": "自分の[Name:ReferencedMessageTag ]があがっているときは自分の[Name:ReferencedMessageTag ]を１０段階あげる",
+    "998967": "自分の[Name:ReferencedMessageTag Idx=\"1\" ]があがっているときは自分の[Name:ReferencedMessageTag Idx=\"1\" ]を１０段階あげる",
     "998961": "この技をつかったとき\nこの技で攻撃するとき"
 }

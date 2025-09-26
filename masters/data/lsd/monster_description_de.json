@@ -251,10 +251,12 @@
     "20042800": "Es wechselt zweimal im Jahr seine Wolle. Daraus lassen\nsich Schals oder Mützen herstellen, die ihre Träger mollig\nwarmhalten.",
     "20043000": "Für Untergebene, die versagen oder es verraten, hat es\nkeine Gnade übrig. Das ist nötig, um die Disziplin in der\nGruppe aufrechtzuerhalten.",
     "20043300": "Jedes Mal, wenn es hüpft, entsteht ein klingender Laut.\nSeine hohen Schreie machen die Gegner taub.",
+    "20043500": "Über seine Schweifspitze versprüht es eine übelriechende\nSubstanz. Die Reichweite liegt bei über 50 m.",
     "20043700": "Man verehrt sie schon seit Urzeiten als Regenmacher.\nManchmal findet man eines von ihnen im Boden\nvergraben.",
     "20044200": "Ein Pokémon, das aus 108 Geistern besteht. Es ist an einen\nSpalt in einem mysteriösen Stein gebunden.",
     "20044300": "Wenn sich etwas in seiner Nähe bewegt, stürzt es sich\ndarauf und beißt fest zu, auch wenn es sich dabei selbst\nverletzt.",
     "20044501": "Es geht mit Schallgeschwindigkeit fliegend auf die Jagd\nund leistet sich mit Brutalanda Luftkämpfe um das Vorrecht\nauf die Beute.",
+    "20044600": "Unter seinem langen Fell versteckt es Nahrung. Aber es\nvergisst, dass es sie dort versteckt hat und regt sich dann\nüber den Gestank auf.",
     "20044800": "Unter starker Konzentration kann es rätselhafte Wellen\nvon sich geben, die man Aura nennt. Damit kann es\nsogar große Felsen pulverisieren.",
     "20045001": "Das weit aufgerissene Maul demonstriert seine Stärke.\nEs attackiert mit gebündeltem Sand.",
     "20045300": "In seinen Backen sammelt sich Gift. Es versucht, Beute zu\nüberraschen und mit Giftfingern zu schnappen.",
@@ -298,6 +300,9 @@
     "20050800": "Es hat langes, dickes Fell. Vor einiger Zeit war es in\nkalten Gegenden üblich, dass jede Familie ein Bissbark\nim Haus hielt.",
     "20050900": "Es lenkt die Menschen durch sein süßes Verhalten ab,\num sie zu bestehlen. Ist es wütend, kratzt es gern mal.",
     "20051000": "Sein anmutiges Auftreten verdankt es den Muskeln, die es\nentwickelt hat. Es prescht lautlos durch die Nacht.",
+    "20051200": "Wer sich mit diesem temperamentvollen Pokémon anlegt,\nbekommt seinen mit Dornen bestückten Schweif zu spüren.",
+    "20051400": "Es entfacht in seinem Körper ein Feuer und verkohlt\nGegner mit Funken aus seinem Kopf und Schweif.",
+    "20051600": "Es schießt mit so hohem Druck Wasser aus seinem\nSchweif, dass selbst Betonwände den Kürzeren ziehen.",
     "20051800": "Der Dunst, der aus seiner Stirn tritt, enthält die Träume\nunzähliger Menschen und Pokémon.",
     "20052100": "Männchen schrecken Gegner ab, indem sie ihren\nKopfschmuck schütteln. Weibchen verfügen über\nbessere Flugfertigkeiten.",
     "20052101": "Männchen schrecken Gegner ab, indem sie ihren\nKopfschmuck schütteln. Weibchen verfügen über\nbessere Flugfertigkeiten.",
@@ -623,5 +628,7 @@
     "2010190000": "Es entfaltet seine wahre Stärke, wenn sich die\nzusammenlebende launische Gruppe sogenannter\n„Schlangel“ ausnahmsweise mal einig ist.",
     "2010131100": "Es gibt sich als Tee aus und versucht jenen, die es\nversehentlich trinken, die Lebensenergie auszusaugen.\nAllerdings wird es oft durchschaut.",
     "2009090000": "Sein Flammensack ist noch klein, weshalb überquellende\nEnergie über die Vertiefung an seinem Kopf flackernd\nfreigesetzt wird.",
-    "2009120000": "Vor langer Zeit kam es von weit her und ließ sich in\nPaldea nieder. Über sein Gefieder sondert es ein Gel ab,\ndas Wasser und Schmutz abweist."
+    "2009120000": "Vor langer Zeit kam es von weit her und ließ sich in\nPaldea nieder. Über sein Gefieder sondert es ein Gel ab,\ndas Wasser und Schmutz abweist.",
+    "2000580041": "Sie patrouillieren ihr Revier zu zweit. In ihrem Fell lassen\nsich Komponenten von Magmagestein finden, was\nvermutlich auf vulkanische Aktivität innerhalb ihres\nHabitats verweist.",
+    "2005490041": "Die starke Beinmuskulatur verdankt es wohl dem Leben\nauf schneebedeckten Bergen. Über seine Blumenkrone\nverströmt es stimulierende Düfte."
 }

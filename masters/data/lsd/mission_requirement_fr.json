@@ -241,5 +241,15 @@
     "247": "Terminez la Tour de Passio\nindiquée.",
     "248": "Terminez n'importe quelle\nTour de Passio.",
     "249": "Remportez la victoire contre\n[Digit:6digits ] membre[FR:Qty P=\"s\" ] du Conseil 4\ndans le Combat de Maître.",
-    "180": "Passez le potentiel\nde [Digit:6digits ] Duo[FR:Qty P=\"s\" ] à 6★ EX."
+    "180": "Passez le potentiel\nde [Digit:6digits ] Duo[FR:Qty P=\"s\" ] à 6★ EX.",
+    "override_title_7090_1_01": "Une petite photo\npour ma collec !",
+    "override_title_7090_1_02": "Une petite photo\npour ma collec ! II",
+    "override_title_7090_1_03": "Une petite photo\npour ma collec ! III",
+    "override_title_7090_1_04": "Une petite photo\npour ma collec ! IV",
+    "override_title_7090_1_05": "Une petite photo\npour ma collec ! V",
+    "override_title_7090_1_06": "Une petite photo\npour ma collec ! VI",
+    "override_title_7090_1_07": "Une petite photo\npour ma collec ! VII",
+    "override_title_7090_1_08": "Une petite photo\npour ma collec ! VIII",
+    "override_title_7090_1_09": "Une petite photo\npour ma collec ! IX",
+    "override_title_7090_1_10": "Une petite photo\npour ma collec ! X"
 }

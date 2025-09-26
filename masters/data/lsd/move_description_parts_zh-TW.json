@@ -946,5 +946,15 @@
     "998980": "提高我方全體拍組的特攻和命中率[Digit:1digit ]階段。",
     "998979": "讓自己陷入物理招式爆擊狀態和特殊招式爆擊狀態。",
     "998978": "提高自己的攻擊和擊中要害率[Digit:1digit ]階段。",
+    "998977": "提高自己的攻擊、防禦和速度[Digit:1digit ]階段。",
+    "998976": "首次使出此招式攻擊成功時，會將領域變成[Name:ReferencedMessageTag Idx=\"3\" ]。",
+    "998975": "（[Name:ReferencedMessageTag Idx=\"3\" ]會提高[Name:ReferencedMessageTag Idx=\"4\" ]屬性的攻擊的威力。）",
+    "998974": "當自己的氣魄為０時",
+    "998973": "當自己的氣魄為[Digit:1digit ]以上時",
+    "998972": "提高自己的攻擊、防禦、特攻和速度[Digit:1digit Idx=\"1\" ]階段。",
+    "998971": "首次使出此招式攻擊成功時，會讓對手陷入[Name:ReferencedMessageTag Idx=\"1\" ]狀態。",
+    "998970": "提高我方全體拍組的防禦和特防[Digit:1digit Idx=\"7\" ]階段。",
+    "998968": "自己的[Name:ReferencedMessageTag ]處於提高狀態時，會提高自己的[Name:ReferencedMessageTag ]１０階段。",
+    "998967": "自己的[Name:ReferencedMessageTag Idx=\"1\" ]處於提高狀態時，會提高自己的[Name:ReferencedMessageTag Idx=\"1\" ]１０階段。",
     "998961": "使出此招式時\n使出此招式攻擊時"
 }

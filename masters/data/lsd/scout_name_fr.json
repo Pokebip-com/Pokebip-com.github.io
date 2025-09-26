@@ -229,5 +229,10 @@
     "event_7080_2W_MasterTicket_03": "Appel Duo commun garanti",
     "event_7080_4W_SuperTicket_03": "Appel Duo Look Spécial taux ↑ : Aurel !",
     "event_7080_4W_MasterTicket_04": "Appel Duo Look Spécial garanti : Aurel !",
-    "event_7080_4W_SuperTicket_08": "Master festival taux ↑"
+    "event_7080_4W_SuperTicket_08": "Master festival taux ↑",
+    "event_7090_3W_SuperTicket_02": "Appel Duo saisonnier taux ↑ : Taro !",
+    "event_7090_3W_MasterTicket_02": "Appel Duo saisonnier garanti : Taro !",
+    "event_7090_3W_SuperTicket_04": "Appel Duo saisonnier taux ↑",
+    "event_7090_4W_MasterTicket_03": "Appel Duo commun garanti",
+    "event_7090_4W_SuperTicket_08": "Master festival taux ↑"
 }

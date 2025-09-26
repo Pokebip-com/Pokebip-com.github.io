@@ -241,5 +241,15 @@
     "247": "Schließe den vorgegebenen\nPassio-Turm ab.",
     "248": "Schließe einen beliebigen\nPassio-Turm ab.",
     "249": "Besiege [Digit:6digits ] [DE:Qty S=\"Mitglied\" P=\"Mitglieder\" ] der\nTop Vier im Champkampf.",
-    "180": "Bringe [Digit:6digits ] [DE:Qty S=\"Gefährtengespann\" P=\"Gefährtengespanne\" ]\nauf 6★ EX."
+    "180": "Bringe [Digit:6digits ] [DE:Qty S=\"Gefährtengespann\" P=\"Gefährtengespanne\" ]\nauf 6★ EX.",
+    "override_title_7090_1_01": "Halte einen Augenblick für die\nNachwelt fest!",
+    "override_title_7090_1_02": "Halte einen Augenblick für die\nNachwelt fest! 2",
+    "override_title_7090_1_03": "Halte einen Augenblick für die\nNachwelt fest! 3",
+    "override_title_7090_1_04": "Halte einen Augenblick für die\nNachwelt fest! 4",
+    "override_title_7090_1_05": "Halte einen Augenblick für die\nNachwelt fest! 5",
+    "override_title_7090_1_06": "Halte einen Augenblick für die\nNachwelt fest! 6",
+    "override_title_7090_1_07": "Halte einen Augenblick für die\nNachwelt fest! 7",
+    "override_title_7090_1_08": "Halte einen Augenblick für die\nNachwelt fest! 8",
+    "override_title_7090_1_09": "Halte einen Augenblick für die\nNachwelt fest! 9",
+    "override_title_7090_1_10": "Halte einen Augenblick für die\nNachwelt fest! 10"
 }

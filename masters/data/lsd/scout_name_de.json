@@ -229,5 +229,10 @@
     "event_7080_2W_MasterTicket_03": "Garantierte\nSonder-G-Suche",
     "event_7080_4W_SuperTicket_03": "Fokus-G-Suche:\nLumius (Kostüm)",
     "event_7080_4W_MasterTicket_04": "Garantierte G-Suche:\nLumius (Kostüm)",
-    "event_7080_4W_SuperTicket_08": "Meisterfestival-\nFokus-G-Suche"
+    "event_7080_4W_SuperTicket_08": "Meisterfestival-\nFokus-G-Suche",
+    "event_7090_3W_SuperTicket_02": "Saisonale Fokus-\nG-Suche: Tara",
+    "event_7090_3W_MasterTicket_02": "Saisonale Garantierte\nG-Suche: Tara",
+    "event_7090_3W_SuperTicket_04": "Saisonale\nFokus-G-Suche",
+    "event_7090_4W_MasterTicket_03": "Garantierte\nSonder-G-Suche",
+    "event_7090_4W_SuperTicket_08": "Meisterfestival-\nFokus-G-Suche"
 }

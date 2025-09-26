@@ -251,10 +251,12 @@
     "20042800": "Lopunny regrows its coat twice a year. Mufflers and hats made from its fur are really warm.",
     "20043000": "It will absolutely not forgive failure from or betrayal by its goons. It has no choice in this if it wants to maintain the order of the flock.",
     "20043300": "Each time it hops, it makes a ringing sound. It deafens foes by emitting high-frequency cries.",
+    "20043500": "It sprays a vile-smelling fluid from the tip of its tail to attack. Its range is over 160 feet.",
     "20043700": "In ages past, this Pokémon was revered as a bringer of rain. It was found buried in the ground.",
     "20044200": "A Pokémon that was formed by 108 spirits. It is bound to a fissure in an odd keystone.",
     "20044300": "It reacts to anything that moves—flies right at it and bites it. Sometimes it injures itself, but it doesn’t care too much.",
     "20044501": "It flies at the speed of sound while searching for prey, and it has midair battles with Salamence as the two compete for food.",
+    "20044600": "It hides food under its long fur, but it sometimes forgets about it and causes a stinky disturbance.",
     "20044800": "It concentrates its mental energy and fires off mysterious waves called auras, which can crush boulders of large size to dust.",
     "20045001": "It brandishes its gaping mouth in a display of fearsome strength. It raises vast quantities of sand while attacking.",
     "20045300": "Its cheeks hold poison sacs. It tries to catch foes off guard to jab them with toxic fingers.",
@@ -298,6 +300,9 @@
     "20050800": "Its fur is long and thick. A long time ago in cold regions, every household kept a Stoutland.",
     "20050900": "Its cute act is a ruse. When victims let down their guard, they find their items taken. It attacks with sharp claws.",
     "20051000": "Their beautiful form comes from the muscles they have developed. They run silently in the night.",
+    "20051200": "It attacks enemies with strikes of its thorn-covered tail. This Pokémon is wild tempered.",
+    "20051400": "A flame burns inside its body. It scatters embers from its head and tail to sear its opponents.",
+    "20051600": "The high-pressure water expelled from its tail is so powerful, it can destroy a concrete wall.",
     "20051800": "The mist emanating from their foreheads is packed with the dreams of people and Pokémon.",
     "20052100": "Males swing their head plumage to threaten opponents. The females’ flying abilities surpass those of the males.",
     "20052101": "Males swing their head plumage to threaten opponents. The females’ flying abilities surpass those of the males.",
@@ -623,5 +628,7 @@
     "2010190000": "These capricious syrpents have banded together. On the rare occasion that their moods align, their true power is unleashed.",
     "2010131100": "It pretends to be tea, trying to fool people into drinking it so it can drain their life-force. Its ruse is generally unsuccessful.",
     "2009090000": "Its flame sac is small, so energy is always leaking out. This energy is released from the dent atop Fuecoco’s head and flickers to and fro.",
-    "2009120000": "This Pokémon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime."
+    "2009120000": "This Pokémon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime.",
+    "2000580041": "They patrol their territory in pairs. I believe the igneous rock components in the fur of this species are the result of volcanic activity in its habitat.",
+    "2005490041": "I suspect that its well-developed legs are the result of a life spent on mountains covered in deep snow. The scent it exudes from its flower crown heartens those in proximity."
 }

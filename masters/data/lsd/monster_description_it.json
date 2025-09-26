@@ -251,10 +251,12 @@
     "20042800": "Cambia il pelo due volte l'anno. Le sciarpe e i berretti\nfatti con la lana che perde sono molto caldi.",
     "20043000": "Non perdona niente ai suoi seguaci, dai tradimenti\nai più piccoli errori. Non c'è altro modo per mantenere\nla disciplina nel gruppo.",
     "20043300": "A ogni salto produce un suono che sembra uno squillo.\nI suoi versi ad alta frequenza assordano i nemici.",
+    "20043500": "Attacca spruzzando un fluido puzzolente dalla coda.\nHa un raggio d'azione di oltre 50 m.",
     "20043700": "È stato venerato per secoli come Pokémon che porta\nla pioggia. A volte lo si trova sepolto nel terreno.",
     "20044200": "Pokémon formato da 108 spiriti. È stato imprigionato nella\nfessura di una Roccianima.",
     "20044300": "Appena sente qualcosa muoversi, salta fuori e lo addenta.\nSpesso si fa male da solo, ma non se ne preoccupa\nparticolarmente.",
     "20044501": "Caccia le prede volando a velocità supersonica.\nLe lotte aeree con Salamence per contendersi il cibo\nsono all'ordine del giorno.",
+    "20044600": "Nasconde il cibo sotto il lungo pelo, ma spesso\nse ne dimentica finché non inizia a esalare odori\nmolesti a causa della putrefazione.",
     "20044800": "È in grado di concentrare le sue energie spirituali\nper sprigionare un'aura che può frantumare anche\ngrossi macigni.",
     "20045001": "Mostra la propria forza spalancando le fauci.\nAttacca sollevando immani quantità di sabbia.",
     "20045300": "Le sacche delle guance contengono veleno.\nInfilza i nemici con le sue unghie avvelenate.",
@@ -298,6 +300,9 @@
     "20050800": "Ha un manto lungo e folto. In passato, nelle regioni\nfredde ogni famiglia aveva uno Stoutland.",
     "20050900": "Distrae con pose ammalianti i nemici incauti e\nne approfitta per depredarli. Se si arrabbia, sguaina\nle unghie.",
     "20051000": "I muscoli tonici del suo corpo gli donano una figura\ndavvero affascinante. Si aggira silenzioso nel buio\ndella notte.",
+    "20051200": "Attacca il nemico colpendolo con la coda piena di aculei.\nPokémon dal carattere impetuoso.",
+    "20051400": "Alimentando la fiamma all'interno del suo corpo, sparge\ndalla testa o dalla coda una pioggia di fuoco che scotta\ni nemici.",
+    "20051600": "Spruzza dalla coda un getto d’acqua ad alta pressione,\ncon una potenza tale da distruggere anche pareti di\ncemento.",
     "20051800": "Nel fumo che gli esce dalla fronte sono racchiusi molti\nsogni di esseri umani e di Pokémon.",
     "20052100": "Il maschio minaccia il nemico facendo ondeggiare gli\nornamenti del capo. La femmina eccelle nel volo.",
     "20052101": "Il maschio minaccia il nemico facendo ondeggiare gli\nornamenti del capo. La femmina eccelle nel volo.",
@@ -623,5 +628,7 @@
     "2010190000": "Un gruppo di Appliserpi capricciose che occupa\nun'unica dimora. Nelle rare occasioni in cui si\ntrovano d'accordo, sfoderano la loro vera forza.",
     "2010131100": "Finge di essere del tè e cerca di farsi bere da\nqualche malcapitato per rubargli l'energia\nvitale, ma spesso viene scoperto.",
     "2009090000": "La sua sacca ignea è piccola e l'energia trabocca,\nfuoriuscendo sotto forma di fiammelle tremule\nda una fessura sulla testa.",
-    "2009120000": "Giunto da lontano, si è stabilito nella regione\nin tempi antichi. Le sue piume secernono un gel\nche lo protegge dall'acqua e dallo sporco."
+    "2009120000": "Giunto da lontano, si è stabilito nella regione\nin tempi antichi. Le sue piume secernono un gel\nche lo protegge dall'acqua e dallo sporco.",
+    "2000580041": "Questi Pokémon pattugliano il territorio in coppia.\nIn base alle mie indagini, la presenza di componenti\ndi rocce ignee nel loro vello parrebbe cagionata\ndall'attività vulcanica.",
+    "2005490041": "L'inerpicarsi per innevati sentieri montani parrebbe\naverne sviluppato maggiormente le gambe. Il fiore\ndella sua corona spande un aroma capace di dare\nanimo a chi ha d'intorno."
 }

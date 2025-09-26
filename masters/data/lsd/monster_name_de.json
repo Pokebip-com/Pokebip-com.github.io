@@ -297,6 +297,7 @@
     "20028900": "Letarking",
     "20029000": "Nincada",
     "20029100": "Ninjask",
+    "20029500": "Krawumms",
     "20029600": "Makuhita",
     "20029700": "Hariyama",
     "20029800": "Azurill",
@@ -343,6 +344,7 @@
     "20035451": "Mega-Banette",
     "20035600": "Zwirrklop",
     "20035700": "Tropius",
+    "20035800": "Palimpalim",
     "20035900": "Absol",
     "20035951": "Mega-Absol",
     "20036100": "Schneppke",
@@ -512,6 +514,7 @@
     "20056900": "Deponitox",
     "20057000": "Zorua",
     "20057100": "Zoroark",
+    "20057300": "Chillabell",
     "20057900": "Zytomega",
     "20058100": "Swaroness",
     "20058400": "Gelatwino",
@@ -759,6 +762,8 @@
     "2008730000": "Mottineva",
     "2008751100": "Kubuin",
     "2008751200": "Kubuin",
+    "2008760000": "Servol",
+    "2008760100": "Servol",
     "2008771100": "Morpeko",
     "2008771200": "Morpeko",
     "2008790000": "Patinaraja",
@@ -846,5 +851,7 @@
     "2010190000": "Hydrapfel",
     "2010121100": "Mortcha",
     "2009051100": "Cupidos",
-    "2000590041": "Arkani"
+    "2000590041": "Arkani",
+    "2000580041": "Fukano",
+    "2005490041": "Dressella"
 }

@@ -251,10 +251,12 @@
     "20042800": "Il mue deux fois par an. Les écharpes et les chapeaux\nfabriqués à partir de ses poils tiennent bien chaud.",
     "20043000": "Il ne pardonne jamais la trahison ou la défaite\nd'un subordonné. Le bien-être de l'ensemble\nde la volée en dépend.",
     "20043300": "Il produit un bruit de sonnerie à chaque bond. Il assourdit\nl'ennemi avec ses cris à haute fréquence.",
+    "20043500": "Il attaque en projetant un liquide fétide du bout\nde sa queue. Il peut tirer à 50 m.",
     "20043700": "Il a longtemps été célébré pour avoir apporté la pluie.\nOn le trouve parfois enterré dans le sol.",
     "20044200": "Un Pokémon composé de 108 esprits. Il provient\nd'une fissure dans une clé de voûte étrange.",
     "20044300": "Il saute sur tout ce qui bouge pour y planter ses dents.\nCette manie lui vaut quelques blessures, mais il n'en a\nque faire.",
     "20044501": "Il vole à la vitesse du son en quête de nourriture.\nDrattak et lui se disputent souvent leurs proies\ndans des combats aériens impressionnants.",
+    "20044600": "Il a tendance à cacher des aliments dans son épaisse\nfourrure... et à les oublier là. L'odeur putride qui s'en\ndégage alors est plutôt gênante.",
     "20044800": "Il peut canaliser son énergie mentale pour déchaîner\ndes auras mystérieuses capables de réduire d'énormes\nrochers en miettes.",
     "20045001": "Il exhibe sa force en ouvrant grand sa mâchoire,\net attaque en soulevant des tornades de sable.",
     "20045300": "Ses joues contiennent des glandes toxiques. Il attaque\npar surprise et utilise son toucher empoisonné.",
@@ -298,6 +300,9 @@
     "20050800": "Il possède un pelage long et épais. Jadis, dans les régions\nfroides, chaque foyer en élevait un.",
     "20050900": "Il détourne l'attention de ses victimes avec ses gestes\nmignons pour mieux les détrousser. En colère, il griffe.",
     "20051000": "Sa ligne élégante cache une musculature féline qui\nlui permet de surprendre lors de ses attaques nocturnes.",
+    "20051200": "Il frappe ses ennemis avec sa queue couverte de pointes.\nUn Pokémon au caractère agressif.",
+    "20051400": "Son corps est en combustion. Il projette des flammèches\npar la tête et la queue pour carboniser ses ennemis.",
+    "20051600": "Le jet d'eau à haute pression qu'il propulse par la queue\nest assez puissant pour traverser un mur de béton.",
     "20051800": "La fumée qui sort de son front contient les rêves de\nnombreuses personnes et ceux de nombreux Pokémon.",
     "20052100": "Le mâle intimide ses ennemis avec ses caroncules.\nLa femelle vole mieux que le mâle.",
     "20052101": "Le mâle intimide ses ennemis avec ses caroncules.\nLa femelle vole mieux que le mâle.",
@@ -623,5 +628,7 @@
     "2010190000": "Ces « Verochi » capricieux vivent sous le même\n« toit ». En de rares occasions, ils parviennent\nà s'entendre et libèrent tout leur potentiel.",
     "2010131100": "Il se fait passer pour un bol de thé afin d'aspirer\nla force vitale de quiconque ferait l'erreur de le\nboire, mais en général, personne n'est dupe.",
     "2009090000": "Sa poche à flammes est trop petite pour contenir\ntoute l'énergie qu'il produit. Le surplus s'échappe\nen vacillant par la cavité sur sa tête.",
-    "2009120000": "Originaire d'une contrée lointaine, il est venu\ns'installer dans la région il y a longtemps. Ses ailes\nsécrètent un gel qui repousse l'eau et les saletés."
+    "2009120000": "Originaire d'une contrée lointaine, il est venu\ns'installer dans la région il y a longtemps. Ses ailes\nsécrètent un gel qui repousse l'eau et les saletés.",
+    "2000580041": "Ils patrouillent sur leur territoire en duo. Je pense que\nles roches magmatiques qui constituent en partie\nleur toison sont liées à l'activité volcanique.",
+    "2005490041": "Je spécule que ce Pokémon doit ses jambes musclées\nà son habitat dans les montagnes couvertes de neige\népaisse. La fleur sur sa couronne exhale un parfum\nstimulant tout être alentour."
 }

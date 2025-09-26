@@ -229,5 +229,10 @@
     "event_7080_2W_MasterTicket_03": "バラエティ 確定Ｂサーチ",
     "event_7080_4W_SuperTicket_03": "テル スペコス 出現率アップＢサーチ",
     "event_7080_4W_MasterTicket_04": "テル スペコス 確定Ｂサーチ",
-    "event_7080_4W_SuperTicket_08": "マスターフェス限定 出現率アップＢサーチ"
+    "event_7080_4W_SuperTicket_08": "マスターフェス限定 出現率アップＢサーチ",
+    "event_7090_3W_SuperTicket_02": "タロ シーズン限定 出現率アップＢサーチ",
+    "event_7090_3W_MasterTicket_02": "タロ シーズン限定 確定Ｂサーチ",
+    "event_7090_3W_SuperTicket_04": "シーズン限定 出現率アップＢサーチ",
+    "event_7090_4W_MasterTicket_03": "バラエティ 確定Ｂサーチ",
+    "event_7090_4W_SuperTicket_08": "マスターフェス限定 出現率アップＢサーチ"
 }

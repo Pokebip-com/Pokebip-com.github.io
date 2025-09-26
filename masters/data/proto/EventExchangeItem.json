@@ -679,6 +679,11 @@
 { "itemId": "750000000737", "descriptionId": 600000, "imageId": "i075_0061_01", "u4": 0, "storyQuestId": "611097", "trainerId": "-1", "scheduleId": "7080_2W_Event_2_Exchange", "itemNameOverride": "-1" },
 { "itemId": "750000000738", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611098", "trainerId": "-1", "scheduleId": "7080_3W_Event_1", "itemNameOverride": "750000000611" },
 { "itemId": "750000000739", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611101", "trainerId": "-1", "scheduleId": "7080_4W_Event_PokemasDay_Exchange", "itemNameOverride": "750000000181" },
+{ "itemId": "750000000745", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611110", "trainerId": "-1", "scheduleId": "7090_1W_Event_1", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000746", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611160", "trainerId": "-1", "scheduleId": "7090_3W_Event_1", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000747", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611170", "trainerId": "-1", "scheduleId": "7090_3W_Event_2", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000748", "descriptionId": 600000, "imageId": "i075_0003_00", "u4": 0, "storyQuestId": "611180", "trainerId": "-1", "scheduleId": "7090_4W_Event_1_Exchange", "itemNameOverride": "750000000609" },
+{ "itemId": "750000000749", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611190", "trainerId": "-1", "scheduleId": "7090_4W_Event_2_Exchange", "itemNameOverride": "750000000181" },
 { "itemId": "750000000750", "descriptionId": 600054, "imageId": "i220_0000_00", "u4": 0, "storyQuestId": "611046", "trainerId": "-1", "scheduleId": "7070_2W_Event_1_Exchange", "itemNameOverride": "-1" },
 { "itemId": "750000000751", "descriptionId": 600054, "imageId": "i220_0000_00", "u4": 0, "storyQuestId": "611100", "trainerId": "-1", "scheduleId": "7080_4W_Event_1_Exchange", "itemNameOverride": "750000000750" }
 ]}

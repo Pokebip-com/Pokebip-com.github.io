@@ -946,5 +946,15 @@
     "998980": "같은 편 버디즈 전원의 특수공격과 명중률이 [Digit:1digit ]단계 오른다",
     "998979": "자신을 물리기술브레이크 상태와 특수기술브레이크 상태로 만든다",
     "998978": "자신의 공격과 급소율이 [Digit:1digit ]단계 오른다",
+    "998977": "자신의 공격과 방어, 스피드가 [Digit:1digit ]단계 오른다",
+    "998976": "처음 이 기술로 공격에 성공했을 때만 존을 [Name:ReferencedMessageTag Idx=\"3\" ][Kor:Particle char=\"ni\" ] 만든다",
+    "998975": "([Name:ReferencedMessageTag Idx=\"3\" ][Kor:Particle char=\"ha\" ] [Name:ReferencedMessageTag Idx=\"4\" ]타입 공격의 위력이 오른다)",
+    "998974": "자신의 볼티지가 0일 때",
+    "998973": "자신의 볼티지가 [Digit:1digit ] 이상일 때",
+    "998972": "자신의 공격과 방어, 특수공격, 스피드가 [Digit:1digit Idx=\"1\" ]단계 오른다",
+    "998971": "처음 이 기술로 공격에 성공했을 때만 상대를 [Name:ReferencedMessageTag Idx=\"1\" ] 상태[Kor:Particle char=\"ni\" ] 만든다",
+    "998970": "같은 편 버디즈 전원의 방어와 특수방어가 [Digit:1digit Idx=\"7\" ]단계 오른다",
+    "998968": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 올라가 있을 때는 자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 10단계 오른다",
+    "998967": "자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] 올라가 있을 때는 자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] 10단계 오른다",
     "998961": "이 기술을 사용했을 때\n이 기술로 공격할 때"
 }

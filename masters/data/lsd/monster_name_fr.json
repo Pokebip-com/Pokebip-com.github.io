@@ -297,6 +297,7 @@
     "20028900": "Monaflèmit",
     "20029000": "Ningale",
     "20029100": "Ninjask",
+    "20029500": "Brouhabam",
     "20029600": "Makuhita",
     "20029700": "Hariyama",
     "20029800": "Azurill",
@@ -343,6 +344,7 @@
     "20035451": "Méga-Branette",
     "20035600": "Téraclope",
     "20035700": "Tropius",
+    "20035800": "Éoko",
     "20035900": "Absol",
     "20035951": "Méga-Absol",
     "20036100": "Stalgamin",
@@ -512,6 +514,7 @@
     "20056900": "Miasmax",
     "20057000": "Zorua",
     "20057100": "Zoroark",
+    "20057300": "Pashmilla",
     "20057900": "Symbios",
     "20058100": "Lakmécygne",
     "20058400": "Sorbouboul",
@@ -759,6 +762,8 @@
     "2008730000": "Beldeneige",
     "2008751100": "Bekaglaçon",
     "2008751200": "Bekaglaçon",
+    "2008760000": "Wimessir",
+    "2008760100": "Wimessir",
     "2008771100": "Morpeko",
     "2008771200": "Morpeko",
     "2008790000": "Pachyradjah",
@@ -846,5 +851,7 @@
     "2010190000": "Pomdorochi",
     "2010121100": "Poltchageist",
     "2009051100": "Amovénus",
-    "2000590041": "Arcanin"
+    "2000590041": "Arcanin",
+    "2000580041": "Caninos",
+    "2005490041": "Fragilady"
 }

@@ -241,5 +241,15 @@
     "247": "Complete the designated\nPasio Tower",
     "248": "Complete any Pasio Tower",
     "249": "Defeat [Digit:6digits ] Elite Four [EN:Qty S=\"member\" P=\"members\" ]\nin the Champion Stadium",
-    "180": "Power up [Digit:6digits ] [EN:Qty S=\"sync pair\" P=\"sync pairs\" ] to\n6★ EX"
+    "180": "Power up [Digit:6digits ] [EN:Qty S=\"sync pair\" P=\"sync pairs\" ] to\n6★ EX",
+    "override_title_7090_1_01": "Let’s take the ultimate shot!",
+    "override_title_7090_1_02": "Let’s take the ultimate shot! 2",
+    "override_title_7090_1_03": "Let’s take the ultimate shot! 3",
+    "override_title_7090_1_04": "Let’s take the ultimate shot! 4",
+    "override_title_7090_1_05": "Let’s take the ultimate shot! 5",
+    "override_title_7090_1_06": "Let’s take the ultimate shot! 6",
+    "override_title_7090_1_07": "Let’s take the ultimate shot! 7",
+    "override_title_7090_1_08": "Let’s take the ultimate shot! 8",
+    "override_title_7090_1_09": "Let’s take the ultimate shot! 9",
+    "override_title_7090_1_10": "Let’s take the ultimate shot! 10"
 }

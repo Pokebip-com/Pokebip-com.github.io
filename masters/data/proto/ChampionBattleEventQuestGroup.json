@@ -11,5 +11,6 @@
 { "questGroupId": 1001101, "championBattleEventId": 10000012, "recommendedLevel": 125, "pointsPerArea": 3000 },
 { "questGroupId": 1001201, "championBattleEventId": 10000013, "recommendedLevel": 125, "pointsPerArea": 3000 },
 { "questGroupId": 1001301, "championBattleEventId": 10000014, "recommendedLevel": 125, "pointsPerArea": 3000 },
-{ "questGroupId": 1001401, "championBattleEventId": 10000015, "recommendedLevel": 125, "pointsPerArea": 3000 }
+{ "questGroupId": 1001401, "championBattleEventId": 10000015, "recommendedLevel": 125, "pointsPerArea": 3000 },
+{ "questGroupId": 1001501, "championBattleEventId": 10000016, "recommendedLevel": 125, "pointsPerArea": 3000 }
 ]}

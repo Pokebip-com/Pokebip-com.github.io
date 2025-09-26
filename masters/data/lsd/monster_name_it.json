@@ -297,6 +297,7 @@
     "20028900": "Slaking",
     "20029000": "Nincada",
     "20029100": "Ninjask",
+    "20029500": "Exploud",
     "20029600": "Makuhita",
     "20029700": "Hariyama",
     "20029800": "Azurill",
@@ -343,6 +344,7 @@
     "20035451": "MegaBanette",
     "20035600": "Dusclops",
     "20035700": "Tropius",
+    "20035800": "Chimecho",
     "20035900": "Absol",
     "20035951": "MegaAbsol",
     "20036100": "Snorunt",
@@ -512,6 +514,7 @@
     "20056900": "Garbodor",
     "20057000": "Zorua",
     "20057100": "Zoroark",
+    "20057300": "Cinccino",
     "20057900": "Reuniclus",
     "20058100": "Swanna",
     "20058400": "Vanilluxe",
@@ -759,6 +762,8 @@
     "2008730000": "Frosmoth",
     "2008751100": "Eiscue",
     "2008751200": "Eiscue",
+    "2008760000": "Indeedee",
+    "2008760100": "Indeedee",
     "2008771100": "Morpeko",
     "2008771200": "Morpeko",
     "2008790000": "Copperajah",
@@ -846,5 +851,7 @@
     "2010190000": "Hydrapple",
     "2010121100": "Poltchageist",
     "2009051100": "Enamorus",
-    "2000590041": "Arcanine"
+    "2000590041": "Arcanine",
+    "2000580041": "Growlithe",
+    "2005490041": "Lilligant"
 }

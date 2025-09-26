@@ -251,10 +251,12 @@
     "20042800": "Muda el pelo dos veces al año. Este se usa en la\nconfección de unos gorros y bufandas que abrigan\nmucho.",
     "20043000": "No perdona el más mínimo error ni la traición de sus\nsubordinados. Este estricto código es para preservar la\nintegridad de su bandada.",
     "20043300": "Emite un tintineo cada vez que salta. Ensordece a sus\nrivales con sonidos de alta frecuencia.",
+    "20043500": "Para atacar, emite un fluido maloliente por la punta de\nsu cola que puede llegar a más de 50 m.",
     "20043700": "Desde antaño se adora a este Pokémon para que\npropicie lluvias abundantes. A veces se esconde bajo\ntierra.",
     "20044200": "Se formó a partir de 108 espíritus. Está unido a la fisura\nde una piedra angular mística.",
     "20044300": "En cuanto percibe un objeto en movimiento, se lanza\ncontra él y le asesta dentelladas. A veces se hiere a sí\nmismo, pero no le importa.",
     "20044501": "Surca el aire a velocidad supersónica en busca de presas\ny no duda en librar una batalla aérea con un Salamence\npara quedarse con ellas.",
+    "20044600": "Aprovecha su largo pelaje para ocultar comida, pero\nse le suele olvidar y acaba generando un olor a\nputrefacción muy molesto para los demás.",
     "20044800": "Acumula poder espiritual y lo canaliza en forma de\nauras misteriosas capaces de hacer añicos incluso\nenormes rocas.",
     "20045001": "Hace gala de su fuerza abriendo su enorme boca.\nPara atacar levanta gran cantidad de arena.",
     "20045300": "Tiene bolsas venenosas en las mejillas. Pilla\ndesprevenidos a sus rivales para pincharles.",
@@ -298,6 +300,9 @@
     "20050800": "Posee un largo y tupido pelaje. En las regiones frías no\nhabía antaño una casa que no tuviese un Stoutland.",
     "20050900": "Distrae a su oponente con movimientos gráciles y sustrae\nsus pertenencias. Cuando se enfada, ataca con las\ngarras.",
     "20051000": "Su bella y grácil silueta le viene dada por su\ndesarrollada musculatura, que le permite andar\nde noche sin hacer ruido.",
+    "20051200": "Ataca estampando las espinas de su cola en el enemigo.\nEs un Pokémon con mucho temperamento.",
+    "20051400": "Achicharra a sus enemigos desprendiendo llamas por la\ncola y la cabeza, fruto de su desmesurado calor interno.",
+    "20051600": "Cuando lanza agua a alta presión con su cola, puede\nincluso resquebrajar una pared de cemento.",
     "20051800": "Multitud de sueños de humanos y Pokémon se\nencuentran atrapados en el humo que despide\npor su frente.",
     "20052100": "El macho amenaza al enemigo meciendo el adorno de su\ncabeza. Al volar, la hembra es mucho más diestra que el\nmacho.",
     "20052101": "El macho amenaza al enemigo meciendo el adorno de su\ncabeza. Al volar, la hembra es mucho más diestra que el\nmacho.",
@@ -623,5 +628,7 @@
     "2010190000": "Unos Viborappli caprichosos que comparten morada.\nEn raras ocasiones se ponen de acuerdo y son capaces de\nmostrar su verdadera fuerza.",
     "2010131100": "Se hace pasar por té matcha para que algún incauto lo\nbeba y así absorber su energía vital, pero su plan suele\nfracasar.",
     "2009090000": "Como su saca de fuego es pequeña, la energía ígnea que\nrebosa se libera por la muesca de su cabeza en forma\nde una trémula llama.",
-    "2009120000": "Un Pokémon llegado hace tiempo desde tierras lejanas\ny ya establecido en la región. El gel que secreta por las\nplumas repele el agua y la mugre."
+    "2009120000": "Un Pokémon llegado hace tiempo desde tierras lejanas\ny ya establecido en la región. El gel que secreta por las\nplumas repele el agua y la mugre.",
+    "2000580041": "Patrullan su territorio en pareja. Las rocas ígneas que\nsalpican su pelaje quizá sean el resultado de la actividad\nvolcánica del lugar.",
+    "2005490041": "Habitar en montañas cubiertas de nieves le ha permitido\ndesarrollar unas piernas robustas. Expulsa un aroma por\nla flor de su corona que infunde ánimo a quien esté\ncerca."
 }

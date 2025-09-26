@@ -1,5 +1,6 @@
 {"entries": [
 { "passiveSkillId": 13030501, "passiveSkillChildIds": [ "13030101", "18051501" ] },
+{ "passiveSkillId": 13030701, "passiveSkillChildIds": [ "13030101", "13070101" ] },
 { "passiveSkillId": 15014501, "passiveSkillChildIds": [ "15010101", "15010301" ] },
 { "passiveSkillId": 15014502, "passiveSkillChildIds": [ "15010102", "15010302" ] },
 { "passiveSkillId": 15014503, "passiveSkillChildIds": [ "15010103", "15010303" ] },
@@ -18,6 +19,7 @@
 { "passiveSkillId": 17084107, "passiveSkillChildIds": [ "17071907", "17078707" ] },
 { "passiveSkillId": 17084108, "passiveSkillChildIds": [ "17071908", "17078708" ] },
 { "passiveSkillId": 17084109, "passiveSkillChildIds": [ "17071909", "17078709" ] },
+{ "passiveSkillId": 18022601, "passiveSkillChildIds": [ "18020901", "18051501" ] },
 { "passiveSkillId": 28040101, "passiveSkillChildIds": [ "28030801", "17061101" ] },
 { "passiveSkillId": 28040201, "passiveSkillChildIds": [ "28030101", "17086009" ] },
 { "passiveSkillId": 28040301, "passiveSkillChildIds": [ "28030401", "11012701" ] },
@@ -130,6 +132,9 @@
 { "passiveSkillId": 32020701, "passiveSkillChildIds": [ "15010101", "19056301", "19028503" ] },
 { "passiveSkillId": 32020801, "passiveSkillChildIds": [ "15010101", "19059301", "19029403" ] },
 { "passiveSkillId": 32020901, "passiveSkillChildIds": [ "15013601", "15010301", "15010101" ] },
+{ "passiveSkillId": 32021001, "passiveSkillChildIds": [ "15010301", "16031003", "19023803" ] },
+{ "passiveSkillId": 32021101, "passiveSkillChildIds": [ "15010101", "19057101", "19027903" ] },
+{ "passiveSkillId": 32021201, "passiveSkillChildIds": [ "15010101", "15010301", "17085109" ] },
 { "passiveSkillId": 99020401, "passiveSkillChildIds": [ "17044809", "17069509" ] },
 { "passiveSkillId": 99020501, "passiveSkillChildIds": [ "13023502", "13023605" ] },
 { "passiveSkillId": 99020701, "passiveSkillChildIds": [ "19052209", "17014101", "18118809" ] },
@@ -235,6 +240,16 @@
 { "passiveSkillId": 99033301, "passiveSkillChildIds": [ "15014709", "17087409" ] },
 { "passiveSkillId": 99033401, "passiveSkillChildIds": [ "13084105", "18020901", "18123701" ] },
 { "passiveSkillId": 99033501, "passiveSkillChildIds": [ "19020701", "19059401" ] },
+{ "passiveSkillId": 99033601, "passiveSkillChildIds": [ "11015709", "11015802" ] },
+{ "passiveSkillId": 99033701, "passiveSkillChildIds": [ "18124306", "18124403" ] },
+{ "passiveSkillId": 99033801, "passiveSkillChildIds": [ "18124509", "17087909" ] },
+{ "passiveSkillId": 99033901, "passiveSkillChildIds": [ "15014801", "19059601" ] },
+{ "passiveSkillId": 99034201, "passiveSkillChildIds": [ "18113209", "18125409", "18113309", "18125509" ] },
 { "passiveSkillId": 99034401, "passiveSkillChildIds": [ "17088509", "19029103" ] },
-{ "passiveSkillId": 99035701, "passiveSkillChildIds": [ "19057401", "19060701", "19029103" ] }
+{ "passiveSkillId": 99034601, "passiveSkillChildIds": [ "17075709" ] },
+{ "passiveSkillId": 99034701, "passiveSkillChildIds": [ "17083209" ] },
+{ "passiveSkillId": 99034801, "passiveSkillChildIds": [ "17089209", "18125109" ] },
+{ "passiveSkillId": 99035701, "passiveSkillChildIds": [ "19057401", "19060701", "19029103" ] },
+{ "passiveSkillId": 99036701, "passiveSkillChildIds": [ "16031202", "19056505" ] },
+{ "passiveSkillId": 99036801, "passiveSkillChildIds": [ "15010102", "19059801", "18126103" ] }
 ]}
