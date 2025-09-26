@@ -1,16 +1,18 @@
-let scoutIds;
 let championBattleAllPeriod;
 let cyclicRankingIds;
 let eventIds;
 let loginBonusIds;
 let legendaryBattleIds;
+let mainStoryUpdate;
 let missionGroupIds;
 let salonGuestsUpdate;
-let mainStoryUpdate;
+let scoutIds;
+let shopPurchasableIds;
 let trainingAreaUpdate;
 let trainerRarityupBonusUpdate;
 
 let treatedEvents;
+let scoutQty, cbQty, eventQty, shopQty, salonQty, charaQty, missionQty, musicQty, loginBonusQty;
 
 let scheduleDiv;
 let versionSelect;
@@ -114,15 +116,15 @@ function processData() {
         });
     });
 
-    jData.proto.eventQuestGroup.push(...jData.proto.challengeToStrongTrainerQuestGroup);
-    jData.proto.eventQuestGroup.push(...jData.proto.championBattleEventQuestGroup);
-    jData.proto.eventQuestGroup.push(...jData.proto.villaQuestGroup.map(vqg => vqg.bannerId = 1202001));
-
     jData.proto.cyclicRankingData = getBySpecificID(jData.proto.cyclicRankingQuestGroupSchedule, "scheduleId");
     jData.proto.legendQuestGroup = getBySpecificID(jData.proto.legendQuestGroup, "questGroupId");
     jData.proto.legendQuestGroupSchedule = getBySpecificID(jData.proto.legendQuestGroupSchedule, "scheduleId");
 
     getSchedule();
+
+    jData.proto.eventQuestGroup.push(...jData.proto.challengeToStrongTrainerQuestGroup);
+    jData.proto.eventQuestGroup.push(...jData.proto.championBattleEventQuestGroup);
+    jData.proto.eventQuestGroup.push(...jData.proto.villaQuestGroup.map(vqg => vqg.bannerId = 1202001));
 
     const lastScheduleStartDate = Math.max(...new Set(jData.proto.schedule.map(s => s.startDate*1)));
 
@@ -151,11 +153,12 @@ function getSchedule() {
     scoutIds = jData.proto.scout.map(s => s.scheduleId);
     championBattleAllPeriod = [...new Set(jData.proto.schedule.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
     cyclicRankingIds = [...new Set(jData.proto.cyclicRankingQuestGroupSchedule.map(crqg => crqg.scheduleId))];
-    eventIds = [...new Set(jData.proto.storyQuest.filter(sq => !sq.scheduleId.includes("_ChampionBattle_")).map(sq => sq.scheduleId))];
+    eventIds = [...new Set(jData.proto.eventQuestGroup.map(eqg => eqg.scheduleId))];
     legendaryBattleIds = [...new Set(Object.keys(jData.proto.legendQuestGroupSchedule))];
     mainStoryUpdate = [...new Set(jData.proto.storyQuest.filter(sq => sq.questType === "MainStory").map(sq => sq.scheduleId))];
     missionGroupIds = [...new Set(jData.proto.missionGroup.map(mg => mg.scheduleId))];
     salonGuestsUpdate = [...new Set(jData.proto.salonGuest.map(sg => sg.scheduleId))];
+    shopPurchasableIds = [...new Set(jData.proto.shopPurchasableItem.map(sp => sp.scheduleId))];
     trainingAreaUpdate = [...new Set(jData.proto.storyQuest.filter(sq => sq.questType === "TrainingArea" || sq.questType === "TrainingArea2").map(sq => sq.scheduleId))];
     trainerRarityupBonusUpdate = [...new Set(jData.proto.trainerRarityupBonus.map(trb => trb.scheduleId))];
 
@@ -171,7 +174,7 @@ function getSchedule() {
         || trainingAreaUpdate.includes(s.scheduleId)
         || trainerRarityupBonusUpdate.includes(s.scheduleId)
         || s.scheduleId.startsWith("chara_")
-        || (s.scheduleId.includes("_Shop_") && !s.scheduleId.includes("_gymstamp_"))
+        || (shopPurchasableIds.includes(s.scheduleId) && !s.scheduleId.includes("_gymstamp_"))
         || s.scheduleId.endsWith("_musiccoin_FOREVER")
         || (s.scheduleId.includes("_ChampionBattle_")
             && !(s.scheduleId.endsWith("_AllPeriod")
@@ -580,65 +583,72 @@ function getVersionSchedule(versionId) {
         s.startDate >= ver.releaseTimestamp
         && (idx === 0 || s.startDate < jData.custom.versionReleaseDates[idx-1].releaseTimestamp)
     ).map(s => {
-        s.isLegendaryBattle = false;
-        s.isHomeAppeal = false;
+        s.isLegendaryBattle = legendaryBattleIds.includes(s.scheduleId);
+        s.isHomeAppeal = trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId);
         s.isCyclicRanking = false;
-
-        if(scoutIds.includes(s.scheduleId)) {
-            s.scheduleType = { "name" : "scout", "priority": "10" };
-        }
-        else if(salonGuestsUpdate.includes(s.scheduleId)) {
-            s.scheduleType = { "name" : "salon", "priority": "30" };
-        }
-        else if(s.scheduleId.startsWith("chara_") || s.scheduleId === gymStartScheduleId) {
-            s.scheduleType = { "name" : "chara", "priority": "40" };
-        }
-        else if(s.scheduleId.includes("_Shop_")) {
-            s.scheduleType = { "name" : "shop", "priority": "50" };
-        }
-        else if(s.scheduleId.endsWith("_musiccoin_FOREVER")) {
-            s.scheduleType = { "name" : "music", "priority": "60" };
-        }
-        else if(loginBonusIds.includes(s.scheduleId)) {
-            s.scheduleType = { "name" : "loginBonus", "priority": "70" };
-        }
-        else if(s.scheduleId.includes("_ChampionBattle_")) {
-            s.scheduleType = { "name" : "championBattle", "priority": "17" };
-        }
-        else if(missionGroupIds.includes(s.scheduleId)) {
-            s.scheduleType = { "name" : "mission", "priority": "25" };
-        }
-        else {
-            s.scheduleType = { "name" : "event", "priority": "20" };
-
-            if(legendaryBattleIds.includes(s.scheduleId)) {
-                s.isLegendaryBattle = true;
-            }
-            if(trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId)) {
-                s.isHomeAppeal = true;
-            }
-        }
+        s.isScout = scoutIds.includes(s.scheduleId);
+        s.isSalon = salonGuestsUpdate.includes(s.scheduleId);
+        s.isChara = s.scheduleId.startsWith("chara_") || s.scheduleId === gymStartScheduleId;
+        s.isShop = shopPurchasableIds.includes(s.scheduleId); //s.scheduleId.includes("_Shop_");
+        s.isMusic = s.scheduleId.endsWith("_musiccoin_FOREVER");
+        s.isLoginBonus = loginBonusIds.includes(s.scheduleId);
+        s.isChampionBattle = s.scheduleId.includes("_ChampionBattle_");
+        s.isMission = missionGroupIds.includes(s.scheduleId);
+        s.isEvent = eventIds.includes(s.scheduleId);
+        //
+        // if(scoutIds.includes(s.scheduleId)) {
+        //     s.scheduleType = { "name" : "scout", "priority": "10" };
+        // }
+        // else if(salonGuestsUpdate.includes(s.scheduleId)) {
+        //     s.scheduleType = { "name" : "salon", "priority": "30" };
+        // }
+        // else if(s.scheduleId.startsWith("chara_") || s.scheduleId === gymStartScheduleId) {
+        //     s.scheduleType = { "name" : "chara", "priority": "40" };
+        // }
+        // else if(s.scheduleId.includes("_Shop_")) {
+        //     s.scheduleType = { "name" : "shop", "priority": "50" };
+        // }
+        // else if(s.scheduleId.endsWith("_musiccoin_FOREVER")) {
+        //     s.scheduleType = { "name" : "music", "priority": "60" };
+        // }
+        // else if(loginBonusIds.includes(s.scheduleId)) {
+        //     s.scheduleType = { "name" : "loginBonus", "priority": "70" };
+        // }
+        // else if(s.scheduleId.includes("_ChampionBattle_")) {
+        //     s.scheduleType = { "name" : "championBattle", "priority": "17" };
+        // }
+        // else if(missionGroupIds.includes(s.scheduleId)) {
+        //     s.scheduleType = { "name" : "mission", "priority": "25" };
+        // }
+        // else {
+        //     s.scheduleType = { "name" : "event", "priority": "20" };
+        //
+        //     if(legendaryBattleIds.includes(s.scheduleId)) {
+        //         s.isLegendaryBattle = true;
+        //     }
+        //     if(trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId)) {
+        //         s.isHomeAppeal = true;
+        //     }
+        // }
         return s;
     });
 
     jData.custom.versionReleaseDates[idx].schedule = ver.schedule;
     jData.custom.versionReleaseDates[idx].schedule.push(...getCyclingRankingEvents(idx));
     jData.custom.versionReleaseDates[idx].hasCyclingRankingEventData = true;
-    jData.custom.versionReleaseDates[idx].schedule.sort((a, b) => a.startDate.localeCompare(b.startDate) || a.scheduleType.priority.localeCompare(b.scheduleType.priority));
+    jData.custom.versionReleaseDates[idx].schedule.sort((a, b) => a.startDate.localeCompare(b.startDate));
 }
 
-function printEndDate(timestamp) {
+function printEndDate(timestamp, printDiv) {
     let endDate = timestamp === '32503680000' ? jData.locale.schedule.duration_permanent : new Intl.DateTimeFormat(locale, {dateStyle: 'full', timeStyle: 'short'}).format(new Date(timestamp*1000-1));
-    scheduleDiv.innerHTML += `<br /><br /><strong>${jData.locale.schedule.end_date} </strong> ${endDate}`;
+    printDiv.innerHTML += `<br /><br /><strong>${jData.locale.schedule.end_date} </strong> ${endDate}`;
 }
 
-function printScouts(schedule, titleText = "") {
+function printScouts(schedule, printDiv) {
     let scheduleScouts = jData.proto.scout.filter(sc => sc.scheduleId === schedule.scheduleId);
 
     if (scheduleScouts.length === 0)
         return;
-
-    scheduleDiv.innerHTML += titleText;
 
     for (const schedScout of scheduleScouts) {
         let scoutBanners = jData.proto.banner.filter(b => b.bannerId === schedScout.bannerId);
@@ -652,19 +662,19 @@ function printScouts(schedule, titleText = "") {
 
             h3 += "</h3>";
 
-            scheduleDiv.innerHTML += h3;
+            printDiv.innerHTML += h3;
 
             if (sb.bannerIdString !== "") {
-                scheduleDiv.innerHTML += `<img loading="lazy" src="./data/banner/scout/${sb.bannerIdString}.png" onerror="this.src = './data/banner/event/${sb.bannerIdString}.png';" class="bannerImg" />\n`;
+                printDiv.innerHTML += `<img loading="lazy" src="./data/banner/scout/${sb.bannerIdString}.png" onerror="this.src = './data/banner/event/${sb.bannerIdString}.png';" class="bannerImg" />\n`;
             }
         });
 
-        printEndDate(schedule.endDate);
+        printEndDate(schedule.endDate, printDiv);
 
         let sPickups = jData.proto.scoutPickup.filter(sp => sp.scoutId === schedScout.scoutId);
 
         if (sPickups.length > 0) {
-            scheduleDiv.innerHTML += `<br /><br /><b>${jData.locale.schedule.featured_sync_pairs}</b>\n`;
+            printDiv.innerHTML += `<br /><br /><b>${jData.locale.schedule.featured_sync_pairs}</b>\n`;
 
             let ul = `<ul style='list-style-type: disc;'>\n`;
 
@@ -673,7 +683,7 @@ function printScouts(schedule, titleText = "") {
             }
 
             ul += "</ul>\n";
-            scheduleDiv.innerHTML += ul;
+            printDiv.innerHTML += ul;
         }
 
         let scoutEps = jData.proto.scoutEp.filter(sep => sep.scoutId === schedScout.scoutId && sep.u8 === 1);
@@ -704,13 +714,15 @@ function printScouts(schedule, titleText = "") {
             if(rewards === "")
                 continue;
 
-            scheduleDiv.innerHTML += `<br /><b>${jData.locale.schedule.pair_pull_bonus_gift}</b>\n`;
-            scheduleDiv.innerHTML += rewards;
+            printDiv.innerHTML += `<br /><b>${jData.locale.schedule.pair_pull_bonus_gift}</b>\n`;
+            printDiv.innerHTML += rewards;
         }
     }
+
+    scoutQty++;
 }
 
-function printShopBanner(shopBanner, schedule) {
+function printShopBanner(shopBanner, schedule, printDiv) {
     let h3 = `<h3>${jData.lsd.bannerText[shopBanner.text1Id]}`;
 
     if(shopBanner.text2Id > -1) {
@@ -719,21 +731,41 @@ function printShopBanner(shopBanner, schedule) {
 
     h3 += "</h3>";
 
-    scheduleDiv.innerHTML += h3;
+    printDiv.innerHTML += h3;
 
     if(shopBanner.bannerIdString !== "") {
-        scheduleDiv.innerHTML += `<img src="./data/banner/event/${shopBanner.bannerIdString}.png" onerror="this.src = './data/banner/scout/${shopBanner.bannerIdString}.png';" class="bannerImg" />\n`;
+        printDiv.innerHTML += `<img src="./data/banner/event/${shopBanner.bannerIdString}.png" onerror="this.src = './data/banner/scout/${shopBanner.bannerIdString}.png';" class="bannerImg" />\n`;
     }
 
     let purchasableItems = jData.proto.shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId);
 
     if(purchasableItems.length > 0) {
 
-        scheduleDiv.innerHTML += `<br /><br /><b>${jData.locale.schedule.gem_packs}</b>\n`;
+        printDiv.innerHTML += `<br /><br /><b>${jData.locale.schedule.gem_packs}</b>\n`;
 
         let ul = `<ul>\n`;
 
         purchasableItems.forEach(pi => {
+            let additionnalText = "";
+
+            if(pi.itemSetId1 > 0) {
+                let is = jData.proto.itemSet.find(is => is.itemSetId === pi.itemSetId1);
+
+                if(is)
+                    for(let i = 1; i <= 10; i++) {
+                        if(is["item" + i] === "0")
+                            continue;
+
+                        if(i > 1)
+                            additionnalText += " + ";
+
+                        additionnalText += `${getItemName(is["item" + i])} (x${is["item" + i + "Quantity"]})`;
+                    }
+
+                if(additionnalText !== "")
+                    additionnalText += " + ";
+            }
+
             let matches = pi.internalName.match(/paidvc_[a-zA-Z]+([0-9]+)_([0-9]+)/i);
 
             if(!matches[1] || !matches[2]) return;
@@ -742,18 +774,18 @@ function printShopBanner(shopBanner, schedule) {
 
             price = price.euros || "??.??";
 
-            ul += `<li><b>${matches[2]} ${jData.locale.schedule.gems}</b> ${price}€ (${pi.limit}x)</li>\n`;
+            ul += `<li><b>${additionnalText}${matches[2]} ${jData.locale.schedule.gems}</b> ${price}€ (${pi.limit}x)</li>\n`;
         });
 
         ul += `</ul>`;
 
-        scheduleDiv.innerHTML += ul;
+        printDiv.innerHTML += ul;
     }
 
-    printEndDate(schedule.endDate);
+    printEndDate(schedule.endDate, printDiv);
 }
 
-function printEventBanner(eventBanner, lastSchedule, titleText = "") {
+function printEventBanner(eventBanner, lastSchedule, printDiv) {
 
     // Événement Spécial - Match Spécial de Passio
     // if(eventBanner.type === 25) {
@@ -770,55 +802,31 @@ function printEventBanner(eventBanner, lastSchedule, titleText = "") {
 
     h3 += "</h3>";
 
-    scheduleDiv.innerHTML += titleText;
-
-    scheduleDiv.innerHTML += h3;
+    printDiv.innerHTML += h3;
 
     if(eventBanner.bannerIdString !== "") {
-        scheduleDiv.innerHTML += `<img src="./data/banner/event/${eventBanner.bannerIdString}.png" onerror="this.src = './data/banner/scout/${eventBanner.bannerIdString}.png';" class="bannerImg" />\n`;
+        printDiv.innerHTML += `<img src="./data/banner/event/${eventBanner.bannerIdString}.png" onerror="this.src = './data/banner/scout/${eventBanner.bannerIdString}.png';" class="bannerImg" />\n`;
     }
 
-    printEndDate(lastSchedule.endDate);
+    printEndDate(lastSchedule.endDate, printDiv);
 }
 
-function printEvents(sched, titleText = "") {
-    let scheduleQuests = jData.proto.storyQuest.filter(quest => quest.scheduleId === sched.scheduleId);
+function printEvents(sched, printDiv) {
+    let quests = jData.proto.eventQuestGroup.filter(eqg => eqg.scheduleId === sched.scheduleId);
 
-    if(scheduleQuests.length === 0)
+    if(quests.length === 0)
         return;
 
-    scheduleDiv.innerHTML += titleText;
+    quests.forEach(eqg => {
+        let banners = jData.proto.banner.filter(b => b.bannerId === eqg.bannerId);
 
-    let questGroups = [...new Set(scheduleQuests.map(sq => sq.questGroupId))];
-    let bannerSched;
-
-    questGroups.forEach(qg => {
-
-        if(treatedEvents.includes(qg)) {
-            return;
-        }
-        else {
-            treatedEvents.push(qg);
-
-            let scheduleIds = [...new Set(jData.proto.storyQuest.filter(sq => sq.questGroupId === qg).map(sq => sq.scheduleId))];
-
-            if (scheduleIds.length > 1) {
-                bannerSched = jData.proto.schedule.find(s => s.scheduleId === scheduleIds[scheduleIds.length - 1]);
-            } else {
-                bannerSched = sched;
-            }
-        }
-
-        jData.proto.eventQuestGroup.filter(eventQG => eventQG.questGroupId == qg)
-            .forEach(eventQG => {
-                let eventBanners = jData.proto.banner.filter(b => b.bannerId === eventQG.bannerId);
-
-                eventBanners.forEach(eb => printEventBanner(eb, bannerSched));
-            });
+        banners.forEach(ban => printEventBanner(ban, sched, printDiv));
     });
+
+    eventQty++;
 }
 
-function printPairChanges(sched, titleText = "") {
+function printPairChanges(sched, printDiv) {
 
     const scheduleId = sched.scheduleId;
 
@@ -861,27 +869,27 @@ function printPairChanges(sched, titleText = "") {
         return;
     }
 
-    scheduleDiv.innerHTML += titleText;
-
-    scheduleDiv.innerHTML += "<ul>";
+    printDiv.innerHTML += "<ul>";
 
     for(let index in changes) {
         if(lastTID !== changes[index].trainerId) {
             if(lastTID !== "") {
-                scheduleDiv.innerHTML += "<br />";
+                printDiv.innerHTML += "<br />";
             }
 
             lastTID = changes[index].trainerId;
 
         }
 
-        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
+        printDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(changes[index].trainerId)} : </b> ${changes[index].text}</li>`;
     }
 
-    scheduleDiv.innerHTML += "</ul>";
+    printDiv.innerHTML += "</ul>";
+
+    charaQty++;
 }
 
-function printSalonGuest(scheduleId, titleText = "") {
+function printSalonGuest(scheduleId, printDiv) {
     let salonGuestList = [...new Set(jData.proto.salonGuest.filter(sg => sg.scheduleId === scheduleId).map(sg => sg.trainerId))].map(tid => {
         return {"trainerId": tid, "type": "add", "text": jData.locale.schedule.lodge_addition};
     });
@@ -889,42 +897,44 @@ function printSalonGuest(scheduleId, titleText = "") {
     if(salonGuestList.length === 0)
         return;
 
-    scheduleDiv.innerHTML += titleText;
-
     let lastTID = "";
 
-    scheduleDiv.innerHTML += "<ul>";
+    printDiv.innerHTML += "<ul>";
 
     for (let index in salonGuestList) {
         if (lastTID !== salonGuestList[index].trainerId) {
             if (lastTID !== "") {
-                scheduleDiv.innerHTML += "<br />";
+                printDiv.innerHTML += "<br />";
             }
 
             lastTID = salonGuestList[index].trainerId;
 
         }
 
-        scheduleDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(salonGuestList[index].trainerId)} : </b> ${salonGuestList[index].text}</li>`;
+        printDiv.innerHTML += `<li><b>${getPairPrettyPrintWithUrl(salonGuestList[index].trainerId)} : </b> ${salonGuestList[index].text}</li>`;
     }
+
+    salonQty++;
 }
 
-function printShopOffers(schedule, titleText = "") {
-    let eventBanners = jData.proto.eventBanner.filter(eb => eb.scheduleId === schedule.scheduleId);
+function printShopOffers(schedule, printDiv) {
+    let eventBannerIds = jData.proto.eventBanner.filter(eb => eb.scheduleId === schedule.scheduleId).map(eb => eb.bannerId);
+    let bannerIds = jData.proto.shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId && spi.bannerId > 0)
+        .map(spi => parseInt(spi.bannerId)).concat(eventBannerIds);
 
-    if(eventBanners.length === 0)
+    if(bannerIds.length === 0)
         return;
 
-    scheduleDiv.innerHTML += titleText;
+    bannerIds.forEach(bid => {
+        let banners = jData.proto.banner.filter(b => b.bannerId === bid);
 
-    eventBanners.forEach(eb => {
-        let banners = jData.proto.banner.filter(b => b.bannerId === eb.bannerId);
-
-        banners.forEach(ban => printShopBanner(ban, schedule));
+        banners.forEach(ban => printShopBanner(ban, schedule, printDiv));
     });
+
+    shopQty++;
 }
 
-function printChampionBattle(sched, titleText = "") {
+function printChampionBattle(sched, printDiv) {
     let period = championBattleAllPeriod.find(cbap => sched.startDate >= cbap.startDate && sched.startDate < cbap.endDate);
     let openingSchedule = jData.proto.championBattleRegionOpeningSchedule.find(cbros => cbros.scheduleId === period.scheduleId);
     let cbr = jData.proto.championBattleRegion.find(cbr => cbr.championBattleRegionId === openingSchedule.championBattleRegionId);
@@ -934,25 +944,26 @@ function printChampionBattle(sched, titleText = "") {
         return;
     }
 
-    printEventBanner(ban, sched, titleText);
+    printEventBanner(ban, sched, printDiv);
+    cbQty++;
 }
 
-function printHomeAppealEvent(schedule, titleText = "") {
+function printHomeAppealEvent(schedule, printDiv) {
     const eventAppeal = jData.proto.homeEventAppeal.filter(hea => hea.bannerScheduleId === schedule.scheduleId);
 
     if (eventAppeal.length === 0)
         return;
 
-    scheduleDiv.innerHTML += titleText;
-
     eventAppeal.forEach(ea => {
         let banners = jData.proto.banner.filter(b => b.bannerId === ea.bannerId);
 
-        banners.forEach(ban => printEventBanner(ban, schedule));
-    })
+        banners.forEach(ban => printEventBanner(ban, schedule, printDiv));
+    });
+
+    eventQty++;
 }
 
-function printCyclicRanking(schedule, titleText = "") {
+function printCyclicRanking(schedule, printDiv) {
     let secondsPassed = parseInt(schedule.startDate) - parseInt(schedule.originalSD);
     let CRQuests = jData.proto.cyclicRankingQuestGroup.filter(crqg => crqg.questGroupId === schedule.questGroupId);
     let CRQNum = 0;
@@ -970,47 +981,44 @@ function printCyclicRanking(schedule, titleText = "") {
     if(banners.length === 0)
         return;
 
-    scheduleDiv.innerHTML += titleText;
+    banners.forEach(ban => printEventBanner(ban, schedule, printDiv));
 
-    banners.forEach(ban => printEventBanner(ban, schedule));
+    eventQty++;
 }
 
-function printLegBat(schedule, titleText = "") {
-    let titleTextPrinted = false;
+function printLegBat(schedule, printDiv) {
     let banners = jData.proto.banner.filter(b => b.bannerId === jData.proto.legendQuestGroup[jData.proto.legendQuestGroupSchedule[schedule.scheduleId][0].questGroupId][0].bannerId);
 
     if (banners.length === 0)
         return;
 
-    scheduleDiv.innerHTML += titleText;
+    banners.forEach(ban => printEventBanner(ban, schedule, printDiv));
 
-    banners.forEach(ban => printEventBanner(ban, schedule));
+    eventQty++;
 }
 
-function printNewMissions(schedule, titleText = "") {
+function printNewMissions(schedule, printDiv) {
     let miGr = jData.proto.missionGroup.filter(mg => mg.scheduleId === schedule.scheduleId);
 
     if (miGr.length === 0) {
         return;
     }
 
-    scheduleDiv.innerHTML += titleText;
-
     miGr.forEach(mg => {
         let banners = jData.proto.banner.filter(b => b.bannerId === mg.bannerId);
-        banners.forEach(ban => printEventBanner(ban, schedule));
+        banners.forEach(ban => printEventBanner(ban, schedule, printDiv));
     });
+
+    missionQty++;
 }
 
-function printNewMusics(scheduleId, titleText = "") {
+function printNewMusics(scheduleId, printDiv) {
     let itemIds = jData.proto.itemExchange.filter(ie => ie.scheduleId === scheduleId).map(ie => ie.itemId);
 
     if (itemIds.length === 0)
         return;
 
-    scheduleDiv.innerHTML += titleText;
-
-    scheduleDiv.innerHTML += `<b>${jData.locale.schedule.jukebox_music}</b>`;
+    printDiv.innerHTML += `<b>${jData.locale.schedule.jukebox_music}</b>`;
 
     let ul = `<ul>\n`;
 
@@ -1019,10 +1027,12 @@ function printNewMusics(scheduleId, titleText = "") {
     });
 
     ul += "</ul>";
-    scheduleDiv.innerHTML += ul;
+    printDiv.innerHTML += ul;
+
+    musicQty++;
 }
 
-function printLoginBonus(loginBonus, titleText = "") {
+function printLoginBonus(loginBonus, printDiv) {
 
     if (loginBonus.bannerId > -1) {
         let lbBanner = jData.proto.banner.filter(b => b.bannerId === loginBonus.bannerId);
@@ -1031,9 +1041,7 @@ function printLoginBonus(loginBonus, titleText = "") {
             return;
         }
 
-        scheduleDiv.innerHTML += titleText;
-
-        lbBanner.forEach(ban => printEventBanner(ban, loginBonus));
+        lbBanner.forEach(ban => printEventBanner(ban, loginBonus, printDiv));
     } else {
         let entryStr = `<h3>`;
 
@@ -1081,25 +1089,26 @@ function printLoginBonus(loginBonus, titleText = "") {
                 break;
         }
 
-        scheduleDiv.innerHTML += titleText;
-        scheduleDiv.innerHTML += entryStr;
-        printEndDate(loginBonus.endDate);
+        printDiv.innerHTML += entryStr;
+        printEndDate(loginBonus.endDate, printDiv);
     }
 
     const rewards = jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === loginBonus.rewardId).sort((a, b) => a.day - b.day);
 
     if(rewards.length === 0) return;
 
-    scheduleDiv.innerHTML += `<br><br><b>${jData.locale.schedule.login_bonus_rewards}</b>`;
+    printDiv.innerHTML += `<br><br><b>${jData.locale.schedule.login_bonus_rewards}</b>`;
     for (const lbr1 of rewards) {
-        scheduleDiv.innerHTML += `<br><b>${lbr1.day}.</b>`;
+        printDiv.innerHTML += `<br><b>${lbr1.day}.</b>`;
         let sets = jData.proto.itemSet.find(is => is.itemSetId === lbr1.itemSetId);
         let i = 1;
         while (sets[`item${i}`] && sets[`item${i}`] !== "0") {
-            scheduleDiv.innerHTML += ` ${getItemName(sets[`item${i}`])} x${sets[`item${i}Quantity`]}`;
+            printDiv.innerHTML += ` ${getItemName(sets[`item${i}`])} x${sets[`item${i}Quantity`]}`;
             i++;
         }
     }
+
+    loginBonusQty++;
 }
 
 function printCalendars(startDates) {
@@ -1195,28 +1204,13 @@ function printCalendars(startDates) {
             let calDay = document.createElement("td");
 
             if(date.getMonth() === lastPrintMonth && (date.getDay()+6)%7 === i) {
+                calDay.id = `calDay${getYMDDate(date)}`;
 
                 if(today.getDate() === date.getDate() && today.getMonth() === date.getMonth() && today.getFullYear() === date.getFullYear()) {
                     calDay.classList.add("calToday");
                 }
 
-                if(startDates.map(sd => getYMDDate(sd)).includes(getYMDDate(date))) {
-                    let link = document.createElement("a");
-                    link.href = `#${getYMDDate(date)}`;
-                    link.innerHTML = `<b>${date.getDate().toString()}</b>`;
-
-                    calDay.classList.add("calClick");
-                    calDay.onclick = () => link.click();
-                    calDay.appendChild(link);
-
-                    if(nextContentBtn.getAttribute("href") === "#" && today < date) {
-                        nextContentBtn.href = `#${getYMDDate(date)}`;
-                        nextContentBtn.style.display = "inline-flex";
-                    }
-                }
-                else {
-                    calDay.innerText = date.getDate().toString();
-                }
+                calDay.innerText = date.getDate().toString();
                 date.setDate(date.getDate() + 1);
             }
 
@@ -1239,6 +1233,8 @@ function setVersionInfos(id) {
         missionFlag;
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
+    let dayDiv, scoutDiv, eventDiv, shopDiv, salonDiv, charaDiv, musicDiv, loginBonusDiv, championBattleDiv, missionDiv;
+
     printCalendars(startDates.map(t => new Date(t * 1000)));
 
     for (const timestamp of startDates) {
@@ -1252,107 +1248,159 @@ function setVersionInfos(id) {
         //     timeStyle: 'short'
         // }).format(date)}</h1>\n`;
 
+        dayDiv = document.createElement("div");
+        scoutDiv = document.createElement("div");
+        championBattleDiv = document.createElement("div");
+        eventDiv = document.createElement("div");
+        shopDiv = document.createElement("div");
+        salonDiv = document.createElement("div");
+        charaDiv = document.createElement("div");
+        missionDiv = document.createElement("div");
+        musicDiv = document.createElement("div");
+        loginBonusDiv = document.createElement("div");
+
+        scoutQty = cbQty = eventQty = shopQty = salonQty = charaQty = missionQty = musicQty = loginBonusQty = 0;
+
         for (const sched of version.schedule.filter(schedule => schedule.startDate === timestamp)) {
-            let titleText = ""
 
             if(dayFlag) {
                 dayFlag = false;
-                titleText = `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat(locale, {
+                dayDiv.innerHTML = `<h1 id="${getYMDDate(date)}" style="margin-top: 50px; scroll-margin-top: 2.8em">${new Intl.DateTimeFormat(locale, {
                     dateStyle: 'full',
                     timeStyle: 'short'
                 }).format(date)}</h1>\n`
             }
 
-            switch (sched.scheduleType.name) {
-                case "scout":
-                    if (scoutFlag) {
-                        scoutFlag = false;
-                        titleText += `<h2>${jData.locale.schedule.scouts}</h2>`;
-                    }
-                    printScouts(sched, titleText);
-                    break;
+            if(sched.isScout) {
+                if (scoutFlag) {
+                    scoutFlag = false;
+                    scoutDiv.innerHTML = `<h2>${jData.locale.schedule.scouts}</h2>`;
+                }
+                printScouts(sched, scoutDiv);
+            }
 
-                case "championBattle":
-                    if (championBattleFlag) {
-                        championBattleFlag = false;
-                        titleText += `<h2>${jData.locale.schedule.champion_stadium}</h2>`;
-                    }
-                    printChampionBattle(sched, titleText);
-                    break;
+            if(sched.isChampionBattle) {
+                if (championBattleFlag) {
+                    championBattleFlag = false;
+                    championBattleDiv.innerHTML = `<h2>${jData.locale.schedule.champion_stadium}</h2>`;
+                }
+                printChampionBattle(sched, championBattleDiv);
+            }
 
-                case "event":
-                    if (eventFlag) {
-                        eventFlag = false;
-                        titleText += `<h2>${jData.locale.schedule.events}</h2>`;
-                    }
+            if(sched.isEvent || sched.isLegendaryBattle || sched.isHomeAppeal || sched.isCyclicRanking) {
+                if (eventFlag) {
+                    eventFlag = false;
+                    eventDiv.innerHTML = `<h2>${jData.locale.schedule.events}</h2>`;
+                }
 
-                    if (sched.isLegendaryBattle) {
-                        printLegBat(sched, titleText);
-                        break;
-                    }
+                console.log(sched.scheduleId);
 
-                    if (sched.isHomeAppeal) {
-                        printHomeAppealEvent(sched, titleText);
-                        break;
-                    }
+                if (sched.isLegendaryBattle) {
+                    printLegBat(sched, eventDiv);
+                }
 
-                    if (sched.isCyclicRanking) {
-                        if (sched.originalSD) {
-                            printCyclicRanking(sched, titleText);
-                        }
-                        break;
-                    }
+                else if (sched.isHomeAppeal) {
+                    printHomeAppealEvent(sched, eventDiv);
+                }
 
-                    printEvents(sched, titleText);
-                    break;
+                else if (sched.isCyclicRanking && sched.originalSD) {
+                    printCyclicRanking(sched, eventDiv);
+                }
 
-                case "shop":
-                    if (shopFlag) {
-                        shopFlag = false;
-                        titleText += `<h2>${jData.locale.schedule.gem_specials}</h2>`;
-                    }
-                    printShopOffers(sched, titleText);
-                    break;
+                else {
+                    printEvents(sched, eventDiv);
+                }
+            }
 
-                case "salon":
-                    if (salonFlag) {
-                        salonFlag = false;
-                        titleText += `<h2>${jData.locale.schedule.trainer_lodge}</h2>\n<img src="${salonBannerPath}" class="bannerImg" />`;
-                    }
-                    printSalonGuest(sched.scheduleId, titleText);
-                    break;
+            if(sched.isShop && jData.proto.shopPurchasableItem.filter(spi => spi.scheduleId === sched.scheduleId && spi.refreshInterval !== "Monthly").length > 0) {
+                if (shopFlag) {
+                    shopFlag = false;
+                    shopDiv.innerHTML = `<h2>${jData.locale.schedule.gem_specials}</h2>`;
+                }
+                printShopOffers(sched, shopDiv);
+            }
 
-                case "chara":
-                    if (charaFlag) {
-                        charaFlag = false;
-                        titleText += `<h2>${jData.locale.schedule.pair_addition_update}</h2>`;
-                    }
-                    printPairChanges(sched, titleText);
-                    break;
+            if(sched.isSalon) {
+                if (salonFlag) {
+                    salonFlag = false;
+                    salonDiv.innerHTML = `<h2>${jData.locale.schedule.trainer_lodge}</h2>\n<img src="${salonBannerPath}" class="bannerImg" />`;
+                }
+                printSalonGuest(sched.scheduleId, salonDiv);
+            }
 
-                case "mission":
-                    if (missionFlag) {
-                        missionFlag = false;
-                        titleText += `<h2>${jData.locale.schedule.mission}</h2>`;
-                    }
-                    printNewMissions(sched, titleText);
-                    break;
+            if(sched.isChara) {
+                if (charaFlag) {
+                    charaFlag = false;
+                    charaDiv.innerHTML = `<h2>${jData.locale.schedule.pair_addition_update}</h2>`;
+                }
+                printPairChanges(sched, charaDiv);
+            }
 
-                case "music":
-                    if (musicFlag) {
-                        musicFlag = false;
-                        titleText += `<h2>${jData.locale.schedule.jukebox}</h2>`;
-                    }
-                    printNewMusics(sched.scheduleId, titleText);
-                    break;
+            if(sched.isMission) {
+                if (missionFlag) {
+                    missionFlag = false;
+                    missionDiv.innerHTML = `<h2>${jData.locale.schedule.mission}</h2>`;
+                }
+                printNewMissions(sched, missionDiv);
+            }
 
-                case "loginBonus":
-                    if (loginBonusFlag) {
-                        loginBonusFlag = false;
-                        titleText += `<h2>${jData.locale.schedule.login_bonus}</h2>`;
-                    }
-                    printLoginBonus(sched, titleText);
-                    break;
+            if(sched.isMusic) {
+                if (musicFlag) {
+                    musicFlag = false;
+                    musicDiv.innerHTML = `<h2>${jData.locale.schedule.jukebox}</h2>`;
+                }
+                printNewMusics(sched.scheduleId, musicDiv);
+            }
+
+            if(sched.isLoginBonus) {
+                if (loginBonusFlag) {
+                    loginBonusFlag = false;
+                    loginBonusDiv.innerHTML = `<h2>${jData.locale.schedule.login_bonus}</h2>`;
+                }
+                printLoginBonus(sched, loginBonusDiv);
+            }
+        }
+
+        if(scoutQty > 0)
+            dayDiv.appendChild(scoutDiv);
+        if(cbQty > 0)
+            dayDiv.appendChild(championBattleDiv);
+        if(eventQty > 0)
+            dayDiv.appendChild(eventDiv);
+        if(shopQty > 0)
+            dayDiv.appendChild(shopDiv);
+        if(salonQty > 0)
+            dayDiv.appendChild(salonDiv);
+        if(charaQty > 0)
+            dayDiv.appendChild(charaDiv);
+        if(missionQty > 0)
+            dayDiv.appendChild(missionDiv);
+        if(musicQty > 0)
+            dayDiv.appendChild(musicDiv);
+        if(loginBonusQty > 0)
+            dayDiv.appendChild(loginBonusDiv);
+
+        if(scoutQty + cbQty + eventQty + shopQty + salonQty + charaQty + missionQty + musicQty + loginBonusQty > 0) {
+            scheduleDiv.appendChild(dayDiv);
+
+            let date = new Date(timestamp*1000);
+            let today = new Date();
+            let YMDDate = getYMDDate(date);
+
+            let calDay = document.getElementById(`calDay${YMDDate}`);
+
+            let link = document.createElement("a");
+            link.href = `#${YMDDate}`;
+            link.innerHTML = `<b>${date.getDate().toString()}</b>`;
+
+            calDay.innerHTML = "";
+            calDay.classList.add("calClick");
+            calDay.onclick = () => link.click();
+            calDay.appendChild(link);
+
+            if(nextContentBtn.getAttribute("href") === "#" && today < date) {
+                nextContentBtn.href = `#${YMDDate}`;
+                nextContentBtn.style.display = "inline-flex";
             }
         }
     }
