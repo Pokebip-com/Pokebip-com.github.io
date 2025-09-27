@@ -56,6 +56,8 @@ async function getData() {
     jsonCache.preloadProto("LegendQuestGroup");
     jsonCache.preloadProto("LegendQuestGroupSchedule");
     jsonCache.preloadProto("LoginBonus");
+    jsonCache.preloadProto("LoginBonusMonthlyElement");
+    jsonCache.preloadProto("LoginBonusMonthlyReward");
     jsonCache.preloadProto("LoginBonusReward");
     jsonCache.preloadProto("MissionGroup");
     jsonCache.preloadProto("Monster");
@@ -794,6 +796,8 @@ function printEventBanner(eventBanner, lastSchedule, printDiv) {
     //     eventBanner.text2Id = eventBanner.text2Id > -1 ? eventBanner.text2Id : 27605020;
     // }
 
+
+
     let h3 = `<h3>${jData.lsd.bannerText[eventBanner.text1Id]}`;
 
     if(eventBanner.text2Id > -1) {
@@ -803,6 +807,7 @@ function printEventBanner(eventBanner, lastSchedule, printDiv) {
     h3 += "</h3>";
 
     printDiv.innerHTML += h3;
+
 
     if(eventBanner.bannerIdString !== "") {
         printDiv.innerHTML += `<img src="./data/banner/event/${eventBanner.bannerIdString}.png" onerror="this.src = './data/banner/scout/${eventBanner.bannerIdString}.png';" class="bannerImg" />\n`;
@@ -1032,7 +1037,11 @@ function printNewMusics(scheduleId, printDiv) {
     musicQty++;
 }
 
+const toDate = (timestamp) => new Date(timestamp * 1000);
+const isLeapYear = (year) => (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
+
 function printLoginBonus(loginBonus, printDiv) {
+
 
     if (loginBonus.bannerId > -1) {
         let lbBanner = jData.proto.banner.filter(b => b.bannerId === loginBonus.bannerId);
@@ -1087,13 +1096,38 @@ function printLoginBonus(loginBonus, printDiv) {
                 entryStr += "</h3>\n";
                 entryStr += `${jData.locale.schedule.pmd_login_bonus_descr}\n`;
                 break;
+
+            // Bonus mensuel
+            case 7:
+                entryStr += jData.lsd.loginBonusName[loginBonus.loginBonusNameId] || jData.locale.schedule.unknown_bonus;
+                entryStr += "</h3>\n";
+                entryStr += `${jData.locale.schedule.unknown_bonus}\n`;
+                break;
         }
 
         printDiv.innerHTML += entryStr;
         printEndDate(loginBonus.endDate, printDiv);
     }
 
-    const rewards = jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === loginBonus.rewardId).sort((a, b) => a.day - b.day);
+    let rewards;
+
+    if(loginBonus.type === 7) {
+        let date = toDate(loginBonus.startDate);
+        let month = date.getUTCMonth();
+
+        let rewardId;
+        if(month.toString() === jData.proto.loginBonusMonthlyElement[0].leapYearIdx && isLeapYear(date.getUTCFullYear())) {
+            rewardId = jData.proto.loginBonusMonthlyElement[0].leapYearMonthlyRewardId;
+        }
+        else {
+            rewardId = jData.proto.loginBonusMonthlyElement[0].monthlyRewardId[month];
+        }
+
+        rewards = jData.proto.loginBonusMonthlyReward.filter(lbmr => lbmr.rewardId === rewardId).sort((a, b) => a.day - b.day);
+    }
+    else {
+        rewards = jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === loginBonus.rewardId).sort((a, b) => a.day - b.day);
+    }
 
     if(rewards.length === 0) return;
 
@@ -1292,8 +1326,6 @@ function setVersionInfos(id) {
                     eventFlag = false;
                     eventDiv.innerHTML = `<h2>${jData.locale.schedule.events}</h2>`;
                 }
-
-                console.log(sched.scheduleId);
 
                 if (sched.isLegendaryBattle) {
                     printLegBat(sched, eventDiv);
