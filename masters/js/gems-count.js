@@ -18,8 +18,12 @@ const CBEText2Id = 27503027;
 
 const gemsItemId = "410000000001";
 
-let firstLoginBonusSchedule = "FOREVER_LOGINBONUS_END";
-let secondLoginBonusSchedule = "FOREVER_LOGINBONUS_2";
+let firstLoginBonusEndSchedule = "FOREVER_LOGINBONUS_END";         // 1er changement des bonus (retrait powerups inutiles)
+let secondLoginBonusEndSchedule = "FOREVER_LOGINBONUS_2";          // Second changement des bonus (boost diamants)
+let thirdLoginBonusEndSchedule = "FOREVER_LOGINBONUS_END_7060";    // Retrait des Talent up
+let fourthLoginBonusEndSchedule = "FOREVER_LOGINBONUS_END_7090";   // Fin des login bonus normaux (début des monthly)
+
+let monthlyLoginBonusStartSchedule = "FOREVER_MONTHLYLOGINBONUS_START_7090";
 
 let customPeriodSchedule = {};
 let lastScheduleStartDate;
@@ -46,6 +50,8 @@ async function getData() {
     jsonCache.preloadProto("LegendQuestGroup");
     jsonCache.preloadProto("LegendQuestGroupSchedule");
     jsonCache.preloadProto("LoginBonus");
+    jsonCache.preloadProto("LoginBonusMonthlyElement");
+    jsonCache.preloadProto("LoginBonusMonthlyReward");
     jsonCache.preloadProto("LoginBonusReward");
     jsonCache.preloadProto("Mission");
     jsonCache.preloadProto("MissionGroup");
@@ -103,8 +109,12 @@ async function getData() {
     jData.proto.legendQuestGroupSchedule = getBySpecificID(jData.proto.legendQuestGroupSchedule, "scheduleId");
 
     // Regular login bonuses shifts
-    firstLoginBonusSchedule = jData.proto.schedule.find(s => s.scheduleId === "FOREVER_LOGINBONUS_END");
-    secondLoginBonusSchedule = jData.proto.schedule.find(s => s.scheduleId === "FOREVER_LOGINBONUS_2");
+    firstLoginBonusEndSchedule = jData.proto.schedule.find(s => s.scheduleId === firstLoginBonusEndSchedule);
+    secondLoginBonusEndSchedule = jData.proto.schedule.find(s => s.scheduleId === secondLoginBonusEndSchedule);
+    thirdLoginBonusEndSchedule = jData.proto.schedule.find(s => s.scheduleId === thirdLoginBonusEndSchedule);
+    fourthLoginBonusEndSchedule = jData.proto.schedule.find(s => s.scheduleId === fourthLoginBonusEndSchedule);
+
+    monthlyLoginBonusStartSchedule = jData.proto.schedule.find(s => s.scheduleId === monthlyLoginBonusStartSchedule);
 
     orderByVersion(jData.custom.versionReleaseDates);
 
@@ -344,14 +354,14 @@ function getRegularBonusDay(day, regularBonusStartDay) {
     return day - (regularBonusStartDay - 1);
 }
 
-function getLoginBonus(version, endDate) {
-    const start = version.releaseTimestamp + 3600;
-    const regularBonusStartDay = new Date(firstLoginBonusSchedule.startDate*1000).getUTCDay();
+function getRegularLoginBonus(start, endDate) {
+    const regularBonusStartDay = new Date(firstLoginBonusEndSchedule.startDate*1000).getUTCDay();
     const firstDayToCount = getRegularBonusDay(new Date((start-(6*3600))*1000).getUTCDay(), regularBonusStartDay);
 
     const bonusRewards = [
         jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === "release_normal_loginbonus_1").sort((a, b) => a.day - b.day),
-        jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === "release_normal_loginbonus_2").sort((a, b) => a.day - b.day)
+        jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === "release_normal_loginbonus_2").sort((a, b) => a.day - b.day),
+        jData.proto.loginBonusReward.filter(lbr => lbr.rewardId === "release_normal_loginbonus_3").sort((a, b) => a.day - b.day)
     ];
 
     let regularLoginBonus = {
@@ -363,16 +373,85 @@ function getLoginBonus(version, endDate) {
             "endDate": endDate
         }
     };
-    let bonusRewardIdx = (start >= secondLoginBonusSchedule.startDate ? 1 : 0);
+
+    let bonusRewardIdx = (start >= secondLoginBonusEndSchedule.startDate ? (start >= thirdLoginBonusEndSchedule.startDate ? 2 : 1) : 0);
 
     for(let i = start, currentDay = firstDayToCount; i < endDate; i += 86400, currentDay++) {
         if(currentDay === 8) {
             currentDay = 1;
-            bonusRewardIdx = (i >= secondLoginBonusSchedule.startDate ? 1 : 0);
+
+            bonusRewardIdx = (i >= secondLoginBonusEndSchedule.startDate ? (i >= thirdLoginBonusEndSchedule.startDate ? 2 : 1) : 0);
         }
+
+        if(currentDay === 1 && i >= fourthLoginBonusEndSchedule.endDate)
+            break;
 
         regularLoginBonus.gemCount += getGemsCountFromItemSet(bonusRewards[bonusRewardIdx][currentDay-1].itemSetId);
     }
+
+    return regularLoginBonus;
+}
+
+const toDate = (timestamp) => new Date(timestamp * 1000);
+const isLeapYear = (year) => (year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0);
+
+function getMonthlyLoginBonus(startDate, endDate) {
+
+    const loginBonus = jData.proto.loginBonus.filter(lb => lb.type === 7 && lb.startDate < endDate && lb.endDate > startDate);
+    let monthlyLoginBonusData = [];
+
+    loginBonus.forEach(lb => {
+        let date = toDate(lb.startDate);
+        let month = date.getUTCMonth();
+
+        let rewardId;
+
+        if(month.toString() === jData.proto.loginBonusMonthlyElement[0].leapYearIdx && isLeapYear(date.getUTCFullYear())) {
+            rewardId = jData.proto.loginBonusMonthlyElement[0].leapYearMonthlyRewardId;
+        }
+        else {
+            rewardId = jData.proto.loginBonusMonthlyElement[0].monthlyRewardId[month];
+        }
+
+        let rewards = jData.proto.loginBonusMonthlyReward.filter(lbmr => lbmr.rewardId === rewardId).sort((a, b) => a.day - b.day);
+
+        let lbStartDateTS = parseInt(lb.startDate);
+
+        while(lbStartDateTS < startDate) {
+            lbStartDateTS += 86400;
+        }
+
+        let lbStartDate = toDate(lbStartDateTS);
+        let lbEndDateTS = lbStartDateTS;
+
+        const end = parseInt(lb.endDate);
+
+        let monthlyLoginBonus = {
+            "name": (jData.lsd.loginBonusName[lb.loginBonusNameId] || "unknown").replace("\n", " "),
+            "gemCount": 0,
+            "schedule": {
+                "startDate": lbStartDateTS.toString(),
+                "endDate": lbEndDateTS.toString()
+            }
+        };
+
+        for(let currentDay = lbStartDate.getUTCDate(); lbEndDateTS < endDate && lbEndDateTS < end; currentDay++, lbEndDateTS += 86400) {
+            monthlyLoginBonus.gemCount += getGemsCountFromItemSet(rewards[currentDay-1].itemSetId);
+        }
+
+        monthlyLoginBonusData.push(monthlyLoginBonus);
+    });
+
+    return monthlyLoginBonusData;
+}
+
+function getLoginBonus(version, endDate) {
+
+    const start = version.releaseTimestamp + 3600;
+
+    let regularLoginBonus = getRegularLoginBonus(start, endDate);
+
+    let monthlyLoginBonus = getMonthlyLoginBonus(start, endDate);
 
     const specialLoginBonus = version.schedule.filter(s => s.scheduleType.name === "loginBonus" && !s.scheduleId.startsWith("release_normal_loginbonus_"))
         .map(s =>  {
@@ -385,7 +464,7 @@ function getLoginBonus(version, endDate) {
             return obj;
         });
 
-    return [regularLoginBonus].concat(specialLoginBonus).reduce((acc, cur) => {
+    return [regularLoginBonus].concat(monthlyLoginBonus).concat(specialLoginBonus).reduce((acc, cur) => {
             if(!acc.find(lb => lb.name === cur.name)) {
                 if(cur.gemCount === 0)
                     return acc;
@@ -700,6 +779,8 @@ function getEventCount(event) {
 
     return count;
 }
+
+
 
 function getLoginBonusCount(schedule) {
     let count = 0;
