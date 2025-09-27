@@ -43,6 +43,8 @@ async function getData() {
     jsonCache.preloadProto("MonsterEnhancement");
     jsonCache.preloadProto("MonsterEvolution");
     jsonCache.preloadProto("MonsterVariation");
+    jsonCache.preloadProto("PotentialItem");
+    jsonCache.preloadProto("PotentialLot");
     jsonCache.preloadProto("Schedule");
     jsonCache.preloadProto("SpecialAwakingEffect");
     jsonCache.preloadProto("TeamSkill");
@@ -62,6 +64,7 @@ async function getData() {
 
     // Locale
     jsonCache.preloadLocale("sync-pairs");
+    jsonCache.preloadLocale("lucky-skills");
 
     // Custom
     jsonCache.preloadCustom("version_release_dates");
@@ -606,6 +609,91 @@ function setPairSuperAwakening(contentDiv) {
         row.appendChild(effectCell);
         table.appendChild(row);
     }
+
+    contentDiv.appendChild(table);
+}
+
+function getCookieItemImage(cookie) {
+    return getItemImage(cookie.imageId, cookie.rarity);
+}
+
+function getCookieName(cookie) {
+    if(cookie.potentialItemName === "")
+        return jData.lsd.potentialItemName[cookie.itemId];
+
+    return jData.lsd.potentialItemName[cookie.potentialItemName].replace("[Name:TrainerNameAndType ]", getTrainerName(cookie.trainerId));
+}
+
+function setPairLuckySkills(contentDiv) {
+    let luckySkills = jData.proto.potentialItem.filter(pi => pi.trainerId === syncPairSelect.value);
+
+    if(luckySkills.length === 0)
+        return;
+
+    contentDiv.appendChild(document.createElement("br"));
+
+    let table = document.createElement("table");
+    table.classList.add("bipcode");
+    table.style.textAlign = "center";
+
+    let lsTitleRow = document.createElement("tr");
+    let lsTitleCell = document.createElement("th");
+    lsTitleCell.innerText = jData.locale.common.submenu_lucky_skills;
+    lsTitleCell.colSpan = 4;
+    lsTitleRow.appendChild(lsTitleCell);
+    table.appendChild(lsTitleRow);
+
+    let titleRow = document.createElement("tr");
+    let imageTitleCell = document.createElement("th");
+    imageTitleCell.innerText = jData.locale.luckySkills.trainer_cookies;
+    let nameTitleCell = document.createElement("th");
+    nameTitleCell.innerText = jData.locale.luckySkills.passive_name_title;
+    let descriptionTitleCell = document.createElement("th");
+    descriptionTitleCell.innerText = jData.locale.luckySkills.passive_descr_title;
+    let dropRateTitleCell = document.createElement("th");
+    dropRateTitleCell.innerText = jData.locale.luckySkills.passive_drop_rate_title;
+
+    titleRow.appendChild(imageTitleCell);
+    titleRow.appendChild(nameTitleCell);
+    titleRow.appendChild(descriptionTitleCell);
+    titleRow.appendChild(dropRateTitleCell);
+    table.appendChild(titleRow);
+
+    luckySkills.forEach(ls => {
+        let lot = jData.proto.potentialLot.filter(pl => parseInt(pl.potentialLotId) === ls.potentialLotId);
+        let lotFullRate = lot.reduce((acc, val) => acc + val.rate, 0);
+
+        let cookieTD = document.createElement("td");
+        cookieTD.appendChild(getCookieItemImage(ls));
+        cookieTD.appendChild(document.createElement("br"));
+        let bTag = document.createElement("b");
+        bTag.innerText = getCookieName(ls);
+        cookieTD.appendChild(bTag);
+
+        cookieTD.rowSpan = lot.length;
+
+        for(let i = 0; i < lot.length; i++) {
+            let row = document.createElement("tr");
+
+            if(i === 0)
+                row.appendChild(cookieTD);
+
+            let nameTD = document.createElement("td");
+            nameTD.innerHTML = getDetailedPassiveSkillName(lot[i].potentialId);
+
+            let descriptionTD = document.createElement("td");
+            descriptionTD.innerHTML = getPassiveSkillDescr(lot[i].potentialId);
+
+            let dropRateTD = document.createElement("td");
+            dropRateTD.innerText = `${Math.round(lot[i].rate / lotFullRate * 100)}%`;
+
+            row.appendChild(nameTD);
+            row.appendChild(descriptionTD);
+            row.appendChild(dropRateTD);
+
+            table.appendChild(row);
+        }
+    });
 
     contentDiv.appendChild(table);
 }
@@ -1682,6 +1770,7 @@ function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId
     setPairSuperAwakening(contentDiv);
     setPairPassives(contentDiv, variation);
     setPairTeamSkills(contentDiv);
+    setPairLuckySkills(contentDiv);
     setPairMoves(contentDiv, monsterId, variation);
 }
 
