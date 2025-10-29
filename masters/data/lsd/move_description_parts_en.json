@@ -956,5 +956,10 @@
     "998970": "Raises the Defense and Sp. Def of all allied sync pairs by [Digit:1digit Idx=\"7\" ] stat [EN:Qty Ref=\"7\" S=\"rank\" P=\"ranks\" ].",
     "998968": "Increases the user’s [Name:ReferencedMessageTag ] by 10 ranks when its [Name:ReferencedMessageTag ] is increased.",
     "998967": "Increases the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by 10 ranks when its [Name:ReferencedMessageTag Idx=\"1\" ] is increased.",
+    "998966": "If the move was a physical attack move, leaves the opponent that used it poisoned.",
+    "998965": "If the user’s Pidgeot has Mega Evolved, also doubles this attack’s power.",
+    "998964": "When the user’s team does not have a sync buff, also reduces the user’s sync move countdown by [Digit:1digit Idx=\"1\" ].",
+    "998963": "If the user’s Pidgeot has Mega Evolved, also restores [Digit:1digit Idx=\"2\" ] MP of its [Name:MoveId Idx=\"6159\" ].",
+    "998962": "Become Mega Pidgeot until the end of battle.",
     "998961": "When this move is used or when attacking with this move."
 }

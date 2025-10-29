@@ -310,10 +310,10 @@
     "override_detail_7040_1_02": "Schließe dreimal das Spezialevent für\nalle Typen „Super-Sparring: Bis an\ndie Spitze“ im Modus „Allein spielen“\nab. Hinweis: Du kannst das Event\nüber den Reiter „Empfohlen“ spielen.",
     "234": "Bringe die folgenden Gefährten\nauf 6★ EX:",
     "234_element": "• [Name:TrainerNameAndType ] &\n[Name:PokemonName ]",
-    "235": "Erlange das folgende Item\n[Digit:6digits ] Mal:",
+    "235": "Erlange die folgenden Items\n[Digit:6digits ] Mal:",
     "235_element": "• [Name:Item ]",
     "236": "Erreiche eine Punktzahl von\nmindestens [Digit:6digits ] [DE:Qty S=\"Punkt\" P=\"Punkten\" ] im\nElitemodus des Champkampfs.",
-    "237": "Setze das folgende Item insgesamt\n[Digit:6digits ] Mal ein:",
+    "237": "Setze die folgenden Items insgesamt\n[Digit:6digits ] Mal ein:",
     "237_element": "• [Name:Item ]",
     "238": "Nimm den Kampfpunktebonus für das\nErzielen von [Digit:6digits ] [DE:Qty S=\"Kampfpunkt\" P=\"Kampfpunkten\" ] an.",
     "239": "",
@@ -353,7 +353,7 @@
     "override_detail_7080_1_06": "Bilde ein Team mit Professor Platan & Xerneas und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir Professor Platan & Xerneas durch den Abschluss des Legenden-Abenteuers „Geben und Nehmen“ der Hauptgeschichte in dein Team holen.",
     "override_detail_7080_1_07": "Bilde ein Team mit Protagonist & Solgaleo und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir Protagonist & Solgaleo durch den Abschluss des Legenden-Abenteuers „Der Sonnenverschlinger“ der Hauptgeschichte in dein Team holen.",
     "override_detail_7080_1_08": "Bilde ein Team mit Hop & Zamazenta und schließe „Vs. Lebende Legenden“ einmal ab.\nHinweis: Du kannst dir Hop & Zamazenta durch den Abschluss des Legenden-Abenteuers „Wackerer Schild der Ewigkeit“ der Hauptgeschichte in dein Team holen.",
-    "249": "Besiege [Digit:6digits ] [DE:Qty S=\"Mitglied\" P=\"Mitglieder\" ] der\nTop Vier im Champkampf auf dem\nSchwierigkeitsgrad Schwer Lv.1.\n(Fortschritt wird wöchentlich\nzurückgesetzt.)",
+    "249": "Besiege im Champkampf auf dem\nSchwierigkeitsgrad Schwer Lv.1 [Digit:6digits ]\nTop Vier-[DE:Qty S=\"Mitglied\" P=\"Mitglieder\" ]. (Der Fortschritt\nnicht abgeschlossener Missionen wird\nwöchentlich zurückgesetzt.)",
     "override_detail_7090_1_01": "Interessierst du dich für Fotografie?\nNa, wenn das so ist, dann kannst du\nmir bei ein paar Aufnahmen zur Hand\ngehen!\n\nBegib dich zuerst ins Fotostudio und\nversuche, einen Augenblick für die\nNachwelt festzuhalten!\n\nHinweis: Wähle das Fotostudio im\nPoryfon-Menü aus, um Fotos zu\nmachen.",
     "override_detail_7090_1_02": "Da bist du ja, Partner! Du hast ja\neinige richtig tolle Schnappschüsse\neingefangen! Dann kann ich dir nun\nein paar echte Aufträge anvertrauen!\n\nZuallererst möchte ich, dass du mir\nein Foto von einem Naturliebhaber\nbringst!\n\nNa, fallen dir ein paar Gefährten ein,\nauf die diese Beschreibung zutrifft?",
     "override_detail_7090_1_03": "Als Nächstes möchte ich, dass du ein\nGefährtengespann vom Typ Boden\nfotografierst!\n\nHalte Ausschau nach Trainern, die sich\nmit Boden-Pokémon wie Ursaluna\nzusammengetan haben, und knips ein\nFoto von ihnen!",
@@ -363,5 +363,6 @@
     "override_detail_7090_1_07": "Als Nächstes möchte ich, dass du ein\nFoto für einen Artikel über Sinnoh\naufnimmst!\n\nBring mir ein Bild, auf dem drei\nGefährtengespanne aus Sinnoh zu\nsehen sind!\n\nWusstest du eigentlich, dass Sinnoh\neinst als Hisui-Region bekannt war?",
     "override_detail_7090_1_08": "Fotografiere als Nächstes bitte ein\nGefährtengespann vom Typ Gestein!\n\nIch liebe einfach, wie kraftvoll und\nwild Gesteins-Pokémon sind!\n\nMein Partner Fukano ist auch ein\nGesteins-Pokémon. Schau dir nur mal\ndas süße Horn auf seinem Kopf an!",
     "override_detail_7090_1_09": "Für deinen nächsten Auftrag möchte\nich, dass du einen Ausdruckskünstler,\nalso jemanden wie dich, mit deiner\nKamera fotografierst!\n\nEs muss nicht zwingend ein Fotograf\nsein... Ein Gesangstalent oder ein\nMaler wären genauso gut!\n\nWie? Du möchtest mich ablichten?\nDas geht natürlich auch, aber ich bin\nes nicht wirklich gewohnt, vor der\nKamera zu stehen!",
-    "override_detail_7090_1_10": "Dies ist dein letzter Auftrag... und\ndiesmal stammt er nicht von mir,\nsondern von Passios Presse-Abteilung\nhöchstpersönlich!\n\nSie wollen einen Artikel über all die\nerfolgreichen Frauen verfassen, die\nauf Passio unterwegs sind!\n\nIch denke, eine Aufnahme von zwei\nGefährtengespannen mit jeweils einer\n„Dame“ wäre dafür genau richtig!"
+    "override_detail_7090_1_10": "Dies ist dein letzter Auftrag... und\ndiesmal stammt er nicht von mir,\nsondern von Passios Presse-Abteilung\nhöchstpersönlich!\n\nSie wollen einen Artikel über all die\nerfolgreichen Frauen verfassen, die\nauf Passio unterwegs sind!\n\nIch denke, eine Aufnahme von zwei\nGefährtengespannen mit jeweils einer\n„Dame“ wäre dafür genau richtig!",
+    "override_detail_7100_1_01": "Schließe Ebene 30 der Kampfvilla ab."
 }

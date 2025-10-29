@@ -234,5 +234,11 @@
     "event_7090_3W_MasterTicket_02": "타로 시즌 한정 확정 B서치",
     "event_7090_3W_SuperTicket_04": "시즌 한정 출현율업 B서치",
     "event_7090_4W_MasterTicket_03": "버라이어티 확정 B서치",
-    "event_7090_4W_SuperTicket_08": "마스터페스티벌 한정 출현율업 B서치"
+    "event_7090_4W_SuperTicket_08": "마스터페스티벌 한정 출현율업 B서치",
+    "event_7100_3W_SuperTicket_03": "규리 스페셜 코스튬 출현율업 B서치",
+    "event_7100_3W_MasterTicket_04": "규리 스페셜 코스튬 확정 B서치",
+    "event_7100_3W_SuperTicket_08": "순무 스페셜 코스튬 출현율업 B서치",
+    "event_7100_3W_MasterTicket_09": "순무 스페셜 코스튬 확정 B서치",
+    "event_7100_4W_SuperTicket_07": "마스터페스티벌 한정 출현율업 B서치",
+    "event_7100_5W_SuperTicket_05": "마스터페스티벌 한정 출현율업 B서치"
 }

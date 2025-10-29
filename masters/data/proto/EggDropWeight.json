@@ -397,6 +397,7 @@
 { "eggDropId": 47030103, "itemId": "850070300003", "rate": 67 },
 { "eggDropId": 47030104, "itemId": "850070300003", "rate": 100 },
 { "eggDropId": 47030105, "itemId": "850070300003", "rate": 100 },
+{ "eggDropId": 47100101, "itemId": "850051000001", "rate": 100 },
 { "eggDropId": 50101001, "itemId": "850000000003", "rate": 100 },
 { "eggDropId": 50101002, "itemId": "850000000012", "rate": 100 },
 { "eggDropId": 50101003, "itemId": "850000000022", "rate": 100 },

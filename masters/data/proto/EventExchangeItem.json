@@ -685,5 +685,10 @@
 { "itemId": "750000000748", "descriptionId": 600000, "imageId": "i075_0003_00", "u4": 0, "storyQuestId": "611180", "trainerId": "-1", "scheduleId": "7090_4W_Event_1_Exchange", "itemNameOverride": "750000000609" },
 { "itemId": "750000000749", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611190", "trainerId": "-1", "scheduleId": "7090_4W_Event_2_Exchange", "itemNameOverride": "750000000181" },
 { "itemId": "750000000750", "descriptionId": 600054, "imageId": "i220_0000_00", "u4": 0, "storyQuestId": "611046", "trainerId": "-1", "scheduleId": "7070_2W_Event_1_Exchange", "itemNameOverride": "-1" },
-{ "itemId": "750000000751", "descriptionId": 600054, "imageId": "i220_0000_00", "u4": 0, "storyQuestId": "611100", "trainerId": "-1", "scheduleId": "7080_4W_Event_1_Exchange", "itemNameOverride": "750000000750" }
+{ "itemId": "750000000751", "descriptionId": 600054, "imageId": "i220_0000_00", "u4": 0, "storyQuestId": "611100", "trainerId": "-1", "scheduleId": "7080_4W_Event_1_Exchange", "itemNameOverride": "750000000750" },
+{ "itemId": "750000000753", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611210", "trainerId": "-1", "scheduleId": "7100_1W_Event_1", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000754", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611212", "trainerId": "-1", "scheduleId": "7100_2W_Event_1", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000755", "descriptionId": 600000, "imageId": "i075_0015_00", "u4": 0, "storyQuestId": "611213", "trainerId": "-1", "scheduleId": "7100_2W_Event_2_Exchange", "itemNameOverride": "750000000134" },
+{ "itemId": "750000000756", "descriptionId": 600000, "imageId": "i075_0061_01", "u4": 0, "storyQuestId": "611217", "trainerId": "-1", "scheduleId": "7100_4W_Event_1_Exchange", "itemNameOverride": "-1" },
+{ "itemId": "750000000757", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611219", "trainerId": "-1", "scheduleId": "7100_5W_Event_1_Exchange", "itemNameOverride": "750000000181" }
 ]}

@@ -956,5 +956,10 @@
     "998970": "Erhöht die Verteidigung und die Spezial-Verteidigung aller verbündeten Gefährten um [Digit:1digit Idx=\"7\" ].",
     "998968": "Erhöht den [Name:ReferencedMessageTag ] des Anwenders um 10, wenn sein [Name:ReferencedMessageTag ] erhöht ist.",
     "998967": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] des Anwenders um 10, wenn sein [Name:ReferencedMessageTag Idx=\"1\" ] erhöht ist.",
+    "998966": "Wenn der Anwender mit einer physischen Attacke angegriffen wurde, wird der Gegner, der sie eingesetzt hat, vergiftet.",
+    "998965": "Wenn das Tauboss des Anwenders die Mega-Entwicklung erreicht hat, wird auch die Stärke dieses Angriffs verdoppelt.",
+    "998964": "Wenn die Spannung des Anwenders nicht gesteigert ist, wird zusätzlich der Wert des Gefährtenattacken-\nCountdowns des Anwenders um [Digit:1digit Idx=\"1\" ] reduziert.",
+    "998963": "Wenn das Tauboss des Anwenders die Mega-Entwicklung erreicht hat, werden auch die Attackeneinsatzpunkte (AEP) seiner Attacke [Name:MoveId Idx=\"6159\" ] um [Digit:1digit Idx=\"2\" ] [DE:Qty Ref=\"2\" S=\"Attackeneinsatzpunkt\" P=\"Attackeneinsatzpunkte\" ] (AEP) aufgefüllt.",
+    "998962": "Löst bei Tauboss bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Tauboss aus.",
     "998961": "Wenn diese Attacke eingesetzt wird oder wenn mit dieser Attacke angegriffen wird."
 }

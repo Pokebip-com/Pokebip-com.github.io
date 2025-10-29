@@ -310,10 +310,10 @@
     "override_detail_7040_1_02": "Completa tre lotte in modalità singola\nnell'evento speciale per tutti i tipi\ndi danno \"Supercompetizione -\nPuntiamo alla vetta!\"\n\nPuoi completare l'evento nella\nsezione \"Consigliate\".",
     "234": "Porta la seguente Unità a 6★ EX:",
     "234_element": "• [Name:TrainerNameAndType ] &\n[Name:PokemonName ].",
-    "235": "Ottieni il seguente strumento\nun totale di [Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ]:",
-    "235_element": "• [Name:Item ].",
+    "235": "Ottieni [Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ]:",
+    "235_element": "• [Name:Item ]",
     "236": "Ottieni almeno [Digit:6digits ] punti\nnella Lotta dei Campioni\nin modalità élite.\n",
-    "237": "Usa il seguente strumento\nun totale di [Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ]:",
+    "237": "Usa i seguenti strumenti\nun totale di [Digit:6digits ] volt[IT:Qty S=\"a\" P=\"e\" ]:",
     "237_element": "• [Name:Item ].",
     "238": "Ricevi la ricompensa per aver\naccumulato [Digit:6digits ] Punt[IT:Qty S=\"o\" P=\"i\" ] Lotta.",
     "239": "",
@@ -353,7 +353,7 @@
     "override_detail_7080_1_06": "Completa una volta \"VS leggende\nviventi\" con Platan & Xerneas\nin squadra.\n\nPuoi fare squadra con Platan\n& Xerneas completando il capitolo\n\"Chi dà e chi prende\" della storia\n\"I Pokémon leggendari\".",
     "override_detail_7080_1_07": "Completa una volta \"VS leggende\nviventi\" con Protagonista & Solgaleo\nin squadra.\n\nPuoi fare squadra con Protagonista\n& Solgaleo completando il capitolo\n\"La creatura eliofaga\" della storia\n\"I Pokémon leggendari\".",
     "override_detail_7080_1_08": "Completa una volta \"VS leggende\nviventi\" con Hop & Zamazenta\nin squadra.\n\nPuoi fare squadra con Hop\n& Zamazenta completando il capitolo\n\"Lo scudo che ulula all'eternità\"\ndella storia \"I Pokémon leggendari\".",
-    "249": "Sconfiggi [Digit:6digits ] Superquattro\nnella Lotta dei Campioni in difficoltà\n\"Difficile L. 1\".\nIl progresso delle missioni si ripristina\nogni settimana.",
+    "249": "Sconfiggi [Digit:6digits ] Superquattro\nnella Lotta dei Campioni in difficoltà\n\"Difficile L. 1\".\nIl progresso delle missioni incomplete\nsi ripristina ogni settimana.",
     "override_detail_7090_1_01": "La fotografia ti appassiona? Allora\npuoi farmi da assistente e aiutarmi\na scattare qualche foto!\n\nPer prima cosa, prova a immortalare\nqualche istante con la modalità foto!\n\nNota: per scattare delle foto,\nvai su Modalità foto nel menu\ndel Porygofono.",
     "override_detail_7090_1_02": "Ciao, assistente! Hai immortalato\ndegli ottimi profili, non c'è che dire!\nMa ora iniziamo con le mansioni vere!\n\nPer prima cosa, vorrei che scattassi\nuna foto a un amante della natura!\n\nTi vengono in mente delle Unità che\nrispecchiano il tema?",
     "override_detail_7090_1_03": "La tua prossima mansione sarà\nfotografare un'Unità di tipo Terra!\n\nTrova una persona che ha fatto\nsquadra con un Pokémon di tipo\nTerra, come Ursaluna, quindi scatta\nuna foto all'Unità!",
@@ -363,5 +363,6 @@
     "override_detail_7090_1_07": "La tua prossima mansione sarà\nscattare una foto che verrà pubblicata\nsu un pezzo speciale su Sinnoh!\n\nPer questo motivo, vorrei che scattassi\nuna foto con ben tre Unità di Sinnoh!\n\nA proposito, lo sapevi che un tempo\nla regione di Sinnoh era conosciuta\ncon il nome Hisui?",
     "override_detail_7090_1_08": "La tua prossima mansione sarà\nfotografare un'Unità di tipo Roccia!\n\nMi piace proprio l'aspetto robusto\ndei Pokémon di questo tipo!\n\nAnche il mio fido Growlithe è\nun Pokémon di tipo Roccia.\nNon è adorabile quel piccolo corno\nche ha sulla testa?",
     "override_detail_7090_1_09": "La tua prossima mansione sarà\nfotografare un talento creativo,\novvero qualcuno con una vena\nartistica, un po' come quando tu hai\nin mano una macchina fotografica!\n\nPerò non devono per forza essere\ndei fotografi, può anche trattarsi\ndi cantanti o di pittori!\n\n... Eh? Vuoi scattare una foto a me?\n\nV-Va bene... Ma non sono abituata\na essere io il soggetto delle foto,\nquindi non ti prometto niente!",
-    "override_detail_7090_1_10": "E infine, una richiesta che viene\ndirettamente dal dipartimento\npromozionale di Pasio!\n\nVogliono pubblicare un pezzo\nsulle donne che stanno brillando\nparticolarmente qui a Pasio!\n\nCredo che potrebbe bastare scattare\nuna foto che veda come protagoniste\ndue Unità appartenenti al gruppo\n\"Donne decise\"!"
+    "override_detail_7090_1_10": "E infine, una richiesta che viene\ndirettamente dal dipartimento\npromozionale di Pasio!\n\nVogliono pubblicare un pezzo\nsulle donne che stanno brillando\nparticolarmente qui a Pasio!\n\nCredo che potrebbe bastare scattare\nuna foto che veda come protagoniste\ndue Unità appartenenti al gruppo\n\"Donne decise\"!",
+    "override_detail_7100_1_01": "Completa la sala 30\ndella Residenza Lotta."
 }

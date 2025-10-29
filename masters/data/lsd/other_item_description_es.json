@@ -49,5 +49,6 @@
     "75600007": "Sirve para aplicar una mejora especial\n[ES:Gen Ref=\"255\" M=\"al\" F=\"a la\" ] protagonista y Solgaleo.",
     "75600008": "Sirve para aplicar una mejora especial a\nPaul y Zamazenta.",
     "660000000010": "Sirve para desbloquear una Torre\nde Passio.",
-    "660000000011": "Sirve para desbloquear un episodio de\npremio de las Torres."
+    "660000000011": "Sirve para desbloquear un episodio de\npremio de las Torres.",
+    "23001": "Sirve para restablecer puntos de aguante.\nAviso: Si este objeto caduca, se canjeará\nautomáticamente y no podrás utilizarlo."
 }

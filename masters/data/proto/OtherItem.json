@@ -9,6 +9,7 @@
 { "otherItemNameId": "80000000101", "otherItemDescriptionId": 811, "imageId": "i088_0001_05", "rarity": 0, "trainerId": "-1" },
 { "otherItemNameId": "90000000001", "otherItemDescriptionId": 901, "imageId": "i075_0200_00", "rarity": 0, "trainerId": "-1" },
 { "otherItemNameId": "100000000001", "otherItemDescriptionId": 1001, "imageId": "i075_3000_01", "rarity": 0, "trainerId": "-1" },
+{ "otherItemNameId": "230000000001", "otherItemDescriptionId": 23001, "imageId": "i220_0000_00", "rarity": 0, "trainerId": "-1" },
 { "otherItemNameId": "410000000001", "otherItemDescriptionId": 4100, "imageId": "i041_0001_00", "rarity": 0, "trainerId": "-1" },
 { "otherItemNameId": "450000000050", "otherItemDescriptionId": 4501, "imageId": "i045_0011_00", "rarity": 0, "trainerId": "-1" },
 { "otherItemNameId": "450000000051", "otherItemDescriptionId": 4502, "imageId": "i045_0012_00", "rarity": 0, "trainerId": "-1" },

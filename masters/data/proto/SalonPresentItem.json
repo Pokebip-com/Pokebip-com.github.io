@@ -134,6 +134,9 @@
 { "salonPresentItemId": 131090610, "salonGuestId": 45, "u3": 1, "imageId": "i131_0045_00", "u5": 3, "itemFrameId": 1, "u7": [ 105, 106, 107 ] },
 { "salonPresentItemId": 131090620, "salonGuestId": 45, "u3": 1, "imageId": "i131_0045_01", "u5": 2, "itemFrameId": 2, "u7": [ 103, 104, 107 ] },
 { "salonPresentItemId": 131090630, "salonGuestId": 45, "u3": 1, "imageId": "i131_0045_02", "u5": 1, "itemFrameId": 3, "u7": [ 101, 102, 107 ] },
+{ "salonPresentItemId": 131090710, "salonGuestId": 47, "u3": 1, "imageId": "i131_0047_00", "u5": 3, "itemFrameId": 1, "u7": [ 105, 106, 107 ] },
+{ "salonPresentItemId": 131090720, "salonGuestId": 47, "u3": 1, "imageId": "i131_0047_01", "u5": 2, "itemFrameId": 2, "u7": [ 103, 104, 107 ] },
+{ "salonPresentItemId": 131090730, "salonGuestId": 47, "u3": 1, "imageId": "i131_0047_02", "u5": 1, "itemFrameId": 3, "u7": [ 101, 102, 107 ] },
 { "salonPresentItemId": 131990110, "salonGuestId": 34, "u3": 1, "imageId": "i131_0034_00", "u5": 3, "itemFrameId": 1, "u7": [ 105, 106, 107 ] },
 { "salonPresentItemId": 131990120, "salonGuestId": 34, "u3": 1, "imageId": "i131_0034_01", "u5": 2, "itemFrameId": 2, "u7": [ 103, 104, 107 ] },
 { "salonPresentItemId": 131990130, "salonGuestId": 34, "u3": 1, "imageId": "i131_0034_02", "u5": 1, "itemFrameId": 3, "u7": [ 101, 102, 107 ] }

@@ -121,5 +121,8 @@
 { "SalonMemorialArtItemId": "151300630", "ArtworkCategory": "No_3000_Plus", "NumberID": "3061", "scheduleId": "7010_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0003_0063_00", "sort": "-300163", "u8": "0" },
 { "SalonMemorialArtItemId": "151300640", "ArtworkCategory": "No_3000_Plus", "NumberID": "3062", "scheduleId": "7090_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0003_0064_00", "sort": "-300164", "u8": "0" },
 { "SalonMemorialArtItemId": "151300650", "ArtworkCategory": "No_3000_Plus", "NumberID": "3063", "scheduleId": "7090_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0003_0065_00", "sort": "-300165", "u8": "0" },
-{ "SalonMemorialArtItemId": "151300660", "ArtworkCategory": "No_3000_Plus", "NumberID": "3064", "scheduleId": "7090_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0003_0066_00", "sort": "-300166", "u8": "0" }
+{ "SalonMemorialArtItemId": "151300660", "ArtworkCategory": "No_3000_Plus", "NumberID": "3064", "scheduleId": "7090_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0003_0066_00", "sort": "-300166", "u8": "0" },
+{ "SalonMemorialArtItemId": "151300670", "ArtworkCategory": "No_3000_Plus", "NumberID": "3065", "scheduleId": "7100_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0003_0067_00", "sort": "-300167", "u8": "0" },
+{ "SalonMemorialArtItemId": "151300680", "ArtworkCategory": "No_3000_Plus", "NumberID": "3066", "scheduleId": "7100_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0003_0068_00", "sort": "-300168", "u8": "0" },
+{ "SalonMemorialArtItemId": "151300690", "ArtworkCategory": "No_3000_Plus", "NumberID": "3067", "scheduleId": "7100_1W_Salon_uppdate_FOREVER", "u5": 1, "ImageID": "i151_0003_0069_00", "sort": "-300169", "u8": "0" }
 ]}

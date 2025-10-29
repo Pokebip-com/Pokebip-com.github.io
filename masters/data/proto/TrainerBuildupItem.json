@@ -696,5 +696,13 @@
 { "itemId": "557090060005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10145000000" },
 { "itemId": "557090070005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10146000000" },
 { "itemId": "557090080005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10256000001" },
-{ "itemId": "557090090005", "trainerBuildupConfigId": 5, "scheduleId": "7090_1W_Updata_nobishiro", "u4": "", "trainerId": "-1" }
+{ "itemId": "557090090005", "trainerBuildupConfigId": 5, "scheduleId": "7090_1W_Updata_nobishiro", "u4": "", "trainerId": "-1" },
+{ "itemId": "557100001005", "trainerBuildupConfigId": 5, "scheduleId": "7100_1W_Updata_nobishiro", "u4": "", "trainerId": "-1" },
+{ "itemId": "557100010005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10021910000" },
+{ "itemId": "557100020005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10113420000" },
+{ "itemId": "557100030005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10252400000" },
+{ "itemId": "557100040005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10336000000" },
+{ "itemId": "557100050005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10293000001" },
+{ "itemId": "557100060005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10147400000" },
+{ "itemId": "557100070005", "trainerBuildupConfigId": 5, "scheduleId": "FOREVER", "u4": "", "trainerId": "10279000001" }
 ]}

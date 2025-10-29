@@ -509,7 +509,7 @@
     "999430": "Crea una [Name:ReferencedMessageTag ]. (Una [Name:ReferencedMessageTag ] potencia los ataques de tipo [Name:ReferencedMessageTag Idx=\"1\" ]).",
     "999429": "Aumenta al azar entre 0 y 3 niveles el [Name:ReferencedMessageTag Idx=\"1\" ] del usuario.",
     "999428": "Aumenta [Name:ReferencedMessageTag Idx=\"1\" ] del usuario en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
-    "999427": "Si es atacado mientras está en posición defensiva, anula el movimiento y el usuario vuelve a su posición habitual.",
+    "999427": "Cuando es atacado mientras está en posición defensiva, anula el movimiento y el usuario vuelve a su posición habitual.",
     "999426": "Si el movimiento era un movimiento de ataque físico, inflige daño al rival que lo usó.",
     "999425": "(tipo: [Name:ReferencedMessageTag ], categoría: [Name:ReferencedMessageTag Idx=\"1\" ])",
     "999424": "Cuando se crea una [Name:ReferencedMessageTag ].",
@@ -956,5 +956,10 @@
     "998970": "Aumenta la Defensa y la Defensa Especial de todos los compis aliados en [Digit:1digit Idx=\"7\" ] [ES:Qty Ref=\"7\" S=\"nivel\" P=\"niveles\" ].",
     "998968": "Aumenta el [Name:ReferencedMessageTag ] del usuario en 10 niveles cuando su [Name:ReferencedMessageTag ] ha aumentado.",
     "998967": "Aumenta el [Name:ReferencedMessageTag Idx=\"1\" ] del usuario en 10 niveles cuando su [Name:ReferencedMessageTag Idx=\"1\" ] ha aumentado.",
+    "998966": "Si el movimiento era un movimiento de ataque físico, envenena al rival que lo usó.",
+    "998965": "Si el Pidgeot del usuario ha megaevolucionado, también duplica la potencia de este ataque.",
+    "998964": "Cuando el bando del usuario no está lleno de determinación, también se reduce en [Digit:1digit Idx=\"1\" ] el contador de movimientos compi del usuario.",
+    "998963": "Si el Pidgeot del usuario ha megaevolucionado, también recupera [Digit:1digit Idx=\"2\" ] PM de su [Name:MoveId Idx=\"6159\" ].",
+    "998962": "Evoluciona a Mega-Pidgeot. Vuelve a la normalidad tras terminar el combate.",
     "998961": "Cuando se usa este movimiento o se ataca con este movimiento."
 }
