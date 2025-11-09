@@ -31,6 +31,123 @@ let maxEnergy = 60;
 
 const NOT_IMPLEMENTED = [ "10101420000", "10286000001" ];
 
+class SyncGridShareManager {
+
+    constructor() {
+        this.paramName = 'build';
+    }
+
+    init(container) {
+        this.container = container ?? document;
+        this.refresh();
+        this.observer = new MutationObserver((list) => {
+            for(const m of list) {
+                if(m.type === "attributes" && m.attributeName === "selected") {
+                    this.dirty = true
+                    break;
+                }
+            }
+        });
+        this.observer.observe(this.container, {
+            subtree: true,
+            attributes: true,
+            attributeFilter: ["selected"]
+        });
+    }
+
+    refresh() {
+        this.cells = Array.from(document.querySelectorAll("svg[data-cell-id]"));
+        this.sorted = [...this.cells].sort((a,b) => BigInt(this.getCellId(a)) < BigInt(this.getCellId(b)) ? -1 : 1);
+        this.indexById = new Map(this.sorted.map((el,idx) => [this.getCellId(el), idx]));
+        this.dirty = false;
+    }
+
+    b64urlEncode(bytes) {
+        let bin = '';
+        bytes.forEach(b => bin += String.fromCharCode(b));
+        return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    }
+
+    b64urlDecode(b64u) {
+        const b64 = b64u.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((b64u.length + 3) % 4);
+        const bin = atob(b64);
+        const out = new Uint8Array(bin.length);
+        for (let i=0;i<bin.length;i++) out[i] = bin.charCodeAt(i);
+        return out;
+    }
+
+    encodeState() {
+        const n = this.sorted.length;
+        const bytes = new Uint8Array(Math.ceil(n/8));
+        for (const el of this.sorted) {
+            const idx = this.indexById.get(this.getCellId(el));
+            const selected = el.hasAttribute('selected');
+            if (selected) bytes[idx>>3] |= (1 << (idx & 7));
+        }
+        return this.b64urlEncode(bytes);
+    }
+
+    applyState(token) {
+        this.refresh();
+        const bytes = this.b64urlDecode(token);
+        for (const el of this.sorted) {
+            const idx = this.indexById.get(this.getCellId(el));
+            const bit = (bytes[idx>>3] >> (idx & 7)) & 1;
+            if (bit) changeSelection(el);
+        }
+    }
+
+    readTokenFromURL() {
+        const url = new URL(location.href);
+        return url.searchParams.get(this.paramName);
+    }
+
+    buildShareURL() {
+        if(this.dirty)
+            this.refresh();
+
+        const url = new URL(location.href);
+        let state = this.encodeState();
+        if (state !== "")
+            url.searchParams.set(this.paramName, this.encodeState());
+        return url.toString();
+    }
+
+    getCellId = (el) => el.dataset.cellId ?? null;
+
+    copyUrl = async () => {
+        const text = this.buildShareURL();
+        try {
+            await navigator.clipboard.writeText(text);
+            return true;
+        } catch {
+            const ta = document.createElement("textarea");
+            ta.value = text;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "absolute";
+            ta.style.left = "-9999px";
+            document.body.appendChild(ta);
+            ta.select();
+            const isDoneOk = document.execCommand && document.execCommand("copy");
+            document.body.removeChild(ta);
+            return !!isDoneOk;
+        }
+    }
+
+    shareBuild = async () => {
+        const url = this.buildShareURL();
+        if (navigator.share) {
+            try {
+                await navigator.share({ title: document.title, url });
+            } catch {}
+        } else {
+            await this.copyUrl();
+        }
+    }
+}
+
+const syncGridShareManager = new SyncGridShareManager();
+
 async function getData() {
 
     // PROTO
@@ -1202,7 +1319,7 @@ function appendGridCategory(table, panels, category) {
 function suppressCellData(cell) {
     let orbCell = document.getElementById("orbCell");
     let energyCell = document.getElementById("energyCell");
-    let cellId = cell.getAttribute("data-cellId");
+    let cellId = cell.getAttribute("data-cell-id");
     let tileDiv = document.getElementById(`tile-${cellId}`);
 
     cell.removeAttribute("selected");
@@ -1215,7 +1332,7 @@ function suppressCellData(cell) {
 function setTileBackground(div) {
 
     let tileIcon;
-    let panelType = div.getAttribute("data-panelType") || div.getAttribute("data-category");
+    let panelType = div.getAttribute("data-panel-type") || div.getAttribute("data-category");
     let dataLevel = div.getAttribute("data-level");
 
     if(dataLevel && dataLevel > syncLevel) {
@@ -1254,14 +1371,14 @@ function changeSelection(div) {
     else {
         let orbCell = document.getElementById("orbCell");
         let energyCell = document.getElementById("energyCell");
-        let cellId = div.getAttribute("data-cellId");
+        let cellId = div.getAttribute("data-cell-id");
         let tilesCell = document.getElementById("tilesCell");
         let tileDiv = document.createElement("div");
 
-        const passiveId = div.getAttribute("data-passiveId");
+        const passiveId = div.getAttribute("data-passive-id");
 
         tileDiv.id = `tile-${cellId}`;
-        tileDiv.innerHTML = passiveId === "0" ? div.getAttribute("data-tileName") : getDetailedPassiveSkillName(passiveId);
+        tileDiv.innerHTML = passiveId === "0" ? div.getAttribute("data-tile-name") : getDetailedPassiveSkillName(passiveId);
         tileDiv.style.background = "rgba(0, 0, 0, 0.1)";
         tileDiv.style.margin = "3px auto";
 
@@ -1274,6 +1391,8 @@ function changeSelection(div) {
     }
 
     setTileBackground(div);
+
+    syncGridShareManager.dirty = true;
 }
 
 function setGridPicker(ap, gridPickerDiv) {
@@ -1422,21 +1541,21 @@ function setGridPicker(ap, gridPickerDiv) {
         }
 
         if (panel.conditionIds.filter(cid => cid >= 16 && cid <= 19).length > 0) {
-            svg.setAttribute("data-panelType", "arceuspanel");
+            svg.setAttribute("data-panel-type", "arceuspanel");
         }
 
         svg.setAttribute("data-energy", panel.energyCost);
         svg.setAttribute("data-orbs", panel.orbCost);
         svg.setAttribute("data-items", panel.items.join(","));
-        svg.setAttribute("data-cellId", panel.cellId);
-        svg.setAttribute("data-passiveId", panel.ability.passiveId);
+        svg.setAttribute("data-cell-id", panel.cellId);
+        svg.setAttribute("data-passive-id", panel.ability.passiveId);
 
         let text = jData.lsd.abilityName[panel.ability.type]
             .replace("[Digit:5digits ]", "+" + panel.ability.value)
             .replace("[Name:Ability ]", getPassiveSkillName(panel.ability.passiveId))
             .replace("[Name:Move ]", jData.lsd.moveName[panel.ability.moveId]).replace("\n", " ");
 
-        svg.setAttribute("data-tileName", text);
+        svg.setAttribute("data-tile-name", text);
         titleP.innerHTML = `<b>${text}</b>`;
         tooltip.appendChild(titleP);
 
@@ -1455,7 +1574,7 @@ function setGridPicker(ap, gridPickerDiv) {
         gridDiv.appendChild(tooltip);
     })
 
-    console.log(maxX, minX, maxY, minY, maxZ, minZ);
+    //console.log(maxX, minX, maxY, minY, maxZ, minZ);
 
     gridDiv.style.height = (maxY - minZ + 1)*60 + "px";
     gridDiv.style.width = (maxX - minX)*62.5 + "px";
@@ -1664,14 +1783,34 @@ function setGridPicker(ap, gridPickerDiv) {
     );
 
     exportCell.appendChild(exportButton);
-
     tr.appendChild(exportCell);
-
     controlTbl.appendChild(tr);
 
+    tr = document.createElement("tr");
+
+    let copyUrlCell = document.createElement("td");
+    copyUrlCell.id = "copyUrlCell";
+    let copyUrlButton = document.createElement("button");
+    copyUrlButton.innerText = jData.locale.syncPairs.sync_grid_copy_url;
+    copyUrlButton.classList.add("orangeBtn");
+    copyUrlButton.addEventListener("click", syncGridShareManager.copyUrl);
+    copyUrlCell.appendChild(copyUrlButton);
+    tr.appendChild(copyUrlCell);
+    controlTbl.appendChild(tr);
+
+    let shareCell = document.createElement("td");
+    shareCell.id = "shareCell";
+    let shareButton = document.createElement("button");
+    shareButton.innerText = jData.locale.syncPairs.sync_grid_share;
+    shareButton.classList.add("orangeBtn");
+    shareButton.addEventListener("click", syncGridShareManager.shareBuild);
+    shareCell.appendChild(shareButton);
+    tr.appendChild(shareCell);
+    controlTbl.appendChild(tr);
 
     pickerDiv.appendChild(controlTbl);
 
+    syncGridShareManager.init(gridDiv);
 }
 
 function setSyncGrid() {
@@ -1762,6 +1901,12 @@ function setSyncGrid() {
     Object.keys(abilityType).forEach(key => appendGridCategory(table, ap, abilityType[key]));
 
     container.appendChild(table);
+
+    syncGridShareManager.refresh();
+
+    const initial = syncGridShareManager.readTokenFromURL();
+    if(initial)
+        syncGridShareManager.applyState(initial);
 }
 
 function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
@@ -1889,6 +2034,7 @@ function setUrlMonsterInfos(monsterId, baseId, formId, pushState) {
     url.searchParams.set('monsterId', monsterId);
     url.searchParams.set('baseId', baseId);
     url.searchParams.set('formId', formId);
+    url.hash = "";
 
     if(pushState)
         window.history.pushState(null, '', url.toString());
@@ -1927,9 +2073,19 @@ function setLatestPairs() {
         let li = document.createElement("li");
         let b = document.createElement("b");
         let anchor = document.createElement("a");
-        anchor.href = '#';
+
+        let url = new URL(window.location);
+        url.searchParams.delete('monsterId');
+        url.searchParams.delete('baseId');
+        url.searchParams.delete('formId');
+        url.searchParams.delete('build');
+        url.searchParams.set('pair', tr.trainerId);
+        url.hash = "";
+
+        anchor.href = url.toString();
         anchor.textContent = getPairName(tr.trainerId);
-        anchor.addEventListener("click", () => {
+        anchor.addEventListener("click", (e) => {
+            e.preventDefault();
             syncPairSelect.value = tr.trainerId;
             selectChange();
         });
@@ -1962,9 +2118,20 @@ function setLatestPairs() {
         let li = document.createElement("li");
         let b = document.createElement("b");
         let anchor = document.createElement("a");
-        anchor.href = '#';
+
+        let url = new URL(window.location);
+        url.searchParams.delete('monsterId');
+        url.searchParams.delete('baseId');
+        url.searchParams.delete('formId');
+        url.searchParams.delete('build');
+        url.searchParams.set('pair', ugt.trainerId);
+        url.hash = "";
+
+        anchor.href = url.toString();
+
         anchor.innerText = `${getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})`;
-        anchor.addEventListener("click", () => {
+        anchor.addEventListener("click", (e) => {
+            e.preventDefault();
             syncPairSelect.value = ugt.trainerId;
             selectChange();
         });
@@ -1982,7 +2149,9 @@ function selectChange() {
     url.searchParams.delete('monsterId');
     url.searchParams.delete('baseId');
     url.searchParams.delete('formId');
+    url.searchParams.delete('build');
     url.searchParams.set('pair', syncPairSelect.value);
+    url.hash = "";
 
     window.history.pushState(null, '', url.toString());
 

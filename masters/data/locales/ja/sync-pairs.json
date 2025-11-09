@@ -40,11 +40,13 @@
     "StatsBoost": "Stat Boost",
     "SyncMove": "Sync Move upgrade"
   },
+  "sync_grid_copy_url": "Copy URL",
   "sync_grid_energy": "Energy",
   "sync_grid_energy_level": "Max energy cap",
   "sync_grid_export": "Export (PNG)",
   "sync_grid_reset": "Reset",
   "sync_grid_selected_tiles": "Selected tiles",
+  "sync_grid_share": "Share",
   "sync_grid_tile_description_title": "Effect",
   "sync_grid_tile_description_tooltip": "Effect",
   "sync_grid_tile_energy_tooltip": "Energy",
