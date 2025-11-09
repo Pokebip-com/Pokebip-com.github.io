@@ -1,5 +1,7 @@
 {
   "change_pair": "Changer de Duo : ",
+  "copy_failure": "Échec de la copie du lien dans le presse-papier. Veuillez réessayer.",
+  "copy_success": "Lien copié avec succès dans le presse-papier !",
   "descriptions": "Descriptions",
   "ex_clothing": "Tenue 6★ EX",
   "ex_role": "Rôle EX",

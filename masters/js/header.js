@@ -294,4 +294,11 @@ async function buildHeader(baseDir = ".") {
     body.appendChild(headerBody);
 
     body.style.marginTop = headerBody.offsetHeight + "px";
+
+    let toastRegion = document.createElement('div');
+    toastRegion.classList.add('toast-region');
+    toastRegion.ariaLive = "polite";
+    toastRegion.ariaAtomic = "true";
+    toastRegion.id = "toast-region";
+    body.appendChild(toastRegion);
 }

@@ -59,3 +59,64 @@
         border-color: transparent transparent black transparent;
     }
 }
+
+.toast-region {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    display: grid;
+    gap: 8px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* Toast de base */
+.toast {
+    min-width: 260px;
+    max-width: min(92vw, 520px);
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: #111827;
+    color: #fff;
+    border: 1px solid #374151;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+    /* Centrage + gras */
+    text-align: center;
+    font-weight: 600;
+
+    /* Animation par défaut (réduite si prefers-reduced-motion: reduce) */
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: auto;
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+/* Variantes */
+.toast--success {
+    background: #0c8c62;
+    border-color: #10b981;
+    box-shadow: 0 10px 30px rgba(16,185,129,0.25);
+}
+
+.toast--error {
+    background: #bd2222;
+    border-color: #ef4444;
+    box-shadow: 0 10px 30px rgba(239,68,68,0.25);
+}
+
+/* État ouvert: fade-in + léger slide */
+.toast--open {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Préférence utilisateur: réduire la motion */
+@media (prefers-reduced-motion: reduce) {
+    .toast {
+        transition: opacity 1ms linear; /* quasi instantané */
+        transform: none;
+    }
+}

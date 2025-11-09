@@ -88,7 +88,6 @@ class SyncGridShareManager {
     }
 
     applyState(token) {
-        this.refresh();
         const bytes = this.b64urlDecode(token);
         for (const el of this.sorted) {
             const idx = this.indexById.get(this.getCellId(el));
@@ -1794,7 +1793,14 @@ function setGridPicker(ap, gridPickerDiv) {
     let copyUrlButton = document.createElement("button");
     copyUrlButton.innerText = jData.locale.syncPairs.sync_grid_copy_url;
     copyUrlButton.classList.add("orangeBtn");
-    copyUrlButton.addEventListener("click", syncGridShareManager.copyUrl);
+    copyUrlButton.addEventListener("click", () => {
+        syncGridShareManager.copyUrl().then((res) => {
+            if(res)
+                showToast(jData.locale.syncPairs.copy_success, "success");
+            else
+                showToast(jData.locale.syncPairs.copy_failure, "error");
+        });
+    });
     copyUrlCell.appendChild(copyUrlButton);
     tr.appendChild(copyUrlCell);
     controlTbl.appendChild(tr);
@@ -1824,18 +1830,18 @@ function setSyncGrid() {
             ap.conditionIds.forEach(cid => {
                 let releaseCon = jData.proto.abilityReleaseCondition.find(arc => arc.conditionId === cid);
 
-                switch(releaseCon.type) {
+                switch (releaseCon.type) {
                     case 6:
                     case 7:
                         ap.level = releaseCon.parameter;
                 }
             });
             ap.items = [];
-            if(ap.orbCost > 0) {
+            if (ap.orbCost > 0) {
                 ap.items.push(`${jData.lsd.abilityItemName["2"]} x${ap.orbCost}`);
             }
             ap.releaseItemSet = jData.proto.abilityPanelReleaseItemSet.find(a => a.abilityPanelId === ap.cellId);
-            for(let i = 1; ap.releaseItemSet && ap.releaseItemSet[`item${i}`] !== "0" && i <= 3; i++) {
+            for (let i = 1; ap.releaseItemSet && ap.releaseItemSet[`item${i}`] !== "0" && i <= 3; i++) {
                 ap.items.push(`${getItemName(ap.releaseItemSet[`item${i}`])} x${ap.releaseItemSet[`item${i}Qty`]}`);
             }
             ap.type = getAbilityType(ap.ability);
@@ -1845,8 +1851,8 @@ function setSyncGrid() {
         .reduce((acc, curr) => {
             let cell = acc.find(a => a.cellId === curr.cellId);
 
-            if(cell) {
-                if(cell.version < curr.version) {
+            if (cell) {
+                if (cell.version < curr.version) {
                     acc = acc.filter(a => a.cellId !== curr.cellId);
                     acc.push(curr);
                 }
@@ -1858,7 +1864,7 @@ function setSyncGrid() {
             return acc;
         }, []);
 
-    if(ap.length === 0)
+    if (ap.length === 0)
         return;
 
     let container = document.getElementById("syncGridContainer");
@@ -1906,8 +1912,19 @@ function setSyncGrid() {
     syncGridShareManager.refresh();
 
     const initial = syncGridShareManager.readTokenFromURL();
-    if(initial)
+    if (initial) {
         syncGridShareManager.applyState(initial);
+
+        requestAnimationFrame(() => {
+            const target = document.querySelector('#gridDiv');
+            if (target) {
+                window.scrollTo({
+                    top: target.getBoundingClientRect().top + window.scrollY - 125,
+                    behavior: 'smooth'
+                });
+            }
+        })
+    }
 }
 
 function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {

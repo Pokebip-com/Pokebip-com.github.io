@@ -1,5 +1,7 @@
 {
   "change_pair": "Change Sync Pair: ",
+  "copy_failure": "Failed to copy URL to clipboard. Please retry.",
+  "copy_success": "URL successfully copied to clipboard!",
   "descriptions": "Descriptions",
   "ex_clothing": "6★ EX Outfit",
   "ex_role": "EX Role",

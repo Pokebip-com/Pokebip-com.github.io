@@ -45,6 +45,9 @@ const typeToFieldTextTag = {
     "18" : "121",
 }
 
+const TOAST_SHOW_MS = 2500;
+const TOAST_FADE_MS = 240;
+
 function preloadUtils(preloadItems = false) {
 
     // Proto
@@ -847,4 +850,33 @@ function agenderDescription(descr) {
 
 
     return descr;
+}
+
+function showToast(message, variant = "success") {
+    const region = document.getElementById("toast-region");
+    const el = document.createElement("div");
+    el.className = `toast toast--${variant}`;
+    el.setAttribute("role", variant === "error" ? "alert" : "status");
+    el.textContent = message;
+
+    region.prepend(el);
+
+    requestAnimationFrame(() => {
+        el.classList.add("toast--open");
+    });
+
+    const closeAt = setTimeout(() => {
+        el.classList.remove("toast--open");
+    }, TOAST_SHOW_MS);
+
+    const removeAt = setTimeout(() => {
+        el.remove();
+    }, TOAST_SHOW_MS + TOAST_FADE_MS);
+
+    el.addEventListener("click", () => {
+        clearTimeout(closeAt);
+        clearTimeout(removeAt);
+        el.classList.remove("toast--open");
+        setTimeout(() => el.remove(), TOAST_FADE_MS);
+    });
 }
