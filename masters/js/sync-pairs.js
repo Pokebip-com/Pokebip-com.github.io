@@ -108,8 +108,9 @@ class SyncGridShareManager {
 
         const url = new URL(location.href);
         let state = this.encodeState();
-        if (state !== "")
+        if (state !== "") {
             url.searchParams.set(this.paramName, this.encodeState());
+        }
         return url.toString();
     }
 
@@ -2151,7 +2152,7 @@ function selectChange() {
     url.searchParams.delete('formId');
     url.searchParams.delete('build');
     url.searchParams.set('pair', syncPairSelect.value);
-    url.hash = "";
+
 
     window.history.pushState(null, '', url.toString());
 
@@ -2204,6 +2205,15 @@ async function init() {
 
         let copyBtn = document.getElementById("copyBtn");
         copyBtn.addEventListener('click', () => navigator.clipboard.writeText(dataArea.value));
+    }
+
+
+
+    const url = new URL(window.location);
+    if(url.searchParams.has('lang')) {
+        url.searchParams.delete('lang');
+        url.hash = "";
+        window.history.pushState(null, '', url.toString());
     }
 
     populateSelect();
