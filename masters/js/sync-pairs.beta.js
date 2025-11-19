@@ -1499,8 +1499,11 @@ function setGridPicker(ap, gridPickerDiv) {
         gridDiv.style.height = `${totalHeight * currentZoom}px`;
     };
 
-    // Auto-resize observer
+    // Auto-resize observer (only when not manually zooming)
+    let isManuallyZooming = false;
     const resizeObserver = new ResizeObserver(entries => {
+        if (isManuallyZooming) return; // Don't auto-resize during manual zoom
+
         for (let entry of entries) {
             const availableWidth = entry.contentRect.width;
             if (availableWidth > 0 && availableWidth < totalWidth) {
@@ -1520,6 +1523,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
     gridWrapper.addEventListener("touchstart", (e) => {
         if (e.touches.length === 2) {
+            isManuallyZooming = true; // Disable auto-resize
             initialPinchDistance = Math.hypot(
                 e.touches[0].pageX - e.touches[1].pageX,
                 e.touches[0].pageY - e.touches[1].pageY
@@ -1541,9 +1545,9 @@ function setGridPicker(ap, gridPickerDiv) {
             const amplifiedFactor = 1 + (scaleFactor - 1) * 1.2;
             let newZoom = initialZoom * amplifiedFactor;
 
-            // Limit zoom levels (allow up to 5x for detailed viewing with scrolling)
+            // Limit zoom levels (allow up to 3x for detailed viewing with scrolling)
             if (newZoom < 0.2) newZoom = 0.2;
-            if (newZoom > 5) newZoom = 5;
+            if (newZoom > 3) newZoom = 3;
 
             currentZoom = newZoom;
             updateZoom();
@@ -1554,6 +1558,10 @@ function setGridPicker(ap, gridPickerDiv) {
         if (e.touches.length < 2) {
             initialPinchDistance = null;
             initialZoom = null;
+            // Keep manual zoom active for a bit to prevent auto-resize from immediately resetting
+            setTimeout(() => {
+                isManuallyZooming = false;
+            }, 500);
         }
     });
 
