@@ -1501,6 +1501,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
     // Auto-resize observer (only when not manually zooming)
     let isManuallyZooming = false;
+    let minZoom = 1; // Store the initial auto-fit zoom level
     const resizeObserver = new ResizeObserver(entries => {
         if (isManuallyZooming) return; // Don't auto-resize during manual zoom
 
@@ -1511,6 +1512,7 @@ function setGridPicker(ap, gridPickerDiv) {
             } else {
                 currentZoom = 1;
             }
+            minZoom = currentZoom; // Store this as the minimum zoom level
             updateZoom();
         }
     });
@@ -1552,8 +1554,8 @@ function setGridPicker(ap, gridPickerDiv) {
             const amplifiedFactor = 1 + (scaleFactor - 1) * 1.2;
             let newZoom = initialZoom * amplifiedFactor;
 
-            // Limit zoom levels (allow up to 3x for detailed viewing with scrolling)
-            if (newZoom < 0.2) newZoom = 0.2;
+            // Limit zoom levels (min = initial auto-fit, max = 3x for detailed viewing)
+            if (newZoom < minZoom) newZoom = minZoom;
             if (newZoom > 3) newZoom = 3;
 
             currentZoom = newZoom;
