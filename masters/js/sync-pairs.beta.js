@@ -1556,17 +1556,17 @@ function setGridPicker(ap, gridPickerDiv) {
             if (newZoom < 0.2) newZoom = 0.2;
             if (newZoom > 3) newZoom = 3;
 
-            // Calculate scroll adjustment to keep pinch center in place
-            const zoomRatio = newZoom / currentZoom;
-            const newScrollLeft = pinchCenterX * zoomRatio - (pinchCenterX - gridWrapper.scrollLeft);
-            const newScrollTop = pinchCenterY * zoomRatio - (pinchCenterY - gridWrapper.scrollTop);
-
             currentZoom = newZoom;
             updateZoom();
 
-            // Adjust scroll position to zoom at pinch point
-            gridWrapper.scrollLeft = newScrollLeft;
-            gridWrapper.scrollTop = newScrollTop;
+            // Calculate scroll adjustment to keep pinch center fixed
+            // The pinch center should remain at the same position in the viewport
+            const rect = gridWrapper.getBoundingClientRect();
+            const viewportCenterX = ((e.touches[0].pageX + e.touches[1].pageX) / 2) - rect.left;
+            const viewportCenterY = ((e.touches[0].pageY + e.touches[1].pageY) / 2) - rect.top;
+
+            gridWrapper.scrollLeft = pinchCenterX * (newZoom / initialZoom) - viewportCenterX;
+            gridWrapper.scrollTop = pinchCenterY * (newZoom / initialZoom) - viewportCenterY;
         }
     }, { passive: false });
 
