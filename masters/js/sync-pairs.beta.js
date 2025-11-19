@@ -383,7 +383,10 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
         table.appendChild(descrMonsterRow);
     }
 
-    contentDiv.appendChild(table);
+    let tableWrapperOverview = document.createElement("div");
+    tableWrapperOverview.style.overflowX = "auto";
+    tableWrapperOverview.appendChild(table);
+    contentDiv.appendChild(tableWrapperOverview);
 }
 
 function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
@@ -632,7 +635,10 @@ function setPairPassives(contentDiv, variation = null) {
         table.appendChild(row);
     }
 
-    contentDiv.appendChild(table);
+    let tableWrapper = document.createElement("div");
+    tableWrapper.style.overflowX = "auto";
+    tableWrapper.appendChild(table);
+    contentDiv.appendChild(tableWrapper);
 }
 
 function setPairSuperAwakening(contentDiv) {
@@ -812,7 +818,10 @@ function setPairLuckySkills(contentDiv) {
         }
     });
 
-    contentDiv.appendChild(table);
+    let tableWrapper = document.createElement("div");
+    tableWrapper.style.overflowX = "auto";
+    tableWrapper.appendChild(table);
+    contentDiv.appendChild(tableWrapper);
 }
 
 function setPairTeamSkills(contentDiv) {
@@ -846,7 +855,10 @@ function setPairTeamSkills(contentDiv) {
     table.appendChild(row);
 
     contentDiv.appendChild(document.createElement("br"));
-    contentDiv.appendChild(table);
+    let tableWrapper = document.createElement("div");
+    tableWrapper.style.overflowX = "auto";
+    tableWrapper.appendChild(table);
+    contentDiv.appendChild(tableWrapper);
 }
 
 function getTooltipMoveData(moveId) {
@@ -1073,7 +1085,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
         }
     }
 
-    contentDiv.appendChild(table);
+    let tableWrapper = document.createElement("div");
+    tableWrapper.style.overflowX = "auto";
+    tableWrapper.appendChild(table);
+    contentDiv.appendChild(tableWrapper);
 
     // Capacités Duo Dynamax
 
@@ -1130,7 +1145,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
             }
         }
 
-        contentDiv.appendChild(table);
+        let tableWrapperGMax = document.createElement("div");
+        tableWrapperGMax.style.overflowX = "auto";
+        tableWrapperGMax.appendChild(table);
+        contentDiv.appendChild(tableWrapperGMax);
     }
 
     // Capacité Teracristal
@@ -1193,7 +1211,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
 
         table.appendChild(getMoveRow(teraMove.terastalMoveId));
 
-        contentDiv.appendChild(table);
+        let tableWrapperTera = document.createElement("div");
+        tableWrapperTera.style.overflowX = "auto";
+        tableWrapperTera.appendChild(table);
+        contentDiv.appendChild(tableWrapperTera);
     }
 
     contentDiv.appendChild(document.createElement("br"));
@@ -1251,7 +1272,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     table.appendChild(headRow);
     table.appendChild(getSyncMoveRow(mon.syncMoveId, tr));
 
-    contentDiv.appendChild(table);
+    let tableWrapperSync = document.createElement("div");
+    tableWrapperSync.style.overflowX = "auto";
+    tableWrapperSync.appendChild(table);
+    contentDiv.appendChild(tableWrapperSync);
 }
 
 function appendGridCategory(table, panels, category) {
@@ -1473,13 +1497,6 @@ function setGridPicker(ap, gridPickerDiv) {
         svg.style.transform = `scale(${currentZoom})`;
         gridDiv.style.width = `${totalWidth * currentZoom}px`;
         gridDiv.style.height = `${totalHeight * currentZoom}px`;
-
-        // Dynamic Layout: Expand to full width when zoomed in
-        if (currentZoom > 1.1) {
-            gridWrapper.style.flex = "1 1 100%";
-        } else {
-            gridWrapper.style.flex = "0 1 auto";
-        }
     };
 
     // Auto-resize observer
@@ -1681,7 +1698,9 @@ function setGridPicker(ap, gridPickerDiv) {
                 // Flip if going off-screen (top edge)
                 if (top < window.scrollY) {
                     top = tileRect.bottom + 10 + window.scrollY;
-                    // Adjust arrow direction if possible (requires CSS changes, skipping for now)
+                    tooltip.classList.add("flipped");
+                } else {
+                    tooltip.classList.remove("flipped");
                 }
 
                 // Adjust if going off-screen (left edge)
@@ -2031,7 +2050,10 @@ function setSyncGrid() {
 
     Object.keys(abilityType).forEach(key => appendGridCategory(table, ap, abilityType[key]));
 
-    container.appendChild(table);
+    let tableWrapper = document.createElement("div");
+    tableWrapper.style.overflowX = "auto";
+    tableWrapper.appendChild(table);
+    container.appendChild(tableWrapper);
 
     syncGridShareManager.refresh();
 
