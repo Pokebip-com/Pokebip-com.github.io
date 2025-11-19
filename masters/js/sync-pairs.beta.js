@@ -1518,7 +1518,7 @@ function setGridPicker(ap, gridPickerDiv) {
     let initialPinchDistance = null;
     let initialZoom = null;
 
-    gridDiv.addEventListener("touchstart", (e) => {
+    gridWrapper.addEventListener("touchstart", (e) => {
         if (e.touches.length === 2) {
             initialPinchDistance = Math.hypot(
                 e.touches[0].pageX - e.touches[1].pageX,
@@ -1528,7 +1528,7 @@ function setGridPicker(ap, gridPickerDiv) {
         }
     }, { passive: false });
 
-    gridDiv.addEventListener("touchmove", (e) => {
+    gridWrapper.addEventListener("touchmove", (e) => {
         if (e.touches.length === 2 && initialPinchDistance !== null) {
             e.preventDefault(); // Prevent page zoom
             const currentDistance = Math.hypot(
@@ -1537,20 +1537,20 @@ function setGridPicker(ap, gridPickerDiv) {
             );
 
             const scaleFactor = currentDistance / initialPinchDistance;
-            // Amplify the zoom response for easier zooming (1.5x multiplier)
-            const amplifiedFactor = 1 + (scaleFactor - 1) * 1.5;
+            // Amplify the zoom response for easier zooming (1.2x multiplier for smoother control)
+            const amplifiedFactor = 1 + (scaleFactor - 1) * 1.2;
             let newZoom = initialZoom * amplifiedFactor;
 
-            // Limit zoom levels
+            // Limit zoom levels (allow up to 5x for detailed viewing with scrolling)
             if (newZoom < 0.2) newZoom = 0.2;
-            if (newZoom > 3) newZoom = 3;
+            if (newZoom > 5) newZoom = 5;
 
             currentZoom = newZoom;
             updateZoom();
         }
     }, { passive: false });
 
-    gridDiv.addEventListener("touchend", (e) => {
+    gridWrapper.addEventListener("touchend", (e) => {
         if (e.touches.length < 2) {
             initialPinchDistance = null;
             initialZoom = null;
