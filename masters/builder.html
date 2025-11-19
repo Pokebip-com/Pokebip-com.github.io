@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabContent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .tabContent {
+            animation: fadeEffect 0.5s; /* Fading effect takes 0.5 second */
+        }
+
+        /* Go from zero to full opacity */
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        div#lastReleasedPairs li:before {
+            content: "› ";
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+        .hex:before {
+            content: " ";
+            width: 0; height: 0;
+            border-bottom: 30px solid #6C6;
+            border-left: 52px solid transparent;
+            border-right: 52px solid transparent;
+            position: absolute;
+            top: -30px;
+        }
+
+        .hex {
+            margin-top: 30px;
+            width: 104px;
+            height: 60px;
+            background-color: #6C6;
+            position: relative;
+        }
+
+        .tooltip {
+            background-color: rgba(0, 0, 0, 100%);
+            color: #fff;
+            width: 300px;
+            position: absolute;
+            padding: 10px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+        }
+
+        .tooltip:after {
+            content:"";
+            display: inline-block;
+            border-style: solid;
+            border-width: 10px 10px 0;
+            border-color: #000 transparent;
+            position: absolute;
+            bottom: -10px;
+            left: 150px;
+        }
+
+        svg {
+            overflow: hidden;
+        }
+
+        .radio-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .radio-tile-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .radio-tile-group .input-container {
+            position: relative;
+            height: 25px;
+            width: 25px;
+            margin: 0.4rem;
+        }
+
+        .radio-tile-group .input-container .radio-button {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .radio-tile-group .input-container .radio-tile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #23b20e;
+            background-color: rgba(35, 178, 14, 0.15);
+            border-radius: 5px;
+            transition: transform 150ms ease;
+        }
+
+        .radio-tile-group .input-container .radio-tile-label {
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #229811;
+        }
+
+        .radio-tile-group .input-container .radio-button:checked + .radio-tile {
+            background-color: #23b20e;
+            border: 2px solid #23b20e;
+            color: white;
+        }
+
+        .radio-tile-group .input-container .radio-button:checked + .radio-tile .radio-tile-label {
+            color: white;
+            background-color: #23b20e;
+        }
+
+        button.orangeBtn {
+            background: url("./data/sync-grids/btnOrange.png") no-repeat;
+        }
+
+        button.blueBtn {
+            background: url("./data/sync-grids/btnBlue.png") no-repeat;
+        }
+
+        button.orangeBtn, button.blueBtn {
+            background-size: 100% 40px;
+            border: 0;
+            width: 100%;
+            height: 40px;
+            color: white;
+            text-shadow: 2px 2px 2px black, -1px -1px 2px black, 2px -1px 2px black, -1px 2px 2px black;
+            cursor: pointer;
+        }
+
+        button.orangeBtn:active, button.blueBtn:active {
+            transform: translateY(2px);
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="../css/pokebip.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/dist/FileSaver.min.js"></script>
+    <script src="./js/dist/jszip.min.js"></script>
+</head>
+
+<body>
+<div id="contentDiv">
+    <div id="tools">
+        <label for="syncPairSelect"><b id="changePairLabel"></b></label> <select id="syncPairSelect"></select>
+        <br />
+        <div id="lastReleasedPairs"></div>
+    </div>
+    <br />
+    <div id="syncPairDiv"></div>
+    <div id="syncGridDiv" style="position: relative">
+        <div id="syncGridContainer"></div>
+    </div>
+</div>
+
+<script src="./js/header.js"></script>
+<script src="./js/utils.js"></script>
+<script src="./js/moves-passive-skills.js"></script>
+<script src="./js/sync-pairs.js"></script>
+</body>
+
+</html>

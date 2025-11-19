@@ -5,13 +5,13 @@ let urlLang = pageUrl.searchParams.get("lang");
 
 let locale;
 let jData = {
-    "proto" : {},
-    "lsd" : {},
-    "locale" : {},
-    "custom" : {}
+    "proto": {},
+    "lsd": {},
+    "locale": {},
+    "custom": {}
 };
 
-switch(urlLang) {
+switch (urlLang) {
     case "fr":
         locale = "fr-FR";
         setCookie("locale", "fr-FR", 8000);
@@ -69,7 +69,7 @@ class JsonCache {
         const requestPromise = fetch(url)
             .then(async (response) => {
                 const data = hasEntries ? (await response.json()).entries : await response.json();
-                if(dataType && variableName) {
+                if (dataType && variableName) {
                     jData[dataType][variableName] = data;
                 }
                 return data;
@@ -82,7 +82,7 @@ class JsonCache {
     }
 
     preloadPromise(url, dataType, variableName, hasEntries = true) {
-        if(this.preloadScopes.includes(`${dataType}.${variableName}`) || Object.keys(jData[dataType]).includes(variableName)) {
+        if (this.preloadScopes.includes(`${dataType}.${variableName}`) || Object.keys(jData[dataType]).includes(variableName)) {
             return;
         }
 
@@ -114,7 +114,7 @@ class JsonCache {
     standardizeName(name) {
         name = name.charAt(0).toLowerCase() + name.substring(1);
         let splitName = name.split(/[-_]+/);
-        for(let i = 1; i < splitName.length; i++) {
+        for (let i = 1; i < splitName.length; i++) {
             splitName[i] = splitName[i].charAt(0).toUpperCase() + splitName[i].substring(1);
             splitName[i] = splitName[i].replace(/_([a-z])/g, (match) => match.toUpperCase());
         }
@@ -132,13 +132,13 @@ class JsonCache {
 const jsonCache = new JsonCache();
 
 let lng = locale === "zh-TW" ? "zh-TW" : locale.substring(0, 2);
-if(!supportedLanguages.includes(lng)) lng = "en";
+if (!supportedLanguages.includes(lng)) lng = "en";
 
 let body = document.getElementsByTagName("body")[0];
 const currentUrl = window.location.pathname.split("/").pop();
 let isAdminMode = getCookie("admin");
 
-window.onpopstate = function(event) {
+window.onpopstate = function (event) {
     let langElements = document.querySelectorAll('a[data-lang]');
     let params = new URLSearchParams(window.location.search);
 
@@ -153,7 +153,7 @@ function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
+    for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
         while (c.charAt(0) === ' ') {
             c = c.substring(1);
@@ -167,8 +167,8 @@ function getCookie(cname) {
 
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;  SameSite=Lax";
 }
 
@@ -177,7 +177,7 @@ function createNavEntry(url, title) {
     a.href = url;
     a.innerText = title;
 
-    if(url.split("/").pop() === currentUrl) {
+    if (url.split("/").pop() === currentUrl) {
         a.classList.add("active");
     }
 
@@ -185,7 +185,7 @@ function createNavEntry(url, title) {
 }
 
 function getSubnav(data) {
-    if(data["drop"].length === 0) {
+    if (data["drop"].length === 0) {
         return createNavEntry(data.url, data.title);
     }
 
@@ -200,14 +200,14 @@ function getSubnav(data) {
     let subnavContent = document.createElement('div');
     subnavContent.classList.add("subnav-content");
 
-    for(let i = 0; i < data["drop"].length; i++) {
+    for (let i = 0; i < data["drop"].length; i++) {
         let a = createNavEntry(data["drop"][i].url, data["drop"][i].title);
 
-        if(data["drop"][i].dataLang) {
+        if (data["drop"][i].dataLang) {
             a.setAttribute("data-lang", data["drop"][i].dataLang);
         }
 
-        if(a.classList.contains("active")) {
+        if (a.classList.contains("active")) {
             subnav.classList.add("active");
         }
 
@@ -230,19 +230,23 @@ async function buildHeader(baseDir = ".") {
     await getLocale();
 
     let headerData = [
-        { "title": jData.locale.common.menu_schedule, "url": "", "drop": [
+        {
+            "title": jData.locale.common.menu_schedule, "url": "", "drop": [
                 { "title": jData.locale.common.submenu_schedule, "url": `${baseDir}/programme.html` },
-                { "title" : jData.locale.common.submenu_gem_count, "url" : `${baseDir}/gems.html` },
-            ] },
-        { "title" : jData.locale.common.menu_sync_pairs, "url": "", "drop": [
-                { "title" : jData.locale.common.submenu_pair_page, "url" : `${baseDir}/duo.html` },
-                { "title": jData.locale.common.submenu_pair_ex_role, "url": `${baseDir}/ex-role.html` },
-                { "title" : jData.locale.common.submenu_skill_gear, "url" : `${baseDir}/skill-gears.html` },
-                { "title" : jData.locale.common.submenu_lucky_skills, "url" : `${baseDir}/lucky-skills.html` },
-                { "title" : jData.locale.common.submenu_superawakening, "url" : `${baseDir}/superawakening.html` },
+                { "title": jData.locale.common.submenu_gem_count, "url": `${baseDir}/gems.html` },
             ]
         },
-        { "title": jData.locale.common.menu_battle_rally, "url": "", "drop": [
+        {
+            "title": jData.locale.common.menu_sync_pairs, "url": "", "drop": [
+                { "title": jData.locale.common.submenu_pair_page, "url": `${baseDir}/duo.html` },
+                { "title": jData.locale.common.submenu_pair_ex_role, "url": `${baseDir}/ex-role.html` },
+                { "title": jData.locale.common.submenu_skill_gear, "url": `${baseDir}/skill-gears.html` },
+                { "title": jData.locale.common.submenu_lucky_skills, "url": `${baseDir}/lucky-skills.html` },
+                { "title": jData.locale.common.submenu_superawakening, "url": `${baseDir}/superawakening.html` },
+            ]
+        },
+        {
+            "title": jData.locale.common.menu_battle_rally, "url": "", "drop": [
                 { "title": jData.locale.common.submenu_rally_role_set, "url": `${baseDir}/rally/role-set.html` }
             ]
         },
@@ -255,22 +259,24 @@ async function buildHeader(baseDir = ".") {
         let params = pageParams;
         params.delete("lang");
         params.append("lang", language);
-        headerData[3]["drop"].push({ "title": jData.locale.common[`submenu_language`][`${language}`], "url": pageUrl.toString().split("?")[0] + "?" + params.toString(), "dataLang" : `${language}` });
+        headerData[3]["drop"].push({ "title": jData.locale.common[`submenu_language`][`${language}`], "url": pageUrl.toString().split("?")[0] + "?" + params.toString(), "dataLang": `${language}` });
     });
 
     let adminHeaderData = [
-        { "title" : jData.locale.common.adminmenu_title, "url": "", "drop": [
-                { "title" : jData.locale.common.adminsubmenu_discord, "url" : `${baseDir}/discord.html` },
-                { "title" : jData.locale.common.adminsubmenu_eventRewards, "url" : `${baseDir}/progress-events.html` },
-                { "title" : jData.locale.common.adminsubmenu_itemExchange, "url" : `${baseDir}/item-exchange.html` },
-                { "title" : jData.locale.common.adminsubmenu_bingo, "url" : `${baseDir}/bingo.html` },
-                { "title" : jData.locale.common.adminsubmenu_lodge, "url" : `${baseDir}/lodge.html` },
+        {
+            "title": jData.locale.common.adminmenu_title, "url": "", "drop": [
+                { "title": jData.locale.common.adminsubmenu_discord, "url": `${baseDir}/discord.html` },
+                { "title": jData.locale.common.adminsubmenu_eventRewards, "url": `${baseDir}/progress-events.html` },
+                { "title": jData.locale.common.adminsubmenu_itemExchange, "url": `${baseDir}/item-exchange.html` },
+                { "title": jData.locale.common.adminsubmenu_bingo, "url": `${baseDir}/bingo.html` },
+                { "title": jData.locale.common.adminsubmenu_lodge, "url": `${baseDir}/lodge.html` },
+                { "title": "Beta Sync Grid", "url": `${baseDir}/duo-beta.html` },
             ]
         }
     ];
 
 
-    if(!isAdminMode) {
+    if (!isAdminMode) {
         isAdminMode = pageUrl.searchParams.get("admin");
 
         if (isAdminMode !== null || adminHeaderData.filter(ahd => ahd.url === currentUrl && ahd.giveAdmin !== null && ahd.giveAdmin === true).length > 0) {
@@ -279,7 +285,7 @@ async function buildHeader(baseDir = ".") {
         }
     }
 
-    if(isAdminMode !== null) {
+    if (isAdminMode !== null) {
         headerData.push(...adminHeaderData);
     }
 
