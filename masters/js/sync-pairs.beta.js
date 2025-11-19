@@ -1576,10 +1576,7 @@ function setGridPicker(ap, gridPickerDiv) {
             initialZoom = null;
             pinchCenterX = null;
             pinchCenterY = null;
-            // Keep manual zoom active for a bit to prevent auto-resize from immediately resetting
-            setTimeout(() => {
-                isManuallyZooming = false;
-            }, 800);
+            // Don't re-enable auto-resize - keep manual zoom control
         }
     });
 
