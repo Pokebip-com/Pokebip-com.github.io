@@ -1434,7 +1434,7 @@ function setGridPicker(ap, gridPickerDiv) {
     gridPickerDiv.style.flexWrap = "wrap"; // Allow wrapping for responsiveness
     gridPickerDiv.style.alignItems = "flex-start"; // Align items to top
 
-    gridWrapper.style.margin = "auto 25px";
+    gridWrapper.style.margin = "0";
     gridWrapper.style.overflow = "auto"; // Enable scrolling for responsiveness
     gridWrapper.style.maxWidth = "100%"; // Ensure it doesn't overflow the screen width
     gridWrapper.style.flex = "0 1 auto"; // Don't grow, allow shrinking. Keeps it close to pickerDiv.
@@ -1537,7 +1537,9 @@ function setGridPicker(ap, gridPickerDiv) {
             );
 
             const scaleFactor = currentDistance / initialPinchDistance;
-            let newZoom = initialZoom * scaleFactor;
+            // Amplify the zoom response for easier zooming (1.5x multiplier)
+            const amplifiedFactor = 1 + (scaleFactor - 1) * 1.5;
+            let newZoom = initialZoom * amplifiedFactor;
 
             // Limit zoom levels
             if (newZoom < 0.2) newZoom = 0.2;
