@@ -1473,6 +1473,13 @@ function setGridPicker(ap, gridPickerDiv) {
         svg.style.transform = `scale(${currentZoom})`;
         gridDiv.style.width = `${totalWidth * currentZoom}px`;
         gridDiv.style.height = `${totalHeight * currentZoom}px`;
+
+        // Dynamic Layout: Expand to full width when zoomed in
+        if (currentZoom > 1.1) {
+            gridWrapper.style.flex = "1 1 100%";
+        } else {
+            gridWrapper.style.flex = "0 1 auto";
+        }
     };
 
     // Auto-resize observer
@@ -1670,6 +1677,12 @@ function setGridPicker(ap, gridPickerDiv) {
 
                 // Position above the tile
                 let top = tileRect.top - tooltipRect.height - 10 + window.scrollY;
+
+                // Flip if going off-screen (top edge)
+                if (top < window.scrollY) {
+                    top = tileRect.bottom + 10 + window.scrollY;
+                    // Adjust arrow direction if possible (requires CSS changes, skipping for now)
+                }
 
                 // Adjust if going off-screen (left edge)
                 if (left < 0) left = 0;
