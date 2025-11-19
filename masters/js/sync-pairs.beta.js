@@ -1520,6 +1520,8 @@ function setGridPicker(ap, gridPickerDiv) {
     // Pinch-to-Zoom Logic
     let initialPinchDistance = null;
     let initialZoom = null;
+    let pinchCenterX = null;
+    let pinchCenterY = null;
 
     gridWrapper.addEventListener("touchstart", (e) => {
         if (e.touches.length === 2) {
@@ -1529,6 +1531,11 @@ function setGridPicker(ap, gridPickerDiv) {
                 e.touches[0].pageY - e.touches[1].pageY
             );
             initialZoom = currentZoom;
+
+            // Calculate pinch center point relative to gridWrapper
+            const rect = gridWrapper.getBoundingClientRect();
+            pinchCenterX = ((e.touches[0].pageX + e.touches[1].pageX) / 2) - rect.left + gridWrapper.scrollLeft;
+            pinchCenterY = ((e.touches[0].pageY + e.touches[1].pageY) / 2) - rect.top + gridWrapper.scrollTop;
         }
     }, { passive: false });
 
@@ -1549,8 +1556,17 @@ function setGridPicker(ap, gridPickerDiv) {
             if (newZoom < 0.2) newZoom = 0.2;
             if (newZoom > 3) newZoom = 3;
 
+            // Calculate scroll adjustment to keep pinch center in place
+            const zoomRatio = newZoom / currentZoom;
+            const newScrollLeft = pinchCenterX * zoomRatio - (pinchCenterX - gridWrapper.scrollLeft);
+            const newScrollTop = pinchCenterY * zoomRatio - (pinchCenterY - gridWrapper.scrollTop);
+
             currentZoom = newZoom;
             updateZoom();
+
+            // Adjust scroll position to zoom at pinch point
+            gridWrapper.scrollLeft = newScrollLeft;
+            gridWrapper.scrollTop = newScrollTop;
         }
     }, { passive: false });
 
@@ -1558,10 +1574,12 @@ function setGridPicker(ap, gridPickerDiv) {
         if (e.touches.length < 2) {
             initialPinchDistance = null;
             initialZoom = null;
+            pinchCenterX = null;
+            pinchCenterY = null;
             // Keep manual zoom active for a bit to prevent auto-resize from immediately resetting
             setTimeout(() => {
                 isManuallyZooming = false;
-            }, 500);
+            }, 800);
         }
     });
 
