@@ -2390,7 +2390,7 @@ function updateFabIcons(trainerId) {
     fabPairIcons.appendChild(pokemonImg);
 }
 
-function selectChange() {
+function selectChange(instantScroll = false) {
     const url = new URL(window.location);
     url.searchParams.delete('monsterId');
     url.searchParams.delete('baseId');
@@ -2413,7 +2413,7 @@ function selectChange() {
 
         window.scrollTo({
             top: offsetPosition,
-            behavior: 'smooth'
+            behavior: instantScroll ? 'auto' : 'smooth'
         });
     }
 }
@@ -2587,8 +2587,37 @@ function renderResults(results) {
 
 function selectPair(value) {
     syncPairSelect.value = value;
+
+    // Close modal immediately for instant feedback
     closeModal();
-    selectChange();
+
+    // Update URL and FAB icons immediately (fast operations)
+    const url = new URL(window.location);
+    url.searchParams.delete('monsterId');
+    url.searchParams.delete('baseId');
+    url.searchParams.delete('formId');
+    url.searchParams.delete('build');
+    url.searchParams.set('pair', value);
+    window.history.pushState(null, '', url.toString());
+
+    updateFabIcons(value);
+
+    // Scroll to top immediately
+    const h1Element = document.querySelector('#syncPairDiv h1');
+    if (h1Element) {
+        const headerHeight = document.getElementById('headerBody')?.offsetHeight || 60;
+        const elementPosition = h1Element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerHeight - 10;
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'auto'
+        });
+    }
+
+    // Load pair data asynchronously (slow operation)
+    setTimeout(() => {
+        setPairInfos(value, false);
+    }, 0);
 }
 
 async function init() {
