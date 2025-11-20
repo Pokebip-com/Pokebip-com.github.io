@@ -2352,6 +2352,44 @@ function setLatestPairs() {
     lastReleasePairsDiv.appendChild(ul);
 }
 
+function updateFabIcons(trainerId) {
+    const fabPairIcons = document.getElementById("fabPairIcons");
+    if (!fabPairIcons) return;
+
+    // Clear existing icons
+    fabPairIcons.innerHTML = "";
+
+    // Find the pair data
+    const pair = allPairs.find(p => p.value === trainerId);
+    if (!pair) return;
+
+    // Create trainer icon wrapper
+    const trainerWrapper = document.createElement("div");
+    trainerWrapper.classList.add("trainer-img");
+
+    const trainerImg = document.createElement("img");
+    trainerImg.src = pair.image;
+    trainerImg.alt = "Trainer";
+    trainerImg.crossOrigin = "anonymous";
+
+    // Apply the same cropping logic as in the modal
+    trainerImg.onload = function () {
+        cropTransparentPixels(trainerImg);
+    };
+
+    trainerWrapper.appendChild(trainerImg);
+    fabPairIcons.appendChild(trainerWrapper);
+
+    // Create Pokémon icon
+    const pokemonImg = document.createElement("img");
+    pokemonImg.classList.add("pokemon-img");
+    pokemonImg.src = pair.pokemonImage;
+    pokemonImg.alt = "Pokémon";
+    pokemonImg.crossOrigin = "anonymous";
+
+    fabPairIcons.appendChild(pokemonImg);
+}
+
 function selectChange() {
     const url = new URL(window.location);
     url.searchParams.delete('monsterId');
@@ -2364,6 +2402,20 @@ function selectChange() {
     window.history.pushState(null, '', url.toString());
 
     setPairInfos(syncPairSelect.value, false);
+    updateFabIcons(syncPairSelect.value);
+
+    // Scroll to the h1 element, accounting for the sticky header
+    const h1Element = document.querySelector('#syncPairDiv h1');
+    if (h1Element) {
+        const headerHeight = document.getElementById('headerBody')?.offsetHeight || 60;
+        const elementPosition = h1Element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerHeight - 10; // 10px extra margin
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
 }
 
 function urlStateChange() {
@@ -2374,6 +2426,7 @@ function urlStateChange() {
         syncPairSelect.value = urlPairId;
 
         setPairInfos(syncPairSelect.value);
+        updateFabIcons(syncPairSelect.value);
 
         const monsterId = url.searchParams.get('monsterId');
         const baseId = url.searchParams.get('baseId');
@@ -2427,7 +2480,7 @@ function cropTransparentPixels(img) {
         // Calculate where the first non-transparent row is
         const cropPercentage = (firstNonTransparentRow / canvas.height) * 100;
 
-        // Strategy: 
+        // Strategy:
         // 1. Set transform-origin to top center so scaling expands downward
         // 2. Use translateY to shift the image so the first non-transparent pixel is at top
         // 3. Add extra offset to move it higher in the circle
@@ -2540,7 +2593,10 @@ async function init() {
     await buildHeader();
     await getData();
 
-    document.getElementById("changePairLabel").innerText = jData.locale.syncPairs.change_pair;
+    // document.getElementById("changePairLabel").innerText = jData.locale.syncPairs.change_pair;
+
+    document.getElementById("pairSelectSpan").innerText = jData.locale.syncPairs.change_pair;
+    document.getElementById("pairSearchInput").placeholder = jData.locale.syncPairs.search_placeholder;
 
     if (isAdminMode) {
         dataArea = document.getElementById("dataArea");
@@ -2579,6 +2635,22 @@ async function init() {
         }
     });
     pairSearchInput.addEventListener("input", (e) => filterPairs(e.target.value));
+
+    // Scroll-to-hide FAB logic
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down - hide FAB
+            openPairSearchBtn.classList.add("hidden");
+        } else {
+            // Scrolling up or at top - show FAB
+            openPairSearchBtn.classList.remove("hidden");
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
 
     urlStateChange();
     window.addEventListener('popstate', () => urlStateChange());

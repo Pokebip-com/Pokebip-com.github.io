@@ -1,5 +1,5 @@
 {
-  "change_pair": "Changer de Duo : ",
+  "change_pair": "Changer de Duo",
   "copy_failure": "Échec de la copie du lien dans le presse-papier. Veuillez réessayer.",
   "copy_success": "Lien copié avec succès dans le presse-papier !",
   "descriptions": "Descriptions",
@@ -28,6 +28,7 @@
   "passive_skills": "Talents passifs",
   "potential_base": "Potentiel\n(Base)",
   "role": "Rôle",
+  "search_placeholder": "Rechercher...",
   "skills_title": "Talents",
   "stats": "Statistiques",
   "stats_settings": "Paramètres",

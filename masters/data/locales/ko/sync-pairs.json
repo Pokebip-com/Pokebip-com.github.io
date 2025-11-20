@@ -1,5 +1,5 @@
 {
-  "change_pair": "Change Sync Pair: ",
+  "change_pair": "Change Sync Pair",
   "copy_failure": "Failed to copy URL to clipboard. Please retry.",
   "copy_success": "URL successfully copied to clipboard!",
   "descriptions": "Descriptions",
@@ -28,6 +28,7 @@
   "passive_skills": "Passive Skills",
   "potential_base": "Potential\n(Base)",
   "role": "Role",
+  "search_placeholder": "Search...",
   "skills_title": "Skills",
   "stats": "Stats",
   "stats_settings": "Settings",
