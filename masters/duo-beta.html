@@ -216,8 +216,8 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.13/html-to-image.js"
+        integrity="sha512-4W7+nCTcMQMFBnTRwvixN7il649NCqZiBfJ7WvzU7gxF12zOnaKwVYTSIzwrjy/cy+CPQxn2lAIVZIes+rPp2Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/dist/FileSaver.min.js"></script>
     <script src="./js/dist/jszip.min.js"></script>
@@ -226,7 +226,23 @@
 <body>
     <div id="contentDiv">
         <div id="tools">
-            <label for="syncPairSelect"><b id="changePairLabel"></b></label> <select id="syncPairSelect"></select>
+            <label for="syncPairSelect" style="display:none"><b id="changePairLabel"></b></label> <select
+                id="syncPairSelect" style="display:none"></select>
+            <button id="openPairSearchBtn" class="blueBtn"
+                style="width: 100%; max-width: 300px; margin-bottom: 10px;">Sélectionner un Duo</button>
+
+            <div id="pairSearchModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Sélectionner un Duo</h3>
+                        <span class="close-modal">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" id="pairSearchInput" placeholder="Rechercher..." autocomplete="off">
+                        <ul id="pairSearchResults"></ul>
+                    </div>
+                </div>
+            </div>
             <br />
             <div id="lastReleasedPairs"></div>
             <fieldset id="adminTools"

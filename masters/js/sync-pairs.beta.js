@@ -24,6 +24,12 @@ let syncPairSelect;
 let syncPairDiv;
 let toolsDiv;
 
+let pairSearchModal;
+let pairSearchInput;
+let pairSearchResults;
+let openPairSearchBtn;
+let allPairs = [];
+
 let landingPairId;
 
 let syncLevel = 5;
@@ -200,16 +206,26 @@ function populateSelect() {
     while (syncPairSelect.length > 0) {
         syncPairSelect.remove(0);
     }
+    allPairs = [];
     let optionData = jData.proto.trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER" && t.scoutMethod !== 3)
         .map(t => {
             let data = {};
             data.value = t.trainerId;
             data.text = getPairName(t.trainerId);
+            data.rarity = getTrainerRarity(t.trainerId);
+            let actorId = getTrainerActorId(t.trainerId);
+            data.image = `./data/actor/Trainer/${actorId}/${actorId}_1024.png`;
+
+            let monsterBaseId = getMonsterBaseIdFromMonsterId(t.monsterId);
+            let pokemonActorId = getMonsterActorIdFromBaseId(monsterBaseId);
+            data.pokemonImage = `./data/actor/Monster/${pokemonActorId}/${pokemonActorId}_256.png`;
+
             return data;
         }).sort((a, b) => a.text.localeCompare(b.text));
 
     for (const opt of optionData) {
         syncPairSelect.add(new Option(opt.text, opt.value));
+        allPairs.push(opt);
     }
 }
 
@@ -1475,6 +1491,7 @@ function setGridPicker(ap, gridPickerDiv) {
     let totalHeight = (yMax - yMin) + 60;
 
     let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.id = "grid";
     svg.setAttribute("width", totalWidth);
     svg.setAttribute("height", totalHeight);
     svg.setAttribute("viewBox", `0 0 ${totalWidth} ${totalHeight}`);
@@ -1946,7 +1963,7 @@ function setGridPicker(ap, gridPickerDiv) {
     exportButton.innerText = jData.locale.syncPairs.sync_grid_export;
     exportButton.classList.add("orangeBtn");
     exportButton.addEventListener("click", () =>
-        domtoimage.toPng(document.getElementById("gridDiv"))
+        htmlToImage.toPng(document.getElementById("grid"))
             .then(function (dataUrl) {
                 saveAs(dataUrl, "sync-grid.png");
             })
@@ -2372,10 +2389,153 @@ function urlStateChange() {
     }
 }
 
+function cropTransparentPixels(img) {
+    // Create a canvas to analyze the image
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    // Set canvas size to match image
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+
+    // Draw the image on the canvas
+    ctx.drawImage(img, 0, 0);
+
+    try {
+        // Get image data
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const data = imageData.data;
+
+        // Find the first row with non-transparent pixels
+        let firstNonTransparentRow = 0;
+        for (let y = 0; y < canvas.height; y++) {
+            let hasNonTransparent = false;
+            for (let x = 0; x < canvas.width; x++) {
+                const index = (y * canvas.width + x) * 4;
+                const alpha = data[index + 3];
+                if (alpha > 10) { // Consider pixels with alpha > 10 as non-transparent
+                    hasNonTransparent = true;
+                    break;
+                }
+            }
+            if (hasNonTransparent) {
+                firstNonTransparentRow = y;
+                break;
+            }
+        }
+
+        // Calculate where the first non-transparent row is
+        const cropPercentage = (firstNonTransparentRow / canvas.height) * 100;
+
+        // Strategy: 
+        // 1. Set transform-origin to top center so scaling expands downward
+        // 2. Use translateY to shift the image so the first non-transparent pixel is at top
+        // 3. Add extra offset to move it higher in the circle
+
+        // Negative translateY moves UP - add extra to position head near top of circle
+        const translateY = -cropPercentage - 30;
+
+        img.style.transformOrigin = 'center top';
+        img.style.transform = `translateY(${translateY}%) scale(3.0)`;
+        // Remove object-position as it conflicts with transform
+        img.style.objectPosition = 'center center';
+    } catch (e) {
+        // If CORS or other error, fall back to default positioning
+        // Apply similar transform to maintain consistent appearance
+        console.warn('Could not analyze image for cropping:', e);
+        img.style.transformOrigin = 'center top';
+        img.style.transform = 'translateY(-20%) scale(3.0)';
+        img.style.objectPosition = 'center center';
+    }
+}
+
+function openModal() {
+    pairSearchModal.style.display = "flex";
+    pairSearchInput.value = "";
+    filterPairs("");
+    pairSearchInput.focus();
+}
+
+function closeModal() {
+    pairSearchModal.style.display = "none";
+}
+
+function filterPairs(query) {
+    const lowerQuery = query.toLowerCase();
+    const results = allPairs.filter(pair => pair.text.toLowerCase().includes(lowerQuery));
+    renderResults(results);
+    pairSearchResults.scrollTop = 0;
+}
+
+function renderResults(results) {
+    pairSearchResults.innerHTML = "";
+    results.forEach(pair => {
+        const li = document.createElement("li");
+        li.addEventListener("click", () => selectPair(pair.value));
+
+        const imagesDiv = document.createElement("div");
+        imagesDiv.classList.add("pair-images");
+
+        // Create wrapper for trainer image to contain the scaled image
+        const trainerWrapper = document.createElement("div");
+        trainerWrapper.classList.add("trainer-img");
+
+        const trainerImg = document.createElement("img");
+        trainerImg.src = pair.image;
+        trainerImg.alt = pair.text;
+        trainerImg.style.width = "100%";
+        trainerImg.style.height = "100%";
+        trainerImg.style.objectFit = "cover";
+
+        // Dynamically crop trainer image to remove transparent pixels from top
+        trainerImg.onload = function () {
+            cropTransparentPixels(trainerImg);
+        };
+
+        trainerWrapper.appendChild(trainerImg);
+        imagesDiv.appendChild(trainerWrapper);
+
+        const pokemonImg = document.createElement("img");
+        pokemonImg.src = pair.pokemonImage;
+        pokemonImg.alt = "Pokémon";
+        pokemonImg.classList.add("pokemon-img");
+        imagesDiv.appendChild(pokemonImg);
+
+        li.appendChild(imagesDiv);
+
+        const infoDiv = document.createElement("div");
+        infoDiv.classList.add("pair-info");
+
+        const starsSpan = document.createElement("span");
+        starsSpan.classList.add("pair-stars");
+        starsSpan.innerHTML = getStarsRarityString(pair.value);
+        infoDiv.appendChild(starsSpan);
+
+        const nameSpan = document.createElement("span");
+        nameSpan.classList.add("pair-name");
+        nameSpan.innerText = pair.text;
+        infoDiv.appendChild(nameSpan);
+
+        li.appendChild(infoDiv);
+        pairSearchResults.appendChild(li);
+    });
+}
+
+function selectPair(value) {
+    syncPairSelect.value = value;
+    closeModal();
+    selectChange();
+}
+
 async function init() {
     syncPairSelect = document.getElementById("syncPairSelect");
     syncPairDiv = document.getElementById("syncPairDiv");
     toolsDiv = document.getElementById('adminTools');
+
+    pairSearchModal = document.getElementById("pairSearchModal");
+    pairSearchInput = document.getElementById("pairSearchInput");
+    pairSearchResults = document.getElementById("pairSearchResults");
+    openPairSearchBtn = document.getElementById("openPairSearchBtn");
 
     await buildHeader();
     await getData();
@@ -2410,6 +2570,15 @@ async function init() {
     setLatestPairs();
 
     syncPairSelect.addEventListener('change', selectChange);
+
+    openPairSearchBtn.addEventListener("click", openModal);
+    document.querySelector(".close-modal").addEventListener("click", closeModal);
+    window.addEventListener("click", (event) => {
+        if (event.target == pairSearchModal) {
+            closeModal();
+        }
+    });
+    pairSearchInput.addEventListener("input", (e) => filterPairs(e.target.value));
 
     urlStateChange();
     window.addEventListener('popstate', () => urlStateChange());
