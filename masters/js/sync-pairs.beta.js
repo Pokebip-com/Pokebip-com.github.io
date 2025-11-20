@@ -2518,10 +2518,25 @@ function closeModal() {
     // Close the modal immediately
     pairSearchModal.style.display = "none";
 
-    // Force viewport recalculation after a brief moment
+    // Wait for keyboard to fully dismiss before recalculating viewport
+    // Use resize event to detect when keyboard is gone
+    let resizeTimeout;
+    const handleResize = () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            // Force viewport recalculation
+            window.scrollTo(window.scrollX, window.scrollY);
+            // Remove listener after handling
+            window.removeEventListener('resize', handleResize);
+        }, 100);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Fallback: if no resize event fires (keyboard wasn't open), clean up after 300ms
     setTimeout(() => {
-        window.scrollTo(window.scrollX, window.scrollY);
-    }, 150);
+        window.removeEventListener('resize', handleResize);
+    }, 300);
 }
 
 function filterPairs(query) {
