@@ -2515,12 +2515,13 @@ function closeModal() {
         pairSearchInput.blur();
     }
 
-    // Small delay to allow keyboard to dismiss and viewport to recalculate
+    // Close the modal immediately
+    pairSearchModal.style.display = "none";
+
+    // Force viewport recalculation after a brief moment
     setTimeout(() => {
-        pairSearchModal.style.display = "none";
-        // Force a reflow to ensure viewport is properly calculated
         window.scrollTo(window.scrollX, window.scrollY);
-    }, 100);
+    }, 150);
 }
 
 function filterPairs(query) {
