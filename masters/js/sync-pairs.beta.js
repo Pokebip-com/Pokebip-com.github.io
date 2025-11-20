@@ -2510,7 +2510,17 @@ function openModal() {
 }
 
 function closeModal() {
-    pairSearchModal.style.display = "none";
+    // Blur the search input to dismiss the mobile keyboard
+    if (pairSearchInput) {
+        pairSearchInput.blur();
+    }
+
+    // Small delay to allow keyboard to dismiss and viewport to recalculate
+    setTimeout(() => {
+        pairSearchModal.style.display = "none";
+        // Force a reflow to ensure viewport is properly calculated
+        window.scrollTo(window.scrollX, window.scrollY);
+    }, 100);
 }
 
 function filterPairs(query) {
