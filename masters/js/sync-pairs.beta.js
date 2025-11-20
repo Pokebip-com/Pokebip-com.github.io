@@ -2602,7 +2602,10 @@ function selectPair(value) {
 
     updateFabIcons(value);
 
-    // Scroll to top immediately
+    // Load pair data immediately (takes less than a second)
+    setPairInfos(value, false);
+
+    // Scroll to top after content is loaded
     const h1Element = document.querySelector('#syncPairDiv h1');
     if (h1Element) {
         const headerHeight = document.getElementById('headerBody')?.offsetHeight || 60;
@@ -2613,11 +2616,6 @@ function selectPair(value) {
             behavior: 'auto'
         });
     }
-
-    // Load pair data asynchronously (slow operation)
-    setTimeout(() => {
-        setPairInfos(value, false);
-    }, 0);
 }
 
 async function init() {
