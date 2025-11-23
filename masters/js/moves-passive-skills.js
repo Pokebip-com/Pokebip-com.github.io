@@ -144,8 +144,11 @@ function setParams(id, descr) {
                 }
                 break;
 
+            case "DE":
             case "EN":
+            case "ES":
             case "FR":
+            case "IT":
                 replaceValue = (paramArray[params.Ref] > 1 ? params.P : params.S);
                 break;
         }
