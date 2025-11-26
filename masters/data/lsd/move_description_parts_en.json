@@ -961,5 +961,14 @@
     "998964": "When the user’s team does not have a sync buff, also reduces the user’s sync move countdown by [Digit:1digit Idx=\"1\" ].",
     "998963": "If the user’s Pidgeot has Mega Evolved, also restores [Digit:1digit Idx=\"2\" ] MP of its [Name:MoveId Idx=\"6159\" ].",
     "998962": "Become Mega Pidgeot until the end of battle.",
-    "998961": "When this move is used or when attacking with this move."
+    "998961": "When this move is used or when attacking with this move.",
+    "998960": "This attack’s power increases 50% when the terrain is [Name:ReferencedMessageTag ].",
+    "998959": "The preparation period is skipped when the user’s [Name:ReferencedMessageTag ] is increased, and the user will attack right away.",
+    "998958": "This attack’s power increases 50% when a terrain applies to the field of play.",
+    "998957": "Turns the field of play’s terrain into [Name:ReferencedMessageTag ] when the terrain is [Name:ReferencedMessageTag ].",
+    "998956": "Turns the field of play’s terrain into [Name:ReferencedMessageTag Idx=\"1\" ] when the terrain is [Name:ReferencedMessageTag Idx=\"1\" ].",
+    "998955": "Turns the field of play’s terrain into [Name:ReferencedMessageTag Idx=\"2\" ] when the terrain is [Name:ReferencedMessageTag Idx=\"2\" ].",
+    "998954": "Increases the [Name:ReferencedMessageTag ] of all allied sync pairs by one to four ranks at random. (The increase is the same for all allied sync pairs.)",
+    "998953": "If the user’s Charizard has Mega Evolved, also increases the user’s [Name:ReferencedMessageTag Idx=\"2\" ] by [Digit:1digit Idx=\"3\" ] [EN:Qty Ref=\"3\" S=\"rank\" P=\"ranks\" ].",
+    "998952": "Become Mega Charizard Y until the end of battle."
 }

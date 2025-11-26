@@ -961,5 +961,14 @@
     "998964": "자신의 볼티지가 올라가 있지 않을 때는 추가로 자신의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 [Digit:1digit Idx=\"1\" ] 줄인다",
     "998963": "추가로 자신이 메가피죤투가 되어있을 때는 자신의 \"[Name:MoveId Idx=\"6159\" ]\"의 횟수를 [Digit:1digit Idx=\"2\" ] 회복한다",
     "998962": "배틀이 끝날 때까지 메가피죤투가 된다",
-    "998961": "이 기술을 사용했을 때\n이 기술로 공격할 때"
+    "998961": "이 기술을 사용했을 때\n이 기술로 공격할 때",
+    "998960": "필드가 [Name:ReferencedMessageTag ]일 때는 위력이 1.5배가 된다",
+    "998959": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 올라가 있을 때는 공격대기 상태가 되지 않고 공격한다",
+    "998958": "필드가 여러 필드 중 하나일 때는 위력이 1.5배가 된다",
+    "998957": "필드가 [Name:ReferencedMessageTag ]일 때는 필드를 [Name:ReferencedMessageTag ][Kor:Particle char=\"ni\" ] 만든다",
+    "998956": "필드가 [Name:ReferencedMessageTag Idx=\"1\" ]일 때는 필드를 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ni\" ] 만든다",
+    "998955": "필드가 [Name:ReferencedMessageTag Idx=\"2\" ]일 때는 필드를 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ni\" ] 만든다",
+    "998954": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 1~4단계 중 하나만큼 오른다\n(같은 편 버디즈 전원이 같은 단계로 오른다)",
+    "998953": "추가로 자신이 메가리자몽Y가 되어있을 때는 자신의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다",
+    "998952": "배틀이 끝날 때까지 메가리자몽Y가 된다"
 }

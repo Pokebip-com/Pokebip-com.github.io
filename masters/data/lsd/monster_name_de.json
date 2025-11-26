@@ -8,6 +8,7 @@
     "20000500": "Glutexo",
     "20000600": "Glurak",
     "20000651": "Mega-Glurak X",
+    "20000652": "Mega-Glurak Y",
     "20000700": "Schiggy",
     "20000800": "Schillok",
     "20000900": "Turtok",
@@ -231,6 +232,7 @@
     "20021200": "Scherox",
     "20021201": "Scherox",
     "20021251": "Mega-Scherox",
+    "20021300": "Pottrott",
     "20021400": "Skaraborn",
     "20021451": "Mega-Skaraborn",
     "20021500": "Sniebel",
@@ -434,6 +436,7 @@
     "20046100": "Snibunna",
     "20046101": "Snibunna",
     "20046200": "Magnezone",
+    "20046300": "Schlurplek",
     "20046401": "Rihornior",
     "20046500": "Tangoloss",
     "20046600": "Elevoltek",
@@ -565,6 +568,7 @@
     "20064400": "Zekrom",
     "20064511": "Demeteros",
     "20064611": "Kyurem",
+    "20064612": "Kyurem",
     "20064712": "Keldeo",
     "20064811": "Meloetta",
     "20064812": "Meloetta",
@@ -860,5 +864,8 @@
     "2000590041": "Arkani",
     "2000580041": "Fukano",
     "2005490041": "Dressella",
-    "2001100031": "Smogmog"
+    "2001100031": "Smogmog",
+    "2010100000": "Eisenblatt",
+    "2010250000": "Infamomo",
+    "2009520000": "Halupenjo"
 }

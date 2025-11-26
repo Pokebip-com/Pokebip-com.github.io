@@ -961,5 +961,14 @@
     "998964": "Cuando el bando del usuario no está lleno de determinación, también se reduce en [Digit:1digit Idx=\"1\" ] el contador de movimientos compi del usuario.",
     "998963": "Si el Pidgeot del usuario ha megaevolucionado, también recupera [Digit:1digit Idx=\"2\" ] PM de su [Name:MoveId Idx=\"6159\" ].",
     "998962": "Evoluciona a Mega-Pidgeot. Vuelve a la normalidad tras terminar el combate.",
-    "998961": "Cuando se usa este movimiento o se ataca con este movimiento."
+    "998961": "Cuando se usa este movimiento o se ataca con este movimiento.",
+    "998960": "La potencia de este ataque aumenta un 50% cuando hay un [Name:ReferencedMessageTag ] activo.",
+    "998959": "Cuando el [Name:ReferencedMessageTag ] del usuario ha aumentado, el usuario atacará al instante.",
+    "998958": "La potencia de este ataque aumenta un 50% cuando se aplica un campo.",
+    "998957": "Crea un [Name:ReferencedMessageTag ] cuando hay un [Name:ReferencedMessageTag ] activo.",
+    "998956": "Crea un [Name:ReferencedMessageTag Idx=\"1\" ] cuando hay un [Name:ReferencedMessageTag Idx=\"1\" ] activo.",
+    "998955": "Crea un [Name:ReferencedMessageTag Idx=\"2\" ] cuando hay un [Name:ReferencedMessageTag Idx=\"2\" ] activo.",
+    "998954": "Aumenta el [Name:ReferencedMessageTag ] de todos los compis aliados de 1 a 4 niveles al azar. (El aumento es el mismo para todos los compis aliados).",
+    "998953": "Si el Charizard del usuario ha megaevolucionado, también aumenta el [Name:ReferencedMessageTag Idx=\"2\" ] del usuario en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ].",
+    "998952": "Evoluciona a Mega-Charizard Y. Vuelve a la normalidad tras terminar el combate."
 }

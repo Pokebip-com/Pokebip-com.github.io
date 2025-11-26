@@ -3713,5 +3713,10 @@
 { "rewardPresetId": 13420, "u2": 1, "rate": 50, "itemIds": [ "750000000747" ], "amounts": [ 1 ], "itemRates": [ 100 ], "u7": 1 },
 { "rewardPresetId": 13421, "u2": 1, "rate": 50, "itemIds": [ "750000000745" ], "amounts": [ 1 ], "itemRates": [ 100 ], "u7": 1 },
 { "rewardPresetId": 13422, "u2": 1, "rate": 50, "itemIds": [ "750000000753" ], "amounts": [ 1 ], "itemRates": [ 100 ], "u7": 1 },
-{ "rewardPresetId": 13423, "u2": 1, "rate": 50, "itemIds": [ "750000000754" ], "amounts": [ 1 ], "itemRates": [ 100 ], "u7": 1 }
+{ "rewardPresetId": 13423, "u2": 1, "rate": 50, "itemIds": [ "750000000754" ], "amounts": [ 1 ], "itemRates": [ 100 ], "u7": 1 },
+{ "rewardPresetId": 13424, "u2": 1, "rate": 50, "itemIds": [ "750000000758" ], "amounts": [ 1 ], "itemRates": [ 100 ], "u7": 1 },
+{ "rewardPresetId": 13425, "u2": 1, "rate": 50, "itemIds": [ "750000000760" ], "amounts": [ 1 ], "itemRates": [ 100 ], "u7": 1 },
+{ "rewardPresetId": 13426, "u2": 1, "rate": 50, "itemIds": [ "750000000763" ], "amounts": [ 1 ], "itemRates": [ 100 ], "u7": 1 },
+{ "rewardPresetId": 13427, "u2": 1, "rate": 50, "itemIds": [ "750000000761" ], "amounts": [ 1 ], "itemRates": [ 100 ], "u7": 1 },
+{ "rewardPresetId": 13428, "u2": 1, "rate": 50, "itemIds": [ "750000000759" ], "amounts": [ 2 ], "itemRates": [ 100 ], "u7": 1 }
 ]}

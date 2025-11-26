@@ -165,25 +165,27 @@ function getSchedule() {
     trainerRarityupBonusUpdate = [...new Set(jData.proto.trainerRarityupBonus.map(trb => trb.scheduleId))];
 
     let usableSchedule = jData.proto.schedule.filter(s =>
-        s.scheduleId === gymStartScheduleId
-        || scoutIds.includes(s.scheduleId)
-        || cyclicRankingIds.includes(s.scheduleId)
-        || eventIds.includes(s.scheduleId)
-        || legendaryBattleIds.includes(s.scheduleId)
-        || mainStoryUpdate.includes(s.scheduleId)
-        || missionGroupIds.includes(s.scheduleId)
-        || salonGuestsUpdate.includes(s.scheduleId)
-        || trainingAreaUpdate.includes(s.scheduleId)
-        || trainerRarityupBonusUpdate.includes(s.scheduleId)
-        || s.scheduleId.startsWith("chara_")
-        || (shopPurchasableIds.includes(s.scheduleId) && !s.scheduleId.includes("_gymstamp_"))
-        || s.scheduleId.endsWith("_musiccoin_FOREVER")
-        || (s.scheduleId.includes("_ChampionBattle_")
-            && !(s.scheduleId.endsWith("_AllPeriod")
-                || s.scheduleId.endsWith("_Emblem")
-                || s.scheduleId.endsWith("FOREVER")
-                || s.scheduleId.endsWith("_option")
-            ))
+        !s.scheduleId.startsWith("QA_") && (
+            s.scheduleId === gymStartScheduleId
+            || scoutIds.includes(s.scheduleId)
+            || cyclicRankingIds.includes(s.scheduleId)
+            || eventIds.includes(s.scheduleId)
+            || legendaryBattleIds.includes(s.scheduleId)
+            || mainStoryUpdate.includes(s.scheduleId)
+            || missionGroupIds.includes(s.scheduleId)
+            || salonGuestsUpdate.includes(s.scheduleId)
+            || trainingAreaUpdate.includes(s.scheduleId)
+            || trainerRarityupBonusUpdate.includes(s.scheduleId)
+            || s.scheduleId.startsWith("chara_")
+            || (shopPurchasableIds.includes(s.scheduleId) && !s.scheduleId.includes("_gymstamp_"))
+            || s.scheduleId.endsWith("_musiccoin_FOREVER")
+            || (s.scheduleId.includes("_ChampionBattle_")
+                && !(s.scheduleId.endsWith("_AllPeriod")
+                    || s.scheduleId.endsWith("_Emblem")
+                    || s.scheduleId.endsWith("FOREVER")
+                    || s.scheduleId.endsWith("_option")
+                ))
+            )
     );
 
     // console.log(jData.proto.schedule.filter(s => s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp && !usableSchedule.includes(s.scheduleId)));
@@ -579,11 +581,12 @@ function getVersionSchedule(versionId) {
     if(ver.schedule)
         return;
 
+    ver.schedule = [];
+
     let idx = jData.custom.versionReleaseDates.indexOf(ver);
 
-    ver.schedule = jData.proto.schedule.filter(s =>
-        s.startDate >= ver.releaseTimestamp
-        && (idx === 0 || s.startDate < jData.custom.versionReleaseDates[idx-1].releaseTimestamp)
+    ver.schedule = [].concat(jData.proto.schedule.filter(s =>
+        s.startDate >= ver.releaseTimestamp && (idx === 0 || s.startDate < jData.custom.versionReleaseDates[idx-1].releaseTimestamp)
     ).map(s => {
         s.isLegendaryBattle = legendaryBattleIds.includes(s.scheduleId);
         s.isHomeAppeal = trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId);
@@ -597,45 +600,10 @@ function getVersionSchedule(versionId) {
         s.isChampionBattle = s.scheduleId.includes("_ChampionBattle_");
         s.isMission = missionGroupIds.includes(s.scheduleId);
         s.isEvent = eventIds.includes(s.scheduleId);
-        //
-        // if(scoutIds.includes(s.scheduleId)) {
-        //     s.scheduleType = { "name" : "scout", "priority": "10" };
-        // }
-        // else if(salonGuestsUpdate.includes(s.scheduleId)) {
-        //     s.scheduleType = { "name" : "salon", "priority": "30" };
-        // }
-        // else if(s.scheduleId.startsWith("chara_") || s.scheduleId === gymStartScheduleId) {
-        //     s.scheduleType = { "name" : "chara", "priority": "40" };
-        // }
-        // else if(s.scheduleId.includes("_Shop_")) {
-        //     s.scheduleType = { "name" : "shop", "priority": "50" };
-        // }
-        // else if(s.scheduleId.endsWith("_musiccoin_FOREVER")) {
-        //     s.scheduleType = { "name" : "music", "priority": "60" };
-        // }
-        // else if(loginBonusIds.includes(s.scheduleId)) {
-        //     s.scheduleType = { "name" : "loginBonus", "priority": "70" };
-        // }
-        // else if(s.scheduleId.includes("_ChampionBattle_")) {
-        //     s.scheduleType = { "name" : "championBattle", "priority": "17" };
-        // }
-        // else if(missionGroupIds.includes(s.scheduleId)) {
-        //     s.scheduleType = { "name" : "mission", "priority": "25" };
-        // }
-        // else {
-        //     s.scheduleType = { "name" : "event", "priority": "20" };
-        //
-        //     if(legendaryBattleIds.includes(s.scheduleId)) {
-        //         s.isLegendaryBattle = true;
-        //     }
-        //     if(trainingAreaUpdate.includes(s.scheduleId) || mainStoryUpdate.includes(s.scheduleId)) {
-        //         s.isHomeAppeal = true;
-        //     }
-        // }
         return s;
-    });
+    }));
 
-    jData.custom.versionReleaseDates[idx].schedule = ver.schedule;
+    //jData.custom.versionReleaseDates[idx].schedule = ver.schedule;
     jData.custom.versionReleaseDates[idx].schedule.push(...getCyclingRankingEvents(idx));
     jData.custom.versionReleaseDates[idx].hasCyclingRankingEventData = true;
     jData.custom.versionReleaseDates[idx].schedule.sort((a, b) => a.startDate.localeCompare(b.startDate));
@@ -1252,6 +1220,7 @@ function printCalendars(startDates) {
         }
 
         calTable.appendChild(calDaysTr);
+
     } while(date <= endDate && (date.getMonth() <= endDate.getMonth() || date.getFullYear() <= endDate.getFullYear()));
 }
 
@@ -1265,6 +1234,7 @@ function setVersionInfos(id) {
 
     let dayFlag, scoutFlag, eventFlag, shopFlag, salonFlag, charaFlag, musicFlag, loginBonusFlag, championBattleFlag,
         missionFlag;
+
     let startDates = [...new Set(version.schedule.map(s => s.startDate))].sort();
 
     let dayDiv, scoutDiv, eventDiv, shopDiv, salonDiv, charaDiv, musicDiv, loginBonusDiv, championBattleDiv, missionDiv;

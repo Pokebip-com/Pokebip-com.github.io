@@ -165,5 +165,7 @@
 { "textTagValueId": "151", "idx": "0", "effectTag": "5", "value": "14" },
 { "textTagValueId": "152", "idx": "0", "effectTag": "5", "value": "15" },
 { "textTagValueId": "153", "idx": "0", "effectTag": "5", "value": "9" },
-{ "textTagValueId": "154", "idx": "0", "effectTag": "5", "value": "16" }
+{ "textTagValueId": "154", "idx": "0", "effectTag": "5", "value": "16" },
+{ "textTagValueId": "155", "idx": "0", "effectTag": "5", "value": "10" },
+{ "textTagValueId": "156", "idx": "0", "effectTag": "5", "value": "17" }
 ]}

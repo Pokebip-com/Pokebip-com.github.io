@@ -271,7 +271,7 @@
     "999668": "La plupart des capacités des ennemis ne peuvent pas toucher le lanceur lorsqu'il rebondit.",
     "999667": "Si le lanceur est attaqué par une capacité Duo ou une capacité Duo Dynamax lorsqu'il rebondit, il cesse de rebondir.",
     "999666": "Quand l'équipe du lanceur n'a pas détermination au maximum, applique au lanceur l'effet Prochain super efficace ↑.",
-    "999665": "Augmente l'Attaque, l'Atq. Spé et la Précision du lanceur de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
+    "999665": "Augmente l'Attaque, l'Atq. Spé et la Précision du lanceur de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
     "999664": "Le lanceur subit des dégâts équivalents à [Digit:2digits Idx=\"2\" ] % de ses PV restants.",
     "999663": "Augmente la Vitesse, la Précision et le taux de critiques du lanceur de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
     "999662": "Augmente l'Atq. Spé. et le taux de critiques du lanceur de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
@@ -961,5 +961,14 @@
     "998964": "Quand l'équipe du lanceur n'a pas détermination au maximum, réduit également de [Digit:1digit Idx=\"1\" ] le nombre d'actions nécessaires pour lancer une capacité Duo pour le lanceur.",
     "998963": "Si le Roucarnage du lanceur a méga-évolué, sa capacité [Name:MoveId Idx=\"6159\" ] regagne également [Digit:1digit Idx=\"2\" ] PPC.",
     "998962": "Permet à Roucarnage de devenir Méga-Roucarnage jusqu'à la fin du combat.",
-    "998961": "Quand cette capacité est utilisée ou en attaquant avec cette capacité."
+    "998961": "Quand cette capacité est utilisée ou en attaquant avec cette capacité.",
+    "998960": "Augmente la puissance de l'attaque de 50 % quand le champ est un [Name:ReferencedMessageTag ].",
+    "998959": "La période de préparation est sautée quand l'[Name:ReferencedMessageTag ] du lanceur a été augmenté, et le lanceur attaque tout de suite.",
+    "998958": "Augmente la puissance de l'attaque de 50 % quand un champ s'applique.",
+    "998957": "Transforme le champ en un [Name:ReferencedMessageTag ] quand le champ est un [Name:ReferencedMessageTag ].",
+    "998956": "Transforme le champ en un [Name:ReferencedMessageTag Idx=\"1\" ] quand le champ est un [Name:ReferencedMessageTag Idx=\"1\" ].",
+    "998955": "Transforme le champ en un [Name:ReferencedMessageTag Idx=\"2\" ] quand le champ est un [Name:ReferencedMessageTag Idx=\"2\" ].",
+    "998954": "Augmente l'[Name:ReferencedMessageTag ] de tous les Duos alliés de 1 à 4 rangs, aléatoirement. (L'augmentation est la même pour tous les Duos alliés.)",
+    "998953": "Si le Dracaufeu du lanceur a méga-évolué, augmente également l'[Name:ReferencedMessageTag Idx=\"2\" ] du lanceur de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ].",
+    "998952": "Permet à Dracaufeu de devenir Méga-Dracaufeu Y jusqu'à la fin du combat."
 }

@@ -961,5 +961,14 @@
     "998964": "當自己的氣魄沒有提高時，還會讓自己發動拍組招式所需的行動數減少[Digit:1digit Idx=\"1\" ]次。",
     "998963": "當大比鳥已經變成超級大比鳥時，還會再幫自己的「[Name:MoveId Idx=\"6159\" ]」的使用次數回復[Digit:1digit Idx=\"2\" ]次。",
     "998962": "變成超級大比鳥直到對戰結束。",
-    "998961": "使出此招式時\n使出此招式攻擊時"
+    "998961": "使出此招式時\n使出此招式攻擊時",
+    "998960": "當場地為[Name:ReferencedMessageTag ]時，威力會變成１．５倍。",
+    "998959": "自己的[Name:ReferencedMessageTag ]處於提高狀態時，會跳過等待攻擊狀態直接使出攻擊。",
+    "998958": "當場地為任一場地時，威力會變成１．５倍。",
+    "998957": "當場地為[Name:ReferencedMessageTag ]時，會將場地變成[Name:ReferencedMessageTag ]。",
+    "998956": "當場地為[Name:ReferencedMessageTag Idx=\"1\" ]時，會將場地變成[Name:ReferencedMessageTag Idx=\"1\" ]。",
+    "998955": "當場地為[Name:ReferencedMessageTag Idx=\"2\" ]時，會將場地變成[Name:ReferencedMessageTag Idx=\"2\" ]。",
+    "998954": "使我方全體拍組的[Name:ReferencedMessageTag ]從１～４提高任一階段。\n（我方全體拍組皆提高相同階段。）",
+    "998953": "當噴火龍已經變成超級噴火龍Y時，還會再提高自己的[Name:ReferencedMessageTag Idx=\"2\" ][Digit:1digit Idx=\"3\" ]階段。",
+    "998952": "變成超級噴火龍Y直到對戰結束。"
 }

@@ -8,6 +8,7 @@
     "20000500": "Reptincel",
     "20000600": "Dracaufeu",
     "20000651": "Méga-Dracaufeu X",
+    "20000652": "Méga-Dracaufeu Y",
     "20000700": "Carapuce",
     "20000800": "Carabaffe",
     "20000900": "Tortank",
@@ -231,6 +232,7 @@
     "20021200": "Cizayox",
     "20021201": "Cizayox",
     "20021251": "Méga-Cizayox",
+    "20021300": "Caratroc",
     "20021400": "Scarhino",
     "20021451": "Méga-Scarhino",
     "20021500": "Farfuret",
@@ -434,6 +436,7 @@
     "20046100": "Dimoret",
     "20046101": "Dimoret",
     "20046200": "Magnézone",
+    "20046300": "Coudlangue",
     "20046401": "Rhinastoc",
     "20046500": "Bouldeneu",
     "20046600": "Élekable",
@@ -565,6 +568,7 @@
     "20064400": "Zekrom",
     "20064511": "Démétéros",
     "20064611": "Kyurem",
+    "20064612": "Kyurem",
     "20064712": "Keldeo",
     "20064811": "Meloetta",
     "20064812": "Meloetta",
@@ -860,5 +864,8 @@
     "2000590041": "Arcanin",
     "2000580041": "Caninos",
     "2005490041": "Fragilady",
-    "2001100031": "Smogogo"
+    "2001100031": "Smogogo",
+    "2010100000": "Vert-de-Fer",
+    "2010250000": "Pêchaminus",
+    "2009520000": "Scovilain"
 }

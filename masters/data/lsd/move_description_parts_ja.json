@@ -961,5 +961,14 @@
     "998964": "自分のボルテージがあがっていないときはさらに自分のバディーズわざ発動可能状態までのカウントを[Digit:1digit Idx=\"1\" ]減らす",
     "998963": "自分がメガピジョットになっているときはさらに自分の「[Name:MoveId Idx=\"6159\" ]」の回数を[Digit:1digit Idx=\"2\" ]回復する",
     "998962": "バトル終了までメガピジョットになる",
-    "998961": "この技をつかったとき\nこの技で攻撃するとき"
+    "998961": "この技をつかったとき\nこの技で攻撃するとき",
+    "998960": "フィールドが[Name:ReferencedMessageTag ]のときは威力が１．５倍になる",
+    "998959": "自分の[Name:ReferencedMessageTag ]があがっているときは攻撃待機状態にならず攻撃する",
+    "998958": "フィールドがいずれかのフィールドのときは威力が１．５倍になる",
+    "998957": "フィールドが[Name:ReferencedMessageTag ]のときはフィールドを[Name:ReferencedMessageTag ]にする",
+    "998956": "フィールドが[Name:ReferencedMessageTag Idx=\"1\" ]のときはフィールドを[Name:ReferencedMessageTag Idx=\"1\" ]にする",
+    "998955": "フィールドが[Name:ReferencedMessageTag Idx=\"2\" ]のときはフィールドを[Name:ReferencedMessageTag Idx=\"2\" ]にする",
+    "998954": "味方のバディーズ全員の[Name:ReferencedMessageTag ]を１～４段階のいずれかの量をあげる\n（味方のバディーズ全員が同じ段階あがる）",
+    "998953": "自分がメガリザードンＹになっているときはさらに自分の[Name:ReferencedMessageTag Idx=\"2\" ]を[Digit:1digit Idx=\"3\" ]段階あげる",
+    "998952": "バトル終了までメガリザードンＹになる"
 }

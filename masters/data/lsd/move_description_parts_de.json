@@ -961,5 +961,14 @@
     "998964": "Wenn die Spannung des Anwenders nicht gesteigert ist, wird zusätzlich der Wert des Gefährtenattacken-\nCountdowns des Anwenders um [Digit:1digit Idx=\"1\" ] reduziert.",
     "998963": "Wenn das Tauboss des Anwenders die Mega-Entwicklung erreicht hat, werden auch die Attackeneinsatzpunkte (AEP) seiner Attacke [Name:MoveId Idx=\"6159\" ] um [Digit:1digit Idx=\"2\" ] [DE:Qty Ref=\"2\" S=\"Attackeneinsatzpunkt\" P=\"Attackeneinsatzpunkte\" ] (AEP) aufgefüllt.",
     "998962": "Löst bei Tauboss bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Tauboss aus.",
-    "998961": "Wenn diese Attacke eingesetzt wird oder wenn mit dieser Attacke angegriffen wird."
+    "998961": "Wenn diese Attacke eingesetzt wird oder wenn mit dieser Attacke angegriffen wird.",
+    "998960": "Die Stärke dieses Angriffs steigt um 50 %, wenn ein [Name:ReferencedMessageTag ] aktiv ist.",
+    "998959": "Wenn der [Name:ReferencedMessageTag ] des Anwenders erhöht ist, geht der Anwender nicht in Angriffsbereitschaft und greift stattdessen sofort an.",
+    "998958": "Die Stärke dieses Angriffs steigt um 50 %, wenn ein Feld aktiv ist.",
+    "998957": "Erzeugt ein [Name:ReferencedMessageTag ], wenn ein [Name:ReferencedMessageTag ] aktiv ist.",
+    "998956": "Erzeugt ein [Name:ReferencedMessageTag Idx=\"1\" ], wenn ein [Name:ReferencedMessageTag Idx=\"1\" ] aktiv ist.",
+    "998955": "Erzeugt ein [Name:ReferencedMessageTag Idx=\"2\" ], wenn ein [Name:ReferencedMessageTag Idx=\"2\" ] aktiv ist.",
+    "998954": "Erhöht den [Name:ReferencedMessageTag ] aller verbündeten Gefährten zufällig um 1 bis 4. (Die Erhöhung ist für alle verbündeten Gefährten gleich.)",
+    "998953": "Wenn das Glurak des Anwenders die Mega-Entwicklung erreicht hat, erhöht sich der [Name:ReferencedMessageTag Idx=\"2\" ] des Anwenders auch um [Digit:1digit Idx=\"3\" ].",
+    "998952": "Löst bei Glurak bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Glurak Y aus."
 }

@@ -8,6 +8,7 @@
     "20000500": "Charmeleon",
     "20000600": "Charizard",
     "20000651": "Mega Charizard X",
+    "20000652": "Mega Charizard Y",
     "20000700": "Squirtle",
     "20000800": "Wartortle",
     "20000900": "Blastoise",
@@ -231,6 +232,7 @@
     "20021200": "Scizor",
     "20021201": "Scizor",
     "20021251": "Mega Scizor",
+    "20021300": "Shuckle",
     "20021400": "Heracross",
     "20021451": "Mega Heracross",
     "20021500": "Sneasel",
@@ -434,6 +436,7 @@
     "20046100": "Weavile",
     "20046101": "Weavile",
     "20046200": "Magnezone",
+    "20046300": "Lickilicky",
     "20046401": "Rhyperior",
     "20046500": "Tangrowth",
     "20046600": "Electivire",
@@ -565,6 +568,7 @@
     "20064400": "Zekrom",
     "20064511": "Landorus",
     "20064611": "Kyurem",
+    "20064612": "Kyurem",
     "20064712": "Keldeo",
     "20064811": "Meloetta",
     "20064812": "Meloetta",
@@ -860,5 +864,8 @@
     "2000590041": "Arcanine",
     "2000580041": "Growlithe",
     "2005490041": "Lilligant",
-    "2001100031": "Weezing"
+    "2001100031": "Weezing",
+    "2010100000": "Iron Leaves",
+    "2010250000": "Pecharunt",
+    "2009520000": "Scovillain"
 }

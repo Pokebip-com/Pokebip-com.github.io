@@ -440,7 +440,7 @@
     "7020_1W_BSearch_Variety": "¡Llega Paul para celebrar una\ncolaboración especial!\n¡Su habilidad pasiva hace que sus\nmovimientos ataquen a todos los\nrivales!",
     "7020_1W_BSearch_Master_Paid_1": "¡Llega Aura con un traje digno\nde una campeona en una pareja\nde compis maestros! ¡Puedes\nconseguir regalos en el recl.\ndestacado con joyas de pago!",
     "7020_1W_BSearch_Master_Paid_2": "¡Llega Bruno con un traje digno\nde un campeón en una pareja de\ncompis maestros! ¡Puedes\nconseguir regalos en el recl.\ndestacado con joyas de pago!",
-    "7020_2W_BSearch_Master": "¡Reclutamiento triple del\nPokéfestival! ¡Vuelven tres\npoderosas parejas de compis\nmaestros!",
+    "7020_2W_BSearch_Master": "¡Reclutamiento triple del\nPokéfestival maestro! ¡Vuelven\ntres poderosas parejas de compis\nmaestros!",
     "7020_2W_BSearch_Master_Paid": "¡Vuelve Máximo en una pareja de\ncompis maestros y con nuevas\ncasillas en su Tablero de la\nPiedra Compi!",
     "7020_2W_BSearch_Fes_2": "¡Es la ocasión de unir fuerzas con\ncompis de tipo Eléctrico y Tierra!\n¡Vuelven tres parejas de\nfesticompis de estos tipos!",
     "7020_3W_BSearch_Fes": "¡N fortalece sus vínculos y llega\nen una pareja de archicompis!\n¡Puedes conseguir regalos en el\nreclutamiento destacado con joyas\nde pago!",
@@ -522,5 +522,14 @@
     "event_7100_3W_SpecialCos_01": "¡Yasmina estrena su uniforme\nde la Academia de Passio!\n¡Puedes conseguir regalos en el\nreclutamiento por fases!",
     "event_7100_3W_SpecialCos_06": "¡Naboru estrena traje de profesor\nde la Academia de Passio!\n¡Puedes conseguir regalos en el\nreclutamiento por fases!",
     "event_7100_4W_MasterFes_06": "¡Reclutamiento doble del\nPokéfestival maestro! ¡Vuelven\ndos poderosas parejas de compis\nmaestros!",
-    "event_7100_5W_MasterFes_04": "¡Reclutamiento triple del\nPokéfestival maestro! ¡Vuelven\ntres poderosas parejas de compis\nmaestros!"
+    "event_7100_5W_MasterFes_04": "¡Reclutamiento triple del\nPokéfestival maestro! ¡Vuelven\ntres poderosas parejas de compis\nmaestros!",
+    "event_7110_1W_Monthly_02": "¡N, destacado! ¡Es tu ocasión de\nunir fuerzas con parejas de compis\nque pueden visitar el Salón de\nEntrenadores!",
+    "event_7110_1W_MasterExFes_02": "¡Llega Lucho con un traje digno\nde un campeón en una pareja de\nfesticompis maestros EX! ¡Puedes\nconseguir regalos en el recl.\ndestacado con joyas de pago!",
+    "event_7110_1W_MasterExFes_04": "¡Llega Liza con un traje digno de\nuna campeona en una pareja de\nfesticompis maestros EX! ¡Puedes\nconseguir regalos en el recl.\ndestacado con joyas de pago!",
+    "event_7110_2W_Variety_01": "¡Llega Lance con un nuevo compi\nPokémon!\n¡Puedes conseguir regalos en el\nreclutamiento destacado (solo 3)!",
+    "event_7110_2W_UltimateFes_03": "¡Vuelve Lionel (Architraje)!\n¡Puedes conseguir regalos\nen el reclutamiento destacado\ncon joyas de pago!",
+    "event_7110_3W_Season_01": "¡Damián se ha puesto un delantal\nmuy festivo! ¡Puedes conseguir\nregalos en el reclutamiento\ndestacado con joyas de pago!",
+    "event_7110_3W_Season_02": "¡Vuelven compis de temporada\ncon sus trajes invernales!\n¡Reclutamiento por fases en curso!",
+    "event_7110_4W_MasterFes_04": "¡Reclutamiento triple del\nPokéfestival maestro! ¡Vuelven\ntres poderosas parejas de compis\nmaestros!",
+    "event_7110_4W_MasterExFes_06": "¡Llega Corin (Traje S) al\nPokéfestival maestro EX!\n¡Puedes conseguir regalos\nen el reclutamiento destacado\ncon joyas de pago!"
 }
