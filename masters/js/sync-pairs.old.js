@@ -31,6 +31,123 @@ let maxEnergy = 60;
 
 const NOT_IMPLEMENTED = [ "10101420000", "10286000001" ];
 
+class SyncGridShareManager {
+
+    constructor() {
+        this.paramName = 'build';
+    }
+
+    init(container) {
+        this.container = container ?? document;
+        this.refresh();
+        this.observer = new MutationObserver((list) => {
+            for(const m of list) {
+                if(m.type === "attributes" && m.attributeName === "selected") {
+                    this.dirty = true
+                    break;
+                }
+            }
+        });
+        this.observer.observe(this.container, {
+            subtree: true,
+            attributes: true,
+            attributeFilter: ["selected"]
+        });
+    }
+
+    refresh() {
+        this.cells = Array.from(document.querySelectorAll("svg[data-cell-id]"));
+        this.sorted = [...this.cells].sort((a,b) => BigInt(this.getCellId(a)) < BigInt(this.getCellId(b)) ? -1 : 1);
+        this.indexById = new Map(this.sorted.map((el,idx) => [this.getCellId(el), idx]));
+        this.dirty = false;
+    }
+
+    b64urlEncode(bytes) {
+        let bin = '';
+        bytes.forEach(b => bin += String.fromCharCode(b));
+        return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    }
+
+    b64urlDecode(b64u) {
+        const b64 = b64u.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((b64u.length + 3) % 4);
+        const bin = atob(b64);
+        const out = new Uint8Array(bin.length);
+        for (let i=0;i<bin.length;i++) out[i] = bin.charCodeAt(i);
+        return out;
+    }
+
+    encodeState() {
+        const n = this.sorted.length;
+        const bytes = new Uint8Array(Math.ceil(n/8));
+        for (const el of this.sorted) {
+            const idx = this.indexById.get(this.getCellId(el));
+            const selected = el.hasAttribute('selected');
+            if (selected) bytes[idx>>3] |= (1 << (idx & 7));
+        }
+        return this.b64urlEncode(bytes);
+    }
+
+    applyState(token) {
+        const bytes = this.b64urlDecode(token);
+        for (const el of this.sorted) {
+            const idx = this.indexById.get(this.getCellId(el));
+            const bit = (bytes[idx>>3] >> (idx & 7)) & 1;
+            if (bit) changeSelection(el);
+        }
+    }
+
+    readTokenFromURL() {
+        const url = new URL(location.href);
+        return url.searchParams.get(this.paramName);
+    }
+
+    buildShareURL() {
+        if(this.dirty)
+            this.refresh();
+
+        const url = new URL(location.href);
+        let state = this.encodeState();
+        if (state !== "") {
+            url.searchParams.set(this.paramName, this.encodeState());
+        }
+        return url.toString();
+    }
+
+    getCellId = (el) => el.dataset.cellId ?? null;
+
+    copyUrl = async () => {
+        const text = this.buildShareURL();
+        try {
+            await navigator.clipboard.writeText(text);
+            return true;
+        } catch {
+            const ta = document.createElement("textarea");
+            ta.value = text;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "absolute";
+            ta.style.left = "-9999px";
+            document.body.appendChild(ta);
+            ta.select();
+            const isDoneOk = document.execCommand && document.execCommand("copy");
+            document.body.removeChild(ta);
+            return !!isDoneOk;
+        }
+    }
+
+    shareBuild = async () => {
+        const url = this.buildShareURL();
+        if (navigator.share) {
+            try {
+                await navigator.share({ title: document.title, url });
+            } catch {}
+        } else {
+            await this.copyUrl();
+        }
+    }
+}
+
+const syncGridShareManager = new SyncGridShareManager();
+
 async function getData() {
 
     // PROTO
@@ -43,6 +160,8 @@ async function getData() {
     jsonCache.preloadProto("MonsterEnhancement");
     jsonCache.preloadProto("MonsterEvolution");
     jsonCache.preloadProto("MonsterVariation");
+    jsonCache.preloadProto("PotentialItem");
+    jsonCache.preloadProto("PotentialLot");
     jsonCache.preloadProto("Schedule");
     jsonCache.preloadProto("SpecialAwakingEffect");
     jsonCache.preloadProto("TeamSkill");
@@ -62,6 +181,7 @@ async function getData() {
 
     // Locale
     jsonCache.preloadLocale("sync-pairs");
+    jsonCache.preloadLocale("lucky-skills");
 
     // Custom
     jsonCache.preloadCustom("version_release_dates");
@@ -275,7 +395,7 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
 
     tr.appendChild(th);
 
-    let pointBIdx = breakPointLevels.findIndex((a) => a > level);
+    let pointBIdx = breakPointLevels.findIndex((a) => a >= level);
     let pointAIdx = pointBIdx - 1;
 
     let buildupParameter = jData.proto.trainerBuildupParameter.filter(tbp => tbp.trainerId === syncPairSelect.value);
@@ -387,6 +507,7 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
     defaultLevels.appendChild(new Option("", "135"));
     defaultLevels.appendChild(new Option("", "140"));
     defaultLevels.appendChild(new Option("", "150"));
+    defaultLevels.appendChild(new Option("", "200"));
     toolFieldset.appendChild(defaultLevels);
 
     let lvlP = document.createElement("p");
@@ -401,9 +522,9 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
 
     let lvlInput = document.createElement("input");
     lvlInput.type = "number";
-    lvlInput.value = "150";
+    lvlInput.value = "200";
     lvlInput.min = "1";
-    lvlInput.max = "150";
+    lvlInput.max = "200";
     lvlInput.id = "levelInput";
     lvlInput.style.display = "table-cell";
     lvlInput.style.marginLeft = "5px";
@@ -482,7 +603,7 @@ function setPairPassives(contentDiv, variation = null) {
         let row = document.createElement("tr");
 
         let nameCell = document.createElement("td");
-        nameCell.innerHTML = `<img src="./data/sync-grids/icons/transcendance.png" style="width: 25px; vertical-align: top;" /> ${getPassiveSkillName(specialAwaking['passiveSkillId'])}`;
+        nameCell.innerHTML = `<img src="./data/sync-grids/icons/transcendance.png" style="width: 25px; vertical-align: top;" /> ${getDetailedPassiveSkillName(specialAwaking['passiveSkillId'])}`;
         row.appendChild(nameCell);
 
         let descrCell = document.createElement("td");
@@ -501,7 +622,7 @@ function setPairPassives(contentDiv, variation = null) {
         let row = document.createElement("tr");
 
         let nameCell = document.createElement("td");
-        nameCell.innerText = getPassiveSkillName(passiveId);
+        nameCell.innerHTML = getDetailedPassiveSkillName(passiveId);
         row.appendChild(nameCell);
 
         let descrCell = document.createElement("td");
@@ -605,6 +726,91 @@ function setPairSuperAwakening(contentDiv) {
         row.appendChild(effectCell);
         table.appendChild(row);
     }
+
+    contentDiv.appendChild(table);
+}
+
+function getCookieItemImage(cookie) {
+    return getItemImage(cookie.imageId, cookie.rarity);
+}
+
+function getCookieName(cookie) {
+    if(cookie.potentialItemName === "")
+        return jData.lsd.potentialItemName[cookie.itemId];
+
+    return jData.lsd.potentialItemName[cookie.potentialItemName].replace("[Name:TrainerNameAndType ]", getTrainerName(cookie.trainerId));
+}
+
+function setPairLuckySkills(contentDiv) {
+    let luckySkills = jData.proto.potentialItem.filter(pi => pi.trainerId === syncPairSelect.value);
+
+    if(luckySkills.length === 0)
+        return;
+
+    contentDiv.appendChild(document.createElement("br"));
+
+    let table = document.createElement("table");
+    table.classList.add("bipcode");
+    table.style.textAlign = "center";
+
+    let lsTitleRow = document.createElement("tr");
+    let lsTitleCell = document.createElement("th");
+    lsTitleCell.innerText = jData.locale.common.submenu_lucky_skills;
+    lsTitleCell.colSpan = 4;
+    lsTitleRow.appendChild(lsTitleCell);
+    table.appendChild(lsTitleRow);
+
+    let titleRow = document.createElement("tr");
+    let imageTitleCell = document.createElement("th");
+    imageTitleCell.innerText = jData.locale.luckySkills.trainer_cookies;
+    let nameTitleCell = document.createElement("th");
+    nameTitleCell.innerText = jData.locale.luckySkills.passive_name_title;
+    let descriptionTitleCell = document.createElement("th");
+    descriptionTitleCell.innerText = jData.locale.luckySkills.passive_descr_title;
+    let dropRateTitleCell = document.createElement("th");
+    dropRateTitleCell.innerText = jData.locale.luckySkills.passive_drop_rate_title;
+
+    titleRow.appendChild(imageTitleCell);
+    titleRow.appendChild(nameTitleCell);
+    titleRow.appendChild(descriptionTitleCell);
+    titleRow.appendChild(dropRateTitleCell);
+    table.appendChild(titleRow);
+
+    luckySkills.forEach(ls => {
+        let lot = jData.proto.potentialLot.filter(pl => parseInt(pl.potentialLotId) === ls.potentialLotId);
+        let lotFullRate = lot.reduce((acc, val) => acc + val.rate, 0);
+
+        let cookieTD = document.createElement("td");
+        cookieTD.appendChild(getCookieItemImage(ls));
+        cookieTD.appendChild(document.createElement("br"));
+        let bTag = document.createElement("b");
+        bTag.innerText = getCookieName(ls);
+        cookieTD.appendChild(bTag);
+
+        cookieTD.rowSpan = lot.length;
+
+        for(let i = 0; i < lot.length; i++) {
+            let row = document.createElement("tr");
+
+            if(i === 0)
+                row.appendChild(cookieTD);
+
+            let nameTD = document.createElement("td");
+            nameTD.innerHTML = getDetailedPassiveSkillName(lot[i].potentialId);
+
+            let descriptionTD = document.createElement("td");
+            descriptionTD.innerHTML = getPassiveSkillDescr(lot[i].potentialId);
+
+            let dropRateTD = document.createElement("td");
+            dropRateTD.innerText = `${Math.round(lot[i].rate / lotFullRate * 100)}%`;
+
+            row.appendChild(nameTD);
+            row.appendChild(descriptionTD);
+            row.appendChild(dropRateTD);
+
+            table.appendChild(row);
+        }
+    });
 
     contentDiv.appendChild(table);
 }
@@ -769,6 +975,10 @@ function getSyncMoveRow(syncMoveId, tr) {
     powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power * 1.2)}` : "—";
     row.appendChild(powerCell);
 
+    let targetCell = document.createElement("td");
+    targetCell.innerText = jData.lsd.moveTargetType[targetToId[mov.target]] || "—";
+    row.appendChild(targetCell);
+
     let effectCell = document.createElement("td");
     effectCell.innerText = getMoveDescr(syncMoveId);
     row.appendChild(effectCell);
@@ -923,6 +1133,69 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
         contentDiv.appendChild(table);
     }
 
+    // Capacité Teracristal
+    let teraMove = jData.proto.monsterVariation.find(mv => mv.monsterId === monsterId && mv.terastalMoveId > 0);
+
+    if (teraMove) {
+        contentDiv.appendChild(document.createElement("br"));
+
+        let table = document.createElement("table");
+        table.classList.add("bipcode");
+        table.style.textAlign = "center";
+
+        let titleRow = document.createElement("tr");
+
+        let titleTera = document.createElement("th");
+        titleTera.innerText = jData.locale.syncPairs.tera_move;
+        titleTera.colSpan = 9;
+        titleRow.appendChild(titleTera);
+        table.appendChild(titleRow);
+
+        let headRow = document.createElement("tr");
+
+        let headName = document.createElement("th");
+        headName.innerText = jData.locale.syncPairs.move_name;
+        headRow.appendChild(headName);
+
+        let headType = document.createElement("th");
+        headType.innerText = jData.locale.syncPairs.move_type;
+        headRow.appendChild(headType);
+
+        let headCategory = document.createElement("th");
+        headCategory.innerText = jData.locale.syncPairs.move_category;
+        headRow.appendChild(headCategory);
+
+        let headPower = document.createElement("th");
+        headPower.innerText = jData.locale.syncPairs.move_power;
+        headRow.appendChild(headPower);
+
+        let headAccuracy = document.createElement("th");
+        headAccuracy.innerText = jData.locale.syncPairs.move_accuracy;
+        headRow.appendChild(headAccuracy);
+
+        let headGauges = document.createElement("th");
+        headGauges.innerText = jData.locale.syncPairs.move_gauge;
+        headRow.appendChild(headGauges);
+
+        let headTarget = document.createElement("th");
+        headTarget.innerText = jData.locale.syncPairs.move_target;
+        headRow.appendChild(headTarget);
+
+        let headEffect = document.createElement("th");
+        headEffect.innerText = jData.locale.syncPairs.move_description;
+        headRow.appendChild(headEffect);
+
+        let headLimit = document.createElement("th");
+        headLimit.innerText = jData.locale.syncPairs.move_uses;
+        headRow.appendChild(headLimit);
+
+        table.appendChild(headRow);
+
+        table.appendChild(getMoveRow(teraMove.terastalMoveId));
+
+        contentDiv.appendChild(table);
+    }
+
     contentDiv.appendChild(document.createElement("br"));
 
     table = document.createElement("table");
@@ -933,7 +1206,7 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
 
     let titleSync = document.createElement("th");
     titleSync.innerText = jData.locale.syncPairs.sync_move;
-    titleSync.colSpan = 5 + hasExUnlocked(syncPairSelect.value) + hasExRoleUnlocked(syncPairSelect.value);
+    titleSync.colSpan = 6 + hasExUnlocked(syncPairSelect.value) + hasExRoleUnlocked(syncPairSelect.value);
     titleRow.appendChild(titleSync);
     table.appendChild(titleRow);
 
@@ -954,6 +1227,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     let syncHeadPower = document.createElement("th");
     syncHeadPower.innerText = jData.locale.syncPairs.move_power;
     headRow.appendChild(syncHeadPower);
+
+    let syncHeadTarget = document.createElement("th");
+    syncHeadTarget.innerText = jData.locale.syncPairs.move_target;
+    headRow.appendChild(syncHeadTarget);
 
     let syncHeadEffect = document.createElement("th");
     syncHeadEffect.innerText = jData.locale.syncPairs.move_description;
@@ -1002,9 +1279,9 @@ function appendGridCategory(table, panels, category) {
 
         let ameliorationCell = document.createElement("td");
 
-        ameliorationCell.innerText = jData.lsd.abilityName[p.ability.type]
+        ameliorationCell.innerHTML = jData.lsd.abilityName[p.ability.type]
                 .replace("[Digit:5digits ]", "+" + p.ability.value)
-                .replace("[Name:Ability ]", getPassiveSkillName(p.ability.passiveId))
+                .replace("[Name:Ability ]", getDetailedPassiveSkillName(p.ability.passiveId))
                 .replace("[Name:Move ]", jData.lsd.moveName[p.ability.moveId]).replace("\n", " ");
 
 
@@ -1042,7 +1319,7 @@ function appendGridCategory(table, panels, category) {
 function suppressCellData(cell) {
     let orbCell = document.getElementById("orbCell");
     let energyCell = document.getElementById("energyCell");
-    let cellId = cell.getAttribute("data-cellId");
+    let cellId = cell.getAttribute("data-cell-id");
     let tileDiv = document.getElementById(`tile-${cellId}`);
 
     cell.removeAttribute("selected");
@@ -1055,7 +1332,7 @@ function suppressCellData(cell) {
 function setTileBackground(div) {
 
     let tileIcon;
-    let panelType = div.getAttribute("data-panelType") || div.getAttribute("data-category");
+    let panelType = div.getAttribute("data-panel-type") || div.getAttribute("data-category");
     let dataLevel = div.getAttribute("data-level");
 
     if(dataLevel && dataLevel > syncLevel) {
@@ -1094,11 +1371,14 @@ function changeSelection(div) {
     else {
         let orbCell = document.getElementById("orbCell");
         let energyCell = document.getElementById("energyCell");
-        let cellId = div.getAttribute("data-cellId");
+        let cellId = div.getAttribute("data-cell-id");
         let tilesCell = document.getElementById("tilesCell");
         let tileDiv = document.createElement("div");
+
+        const passiveId = div.getAttribute("data-passive-id");
+
         tileDiv.id = `tile-${cellId}`;
-        tileDiv.innerText = div.getAttribute("data-tileName");
+        tileDiv.innerHTML = passiveId === "0" ? div.getAttribute("data-tile-name") : getDetailedPassiveSkillName(passiveId);
         tileDiv.style.background = "rgba(0, 0, 0, 0.1)";
         tileDiv.style.margin = "3px auto";
 
@@ -1111,6 +1391,8 @@ function changeSelection(div) {
     }
 
     setTileBackground(div);
+
+    syncGridShareManager.dirty = true;
 }
 
 function setGridPicker(ap, gridPickerDiv) {
@@ -1129,55 +1411,33 @@ function setGridPicker(ap, gridPickerDiv) {
     gridPickerDiv.appendChild(gridWrapper);
     gridPickerDiv.appendChild(pickerDiv);
 
-    let maxX = 0, maxY = 0, maxZ = 0, minX = 0, minY = 0, minZ = 0, maxZX0 = 0;
-    let maxXPan, maxYPan, maxZPan, minXPan, minYPan, minZPan;
+    let maxX = 0, maxY = 0, maxZ = 0, minX = 0, minY = 0, minZ = 0;
 
     ap.forEach(panel => {
-        if (panel.x > maxX) {
+        if (panel.x > maxX)
             maxX = panel.x;
-        }
 
-        if (panel.x < minX) {
+        if (panel.x < minX)
             minX = panel.x;
-        }
 
-        if (panel.y > maxY) {
+        if (panel.y > maxY)
             maxY = panel.y;
-        }
 
-        if (panel.y < minY) {
+        if (panel.y < minY)
             minY = panel.y;
-        }
 
-        if (panel.z > maxZ) {
+        if (panel.z > maxZ)
             maxZ = panel.z;
-        }
 
-        if (panel.z < minZ) {
+        if (panel.z < minZ)
             minZ = panel.z;
-        }
-
-        if (panel.x % 2 === 0 && panel.y > maxZX0) {
-            maxZX0 = panel.y;
-        }
-
-        if(panel.cellId === 1800100854)
-            console.log(panel);
     });
-
-
-
-    console.log(maxX - minX + maxZ - minZ);
-    console.log((maxY - minZ + 1));
-    console.log(maxX, minX, maxY, minY, maxZ, minZ);
-    console.log(maxZ-minY);
-    console.log(maxZX0);
 
     let center = document.createElement("div");
     center.style.width = "69px";
     center.style.height = "60px";
-    center.style.bottom = `${(maxZX0)*60}px`;
-    center.style.left = `${(maxX-minX)/2*52}px`;
+    center.style.bottom = `${((maxY-minZ-minY+maxZ)/2)*30}px`;
+    center.style.left = `${(maxX-minX)/2*51}px`;
     center.style.position = "absolute";
     center.style.backgroundImage = `url('./data/sync-grids/center.png')`;
     center.style.backgroundSize = "contain";
@@ -1190,7 +1450,7 @@ function setGridPicker(ap, gridPickerDiv) {
         let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svg.setAttribute("height", "60");
         svg.setAttribute("width", "69");
-        svg.style.left = `${panel.x*52 + (maxX-minX)/2*52}px`;
+        svg.style.left = `${panel.x*51 + (maxX-minX)/2*51}px`;
         svg.style.bottom = `${(panel.y - panel.z)*30 + (maxY-minZ-minY+maxZ)/2*30}px`;
         svg.style.position = "absolute";
         svg.style.cursor = "pointer";
@@ -1281,20 +1541,21 @@ function setGridPicker(ap, gridPickerDiv) {
         }
 
         if (panel.conditionIds.filter(cid => cid >= 16 && cid <= 19).length > 0) {
-            svg.setAttribute("data-panelType", "arceuspanel");
+            svg.setAttribute("data-panel-type", "arceuspanel");
         }
 
         svg.setAttribute("data-energy", panel.energyCost);
         svg.setAttribute("data-orbs", panel.orbCost);
         svg.setAttribute("data-items", panel.items.join(","));
-        svg.setAttribute("data-cellId", panel.cellId);
+        svg.setAttribute("data-cell-id", panel.cellId);
+        svg.setAttribute("data-passive-id", panel.ability.passiveId);
 
         let text = jData.lsd.abilityName[panel.ability.type]
             .replace("[Digit:5digits ]", "+" + panel.ability.value)
             .replace("[Name:Ability ]", getPassiveSkillName(panel.ability.passiveId))
             .replace("[Name:Move ]", jData.lsd.moveName[panel.ability.moveId]).replace("\n", " ");
 
-        svg.setAttribute("data-tileName", text);
+        svg.setAttribute("data-tile-name", text);
         titleP.innerHTML = `<b>${text}</b>`;
         tooltip.appendChild(titleP);
 
@@ -1311,10 +1572,12 @@ function setGridPicker(ap, gridPickerDiv) {
         setTileBackground(svg);
         gridDiv.appendChild(svg);
         gridDiv.appendChild(tooltip);
-    });
+    })
 
-    gridDiv.style.height = ((maxY - minY + maxZ - minZ)/2+1)*60 + "px";
-    gridDiv.style.width = (maxX - minX + 1)*52 + 17 + "px";
+    //console.log(maxX, minX, maxY, minY, maxZ, minZ);
+
+    gridDiv.style.height = (maxY - minZ + 1)*60 + "px";
+    gridDiv.style.width = (maxX - minX)*62.5 + "px";
     gridDiv.style.position = "relative";
     gridDiv.style.display = "inline-block";
     gridDiv.style.verticalAlign = "middle";
@@ -1520,14 +1783,41 @@ function setGridPicker(ap, gridPickerDiv) {
     );
 
     exportCell.appendChild(exportButton);
-
     tr.appendChild(exportCell);
-
     controlTbl.appendChild(tr);
 
+    tr = document.createElement("tr");
+
+    let copyUrlCell = document.createElement("td");
+    copyUrlCell.id = "copyUrlCell";
+    let copyUrlButton = document.createElement("button");
+    copyUrlButton.innerText = jData.locale.syncPairs.sync_grid_copy_url;
+    copyUrlButton.classList.add("orangeBtn");
+    copyUrlButton.addEventListener("click", () => {
+        syncGridShareManager.copyUrl().then((res) => {
+            if(res)
+                showToast(jData.locale.syncPairs.copy_success, "success");
+            else
+                showToast(jData.locale.syncPairs.copy_failure, "error");
+        });
+    });
+    copyUrlCell.appendChild(copyUrlButton);
+    tr.appendChild(copyUrlCell);
+    controlTbl.appendChild(tr);
+
+    let shareCell = document.createElement("td");
+    shareCell.id = "shareCell";
+    let shareButton = document.createElement("button");
+    shareButton.innerText = jData.locale.syncPairs.sync_grid_share;
+    shareButton.classList.add("orangeBtn");
+    shareButton.addEventListener("click", syncGridShareManager.shareBuild);
+    shareCell.appendChild(shareButton);
+    tr.appendChild(shareCell);
+    controlTbl.appendChild(tr);
 
     pickerDiv.appendChild(controlTbl);
 
+    syncGridShareManager.init(gridDiv);
 }
 
 function setSyncGrid() {
@@ -1540,18 +1830,18 @@ function setSyncGrid() {
             ap.conditionIds.forEach(cid => {
                 let releaseCon = jData.proto.abilityReleaseCondition.find(arc => arc.conditionId === cid);
 
-                switch(releaseCon.type) {
+                switch (releaseCon.type) {
                     case 6:
                     case 7:
                         ap.level = releaseCon.parameter;
                 }
             });
             ap.items = [];
-            if(ap.orbCost > 0) {
+            if (ap.orbCost > 0) {
                 ap.items.push(`${jData.lsd.abilityItemName["2"]} x${ap.orbCost}`);
             }
             ap.releaseItemSet = jData.proto.abilityPanelReleaseItemSet.find(a => a.abilityPanelId === ap.cellId);
-            for(let i = 1; ap.releaseItemSet && ap.releaseItemSet[`item${i}`] !== "0" && i <= 3; i++) {
+            for (let i = 1; ap.releaseItemSet && ap.releaseItemSet[`item${i}`] !== "0" && i <= 3; i++) {
                 ap.items.push(`${getItemName(ap.releaseItemSet[`item${i}`])} x${ap.releaseItemSet[`item${i}Qty`]}`);
             }
             ap.type = getAbilityType(ap.ability);
@@ -1561,9 +1851,9 @@ function setSyncGrid() {
         .reduce((acc, curr) => {
             let cell = acc.find(a => a.cellId === curr.cellId);
 
-            if(cell) {
-                if(cell.version < curr.version) {
-                    acc = acc.filter(_ => cellId !== curr.cellId);
+            if (cell) {
+                if (cell.version < curr.version) {
+                    acc = acc.filter(a => a.cellId !== curr.cellId);
                     acc.push(curr);
                 }
 
@@ -1574,7 +1864,7 @@ function setSyncGrid() {
             return acc;
         }, []);
 
-    if(ap.length === 0)
+    if (ap.length === 0)
         return;
 
     let container = document.getElementById("syncGridContainer");
@@ -1618,6 +1908,23 @@ function setSyncGrid() {
     Object.keys(abilityType).forEach(key => appendGridCategory(table, ap, abilityType[key]));
 
     container.appendChild(table);
+
+    syncGridShareManager.refresh();
+
+    const initial = syncGridShareManager.readTokenFromURL();
+    if (initial) {
+        syncGridShareManager.applyState(initial);
+
+        requestAnimationFrame(() => {
+            const target = document.querySelector('#gridDiv');
+            if (target) {
+                window.scrollTo({
+                    top: target.getBoundingClientRect().top + window.scrollY - 125,
+                    behavior: 'smooth'
+                });
+            }
+        })
+    }
 }
 
 function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation = null) {
@@ -1626,6 +1933,7 @@ function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId
     setPairSuperAwakening(contentDiv);
     setPairPassives(contentDiv, variation);
     setPairTeamSkills(contentDiv);
+    setPairLuckySkills(contentDiv);
     setPairMoves(contentDiv, monsterId, variation);
 }
 
@@ -1744,6 +2052,7 @@ function setUrlMonsterInfos(monsterId, baseId, formId, pushState) {
     url.searchParams.set('monsterId', monsterId);
     url.searchParams.set('baseId', baseId);
     url.searchParams.set('formId', formId);
+    url.hash = "";
 
     if(pushState)
         window.history.pushState(null, '', url.toString());
@@ -1782,9 +2091,19 @@ function setLatestPairs() {
         let li = document.createElement("li");
         let b = document.createElement("b");
         let anchor = document.createElement("a");
-        anchor.href = '#';
+
+        let url = new URL(window.location);
+        url.searchParams.delete('monsterId');
+        url.searchParams.delete('baseId');
+        url.searchParams.delete('formId');
+        url.searchParams.delete('build');
+        url.searchParams.set('pair', tr.trainerId);
+        url.hash = "";
+
+        anchor.href = url.toString();
         anchor.textContent = getPairName(tr.trainerId);
-        anchor.addEventListener("click", () => {
+        anchor.addEventListener("click", (e) => {
+            e.preventDefault();
             syncPairSelect.value = tr.trainerId;
             selectChange();
         });
@@ -1817,9 +2136,20 @@ function setLatestPairs() {
         let li = document.createElement("li");
         let b = document.createElement("b");
         let anchor = document.createElement("a");
-        anchor.href = '#';
+
+        let url = new URL(window.location);
+        url.searchParams.delete('monsterId');
+        url.searchParams.delete('baseId');
+        url.searchParams.delete('formId');
+        url.searchParams.delete('build');
+        url.searchParams.set('pair', ugt.trainerId);
+        url.hash = "";
+
+        anchor.href = url.toString();
+
         anchor.innerText = `${getPairName(ugt.trainerId)} (${ugt.old} → ${ugt.new})`;
-        anchor.addEventListener("click", () => {
+        anchor.addEventListener("click", (e) => {
+            e.preventDefault();
             syncPairSelect.value = ugt.trainerId;
             selectChange();
         });
@@ -1837,7 +2167,9 @@ function selectChange() {
     url.searchParams.delete('monsterId');
     url.searchParams.delete('baseId');
     url.searchParams.delete('formId');
+    url.searchParams.delete('build');
     url.searchParams.set('pair', syncPairSelect.value);
+
 
     window.history.pushState(null, '', url.toString());
 
@@ -1892,6 +2224,15 @@ async function init() {
         copyBtn.addEventListener('click', () => navigator.clipboard.writeText(dataArea.value));
     }
 
+
+
+    const url = new URL(window.location);
+    if(url.searchParams.has('lang')) {
+        url.searchParams.delete('lang');
+        url.hash = "";
+        window.history.pushState(null, '', url.toString());
+    }
+
     populateSelect();
     setLatestPairs();
 
@@ -1905,8 +2246,8 @@ function getPairStatsRowBipCode(name, statValues, t, scale = 1) {
 
     let string = `\t\t[tr][th]${jData.locale.common[name]}[/th]`;
 
-    let level = 150;
-    let pointBIdx = breakPointLevels.findIndex((a) => a > level);
+    let level = 200;
+    let pointBIdx = breakPointLevels.findIndex((a) => a >= level);
     let pointAIdx = pointBIdx - 1;
 
     let buildupParameter = jData.proto.trainerBuildupParameter.filter(tbp => tbp.trainerId === t.trainerId);

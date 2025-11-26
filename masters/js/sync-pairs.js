@@ -1,19 +1,19 @@
 let abilityType = {
-    "1" : "StatsBoost",
-    "2" : "Passive",
-    "3" : "AdditionalMoveEffect",
-    "4" : "MovePowerAccuracyBoost",
-    "5" : "SyncMove",
-    "6" : "LearnMove"
+    "1": "StatsBoost",
+    "2": "Passive",
+    "3": "AdditionalMoveEffect",
+    "4": "MovePowerAccuracyBoost",
+    "5": "SyncMove",
+    "6": "LearnMove"
 };
 
 let abilityTypeBGColor = {
-    "StatsBoost" : "#779EFF",
-    "MovePowerAccuracyBoost" : "#47D147",
-    "AdditionalMoveEffect" : "#FF0066",
-    "Passive" : "#FFC266",
-    "SyncMove" : "#BF80FF",
-    "LearnMove" : "#FF80BF"
+    "StatsBoost": "#779EFF",
+    "MovePowerAccuracyBoost": "#47D147",
+    "AdditionalMoveEffect": "#FF0066",
+    "Passive": "#FFC266",
+    "SyncMove": "#BF80FF",
+    "LearnMove": "#FF80BF"
 };
 
 const gymStartScheduleId = "7010_1W_Gym_start";
@@ -24,12 +24,18 @@ let syncPairSelect;
 let syncPairDiv;
 let toolsDiv;
 
+let pairSearchModal;
+let pairSearchInput;
+let pairSearchResults;
+let openPairSearchBtn;
+let allPairs = [];
+
 let landingPairId;
 
 let syncLevel = 5;
 let maxEnergy = 60;
 
-const NOT_IMPLEMENTED = [ "10101420000", "10286000001" ];
+const NOT_IMPLEMENTED = ["10101420000", "10286000001"];
 
 class SyncGridShareManager {
 
@@ -41,8 +47,8 @@ class SyncGridShareManager {
         this.container = container ?? document;
         this.refresh();
         this.observer = new MutationObserver((list) => {
-            for(const m of list) {
-                if(m.type === "attributes" && m.attributeName === "selected") {
+            for (const m of list) {
+                if (m.type === "attributes" && m.attributeName === "selected") {
                     this.dirty = true
                     break;
                 }
@@ -56,9 +62,9 @@ class SyncGridShareManager {
     }
 
     refresh() {
-        this.cells = Array.from(document.querySelectorAll("svg[data-cell-id]"));
-        this.sorted = [...this.cells].sort((a,b) => BigInt(this.getCellId(a)) < BigInt(this.getCellId(b)) ? -1 : 1);
-        this.indexById = new Map(this.sorted.map((el,idx) => [this.getCellId(el), idx]));
+        this.cells = Array.from(document.querySelectorAll("g[data-cell-id]"));
+        this.sorted = [...this.cells].sort((a, b) => BigInt(this.getCellId(a)) < BigInt(this.getCellId(b)) ? -1 : 1);
+        this.indexById = new Map(this.sorted.map((el, idx) => [this.getCellId(el), idx]));
         this.dirty = false;
     }
 
@@ -72,17 +78,17 @@ class SyncGridShareManager {
         const b64 = b64u.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((b64u.length + 3) % 4);
         const bin = atob(b64);
         const out = new Uint8Array(bin.length);
-        for (let i=0;i<bin.length;i++) out[i] = bin.charCodeAt(i);
+        for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
         return out;
     }
 
     encodeState() {
         const n = this.sorted.length;
-        const bytes = new Uint8Array(Math.ceil(n/8));
+        const bytes = new Uint8Array(Math.ceil(n / 8));
         for (const el of this.sorted) {
             const idx = this.indexById.get(this.getCellId(el));
             const selected = el.hasAttribute('selected');
-            if (selected) bytes[idx>>3] |= (1 << (idx & 7));
+            if (selected) bytes[idx >> 3] |= (1 << (idx & 7));
         }
         return this.b64urlEncode(bytes);
     }
@@ -91,7 +97,7 @@ class SyncGridShareManager {
         const bytes = this.b64urlDecode(token);
         for (const el of this.sorted) {
             const idx = this.indexById.get(this.getCellId(el));
-            const bit = (bytes[idx>>3] >> (idx & 7)) & 1;
+            const bit = (bytes[idx >> 3] >> (idx & 7)) & 1;
             if (bit) changeSelection(el);
         }
     }
@@ -102,7 +108,7 @@ class SyncGridShareManager {
     }
 
     buildShareURL() {
-        if(this.dirty)
+        if (this.dirty)
             this.refresh();
 
         const url = new URL(location.href);
@@ -139,7 +145,7 @@ class SyncGridShareManager {
         if (navigator.share) {
             try {
                 await navigator.share({ title: document.title, url });
-            } catch {}
+            } catch { }
         } else {
             await this.copyUrl();
         }
@@ -200,16 +206,26 @@ function populateSelect() {
     while (syncPairSelect.length > 0) {
         syncPairSelect.remove(0);
     }
+    allPairs = [];
     let optionData = jData.proto.trainer.filter(t => t.scheduleId !== "NEVER_CHECK_DICTIONARY" && t.scheduleId !== "NEVER" && t.scoutMethod !== 3)
         .map(t => {
             let data = {};
             data.value = t.trainerId;
             data.text = getPairName(t.trainerId);
-            return data;
-        }).sort((a, b) =>  a.text.localeCompare(b.text));
+            data.rarity = getTrainerRarity(t.trainerId);
+            let actorId = getTrainerActorId(t.trainerId);
+            data.image = `./data/actor/Trainer/${actorId}/${actorId}_1024.png`;
 
-    for(const opt of optionData) {
+            let monsterBaseId = getMonsterBaseIdFromMonsterId(t.monsterId);
+            let pokemonActorId = getMonsterActorIdFromBaseId(monsterBaseId);
+            data.pokemonImage = `./data/actor/Monster/${pokemonActorId}/${pokemonActorId}_256.png`;
+
+            return data;
+        }).sort((a, b) => a.text.localeCompare(b.text));
+
+    for (const opt of optionData) {
         syncPairSelect.add(new Option(opt.text, opt.value));
+        allPairs.push(opt);
     }
 }
 
@@ -383,7 +399,10 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
         table.appendChild(descrMonsterRow);
     }
 
-    contentDiv.appendChild(table);
+    let tableWrapperOverview = document.createElement("div");
+    tableWrapperOverview.style.overflowX = "auto";
+    tableWrapperOverview.appendChild(table);
+    contentDiv.appendChild(tableWrapperOverview);
 }
 
 function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
@@ -403,25 +422,25 @@ function getStatRow(name, statValues, rarity, level, exRoleBonus, scale = 1) {
 
     let numCols = 6 - rarity + 1;
 
-    for(let i = 0; i < numCols; i++) {
-        let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx])*(statValues[pointBIdx] - statValues[pointAIdx])/(breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
+    for (let i = 0; i < numCols; i++) {
+        let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx]) * (statValues[pointBIdx] - statValues[pointAIdx]) / (breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
 
-        if(i > 0) {
-            let buildupPowerups = jData.proto.trainerBuildupConfig.find(tbc => tbc.trainerBuildupConfigId === buildupParameter[i-1].trainerBuildupConfigId).nbPowerups || 0;
-            buildupBonus += buildupPowerups * buildupParameter[i-1][name];
+        if (i > 0) {
+            let buildupPowerups = jData.proto.trainerBuildupConfig.find(tbc => tbc.trainerBuildupConfigId === buildupParameter[i - 1].trainerBuildupConfigId).nbPowerups || 0;
+            buildupBonus += buildupPowerups * buildupParameter[i - 1][name];
             statValue += buildupBonus;
         }
 
-        statValue = Math.trunc(statValue*scale);
+        statValue = Math.trunc(statValue * scale);
 
         statValue += exRoleBonus;
 
         let td = document.createElement("td");
 
-        if(scale > 1) {
+        if (scale > 1) {
             td.innerHTML = `<b style="color: green">${statValue}</b>`;
         }
-        else if(scale < 1) {
+        else if (scale < 1) {
             td.innerHTML = `<b style="color: darkred">${statValue}</b>`;
         }
         else {
@@ -460,7 +479,7 @@ function setStatsTable(input, statsDiv, monsterData, variation = null, hasExRole
         headRow.appendChild(th);
     }
 
-    let exRoleBonus = {"hp": 0, "atk": 0, "spa": 0, "def": 0, "spd": 0, "spe": 0};
+    let exRoleBonus = { "hp": 0, "atk": 0, "spa": 0, "def": 0, "spd": 0, "spe": 0 };
 
     if (exRoleStats) {
         let exRoleId = getExRoleId(syncPairSelect.value);
@@ -599,7 +618,7 @@ function setPairPassives(contentDiv, variation = null) {
 
     let specialAwaking = jData.proto.trainerSpecialAwaking.find(t => t.trainerId === syncPairSelect.value);
 
-    if(specialAwaking) {
+    if (specialAwaking) {
         let row = document.createElement("tr");
 
         let nameCell = document.createElement("td");
@@ -613,10 +632,10 @@ function setPairPassives(contentDiv, variation = null) {
         table.appendChild(row);
     }
 
-    for(let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 5; i++) {
         const passiveId = variation && variation[`passive${i}Id`] > 0 ? variation[`passive${i}Id`] : tr[`passive${i}Id`];
 
-        if(passiveId === 0)
+        if (passiveId === 0)
             continue;
 
         let row = document.createElement("tr");
@@ -632,18 +651,21 @@ function setPairPassives(contentDiv, variation = null) {
         table.appendChild(row);
     }
 
-    contentDiv.appendChild(table);
+    let tableWrapper = document.createElement("div");
+    tableWrapper.style.overflowX = "auto";
+    tableWrapper.appendChild(table);
+    contentDiv.appendChild(tableWrapper);
 }
 
 function setPairSuperAwakening(contentDiv) {
     let trsa = jData.proto.trainerSpecialAwaking.find(t => t.trainerId === syncPairSelect.value);
     const role = jData.proto.trainer.find(t => t.trainerId === syncPairSelect.value).role;
 
-    if(!trsa || !role)
+    if (!trsa || !role)
         return;
 
     const saEffect = Object.groupBy(jData.proto.specialAwakingEffect.filter(sae => sae.roleId === role)
-        .sort((a, b) => a.specialAwakingLevel - b.specialAwakingLevel), ({specialAwakingLevel}) => specialAwakingLevel);
+        .sort((a, b) => a.specialAwakingLevel - b.specialAwakingLevel), ({ specialAwakingLevel }) => specialAwakingLevel);
 
     let specialAwakingH2 = document.createElement("h2");
     specialAwakingH2.innerText = jData.locale.syncPairs.superawakening;
@@ -665,7 +687,7 @@ function setPairSuperAwakening(contentDiv) {
 
     table.appendChild(headRow);
 
-    for(let i = 1; i <= Object.keys(saEffect).length; i++) {
+    for (let i = 1; i <= Object.keys(saEffect).length; i++) {
         let row = document.createElement("tr");
 
         let levelCell = document.createElement("th");
@@ -675,10 +697,10 @@ function setPairSuperAwakening(contentDiv) {
         let effectCell = document.createElement("td");
         let titleEffectShown = false;
 
-        for(let j = 0; j < saEffect[i].length; j++) {
-            switch(saEffect[i][j].specialAwakingLevelEffect) {
+        for (let j = 0; j < saEffect[i].length; j++) {
+            switch (saEffect[i][j].specialAwakingLevelEffect) {
                 case 1:
-                    if(!titleEffectShown) {
+                    if (!titleEffectShown) {
                         titleEffectShown = true;
                         effectCell.innerText = jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}`]
                             .replaceAll("\n", " ");
@@ -691,17 +713,17 @@ function setPairSuperAwakening(contentDiv) {
                 case 2:
                     effectCell.innerText = jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}`]
                         .replaceAll("\n", " ")
-                        .replace("[Digit:3digits ]", saEffect[i][j].arg2/100)
+                        .replace("[Digit:3digits ]", saEffect[i][j].arg2 / 100)
                     break;
 
                 case 3:
                     effectCell.innerText = jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}`]
-                        .replaceAll("\n", " ") + ` (x${saEffect[i][j].arg1/100})`;
+                        .replaceAll("\n", " ") + ` (x${saEffect[i][j].arg1 / 100})`;
                     break;
 
                 case 4:
-                    effectCell.innerText = jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}`].replaceAll("\n", " ") + ` (x${saEffect[i][j].arg1/100})`;
-                    effectCell.innerHTML += "<br>" + jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}_element`].replaceAll("\n", " ") + ` (x${saEffect[i][j].arg1/100})`;
+                    effectCell.innerText = jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}`].replaceAll("\n", " ") + ` (x${saEffect[i][j].arg1 / 100})`;
+                    effectCell.innerHTML += "<br>" + jData.lsd.specialAwakingLevelEffectDescription[`${saEffect[i][j].specialAwakingLevelEffect}_element`].replaceAll("\n", " ") + ` (x${saEffect[i][j].arg1 / 100})`;
                     break;
 
                 case 5:
@@ -711,7 +733,7 @@ function setPairSuperAwakening(contentDiv) {
             }
         }
 
-        switch(saEffect[i].specialAwakingLevelEffect) {
+        switch (saEffect[i].specialAwakingLevelEffect) {
             case 1:
                 headEffect.innerText = jData.locale.syncPairs.superawakening_effect;
                 break;
@@ -735,7 +757,7 @@ function getCookieItemImage(cookie) {
 }
 
 function getCookieName(cookie) {
-    if(cookie.potentialItemName === "")
+    if (cookie.potentialItemName === "")
         return jData.lsd.potentialItemName[cookie.itemId];
 
     return jData.lsd.potentialItemName[cookie.potentialItemName].replace("[Name:TrainerNameAndType ]", getTrainerName(cookie.trainerId));
@@ -744,7 +766,7 @@ function getCookieName(cookie) {
 function setPairLuckySkills(contentDiv) {
     let luckySkills = jData.proto.potentialItem.filter(pi => pi.trainerId === syncPairSelect.value);
 
-    if(luckySkills.length === 0)
+    if (luckySkills.length === 0)
         return;
 
     contentDiv.appendChild(document.createElement("br"));
@@ -789,10 +811,10 @@ function setPairLuckySkills(contentDiv) {
 
         cookieTD.rowSpan = lot.length;
 
-        for(let i = 0; i < lot.length; i++) {
+        for (let i = 0; i < lot.length; i++) {
             let row = document.createElement("tr");
 
-            if(i === 0)
+            if (i === 0)
                 row.appendChild(cookieTD);
 
             let nameTD = document.createElement("td");
@@ -812,7 +834,10 @@ function setPairLuckySkills(contentDiv) {
         }
     });
 
-    contentDiv.appendChild(table);
+    let tableWrapper = document.createElement("div");
+    tableWrapper.style.overflowX = "auto";
+    tableWrapper.appendChild(table);
+    contentDiv.appendChild(tableWrapper);
 }
 
 function setPairTeamSkills(contentDiv) {
@@ -828,10 +853,10 @@ function setPairTeamSkills(contentDiv) {
 
     let row = document.createElement("tr");
 
-    for(let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 5; i++) {
         let ts = jData.proto.teamSkill.find(tsk => tsk.teamSkillId == tr[`teamSkill${i}Id`] && tsk.teamSkillPropNum === 1);
 
-        if(!ts)
+        if (!ts)
             continue;
 
         let td = document.createElement("td");
@@ -846,7 +871,10 @@ function setPairTeamSkills(contentDiv) {
     table.appendChild(row);
 
     contentDiv.appendChild(document.createElement("br"));
-    contentDiv.appendChild(table);
+    let tableWrapper = document.createElement("div");
+    tableWrapper.style.overflowX = "auto";
+    tableWrapper.appendChild(table);
+    contentDiv.appendChild(tableWrapper);
 }
 
 function getTooltipMoveData(moveId) {
@@ -855,23 +883,23 @@ function getTooltipMoveData(moveId) {
 
     p.innerHTML += `<b>${jData.locale.syncPairs.move_description}:</b> ${getMoveDescr(moveId)}<br />`;
 
-    if(mov.type > 0) {
+    if (mov.type > 0) {
         p.innerHTML += `<b>${jData.locale.syncPairs.move_type}:</b> ${jData.lsd.motifTypeName[mov.type]}<br />`;
     }
     p.innerHTML += `<b>${jData.locale.syncPairs.move_category}:</b> ${jData.locale.common.category_names[mov.category]}<br />`;
-    if(mov.gaugeDrain) {
+    if (mov.gaugeDrain) {
         p.innerHTML += `<b>${jData.locale.syncPairs.move_gauge}:</b> ${mov.gaugeDrain}<br />`;
     }
-    if(mov.power > 0) {
-        p.innerHTML += `<b>${jData.locale.syncPairs.move_power}:</b> ${mov.power + " - " + Math.floor(mov.power*1.2)}<br />`;
+    if (mov.power > 0) {
+        p.innerHTML += `<b>${jData.locale.syncPairs.move_power}:</b> ${mov.power + " - " + Math.floor(mov.power * 1.2)}<br />`;
     }
-    if(mov.accuracy) {
+    if (mov.accuracy) {
         p.innerHTML += `<b>${jData.locale.syncPairs.move_accuracy}:</b> ${mov.accuracy}<br />`;
     }
-    if(jData.lsd.moveTargetType[targetToId[mov.target]]) {
+    if (jData.lsd.moveTargetType[targetToId[mov.target]]) {
         p.innerHTML += `<b>${jData.locale.syncPairs.move_target}:</b> ${jData.lsd.moveTargetType[targetToId[mov.target]]}<br />`;
     }
-    if(mov.uses) {
+    if (mov.uses) {
         p.innerHTML += `<b>${jData.locale.syncPairs.move_uses}:</b> ${mov.uses}<br />`;
     }
 
@@ -896,7 +924,7 @@ function getMoveRow(moveId) {
     tr.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
-    powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power*1.2)}` : "—";
+    powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power * 1.2)}` : "—";
 
     tr.appendChild(powerCell);
 
@@ -941,7 +969,7 @@ function getGMaxMoveRow(moveId) {
     tr.appendChild(categoryCell);
 
     let powerCell = document.createElement("td");
-    powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power*1.2)}` : "—";
+    powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power * 1.2)}` : "—";
     tr.appendChild(powerCell);
 
     let targetCell = document.createElement("td");
@@ -1073,7 +1101,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
         }
     }
 
-    contentDiv.appendChild(table);
+    let tableWrapper = document.createElement("div");
+    tableWrapper.style.overflowX = "auto";
+    tableWrapper.appendChild(table);
+    contentDiv.appendChild(tableWrapper);
 
     // Capacités Duo Dynamax
 
@@ -1130,7 +1161,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
             }
         }
 
-        contentDiv.appendChild(table);
+        let tableWrapperGMax = document.createElement("div");
+        tableWrapperGMax.style.overflowX = "auto";
+        tableWrapperGMax.appendChild(table);
+        contentDiv.appendChild(tableWrapperGMax);
     }
 
     // Capacité Teracristal
@@ -1193,7 +1227,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
 
         table.appendChild(getMoveRow(teraMove.terastalMoveId));
 
-        contentDiv.appendChild(table);
+        let tableWrapperTera = document.createElement("div");
+        tableWrapperTera.style.overflowX = "auto";
+        tableWrapperTera.appendChild(table);
+        contentDiv.appendChild(tableWrapperTera);
     }
 
     contentDiv.appendChild(document.createElement("br"));
@@ -1251,14 +1288,17 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     table.appendChild(headRow);
     table.appendChild(getSyncMoveRow(mon.syncMoveId, tr));
 
-    contentDiv.appendChild(table);
+    let tableWrapperSync = document.createElement("div");
+    tableWrapperSync.style.overflowX = "auto";
+    tableWrapperSync.appendChild(table);
+    contentDiv.appendChild(tableWrapperSync);
 }
 
 function appendGridCategory(table, panels, category) {
     panels = panels.filter(p => p.type === category)
         .sort((a, b) => a.level - b.level || a.cellId - b.cellId);
 
-    if(panels.length === 0)
+    if (panels.length === 0)
         return;
 
     let headRow = document.createElement("tr");
@@ -1273,26 +1313,26 @@ function appendGridCategory(table, panels, category) {
     panels.forEach(p => {
         let tr = document.createElement("tr");
 
-        if(p.isNew) {
+        if (p.isNew) {
             tr.style.backgroundColor = "#7afa96";
         }
 
         let ameliorationCell = document.createElement("td");
 
         ameliorationCell.innerHTML = jData.lsd.abilityName[p.ability.type]
-                .replace("[Digit:5digits ]", "+" + p.ability.value)
-                .replace("[Name:Ability ]", getDetailedPassiveSkillName(p.ability.passiveId))
-                .replace("[Name:Move ]", jData.lsd.moveName[p.ability.moveId]).replace("\n", " ");
+            .replace("[Digit:5digits ]", "+" + p.ability.value)
+            .replace("[Name:Ability ]", getDetailedPassiveSkillName(p.ability.passiveId))
+            .replace("[Name:Move ]", jData.lsd.moveName[p.ability.moveId]).replace("\n", " ");
 
 
 
         tr.appendChild(ameliorationCell);
 
         let effectCell = document.createElement("td");
-        if(p.ability.type === 11) {
+        if (p.ability.type === 11) {
             effectCell.appendChild(getTooltipMoveData(p.ability.moveId));
         }
-        else if(p.ability.passiveId) {
+        else if (p.ability.passiveId) {
             effectCell.innerText = getPassiveSkillDescr(p.ability.passiveId);
         }
         else {
@@ -1326,71 +1366,75 @@ function suppressCellData(cell) {
 
     orbCell.innerText = (parseInt(orbCell.innerText) - parseInt(cell.getAttribute("data-orbs"))).toString();
     energyCell.innerText = (parseInt(energyCell.innerText) + parseInt(cell.getAttribute("data-energy"))).toString();
-    tileDiv.remove();
+    if (tileDiv) tileDiv.remove();
 }
 
-function setTileBackground(div) {
+function setTileBackground(g) {
+    let bgLayer = g.querySelector(".bg-layer");
+    let iconLayer = g.querySelector(".icon-layer");
+    let overlayLayer = g.querySelector(".overlay-layer");
 
     let tileIcon;
-    let panelType = div.getAttribute("data-panel-type") || div.getAttribute("data-category");
-    let dataLevel = div.getAttribute("data-level");
+    let panelType = g.getAttribute("data-panel-type") || g.getAttribute("data-category");
+    let dataLevel = g.getAttribute("data-level");
 
-    if(dataLevel && dataLevel > syncLevel) {
+    if (dataLevel && dataLevel > syncLevel) {
         tileIcon = `locked-${dataLevel}`;
 
-        if(div.getAttribute("selected") !== null) {
-            suppressCellData(div)
+        if (g.getAttribute("selected") !== null) {
+            suppressCellData(g)
         }
     }
     else {
-        tileIcon = div.getAttribute("data-category");
+        tileIcon = g.getAttribute("data-category");
 
-        if(div.getAttribute("data-type") !== null) {
-            tileIcon += `-${div.getAttribute("data-type")}`;
+        if (g.getAttribute("data-type") !== null) {
+            tileIcon += `-${g.getAttribute("data-type")}`;
         }
     }
 
-    if(div.getAttribute("selected") !== null) {
-        div.style.backgroundImage = `url('./data/sync-grids/selected-overlay.png'), url('./data/sync-grids/icons/${tileIcon + (panelType === 'arceuspanel' ? '' : '-selected')}.png'), url('./data/sync-grids/${panelType}-selected.png')`;
-        div.style.backgroundRepeat = "no-repeat, no-repeat, no-repeat";
-        div.style.backgroundSize = "contain, contain, contain";
-        return;
+    if (g.getAttribute("selected") !== null) {
+        overlayLayer.style.display = "block";
+
+        let selectedSuffix = (panelType === 'arceuspanel' ? '' : '-selected');
+        iconLayer.setAttribute("href", `./data/sync-grids/icons/${tileIcon + selectedSuffix}.png`);
+        bgLayer.setAttribute("href", `./data/sync-grids/${panelType}-selected.png`);
     }
-
-    div.style.backgroundImage = `url('./data/sync-grids/icons/${tileIcon}.png'), url('./data/sync-grids/${panelType}.png')`;
-    div.style.backgroundRepeat = "no-repeat, no-repeat";
-    div.style.backgroundSize = "contain, contain";
-
+    else {
+        overlayLayer.style.display = "none";
+        iconLayer.setAttribute("href", `./data/sync-grids/icons/${tileIcon}.png`);
+        bgLayer.setAttribute("href", `./data/sync-grids/${panelType}.png`);
+    }
 }
 
-function changeSelection(div) {
+function changeSelection(g) {
 
-    if(div.getAttribute("selected") !== null) {
-        suppressCellData(div);
+    if (g.getAttribute("selected") !== null) {
+        suppressCellData(g);
     }
     else {
         let orbCell = document.getElementById("orbCell");
         let energyCell = document.getElementById("energyCell");
-        let cellId = div.getAttribute("data-cell-id");
+        let cellId = g.getAttribute("data-cell-id");
         let tilesCell = document.getElementById("tilesCell");
         let tileDiv = document.createElement("div");
 
-        const passiveId = div.getAttribute("data-passive-id");
+        const passiveId = g.getAttribute("data-passive-id");
 
         tileDiv.id = `tile-${cellId}`;
-        tileDiv.innerHTML = passiveId === "0" ? div.getAttribute("data-tile-name") : getDetailedPassiveSkillName(passiveId);
+        tileDiv.innerHTML = passiveId === "0" ? g.getAttribute("data-tile-name") : getDetailedPassiveSkillName(passiveId);
         tileDiv.style.background = "rgba(0, 0, 0, 0.1)";
         tileDiv.style.margin = "3px auto";
 
-        div.setAttribute("selected", '');
+        g.setAttribute("selected", '');
 
-        orbCell.innerText = (parseInt(orbCell.innerText) + parseInt(div.getAttribute("data-orbs"))).toString();
-        energyCell.innerText = (parseInt(energyCell.innerText) - parseInt(div.getAttribute("data-energy"))).toString();
+        orbCell.innerText = (parseInt(orbCell.innerText) + parseInt(g.getAttribute("data-orbs"))).toString();
+        energyCell.innerText = (parseInt(energyCell.innerText) - parseInt(g.getAttribute("data-energy"))).toString();
         tilesCell.appendChild(tileDiv);
 
     }
 
-    setTileBackground(div);
+    setTileBackground(g);
 
     syncGridShareManager.dirty = true;
 }
@@ -1403,185 +1447,328 @@ function setGridPicker(ap, gridPickerDiv) {
 
     gridPickerDiv.style.display = "flex";
     gridPickerDiv.style.justifyContent = "center";
+    gridPickerDiv.style.flexWrap = "wrap"; // Allow wrapping for responsiveness
+    gridPickerDiv.style.alignItems = "flex-start"; // Align items to top
 
-    gridWrapper.style.margin = "auto 25px";
+    gridWrapper.style.margin = "0";
+    gridWrapper.style.overflow = "auto"; // Enable scrolling for responsiveness
+    gridWrapper.style.maxWidth = "100%"; // Ensure it doesn't overflow the screen width
+    gridWrapper.style.flex = "0 1 auto"; // Don't grow, allow shrinking. Keeps it close to pickerDiv.
+    gridWrapper.style.textAlign = "center"; // Center the gridDiv inside
+
     pickerDiv.style.margin = "auto 25px";
+    pickerDiv.style.flex = "0 0 auto"; // Keep natural size, wrap if needed
 
     gridWrapper.appendChild(gridDiv);
     gridPickerDiv.appendChild(gridWrapper);
     gridPickerDiv.appendChild(pickerDiv);
 
+    // Move zoom controls to be inside gridPickerDiv but before gridWrapper
+    // (This is handled in the main replacement block, but ensuring gridWrapper styles here)
+
     let maxX = 0, maxY = 0, maxZ = 0, minX = 0, minY = 0, minZ = 0;
 
     ap.forEach(panel => {
-        if (panel.x > maxX)
-            maxX = panel.x;
-
-        if (panel.x < minX)
-            minX = panel.x;
-
-        if (panel.y > maxY)
-            maxY = panel.y;
-
-        if (panel.y < minY)
-            minY = panel.y;
-
-        if (panel.z > maxZ)
-            maxZ = panel.z;
-
-        if (panel.z < minZ)
-            minZ = panel.z;
+        if (panel.x > maxX) maxX = panel.x;
+        if (panel.x < minX) minX = panel.x;
+        if (panel.y > maxY) maxY = panel.y;
+        if (panel.y < minY) minY = panel.y;
+        if (panel.z > maxZ) maxZ = panel.z;
+        if (panel.z < minZ) minZ = panel.z;
     });
 
-    let center = document.createElement("div");
-    center.style.width = "69px";
-    center.style.height = "60px";
-    center.style.bottom = `${((maxY-minZ-minY+maxZ)/2)*30}px`;
-    center.style.left = `${(maxX-minX)/2*51}px`;
-    center.style.position = "absolute";
-    center.style.backgroundImage = `url('./data/sync-grids/center.png')`;
-    center.style.backgroundSize = "contain";
-    center.style.backgroundRepeat = "no-repeat";
+    let allPanels = [...ap, { x: 0, y: 0, z: 0, isCenter: true }];
 
-    gridDiv.appendChild(center);
+    let xValues = allPanels.map(p => p.x * 51);
+    let yValues = allPanels.map(p => (p.y - p.z) * 30);
 
-    ap.forEach(panel => {
+    let xMin = Math.min(...xValues);
+    let xMax = Math.max(...xValues);
+    let yMin = Math.min(...yValues);
+    let yMax = Math.max(...yValues);
 
-        let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        svg.setAttribute("height", "60");
-        svg.setAttribute("width", "69");
-        svg.style.left = `${panel.x*51 + (maxX-minX)/2*51}px`;
-        svg.style.bottom = `${(panel.y - panel.z)*30 + (maxY-minZ-minY+maxZ)/2*30}px`;
-        svg.style.position = "absolute";
-        svg.style.cursor = "pointer";
-        svg.style.pointerEvents = "none";
+    let totalWidth = (xMax - xMin) + 69;
+    let totalHeight = (yMax - yMin) + 60;
 
-        let titleP = document.createElement("p");
-        titleP.style.textAlign = "center";
+    let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.id = "grid";
+    svg.setAttribute("width", totalWidth);
+    svg.setAttribute("height", totalHeight);
+    svg.setAttribute("viewBox", `0 0 ${totalWidth} ${totalHeight}`);
+    svg.style.display = "block";
+    svg.style.transformOrigin = "top left";
+    svg.style.transition = "transform 0.2s ease";
 
-        let tooltip = document.createElement("div");
-        tooltip.classList.add("tooltip");
+    let tooltip = document.createElement("div");
+    tooltip.classList.add("tooltip");
+    tooltip.style.display = "none";
+    tooltip.style.position = "absolute";
+    tooltip.style.zIndex = "1000"; // High z-index to sit on top of everything
+    tooltip.style.pointerEvents = "none";
+    document.body.appendChild(tooltip); // Append to body to avoid clipping
 
-        tooltip.style.bottom = parseInt(svg.style.bottom) + 70 + "px";
-        tooltip.style.left = parseInt(svg.style.left) - 125 + "px";
-        tooltip.style.zIndex = "100";
-        tooltip.style.display = "none";
+    // Zoom and Auto-Resize Logic
+    let currentZoom = 1;
 
-        let polygon = document.createElementNS("http://www.w3.org/2000/svg","polygon");
-        polygon.setAttribute("points", "17,00 0,30 0,31 17,60 52,60 69,31 69,30 52,0");
-        polygon.setAttribute("style", "fill: white;");
-        polygon.setAttribute("fill-opacity", "0");
+    const updateZoom = () => {
+        svg.style.transform = `scale(${currentZoom})`;
+        gridDiv.style.width = `${totalWidth * currentZoom}px`;
+        gridDiv.style.height = `${totalHeight * currentZoom}px`;
+    };
 
-        polygon.addEventListener("click", () => changeSelection(svg));
+    // Auto-resize observer (only when not manually zooming)
+    let isManuallyZooming = false;
+    let minZoom = 1; // Store the initial auto-fit zoom level
+    const resizeObserver = new ResizeObserver(entries => {
+        if (isManuallyZooming) return; // Don't auto-resize during manual zoom
 
-        polygon.addEventListener("mouseenter", () => {
-            if(panel.level <= syncLevel) {
-                polygon.setAttribute("fill-opacity", "0.25");
+        for (let entry of entries) {
+            const availableWidth = entry.contentRect.width;
+            if (availableWidth > 0 && availableWidth < totalWidth) {
+                currentZoom = availableWidth / totalWidth;
+            } else {
+                currentZoom = 1;
             }
-            else {
-                polygon.style.cursor = "default";
-            }
-
-            tooltip.style.display = "inline-block";
-
-        });
-
-        polygon.addEventListener("mouseleave", () => {
-            polygon.setAttribute("fill-opacity", "0");
-            tooltip.style.display = "none";
-        });
-
-        polygon.style.pointerEvents = "auto";
-
-        svg.appendChild(polygon);
-
-        if(panel.level > 1)
-            svg.setAttribute("data-level", panel.level);
-
-        switch(panel.ability.type) {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-                //stat boosts
-                svg.setAttribute("data-category", "statsup");
-                break;
-
-            case 7:
-                //Passive
-                svg.setAttribute("data-category", "passiveskill");
-                break;
-
-            case 8:
-                //additional move effect
-                svg.setAttribute("data-category", "moveeffect");
-                break;
-
-            case 9:
-            case 10:
-                //move power/accuracy boost
-                let m = jData.proto.move.find(m => m.moveId === panel.ability.moveId);
-                if(m.group === "Sync") {
-                    svg.setAttribute("data-category", "syncmove");
-                }
-                else if(m.group === "Maxmove") {
-                    svg.setAttribute("data-category", "maxmove");
-                }
-                else {
-                    svg.setAttribute("data-type", m.type.toString());
-                    svg.setAttribute("data-category", "movepowerup");
-                }
-                break;
-
-            case 11:
-                //learn move
-                svg.setAttribute("data-category", "learnmove");
+            minZoom = currentZoom; // Store this as the minimum zoom level
+            updateZoom();
         }
+    });
 
-        if (panel.conditionIds.filter(cid => cid >= 16 && cid <= 19).length > 0) {
-            svg.setAttribute("data-panel-type", "arceuspanel");
+    resizeObserver.observe(gridWrapper);
+
+    // Pinch-to-Zoom Logic
+    let initialPinchDistance = null;
+    let initialZoom = null;
+    let pinchCenterX = null;
+    let pinchCenterY = null;
+
+    gridWrapper.addEventListener("touchstart", (e) => {
+        if (e.touches.length === 2) {
+            isManuallyZooming = true; // Disable auto-resize
+            initialPinchDistance = Math.hypot(
+                e.touches[0].pageX - e.touches[1].pageX,
+                e.touches[0].pageY - e.touches[1].pageY
+            );
+            initialZoom = currentZoom;
+
+            // Calculate pinch center point relative to gridWrapper
+            const rect = gridWrapper.getBoundingClientRect();
+            pinchCenterX = ((e.touches[0].pageX + e.touches[1].pageX) / 2) - rect.left + gridWrapper.scrollLeft;
+            pinchCenterY = ((e.touches[0].pageY + e.touches[1].pageY) / 2) - rect.top + gridWrapper.scrollTop;
         }
+    }, { passive: false });
 
-        svg.setAttribute("data-energy", panel.energyCost);
-        svg.setAttribute("data-orbs", panel.orbCost);
-        svg.setAttribute("data-items", panel.items.join(","));
-        svg.setAttribute("data-cell-id", panel.cellId);
-        svg.setAttribute("data-passive-id", panel.ability.passiveId);
+    gridWrapper.addEventListener("touchmove", (e) => {
+        if (e.touches.length === 2 && initialPinchDistance !== null) {
+            e.preventDefault(); // Prevent page zoom
+            const currentDistance = Math.hypot(
+                e.touches[0].pageX - e.touches[1].pageX,
+                e.touches[0].pageY - e.touches[1].pageY
+            );
 
-        let text = jData.lsd.abilityName[panel.ability.type]
-            .replace("[Digit:5digits ]", "+" + panel.ability.value)
-            .replace("[Name:Ability ]", getPassiveSkillName(panel.ability.passiveId))
-            .replace("[Name:Move ]", jData.lsd.moveName[panel.ability.moveId]).replace("\n", " ");
+            const scaleFactor = currentDistance / initialPinchDistance;
+            // Amplify the zoom response for easier zooming (1.2x multiplier for smoother control)
+            const amplifiedFactor = 1 + (scaleFactor - 1) * 1.2;
+            let newZoom = initialZoom * amplifiedFactor;
 
-        svg.setAttribute("data-tile-name", text);
-        titleP.innerHTML = `<b>${text}</b>`;
-        tooltip.appendChild(titleP);
+            // Limit zoom levels (min = initial auto-fit, max = 3x for detailed viewing)
+            if (newZoom < minZoom) newZoom = minZoom;
+            if (newZoom > 3) newZoom = 3;
 
-        if(panel.ability.type === 11) {
-            tooltip.appendChild(getTooltipMoveData(panel.ability.moveId));
+            currentZoom = newZoom;
+            updateZoom();
+
+            // Calculate scroll adjustment to keep pinch center fixed
+            // The pinch center should remain at the same position in the viewport
+            const rect = gridWrapper.getBoundingClientRect();
+            const viewportCenterX = ((e.touches[0].pageX + e.touches[1].pageX) / 2) - rect.left;
+            const viewportCenterY = ((e.touches[0].pageY + e.touches[1].pageY) / 2) - rect.top;
+
+            gridWrapper.scrollLeft = pinchCenterX * (newZoom / initialZoom) - viewportCenterX;
+            gridWrapper.scrollTop = pinchCenterY * (newZoom / initialZoom) - viewportCenterY;
         }
-        else if(panel.ability.passiveId) {
-            tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_description_tooltip}:</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
+    }, { passive: false });
+
+    gridWrapper.addEventListener("touchend", (e) => {
+        if (e.touches.length < 2) {
+            initialPinchDistance = null;
+            initialZoom = null;
+            pinchCenterX = null;
+            pinchCenterY = null;
+            // Don't re-enable auto-resize - keep manual zoom control
         }
+    });
 
-        tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_items_tooltip}:</b><br />${panel.items.join("<br />")}</p>`;
-        tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_energy_tooltip}:</b> ${panel.energyCost}</p>`
+    // Create layers for Z-indexing
+    let visualsLayer = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    let interactionLayer = document.createElementNS("http://www.w3.org/2000/svg", "g");
 
-        setTileBackground(svg);
-        gridDiv.appendChild(svg);
-        gridDiv.appendChild(tooltip);
-    })
+    svg.appendChild(visualsLayer);
+    svg.appendChild(interactionLayer);
 
-    //console.log(maxX, minX, maxY, minY, maxZ, minZ);
-
-    gridDiv.style.height = (maxY - minZ + 1)*60 + "px";
-    gridDiv.style.width = (maxX - minX)*62.5 + "px";
+    gridDiv.appendChild(svg);
     gridDiv.style.position = "relative";
-    gridDiv.style.display = "inline-block";
-    gridDiv.style.verticalAlign = "middle";
+    gridDiv.style.overflow = "hidden"; // Contain the scaled SVG
     gridDiv.id = "gridDiv";
+
+    const addTile = (panel, isCenter) => {
+        // Visual Group (Images)
+        let gVisual = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        // Interaction Group (Polygon)
+        let gInteraction = document.createElementNS("http://www.w3.org/2000/svg", "g");
+
+        let pX = panel.x * 51;
+        let pY = (panel.y - panel.z) * 30;
+
+        let svgX = pX - xMin;
+        let svgY = totalHeight - (pY - yMin) - 60;
+
+        gVisual.setAttribute("transform", `translate(${svgX}, ${svgY})`);
+        gInteraction.setAttribute("transform", `translate(${svgX}, ${svgY})`);
+
+        let bgImg = document.createElementNS("http://www.w3.org/2000/svg", "image");
+        bgImg.setAttribute("width", "69");
+        bgImg.setAttribute("height", "60");
+        bgImg.classList.add("bg-layer");
+
+        let iconImg = document.createElementNS("http://www.w3.org/2000/svg", "image");
+        iconImg.setAttribute("width", "69");
+        iconImg.setAttribute("height", "60");
+        iconImg.classList.add("icon-layer");
+
+        let overlayImg = document.createElementNS("http://www.w3.org/2000/svg", "image");
+        overlayImg.setAttribute("width", "69");
+        overlayImg.setAttribute("height", "60");
+        overlayImg.setAttribute("href", "./data/sync-grids/selected-overlay.png");
+        overlayImg.classList.add("overlay-layer");
+        overlayImg.style.display = "none";
+
+        let polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        // Standard hexagon points
+        polygon.setAttribute("points", "17,0 52,0 69,30 52,60 17,60 0,30");
+        polygon.setAttribute("style", "fill: white; fill-opacity: 0; cursor: pointer; pointer-events: all;");
+
+        if (isCenter) {
+            bgImg.setAttribute("href", "./data/sync-grids/center.png");
+            gVisual.appendChild(bgImg);
+        } else {
+            gVisual.appendChild(bgImg);
+            gVisual.appendChild(iconImg);
+            gVisual.appendChild(overlayImg);
+
+            // Polygon goes to interaction group
+            gInteraction.appendChild(polygon);
+
+            if (panel.level > 1) gVisual.setAttribute("data-level", panel.level);
+
+            switch (panel.ability.type) {
+                case 1: case 2: case 3: case 4: case 5: case 6:
+                    gVisual.setAttribute("data-category", "statsup");
+                    break;
+                case 7:
+                    gVisual.setAttribute("data-category", "passiveskill");
+                    break;
+                case 8:
+                    gVisual.setAttribute("data-category", "moveeffect");
+                    break;
+                case 9: case 10:
+                    let m = jData.proto.move.find(m => m.moveId === panel.ability.moveId);
+                    if (m.group === "Sync") {
+                        gVisual.setAttribute("data-category", "syncmove");
+                    } else if (m.group === "Maxmove") {
+                        gVisual.setAttribute("data-category", "maxmove");
+                    } else {
+                        gVisual.setAttribute("data-type", m.type.toString());
+                        gVisual.setAttribute("data-category", "movepowerup");
+                    }
+                    break;
+                case 11:
+                    gVisual.setAttribute("data-category", "learnmove");
+            }
+
+            if (panel.conditionIds.filter(cid => cid >= 16 && cid <= 19).length > 0) {
+                gVisual.setAttribute("data-panel-type", "arceuspanel");
+            }
+
+            gVisual.setAttribute("data-energy", panel.energyCost);
+            gVisual.setAttribute("data-orbs", panel.orbCost);
+            gVisual.setAttribute("data-items", panel.items.join(","));
+            gVisual.setAttribute("data-cell-id", panel.cellId);
+            gVisual.setAttribute("data-passive-id", panel.ability.passiveId);
+
+            let text = jData.lsd.abilityName[panel.ability.type]
+                .replace("[Digit:5digits ]", "+" + panel.ability.value)
+                .replace("[Name:Ability ]", getPassiveSkillName(panel.ability.passiveId))
+                .replace("[Name:Move ]", jData.lsd.moveName[panel.ability.moveId]).replace("\n", " ");
+
+            gVisual.setAttribute("data-tile-name", text);
+
+            polygon.addEventListener("click", () => changeSelection(gVisual));
+
+            polygon.addEventListener("mouseenter", (e) => {
+                if (panel.level <= syncLevel) {
+                    polygon.style.fillOpacity = "0.25";
+                } else {
+                    polygon.style.cursor = "default";
+                }
+
+                tooltip.innerHTML = "";
+                let titleP = document.createElement("p");
+                titleP.style.textAlign = "center";
+                titleP.innerHTML = `<b>${text}</b>`;
+                tooltip.appendChild(titleP);
+
+                if (panel.ability.type === 11) {
+                    tooltip.appendChild(getTooltipMoveData(panel.ability.moveId));
+                } else if (panel.ability.passiveId) {
+                    tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_description_tooltip}:</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
+                }
+
+                tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_items_tooltip}:</b><br />${panel.items.join("<br />")}</p>`;
+                tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_energy_tooltip}:</b> ${panel.energyCost}</p>`;
+
+                tooltip.style.display = "block";
+
+                // Calculate position relative to viewport + scroll
+                const tileRect = gVisual.getBoundingClientRect();
+                const tooltipRect = tooltip.getBoundingClientRect();
+
+                // Center horizontally over the tile
+                let left = tileRect.left + (tileRect.width / 2) - (tooltipRect.width / 2) + window.scrollX;
+
+                // Position above the tile
+                let top = tileRect.top - tooltipRect.height - 10 + window.scrollY;
+
+                // Flip if going off-screen (top edge)
+                if (top < window.scrollY) {
+                    top = tileRect.bottom + 10 + window.scrollY;
+                    tooltip.classList.add("flipped");
+                } else {
+                    tooltip.classList.remove("flipped");
+                }
+
+                // Adjust if going off-screen (left edge)
+                if (left < 0) left = 0;
+
+                tooltip.style.left = `${left}px`;
+                tooltip.style.top = `${top}px`;
+                tooltip.style.bottom = "auto";
+            });
+
+            polygon.addEventListener("mouseleave", () => {
+                polygon.style.fillOpacity = "0";
+                tooltip.style.display = "none";
+            });
+
+            setTileBackground(gVisual);
+        }
+
+        visualsLayer.appendChild(gVisual);
+        interactionLayer.appendChild(gInteraction);
+    };
+
+    addTile({ x: 0, y: 0, z: 0 }, true);
+    ap.forEach(p => addTile(p, false));
 
     let controlTbl = document.createElement("table");
     controlTbl.classList.add("bipcode");
@@ -1604,7 +1791,7 @@ function setGridPicker(ap, gridPickerDiv) {
     levelContainer.style.display = "flex";
     levelContainer.style.justifyContent = "space-around";
 
-    for(let i = 1; i < 6; i++) {
+    for (let i = 1; i < 6; i++) {
         let levelDiv = document.createElement("div");
         levelDiv.style.backgroundImage = `url("./data/sync-grids/icons/level${i > syncLevel ? "-off" : ""}.png")`;
         levelDiv.style.backgroundRepeat = "no-repeat";
@@ -1619,7 +1806,7 @@ function setGridPicker(ap, gridPickerDiv) {
         levelDiv.addEventListener("click", () => {
             syncLevel = i;
 
-            for(let j = 1; j < 6; j++) {
+            for (let j = 1; j < 6; j++) {
                 document.getElementById(`syncLevel${j}`).style.backgroundImage = `url("./data/sync-grids/icons/level${j > syncLevel ? "-off" : ""}.png")`;
             }
 
@@ -1653,25 +1840,25 @@ function setGridPicker(ap, gridPickerDiv) {
     let radioTileGroup = document.createElement("div");
     radioTileGroup.classList.add("radio-tile-group");
 
-    for(let i = 0; i < 6; i++) {
+    for (let i = 0; i < 6; i++) {
         let inputContainer = document.createElement("div");
         inputContainer.classList.add("input-container");
 
         let input = document.createElement("input");
-        input.id = `energy-${60+(i*2)}`;
+        input.id = `energy-${60 + (i * 2)}`;
         input.classList.add("radio-button");
         input.type = "radio";
         input.name = "energy-radio";
 
         input.addEventListener("click", () => {
             let oldMax = maxEnergy;
-            maxEnergy = 60+(i*2);
+            maxEnergy = 60 + (i * 2);
 
             let energyCell = document.getElementById("energyCell");
             energyCell.innerText = (parseInt(energyCell.innerText) + maxEnergy - oldMax).toString();
         })
 
-        if(i === 0) {
+        if (i === 0) {
             input.checked = true;
             maxEnergy = 60;
         }
@@ -1680,9 +1867,9 @@ function setGridPicker(ap, gridPickerDiv) {
         radioTile.classList.add("radio-tile");
 
         let radioLabel = document.createElement("label");
-        radioLabel.setAttribute("for", `energy-${60+(i*2)}`);
+        radioLabel.setAttribute("for", `energy-${60 + (i * 2)}`);
         radioLabel.classList.add("radio-tile-label");
-        radioLabel.innerText = `${60+(i*2)}`
+        radioLabel.innerText = `${60 + (i * 2)}`
 
         radioTile.appendChild(radioLabel);
 
@@ -1758,7 +1945,7 @@ function setGridPicker(ap, gridPickerDiv) {
     resetButton.innerText = jData.locale.syncPairs.sync_grid_reset;
     resetButton.classList.add("blueBtn");
     resetButton.addEventListener("click",
-        () => [...document.querySelectorAll("svg[selected]")]
+        () => [...document.querySelectorAll("g[selected]")]
             .forEach(svg => {
                 suppressCellData(svg);
                 setTileBackground(svg);
@@ -1776,7 +1963,7 @@ function setGridPicker(ap, gridPickerDiv) {
     exportButton.innerText = jData.locale.syncPairs.sync_grid_export;
     exportButton.classList.add("orangeBtn");
     exportButton.addEventListener("click", () =>
-        domtoimage.toPng(document.getElementById("gridDiv"))
+        htmlToImage.toPng(document.getElementById("grid"))
             .then(function (dataUrl) {
                 saveAs(dataUrl, "sync-grid.png");
             })
@@ -1795,7 +1982,7 @@ function setGridPicker(ap, gridPickerDiv) {
     copyUrlButton.classList.add("orangeBtn");
     copyUrlButton.addEventListener("click", () => {
         syncGridShareManager.copyUrl().then((res) => {
-            if(res)
+            if (res)
                 showToast(jData.locale.syncPairs.copy_success, "success");
             else
                 showToast(jData.locale.syncPairs.copy_failure, "error");
@@ -1907,7 +2094,10 @@ function setSyncGrid() {
 
     Object.keys(abilityType).forEach(key => appendGridCategory(table, ap, abilityType[key]));
 
-    container.appendChild(table);
+    let tableWrapper = document.createElement("div");
+    tableWrapper.style.overflowX = "auto";
+    tableWrapper.appendChild(table);
+    container.appendChild(tableWrapper);
 
     syncGridShareManager.refresh();
 
@@ -1982,7 +2172,7 @@ function setPairInfos(id, pushState = false) {
     syncPairDiv.innerHTML = "";
     syncPairDiv.appendChild(title);
 
-    if(NOT_IMPLEMENTED.includes(id)) {
+    if (NOT_IMPLEMENTED.includes(id)) {
         let warning = document.createElement("div");
         warning.style.backgroundColor = "red";
         warning.style.color = "white";
@@ -2045,7 +2235,7 @@ function setUrlMonsterInfos(monsterId, baseId, formId, pushState) {
 
     const url = new URL(window.location);
 
-    if(url.searchParams.get('pair') !== syncPairSelect.value) {
+    if (url.searchParams.get('pair') !== syncPairSelect.value) {
         url.searchParams.set('pair', syncPairSelect.value);
     }
 
@@ -2054,7 +2244,7 @@ function setUrlMonsterInfos(monsterId, baseId, formId, pushState) {
     url.searchParams.set('formId', formId);
     url.hash = "";
 
-    if(pushState)
+    if (pushState)
         window.history.pushState(null, '', url.toString());
 }
 
@@ -2064,7 +2254,7 @@ function setLatestPairs() {
     let newTrainers = jData.proto.trainer
         .map(t => {
             // Scout Method 4 === Gym, ScheduleId at FOREVER === Release of the update
-            if(t.scoutMethod === 4 && t.scheduleId === "FOREVER") {
+            if (t.scoutMethod === 4 && t.scheduleId === "FOREVER") {
                 t.scheduleId = gymStartScheduleId;
             }
 
@@ -2084,7 +2274,7 @@ function setLatestPairs() {
     let ul = document.createElement("ul");
 
     for (const tr of newTrainers) {
-        if(!landingPairId) {
+        if (!landingPairId) {
             landingPairId = tr.trainerId;
         }
 
@@ -2162,7 +2352,45 @@ function setLatestPairs() {
     lastReleasePairsDiv.appendChild(ul);
 }
 
-function selectChange() {
+function updateFabIcons(trainerId) {
+    const fabPairIcons = document.getElementById("fabPairIcons");
+    if (!fabPairIcons) return;
+
+    // Clear existing icons
+    fabPairIcons.innerHTML = "";
+
+    // Find the pair data
+    const pair = allPairs.find(p => p.value === trainerId);
+    if (!pair) return;
+
+    // Create trainer icon wrapper
+    const trainerWrapper = document.createElement("div");
+    trainerWrapper.classList.add("trainer-img");
+
+    const trainerImg = document.createElement("img");
+    trainerImg.src = pair.image;
+    trainerImg.alt = "Trainer";
+    trainerImg.crossOrigin = "anonymous";
+
+    // Apply the same cropping logic as in the modal
+    trainerImg.onload = function () {
+        cropTransparentPixels(trainerImg);
+    };
+
+    trainerWrapper.appendChild(trainerImg);
+    fabPairIcons.appendChild(trainerWrapper);
+
+    // Create Pokémon icon
+    const pokemonImg = document.createElement("img");
+    pokemonImg.classList.add("pokemon-img");
+    pokemonImg.src = pair.pokemonImage;
+    pokemonImg.alt = "Pokémon";
+    pokemonImg.crossOrigin = "anonymous";
+
+    fabPairIcons.appendChild(pokemonImg);
+}
+
+function selectChange(instantScroll = false) {
     const url = new URL(window.location);
     url.searchParams.delete('monsterId');
     url.searchParams.delete('baseId');
@@ -2174,6 +2402,20 @@ function selectChange() {
     window.history.pushState(null, '', url.toString());
 
     setPairInfos(syncPairSelect.value, false);
+    updateFabIcons(syncPairSelect.value);
+
+    // Scroll to the h1 element, accounting for the sticky header
+    const h1Element = document.querySelector('#syncPairDiv h1');
+    if (h1Element) {
+        const headerHeight = document.getElementById('headerBody')?.offsetHeight || 60;
+        const elementPosition = h1Element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerHeight - 10; // 10px extra margin
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: instantScroll ? 'auto' : 'smooth'
+        });
+    }
 }
 
 function urlStateChange() {
@@ -2184,6 +2426,7 @@ function urlStateChange() {
         syncPairSelect.value = urlPairId;
 
         setPairInfos(syncPairSelect.value);
+        updateFabIcons(syncPairSelect.value);
 
         const monsterId = url.searchParams.get('monsterId');
         const baseId = url.searchParams.get('baseId');
@@ -2199,17 +2442,216 @@ function urlStateChange() {
     }
 }
 
+function cropTransparentPixels(img) {
+    // Create a canvas to analyze the image
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    // Set canvas size to match image
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+
+    // Draw the image on the canvas
+    ctx.drawImage(img, 0, 0);
+
+    try {
+        // Get image data
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const data = imageData.data;
+
+        // Find the first row with non-transparent pixels
+        let firstNonTransparentRow = 0;
+        for (let y = 0; y < canvas.height; y++) {
+            let hasNonTransparent = false;
+            for (let x = 0; x < canvas.width; x++) {
+                const index = (y * canvas.width + x) * 4;
+                const alpha = data[index + 3];
+                if (alpha > 10) { // Consider pixels with alpha > 10 as non-transparent
+                    hasNonTransparent = true;
+                    break;
+                }
+            }
+            if (hasNonTransparent) {
+                firstNonTransparentRow = y;
+                break;
+            }
+        }
+
+        // Calculate where the first non-transparent row is
+        const cropPercentage = (firstNonTransparentRow / canvas.height) * 100;
+
+        // Strategy:
+        // 1. Set transform-origin to top center so scaling expands downward
+        // 2. Use translateY to shift the image so the first non-transparent pixel is at top
+        // 3. Add extra offset to move it higher in the circle
+
+        // Negative translateY moves UP - add extra to position head near top of circle
+        const translateY = -cropPercentage - 30;
+
+        img.style.transformOrigin = 'center top';
+        img.style.transform = `translateY(${translateY}%) scale(3.0)`;
+        // Remove object-position as it conflicts with transform
+        img.style.objectPosition = 'center center';
+    } catch (e) {
+        // If CORS or other error, fall back to default positioning
+        // Apply similar transform to maintain consistent appearance
+        console.warn('Could not analyze image for cropping:', e);
+        img.style.transformOrigin = 'center top';
+        img.style.transform = 'translateY(-20%) scale(3.0)';
+        img.style.objectPosition = 'center center';
+    }
+}
+
+function openModal() {
+    pairSearchModal.style.display = "flex";
+    pairSearchInput.value = "";
+    filterPairs("");
+    pairSearchInput.focus();
+}
+
+function closeModal() {
+    // Blur the search input to dismiss the mobile keyboard
+    if (pairSearchInput) {
+        pairSearchInput.blur();
+    }
+
+    // Close the modal immediately
+    pairSearchModal.style.display = "none";
+
+    // Wait for keyboard to fully dismiss before recalculating viewport
+    // Use resize event to detect when keyboard is gone
+    let resizeTimeout;
+    const handleResize = () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            // Force viewport recalculation
+            window.scrollTo(window.scrollX, window.scrollY);
+            // Remove listener after handling
+            window.removeEventListener('resize', handleResize);
+        }, 100);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Fallback: if no resize event fires (keyboard wasn't open), clean up after 300ms
+    setTimeout(() => {
+        window.removeEventListener('resize', handleResize);
+    }, 300);
+}
+
+function filterPairs(query) {
+    const lowerQuery = query.toLowerCase();
+    const results = allPairs.filter(pair => pair.text.toLowerCase().includes(lowerQuery));
+    renderResults(results);
+    pairSearchResults.scrollTop = 0;
+}
+
+function renderResults(results) {
+    pairSearchResults.innerHTML = "";
+    results.forEach(pair => {
+        const li = document.createElement("li");
+        li.addEventListener("click", () => selectPair(pair.value));
+
+        const imagesDiv = document.createElement("div");
+        imagesDiv.classList.add("pair-images");
+
+        // Create wrapper for trainer image to contain the scaled image
+        const trainerWrapper = document.createElement("div");
+        trainerWrapper.classList.add("trainer-img");
+
+        const trainerImg = document.createElement("img");
+        trainerImg.src = pair.image;
+        trainerImg.alt = pair.text;
+        trainerImg.style.width = "100%";
+        trainerImg.style.height = "100%";
+        trainerImg.style.objectFit = "cover";
+
+        // Dynamically crop trainer image to remove transparent pixels from top
+        trainerImg.onload = function () {
+            cropTransparentPixels(trainerImg);
+        };
+
+        trainerWrapper.appendChild(trainerImg);
+        imagesDiv.appendChild(trainerWrapper);
+
+        const pokemonImg = document.createElement("img");
+        pokemonImg.src = pair.pokemonImage;
+        pokemonImg.alt = "Pokémon";
+        pokemonImg.classList.add("pokemon-img");
+        imagesDiv.appendChild(pokemonImg);
+
+        li.appendChild(imagesDiv);
+
+        const infoDiv = document.createElement("div");
+        infoDiv.classList.add("pair-info");
+
+        const starsSpan = document.createElement("span");
+        starsSpan.classList.add("pair-stars");
+        starsSpan.innerHTML = getStarsRarityString(pair.value);
+        infoDiv.appendChild(starsSpan);
+
+        const nameSpan = document.createElement("span");
+        nameSpan.classList.add("pair-name");
+        nameSpan.innerText = pair.text;
+        infoDiv.appendChild(nameSpan);
+
+        li.appendChild(infoDiv);
+        pairSearchResults.appendChild(li);
+    });
+}
+
+function selectPair(value) {
+    syncPairSelect.value = value;
+
+    // Close modal immediately for instant feedback
+    closeModal();
+
+    // Update URL and FAB icons immediately (fast operations)
+    const url = new URL(window.location);
+    url.searchParams.delete('monsterId');
+    url.searchParams.delete('baseId');
+    url.searchParams.delete('formId');
+    url.searchParams.delete('build');
+    url.searchParams.set('pair', value);
+    window.history.pushState(null, '', url.toString());
+
+    updateFabIcons(value);
+
+    // Load pair data immediately (takes less than a second)
+    setPairInfos(value, false);
+
+    // Scroll to top after content is loaded
+    const h1Element = document.querySelector('#syncPairDiv h1');
+    if (h1Element) {
+        const headerHeight = document.getElementById('headerBody')?.offsetHeight || 60;
+        const elementPosition = h1Element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerHeight - 10;
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'auto'
+        });
+    }
+}
+
 async function init() {
     syncPairSelect = document.getElementById("syncPairSelect");
     syncPairDiv = document.getElementById("syncPairDiv");
     toolsDiv = document.getElementById('adminTools');
 
+    pairSearchModal = document.getElementById("pairSearchModal");
+    pairSearchInput = document.getElementById("pairSearchInput");
+    pairSearchResults = document.getElementById("pairSearchResults");
+    openPairSearchBtn = document.getElementById("openPairSearchBtn");
+
     await buildHeader();
     await getData();
 
-    document.getElementById("changePairLabel").innerText = jData.locale.syncPairs.change_pair;
+    // document.getElementById("changePairLabel").innerText = jData.locale.syncPairs.change_pair;
 
-    if(isAdminMode) {
+    document.getElementById("pairSelectSpan").innerText = jData.locale.syncPairs.change_pair;
+    document.getElementById("pairSearchInput").placeholder = jData.locale.syncPairs.search_placeholder;
+
+    if (isAdminMode) {
         dataArea = document.getElementById("dataArea");
 
         toolsDiv.style.display = "table";
@@ -2227,7 +2669,7 @@ async function init() {
 
 
     const url = new URL(window.location);
-    if(url.searchParams.has('lang')) {
+    if (url.searchParams.has('lang')) {
         url.searchParams.delete('lang');
         url.hash = "";
         window.history.pushState(null, '', url.toString());
@@ -2237,6 +2679,31 @@ async function init() {
     setLatestPairs();
 
     syncPairSelect.addEventListener('change', selectChange);
+
+    openPairSearchBtn.addEventListener("click", openModal);
+    document.querySelector(".close-modal").addEventListener("click", closeModal);
+    window.addEventListener("click", (event) => {
+        if (event.target == pairSearchModal) {
+            closeModal();
+        }
+    });
+    pairSearchInput.addEventListener("input", (e) => filterPairs(e.target.value));
+
+    // Scroll-to-hide FAB logic
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down - hide FAB
+            openPairSearchBtn.classList.add("hidden");
+        } else {
+            // Scrolling up or at top - show FAB
+            openPairSearchBtn.classList.remove("hidden");
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
 
     urlStateChange();
     window.addEventListener('popstate', () => urlStateChange());
@@ -2255,23 +2722,23 @@ function getPairStatsRowBipCode(name, statValues, t, scale = 1) {
 
     let numCols = 6 - t.rarity + 1;
 
-    for(let i = 0; i < numCols; i++) {
-        let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx])*(statValues[pointBIdx] - statValues[pointAIdx])/(breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
+    for (let i = 0; i < numCols; i++) {
+        let statValue = statValues[pointAIdx] + (level - breakPointLevels[pointAIdx]) * (statValues[pointBIdx] - statValues[pointAIdx]) / (breakPointLevels[pointBIdx] - breakPointLevels[pointAIdx]);
 
-        if(i > 0) {
-            let buildupPowerups = jData.proto.trainerBuildupConfig.find(tbc => tbc.trainerBuildupConfigId === buildupParameter[i-1].trainerBuildupConfigId).nbPowerups || 0;
-            buildupBonus += buildupPowerups * buildupParameter[i-1][name];
+        if (i > 0) {
+            let buildupPowerups = jData.proto.trainerBuildupConfig.find(tbc => tbc.trainerBuildupConfigId === buildupParameter[i - 1].trainerBuildupConfigId).nbPowerups || 0;
+            buildupBonus += buildupPowerups * buildupParameter[i - 1][name];
             statValue += buildupBonus;
         }
 
-        statValue = Math.trunc(statValue*scale);
+        statValue = Math.trunc(statValue * scale);
 
         string += `[td]`;
 
-        if(scale > 1) {
+        if (scale > 1) {
             string += `[b][color=green]${statValue}[/color][/b]`;
         }
-        else if(scale < 1) {
+        else if (scale < 1) {
             string += `[b][color=red]${statValue}[/color][/b]`;
         }
         else {
@@ -2312,10 +2779,10 @@ function getPassiveSkillBipCode(t, v = null) {
         + `\t[tr][th|colspan=2]Talents passifs[/th][/tr]\n`
         + `\t[tr][th|width=200px]Nom[/th][th|width=400px]Effet[/th][/tr]\n`;
 
-    for(let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 5; i++) {
         const passiveId = v && v[`passive${i}Id`] > 0 ? v[`passive${i}Id`] : t[`passive${i}Id`];
 
-        if(passiveId === 0)
+        if (passiveId === 0)
             continue;
 
         string += `\t[tr][td]${getPassiveSkillName(passiveId)}[/td][td]${getPassiveSkillDescr(passiveId)}[/td][/tr]\n`;
@@ -2331,26 +2798,26 @@ function getMoveBipCode(t, m, v = null) {
         + `\t[tr][th|width=100px]Nom[/th][th|width=80px]Type[/th][th|width=80px]Catég.[/th][th|width=50px]Puis.[/th][th]Précis.[/th][th]Jauge[/th][th|width=80px]Cible[/th]\n`
         + `\t[th|width=350]Effet[/th][th|width=80px]Limite[/th][/tr]\n`;
 
-    for(let i = 1; i < 5; i++) {
+    for (let i = 1; i < 5; i++) {
         let moveId;
 
-        if(v && v[`move${i}Id`] > -1) {
+        if (v && v[`move${i}Id`] > -1) {
             moveId = v[`move${i}Id`]
         }
-        else if(m && m[`move${i}ChangeId`] > -1) {
+        else if (m && m[`move${i}ChangeId`] > -1) {
             moveId = m[`move${i}ChangeId`];
         }
         else {
             moveId = t[`move${i}Id`];
         }
 
-        if(moveId > -1) {
+        if (moveId > -1) {
             let mov = jData.proto.move.find(m => m.moveId == moveId);
             string += `\t[tr]\n`
                 + `\t\t[td]${jData.lsd.moveName[moveId].replace("\n", " ")}[/td]\n`
                 + `\t\t[td]${mov.type ? `[type=${removeAccents(jData.lsd.motifTypeName[mov.type].toLowerCase())}|MX]` : "–"}[/td]\n`
                 + `\t\t[td][type=${removeAccents(categoryToFR[mov.category].toLowerCase())}|MX][/td]\n`
-                + `\t\t[td]${mov.power ? `${mov.power}-${Math.trunc(mov.power*1.2)}` : "–"}[/td]\n`
+                + `\t\t[td]${mov.power ? `${mov.power}-${Math.trunc(mov.power * 1.2)}` : "–"}[/td]\n`
                 + `\t\t[td]${mov.accuracy || "–"}[/td]\n`
                 + `\t\t[td]${mov.gaugeDrain ? `[img]/pages/jeuxvideo/pokemon-masters/images/jauge-capa-${mov.gaugeDrain}.png[/img]` : "–"}[/td]\n`
                 + `\t\t[td]${jData.lsd.moveTargetType[targetToId[mov.target]] || "–"}[/td]\n`
@@ -2387,9 +2854,9 @@ function appendGridCategoryBipCode(panels, category) {
 
     for (let p of panels) {
         let amelioration = jData.lsd.abilityName[p.ability.type]
-                .replace("[Digit:5digits ]", "+" + p.ability.value)
-                .replace("[Name:Ability ]", getPassiveSkillName(p.ability.passiveId))
-                .replace("[Name:Move ]", jData.lsd.moveName[p.ability.moveId]).replace("\n", " ");
+            .replace("[Digit:5digits ]", "+" + p.ability.value)
+            .replace("[Name:Ability ]", getPassiveSkillName(p.ability.passiveId))
+            .replace("[Name:Move ]", jData.lsd.moveName[p.ability.moveId]).replace("\n", " ");
 
         string += `\t[tr]\n`
             + `\t\t[td]${amelioration}[/td]\n`
@@ -2495,9 +2962,9 @@ function getPairBipCode(trainerId) {
         string += `\t[tr][td|colspan=6]${agenderDescription(jData.lsd.trainerDescription[trainerId].replaceAll("\n", " "))}[/td][/tr]\n`;
 
     monsters.map(m => m.monsterBaseId).forEach(mbId => {
-            if (jData.lsd.monsterDescription[mbId])
-                string += `\t[tr][td|colspan=6]${jData.lsd.monsterDescription[mbId].replaceAll("\n", " ")}[/td][/tr]\n`;
-        }
+        if (jData.lsd.monsterDescription[mbId])
+            string += `\t[tr][td|colspan=6]${jData.lsd.monsterDescription[mbId].replaceAll("\n", " ")}[/td][/tr]\n`;
+    }
     );
 
     string += "[/table][/center]\n\n";
@@ -2662,7 +3129,7 @@ function getPairBipCode(trainerId) {
             ap.conditionIds.forEach(cid => {
                 let releaseCon = jData.proto.abilityReleaseCondition.find(arc => arc.conditionId === cid);
 
-                switch(releaseCon.type) {
+                switch (releaseCon.type) {
                     case 6:
                     case 7:
                         ap.level = releaseCon.parameter;
@@ -2687,7 +3154,7 @@ function getPairBipCode(trainerId) {
 function downloadData() {
     let e = document.createElement('a');
     e.href = window.URL.createObjectURL(
-        new Blob([getPairBipCode(syncPairSelect.value)], {"type": "text/plain"})
+        new Blob([getPairBipCode(syncPairSelect.value)], { "type": "text/plain" })
     );
     e.setAttribute('download', removeAccents(getPairName(syncPairSelect.value)));
     e.style.display = 'none';
@@ -2707,7 +3174,7 @@ function downloadAll() {
         zip.file(filename, getPairBipCode(tid));
     }
 
-    zip.generateAsync({type: 'blob'})
+    zip.generateAsync({ type: 'blob' })
         .then(function (content) {
             saveAs(content, "Duos.zip");
         });

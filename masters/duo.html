@@ -3,38 +3,58 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, maximum-scale=5.0, user-scalable=yes">
 
     <style>
         html {
             scroll-behavior: smooth;
         }
 
-        /* Style the tab */
+        /* Style the tab container */
         .tab {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
+            display: flex;
+            gap: 8px;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
         }
 
         /* Style the buttons that are used to open the tab content */
         .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
+            background: white;
+            color: #333;
+            border: 2px solid #dee2e6;
+            border-radius: 20px;
             cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         /* Change background color of buttons on hover */
         .tab button:hover {
-            background-color: #ddd;
+            background-color: #e9ecef;
+            border-color: #adb5bd;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Create an active/current tablink class */
         .tab button.active {
-            background-color: #ccc;
+            background: linear-gradient(to bottom, #4e73df 0%, #224abe 100%);
+            color: white;
+            border-color: #224abe;
+            box-shadow: 0 4px 12px rgba(34, 74, 190, 0.3);
+        }
+
+        .tab button.active:hover {
+            background: linear-gradient(to bottom, #5a7ee0 0%, #2e54c5 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(34, 74, 190, 0.4);
         }
 
         /* Style the tab content */
@@ -46,13 +66,18 @@
         }
 
         .tabContent {
-            animation: fadeEffect 0.5s; /* Fading effect takes 0.5 second */
+            animation: fadeEffect 0.5s;
         }
 
         /* Go from zero to full opacity */
         @keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         div#lastReleasedPairs li:before {
@@ -63,7 +88,8 @@
 
         .hex:before {
             content: " ";
-            width: 0; height: 0;
+            width: 0;
+            height: 0;
             border-bottom: 30px solid #6C6;
             border-left: 52px solid transparent;
             border-right: 52px solid transparent;
@@ -90,7 +116,7 @@
         }
 
         .tooltip:after {
-            content:"";
+            content: "";
             display: inline-block;
             border-style: solid;
             border-width: 10px 10px 0;
@@ -156,13 +182,13 @@
             color: #229811;
         }
 
-        .radio-tile-group .input-container .radio-button:checked + .radio-tile {
+        .radio-tile-group .input-container .radio-button:checked+.radio-tile {
             background-color: #23b20e;
             border: 2px solid #23b20e;
             color: white;
         }
 
-        .radio-tile-group .input-container .radio-button:checked + .radio-tile .radio-tile-label {
+        .radio-tile-group .input-container .radio-button:checked+.radio-tile .radio-tile-label {
             color: white;
             background-color: #23b20e;
         }
@@ -175,7 +201,8 @@
             background: url("./data/sync-grids/btnBlue.png") no-repeat;
         }
 
-        button.orangeBtn, button.blueBtn {
+        button.orangeBtn,
+        button.blueBtn {
             background-size: 100% 40px;
             border: 0;
             width: 100%;
@@ -185,48 +212,92 @@
             cursor: pointer;
         }
 
-        button.orangeBtn:active, button.blueBtn:active {
+        button.orangeBtn:active,
+        button.blueBtn:active {
             transform: translateY(2px);
         }
 
+        .tooltip.flipped:after {
+            top: -10px;
+            bottom: auto;
+            border-width: 0 10px 10px;
+            border-color: transparent transparent #000;
+        }
+
+        td,
+        th {
+            min-width: 80px;
+        }
     </style>
 
     <link rel="stylesheet" href="../css/pokebip.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.13/html-to-image.js"
+        integrity="sha512-4W7+nCTcMQMFBnTRwvixN7il649NCqZiBfJ7WvzU7gxF12zOnaKwVYTSIzwrjy/cy+CPQxn2lAIVZIes+rPp2Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/dist/FileSaver.min.js"></script>
     <script src="./js/dist/jszip.min.js"></script>
 </head>
 
 <body>
-<div id="contentDiv">
-    <div id="tools">
-        <label for="syncPairSelect"><b id="changePairLabel"></b></label> <select id="syncPairSelect"></select>
-        <br />
-        <div id="lastReleasedPairs"></div>
-        <fieldset id="adminTools" style="display: none; margin-top: 10px; line-height: 1.6rem; width: fit-content; border-radius: 8px;">
-            <legend><b>Télécharger les données</b></legend>
-            <p style="display: table-row;">
-                <span style="display: table-cell; text-align: center;"><button id="downloadOne" >Télécharger la fiche</button></span> <button id="downloadAll" style="display: table-cell; margin-left: 10px;">Tout télécharger (ZIP)</button>
-            </p>
-            <p style="display: table-row;">
-                <span style="display: table-cell; text-align: center; vertical-align: middle"><textarea style="margin-top: 10px;" id="dataArea"></textarea></span><button id="copyBtn" style="display: table-cell; margin-left: 10px; margin-top: 15px; vertical-align: middle;">Copier le code</button>
-            </p>
-        </fieldset>
-    </div>
-    <br />
-    <div id="syncPairDiv"></div>
-    <div id="syncGridDiv" style="position: relative">
-        <div id="syncGridContainer"></div>
-    </div>
-</div>
+    <div id="contentDiv">
+        <div id="tools">
+            <label for="syncPairSelect" style="display:none"><b id="changePairLabel"></b></label>
+            <select id="syncPairSelect" style="display:none"></select>
 
-<script src="./js/header.js"></script>
-<script src="./js/utils.js"></script>
-<script src="./js/moves-passive-skills.js"></script>
-<script src="./js/sync-pairs.js"></script>
+            <button id="openPairSearchBtn" class="fab-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="17 1 21 5 17 9"></polyline>
+                    <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                    <polyline points="7 23 3 19 7 15"></polyline>
+                    <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                </svg>
+                <div id="fabPairIcons" class="fab-pair-icons"></div>
+            </button>
+
+            <div id="pairSearchModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span id="pairSelectSpan"></span>
+                        <span class="close-modal">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" id="pairSearchInput" autocomplete="off">
+                        <ul id="pairSearchResults"></ul>
+                    </div>
+                </div>
+            </div>
+            <div id="lastReleasedPairs"></div>
+            <fieldset id="adminTools"
+                style="display: none; margin-top: 10px; line-height: 1.6rem; width: fit-content; border-radius: 8px;">
+                <legend><b>Télécharger les données</b></legend>
+                <p style="display: table-row;">
+                    <span style="display: table-cell; text-align: center;"><button id="downloadOne">Télécharger la
+                            fiche</button></span> <button id="downloadAll"
+                        style="display: table-cell; margin-left: 10px;">Tout télécharger (ZIP)</button>
+                </p>
+                <p style="display: table-row;">
+                    <span style="display: table-cell; text-align: center; vertical-align: middle"><textarea
+                            style="margin-top: 10px;" id="dataArea"></textarea></span><button id="copyBtn"
+                        style="display: table-cell; margin-left: 10px; margin-top: 15px; vertical-align: middle;">Copier
+                        le code</button>
+                </p>
+            </fieldset>
+        </div>
+        <br />
+        <div id="syncPairDiv"></div>
+        <div id="syncGridDiv" style="position: relative">
+            <div id="syncGridContainer"></div>
+        </div>
+    </div>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/moves-passive-skills.js"></script>
+    <script src="./js/sync-pairs.js"></script>
 </body>
 
 </html>

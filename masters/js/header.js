@@ -270,7 +270,6 @@ async function buildHeader(baseDir = ".") {
                 { "title": jData.locale.common.adminsubmenu_itemExchange, "url": `${baseDir}/item-exchange.html` },
                 { "title": jData.locale.common.adminsubmenu_bingo, "url": `${baseDir}/bingo.html` },
                 { "title": jData.locale.common.adminsubmenu_lodge, "url": `${baseDir}/lodge.html` },
-                { "title": "Beta Sync Grid", "url": `${baseDir}/duo-beta.html` },
             ]
         }
     ];
