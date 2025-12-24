@@ -240,5 +240,9 @@
 { "scoutServerTicketItemNameId": "900000000244", "scoutServerTicketItemDescriptionId": "244", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "10317400000", "isGuaranteedTicket": false, "scheduleId": "event_7110_3W_SuperTicket_01" },
 { "scoutServerTicketItemNameId": "900000000245", "scoutServerTicketItemDescriptionId": "245", "imageId": "i090_0003_00", "rarity": 9, "trainerId": "10317400000", "isGuaranteedTicket": true, "scheduleId": "event_7110_3W_MasterTicket_01" },
 { "scoutServerTicketItemNameId": "900000000246", "scoutServerTicketItemDescriptionId": "246", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_7110_3W_SuperTicket_02" },
-{ "scoutServerTicketItemNameId": "900000000247", "scoutServerTicketItemDescriptionId": "247", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_7110_4W_SuperTicket_04" }
+{ "scoutServerTicketItemNameId": "900000000247", "scoutServerTicketItemDescriptionId": "247", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_7110_4W_SuperTicket_04" },
+{ "scoutServerTicketItemNameId": "900000000248", "scoutServerTicketItemDescriptionId": "248", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "10160400000", "isGuaranteedTicket": false, "scheduleId": "event_7120_1W_SuperTicket_07" },
+{ "scoutServerTicketItemNameId": "900000000249", "scoutServerTicketItemDescriptionId": "249", "imageId": "i090_0003_00", "rarity": 9, "trainerId": "10160400000", "isGuaranteedTicket": true, "scheduleId": "event_7120_1W_MasterTicket_08" },
+{ "scoutServerTicketItemNameId": "900000000250", "scoutServerTicketItemDescriptionId": "250", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_7120_1W_SuperTicket_011" },
+{ "scoutServerTicketItemNameId": "900000000251", "scoutServerTicketItemDescriptionId": "251", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_7120_4W_SuperTicket_05" }
 ]}

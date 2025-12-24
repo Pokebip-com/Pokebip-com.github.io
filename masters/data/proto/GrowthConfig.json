@@ -6344,6 +6344,7 @@
 { "growthConfigId": "lv_limit.9.trainer.18000020921.consumption_item_set", "value": "5101020618" },
 { "growthConfigId": "lv_limit.9.trainer.18000020961.consumption_item_set", "value": "5101020604" },
 { "growthConfigId": "lv_limit.9.trainer.18000120000.consumption_item_set", "value": "5101010617" },
+{ "growthConfigId": "lv_limit.initial_phase.trainer.10018400000", "value": "9" },
 { "growthConfigId": "lv_limit.initial_phase.trainer.10019400000", "value": "9" },
 { "growthConfigId": "lv_limit.initial_phase.trainer.10090000002", "value": "9" },
 { "growthConfigId": "lv_limit.initial_phase.trainer.10101420000", "value": "9" },

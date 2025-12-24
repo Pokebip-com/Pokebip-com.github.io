@@ -117,12 +117,14 @@
     "20016800": "Nachts wandert es auf der Suche nach Futter umher.\nWird es fündig, fesselt es seine Beute mit einem\nSeidenfaden und beißt zu.",
     "20016900": "Iksbat hat sehr scharfe Zähne, sodass seine Beute oft\nnichts davon merkt, wenn es in der Dunkelheit zubeißt\nund ihr Blut aussaugt.",
     "20017100": "In Lanturns Antennen leben Bakterien, die seine\nKörperflüssigkeiten aufnehmen und so ein\neindrucksvolles Lichtspektakel auslösen.",
+    "20017400": "Um seine Gesangskünste zu verbessern, übt es pausenlos.\nSelbst wenn es schon schläft, singt es in seinen Träumen\nweiter.",
     "20017500": "Togepi benutzt die positiven Emotionen Freude und\nMitgefühl von Menschen und Pokémon als Energie.\nDieses Pokémon speichert Glücksgefühle in seiner\nSchale und teilt sie mit anderen.",
     "20017600": "Togetic ist ein Pokémon, das Glück bringt. Wenn es\njemanden trifft, der gutherzig ist, teilt es seine Freude\nmit dieser Person.",
     "20017801": "Dieses Pokémon kann zwar angeblich die Zukunft\nvoraussehen, aber seine Kräfte reichen nicht aus,\num diese auch zu ändern.",
     "20018100": "Das Licht seiner Schweifspitze kann man selbst aus dem\nWeltall noch sehen. Um seinen Standort zu verbergen,\nmacht es sein Licht zumeist aus.",
     "20018300": "Marills Schweif ist mit Öl gefüllt und dient ihm als\neine Art Rettungsring. Wenn nur sein Schweif an der\nWasseroberfläche zu sehen ist, taucht dieses Pokémon\ngerade, um sich von Wasserpflanzen zu ernähren.",
     "20018400": "Azumarills lange Ohren dienen ihm als unentbehrliche\nSensoren. Wenn es sein Gehör fokussiert, kann dieses\nPokémon auch in reißenden Flüssen identifizieren,\nwelche Art von Beute sich in seiner Nähe befindet.",
+    "20018500": "Es ist sehr beliebt bei Senioren und hat sogar seine eigene\nFachzeitschrift. Auf Länge und Winkel seiner Arme legen\nFans besonderen Wert.",
     "20018700": "Hoppspross lässt sich vom Wind treiben. Wenn es\nbemerkt, dass ein Sturm aufkommt, verbindet es\nseine Blätter mit anderen Hoppspross, damit es\nnicht davongeweht wird.",
     "20018800": "Hubelupfs Blume beginnt zu blühen, wenn die Temperatur\nüber 18 °C steigt. Wie weit sich die Blume öffnet, hängt\nvon der Temperatur ab. Daher wird dieses Pokémon\nmanchmal als Thermometer eingesetzt.",
     "20018900": "Papungha nutzt den Südwind, um das Meer zu\nüberqueren und in ferne Länder zu fliegen.\nDieses Pokémon sinkt zu Boden, wenn es während\nseines Fluges auf kalte Luftschichten stößt.",
@@ -399,6 +401,7 @@
     "20073400": "In Gefahrensituationen hebt es seine Ohren an und setzt\nPsycho-Kräfte frei, die einen 10 t schweren LKW zu Schrott\nverarbeiten können.",
     "20074611": "Generationen von Königen hatten dieses Pokémon an ihrer\nSeite. Mit seiner mysteriösen Kraft kann es Menschen und\nPokémon gleichermaßen kontrollieren.",
     "20074612": "Generationen von Königen hatten dieses Pokémon an ihrer\nSeite. Mit seiner mysteriösen Kraft kann es Menschen und\nPokémon gleichermaßen kontrollieren.",
+    "20075900": "Es produziert verschiedene Düfte. Im Kampf verschafft\nes sich einen Vorteil, indem es einen Duft verströmt,\nder dem Gegner zuwider ist.",
     "20074200": "Es stößt weiße Fäden aus, die so süß und klebrig wie\nZuckerwatte sind. Mit ihnen umwickelt es den Gegner\nund hindert ihn daran, sich zu bewegen.",
     "20074300": "Es verfügt über einen feinen Geruchssinn, mit dem es\nselbst die schwächsten Gerüche erkennen kann. Es hilft\ndeshalb oft in Konditoreien aus.",
     "20074800": "Es entsteht bei der entwicklungsbedingten Aufspaltung der\nbeiden Bithora in sieben Vertreter ihrer Art. Gemeinsam\nverfügen sie über die siebenfache Stärke.",
@@ -638,5 +641,8 @@
     "2005490041": "Die starke Beinmuskulatur verdankt es wohl dem Leben\nauf schneebedeckten Bergen. Über seine Blumenkrone\nverströmt es stimulierende Düfte.",
     "2010100000": "Viele seiner Merkmale entsprechen denen eines Viridium\naus der Zukunft, welches in einer esoterischen Zeitschrift\nvorgestellt wurde.",
     "2010250000": "Es gibt anderen giftige Mochi zu essen, die Kräfte und\nBegierden wecken, kettet sie so an sich und kontrolliert\nsie.",
-    "2009520000": "Sein roter Kopf wandelt Scharfstoffe in Feuer-Energie um\nund kann so feurig scharfe Flammen von sich geben."
+    "2009520000": "Sein roter Kopf wandelt Scharfstoffe in Feuer-Energie um\nund kann so feurig scharfe Flammen von sich geben.",
+    "2009980000": "Aus seinem Maul stößt es unfassbare Kälte aus, die sogar\nglühendes Magma augenblicklich gefrieren lässt.",
+    "2001010041": "Sonderbarerweise ähnelt seine Körperoberfläche der einer\nAprikoko. Die elektrische Kraft, die es bei Frustration\nentlädt, gleicht der von zwanzig Blitzen.",
+    "2009770000": "Es ist zwar ein Vielfraß, doch die Jagd liegt ihm nicht.\nDeshalb schließt es sich mit Nigiragi zusammen, um Beute\nzu fangen."
 }

@@ -754,6 +754,7 @@
     "2008410000": "Flapple",
     "2008420000": "Appletun",
     "2008440000": "Sandaconda",
+    "2008470000": "Barraskewda",
     "2008491100": "Toxtricity",
     "2008491200": "Toxtricity",
     "2008510000": "Centiskorch",
@@ -768,6 +769,7 @@
     "2008660031": "Mr. Rime",
     "2008670031": "Runerigus",
     "2008691111": "Alcremie",
+    "2008700000": "Falinks",
     "2008710000": "Pincurchin",
     "2008730000": "Frosmoth",
     "2008751100": "Eiscue",
@@ -867,5 +869,8 @@
     "2001100031": "Weezing",
     "2010100000": "Ferroverdor",
     "2010250000": "Pecharunt",
-    "2009520000": "Scovillain"
+    "2009520000": "Scovillain",
+    "2009770000": "Dondozo",
+    "2001010041": "Electrode",
+    "2009980000": "Baxcalibur"
 }

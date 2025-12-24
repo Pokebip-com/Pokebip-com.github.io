@@ -68,5 +68,10 @@
 { "questGroupId": 1001501, "number": 2, "battleId": "1030470901103010", "fourKindsRuleId": "-1" },
 { "questGroupId": 1001501, "number": 3, "battleId": "1030470901104010", "fourKindsRuleId": "-1" },
 { "questGroupId": 1001501, "number": 4, "battleId": "1030470901105010", "fourKindsRuleId": "-1" },
-{ "questGroupId": 1001501, "number": 5, "battleId": "1030470901101010", "fourKindsRuleId": "20900002" }
+{ "questGroupId": 1001501, "number": 5, "battleId": "1030470901101010", "fourKindsRuleId": "20900002" },
+{ "questGroupId": 1001601, "number": 1, "battleId": "1030471200602010", "fourKindsRuleId": "-1" },
+{ "questGroupId": 1001601, "number": 2, "battleId": "1030471200603010", "fourKindsRuleId": "-1" },
+{ "questGroupId": 1001601, "number": 3, "battleId": "1030471200604010", "fourKindsRuleId": "-1" },
+{ "questGroupId": 1001601, "number": 4, "battleId": "1030471200605010", "fourKindsRuleId": "-1" },
+{ "questGroupId": 1001601, "number": 5, "battleId": "1030471200601010", "fourKindsRuleId": "20900002" }
 ]}

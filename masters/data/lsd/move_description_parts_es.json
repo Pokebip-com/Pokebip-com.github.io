@@ -36,7 +36,7 @@
     "999904": "Reduce la Defensa del usuario en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
     "999903": "Aplica el efecto Siguiente mitiga daño al usuario. (Si el usuario es atacado con un movimiento mientras el efecto está activo, el ataque no le infligirá ningún daño, y el daño de algunos ataques como los movimientos compi se reducirá a la mitad. El efecto se elimina tras activarse.)",
     "999902": "Se reduce en 1 el contador de movimientos compi del usuario cuando hay una tormenta de arena.",
-    "999901": "Aumenta el Ataque Especial y la Velocidad del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+    "999901": "Aumenta el Ataque Especial y la Velocidad del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
     "999900": "Aplica el efecto Siguiente crítico al usuario.",
     "999899": "Reduce el Ataque Especial del objetivo en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
     "999898": "Si la Defensa del usuario ha sido incrementada, su Defensa Especial aumenta en igual medida.",
@@ -593,7 +593,7 @@
     "999344": "Aumenta [Name:ReferencedMessageTag Idx=\"1\" ] de un aliado en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ].",
     "999343": "Aumenta [Name:ReferencedMessageTag Idx=\"2\" ] de un aliado en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ].",
     "999342": "Reduce [Name:ReferencedMessageTag ] de todos los compis rivales en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
-    "999341": "La potencia de este ataque aumenta cuando se reduce la resiliencia del tipo del objetivo.",
+    "999341": "La potencia de este ataque aumenta cuando se reduce la resiliencia tipo del objetivo.",
     "999340": "Aumenta el Ataque, la Defensa, la Defensa Especial y la Velocidad de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
     "999339": "Aumenta la Velocidad, la Precisión y la probabilidad de asestar golpes críticos de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
     "999338": "Cuantos menos PS tenga el objetivo, más se reduce la potencia de este ataque.",
@@ -970,5 +970,10 @@
     "998955": "Crea un [Name:ReferencedMessageTag Idx=\"2\" ] cuando hay un [Name:ReferencedMessageTag Idx=\"2\" ] activo.",
     "998954": "Aumenta el [Name:ReferencedMessageTag ] de todos los compis aliados de 1 a 4 niveles al azar. (El aumento es el mismo para todos los compis aliados).",
     "998953": "Si el Charizard del usuario ha megaevolucionado, también aumenta el [Name:ReferencedMessageTag Idx=\"2\" ] del usuario en [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"nivel\" P=\"niveles\" ].",
-    "998952": "Evoluciona a Mega-Charizard Y. Vuelve a la normalidad tras terminar el combate."
+    "998952": "Evoluciona a Mega-Charizard Y. Vuelve a la normalidad tras terminar el combate.",
+    "998951": "Otorga el efecto siguiente [Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"vez\" P=\"veces\" ]:\nAumenta en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ] una de las siguientes características de todos los compis aliados al azar: Ataque, Defensa, Ataque Especial, Defensa Especial, Velocidad, Precisión o Evasión.",
+    "998950": "Cuanto más se hayan reducido las características del rival al que se apunta actualmente, más se reducirá el contador de movimientos compi del usuario (entre 0 y 4) la primera vez que este movimiento de ataque acierta en cada combate.",
+    "998949": "Duplica las mejoras en las características de cualquiera de los compis aliados.",
+    "998948": "Si los PM restantes de [Name:MoveId Idx=\"19640\" ] del usuario son [Digit:1digit Idx=\"6\" ] o más cuando ataca con este movimiento, reduce dichos PM en [Digit:1digit Idx=\"6\" ] y otorga todos los efectos siguientes:",
+    "998947": "Aplica el [Name:ReferencedMessageTag Idx=\"4\" ] a un aliado."
 }

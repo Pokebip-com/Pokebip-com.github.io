@@ -117,12 +117,14 @@
     "20016800": "Il erre chaque nuit à la recherche d'une proie.\nQuand il en trouve une, il l'immobilise grâce à\nses fils, puis la croque avec ses mandibules.",
     "20016900": "Ses crocs sont si acérés qu'il peut sucer le sang\nde ses proies dans l'obscurité sans même qu'elles\ns'en rendent compte.",
     "20017100": "Les bactéries nichées dans l'antenne de Lanturn\némettent une lumière vive quand elles aspirent\nses fluides corporels.",
+    "20017400": "Il s'entraîne dur pour maîtriser le chant. Même quand\nil dort, il continue de faire des gammes dans ses rêves.",
     "20017500": "L'énergie de Togepi provient des émotions positives\net du plaisir exprimé par les gens et les Pokémon.\nCe Pokémon accumule les sentiments de bonheur\ndans sa coquille, puis les partage avec les autres.",
     "20017600": "On raconte que Togetic est un Pokémon qui porte chance.\nSi ce Pokémon remarque quelqu'un doté d'un cœur pur,\nil apparaît et partage son bonheur avec la personne\nen question.",
     "20017801": "Ce Pokémon aurait le pouvoir de voir l'avenir.\nIl n'a malheureusement pas celui de le changer.",
     "20018100": "La lumière de sa queue est si vive qu'on peut la voir\ndepuis l'espace. En général, il l'éteint donc pour éviter\nde se faire repérer.",
     "20018300": "La queue remplie d'huile de Marill lui sert de gilet de\nsauvetage. Parfois, on peut voir sa queue flotter à la\nsurface. On peut en déduire que ce Pokémon a plongé\nsous l'eau pour se nourrir de plantes aquatiques.",
     "20018400": "Les longues oreilles d'Azumarill sont des capteurs\nindispensables. Lorsqu'il se concentre pour écouter,\nce Pokémon peut identifier les proies aux alentours,\nmême dans les cours d'eau à fort courant ou les rapides.",
+    "20018500": "Il fait l'objet de revues spécialisées tant il est populaire\nauprès des personnes âgées. Ses fans aiment surtout\nla longueur et l'angle de ses bras.",
     "20018700": "Ce Pokémon flotte à la dérive, porté par le vent.\nS'il sent qu'un vent très fort approche, Granivol\nattache ses feuilles aux autres Granivol pour ne\npas être emporté par la bourrasque.",
     "20018800": "La fleur de Floravol éclot lorsque la température atteint\n18 °C. L'ouverture de la fleur change en fonction de\nla température. Certaines personnes se servent de\nce Pokémon comme d'un thermomètre.",
     "20018900": "Cotovol traverse la mer, porté par les vents, pour\ndécouvrir de nouveaux territoires. Ce Pokémon se\nrapproche du sol quand le vent est trop froid.",
@@ -399,6 +401,7 @@
     "20073400": "S'il se sent menacé, il lève les oreilles et déchaîne\nun pouvoir psychique capable de réduire en miettes\nun camion de 10 t.",
     "20074611": "Ils ont fait le bonheur de générations de rois.\nLeurs pouvoirs psychiques leur permettent\nde contrôler hommes et Pokémon.",
     "20074612": "Ils ont fait le bonheur de générations de rois.\nLeurs pouvoirs psychiques leur permettent\nde contrôler hommes et Pokémon.",
+    "20075900": "Ce Pokémon est capable d'émettre toutes sortes\nd'odeurs pour incommoder son adversaire et\naugmenter ses chances de gagner.",
     "20074200": "Il immobilise son adversaire à l'aide de filaments blancs,\nsucrés et collants qui ressemblent à de la barbe à papa.",
     "20074300": "La finesse de son odorat lui permet de distinguer les\nnuances de parfums les plus subtiles, ce qui en fait\nun compagnon idéal pour les pâtissiers.",
     "20074800": "Après évolution, les deux Opermine laissent place à sept\ncréatures qui ont la puissance cumulée de sept Opermine.",
@@ -638,5 +641,8 @@
     "2005490041": "Je spécule que ce Pokémon doit ses jambes musclées\nà son habitat dans les montagnes couvertes de neige\népaisse. La fleur sur sa couronne exhale un parfum\nstimulant tout être alentour.",
     "2010100000": "Il présente de nombreuses similitudes avec le Viridium\ndu futur évoqué dans une revue sur les phénomènes\nparanormaux.",
     "2010250000": "Il fait manger à sa cible un mochi empoisonné\nqui éveille les désirs et révèle le potentiel.\nIl la contrôle ensuite grâce à ses chaînes.",
-    "2009520000": "Sa tête rouge convertit la substance piquante produite\npar son corps en énergie de type Feu et crache\ndes flammes brûlantes."
+    "2009520000": "Sa tête rouge convertit la substance piquante produite\npar son corps en énergie de type Feu et crache\ndes flammes brûlantes.",
+    "2009980000": "L'air qu'il crache est tellement froid qu'il peut\ngeler instantanément du magma en fusion.",
+    "2001010041": "Son enveloppe corporelle est étrangement semblable\nà celle des Noigrumes. S'il est irrité, il relâche\nun courant électrique dont l'intensité atteint\nvingt fois celle de la foudre.",
+    "2009770000": "Comme il n'est pas très doué pour attraper ses proies,\nce Pokémon vorace fait équipe avec Nigirigon\npour chasser."
 }

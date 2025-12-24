@@ -970,5 +970,10 @@
     "998955": "Erzeugt ein [Name:ReferencedMessageTag Idx=\"2\" ], wenn ein [Name:ReferencedMessageTag Idx=\"2\" ] aktiv ist.",
     "998954": "Erhöht den [Name:ReferencedMessageTag ] aller verbündeten Gefährten zufällig um 1 bis 4. (Die Erhöhung ist für alle verbündeten Gefährten gleich.)",
     "998953": "Wenn das Glurak des Anwenders die Mega-Entwicklung erreicht hat, erhöht sich der [Name:ReferencedMessageTag Idx=\"2\" ] des Anwenders auch um [Digit:1digit Idx=\"3\" ].",
-    "998952": "Löst bei Glurak bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Glurak Y aus."
+    "998952": "Löst bei Glurak bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Glurak Y aus.",
+    "998951": "Löst den folgenden Effekt [Digit:1digit Idx=\"3\" ]-mal aus:\nErhöht zufällig einen der folgenden Statuswerte aller verbündeten Gefährten um [Digit:1digit Idx=\"2\" ]: Angriff, Verteidigung, Spezial-Angriff, Spezial-Verteidigung, Initiative, Genauigkeit oder Fluchtwert.",
+    "998950": "Je stärker die Statuswerte des Gegners, der aktuell das Ziel ist, gesenkt wurden, desto mehr wird der Wert des Gefährtenattacken-\nCountdowns des Anwenders ein Mal pro Kampf reduziert (um 0 bis 4), wenn dieser Angriff mit einer Attacke erstmals Erfolg hat.",
+    "998949": "Verdoppelt die bereits vorhandene Erhöhung von Statuswerten verbündeter Gefährten.",
+    "998948": "Wenn die verbleibenden Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"19640\" ] des Anwenders [Digit:1digit Idx=\"6\" ] oder mehr betragen und mit dieser Attacke angegriffen wird, werden diese AEP um [Digit:1digit Idx=\"6\" ] reduziert und alle folgenden Effekte ausgelöst:",
+    "998947": "Verursacht bei einem Verbündeten den [Name:ReferencedMessageTag Idx=\"4\" ]."
 }

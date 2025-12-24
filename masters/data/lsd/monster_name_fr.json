@@ -754,6 +754,7 @@
     "2008410000": "Pomdrapi",
     "2008420000": "Dratatin",
     "2008440000": "Dunaconda",
+    "2008470000": "Hastacuda",
     "2008491100": "Salarsen",
     "2008491200": "Salarsen",
     "2008510000": "Scolocendre",
@@ -768,6 +769,7 @@
     "2008660031": "M. Glaquette",
     "2008670031": "Tutétékri",
     "2008691111": "Charmilly",
+    "2008700000": "Hexadron",
     "2008710000": "Wattapik",
     "2008730000": "Beldeneige",
     "2008751100": "Bekaglaçon",
@@ -867,5 +869,8 @@
     "2001100031": "Smogogo",
     "2010100000": "Vert-de-Fer",
     "2010250000": "Pêchaminus",
-    "2009520000": "Scovilain"
+    "2009520000": "Scovilain",
+    "2009770000": "Oyacata",
+    "2001010041": "Électrode",
+    "2009980000": "Glaivodo"
 }

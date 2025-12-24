@@ -970,5 +970,10 @@
     "998955": "Transforme le champ en un [Name:ReferencedMessageTag Idx=\"2\" ] quand le champ est un [Name:ReferencedMessageTag Idx=\"2\" ].",
     "998954": "Augmente l'[Name:ReferencedMessageTag ] de tous les Duos alliés de 1 à 4 rangs, aléatoirement. (L'augmentation est la même pour tous les Duos alliés.)",
     "998953": "Si le Dracaufeu du lanceur a méga-évolué, augmente également l'[Name:ReferencedMessageTag Idx=\"2\" ] du lanceur de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ].",
-    "998952": "Permet à Dracaufeu de devenir Méga-Dracaufeu Y jusqu'à la fin du combat."
+    "998952": "Permet à Dracaufeu de devenir Méga-Dracaufeu Y jusqu'à la fin du combat.",
+    "998951": "L'effet suivant s'applique [Digit:1digit Idx=\"3\" ] fois :\nAugmente aléatoirement une des stats suivantes de tous les Duos alliés de [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ] : Attaque, Défense, Atq. Spé., Déf. Spé., Vitesse, Précision ou Esquive.",
+    "998950": "Plus les stats de l'ennemi actuellement ciblé ont été baissées, plus le nombre d'actions nécessaires pour lancer une capacité Duo pour le lanceur sera réduit (de 0 à 4) la première fois que cette capacité offensive est utilisée avec succès à chaque combat.",
+    "998949": "Si les stats de n'importe quel Duo allié ont été augmentées, double les augmentations de stats.",
+    "998948": "Si les PPC restants de [Name:MoveId Idx=\"19640\" ] du lanceur sont de [Digit:1digit Idx=\"6\" ] ou plus quand il attaque avec cette capacité, réduit la quantité de ces PPC de [Digit:1digit Idx=\"6\" ] et tous les effets suivants s'appliquent :",
+    "998947": "Applique l'[Name:ReferencedMessageTag Idx=\"4\" ] à un allié."
 }

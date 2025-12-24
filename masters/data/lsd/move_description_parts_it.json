@@ -297,7 +297,7 @@
     "999642": "Aumenta l'Attacco del bersaglio di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999641": "Inoltre, aumenta la Velocità di chi la usa di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ] quando piove.",
     "999640": "Questo attacco aumenta di potenza quando il bersaglio è affetto da \"Sostituzione vietata\".",
-    "999639": "Chi la usa subisce una quantità di danni pari al [Digit:2digits ]% dei suoi PS massimi.",
+    "999639": "Chi la usa subisce una quantità di danni pari a una certa percentuale ([Digit:2digits ]%) dei suoi PS massimi.",
     "999638": "Riduce l'Attacco e l'Attacco Speciale del bersaglio di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999637": "Riduce la Difesa Speciale di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
     "999636": "Aumenta l'Attacco Speciale di chi la usa, fino a un massimo di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ], in proporzione inversa rispetto alla percentuale di PS residui di chi la usa.",
@@ -593,7 +593,7 @@
     "999344": "Aumenta [Name:ReferencedMessageTag Idx=\"1\" ] di un alleato di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ].",
     "999343": "Aumenta [Name:ReferencedMessageTag Idx=\"2\" ] di un alleato di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ].",
     "999342": "Riduce [Name:ReferencedMessageTag ] di tutte le Unità avversarie di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
-    "999341": "Questo attacco aumenta di potenza quando la Protezione dal tipo del bersaglio viene ridotta.",
+    "999341": "Questo attacco aumenta di potenza quando la protezione dal tipo del bersaglio viene ridotta.",
     "999340": "Aumenta l'Attacco, la Difesa, la Difesa Speciale e la Velocità di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999339": "Aumenta la Velocità, la precisione e la probabilità di mandare a segno brutti colpi di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999338": "Riduce la potenza di questo attacco in proporzione alla percentuale di PS residui del bersaglio.",
@@ -970,5 +970,10 @@
     "998955": "Trasforma il campo di lotta in un [Name:ReferencedMessageTag Idx=\"2\" ] quando il campo di lotta è un [Name:ReferencedMessageTag Idx=\"2\" ].",
     "998954": "Aumenta l'[Name:ReferencedMessageTag ] di tutte le Unità alleate da 1 a 4 gradi in modo casuale. (L'aumento è lo stesso per tutte le Unità alleate.)",
     "998953": "Se Charizard di chi la usa si megaevolve, aumenta anche l'[Name:ReferencedMessageTag Idx=\"2\" ] di chi la usa di [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"grado\" P=\"gradi\" ].",
-    "998952": "Permette a Charizard di megaevolversi. L'effetto svanisce al termine della lotta."
+    "998952": "Permette a Charizard di megaevolversi. L'effetto svanisce al termine della lotta.",
+    "998951": "Conferisce l'effetto seguente [Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"volta\" P=\"volte\" ]:\nAumenta a caso di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ] una delle seguenti statistiche di tutte le Unità alleate: Attacco, Difesa, Attacco Speciale, Difesa Speciale, Velocità, precisione o elusione.",
+    "998950": "Abbassa il numero di azioni necessarie a chi la usa per sferrare l'Unimossa in proporzione alla riduzione delle statistiche del bersaglio avversario attuale (da 0 a 4) la prima volta che questo attacco semplice va a segno in ogni lotta.",
+    "998949": "Se le statistiche di qualsiasi Unità alleata sono aumentate, quell'aumento viene raddoppiato.",
+    "998948": "Se gli utilizzi residui di [Name:MoveId Idx=\"19640\" ] di chi la usa sono pari o superiori a [Digit:1digit Idx=\"6\" ] quando si attacca con questa mossa, riduce tali utilizzi di [Digit:1digit Idx=\"6\" ] e conferisce tutti gli effetti seguenti:",
+    "998947": "Applica l'[Name:ReferencedMessageTag Idx=\"4\" ] a un alleato."
 }

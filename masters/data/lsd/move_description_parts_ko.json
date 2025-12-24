@@ -970,5 +970,10 @@
     "998955": "필드가 [Name:ReferencedMessageTag Idx=\"2\" ]일 때는 필드를 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ni\" ] 만든다",
     "998954": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 1~4단계 중 하나만큼 오른다\n(같은 편 버디즈 전원이 같은 단계로 오른다)",
     "998953": "추가로 자신이 메가리자몽Y가 되어있을 때는 자신의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"3\" ]단계 오른다",
-    "998952": "배틀이 끝날 때까지 메가리자몽Y가 된다"
+    "998952": "배틀이 끝날 때까지 메가리자몽Y가 된다",
+    "998951": "같은 편 버디즈 전원의 공격과 방어, 특수공격, 특수방어, 스피드, 명중률, 회피율 중 한 가지가 [Digit:1digit Idx=\"2\" ]단계 오르는 효과를 [Digit:1digit Idx=\"3\" ]회 발휘한다",
+    "998950": "처음 이 기술로 공격에 성공했을 때만 타깃으로 지정한 상대의 능력이 떨어져 있는 만큼 자신의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 0~4 중 하나만큼 줄인다",
+    "998949": "같은 편 버디즈 전원의 올라간 능력이 2배로 오른다",
+    "998948": "이 기술로 공격할 때 자신의 \"[Name:MoveId Idx=\"19640\" ]\"의 남은 횟수가 [Digit:1digit Idx=\"6\" ] 이상일 때는 그 횟수를 [Digit:1digit Idx=\"6\" ] 줄이고 아래의 모든 효과를 발휘한다",
+    "998947": "같은 편을 [Name:ReferencedMessageTag Idx=\"4\" ] 상태로 만든다"
 }

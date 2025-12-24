@@ -122,7 +122,7 @@
     "event_7060_4W_PokeMasGuarantee_05": "Pokémon Masters Day: 100\ngemme a pagamento per 1\nUnicerca ×11 con Unità 5★!",
     "event_7070_5W_PokeMas_01": "Solo una volta in occasione\ndel Pokémon Masters Day:\nUnicerca ×11 a 25 gemme!",
     "event_7070_5W_PokeMasGuarantee_02": "Pokémon Masters Day: 100\ngemme a pagamento per 1\nUnicerca ×11 con Unità 5★!",
-    "event_7070_1W_MasterFes_02": "Un'Unità master garantita!\nMassimo 1 volta",
+    "event_7070_1W_MasterFes_02": "Un'Unità master a scelta!\nMassimo 1 volta",
     "event_7080_4W_PokeMas_06": "Solo una volta in occasione\ndel Pokémon Masters Day:\nUnicerca ×11 a 25 gemme!",
     "event_7080_4W_PokeMas_07": "Pokémon Masters Day: 250\ngemme a pagamento per 1\nUnicerca ×11 con Unità 5★!",
     "event_7080_4W_PokeMas_09": "Pokémon Masters Day: 2.500\ngemme a pagamento per 1\nUnicerca ×11 con Unità 5★!",
@@ -141,5 +141,13 @@
     "event_7110_1W_MasterExFes_03": "Due Unità Masterparty in evidenza!\nAppariranno anche altre Unità\nMasterparty!",
     "event_7110_1W_MasterExFes_04": "Due Unità Masterparty in evidenza!\nAppariranno anche altre Unità\nMasterparty!",
     "event_7110_4W_MasterExFes_05": "Due Unità Masterparty in evidenza!\nAppariranno anche altre Unità\nMasterparty!",
-    "event_7110_4W_MasterExFes_06": "Due Unità Masterparty in evidenza!\nAppariranno anche altre Unità\nMasterparty!"
+    "event_7110_4W_MasterExFes_06": "Due Unità Masterparty in evidenza!\nAppariranno anche altre Unità\nMasterparty!",
+    "event_7120_1W_ExPokeFes_04": "Ballino Costumax fa il suo debutto in\nun'Unità Masterparty EX! In evidenza\nanche altre due Unità Masterparty!",
+    "event_7120_3W_ExPokeFes_01": "Oranzio fa il suo debutto in un'Unità\nMasterparty EX! In evidenza anche\naltre due Unità Masterparty!",
+    "event_7120_3W_ExPokeFes_02": "Brassius fa il suo debutto in un'Unità\nMasterparty EX! In evidenza anche\naltre due Unità Masterparty!",
+    "event_7120_4W_PokeMas_01": "Solo una volta in occasione\ndel Pokémon Masters Day:\nUnicerca ×11 a 25 gemme!",
+    "event_7120_4W_PokeMas_02": "Pokémon Masters Day: 250\ngemme a pagamento per 1\nUnicerca ×11 con Unità 5★!",
+    "event_7120_4W_PokeMas_03": "Pokémon Masters Day: 2.500 gemme\na pagamento per 1 Unicerca ×11\ncon Unità esclusiva garantita!",
+    "event_7120_1W_Bsearch_01": "Un'Unità master a scelta!\nMassimo 1 volta",
+    "event_7120_1W_Bsearch_02": "Unicerca ×11 in cui tutte le Unità\ndisponibili sono 5★! Massimo\n1 volta"
 }

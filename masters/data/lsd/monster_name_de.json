@@ -754,6 +754,7 @@
     "2008410000": "Drapfel",
     "2008420000": "Schlapfel",
     "2008440000": "Sanaconda",
+    "2008470000": "Barrakiefa",
     "2008491100": "Riffex",
     "2008491200": "Riffex",
     "2008510000": "Infernopod",
@@ -768,6 +769,7 @@
     "2008660031": "Pantifrost",
     "2008670031": "Oghnatoll",
     "2008691111": "Pokusan",
+    "2008700000": "Legios",
     "2008710000": "Britzigel",
     "2008730000": "Mottineva",
     "2008751100": "Kubuin",
@@ -867,5 +869,8 @@
     "2001100031": "Smogmog",
     "2010100000": "Eisenblatt",
     "2010250000": "Infamomo",
-    "2009520000": "Halupenjo"
+    "2009520000": "Halupenjo",
+    "2009770000": "Heerashai",
+    "2001010041": "Lektrobal",
+    "2009980000": "Espinodon"
 }
