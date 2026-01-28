@@ -27,6 +27,8 @@
 { "itemConfigId": "item_set_id_at_duplication.750000000222", "value": "4010105" },
 { "itemConfigId": "item_set_id_at_duplication.750000000223", "value": "4010105" },
 { "itemConfigId": "item_set_id_at_duplication.750000000224", "value": "4010105" },
+{ "itemConfigId": "item_set_id_at_duplication.750000000683", "value": "4010105" },
+{ "itemConfigId": "item_set_id_at_duplication.750000000684", "value": "4010105" },
 { "itemConfigId": "money.upper_limit_of_id", "value": "999999999" },
 { "itemConfigId": "move_level_up_item.upper_limit_of_id", "value": "999999" },
 { "itemConfigId": "skill_deck_item.upper_limit", "value": "500" },

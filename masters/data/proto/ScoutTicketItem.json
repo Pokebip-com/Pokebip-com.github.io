@@ -40,5 +40,10 @@
 { "scoutTicketItemNameId": "890000000040", "u2": 2, "scoutTicketItemDescriptionId": "8939", "imageId": "i089_0024_00", "rarity": 9, "scheduleId": "7080_1W_BSearch_2", "u7": 10 },
 { "scoutTicketItemNameId": "890000000041", "u2": 2, "scoutTicketItemDescriptionId": "8940", "imageId": "i089_0017_00", "rarity": 9, "scheduleId": "7100_4W_BSearch_2_Ticket", "u7": 10 },
 { "scoutTicketItemNameId": "890000000042", "u2": 2, "scoutTicketItemDescriptionId": "8941", "imageId": "i089_0018_00", "rarity": 9, "scheduleId": "7100_4W_BSearch_3_Ticket", "u7": 10 },
-{ "scoutTicketItemNameId": "890000000043", "u2": 2, "scoutTicketItemDescriptionId": "8942", "imageId": "i089_0021_00", "rarity": 9, "scheduleId": "7110_2W_BSearch_Ticket_2", "u7": 10 }
+{ "scoutTicketItemNameId": "890000000043", "u2": 2, "scoutTicketItemDescriptionId": "8942", "imageId": "i089_0021_00", "rarity": 9, "scheduleId": "7110_2W_BSearch_Ticket_2", "u7": 10 },
+{ "scoutTicketItemNameId": "890000000044", "u2": 1, "scoutTicketItemDescriptionId": "8943", "imageId": "i089_0030_00", "rarity": 3, "scheduleId": "FOREVER", "u7": 0 },
+{ "scoutTicketItemNameId": "890000000047", "u2": 2, "scoutTicketItemDescriptionId": "8944", "imageId": "i089_0002_00", "rarity": 3, "scheduleId": "8010_3W_BSearch_1", "u7": 10 },
+{ "scoutTicketItemNameId": "890000000048", "u2": 2, "scoutTicketItemDescriptionId": "8945", "imageId": "i089_0025_00", "rarity": 9, "scheduleId": "8010_3W_BSearch_2", "u7": 10 },
+{ "scoutTicketItemNameId": "890000000049", "u2": 1, "scoutTicketItemDescriptionId": "8925", "imageId": "i089_0023_02", "rarity": 9, "scheduleId": "FOREVER", "u7": 0 },
+{ "scoutTicketItemNameId": "890000000050", "u2": 1, "scoutTicketItemDescriptionId": "8939", "imageId": "i089_0024_00", "rarity": 9, "scheduleId": "FOREVER", "u7": 0 }
 ]}

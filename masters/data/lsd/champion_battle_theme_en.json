@@ -27,5 +27,14 @@
     "damage_challenge_theme_6060_002": "Ally sync move and max move damage\nsignificantly reduced",
     "passio_tower_theme_7070_001": "Opponents won’t take damage from\nspecial attacks",
     "passio_tower_theme_7070_002": "Opponents won’t take damage from\nphysical attacks",
-    "passio_tower_theme_7070_003": "Unaffected opponents won’t take damage"
+    "passio_tower_theme_7070_003": "Unaffected opponents won’t take damage",
+    "gvg_theme_8010_001": "Opponents won’t take damage from\nphysical attacks",
+    "gvg_theme_8010_002": "Opponents won’t take damage from\nspecial attacks",
+    "gvg_theme_8010_003": "Opponents won’t take damage from\nsync moves and max moves",
+    "gvg_theme_8010_004": "Unaffected opponents won’t take damage\nfrom attacks",
+    "gvg_theme_8010_005": "Opponents won’t take damage from attacks\nthat are not supereffective",
+    "gvg_theme_8010_006": "Opponents’ moves deal more damage",
+    "gvg_theme_8010_007": "Ally move gauge\nmaximum –2",
+    "gvg_theme_8010_008": "The move gauge increases slower for allies",
+    "gvg_theme_8010_009": "Opponents won’t take damage from\nattacks from sync pairs that don’t have\nthe designated theme(s)"
 }

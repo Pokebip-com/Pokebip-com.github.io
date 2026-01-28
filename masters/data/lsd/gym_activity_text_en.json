@@ -11,5 +11,14 @@
     "101800": "Logged in to the gym.",
     "200000": "[Digit:8digits ] points reached in a\nRanked Damage Event!",
     "200100": "[Digit:8digits ] points reached in a high score event!",
-    "200200": "A [Digit:7digits ]-win streak reached in the\nLegendary Gauntlet!"
+    "200200": "A [Digit:7digits ]-win streak reached in the\nLegendary Gauntlet!",
+    "300100": "Pasio gym battle begins in [Digit:2digits ] [EN:Qty S=\"day\" P=\"days\" ]",
+    "300200": "Pasio gym battle ends in [Digit:2digits ] [EN:Qty S=\"day\" P=\"days\" ]",
+    "300300": "Pasio gym battle has begun!",
+    "300400": "Pasio gym battle has ended!",
+    "300500": "The Pasio gym battle rankings have been finalized!\n[Name:GymName ]’s rank was [Name:GvGRank ]!",
+    "300510": "The Pasio gym battle rankings have been finalized!\n[Name:GymName ] did not participate.",
+    "300600": "Circuit [Digit:2digits ] has started!",
+    "300700": "Extra battles have started!",
+    "300800": "The Circuit [Digit:2digits ] battle against\n[Name:TrainerName ] has been completed!"
 }

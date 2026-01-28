@@ -107,6 +107,7 @@
     "40000369": "Cerchia di Hoenn (danni fisici)",
     "40000370": "Cerchia di Hoenn (danni speciali)",
     "40000371": "Cerchia di Hoenn (difensiva)",
+    "40000372": "Cerchia di Sinnoh (danni fisici)",
     "40000373": "Cerchia di Sinnoh (danni speciali)",
     "40000374": "Cerchia di Sinnoh (difensiva)",
     "40000375": "Cerchia di Unima (danni fisici)",
@@ -159,6 +160,7 @@
     "50000018": "Folletto",
     "51000001": "del gruppo \"Normale\"",
     "51000002": "del gruppo \"Fuoco\"",
+    "51000003": "del gruppo \"Acqua\"",
     "51000004": "del gruppo \"Elettro\"",
     "51000005": "del gruppo \"Erba\"",
     "51000006": "del gruppo \"Ghiaccio\"",
@@ -166,6 +168,7 @@
     "51000010": "del gruppo \"Volante\"",
     "51000011": "del gruppo \"Psico\"",
     "51000012": "del gruppo \"Coleottero\"",
+    "51000013": "del gruppo \"Roccia\"",
     "51000015": "del gruppo \"Drago\"",
     "51000016": "del gruppo \"Buio\"",
     "51000017": "del gruppo \"Acciaio\""

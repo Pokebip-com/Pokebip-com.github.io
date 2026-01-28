@@ -975,5 +975,13 @@
     "998950": "首次使出此招式攻擊成功時，視目標對手的能力降低的程度，使自己發動拍組招式所需的行動數減少０～４的任一次數。",
     "998949": "當我方全體拍組的能力處於提高狀態時，還會再讓該能力提高的幅度變成２倍。",
     "998948": "使出此招式攻擊且自己的「[Name:MoveId Idx=\"19640\" ]」的剩餘次數為[Digit:1digit Idx=\"6\" ]以上時，會減少該使用次數[Digit:1digit Idx=\"6\" ]次並發揮下列所有效果。",
-    "998947": "讓我方變成[Name:ReferencedMessageTag Idx=\"4\" ]狀態。"
+    "998947": "讓我方變成[Name:ReferencedMessageTag Idx=\"4\" ]狀態。",
+    "998946": "自己的[Name:ReferencedMessageTag ]提高得越多，自己發動拍組招式所需的行動數就減少得越多。最多可減少[Digit:1digit Idx=\"2\" ]次。",
+    "998945": "自己的[Name:ReferencedMessageTag ]提高得越多，自己的[Name:ReferencedMessageTag Idx=\"1\" ]就提高得越多。最多可提高[Digit:1digit Idx=\"2\" ]階段。",
+    "998944": "消耗自己提高的所有防禦。",
+    "998943": "有１０％的機率會降低對手的攻擊１階段。",
+    "998942": "使出此招式攻擊且自己的「[Name:MoveId Idx=\"18501\" ]」的剩餘次數為１以上時，會減少該使用次數１次並發揮下列所有效果。",
+    "998941": "使自己的[Name:ReferencedMessageTag Idx=\"1\" ]從１～４提高任一階段。",
+    "998940": "當對手陷入中毒或劇毒狀態時，還會再提高自己的[Name:ReferencedMessageTag Idx=\"4\" ][Digit:1digit Idx=\"5\" ]階段。",
+    "998939": "使自己的[Name:ReferencedMessageTag Idx=\"2\" ]從３～５提高任一階段。"
 }

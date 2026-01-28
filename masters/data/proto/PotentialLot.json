@@ -615,5 +615,16 @@
 { "potentialLotId": 711013, "potentialId": 18094801, "rate": 1 },
 { "potentialLotId": 712001, "potentialId": 17065301, "rate": 1 },
 { "potentialLotId": 712002, "potentialId": 11013909, "rate": 1 },
-{ "potentialLotId": 712003, "potentialId": 12020103, "rate": 1 }
+{ "potentialLotId": 712003, "potentialId": 12020103, "rate": 1 },
+{ "potentialLotId": 801001, "potentialId": 18041609, "rate": 1 },
+{ "potentialLotId": 801002, "potentialId": 16013504, "rate": 1 },
+{ "potentialLotId": 801003, "potentialId": 18049104, "rate": 1 },
+{ "potentialLotId": 801004, "potentialId": 16030504, "rate": 1 },
+{ "potentialLotId": 801005, "potentialId": 13010403, "rate": 1 },
+{ "potentialLotId": 801006, "potentialId": 18040709, "rate": 1 },
+{ "potentialLotId": 801007, "potentialId": 99043001, "rate": 1 },
+{ "potentialLotId": 801008, "potentialId": 99043101, "rate": 1 },
+{ "potentialLotId": 801009, "potentialId": 99043201, "rate": 1 },
+{ "potentialLotId": 801010, "potentialId": 99043301, "rate": 1 },
+{ "potentialLotId": 801011, "potentialId": 99043401, "rate": 1 }
 ]}

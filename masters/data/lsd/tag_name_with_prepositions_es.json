@@ -107,6 +107,7 @@
     "40000369": "Círculo de Hoenn (Físico)",
     "40000370": "Círculo de Hoenn (Especial)",
     "40000371": "Círculo de Hoenn (Defensivo)",
+    "40000372": "Círculo de Sinnoh (Físico)",
     "40000373": "Círculo de Sinnoh (Especial)",
     "40000374": "Círculo de Sinnoh (Defensivo)",
     "40000375": "Círculo de Teselia (Físico)",
@@ -159,6 +160,7 @@
     "50000018": "Hada",
     "51000001": "el distintivo \"Normal\"",
     "51000002": "el distintivo \"Fuego\"",
+    "51000003": "el distintivo \"Agua\"",
     "51000004": "el distintivo \"Eléctrico\"",
     "51000005": "el distintivo \"Planta\"",
     "51000006": "el distintivo \"Hielo\"",
@@ -166,6 +168,7 @@
     "51000010": "el distintivo \"Volador\"",
     "51000011": "el distintivo \"Psíquico\"",
     "51000012": "el distintivo \"Bicho\"",
+    "51000013": "el distintivo \"Roca\"",
     "51000015": "el distintivo \"Dragón\"",
     "51000016": "el distintivo \"Siniestro\"",
     "51000017": "el distintivo \"Acero\""

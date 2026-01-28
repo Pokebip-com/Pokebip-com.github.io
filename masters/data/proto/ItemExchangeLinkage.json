@@ -405,5 +405,8 @@
 { "itemExchangeGroupId": 2712040, "questGroupId": 611258 },
 { "itemExchangeGroupId": 2720010, "questGroupId": 610940 },
 { "itemExchangeGroupId": 2720040, "questGroupId": 610947 },
-{ "itemExchangeGroupId": 2720050, "questGroupId": 610948 }
+{ "itemExchangeGroupId": 2720050, "questGroupId": 610948 },
+{ "itemExchangeGroupId": 2801010, "questGroupId": 611310 },
+{ "itemExchangeGroupId": 2801020, "questGroupId": 611330 },
+{ "itemExchangeGroupId": 2801030, "questGroupId": 611350 }
 ]}

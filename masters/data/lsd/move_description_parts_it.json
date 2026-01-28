@@ -975,5 +975,13 @@
     "998950": "Abbassa il numero di azioni necessarie a chi la usa per sferrare l'Unimossa in proporzione alla riduzione delle statistiche del bersaglio avversario attuale (da 0 a 4) la prima volta che questo attacco semplice va a segno in ogni lotta.",
     "998949": "Se le statistiche di qualsiasi Unità alleata sono aumentate, quell'aumento viene raddoppiato.",
     "998948": "Se gli utilizzi residui di [Name:MoveId Idx=\"19640\" ] di chi la usa sono pari o superiori a [Digit:1digit Idx=\"6\" ] quando si attacca con questa mossa, riduce tali utilizzi di [Digit:1digit Idx=\"6\" ] e conferisce tutti gli effetti seguenti:",
-    "998947": "Applica l'[Name:ReferencedMessageTag Idx=\"4\" ] a un alleato."
+    "998947": "Applica l'[Name:ReferencedMessageTag Idx=\"4\" ] a un alleato.",
+    "998946": "Riduce il numero di azioni necessarie a chi la usa per sferrare la sua Unimossa in proporzione all'aumento del[Name:ReferencedMessageTag ] di chi la usa, fino a un massimo di [Digit:1digit Idx=\"2\" ].",
+    "998945": "Aumenta l'[Name:ReferencedMessageTag Idx=\"1\" ] di chi la usa in proporzione all'aumento del[Name:ReferencedMessageTag ] (l'aumento massimo è di [Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"grado\" P=\"gradi\" ]).",
+    "998944": "Rimuove tutti gli aumenti della Difesa di chi la usa.",
+    "998943": "Ha una certa probabilità (10%) di ridurre l'Attacco del bersaglio di 1 grado.",
+    "998942": "Se gli utilizzi residui di [Name:MoveId Idx=\"18501\" ] di chi la usa sono pari o superiori a 1 quando si attacca con questa mossa, riduce tali utilizzi di 1 e conferisce tutti gli effetti seguenti:",
+    "998941": "Aumenta l'[Name:ReferencedMessageTag Idx=\"1\" ] di chi la usa da 1 a 4 gradi in modo casuale.",
+    "998940": "Inoltre, aumenta l'[Name:ReferencedMessageTag Idx=\"4\" ] di chi la usa di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ] quando il bersaglio è avvelenato o iperavvelenato.",
+    "998939": "Aumenta l'[Name:ReferencedMessageTag Idx=\"2\" ] di chi la usa da 3 a 5 gradi in modo casuale."
 }

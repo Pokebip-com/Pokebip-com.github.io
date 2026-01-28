@@ -975,5 +975,13 @@
     "998950": "Cuanto más se hayan reducido las características del rival al que se apunta actualmente, más se reducirá el contador de movimientos compi del usuario (entre 0 y 4) la primera vez que este movimiento de ataque acierta en cada combate.",
     "998949": "Duplica las mejoras en las características de cualquiera de los compis aliados.",
     "998948": "Si los PM restantes de [Name:MoveId Idx=\"19640\" ] del usuario son [Digit:1digit Idx=\"6\" ] o más cuando ataca con este movimiento, reduce dichos PM en [Digit:1digit Idx=\"6\" ] y otorga todos los efectos siguientes:",
-    "998947": "Aplica el [Name:ReferencedMessageTag Idx=\"4\" ] a un aliado."
+    "998947": "Aplica el [Name:ReferencedMessageTag Idx=\"4\" ] a un aliado.",
+    "998946": "Cuanto más haya aumentado [Name:ReferencedMessageTag ] del usuario, más se reduce su contador de movimientos compi (hasta [Digit:1digit Idx=\"2\" ] niveles).",
+    "998945": "Cuanto más haya aumentado [Name:ReferencedMessageTag ] del usuario, más aumenta su [Name:ReferencedMessageTag Idx=\"1\" ] (hasta [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ]).",
+    "998944": "Elimina todos los aumentos de Defensa del usuario.",
+    "998943": "Hay una probabilidad del 10% de reducir el Ataque del objetivo en 1 nivel.",
+    "998942": "Si los PM restantes de [Name:MoveId Idx=\"18501\" ] del usuario son 1 o más cuando ataca con este movimiento, reduce dichos PM en 1 y otorga todos los efectos siguientes:",
+    "998941": "Aumenta al azar entre 1 y 4 niveles el [Name:ReferencedMessageTag Idx=\"1\" ] del usuario.",
+    "998940": "Además, aumenta el [Name:ReferencedMessageTag Idx=\"4\" ] del usuario en [Digit:1digit Idx=\"5\" ] [ES:Qty Ref=\"5\" S=\"nivel\" P=\"niveles\" ] cuando el objetivo está envenenado o gravemente envenenado.",
+    "998939": "Aumenta al azar entre 3 y 5 niveles el [Name:ReferencedMessageTag Idx=\"2\" ] del usuario."
 }

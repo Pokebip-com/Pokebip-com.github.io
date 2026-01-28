@@ -11,5 +11,14 @@
     "101800": "Se ha conectado al gimnasio.",
     "200000": "¡Se ha[ES:Qty P=\"n\" ] alcanzado [Digit:8digits ] punto[ES:Qty P=\"s\" ]\nen la Maratón de Daño!",
     "200100": "¡Se ha[ES:Qty P=\"n\" ] alcanzado [Digit:8digits ] punto[ES:Qty P=\"s\" ]\nen un evento de puntuación máxima!",
-    "200200": "¡Se ha alcanzado una racha de [Digit:7digits ] victorias\nen la Aventura Legendaria!"
+    "200200": "¡Se ha alcanzado una racha de [Digit:7digits ] victorias\nen la Aventura Legendaria!",
+    "300100": "Los Combates de Gimnasio comienzan dentro de\n[Digit:2digits ] día[ES:Qty P=\"s\" ].",
+    "300200": "Los Combates de Gimnasio finalizan dentro de\n[Digit:2digits ] día[ES:Qty P=\"s\" ].",
+    "300300": "¡Los Combates de Gimnasio han comenzado!",
+    "300400": "¡Los Combates de Gimnasio han finalizado!",
+    "300500": "¡Clasificación de los Combates de Gimnasio disponible!\n¡Puesto del Gimnasio [Name:GymName ]: [Name:GvGRank ]!",
+    "300510": "¡Clasificación de los Combates de Gimnasio disponible!\nEl Gimnasio [Name:GymName ] no ha participado.",
+    "300600": "¡La ronda [Digit:2digits ] ha comenzado!",
+    "300700": "¡Los combates extra han comenzado!",
+    "300800": "¡Se ha completado el combate de la ronda [Digit:2digits ]\ncontra [Name:TrainerName ]!"
 }

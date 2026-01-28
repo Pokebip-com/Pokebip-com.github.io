@@ -82,5 +82,17 @@
 { "questGroupId": 900702, "FourKindsRuleId": "20800010", "u3": 100, "scheduleId": "5010_1W_ChampionBattle_KALOS_FOREVER" },
 { "questGroupId": 900702, "FourKindsRuleId": "20900001", "u3": 100, "scheduleId": "5010_1W_ChampionBattle_KALOS_FOREVER" },
 { "questGroupId": 900702, "FourKindsRuleId": "20900002", "u3": 100, "scheduleId": "5010_1W_ChampionBattle_KALOS_FOREVER" },
-{ "questGroupId": 900702, "FourKindsRuleId": "20900003", "u3": 100, "scheduleId": "5010_1W_ChampionBattle_KALOS_FOREVER" }
+{ "questGroupId": 900702, "FourKindsRuleId": "20900003", "u3": 100, "scheduleId": "5010_1W_ChampionBattle_KALOS_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20800001", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20800002", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20800003", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20800004", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20800005", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20800006", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20800007", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20800008", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20800010", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20900001", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20900002", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" },
+{ "questGroupId": 900802, "FourKindsRuleId": "20900003", "u3": 100, "scheduleId": "8010_1W_ChampionBattle_PALDEA_FOREVER" }
 ]}

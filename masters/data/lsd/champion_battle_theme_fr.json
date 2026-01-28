@@ -27,5 +27,14 @@
     "damage_challenge_theme_6060_002": "Capacités Duo et capacités Duo Dynamax\ndes alliés : dégâts massivement réduits",
     "passio_tower_theme_7070_001": "Capacités offensives spéciales :\naucun dégât infligé aux ennemis",
     "passio_tower_theme_7070_002": "Capacités offensives physiques :\naucun dégât infligé aux ennemis",
-    "passio_tower_theme_7070_003": "Ennemis sans altération de statut ou tourment :\naucun dégât subi"
+    "passio_tower_theme_7070_003": "Ennemis sans altération de statut ou tourment :\naucun dégât subi",
+    "gvg_theme_8010_001": "Capacités offensives physiques :\naucun dégât infligé aux ennemis",
+    "gvg_theme_8010_002": "Capacités offensives spéciales :\naucun dégât infligé aux ennemis",
+    "gvg_theme_8010_003": "Capacités Duo et capacités Duo Dynamax :\naucun dégât infligé aux ennemis",
+    "gvg_theme_8010_004": "Ennemis sans altération de statut ou tourment :\naucun dégât de capacité offensive subi",
+    "gvg_theme_8010_005": "Capacités offensives qui ne sont pas\nsuper efficaces : aucun dégât infligé\naux ennemis",
+    "gvg_theme_8010_006": "Capacités ennemies :\nplus de dégâts infligés",
+    "gvg_theme_8010_007": "Jauge Capacité des alliés\nréduite de deux segments",
+    "gvg_theme_8010_008": "Le remplissage de la Jauge Capacité des Duos\nalliés est plus lent",
+    "gvg_theme_8010_009": "Duos qui n'ont pas les mots-clés indiqués :\naucun dégât de capacité offensive\ninfligé aux ennemis"
 }

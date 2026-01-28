@@ -975,5 +975,13 @@
     "998950": "Plus les stats de l'ennemi actuellement ciblé ont été baissées, plus le nombre d'actions nécessaires pour lancer une capacité Duo pour le lanceur sera réduit (de 0 à 4) la première fois que cette capacité offensive est utilisée avec succès à chaque combat.",
     "998949": "Si les stats de n'importe quel Duo allié ont été augmentées, double les augmentations de stats.",
     "998948": "Si les PPC restants de [Name:MoveId Idx=\"19640\" ] du lanceur sont de [Digit:1digit Idx=\"6\" ] ou plus quand il attaque avec cette capacité, réduit la quantité de ces PPC de [Digit:1digit Idx=\"6\" ] et tous les effets suivants s'appliquent :",
-    "998947": "Applique l'[Name:ReferencedMessageTag Idx=\"4\" ] à un allié."
+    "998947": "Applique l'[Name:ReferencedMessageTag Idx=\"4\" ] à un allié.",
+    "998946": "Plus [Name:ReferencedMessageTag ] du lanceur a été augmenté(e), plus le nombre d'actions nécessaires pour lancer sa capacité Duo diminue (jusqu'à [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ]).",
+    "998945": "Plus [Name:ReferencedMessageTag ] du lanceur a été augmenté(e), plus son [Name:ReferencedMessageTag Idx=\"1\" ] est augmenté (jusqu'à [Digit:1digit Idx=\"2\" ] [FR:Qty Ref=\"2\" S=\"rang\" P=\"rangs\" ]).",
+    "998944": "Annule toutes les augmentations de Défense du lanceur.",
+    "998943": "10 % de chances de baisser l'Attaque de la cible de 1 rang.",
+    "998942": "Si les PPC restants de [Name:MoveId Idx=\"18501\" ] du lanceur sont de 1 ou plus quand il attaque avec cette capacité, réduit la quantité de ces PPC de 1 et tous les effets suivants s'appliquent :",
+    "998941": "Augmente l'[Name:ReferencedMessageTag Idx=\"1\" ] du lanceur de 1 à 4 rangs, aléatoirement.",
+    "998940": "Augmente également l'[Name:ReferencedMessageTag Idx=\"4\" ] du lanceur de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ] quand la cible est empoisonnée ou gravement empoisonnée.",
+    "998939": "Augmente l'[Name:ReferencedMessageTag Idx=\"2\" ] du lanceur de 3 à 5 rangs, aléatoirement."
 }

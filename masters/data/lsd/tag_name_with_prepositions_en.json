@@ -107,6 +107,7 @@
     "40000369": "Hoenn Circle (Physical)",
     "40000370": "Hoenn Circle (Special)",
     "40000371": "Hoenn Circle (Defensive)",
+    "40000372": "Sinnoh Circle (Physical)",
     "40000373": "Sinnoh Circle (Special)",
     "40000374": "Sinnoh Circle (Defensive)",
     "40000375": "Unova Circle (Physical)",
@@ -159,6 +160,7 @@
     "50000018": "Fairy",
     "51000001": "the Normal theme",
     "51000002": "the Fire theme",
+    "51000003": "the Water theme",
     "51000004": "the Electric theme",
     "51000005": "the Grass theme",
     "51000006": "the Ice theme",
@@ -166,6 +168,7 @@
     "51000010": "the Flying theme",
     "51000011": "the Psychic theme",
     "51000012": "the Bug theme",
+    "51000013": "the Rock theme",
     "51000015": "the Dragon theme",
     "51000016": "the Dark theme",
     "51000017": "the Steel theme"

@@ -60,6 +60,8 @@
 { "battleParameterId": "enemy_ai.taget_select_score.hp_scale", "value": "400", "coords": "" },
 { "battleParameterId": "enemy_ai_force_switch_wait_time", "value": "4000", "coords": "" },
 { "battleParameterId": "enemy_parameter.rate", "value": "15", "coords": "" },
+{ "battleParameterId": "gvg_score_up_large", "value": "1000", "coords": "" },
+{ "battleParameterId": "gvg_score_up_middle", "value": "500", "coords": "" },
 { "battleParameterId": "hp_gauge.threshold.red", "value": "33", "coords": "" },
 { "battleParameterId": "hp_gauge.threshold.yellow", "value": "50", "coords": "" },
 { "battleParameterId": "knockback.adjust_rate", "value": "125", "coords": "" },

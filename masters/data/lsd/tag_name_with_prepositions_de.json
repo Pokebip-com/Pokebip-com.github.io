@@ -107,6 +107,7 @@
     "40000369": "Hoenns Freundeskreis (Physisch)",
     "40000370": "Hoenns Freundeskreis (Spezial)",
     "40000371": "Hoenns Freundeskreis (Verteidigung)",
+    "40000372": "Sinnohs Freundeskreis (Physisch)",
     "40000373": "Sinnohs Freundeskreis (Spezial)",
     "40000374": "Sinnohs Freundeskreis (Verteidigung)",
     "40000375": "Einalls Freundeskreis (Physisch)",
@@ -159,6 +160,7 @@
     "50000018": "Fee",
     "51000001": "das Normal-Attribut",
     "51000002": "das Feuer-Attribut",
+    "51000003": "das Wasser-Attribut",
     "51000004": "das Elektro-Attribut",
     "51000005": "das Pflanzen-Attribut",
     "51000006": "das Eis-Attribut",
@@ -166,6 +168,7 @@
     "51000010": "das Flug-Attribut",
     "51000011": "das Psycho-Attribut",
     "51000012": "das Käfer-Attribut",
+    "51000013": "das Gestein-Attribut",
     "51000015": "das Drachen-Attribut",
     "51000016": "das Unlicht-Attribut",
     "51000017": "das Stahl-Attribut"

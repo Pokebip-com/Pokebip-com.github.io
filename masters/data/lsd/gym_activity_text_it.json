@@ -11,5 +11,14 @@
     "101800": "Accesso alla Palestra effettuato.",
     "200000": "[Digit:8digits ] punti ottenuti\nin una Gara turbodanno!",
     "200100": "[Digit:8digits ] punti ottenuti\nin un evento lotta a punti!",
-    "200200": "[Digit:7digits ] vittorie consecutive ottenute\nnella Sfida Leggendaria!"
+    "200200": "[Digit:7digits ] vittorie consecutive ottenute\nnella Sfida Leggendaria!",
+    "300100": "La Lotta delle Palestre di Pasio inizierà\ntra [Digit:2digits ] giorn[IT:Qty S=\"o\" P=\"i\" ].",
+    "300200": "La Lotta delle Palestre di Pasio terminerà\ntra [Digit:2digits ] giorn[IT:Qty S=\"o\" P=\"i\" ].",
+    "300300": "È iniziata la Lotta delle Palestre di Pasio!",
+    "300400": "È terminata la Lotta delle Palestre di Pasio!",
+    "300500": "Sono uscite le classifiche della Lotta delle Palestre\ndi Pasio! [Name:GymName ] ha raggiunto la [Name:GvGRank ]!",
+    "300510": "Sono uscite le classifiche della Lotta delle Palestre\ndi Pasio! [Name:GymName ] non ha partecipato.",
+    "300600": "È iniziato il girone nº [Digit:2digits ]!",
+    "300700": "Sono iniziate le Lotte extra!",
+    "300800": "La lotta contro [Name:TrainerName ]\ndel girone nº [Digit:2digits ] è stata completata!"
 }

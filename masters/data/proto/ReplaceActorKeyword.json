@@ -10,6 +10,8 @@
 { "replacedActorId": "ch0264_01_voicechangesatoshi", "replacingActorId": "ch0264_00_satoshi", "useGenericIfAvailable": false, "u4": 0, "u5": 0 },
 { "replacedActorId": "ch0266_00_shadowtriad2", "replacingActorId": "ch0265_00_shadowtriad1", "useGenericIfAvailable": true, "u4": 1, "u5": 0 },
 { "replacedActorId": "ch0267_00_shadowtriad3", "replacingActorId": "ch0265_00_shadowtriad1", "useGenericIfAvailable": true, "u4": 1, "u5": 0 },
+{ "replacedActorId": "ch0304_80_aoki", "replacingActorId": "ch0304_00_aoki", "useGenericIfAvailable": false, "u4": 1, "u5": 0 },
+{ "replacedActorId": "ch0335_80_hassaku", "replacingActorId": "ch0335_00_hassaku", "useGenericIfAvailable": false, "u4": 1, "u5": 0 },
 { "replacedActorId": "ch0351_00_shione", "replacingActorId": "ch0660_00_furisodegirl", "useGenericIfAvailable": true, "u4": 0, "u5": 0 },
 { "replacedActorId": "ch0363_00_asami", "replacingActorId": "ch0661_00_furisodegirl", "useGenericIfAvailable": true, "u4": 0, "u5": 0 },
 { "replacedActorId": "ch0364_00_masahito", "replacingActorId": "ch0080_00_yamaotoko", "useGenericIfAvailable": true, "u4": 0, "u5": 0 },

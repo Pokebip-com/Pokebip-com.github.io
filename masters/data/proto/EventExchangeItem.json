@@ -701,5 +701,13 @@
 { "itemId": "750000000765", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611250", "trainerId": "-1", "scheduleId": "7120_1W_Event_2", "itemNameOverride": "750000000611" },
 { "itemId": "750000000766", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611252", "trainerId": "-1", "scheduleId": "7120_1W_Event_3", "itemNameOverride": "750000000611" },
 { "itemId": "750000000767", "descriptionId": 600000, "imageId": "i075_0010_00", "u4": 0, "storyQuestId": "611258", "trainerId": "-1", "scheduleId": "7120_4W_Event_5_Exchange", "itemNameOverride": "750000000594" },
-{ "itemId": "750000000768", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611257", "trainerId": "-1", "scheduleId": "7120_4W_Event_2_Exchange", "itemNameOverride": "750000000181" }
+{ "itemId": "750000000768", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611257", "trainerId": "-1", "scheduleId": "7120_4W_Event_2_Exchange", "itemNameOverride": "750000000181" },
+{ "itemId": "750000000769", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611270", "trainerId": "-1", "scheduleId": "8010_1W_Event_1", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000770", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611280", "trainerId": "-1", "scheduleId": "8010_1W_Event_2", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000771", "descriptionId": 600050, "imageId": "i075_0058_01", "u4": 0, "storyQuestId": "611280", "trainerId": "10097400000", "scheduleId": "8010_1W_Event_ThanksDay_scenario_even_acquiring_mission_item _2", "itemNameOverride": "750000000682" },
+{ "itemId": "750000000772", "descriptionId": 600050, "imageId": "i075_0058_01", "u4": 0, "storyQuestId": "611280", "trainerId": "10008410000", "scheduleId": "8010_1W_Event_ThanksDay_scenario_even_acquiring_mission_item _2", "itemNameOverride": "750000000682" },
+{ "itemId": "750000000775", "descriptionId": 600000, "imageId": "i075_0012_00", "u4": 0, "storyQuestId": "611310", "trainerId": "-1", "scheduleId": "8010_2W_Event_1_Exchange", "itemNameOverride": "750000000595" },
+{ "itemId": "750000000776", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611320", "trainerId": "-1", "scheduleId": "8010_3W_Event_1", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000777", "descriptionId": 600000, "imageId": "i075_0003_00", "u4": 0, "storyQuestId": "611330", "trainerId": "-1", "scheduleId": "8010_3W_Event_3_Exchange", "itemNameOverride": "750000000562" },
+{ "itemId": "750000000778", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611350", "trainerId": "-1", "scheduleId": "8010_4W_Event_1_Exchange", "itemNameOverride": "750000000181" }
 ]}

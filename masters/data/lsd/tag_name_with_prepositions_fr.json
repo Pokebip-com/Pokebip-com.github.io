@@ -107,6 +107,7 @@
     "40000369": "Cercle de Hoenn Physique",
     "40000370": "Cercle de Hoenn Spécial",
     "40000371": "Cercle de Hoenn Défensif",
+    "40000372": "Cercle de Sinnoh Physique",
     "40000373": "Cercle de Sinnoh Spécial",
     "40000374": "Cercle de Sinnoh Défensif",
     "40000375": "Cercle d'Unys Physique",
@@ -159,6 +160,7 @@
     "50000018": "Fée",
     "51000001": "le mot-clé Normal",
     "51000002": "le mot-clé Feu",
+    "51000003": "le mot-clé Eau",
     "51000004": "le mot-clé Électrik",
     "51000005": "le mot-clé Plante",
     "51000006": "le mot-clé Glace",
@@ -166,6 +168,7 @@
     "51000010": "le mot-clé Vol",
     "51000011": "le mot-clé Psy",
     "51000012": "le mot-clé Insecte",
+    "51000013": "le mot-clé Roche",
     "51000015": "le mot-clé Dragon",
     "51000016": "le mot-clé Ténèbres",
     "51000017": "le mot-clé Acier"

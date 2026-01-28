@@ -11,5 +11,14 @@
     "101800": "In der Arena eingeloggt.",
     "200000": "[Digit:8digits ] Punkte im Zeitschaden-Rangkampf\nerreicht!",
     "200100": "[Digit:8digits ] Punkte im Highscore-Event erreicht!",
-    "200200": "[Digit:7digits ] Siege in Folge im Legenden-Turnier\nerzielt!"
+    "200200": "[Digit:7digits ] Siege in Folge im Legenden-Turnier\nerzielt!",
+    "300100": "Der Passio-Arenakampf beginnt in [Digit:2digits ] [DE:Qty S=\"Tag\" P=\"Tagen\" ].",
+    "300200": "Der Passio-Arenakampf endet in [Digit:2digits ] [DE:Qty S=\"Tag\" P=\"Tagen\" ].",
+    "300300": "Der Passio-Arenakampf hat begonnen!",
+    "300400": "Der Passio-Arenakampf ist zu Ende!",
+    "300500": "Die Rangliste des Passio-Arenakampfes ist da!\n„[Name:GymName ]“ erreichte Rang „[Name:GvGRank ]“!",
+    "300510": "Die Rangliste des Passio-Arenakampfes ist da!\n„[Name:GymName ]“ hat nicht teilgenommen!",
+    "300600": "Die [Digit:2digits ]. Runde hat begonnen!",
+    "300700": "Die Zusatzkämpfe haben begonnen!",
+    "300800": "Die [Digit:2digits ]. Kampfrunde gegen [Name:TrainerName ]\nwurde abgeschlossen!"
 }

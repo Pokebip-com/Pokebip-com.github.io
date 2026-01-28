@@ -975,5 +975,13 @@
     "998950": "Je stärker die Statuswerte des Gegners, der aktuell das Ziel ist, gesenkt wurden, desto mehr wird der Wert des Gefährtenattacken-\nCountdowns des Anwenders ein Mal pro Kampf reduziert (um 0 bis 4), wenn dieser Angriff mit einer Attacke erstmals Erfolg hat.",
     "998949": "Verdoppelt die bereits vorhandene Erhöhung von Statuswerten verbündeter Gefährten.",
     "998948": "Wenn die verbleibenden Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"19640\" ] des Anwenders [Digit:1digit Idx=\"6\" ] oder mehr betragen und mit dieser Attacke angegriffen wird, werden diese AEP um [Digit:1digit Idx=\"6\" ] reduziert und alle folgenden Effekte ausgelöst:",
-    "998947": "Verursacht bei einem Verbündeten den [Name:ReferencedMessageTag Idx=\"4\" ]."
+    "998947": "Verursacht bei einem Verbündeten den [Name:ReferencedMessageTag Idx=\"4\" ].",
+    "998946": "Je stärker [Name:ReferencedMessageTag ] des Anwenders erhöht wurde, desto mehr wird der Wert seines Gefährtenattacken-\nCountdowns reduziert (kann um bis zu maximal [Digit:1digit Idx=\"2\" ] reduziert werden).",
+    "998945": "Je stärker [Name:ReferencedMessageTag ] des Anwenders erhöht wurde, desto mehr wird sein [Name:ReferencedMessageTag Idx=\"1\" ] erhöht (kann um bis zu maximal [Digit:1digit Idx=\"2\" ] erhöht werden).",
+    "998944": "Entfernt alle Erhöhungen der Verteidigung des Anwenders.",
+    "998943": "Hat eine 10 %-Chance den Angriff des Zieles um 1 zu senken.",
+    "998942": "Wenn die verbleibenden Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"18501\" ] des Anwenders 1 oder mehr betragen und mit dieser Attacke angegriffen wird, werden diese AEP um 1 reduziert und alle folgenden Effekte ausgelöst:",
+    "998941": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] des Anwenders zufällig um 1 bis 4.",
+    "998940": "Erhöht zusätzlich den [Name:ReferencedMessageTag Idx=\"4\" ] des Anwenders um [Digit:1digit Idx=\"5\" ], wenn das Ziel vergiftet oder schwer vergiftet ist.",
+    "998939": "Erhöht den [Name:ReferencedMessageTag Idx=\"2\" ] des Anwenders zufällig um 3 bis 5."
 }

@@ -279,6 +279,7 @@
 { "potentialId": 18040701, "rarity": 1 },
 { "potentialId": 18040702, "rarity": 2 },
 { "potentialId": 18040704, "rarity": 1 },
+{ "potentialId": 18040709, "rarity": 1 },
 { "potentialId": 18040801, "rarity": 1 },
 { "potentialId": 18040802, "rarity": 2 },
 { "potentialId": 18041402, "rarity": 1 },
@@ -365,5 +366,10 @@
 { "potentialId": 99032901, "rarity": 1 },
 { "potentialId": 99033001, "rarity": 1 },
 { "potentialId": 99033101, "rarity": 1 },
-{ "potentialId": 99033201, "rarity": 1 }
+{ "potentialId": 99033201, "rarity": 1 },
+{ "potentialId": 99043001, "rarity": 1 },
+{ "potentialId": 99043101, "rarity": 1 },
+{ "potentialId": 99043201, "rarity": 1 },
+{ "potentialId": 99043301, "rarity": 1 },
+{ "potentialId": 99043401, "rarity": 1 }
 ]}

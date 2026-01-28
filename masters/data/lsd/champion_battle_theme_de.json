@@ -27,5 +27,14 @@
     "damage_challenge_theme_6060_002": "Starke Schadensreduktion\nbei GAs und G-D-Att. von\nMitstreitern",
     "passio_tower_theme_7070_001": "Gegner erleiden keinen\nSchaden durch\nSpezial-Angriffe",
     "passio_tower_theme_7070_002": "Gegner erleiden keinen\nSchaden durch\nphysische Angriffe",
-    "passio_tower_theme_7070_003": "Problemfreie Gegner\nerleiden keinen Schaden"
+    "passio_tower_theme_7070_003": "Problemfreie Gegner\nerleiden keinen Schaden",
+    "gvg_theme_8010_001": "Gegner erleiden keinen\nSchaden durch\nphysische Angriffe",
+    "gvg_theme_8010_002": "Gegner erleiden keinen\nSchaden durch\nSpezial-Angriffe",
+    "gvg_theme_8010_003": "Gegner erleiden keinen\nSchaden durch GA und\nG-D-Attacken",
+    "gvg_theme_8010_004": "Problemfreie Gegner\nerleiden keinen Schaden\ndurch Angriffe",
+    "gvg_theme_8010_005": "Gegner erleiden keinen\nSchaden durch Angriffe,\ndie nicht sehr effektiv sind",
+    "gvg_theme_8010_006": "Attacken des Gegners\nfügen mehr Schaden zu",
+    "gvg_theme_8010_007": "Team-Att.-Leiste-Limit 2",
+    "gvg_theme_8010_008": "Die Attackenleiste wird bei Verbündeten\nlangsamer aufgefüllt",
+    "gvg_theme_8010_009": "Gegner erleiden keinen Schaden durch\nAngriffe von Gefährten, die nicht die\nvorgegebenen Attribute erfüllen"
 }

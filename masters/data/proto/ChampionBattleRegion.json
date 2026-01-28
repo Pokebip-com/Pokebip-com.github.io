@@ -5,5 +5,6 @@
 { "championBattleRegionId": 900004, "u1": "", "nameId": "champion_region_group_900004", "bannerId": 7309001, "u2": 50, "u3": "", "bgmName": "bgm_field_champion_04" },
 { "championBattleRegionId": 900005, "u1": "", "nameId": "champion_region_group_900005", "bannerId": 7404003, "u2": 60, "u3": "", "bgmName": "bgm_field_champion_05" },
 { "championBattleRegionId": 900006, "u1": "", "nameId": "champion_region_group_900006", "bannerId": 7407002, "u2": 70, "u3": "", "bgmName": "bgm_field_champion_06" },
-{ "championBattleRegionId": 900007, "u1": "", "nameId": "champion_region_group_900007", "bannerId": 7501003, "u2": 80, "u3": "", "bgmName": "bgm_field_champion_07" }
+{ "championBattleRegionId": 900007, "u1": "", "nameId": "champion_region_group_900007", "bannerId": 7501003, "u2": 80, "u3": "", "bgmName": "bgm_field_champion_07" },
+{ "championBattleRegionId": 900008, "u1": "", "nameId": "champion_region_group_900008", "bannerId": 7801002, "u2": 90, "u3": "", "bgmName": "bgm_field_champion_08" }
 ]}

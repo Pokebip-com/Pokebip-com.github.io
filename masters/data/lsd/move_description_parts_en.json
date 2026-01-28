@@ -975,5 +975,13 @@
     "998950": "The more the currently targeted opponent’s stats are lowered, the more the user’s sync move countdown will be reduced (by zero to four) the first time this attack move is successful each battle.",
     "998949": "If the stats of any allied sync pairs are raised, the amount of increase is doubled.",
     "998948": "If the remaining MP for the user’s [Name:MoveId Idx=\"19640\" ] is [Digit:1digit Idx=\"6\" ] or more when attacking with this move, reduces those MP by [Digit:1digit Idx=\"6\" ] and grants all of the following effects:",
-    "998947": "Applies the [Name:ReferencedMessageTag Idx=\"4\" ] to an ally."
+    "998947": "Applies the [Name:ReferencedMessageTag Idx=\"4\" ] to an ally.",
+    "998946": "The more the user’s [Name:ReferencedMessageTag ] is raised, the more it reduces its sync move countdown (can be reduced by up to [Digit:1digit Idx=\"2\" ] maximum).",
+    "998945": "The more the user’s [Name:ReferencedMessageTag ] is raised, the more it increases its [Name:ReferencedMessageTag Idx=\"1\" ] (can be increased by up to [Digit:1digit Idx=\"2\" ] [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] maximum).",
+    "998944": "Removes all of the user’s Defense increases.",
+    "998943": "Has a chance (10%) of lowering the target’s Attack by one stat rank.",
+    "998942": "If the remaining MP for the user’s [Name:MoveId Idx=\"18501\" ] is one or more when attacking with this move, reduces those MP by one and grants all of the following effects:",
+    "998941": "Increases the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by one to four ranks at random.",
+    "998940": "In addition, increases the user’s [Name:ReferencedMessageTag Idx=\"4\" ] by [Digit:1digit Idx=\"5\" ] [EN:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ] when the target is poisoned or badly poisoned.",
+    "998939": "Increases the user’s [Name:ReferencedMessageTag Idx=\"2\" ] by three to five ranks at random."
 }
