@@ -223,7 +223,7 @@ function getScheduleInfos(s) {
         s.isBingo = true;
         s.scheduleType = { "name" : "mission", "priority": "750" };
     }
-    else if(missionGroupIds.includes(s.scheduleId)) {
+    else if(missionGroupIds.includes(s.scheduleId) && !s.scheduleId.includes("DAILY_MISSION")) {
         s.scheduleType = { "name" : "mission", "priority": "750" };
     }
     else {
@@ -480,12 +480,14 @@ function getLoginBonus(version, endDate) {
 
 function getShopAndDailyMissions(version, endDate) {
     let freeShopGemsPacks = jData.proto.shopPurchasableItem
-        .filter(sp => parseInt(sp.freeGemsQty) > 0)
+        .filter(sp => parseInt(sp.freeGemsQty) > 0 && sp.scheduleId.endsWith("FOREVER"))
         .map(sp => {
-            sp.schedule = jData.proto.schedule.find(s => s.scheduleId === "update_3100_1W_Shop_pack_FOREVER");
+            sp.schedule = jData.proto.schedule.find(s => (s.scheduleId === "update_3100_1W_Shop_pack_FOREVER" || s.scheduleId === "8010_WeeklyVc_FOREVER"));
             sp.gemCount = 0;
             return sp;
         }).sort((a, b) => parseInt(a.freeGemsQty) - parseInt(b.freeGemsQty));
+
+    console.log(freeShopGemsPacks);
 
     version.dailyMissions = [];
 
@@ -499,14 +501,14 @@ function getShopAndDailyMissions(version, endDate) {
             });
         }
 
-        if(start.getDate() === 1) {
-            freeShopGemsPacks.map(sp => {
-                if(sp.refreshInterval === "Monthly" && sp.schedule.startDate <= start.getTime()/1000 && sp.schedule.endDate >= start.getTime()/1000) {
-                    sp.gemCount += parseInt(sp.freeGemsQty);
-                }
-                return sp;
-            });
-        }
+        // if(start.getDate() === 1) {
+        //     freeShopGemsPacks.map(sp => {
+        //         if(sp.refreshInterval === "Monthly" && sp.schedule.startDate <= start.getTime()/1000 && sp.schedule.endDate >= start.getTime()/1000) {
+        //             sp.gemCount += parseInt(sp.freeGemsQty);
+        //         }
+        //         return sp;
+        //     });
+        // }
 
         freeShopGemsPacks.map(sp => {
             if(sp.refreshInterval === "Daily" && sp.schedule.startDate <= start.getTime()/1000 && sp.schedule.endDate >= start.getTime()/1000) {
@@ -515,7 +517,7 @@ function getShopAndDailyMissions(version, endDate) {
             return sp;
         });
 
-        version.dailyMissions.push(getMissionsDetailsFromSchedule(jData.proto.schedule.find(s => s.scheduleId === "5080_DAILY_MISSION_START"), jData.locale.gemsCount.daily_missions));
+        version.dailyMissions.push(getMissionsDetailsFromSchedule(jData.proto.schedule.find(s => s.scheduleId === "8010_DAILY_MISSION_RESTART"), jData.locale.gemsCount.daily_missions));
     }
 
     return freeShopGemsPacks.map(sp => {
@@ -564,6 +566,7 @@ function getBingoMissionsDetailsFromSchedule(s) {
 }
 
 function getMissionsDetailsFromSchedule(s, missionName = undefined) {
+    console.log(s, missionName);
     const missionGroup = jData.proto.missionGroup.find(mg => mg.scheduleId === s.scheduleId);
     const name = missionName ?? getBannerText(jData.proto.banner.find(b => b.bannerId === missionGroup.bannerId));
     const missionList = jData.proto.mission.filter(m => m.missionGroupId === missionGroup.missionGroupId);
