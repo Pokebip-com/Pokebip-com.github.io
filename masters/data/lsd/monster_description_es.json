@@ -43,6 +43,7 @@
     "20005300": "Un Pokémon de alto copete, objetivo primordial de\nladrones que quieren apoderarse de la joya que luce\nen la frente.",
     "20005361": "La dulzura de su cara está en contradicción con su cruel\ncostumbre de torturar a las presas debilitadas sin darles\nel golpe de gracia.",
     "20005400": "El uso de sus poderes psíquicos le provoca un gran\ndolor de cabeza, por lo que prefiere tener la mente en\nblanco y no hacer nada en absoluto.",
+    "20005500": "Puede paralizar incluso a los Pokémon pez más veloces,\nlo que le permite atraparlos con suma facilidad.",
     "20005800": "Es muy afable con las personas una vez que ha cogido\nconfianza, pero, en estado salvaje, libra violentas\ndisputas territoriales con los Rockruff.",
     "20005900": "Cuenta una antigua leyenda que, tiempo ha, llegó a\nconquistar territorios enteros luchando junto a cierto\nseñor de la guerra.",
     "20006200": "Pese a ser uno de los mejores nadadores entre los\nPokémon acuáticos, pasa la mayor parte del tiempo en\ntierra firme.",
@@ -645,5 +646,9 @@
     "2009520000": "La cabeza roja transforma los capsaicinoides de su cuerpo\nen energía flamígera, lo que le permite arrojar llamaradas\nextremadamente abrasadoras.",
     "2009980000": "Exhala un aliento extremadamente frío por la boca que es\ncapaz de congelar al instante incluso magma al rojo vivo.",
     "2001010041": "Curiosamente, su complexión superficial es muy semejante\na la de un bonguri. Cuando se enoja, la electricidad que\nemite es veinte veces más potente que la de un rayo.",
-    "2009770000": "Le gusta mucho comer, pero no se le da bien cazar, por\nlo que aúna fuerzas con Tatsugiri con el fin de capturar \npresas."
+    "2009770000": "Le gusta mucho comer, pero no se le da bien cazar, por\nlo que aúna fuerzas con Tatsugiri con el fin de capturar \npresas.",
+    "2010171100": "Es bromista y extremadamente curioso. A la hora de\ncombatir, se sirve del tipo de energía que contenga la\nmáscara que lleve puesta.",
+    "2010241100": "Se vale de su capacidad para transformar energía en\nduros cristales para protegerse. Este Pokémon dio origen\na la teracristalización.",
+    "2010241200": "Cuando presiente peligro, se prepara para combatir\nformando un caparazón de cristales muy resistente\nmediante la teracristalización.",
+    "2010241300": "Adopta esta forma cuando su energía Teracristal se ve\namplificada descomunalmente. Se asemeja a la imagen\ndel mundo que la gente tenía antaño."
 }

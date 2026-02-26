@@ -983,5 +983,22 @@
     "998942": "If the remaining MP for the user’s [Name:MoveId Idx=\"18501\" ] is one or more when attacking with this move, reduces those MP by one and grants all of the following effects:",
     "998941": "Increases the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by one to four ranks at random.",
     "998940": "In addition, increases the user’s [Name:ReferencedMessageTag Idx=\"4\" ] by [Digit:1digit Idx=\"5\" ] [EN:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ] when the target is poisoned or badly poisoned.",
-    "998939": "Increases the user’s [Name:ReferencedMessageTag Idx=\"2\" ] by three to five ranks at random."
+    "998939": "Increases the user’s [Name:ReferencedMessageTag Idx=\"2\" ] by three to five ranks at random.",
+    "998937": "Replaces the effects of the user’s moves with the following when it is in Stellar Form.",
+    "998936": "This move’s type becomes Stellar type.",
+    "998935": "This attack’s power becomes double that of when the user is in Normal Form or Terastal Form.",
+    "998934": "The target becomes all opposing sync pairs.",
+    "998933": "Applies the [Name:ReferencedMessageTag ] to the target the first time this attack move is successful each battle.",
+    "998932": "Turns the field of play’s terrain into [Name:ReferencedMessageTag Idx=\"4\" ] the first time this attack move is successful each battle.",
+    "998931": "Reduces the user’s sync move countdown by [Digit:1digit Idx=\"3\" ] the first time this attack move is successful each battle.",
+    "998930": "Replaces this move with [Name:MoveId Idx=\"6180\" ].",
+    "998929": "If the remaining MP for the user’s [Name:MoveId Idx=\"19160\" ] is one or more when attacking with this move, reduces those MP by one and grants all of the following effects:",
+    "998928": "Turns the field of play’s zone into a [Name:ReferencedMessageTag Idx=\"2\" ] the first time this move is used each battle.",
+    "998927": "The more the user’s [Name:ReferencedMessageTag ] is increased, the greater the power of this attack.",
+    "998926": "Raises the user’s [Name:ReferencedMessageTag ] by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "998925": "If the user is in Stellar Form, also grants all of the following effects:",
+    "998924": "Fully restores the user’s HP.",
+    "998923": "Removes all status conditions and the flinching, confused, and trapped conditions from the user.",
+    "998922": "Applies Kanto Circle (Physical), Kanto Circle (Special), and Kanto Circle (Defensive) to the allied field of play.",
+    "998921": "Change into Stellar Form until the end of battle."
 }

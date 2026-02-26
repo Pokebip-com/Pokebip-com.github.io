@@ -254,5 +254,7 @@
     "event_8010_1W_MasterTicket_01": "찬석 시즌 한정 확정 B서치",
     "event_8010_1W_SuperTicket_02": "칠리 시즌 한정 출현율업 B서치",
     "event_8010_1W_MasterTicket_02": "칠리 시즌 한정 확정 B서치",
-    "event_8010_1W_SuperTicket_03": "시즌 한정 출현율업 B서치"
+    "event_8010_1W_SuperTicket_03": "시즌 한정 출현율업 B서치",
+    "event_8020_4W_SuperTicket_05": "마스터페스티벌 한정 출현율업 B서치",
+    "event_8020_3W_MasterTicket_016": "아르코스페스티벌 한정 확정 B서치"
 }

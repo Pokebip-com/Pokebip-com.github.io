@@ -553,5 +553,10 @@
 { "id": 552, "itemId": "2200003", "rewardId": "542000000034", "quantity": 1, "weight": 1, "isGrandPrix": false, "scheduleId": "8010_Chara_P_FOREVER" },
 { "id": 553, "itemId": "2200003", "rewardId": "542000000035", "quantity": 1, "weight": 1, "isGrandPrix": false, "scheduleId": "8010_Chara_P_FOREVER" },
 { "id": 554, "itemId": "2200003", "rewardId": "542000000036", "quantity": 1, "weight": 1, "isGrandPrix": false, "scheduleId": "8010_Chara_P_FOREVER" },
-{ "id": 555, "itemId": "2200003", "rewardId": "542000000037", "quantity": 1, "weight": 1, "isGrandPrix": false, "scheduleId": "8010_Chara_P_FOREVER" }
+{ "id": 555, "itemId": "2200003", "rewardId": "542000000037", "quantity": 1, "weight": 1, "isGrandPrix": false, "scheduleId": "8010_Chara_P_FOREVER" },
+{ "id": 556, "itemId": "2200003", "rewardId": "542000000038", "quantity": 1, "weight": 1, "isGrandPrix": false, "scheduleId": "8020_Chara_P_FOREVER" },
+{ "id": 557, "itemId": "2200003", "rewardId": "542000000039", "quantity": 1, "weight": 1, "isGrandPrix": false, "scheduleId": "8020_Chara_P_FOREVER" },
+{ "id": 558, "itemId": "2200003", "rewardId": "542000000040", "quantity": 1, "weight": 1, "isGrandPrix": false, "scheduleId": "8020_Chara_P_FOREVER" },
+{ "id": 559, "itemId": "2200003", "rewardId": "542000000041", "quantity": 1, "weight": 1, "isGrandPrix": false, "scheduleId": "8020_Chara_P_FOREVER" },
+{ "id": 560, "itemId": "2200003", "rewardId": "542000000042", "quantity": 1, "weight": 1, "isGrandPrix": false, "scheduleId": "8020_Chara_P_FOREVER" }
 ]}

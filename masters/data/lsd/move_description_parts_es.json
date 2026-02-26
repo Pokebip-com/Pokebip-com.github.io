@@ -983,5 +983,22 @@
     "998942": "Si los PM restantes de [Name:MoveId Idx=\"18501\" ] del usuario son 1 o más cuando ataca con este movimiento, reduce dichos PM en 1 y otorga todos los efectos siguientes:",
     "998941": "Aumenta al azar entre 1 y 4 niveles el [Name:ReferencedMessageTag Idx=\"1\" ] del usuario.",
     "998940": "Además, aumenta el [Name:ReferencedMessageTag Idx=\"4\" ] del usuario en [Digit:1digit Idx=\"5\" ] [ES:Qty Ref=\"5\" S=\"nivel\" P=\"niveles\" ] cuando el objetivo está envenenado o gravemente envenenado.",
-    "998939": "Aumenta al azar entre 3 y 5 niveles el [Name:ReferencedMessageTag Idx=\"2\" ] del usuario."
+    "998939": "Aumenta al azar entre 3 y 5 niveles el [Name:ReferencedMessageTag Idx=\"2\" ] del usuario.",
+    "998937": "Los efectos de los movimientos del usuario se transforman en lo siguiente cuando presenta la Forma Astral.",
+    "998936": "Este movimiento se vuelve de tipo Astral.",
+    "998935": "La potencia de este ataque se vuelve el doble de la que tiene el usuario en Forma Normal o Forma Teracristal.",
+    "998934": "Afecta a todos los compis rivales.",
+    "998933": "Aplica el [Name:ReferencedMessageTag ] al objetivo la primera vez que este movimiento de ataque acierta en cada combate.",
+    "998932": "Crea un [Name:ReferencedMessageTag Idx=\"4\" ] la primera vez que este movimiento de ataque acierta en cada combate.",
+    "998931": "Se reduce en [Digit:1digit Idx=\"3\" ] el contador de movimientos compi del usuario la primera vez que este movimiento de ataque acierta en cada combate.",
+    "998930": "Este movimiento se transforma en [Name:MoveId Idx=\"6180\" ].",
+    "998929": "Si los PM restantes de [Name:MoveId Idx=\"19160\" ] del usuario son 1 o más cuando ataca con este movimiento, reduce dichos PM en 1 y otorga todos los efectos siguientes:",
+    "998928": "Crea una [Name:ReferencedMessageTag Idx=\"2\" ] la primera vez que se usa este movimiento en cada combate.",
+    "998927": "Cuanto más haya aumentado la [Name:ReferencedMessageTag ] del usuario, más aumenta la potencia de este ataque.",
+    "998926": "Aumenta la [Name:ReferencedMessageTag ] del usuario en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
+    "998925": "Si el usuario presenta la Forma Astral, también otorga todos los efectos siguientes:",
+    "998924": "Recupera todos los PS del usuario.",
+    "998923": "Cura todos los problemas de estado, de retroceso, confusión y ataduras del usuario.",
+    "998922": "Aplica Círculo de Kanto (Físico), Círculo de Kanto (Especial) y Círculo de Kanto (Defensivo) al bando aliado.",
+    "998921": "Adopta la Forma Astral. Vuelve a la normalidad tras terminar el combate."
 }

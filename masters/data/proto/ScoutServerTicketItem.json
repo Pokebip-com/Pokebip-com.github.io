@@ -249,5 +249,7 @@
 { "scoutServerTicketItemNameId": "900000000253", "scoutServerTicketItemDescriptionId": "255", "imageId": "i090_0003_00", "rarity": 9, "trainerId": "10302400000", "isGuaranteedTicket": true, "scheduleId": "event_8010_1W_MasterTicket_02" },
 { "scoutServerTicketItemNameId": "900000000254", "scoutServerTicketItemDescriptionId": "252", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "10284410000", "isGuaranteedTicket": false, "scheduleId": "event_8010_1W_SuperTicket_01" },
 { "scoutServerTicketItemNameId": "900000000255", "scoutServerTicketItemDescriptionId": "253", "imageId": "i090_0003_00", "rarity": 9, "trainerId": "10284410000", "isGuaranteedTicket": true, "scheduleId": "event_8010_1W_MasterTicket_01" },
-{ "scoutServerTicketItemNameId": "900000000256", "scoutServerTicketItemDescriptionId": "256", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8010_1W_SuperTicket_03" }
+{ "scoutServerTicketItemNameId": "900000000256", "scoutServerTicketItemDescriptionId": "256", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8010_1W_SuperTicket_03" },
+{ "scoutServerTicketItemNameId": "900000000257", "scoutServerTicketItemDescriptionId": "257", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8020_4W_SuperTicket_05" },
+{ "scoutServerTicketItemNameId": "900000000258", "scoutServerTicketItemDescriptionId": "258", "imageId": "i090_0003_00", "rarity": 9, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8020_3W_MasterTicket_016" }
 ]}

@@ -108,6 +108,7 @@
     "816": "[Name:PokemonName ]’s Dark Type\nRebuff won’t go any higher!",
     "817": "[Name:PokemonName ]’s Steel Type\nRebuff won’t go any higher!",
     "818": "[Name:PokemonName ]’s Fairy Type\nRebuff won’t go any higher!",
+    "819": "[Name:PokemonName ]’s Stellar Type\nRebuff won’t go any higher!",
     "851": "[Name:PokemonName ]’s Normal Type\nRebuff won’t go any lower!",
     "852": "[Name:PokemonName ]’s Fire Type Rebuff\nwon’t go any lower!",
     "853": "[Name:PokemonName ]’s Water Type\nRebuff won’t go any lower!",
@@ -126,6 +127,7 @@
     "866": "[Name:PokemonName ]’s Dark Type\nRebuff won’t go any lower!",
     "867": "[Name:PokemonName ]’s Steel Type\nRebuff won’t go any lower!",
     "868": "[Name:PokemonName ]’s Fairy Type\nRebuff won’t go any lower!",
+    "869": "[Name:PokemonName ]’s Stellar Type\nRebuff won’t go any lower!",
     "996": "Move gauge charged!",
     "1307": "Those [Digit:1digit ] Pokémon’s HP are full!",
     "1330": "All the Pokémon avoided the attack!",
@@ -203,6 +205,7 @@
     "1816": "Those [Digit:1digit ] Pokémon’s Dark Type Rebuff won’t go\nany higher!",
     "1817": "Those [Digit:1digit ] Pokémon’s Steel Type Rebuff won’t go\nany higher!",
     "1818": "Those [Digit:1digit ] Pokémon’s Fairy Type Rebuff won’t go\nany higher!",
+    "1819": "Those [Digit:1digit ] Pokémon’s Stellar Type Rebuff won’t go\nany higher!",
     "1851": "Those [Digit:1digit ] Pokémon’s Normal Type Rebuff won’t go\nany lower!",
     "1852": "Those [Digit:1digit ] Pokémon’s Fire Type Rebuff won’t go\nany lower!",
     "1853": "Those [Digit:1digit ] Pokémon’s Water Type Rebuff won’t go\nany lower!",
@@ -221,5 +224,6 @@
     "1866": "Those [Digit:1digit ] Pokémon’s Dark Type Rebuff won’t go\nany lower!",
     "1867": "Those [Digit:1digit ] Pokémon’s Steel Type Rebuff won’t go\nany lower!",
     "1868": "Those [Digit:1digit ] Pokémon’s Fairy Type Rebuff won’t go\nany lower!",
+    "1869": "Those [Digit:1digit ] Pokémon’s Stellar Type Rebuff won’t go\nany lower!",
     "1996": "Move gauge charged!"
 }

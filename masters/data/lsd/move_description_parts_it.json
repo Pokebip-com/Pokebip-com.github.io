@@ -983,5 +983,22 @@
     "998942": "Se gli utilizzi residui di [Name:MoveId Idx=\"18501\" ] di chi la usa sono pari o superiori a 1 quando si attacca con questa mossa, riduce tali utilizzi di 1 e conferisce tutti gli effetti seguenti:",
     "998941": "Aumenta l'[Name:ReferencedMessageTag Idx=\"1\" ] di chi la usa da 1 a 4 gradi in modo casuale.",
     "998940": "Inoltre, aumenta l'[Name:ReferencedMessageTag Idx=\"4\" ] di chi la usa di [Digit:1digit Idx=\"5\" ] [IT:Qty Ref=\"5\" S=\"grado\" P=\"gradi\" ] quando il bersaglio è avvelenato o iperavvelenato.",
-    "998939": "Aumenta l'[Name:ReferencedMessageTag Idx=\"2\" ] di chi la usa da 3 a 5 gradi in modo casuale."
+    "998939": "Aumenta l'[Name:ReferencedMessageTag Idx=\"2\" ] di chi la usa da 3 a 5 gradi in modo casuale.",
+    "998937": "Gli effetti delle mosse di chi la usa cambiano con quelli di seguito quando è in Forma Astrale.",
+    "998936": "Questa mossa diventa di tipo Astrale.",
+    "998935": "La potenza di questo attacco diventa il doppio di quando chi la usa è in Forma Normale o Forma Teracristal.",
+    "998934": "Tutte le Unità avversarie diventano il bersaglio.",
+    "998933": "Applica l'[Name:ReferencedMessageTag ] sul bersaglio la prima volta che questo attacco semplice va a segno in ogni lotta.",
+    "998932": "Trasforma il campo di lotta in un [Name:ReferencedMessageTag Idx=\"4\" ] la prima volta che questo attacco semplice va a segno in ogni lotta.",
+    "998931": "Abbassa di [Digit:1digit Idx=\"3\" ] il numero di azioni necessarie a chi la usa per sferrare l'Unimossa la prima volta che questo attacco semplice va a segno in ogni lotta.",
+    "998930": "Questa mossa cambia e diventa [Name:MoveId Idx=\"6180\" ].",
+    "998929": "Se gli utilizzi residui di [Name:MoveId Idx=\"19160\" ] di chi la usa sono pari o superiori a 1 quando si attacca con questa mossa, riduce tali utilizzi di 1 e conferisce tutti gli effetti seguenti:",
+    "998928": "Trasforma la zona in una [Name:ReferencedMessageTag Idx=\"2\" ] la prima volta che questa mossa viene utilizzata in ogni lotta.",
+    "998927": "Aumenta la potenza di questo attacco in proporzione all'aumento della [Name:ReferencedMessageTag ] di chi la usa.",
+    "998926": "Aumenta la [Name:ReferencedMessageTag ] di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
+    "998925": "Se chi la usa è nella Forma Astrale, conferisce anche tutti gli effetti seguenti:",
+    "998924": "Chi la usa recupera tutti i PS.",
+    "998923": "Guarisce chi la usa dai problemi di stato, dal tentennamento, dalla confusione e dall'imprigionamento.",
+    "998922": "Applica una Cerchia di Kanto (danni fisici), Cerchia di Kanto (danni speciali) e Cerchia di Kanto (difensiva) al campo alleato.",
+    "998921": "Permette di assumere la Forma Astrale. L'effetto svanisce al termine della lotta."
 }

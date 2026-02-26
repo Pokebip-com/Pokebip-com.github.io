@@ -254,5 +254,7 @@
     "event_8010_1W_MasterTicket_01": "セキ シーズン限定 確定Ｂサーチ",
     "event_8010_1W_SuperTicket_02": "チリ シーズン限定 出現率アップＢサーチ",
     "event_8010_1W_MasterTicket_02": "チリ シーズン限定 確定Ｂサーチ",
-    "event_8010_1W_SuperTicket_03": "シーズン限定 出現率アップＢサーチ"
+    "event_8010_1W_SuperTicket_03": "シーズン限定 出現率アップＢサーチ",
+    "event_8020_4W_SuperTicket_05": "マスターフェス限定 出現率アップＢサーチ",
+    "event_8020_3W_MasterTicket_016": "アルコスフェス限定 確定Ｂサーチ"
 }

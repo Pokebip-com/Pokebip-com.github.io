@@ -43,6 +43,7 @@
     "20005300": "Un Pokémon prisé des classes aisées. Il est néanmoins\nla cible des voleurs convoitant la gemme qui orne son\nfront.",
     "20005361": "Ne vous fiez pas à son air aimable. C'est un Pokémon\ncruel qui aime jouer avec ses proies blessées, sans\ndaigner les achever.",
     "20005400": "Utiliser ses pouvoirs psychiques lui donne de terribles\nmigraines, aussi préfère-t-il passer tout son temps\nimmobile à ne rien faire.",
+    "20005500": "Même les Pokémon poissons les plus rapides\nne peuvent pas lui échapper. Il les capture\navec facilité en les immobilisant.",
     "20005800": "Il est très facile à apprivoiser, mais à l'état sauvage,\nil combat férocement les Rocabot pour le contrôle\nde son territoire.",
     "20005900": "Une légende célèbre relate les exploits d'un chef\nde guerre et de son Arcanin à la conquête d'un\ncertain royaume antique.",
     "20006200": "Bien qu'il fasse partie des Pokémon de type Eau\nles plus doués pour la nage, il reste en général\nsur la terre ferme.",
@@ -645,5 +646,9 @@
     "2009520000": "Sa tête rouge convertit la substance piquante produite\npar son corps en énergie de type Feu et crache\ndes flammes brûlantes.",
     "2009980000": "L'air qu'il crache est tellement froid qu'il peut\ngeler instantanément du magma en fusion.",
     "2001010041": "Son enveloppe corporelle est étrangement semblable\nà celle des Noigrumes. S'il est irrité, il relâche\nun courant électrique dont l'intensité atteint\nvingt fois celle de la foudre.",
-    "2009770000": "Comme il n'est pas très doué pour attraper ses proies,\nce Pokémon vorace fait équipe avec Nigirigon\npour chasser."
+    "2009770000": "Comme il n'est pas très doué pour attraper ses proies,\nce Pokémon vorace fait équipe avec Nigirigon\npour chasser.",
+    "2010171100": "Ce Pokémon est curieux et facétieux. Lorsqu'il\nse bat, il puise dans l'énergie de son masque.\nCette énergie est du même type que ce dernier.",
+    "2010241100": "Il se protège en transformant de l'énergie\nen cristal solide. Ce Pokémon est à l'origine\ndu phénomène de Téracristallisation.",
+    "2010241200": "Quand il perçoit un danger, il se prépare\nau combat en se fabriquant une carapace\nsolide par Téracristallisation.",
+    "2010241300": "Sous cette forme, son énergie Téracristal est\ndécuplée et son apparence évoque le monde tel\nque les êtres humains le concevaient autrefois."
 }

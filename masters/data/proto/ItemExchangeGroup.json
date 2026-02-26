@@ -447,5 +447,8 @@
 { "itemExchangeGroupId": 2720050, "u2": 1, "scheduleId": "7020_5W_Event_Button_Exchange_1", "bannerId": 1510003, "u5": 0 },
 { "itemExchangeGroupId": 2801010, "u2": 1, "scheduleId": "8010_2W_Event_1_Exchange", "bannerId": 1604002, "u5": 0 },
 { "itemExchangeGroupId": 2801020, "u2": 1, "scheduleId": "8010_3W_Event_3_Exchange", "bannerId": 1701007, "u5": 0 },
-{ "itemExchangeGroupId": 2801030, "u2": 1, "scheduleId": "8010_4W_Event_1_Exchange", "bannerId": 1310008, "u5": 0 }
+{ "itemExchangeGroupId": 2801030, "u2": 1, "scheduleId": "8010_4W_Event_1_Exchange", "bannerId": 1310008, "u5": 0 },
+{ "itemExchangeGroupId": 2802010, "u2": 1, "scheduleId": "8020_3W_Event_3_Exchange", "bannerId": 1502001, "u5": 0 },
+{ "itemExchangeGroupId": 2802020, "u2": 1, "scheduleId": "8020_4W_Event_1_Exchange", "bannerId": 1310008, "u5": 0 },
+{ "itemExchangeGroupId": 2802030, "u2": 1, "scheduleId": "8020_4W_Event_Happy_Exchange", "bannerId": 1802016, "u5": 0 }
 ]}

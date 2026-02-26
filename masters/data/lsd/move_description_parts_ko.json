@@ -983,5 +983,22 @@
     "998942": "이 기술로 공격할 때 자신의 \"[Name:MoveId Idx=\"18501\" ]\"의 남은 횟수가 1 이상일 때는 그 횟수를 1 줄이고 아래의 모든 효과를 발휘한다",
     "998941": "자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] 1~4단계 중 하나만큼 오른다",
     "998940": "상대가 독 상태나 맹독 상태일 때는 추가로 자신의 [Name:ReferencedMessageTag Idx=\"4\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"5\" ]단계 오른다",
-    "998939": "자신의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] 3~5단계 중 하나만큼 오른다"
+    "998939": "자신의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] 3~5단계 중 하나만큼 오른다",
+    "998937": "자신이 스텔라폼일 때는 기술의 효과가 아래와 같이 변화한다",
+    "998936": "타입이 스텔라타입이 된다",
+    "998935": "위력이 노말폼이나 테라스탈폼일 때의 2배가 된다",
+    "998934": "대상이 상대 전원이 된다",
+    "998933": "처음 이 기술로 공격에 성공했을 때만 상대를 [Name:ReferencedMessageTag ] 상태[Kor:Particle char=\"ni\" ] 만든다",
+    "998932": "처음 이 기술로 공격에 성공했을 때만 필드를 [Name:ReferencedMessageTag Idx=\"4\" ][Kor:Particle char=\"ni\" ] 만든다",
+    "998931": "처음 이 기술로 공격에 성공했을 때만 자신의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 [Digit:1digit Idx=\"3\" ] 줄인다",
+    "998930": "이 기술이 \"[Name:MoveId Idx=\"6180\" ]\"로 변화한다",
+    "998929": "이 기술로 공격할 때 자신의 \"[Name:MoveId Idx=\"19160\" ]\"의 남은 횟수가 1 이상일 때는 그 횟수를 1 줄이고 아래의 모든 효과를 발휘한다",
+    "998928": "처음 이 기술을 사용했을 때만 존을 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ni\" ] 만든다",
+    "998927": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 올라가 있는 만큼 위력이 오른다",
+    "998926": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 오른다",
+    "998925": "추가로 자신이 스텔라폼일 때는 아래의 모든 효과를 발휘한다",
+    "998924": "자신의 HP를 최대 HP의 100%만큼 회복한다",
+    "998923": "자신의 상태 이상이나 풀죽음 상태, 혼란 상태, 바인드 상태를 해제한다",
+    "998922": "같은 편 전원의 필드를 관동서클(물리), 관동서클(특수), 관동서클(방어)로 만든다",
+    "998921": "배틀이 끝날 때까지 스텔라폼이 된다"
 }

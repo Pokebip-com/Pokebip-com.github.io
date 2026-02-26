@@ -10,7 +10,7 @@
     "6_element": "[Name:Item ]",
     "7": "Erreicht eine Bestpunktzahl von mindestens\n[Digit:9digits ] Punkt(en) im folgenden\nHighscore-Event.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
     "7_element": "[Name:QuestGroupTitle ]",
-    "8": "Erzielt eine Gewinnserie von insgesamt\n[Digit:9digits ] Siegen im Legenden-Turnier.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
+    "8": "Erzielt eine Gewinnserie von mindestens\n[Digit:9digits ] Sieg(en) im Legenden-Turnier.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
     "8_element": "[Name:QuestGroupTitle ]",
     "9": "Erreicht eine Bestpunktzahl von mindestens\n[Digit:9digits ] Punkt(en) im folgenden\nZeitschaden-Rangkampf.\n(Diese Summe bezieht andere Mitglieder der\nArena mit ein.)",
     "9_element": "[Name:QuestGroupTitle ]",

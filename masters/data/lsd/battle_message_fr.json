@@ -108,6 +108,7 @@
     "816": "La résilience au type Ténèbres pour [Name:PokemonName ]\nne peut plus augmenter !",
     "817": "La résilience au type Acier pour [Name:PokemonName ]\nne peut plus augmenter !",
     "818": "La résilience au type Fée pour [Name:PokemonName ]\nne peut plus augmenter !",
+    "819": "La résilience au type Stellaire pour [Name:PokemonName ]\nne peut plus augmenter !",
     "851": "La résilience au type Normal pour [Name:PokemonName ]\nne peut plus baisser !",
     "852": "La résilience au type Feu pour [Name:PokemonName ]\nne peut plus baisser !",
     "853": "La résilience au type Eau pour [Name:PokemonName ]\nne peut plus baisser !",
@@ -126,6 +127,7 @@
     "866": "La résilience au type Ténèbres pour [Name:PokemonName ]\nne peut plus baisser !",
     "867": "La résilience au type Acier pour [Name:PokemonName ]\nne peut plus baisser !",
     "868": "La résilience au type Fée pour [Name:PokemonName ]\nne peut plus baisser !",
+    "869": "La résilience au type Stellaire pour [Name:PokemonName ]\nne peut plus baisser !",
     "996": "La Jauge Capacité a été remplie !",
     "1307": "Mais les PV de [Digit:1digit ] Pokémon sont au maximum !",
     "1330": "Ça n'affecte aucun Pokémon...",
@@ -203,6 +205,7 @@
     "1816": "La résilience au type Ténèbres pour\nces [Digit:1digit ] Pokémon ne peut plus augmenter !",
     "1817": "La résilience au type Acier pour ces [Digit:1digit ] Pokémon\nne peut plus augmenter !",
     "1818": "La résilience au type Fée pour ces [Digit:1digit ] Pokémon\nne peut plus augmenter !",
+    "1819": "La résilience au type Stellaire pour ces [Digit:1digit ] Pokémon\nne peut plus augmenter !",
     "1851": "La résilience au type Normal pour ces [Digit:1digit ] Pokémon\nne peut plus baisser !",
     "1852": "La résilience au type Feu pour ces [Digit:1digit ] Pokémon\nne peut plus baisser !",
     "1853": "La résilience au type Eau pour ces [Digit:1digit ] Pokémon\nne peut plus baisser !",
@@ -221,5 +224,6 @@
     "1866": "La résilience au type Ténèbres pour\nces [Digit:1digit ] Pokémon ne peut plus baisser !",
     "1867": "La résilience au type Acier pour ces [Digit:1digit ] Pokémon\nne peut plus baisser !",
     "1868": "La résilience au type Fée pour ces [Digit:1digit ] Pokémon\nne peut plus baisser !",
+    "1869": "La résilience au type Stellaire pour ces [Digit:1digit ] Pokémon\nne peut plus baisser !",
     "1996": "La Jauge Capacité a été remplie !"
 }

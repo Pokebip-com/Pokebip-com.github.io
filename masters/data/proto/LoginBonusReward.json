@@ -2829,6 +2829,7 @@
 { "rewardId": "campaign_LoginBonus_8010_2", "day": 19, "itemSetId": "8010396", "u4": 0 },
 { "rewardId": "campaign_LoginBonus_8010_2", "day": 20, "itemSetId": "8010397", "u4": 1 },
 { "rewardId": "campaign_LoginBonus_8010_3", "day": 1, "itemSetId": "2020155", "u4": 0 },
+{ "rewardId": "campaign_LoginBonus_8020_3", "day": 1, "itemSetId": "2020155", "u4": 1 },
 { "rewardId": "daily_stamina_pack_LoginBonus_2100", "day": 1, "itemSetId": "21022000", "u4": 0 },
 { "rewardId": "daily_stamina_pack_LoginBonus_2100", "day": 2, "itemSetId": "21022000", "u4": 0 },
 { "rewardId": "daily_stamina_pack_LoginBonus_2100", "day": 3, "itemSetId": "21022000", "u4": 0 },

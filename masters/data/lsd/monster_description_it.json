@@ -43,6 +43,7 @@
     "20005300": "È molto popolare tra le persone facoltose.\nA volte viene preso di mira dai cacciatori, attirati\ndalla gemma che ha sulla fronte.",
     "20005361": "Nonostante il muso grazioso ha un'indole crudele,\ntanto che si diverte a giocare con le prede indebolite\nsenza dar loro il colpo di grazia.",
     "20005400": "Usare i suoi poteri psicocinetici gli causa dei gran mal\ndi testa, perciò passa il tempo cercando di fare e pensare\nil meno possibile.",
+    "20005500": "Riesce a immobilizzare anche i Pokémon acquatici più\nveloci. In questo modo, può catturarli con facilità.",
     "20005800": "È molto docile con gli esseri umani a cui si affeziona,\nma in natura lotta furiosamente con i Rockruff per\nil controllo del territorio.",
     "20005900": "Narra la leggenda che in un lontano passato \nabbia lottato a fianco di un generale, aiutandolo\na conquistare paesi interi.",
     "20006200": "È un nuotatore particolarmente abile anche rispetto\nad altri Pokémon che vivono in acqua, ma di solito\nvive sulla terraferma.",
@@ -645,5 +646,9 @@
     "2009520000": "La testa rossa trasforma le proprie sostanze\npungenti in energia Fuoco che usa per lanciare\nfiammate superpiccanti.",
     "2009980000": "Emette dalla bocca un getto d'aria glaciale con \ncui può congelare all'istante anche del magma\nincandescente.",
     "2001010041": "Arduo spiegare come la sua struttura superficiale sia\nestremamente affine a quella delle ghicocche. L'elettricità\nche eietta se adirato è pari a quella di 20 folgori.",
-    "2009770000": "È un Pokémon vorace, ma non è molto abile\nnel procacciarsi il cibo. Cattura le sue prede\ncollaborando con il Tatsugiri che è con lui."
+    "2009770000": "È un Pokémon vorace, ma non è molto abile\nnel procacciarsi il cibo. Cattura le sue prede\ncollaborando con il Tatsugiri che è con lui.",
+    "2010171100": "È dispettoso e ha una spiccata curiosità.\nIl tipo dell'energia che sfrutta per lottare\ndipende da quella contenuta nella maschera.",
+    "2010241100": "Sfrutta la sua capacità di trasformare l'energia\nin duri cristalli per proteggersi. Questo Pokémon\nè all'origine della teracristallizzazione.",
+    "2010241200": "Quando percepisce un pericolo, si prepara alla lotta\ncreando un robusto carapace Teracristal.",
+    "2010241300": "Forma assunta quando l'energia Teracristal\naumenta oltremisura. Ricorda il mondo così\ncome lo immaginavano i popoli antichi."
 }

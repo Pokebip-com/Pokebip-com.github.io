@@ -3478,5 +3478,17 @@
 { "skillSetId": "300116", "passiveSkillId": 30030202, "u2": "", "u3": "", "scheduleId": "FOREVER" },
 { "skillSetId": "300117", "passiveSkillId": 30014802, "u2": "", "u3": "", "scheduleId": "FOREVER" },
 { "skillSetId": "300117", "passiveSkillId": 30020102, "u2": "", "u3": "", "scheduleId": "FOREVER" },
-{ "skillSetId": "300117", "passiveSkillId": 30030503, "u2": "", "u3": "", "scheduleId": "FOREVER" }
+{ "skillSetId": "300117", "passiveSkillId": 30030503, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300118", "passiveSkillId": 30010102, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300118", "passiveSkillId": 30014002, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300118", "passiveSkillId": 30031204, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300119", "passiveSkillId": 30012203, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300119", "passiveSkillId": 30020202, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300119", "passiveSkillId": 30030102, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300120", "passiveSkillId": 30013203, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300120", "passiveSkillId": 30025102, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300120", "passiveSkillId": 30034704, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300121", "passiveSkillId": 30010202, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300121", "passiveSkillId": 30023403, "u2": "", "u3": "", "scheduleId": "FOREVER" },
+{ "skillSetId": "300121", "passiveSkillId": 30030202, "u2": "", "u3": "", "scheduleId": "FOREVER" }
 ]}

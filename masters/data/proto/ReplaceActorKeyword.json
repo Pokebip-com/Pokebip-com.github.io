@@ -21,5 +21,6 @@
 { "replacedActorId": "ch0656_00_ibu", "replacingActorId": "ch0654_00_pokekidf", "useGenericIfAvailable": true, "u4": 0, "u5": 0 },
 { "replacedActorId": "ch0657_00_chusuke", "replacingActorId": "ch0655_00_pokekidm", "useGenericIfAvailable": true, "u4": 0, "u5": 0 },
 { "replacedActorId": "ch0658_00_karen", "replacingActorId": "ch0659_00_furisodegirl", "useGenericIfAvailable": true, "u4": 0, "u5": 0 },
-{ "replacedActorId": "pm0025_02_pikachu", "replacingActorId": "pm0025_00_pikachu", "useGenericIfAvailable": false, "u4": 0, "u5": 0 }
+{ "replacedActorId": "pm0025_02_pikachu", "replacingActorId": "pm0025_00_pikachu", "useGenericIfAvailable": false, "u4": 0, "u5": 0 },
+{ "replacedActorId": "pm0025_03_pikachu", "replacingActorId": "pm0025_00_pikachu", "useGenericIfAvailable": false, "u4": 0, "u5": 0 }
 ]}

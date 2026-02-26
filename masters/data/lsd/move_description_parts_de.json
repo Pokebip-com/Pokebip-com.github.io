@@ -983,5 +983,22 @@
     "998942": "Wenn die verbleibenden Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"18501\" ] des Anwenders 1 oder mehr betragen und mit dieser Attacke angegriffen wird, werden diese AEP um 1 reduziert und alle folgenden Effekte ausgelöst:",
     "998941": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] des Anwenders zufällig um 1 bis 4.",
     "998940": "Erhöht zusätzlich den [Name:ReferencedMessageTag Idx=\"4\" ] des Anwenders um [Digit:1digit Idx=\"5\" ], wenn das Ziel vergiftet oder schwer vergiftet ist.",
-    "998939": "Erhöht den [Name:ReferencedMessageTag Idx=\"2\" ] des Anwenders zufällig um 3 bis 5."
+    "998939": "Erhöht den [Name:ReferencedMessageTag Idx=\"2\" ] des Anwenders zufällig um 3 bis 5.",
+    "998937": "Ersetzt in Stellarform die Effekte der Attacken des Anwenders mit den folgenden.",
+    "998936": "Diese Attacke wird zum Typ Stellar.",
+    "998935": "Die Stärke dieses Angriffs wird verdoppelt, wenn der Anwender in der Normalform oder Terakristall-Form ist.",
+    "998934": "Alle gegnerischen Gefährten werden zum Ziel.",
+    "998933": "Verursacht ein Mal pro Kampf beim Ziel den [Name:ReferencedMessageTag ], wenn dieser Angriff mit einer Attacke erstmals Erfolg hat.",
+    "998932": "Erzeugt ein Mal pro Kampf ein [Name:ReferencedMessageTag Idx=\"4\" ], wenn dieser Angriff mit einer Attacke erstmals Erfolg hat.",
+    "998931": "Reduziert ein Mal pro Kampf den Wert des Gefährtenattacken-Countdowns des Anwenders um [Digit:1digit Idx=\"3\" ], wenn dieser Angriff mit einer Attacke erstmals Erfolg hat.",
+    "998930": "Ändert diese Attacke zu [Name:MoveId Idx=\"6180\" ].",
+    "998929": "Wenn die verbleibenden Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"19160\" ] des Anwenders beim Angriff mit dieser Attacke 1 oder mehr betragen, werden diese AEP um 1 reduziert und alle folgenden Effekte ausgelöst:",
+    "998928": "Erzeugt einmal pro Kampf einen [Name:ReferencedMessageTag Idx=\"2\" ], wenn diese Attacke erstmals eingesetzt wird.",
+    "998927": "Je stärker der [Name:ReferencedMessageTag ] des Anwenders erhöht wurde, desto mehr wird die Stärke dieses Angriffs erhöht.",
+    "998926": "Erhöht den [Name:ReferencedMessageTag ] des Anwenders um [Digit:1digit Idx=\"1\" ].",
+    "998925": "Löst außerdem alle folgenden Effekte aus, wenn der Anwender in der Stellarform ist:",
+    "998924": "Stellt die KP des Anwenders komplett wieder her.",
+    "998923": "Befreit den Anwender von allen Statusproblemen und von Zurückschrecken, Verwirrung sowie Umschlingung.",
+    "998922": "Verursacht auf der Anwender-Seite Kantos Freundeskreis (Physisch), Kantos Freundeskreis (Spezial) und Kantos Freundeskreis (Verteidigung).",
+    "998921": "Nimmt bis zum Ende des Kampfes die Stellarform an."
 }

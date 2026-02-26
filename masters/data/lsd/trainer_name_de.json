@@ -216,6 +216,7 @@
     "ch0250": "Saida",
     "ch0251": "Nio",
     "ch0252": "Kabu",
+    "ch0253": "Papella",
     "ch0254": "Mac",
     "ch0255": "Mel",
     "ch0256": "Nezz",
@@ -311,5 +312,6 @@
     "ch0335": "Sinius",
     "ch0363": "Roxanne",
     "ch0661": "Kimono-Trägerin",
-    "ch0332": "Ronah"
+    "ch0332": "Ronah",
+    "ch0365": "Rot"
 }
