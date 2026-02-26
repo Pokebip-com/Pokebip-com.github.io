@@ -1168,9 +1168,9 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     }
 
     // Capacité Teracristal
-    let teraMove = jData.proto.monsterVariation.find(mv => mv.monsterId === monsterId && mv.terastalMoveId > 0);
+    let teraMove = variation?.terastalMoveId ?? null;
 
-    if (teraMove) {
+    if (teraMove && teraMove > 0) {
         contentDiv.appendChild(document.createElement("br"));
 
         let table = document.createElement("table");
@@ -1225,7 +1225,7 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
 
         table.appendChild(headRow);
 
-        table.appendChild(getMoveRow(teraMove.terastalMoveId));
+        table.appendChild(getMoveRow(teraMove));
 
         let tableWrapperTera = document.createElement("div");
         tableWrapperTera.style.overflowX = "auto";
@@ -1286,7 +1286,10 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     }
 
     table.appendChild(headRow);
-    table.appendChild(getSyncMoveRow(mon.syncMoveId, tr));
+
+    let syncMoveId = variation?.syncMoveId ?? mon.syncMoveId;
+
+    table.appendChild(getSyncMoveRow(syncMoveId, tr));
 
     let tableWrapperSync = document.createElement("div");
     tableWrapperSync.style.overflowX = "auto";
