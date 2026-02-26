@@ -1288,6 +1288,7 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     table.appendChild(headRow);
 
     let syncMoveId = variation?.syncMoveId ?? mon.syncMoveId;
+    syncMoveId = syncMoveId > 0 ? syncMoveId : mon.syncMoveId;
 
     table.appendChild(getSyncMoveRow(syncMoveId, tr));
 
