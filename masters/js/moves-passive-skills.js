@@ -168,7 +168,7 @@ function getParamArray(id) {
         return paramArray;
     }
 
-    for(let i = 1; i < 20; i += 2) {
+    for(let i = 1; i < 50; i += 2) {
         let type = parseInt(values[`param${i}`]);
 
         if(type >= 0) {
