@@ -1000,5 +1000,13 @@
     "998924": "Recupera todos los PS del usuario.",
     "998923": "Cura todos los problemas de estado, de retroceso, confusión y ataduras del usuario.",
     "998922": "Aplica Círculo de Kanto (Físico), Círculo de Kanto (Especial) y Círculo de Kanto (Defensivo) al bando aliado.",
-    "998921": "Adopta la Forma Astral. Vuelve a la normalidad tras terminar el combate."
+    "998921": "Adopta la Forma Astral. Vuelve a la normalidad tras terminar el combate.",
+    "998920": "Aumenta el [Name:ReferencedMessageTag Idx=\"10\" ] de todos los compis aliados en [Digit:1digit Idx=\"11\" ] [ES:Qty Ref=\"11\" S=\"nivel\" P=\"niveles\" ].",
+    "998919": "Reduce una de las características del objetivo (Ataque, Defensa, Ataque Especial, Defensa Especial, Velocidad, Precisión o Evasión) en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ] al azar el siguiente número de veces:\n[Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"vez\" P=\"veces\" ] con independencia del estado del bando aliado,\n[Digit:1digit Idx=\"3\" ] [ES:Qty Ref=\"3\" S=\"vez\" P=\"veces\" ] más cuando el efecto Daño físico ↓ se aplica al bando aliado,\n[Digit:1digit Idx=\"4\" ] [ES:Qty Ref=\"4\" S=\"vez\" P=\"veces\" ] más cuando el efecto Daño especial ↓ se aplica al bando aliado.",
+    "998918": "Si el Lucario del usuario ha megaevolucionado, también aplica el [Name:ReferencedMessageTag Idx=\"1\" ] a dicho usuario.",
+    "998917": "Crea un [Name:ReferencedMessageTag ].",
+    "998916": "Aumenta el efecto Siguiente Físico ↑ y el efecto Siguiente Especial ↑ de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ] la primera vez que el usuario usa un movimiento compi en cada combate.",
+    "998915": "Aplica [Name:ReferencedMessageTag Idx=\"9\" ] al bando aliado la primera vez que este movimiento de ataque acierta en cada combate.\n[Name:ReferencedMessageTag Idx=\"9\" ] otorga todos los efectos siguientes:",
+    "998914": "Evoluciona a Mega-Alakazam. Vuelve a la normalidad tras terminar el combate.",
+    "998913": "Aplica [Name:ReferencedMessageTag Idx=\"9\" ] al bando aliado la primera vez que el usuario usa un movimiento compi en cada combate. \n[Name:ReferencedMessageTag Idx=\"9\" ] otorga todos los efectos siguientes:"
 }

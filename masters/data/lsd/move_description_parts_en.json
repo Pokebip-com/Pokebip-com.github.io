@@ -1000,5 +1000,13 @@
     "998924": "Fully restores the user’s HP.",
     "998923": "Removes all status conditions and the flinching, confused, and trapped conditions from the user.",
     "998922": "Applies Kanto Circle (Physical), Kanto Circle (Special), and Kanto Circle (Defensive) to the allied field of play.",
-    "998921": "Change into Stellar Form until the end of battle."
+    "998921": "Change into Stellar Form until the end of battle.",
+    "998920": "Increases the [Name:ReferencedMessageTag Idx=\"10\" ] of all allied sync pairs by [Digit:1digit Idx=\"11\" ] [EN:Qty Ref=\"11\" S=\"rank\" P=\"ranks\" ].",
+    "998919": "Lowers one of the target’s stats (Attack, Defense, Sp. Atk, Sp. Def, Speed, accuracy, or evasiveness) by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] at random the following number of times:\n[Digit:1digit Idx=\"2\" ] [EN:Qty Ref=\"2\" S=\"time\" P=\"times\" ] regardless of the status of the allied field of play,\n[Digit:1digit Idx=\"3\" ] additional [EN:Qty Ref=\"3\" S=\"time\" P=\"times\" ] when the Physical Damage Reduction effect applies to the allied field of play,\n[Digit:1digit Idx=\"4\" ] additional [EN:Qty Ref=\"4\" S=\"time\" P=\"times\" ] when the Special Damage Reduction effect applies to the allied field of play.",
+    "998918": "If the user’s Lucario has Mega Evolved, also applies the [Name:ReferencedMessageTag Idx=\"1\" ] to the user.",
+    "998917": "Turns the field of play’s terrain into [Name:ReferencedMessageTag ].",
+    "998916": "Increases the Physical Moves ↑ Next effect and Special Moves ↑ Next effect of all allied sync pairs by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ] the first time the user’s sync move is used each battle.",
+    "998915": "Applies [Name:ReferencedMessageTag Idx=\"9\" ] to the allied field of play the first time this attack move is successful each battle.\n[Name:ReferencedMessageTag Idx=\"9\" ] grants all of the following effects:",
+    "998914": "Become Mega Alakazam until the end of battle.",
+    "998913": "Applies [Name:ReferencedMessageTag Idx=\"9\" ] to the allied field of play the first time the user’s sync move is used each battle.\n[Name:ReferencedMessageTag Idx=\"9\" ] grants all of the following effects:"
 }

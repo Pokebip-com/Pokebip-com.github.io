@@ -256,5 +256,12 @@
     "event_8010_1W_MasterTicket_02": "Rika Seasonal Guaranteed Ticket Scout",
     "event_8010_1W_SuperTicket_03": "Seasonal Featured Ticket Scout",
     "event_8020_4W_SuperTicket_05": "Master Fair Featured Ticket Scout",
-    "event_8020_3W_MasterTicket_016": "Arc Suit Fair–Exclusive Gtd. Ticket Scout"
+    "event_8020_3W_MasterTicket_016": "Arc Suit Fair–Exclusive Gtd. Ticket Scout",
+    "event_8030_1W_MasterTicket_05": "Fair–Exclusive Guaranteed Ticket Scout",
+    "event_8030_3W_SuperTicket_01": "Perrin Costume Featured Ticket Scout",
+    "event_8030_3W_MasterTicket_01": "Perrin Costume Guaranteed Ticket Scout",
+    "event_8030_3W_SuperTicket_03": "Sonia Costume Featured Ticket Scout",
+    "event_8030_3W_MasterTicket_03": "Sonia Costume Guaranteed Ticket Scout",
+    "event_8030_3W_SuperTicket_05": "Costume Featured Ticket Scout",
+    "event_8030_4W_SuperTicket_05": "Master Fair Featured Ticket Scout"
 }

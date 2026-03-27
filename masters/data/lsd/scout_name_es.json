@@ -256,5 +256,12 @@
     "event_8010_1W_MasterTicket_02": "Reclutamiento garantizado\nde temporada: Cayena",
     "event_8010_1W_SuperTicket_03": "Reclutamiento favorable\nde compis de temporada",
     "event_8020_4W_SuperTicket_05": "Reclutamiento favorable\ndel Pokéfestival maestro",
-    "event_8020_3W_MasterTicket_016": "Reclutamiento garantizado del Archifestival"
+    "event_8020_3W_MasterTicket_016": "Reclutamiento garantizado del Archifestival",
+    "event_8030_1W_MasterTicket_05": "Reclutamiento garantizado\nespecial del Pokéfestival",
+    "event_8030_3W_SuperTicket_01": "Reclutamiento favorable\nde trajes esp.: Gama",
+    "event_8030_3W_MasterTicket_01": "Reclutamiento garantizado\nde trajes esp.: Gama",
+    "event_8030_3W_SuperTicket_03": "Reclutamiento favorable\nde trajes esp.: Sonia",
+    "event_8030_3W_MasterTicket_03": "Reclutamiento garantizado\nde trajes esp.: Sonia",
+    "event_8030_3W_SuperTicket_05": "Reclutamiento favorable\nde trajes especiales",
+    "event_8030_4W_SuperTicket_05": "Reclutamiento favorable\ndel Pokéfestival maestro"
 }

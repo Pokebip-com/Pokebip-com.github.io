@@ -36,5 +36,6 @@
     "gvg_theme_8010_006": "Aumento del daño de los movimientos del equipo\nrival",
     "gvg_theme_8010_007": "Reducción de barra de movimientos +2",
     "gvg_theme_8010_008": "Reducción de la velocidad a la que se llena la\nbarra de movimientos de tu equipo",
-    "gvg_theme_8010_009": "Equipo rival inmune al daño producido por los\nataques de compis sin el distintivo indicado"
+    "gvg_theme_8010_009": "Equipo rival inmune al daño producido por los\nataques de compis sin el distintivo indicado",
+    "damage_challenge_theme_8030_001": "Los efectos de entorno duran todo el combate"
 }

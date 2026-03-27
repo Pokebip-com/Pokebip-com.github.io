@@ -260,5 +260,12 @@
     "override_title_8010_1_06": "(Rewards ×2) Complete any of the Training Areas",
     "override_title_8010_1_07": "(Rewards ×2) Level up a sync pair",
     "override_title_8010_1_08": "(Rewards ×2) Complete the Daily Region Rotation",
-    "override_title_8020_1_01": "Join and log in to a Trainer Gym"
+    "override_title_8020_1_01": "Join and log in to a Trainer Gym",
+    "override_title_8030_1_01": "Complete an academy event ×1",
+    "override_title_8030_1_02": "Complete an academy event ×2",
+    "override_title_8030_1_03": "Complete an academy event ×3",
+    "override_title_8030_1_04": "Complete an academy event ×4",
+    "override_title_8030_1_05": "Complete an academy event ×5",
+    "override_title_8030_1_06": "Use a battle rally pass",
+    "override_title_8030_1_07": "Exchange an Academy Fair Support Voucher for the supporter card of an attraction you support"
 }

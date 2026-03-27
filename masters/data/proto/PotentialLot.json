@@ -633,5 +633,14 @@
 { "potentialLotId": 802004, "potentialId": 17046404, "rate": 1 },
 { "potentialLotId": 802005, "potentialId": 16015403, "rate": 1 },
 { "potentialLotId": 802006, "potentialId": 17083801, "rate": 1 },
-{ "potentialLotId": 802007, "potentialId": 18126701, "rate": 1 }
+{ "potentialLotId": 802007, "potentialId": 18126701, "rate": 1 },
+{ "potentialLotId": 803001, "potentialId": 15014501, "rate": 1 },
+{ "potentialLotId": 803002, "potentialId": 99043501, "rate": 1 },
+{ "potentialLotId": 803003, "potentialId": 99043601, "rate": 1 },
+{ "potentialLotId": 803004, "potentialId": 99043701, "rate": 1 },
+{ "potentialLotId": 803005, "potentialId": 99043801, "rate": 1 },
+{ "potentialLotId": 803006, "potentialId": 99043901, "rate": 1 },
+{ "potentialLotId": 803007, "potentialId": 11013909, "rate": 1 },
+{ "potentialLotId": 803008, "potentialId": 16018904, "rate": 1 },
+{ "potentialLotId": 803009, "potentialId": 18046409, "rate": 1 }
 ]}

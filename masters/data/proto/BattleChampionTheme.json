@@ -44,5 +44,6 @@
 { "battleChampionThemeId": 80100015, "championBattleThemeName": "gvg_theme_8010_009", "u3": [ 45, 0, 0 ], "u4": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
 { "battleChampionThemeId": 80100016, "championBattleThemeName": "gvg_theme_8010_009", "u3": [ 46, 0, 0 ], "u4": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
 { "battleChampionThemeId": 80100017, "championBattleThemeName": "gvg_theme_8010_009", "u3": [ 47, 0, 0 ], "u4": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
-{ "battleChampionThemeId": 80100018, "championBattleThemeName": "gvg_theme_8010_009", "u3": [ 48, 0, 0 ], "u4": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] }
+{ "battleChampionThemeId": 80100018, "championBattleThemeName": "gvg_theme_8010_009", "u3": [ 48, 0, 0 ], "u4": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80300001, "championBattleThemeName": "damage_challenge_theme_8030_001", "u3": [ 49, 0, 0 ], "u4": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] }
 ]}

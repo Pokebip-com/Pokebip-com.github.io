@@ -357,7 +357,7 @@
     "pvoice_ch0119_10_gladion/system001": "Mon nom est Gladio. Montre-moi\nce dont tu es capable...",
     "pvoice_ch0279_00_kakeru/system001": "Salut, moi c'est Chase, de Bourg Palette !\nRavi de te rencontrer !",
     "pvoice_ch0242_40_masaru/system001": "Bonjour, je suis Victor ! Je prépare une\nnouvelle recette. Ça te dirait d'y goûter ?",
-    "pvoice_ch0025_40_suzuna/system001": "Salut, je suis Gladys ! Les Pokémon,\nla mode, l'amour... Tout est une\nquestion d'enthousiasme !",
+    "pvoice_ch0025_40_suzuna/system001": "Salut, je suis Gladys ! Les Pokémon,\nla mode, la cuisine... Tout est une\nquestion d'enthousiasme !",
     "pvoice_ch0655_00_pokekidm/system001": "Je suis un Pikachu ! Quand je serai grand,\nje vais devenir un Raichu !",
     "pvoice_ch0156_00_gen/system001": "Je m'appelle Armand. Je suis Dresseur,\net, oui, je reconnais que les mines sont\nun drôle d'endroit pour s'entraîner.",
     "pvoice_ch0115_00_denji/system011": "On va faire des étincelles\ndurant cette aventure !",
@@ -520,5 +520,8 @@
     "pvoice_ch0246_80_beet/system001": "Je suis Travis, la fierté de Galar et la crème\nde la crème des Dresseurs ! Je vais\nte montrer mes capacités raffinées !",
     "pvoice_ch0286_40_svboy/system001": "Salut, je m'appelle Florian ! Je veux\nme rappeler d'aujourd'hui pour toujours...\ncar c'est le jour où l'on s'est rencontrés !",
     "pvoice_ch0287_40_svgirl/system001": "Salut, je suis Juliana ! Chaque instant passé\navec ses amis est un précieux souvenir !",
-    "pvoice_ch0365_00_red2/system001": "... !"
+    "pvoice_ch0365_00_red2/system001": "... !",
+    "pvoice_ch0012_90_corni/system001": "Moi c'est Cornélia, la Championne d'Arène\nde Yantreizh ! C'est l'heure de peaufiner\nnotre lien et d'entrer en piste !",
+    "pvoice_ch0114_90_natsume/system001": "Je ne me reposerai pas que sur les pouvoirs\npsychiques... Observe notre vraie force\nde tes propres yeux !",
+    "pvoice_ch0338_00_sazare/system011": "Salut, t'as l'air fra[FR:Gen Ref=\"255\" M=\"is\" F=\"îche\" ] ! La bonne vieille\nLithia pète aussi la forme !"
 }

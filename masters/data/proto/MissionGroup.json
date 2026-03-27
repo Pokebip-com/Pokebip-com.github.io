@@ -762,5 +762,12 @@
 { "missionGroupId": 2802150, "scheduleId": "8020_4W_Event_Happy_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 802150, "itemSetId": "8020308", "bannerId": 1802016, "u9": 1, "u10": 0 },
 { "missionGroupId": 2802160, "scheduleId": "8020_BattleRally_Mission_5", "u3": 0, "u4": 1, "u5": 0, "u6": 802160, "itemSetId": "636", "bannerId": 4601001, "u9": 1, "u10": 0 },
 { "missionGroupId": 2802910, "scheduleId": "8030_gym_season", "u3": 0, "u4": 4, "u5": 0, "u6": 802910, "itemSetId": "0", "bannerId": -1, "u9": 6, "u10": 0 },
-{ "missionGroupId": 2802920, "scheduleId": "8020_3W_gymmission", "u3": 0, "u4": 4, "u5": 0, "u6": 802920, "itemSetId": "0", "bannerId": 1802012, "u9": 7, "u10": 0 }
+{ "missionGroupId": 2802920, "scheduleId": "8020_3W_gymmission", "u3": 0, "u4": 4, "u5": 0, "u6": 802920, "itemSetId": "0", "bannerId": 1802012, "u9": 7, "u10": 0 },
+{ "missionGroupId": 2803010, "scheduleId": "8040_gym_season", "u3": 0, "u4": 4, "u5": 0, "u6": 803010, "itemSetId": "0", "bannerId": -1, "u9": 6, "u10": 0 },
+{ "missionGroupId": 2803020, "scheduleId": "8030_1W_pasio_battle_Mission", "u3": 0, "u4": 4, "u5": 0, "u6": 803020, "itemSetId": "0", "bannerId": 1803003, "u9": 7, "u10": 0 },
+{ "missionGroupId": 2803030, "scheduleId": "8030_BattleRally_monthlyMission", "u3": 0, "u4": 1, "u5": 0, "u6": 803030, "itemSetId": "8030904", "bannerId": 4803001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2803040, "scheduleId": "8030_1W_Event_1_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 803040, "itemSetId": "8030139", "bannerId": 1803004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2803050, "scheduleId": "8030_1W_Campaign_poke_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 803050, "itemSetId": "8030018", "bannerId": 5803001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2803060, "scheduleId": "8030_1W_Event_2_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 803060, "itemSetId": "8030185", "bannerId": 1803005, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2803070, "scheduleId": "8030_3W_Event_2_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 803070, "itemSetId": "7090901", "bannerId": 1803009, "u9": 1, "u10": 0 }
 ]}

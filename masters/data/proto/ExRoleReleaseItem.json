@@ -14,6 +14,7 @@
 { "exRoleItemId": "5910286000002", "imageName": "i059_0003_00", "rarity": 3, "roleId": 2, "trainerId": "10286000002" },
 { "exRoleItemId": "5910287000001", "imageName": "i059_0001_00", "rarity": 3, "roleId": 1, "trainerId": "10287000001" },
 { "exRoleItemId": "5910289000002", "imageName": "i059_0002_00", "rarity": 3, "roleId": 3, "trainerId": "10289000002" },
+{ "exRoleItemId": "5910317000000", "imageName": "i059_0002_00", "rarity": 3, "roleId": 3, "trainerId": "10317000000" },
 { "exRoleItemId": "5918000000000", "imageName": "i059_0003_00", "rarity": 3, "roleId": 2, "trainerId": "18000000000" },
 { "exRoleItemId": "5918000120000", "imageName": "i059_0002_00", "rarity": 3, "roleId": 3, "trainerId": "18000120000" }
 ]}

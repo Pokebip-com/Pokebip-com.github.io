@@ -256,5 +256,12 @@
     "event_8010_1W_MasterTicket_02": "Unicerca festiva con\nUnità garantita: Capsi",
     "event_8010_1W_SuperTicket_03": "Unicerca festiva con\nUnità in evidenza",
     "event_8020_4W_SuperTicket_05": "Unicerca Mastergala con\nUnità in evidenza",
-    "event_8020_3W_MasterTicket_016": "Unicerca Arcifestival\ncon Unità garantita"
+    "event_8020_3W_MasterTicket_016": "Unicerca Arcifestival\ncon Unità garantita",
+    "event_8030_1W_MasterTicket_05": "Unicerca Masterparty\ncon Unità garantita",
+    "event_8030_3W_SuperTicket_01": "Unicerca in costume:\nLitha in evidenza",
+    "event_8030_3W_MasterTicket_01": "Unicerca in costume con\nUnità garantita: Litha",
+    "event_8030_3W_SuperTicket_03": "Unicerca in costume:\nSonia in evidenza",
+    "event_8030_3W_MasterTicket_03": "Unicerca in costume con\nUnità garantita: Sonia",
+    "event_8030_3W_SuperTicket_05": "Unicerca in costume\ncon Unità in evidenza",
+    "event_8030_4W_SuperTicket_05": "Unicerca Mastergala con\nUnità in evidenza"
 }

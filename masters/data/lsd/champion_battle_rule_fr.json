@@ -45,5 +45,6 @@
     "gvg_rule_8010_015": "Les ennemis ne subissent aucun dégât\nde capacités offensives de Duos qui n'ont pas\nle mot-clé suivant :\n• Alola",
     "gvg_rule_8010_016": "Les ennemis ne subissent aucun dégât\nde capacités offensives de Duos qui n'ont pas\nle mot-clé suivant :\n• Galar",
     "gvg_rule_8010_017": "Les ennemis ne subissent aucun dégât\nde capacités offensives de Duos qui n'ont pas\nle mot-clé suivant :\n• Paldea",
-    "gvg_rule_8010_018": "Les ennemis ne subissent aucun dégât\nde capacités offensives de Duos qui n'ont pas\nle mot-clé suivant :\n• Passio"
+    "gvg_rule_8010_018": "Les ennemis ne subissent aucun dégât\nde capacités offensives de Duos qui n'ont pas\nle mot-clé suivant :\n• Passio",
+    "damage_challenge_rule_8030_001": "Les effets sur le terrain déclenchés par\nles alliés et les ennemis durent tout le combat."
 }

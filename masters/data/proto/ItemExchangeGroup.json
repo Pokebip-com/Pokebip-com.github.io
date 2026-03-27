@@ -450,5 +450,12 @@
 { "itemExchangeGroupId": 2801030, "u2": 1, "scheduleId": "8010_4W_Event_1_Exchange", "bannerId": 1310008, "u5": 0 },
 { "itemExchangeGroupId": 2802010, "u2": 1, "scheduleId": "8020_3W_Event_3_Exchange", "bannerId": 1502001, "u5": 0 },
 { "itemExchangeGroupId": 2802020, "u2": 1, "scheduleId": "8020_4W_Event_1_Exchange", "bannerId": 1310008, "u5": 0 },
-{ "itemExchangeGroupId": 2802030, "u2": 1, "scheduleId": "8020_4W_Event_Happy_Exchange", "bannerId": 1802016, "u5": 0 }
+{ "itemExchangeGroupId": 2802030, "u2": 1, "scheduleId": "8020_4W_Event_Happy_Exchange", "bannerId": 1802016, "u5": 0 },
+{ "itemExchangeGroupId": 2803010, "u2": 1, "scheduleId": "8030_1W_Event_2_Exchange", "bannerId": 1803005, "u5": 0 },
+{ "itemExchangeGroupId": 2803020, "u2": 1, "scheduleId": "8030_3W_Event_2_Exchange", "bannerId": 1803009, "u5": 0 },
+{ "itemExchangeGroupId": 2803030, "u2": 1, "scheduleId": "8030_3W_Event_1_Exchange", "bannerId": 1803008, "u5": 0 },
+{ "itemExchangeGroupId": 2803040, "u2": 1, "scheduleId": "8030_3W_Event_3_Exchange", "bannerId": 1803012, "u5": 0 },
+{ "itemExchangeGroupId": 2803050, "u2": 1, "scheduleId": "8030_3W_Event_4_Exchange", "bannerId": 1803013, "u5": 0 },
+{ "itemExchangeGroupId": 2803060, "u2": 1, "scheduleId": "8030_4W_Event_1_Exchange", "bannerId": 1310008, "u5": 0 },
+{ "itemExchangeGroupId": 2803070, "u2": 1, "scheduleId": "8030_1W_Campaign_poke_Exchange", "bannerId": 5803001, "u5": 0 }
 ]}

@@ -357,7 +357,7 @@
     "pvoice_ch0119_10_gladion/system001": "My name is Gladion... Let me see how good\nyou are.",
     "pvoice_ch0279_00_kakeru/system001": "Hi, I’m Chase from Pallet Town! Nice to\nmeet you!",
     "pvoice_ch0242_40_masaru/system001": "Hello! I’m Victor, and I’m cooking up a new\ndish! Can you give it a taste test?",
-    "pvoice_ch0025_40_suzuna/system001": "Hiya, I’m Candice! Pokémon, fashion,\nromance—it’s all about focus!",
+    "pvoice_ch0025_40_suzuna/system001": "Hiya, I’m Candice! Pokémon, fashion,\ncooking—it’s all about focus!",
     "pvoice_ch0655_00_pokekidm/system001": "I’m a Pikachu! When I grow up, I’m gonna\nbe a Raichu!",
     "pvoice_ch0156_00_gen/system001": "I’m Riley. I’m a Trainer, and yes, it is a bit\nodd that I’m always training in mines.",
     "pvoice_ch0115_00_denji/system011": "Let’s make some sparks fly on this adventure!",
@@ -520,5 +520,8 @@
     "pvoice_ch0246_80_beet/system001": "I am Bede, the pride of Galar and an elite\nTrainer in my own right! Let me show you\nmy refined moves!",
     "pvoice_ch0286_40_svboy/system001": "Hi, I’m Florian! Today—the day I met you—\nis a day I want to remember forever!",
     "pvoice_ch0287_40_svgirl/system001": "Hey, I’m Juliana! Every memory with your\nfriends is a treasure!",
-    "pvoice_ch0365_00_red2/system001": "... ... ...!"
+    "pvoice_ch0365_00_red2/system001": "... ... ...!",
+    "pvoice_ch0012_90_corni/system001": "I’m Korrina, the Shalour City Gym Leader!\nTime to polish up our bond for a big\nappearance!",
+    "pvoice_ch0114_90_natsume/system001": "I won’t rely on psychic power alone. Our\ntrue strength... See it with your own eyes!",
+    "pvoice_ch0338_00_sazare/system011": "Hey! You’re looking great! Good ol’ Perrin is\nstill kicking around, too!"
 }

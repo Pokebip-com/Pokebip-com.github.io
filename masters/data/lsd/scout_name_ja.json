@@ -256,5 +256,12 @@
     "event_8010_1W_MasterTicket_02": "チリ シーズン限定 確定Ｂサーチ",
     "event_8010_1W_SuperTicket_03": "シーズン限定 出現率アップＢサーチ",
     "event_8020_4W_SuperTicket_05": "マスターフェス限定 出現率アップＢサーチ",
-    "event_8020_3W_MasterTicket_016": "アルコスフェス限定 確定Ｂサーチ"
+    "event_8020_3W_MasterTicket_016": "アルコスフェス限定 確定Ｂサーチ",
+    "event_8030_1W_MasterTicket_05": "フェス限定 確定Ｂサーチ",
+    "event_8030_3W_SuperTicket_01": "サザレ スペコス 出現率アップＢサーチ",
+    "event_8030_3W_MasterTicket_01": "サザレ スペコス 確定Ｂサーチ",
+    "event_8030_3W_SuperTicket_03": "ソニア スペコス 出現率アップＢサーチ",
+    "event_8030_3W_MasterTicket_03": "ソニア スペコス 確定Ｂサーチ",
+    "event_8030_3W_SuperTicket_05": "スペコス 出現率アップＢサーチ",
+    "event_8030_4W_SuperTicket_05": "マスターフェス限定 出現率アップＢサーチ"
 }

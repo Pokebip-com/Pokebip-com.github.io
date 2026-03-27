@@ -1000,5 +1000,13 @@
     "998924": "Restaure la totalité des PV du lanceur.",
     "998923": "Soigne le lanceur de toutes les altérations de statut et de la peur, de la confusion et du ligotage.",
     "998922": "Applique Cercle de Kanto physique, Cercle de Kanto spécial et Cercle de Kanto défensif au côté allié.",
-    "998921": "Permet d'adopter la Forme Stellaire jusqu'à la fin du combat."
+    "998921": "Permet d'adopter la Forme Stellaire jusqu'à la fin du combat.",
+    "998920": "Augmente l'[Name:ReferencedMessageTag Idx=\"10\" ] de tous les Duos alliés de [Digit:1digit Idx=\"11\" ] [FR:Qty Ref=\"11\" S=\"rang\" P=\"rangs\" ].",
+    "998919": "Baisse aléatoirement une des stats de la cible (Attaque, Défense, Atq. Spé., Déf. Spé., Vitesse, Précision ou Esquive) de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] le nombre de fois suivant :\n[Digit:1digit Idx=\"2\" ] fois indépendamment de l'état du côté allié ;\n[Digit:1digit Idx=\"3\" ] fois [FR:Qty Ref=\"3\" S=\"supplémentaire\" P=\"supplémentaires\" ] lorsque l'effet Résilience Physique s'applique au côté allié ;\n[Digit:1digit Idx=\"4\" ] fois [FR:Qty Ref=\"4\" S=\"supplémentaire\" P=\"supplémentaires\" ] lorsque l'effet Résilience Spéciale s'applique au côté allié.",
+    "998918": "Si le Lucario du lanceur a méga-évolué, applique également l'[Name:ReferencedMessageTag Idx=\"1\" ] au lanceur.",
+    "998917": "Transforme le champ en un [Name:ReferencedMessageTag ].",
+    "998916": "Augmente l'effet Prochain boost capacité physique et l'effet Prochain boost capacité spéciale de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] la première fois que le lanceur utilise une capacité Duo à chaque combat.",
+    "998915": "Applique [Name:ReferencedMessageTag Idx=\"9\" ] au côté allié la première fois que cette capacité offensive est utilisée avec succès à chaque combat.\n[Name:ReferencedMessageTag Idx=\"9\" ] applique tous les effets suivants :",
+    "998914": "Permet à Alakazam de devenir Méga-Alakazam jusqu'à la fin du combat.",
+    "998913": "Applique [Name:ReferencedMessageTag Idx=\"9\" ] au côté allié la première fois que le lanceur utilise une capacité Duo à chaque combat.\n[Name:ReferencedMessageTag Idx=\"9\" ] applique tous les effets suivants :"
 }

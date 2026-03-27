@@ -357,7 +357,7 @@
     "pvoice_ch0119_10_gladion/system001": "Mein Name ist Gladio... Zeig mir, wie stark\ndu bist.",
     "pvoice_ch0279_00_kakeru/system001": "Hi, ich bin Chase aus Alabastia! Freut mich,\ndich kennenzulernen!",
     "pvoice_ch0242_40_masaru/system001": "Hallo! Ich bin Victor und bereite gerade ein\nneues Gericht zu. Würdest du es für mich\nprobieren?",
-    "pvoice_ch0025_40_suzuna/system001": "Hey, ich bin Frida! Pokémon, Mode,\nRomanzen... Alles eine Frage der\nKonzentration!",
+    "pvoice_ch0025_40_suzuna/system001": "Hey, ich bin Frida! Pokémon, Mode, Kochen...\nAlles eine Frage der Konzentration!",
     "pvoice_ch0655_00_pokekidm/system001": "Ich bin ein Pikachu! Wenn ich groß bin,\nwerde ich ein Raichu!",
     "pvoice_ch0156_00_gen/system001": "Mein Name ist Urs. Ich bin ein Trainer und\nes ist zugegeben ein bisschen merkwürdig,\ndass ich ständig in Minen trainiere.",
     "pvoice_ch0115_00_denji/system011": "Wir werden bei diesem Abenteuer die\nFunken sprühen lassen!",
@@ -520,5 +520,8 @@
     "pvoice_ch0246_80_beet/system001": "Ich bin Betys, der Stolz Galars und Teil der\nabsoluten Elite! Überzeuge dich selbst von\nder Raffinesse meiner Attacken!",
     "pvoice_ch0286_40_svboy/system001": "Hallo, ich bin Florian! Der heutige Tag, an\ndem ich dich getroffen habe, wird mir für\nimmer in Erinnerung bleiben!",
     "pvoice_ch0287_40_svgirl/system001": "Hey, ich bin Juliana! Jede Erinnerung mit\ndeinen Freunden ist ein ganz besonderer\nSchatz!",
-    "pvoice_ch0365_00_red2/system001": "...!"
+    "pvoice_ch0365_00_red2/system001": "...!",
+    "pvoice_ch0012_90_corni/system001": "Ich bin Connie, die Arenaleiterin von\nYantara City! Vorhang auf für unser Band!\nNoch stärker und schöner als je zuvor!",
+    "pvoice_ch0114_90_natsume/system001": "Ich hab mehr vorzuweisen als psychische\nKräfte, und ich werde dir zeigen... wie\nmächtig wir wirklich sind!",
+    "pvoice_ch0338_00_sazare/system011": "Hey! Du siehst frisch und munter aus! Lange\nnicht gesehen, was?"
 }

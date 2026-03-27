@@ -45,5 +45,6 @@
     "gvg_rule_8010_015": "Opponents take zero damage from attacks from\nsync pairs that don’t have the following theme.\n\n• Alola",
     "gvg_rule_8010_016": "Opponents take zero damage from attacks from\nsync pairs that don’t have the following theme.\n\n• Galar",
     "gvg_rule_8010_017": "Opponents take zero damage from attacks from\nsync pairs that don’t have the following theme.\n\n• Paldea",
-    "gvg_rule_8010_018": "Opponents take zero damage from attacks from\nsync pairs that don’t have the following theme.\n\n• Pasio"
+    "gvg_rule_8010_018": "Opponents take zero damage from attacks from\nsync pairs that don’t have the following theme.\n\n• Pasio",
+    "damage_challenge_rule_8030_001": "Field effects created by both allies and opponents\nare permanent."
 }

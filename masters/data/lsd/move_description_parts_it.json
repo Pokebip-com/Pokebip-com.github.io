@@ -1000,5 +1000,13 @@
     "998924": "Chi la usa recupera tutti i PS.",
     "998923": "Guarisce chi la usa dai problemi di stato, dal tentennamento, dalla confusione e dall'imprigionamento.",
     "998922": "Applica una Cerchia di Kanto (danni fisici), Cerchia di Kanto (danni speciali) e Cerchia di Kanto (difensiva) al campo alleato.",
-    "998921": "Permette di assumere la Forma Astrale. L'effetto svanisce al termine della lotta."
+    "998921": "Permette di assumere la Forma Astrale. L'effetto svanisce al termine della lotta.",
+    "998920": "Aumenta l'[Name:ReferencedMessageTag Idx=\"10\" ] di tutte le Unità alleate di [Digit:1digit Idx=\"11\" ] [IT:Qty Ref=\"11\" S=\"grado\" P=\"gradi\" ].",
+    "998919": "Riduce una statistica a caso del bersaglio (Attacco, Difesa, Attacco Speciale, Difesa Speciale, Velocità, precisione o elusione) di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ] per il seguente numero di volte:\n[Digit:1digit Idx=\"2\" ] [IT:Qty Ref=\"2\" S=\"volta\" P=\"volte\" ] a prescindere dallo stato del campo alleato,\n[Digit:1digit Idx=\"3\" ] [IT:Qty Ref=\"3\" S=\"volta\" P=\"volte\" ] in più quando al campo alleato viene applicato l'effetto \"Riduzione danni fisici\",\n[Digit:1digit Idx=\"4\" ] [IT:Qty Ref=\"4\" S=\"volta\" P=\"volte\" ] in più quando al campo alleato viene applicato l'effetto \"Riduzione danni speciali\".",
+    "998918": "Se Lucario di chi la usa si megaevolve, applica a chi la usa anche l'[Name:ReferencedMessageTag Idx=\"1\" ].",
+    "998917": "Trasforma il campo di lotta in un [Name:ReferencedMessageTag ].",
+    "998916": "Aumenta l'effetto \"Prossima mossa fisica ↑\" e l'effetto \"Prossima mossa speciale ↑\" di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ] la prima volta che l'Unimossa di chi la usa viene utilizzata in ogni lotta.",
+    "998915": "Applica una [Name:ReferencedMessageTag Idx=\"9\" ] al campo alleato la prima volta che questo attacco semplice va a segno in ogni lotta.\n[Name:ReferencedMessageTag Idx=\"9\" ] conferisce tutti gli effetti seguenti:",
+    "998914": "Permette ad Alakazam di megaevolversi. L'effetto svanisce al termine della lotta.",
+    "998913": "Applica una [Name:ReferencedMessageTag Idx=\"9\" ] al campo alleato la prima volta che l'Unimossa di chi la usa viene utilizzata in ogni lotta.\n[Name:ReferencedMessageTag Idx=\"9\" ] conferisce tutti gli effetti seguenti:"
 }

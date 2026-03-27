@@ -1000,5 +1000,13 @@
     "998924": "Stellt die KP des Anwenders komplett wieder her.",
     "998923": "Befreit den Anwender von allen Statusproblemen und von Zurückschrecken, Verwirrung sowie Umschlingung.",
     "998922": "Verursacht auf der Anwender-Seite Kantos Freundeskreis (Physisch), Kantos Freundeskreis (Spezial) und Kantos Freundeskreis (Verteidigung).",
-    "998921": "Nimmt bis zum Ende des Kampfes die Stellarform an."
+    "998921": "Nimmt bis zum Ende des Kampfes die Stellarform an.",
+    "998920": "Erhöht den [Name:ReferencedMessageTag Idx=\"10\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"11\" ].",
+    "998919": "Senkt zufällig einen der Statuswerte des Zieles (Angriff, Verteidigung, Spezial-Angriff, Spezial-Verteidigung, Initiative, Genauigkeit oder Fluchtwert) um [Digit:1digit Idx=\"1\" ], und zwar so oft:\n[Digit:1digit Idx=\"2\" ]-mal unabhängig vom Status der Anwender-Seite,\nzusätzlich [Digit:1digit Idx=\"3\" ]-mal, wenn der Effekt Physischer Schaden↓ auf der Anwender-Seite aktiv ist,\nzusätzlich [Digit:1digit Idx=\"4\" ]-mal, wenn der Effekt Spezial-Schaden↓ auf der Anwender-Seite aktiv ist.",
+    "998918": "Wenn das Lucario des Anwenders die Mega-Entwicklung erreicht hat, wird beim Anwender der [Name:ReferencedMessageTag Idx=\"1\" ] verursacht.",
+    "998917": "Erzeugt ein [Name:ReferencedMessageTag ].",
+    "998916": "Erhöht ein Mal pro Kampf die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ aller verbündeten Gefährten um [Digit:1digit ], wenn der Anwender erstmals seine Gefährtenattacke einsetzt.",
+    "998915": "Verursacht ein Mal pro Kampf auf der Anwender-Seite [Name:ReferencedMessageTag Idx=\"9\" ], wenn dieser Angriff mit einer Attacke erstmals Erfolg hat.\n[Name:ReferencedMessageTag Idx=\"9\" ] löst alle folgenden Effekte aus:",
+    "998914": "Löst bei Simsala bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Simsala aus.",
+    "998913": "Verursacht ein Mal pro Kampf auf der Anwender-Seite [Name:ReferencedMessageTag Idx=\"9\" ], wenn der Anwender erstmals seine Gefährtenattacke einsetzt.\n[Name:ReferencedMessageTag Idx=\"9\" ] löst alle folgenden Effekte aus:"
 }

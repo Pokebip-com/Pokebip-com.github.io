@@ -368,5 +368,11 @@
     "override_detail_8020_1_01": "Schließe die täglichen Regionskämpfe \nfünfmal ab.",
     "override_detail_8020_1_02": "Schließe einmal einen beliebigen\nKampf im Spezialevent:\n„Ein rätselhafter Rot und viel Furore“\nim Modus „Allein spielen“ ab.",
     "override_detail_8020_1_03": "Schließe einmal einen beliebigen\nKampf im Extremkampf-Event:\n„Stell dich der originalen Legende!“\nim Modus „Allein spielen“ ab.",
-    "override_detail_8020_1_04": "Schließe einmal einen beliebigen\nKampf im Episodenevent: „Betys’ und\nMarys Motivation“ im Modus\n„Allein spielen“ ab."
+    "override_detail_8020_1_04": "Schließe einmal einen beliebigen\nKampf im Episodenevent: „Betys’ und\nMarys Motivation“ im Modus\n„Allein spielen“ ab.",
+    "override_detail_8030_1_01": "Schließe eines der unten aufgeführten\nAkademie-Events einmal ab:\n\n• Akademie-Event: Vorbereitungen\nzum Passio-Akademie-Fest\n• Akademie-Event: Der Code der\nFreundschaft\n• Akademie-Event:\nAkademie-Eröffnung\n\nHinweis: Die Anzahl wird jeweils\nnach dem Abschluss eines\nAkademie-Events hinzugefügt.",
+    "override_detail_8030_1_02": "Schließe eines der unten aufgeführten\nAkademie-Events zweimal ab:\n\n• Akademie-Event: Vorbereitungen\nzum Passio-Akademie-Fest\n• Akademie-Event: Der Code der\nFreundschaft\n• Akademie-Event:\nAkademie-Eröffnung\n\nHinweis: Die Anzahl wird jeweils\nnach dem Abschluss eines\nAkademie-Events hinzugefügt.",
+    "override_detail_8030_1_03": "Schließe eines der unten aufgeführten\nAkademie-Events dreimal ab:\n\n• Akademie-Event: Vorbereitungen\nzum Passio-Akademie-Fest\n• Akademie-Event: Der Code der\nFreundschaft\n• Akademie-Event:\nAkademie-Eröffnung\n\nHinweis: Die Anzahl wird jeweils\nnach dem Abschluss eines\nAkademie-Events hinzugefügt.",
+    "override_detail_8030_1_04": "Schließe eines der unten aufgeführten\nAkademie-Events viermal ab:\n\n• Akademie-Event: Vorbereitungen\nzum Passio-Akademie-Fest\n• Akademie-Event: Der Code der\nFreundschaft\n• Akademie-Event:\nAkademie-Eröffnung\n\nHinweis: Die Anzahl wird jeweils\nnach dem Abschluss eines\nAkademie-Events hinzugefügt.",
+    "override_detail_8030_1_05": "Schließe eines der unten aufgeführten\nAkademie-Events fünfmal ab:\n\n• Akademie-Event: Vorbereitungen\nzum Passio-Akademie-Fest\n• Akademie-Event: Der Code der\nFreundschaft\n• Akademie-Event:\nAkademie-Eröffnung\n\nHinweis: Die Anzahl wird jeweils\nnach dem Abschluss eines\nAkademie-Events hinzugefügt.",
+    "override_detail_8030_1_06": "Schließe die täglichen Regionskämpfe\ndreimal ab."
 }
