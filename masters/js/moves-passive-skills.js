@@ -38,7 +38,17 @@ function getMoveDescr(id) {
 }
 
 function getPassiveSkillName(id) {
-    let name = getPassiveSkillNameWithoutParams(id);
+    let name = jData.lsd.passiveSkillName[id];
+    const namePartsRE = /\[Name:PassiveSkillNameParts Idx="(\w+)" \]/i;
+    let idx = namePartsRE.exec(name);
+
+    if(idx !== null) {
+        do {
+            name = name.replace(namePartsRE, jData.lsd.passiveSkillNameParts[idx[1]]);
+            name = name.replace(/\[Name:PassiveSkillNameDigit \]/i, (parseInt(id) - parseInt(idx[1])) + "");
+            namePartsRE.lastIndex = 0;
+        } while((idx = namePartsRE.exec(name)) !== null);
+    }
 
     if(name !== undefined)
         name = setParams(id, name);
@@ -51,23 +61,7 @@ function getPassiveSkillNameParts(id) {
     const namePartsRE = /\[Name:PassiveSkillNameParts Idx="(\w+)" \]/i;
     let idx = namePartsRE.exec(name);
 
-    return idx ?? [id];
-}
-
-function getPassiveSkillNameWithoutParams(id) {
-    let name = jData.lsd.passiveSkillName[id];
-    let idx = getPassiveSkillNameParts(id)
-    let namePartsRE = /\[Name:PassiveSkillNameParts Idx="(\w+)" \]/i;
-
-    if(idx !== null) {
-        do {
-            name = name.replace(namePartsRE, jData.lsd.passiveSkillNameParts[idx[1]]);
-            name = name.replace(/\[Name:PassiveSkillNameDigit \]/i, (parseInt(id) - parseInt(idx[1])) + "");
-            namePartsRE.lastIndex = 0;
-        } while((idx = namePartsRE.exec(name)) !== null);
-    }
-
-    return name;
+    return idx[1] ?? id;
 }
 
 function getDetailedPassiveSkillName(id) {

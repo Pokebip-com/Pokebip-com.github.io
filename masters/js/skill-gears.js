@@ -143,7 +143,7 @@ function appendFilters() {
 
     }, { Type: new Set(), Region: new Set(), TrainerGroup: new Set(), Misc: new Set() });
 
-    const availablePassiveIds = [...new Set(jData.proto.skillDeckItemEffect.map(x => getPassiveSkillNameParts(x.passiveSkillId)[1]).filter(id => id != null))];
+    const availablePassiveIds = [...new Set(jData.proto.skillDeckItemEffect.map(x => getPassiveSkillNameParts(x.passiveSkillId)).filter(id => id != null))];
 
     filtersDiv.appendChild(createFilter(availableTagIds.Type, "type"));
     filtersDiv.appendChild(createFilter(availableTagIds.Region, "region"));
