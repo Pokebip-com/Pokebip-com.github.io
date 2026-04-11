@@ -23,6 +23,7 @@
     "5": "Subito prima del primo utilizzo di un'Unimossa in ogni lotta, attiva il seguente effetto sul campo, aumentandone la durata:\n• [Name:FieldEffectType ]",
     "6": "Soltanto dopo il primo utilizzo di un'Unimossa in ogni lotta, riduce di un grado la protezione di tutte le Unità avversarie dal seguente tipo:\n• [Name:Type ]"
   },
+  "filters": "Filtra",
   "hp": "PS",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",

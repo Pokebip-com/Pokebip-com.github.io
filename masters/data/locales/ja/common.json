@@ -23,6 +23,7 @@
     "5": "初めてバディーズわざをつかう直前に以下の場の効果を発生させる このときだけ発生した場の効果の時間を延長する\n・[Name:FieldEffectType ]",
     "6": "初めてバディーズわざをつかったときだけ相手のバディーズ全員の以下のタイプのタイプ抵抗を１段階さげる\n・[Name:Type ]"
   },
+  "filters": "フィルタ",
   "hp": "HP",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",

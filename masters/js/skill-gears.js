@@ -1,6 +1,11 @@
 let featherListDiv;
 let skillGearsDiv;
 
+let typeSelect;
+let regionSelect;
+let trainerGroupSelect;
+let passiveSelect;
+
 async function getData() {
 
     // PROTO
@@ -10,6 +15,7 @@ async function getData() {
     jsonCache.preloadProto("ProgressEventRewardGroup");
     jsonCache.preloadProto("Schedule");
     jsonCache.preloadProto("SkillDeckItemConditionTeamSkillTagLot");
+    jsonCache.preloadProto("SkillDeckItemEffect");
     jsonCache.preloadProto("SkillDeckItemEffectLot");
     jsonCache.preloadProto("SkillDeckItemLotParamCoefficient");
     jsonCache.preloadProto("SkillDeckItemNumLot");
@@ -33,6 +39,121 @@ async function getData() {
 
     await jsonCache.runPreload();
     orderByVersion(jData.custom.versionReleaseDates);
+}
+
+function createPassiveFilter(ids, filter) {
+    const filterDiv = document.createElement("div");
+    filterDiv.style.display = "flex";
+    filterDiv.style.flexDirection = "column";
+    filterDiv.style.marginRight = "10px";
+
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.innerText = "---";
+
+    let lbl = document.createElement("label");
+    lbl.innerText = jData.locale.skillGears.effects;
+    lbl.htmlFor = "passiveSelect";
+    lbl.style.marginBottom = "5px";
+    lbl.style.fontWeight = "bold";
+    filterDiv.appendChild(lbl);
+
+    let select = document.createElement("select");
+    select.id = "passiveSelect";
+
+    select.appendChild(defaultOption);
+
+    let options = [];
+
+    ids.forEach(passiveId => {
+        const option = document.createElement("option");
+        option.value = passiveId;
+        option.innerText = jData.lsd.passiveSkillNameParts[passiveId].replace(/\[.*\]/, "X");
+        options.push(option);
+    });
+
+    options.sort((a, b) => a.innerText.localeCompare(b.innerText));
+    options.forEach(option => select.appendChild(option));
+
+    select.addEventListener("change", listFeatherInfos);
+
+    filterDiv.appendChild(select);
+
+    return filterDiv;
+}
+
+function createFilter(ids, filter) {
+    const filterDiv = document.createElement("div");
+    filterDiv.style.display = "flex";
+    filterDiv.style.flexDirection = "column";
+    filterDiv.style.marginRight = "10px";
+
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.innerText = "---";
+
+    let lbl = document.createElement("label");
+    lbl.innerText = jData.locale.skillGears[filter];
+    lbl.htmlFor = filter + "Select";
+    lbl.style.marginBottom = "5px";
+    lbl.style.fontWeight = "bold";
+    filterDiv.appendChild(lbl);
+
+    let select = document.createElement("select");
+    select.id = filter + "Select";
+
+    select.appendChild(defaultOption);
+
+    let options = [];
+
+    ids.forEach(tagId => {
+        const option = document.createElement("option");
+        option.value = tagId;
+        option.innerText = jData.lsd.teamSkillTag[tagId];
+        options.push(option);
+    });
+
+    options.sort((a, b) => a.innerText.localeCompare(b.innerText));
+    options.forEach(option => select.appendChild(option));
+
+    select.addEventListener("change", listFeatherInfos);
+
+    filterDiv.appendChild(select);
+
+    return filterDiv;
+}
+
+function appendFilters() {
+    const toolbox = document.getElementById("toolbox");
+
+    let filtersDiv = document.createElement("div");
+    filtersDiv.style.display = "flex";
+    filtersDiv.style.flexDirection = "row";
+    toolbox.appendChild(filtersDiv);
+
+    const availableTagIds = jData.proto.skillDeckItemConditionTeamSkillTagLot.reduce((acc, x) => {
+        const id = x.teamSkillTagId;
+
+        if (id >= 20010000 && id <= 20019999) acc.Type.add(id);
+        else if (id >= 20020000 && id <= 20029999) acc.Region.add(id);
+        else if (id >= 20030000 && id <= 20039999) acc.TrainerGroup.add(id);
+        else acc.Misc.add(id);
+
+        return acc;
+
+    }, { Type: new Set(), Region: new Set(), TrainerGroup: new Set(), Misc: new Set() });
+
+    const availablePassiveIds = [...new Set(jData.proto.skillDeckItemEffect.map(x => getPassiveSkillNameParts(x.passiveSkillId)[1]).filter(id => id != null))];
+
+    filtersDiv.appendChild(createFilter(availableTagIds.Type, "type"));
+    filtersDiv.appendChild(createFilter(availableTagIds.Region, "region"));
+    filtersDiv.appendChild(createFilter(availableTagIds.TrainerGroup, "trainerGroup"));
+    filtersDiv.appendChild(createPassiveFilter(availablePassiveIds, "passive"));
+
+    typeSelect = document.getElementById("typeSelect");
+    regionSelect = document.getElementById("regionSelect");
+    trainerGroupSelect = document.getElementById("trainerGroupSelect");
+    passiveSelect = document.getElementById("passiveSelect");
 }
 
 function getProgressEventRewardFeathers(featherList, lastVersionScheduleStarts) {
@@ -84,11 +205,38 @@ function getFeatherLi(feather) {
     return newLi;
 }
 
-function listFeatherInfos() {
+function isTagInSet(tagId, setId) {
+    return jData.proto.skillDeckItemConditionTeamSkillTagLot.find(x => x.teamSkillTagId == tagId && x.setId == setId) !== undefined;
+}
 
-    let newFeathers = getNewSpecialFeathers();
-    let normalFeathers = jData.proto.skillDeckItemSkillFeatherItem.filter(sdisfi => sdisfi.skillFeatherItemDescription === "9301");
-    let specialFeathers = jData.proto.skillDeckItemSkillFeatherItem.filter(sdisfi => !normalFeathers.includes(sdisfi));
+function isPassiveInSet(passiveNamePartsId, setId) {
+    return jData.proto.skillDeckItemEffectLot.filter(x => x.skillSetId === setId).find(x => jData.lsd.passiveSkillName[x.passiveSkillId].includes(passiveNamePartsId)) !== undefined;
+}
+
+function applyFilters(featherList) {
+    return featherList.filter(feather => {
+        if(passiveSelect.value !== "" && !isPassiveInSet(passiveSelect.value, feather.skillSetId)) {
+            return false;
+        }
+
+        if(typeSelect.value !== "" && !isTagInSet(typeSelect.value, feather.teamSkillTagLotSetId)) {
+            return false;
+        }
+
+        if (regionSelect.value !== "" && !isTagInSet(regionSelect.value, feather.teamSkillTagLotSetId)) {
+            return false;
+        }
+
+        return !(trainerGroupSelect.value !== "" && !isTagInSet(trainerGroupSelect.value, feather.teamSkillTagLotSetId));
+    });
+}
+
+function listFeatherInfos() {
+    featherListDiv.innerHTML = "";
+
+    let newFeathers = applyFilters(getNewSpecialFeathers());
+    let normalFeathers = applyFilters(jData.proto.skillDeckItemSkillFeatherItem.filter(sdisfi => sdisfi.skillFeatherItemDescription === "9301"));
+    let specialFeathers = applyFilters(jData.proto.skillDeckItemSkillFeatherItem.filter(sdisfi => !normalFeathers.includes(sdisfi)));
 
     if(newFeathers.length > 0) {
 
@@ -343,8 +491,10 @@ function printFeatherPassiveSkills(feather, div) {
 
     for(let i = 0; i < lot.length; i++) {
         let tr = document.createElement("tr");
+        let isBest = jData.proto.skillDeckItemEffect.find(x => x.passiveSkillId === lot[i].passiveSkillId).isBest ?? false;
 
         let passiveName = document.createElement("td");
+        if(isBest) tr.classList.add("passiveName-best");
         passiveName.innerText = getPassiveSkillName(lot[i].passiveSkillId);
 
         let passiveDescr = document.createElement("td");
@@ -385,6 +535,7 @@ async function init() {
     await getData();
 
     document.getElementById("pageTitle").innerText = jData.locale.common.submenu_skill_gear;
+    document.getElementById("fieldsetLegend").innerText = jData.locale.common.filters;
 
     // if(isAdminMode) {
     //     dataArea = document.getElementById("dataArea");
@@ -400,6 +551,8 @@ async function init() {
     //     let copyBtn = document.getElementById("copyBtn");
     //     copyBtn.addEventListener('click', () => navigator.clipboard.writeText(dataArea.value));
     // }
+
+    appendFilters();
 
     listFeatherInfos();
 

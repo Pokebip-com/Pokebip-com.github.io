@@ -23,6 +23,7 @@
     "5": "Implémente l'effet de terrain suivant juste avant la première utilisation de la capacité Duo, et rallonge la durée de l'effet cette fois seulement :\n• [Name:FieldEffectType ]",
     "6": "Baisse la résilience de type de tous les ennemis d'un rang la première fois que le lanceur utilise une capacité Duo en combat :\n• [Name:Type ]"
   },
+  "filters": "Filtre",
   "hp": "PV",
   "menu_battle_rally": "Rallye",
   "menu_language": "Langue",

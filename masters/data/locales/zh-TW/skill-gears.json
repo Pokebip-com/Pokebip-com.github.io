@@ -1,5 +1,6 @@
 {
   "chances": "Probability",
+  "effects": "追加効果",
   "equipment_name": {
     "Bandana": "Bandana",
     "Bracelet": "Bracelet",
@@ -11,10 +12,13 @@
   "passive_descr_title": "Description",
   "passive_name_title": "Name",
   "passive_skills": "Passive skills",
+  "region": "地區",
   "special_feathers": "Special Skill Feathers",
   "stat_max_title": "Max",
   "stat_min_title": "Min",
   "stat_name_title": "Stat",
   "stats": "Stats",
-  "team_skills": "Team skills"
+  "team_skills": "Team skills",
+  "trainerGroup": "分類",
+  "type": "屬性"
 }

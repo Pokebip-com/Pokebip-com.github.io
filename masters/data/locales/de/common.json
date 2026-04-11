@@ -23,6 +23,7 @@
     "5": "Kurz vor dem ersten Einsatz einer Gefährtenattacke wird ein Mal pro Kampf der folgende Seiten-Effekt aktiviert und\ndessen Dauer verlängert:\n• [Name:FieldEffectType ]",
     "6": "Senkt den Typwiderstand aller Gegner für den folgenden Typ um 1, wenn der Anwender zum erste Mal im Kampf seine Gefährtenattacke einsetzt:\n• [Name:Type ]"
   },
+  "filters": "Filter",
   "hp": "KP",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",

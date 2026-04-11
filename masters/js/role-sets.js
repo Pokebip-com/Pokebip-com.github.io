@@ -110,7 +110,7 @@ getData().then(() => {
     mainUl = document.getElementById("mainUL");
 
     document.getElementById("pageTitle").innerText = `${jData.locale.common.menu_battle_rally} > ${jData.locale.common.submenu_rally_role_set}`;
-    document.getElementById("fieldsetLegend").innerText = jData.locale.roleSet.filters;
+    document.getElementById("fieldsetLegend").innerText = jData.locale.common.filters;
 
     let dataList = document.createElement("datalist");
     dataList.id = "roles-list";

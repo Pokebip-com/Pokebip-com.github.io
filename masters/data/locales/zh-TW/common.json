@@ -23,6 +23,7 @@
     "5": "首次使出拍組招式前，會使下列場地效果生效。 僅此時生效的場地效果時間會延長。\n・[Name:FieldEffectType ]",
     "6": "首次使出拍組招式時，會降低對手全體拍組的下列屬性的屬性抵抗１階段\n・[Name:Type ]"
   },
+  "filters": "篩選",
   "hp": "HP",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",

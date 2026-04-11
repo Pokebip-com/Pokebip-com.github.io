@@ -23,6 +23,7 @@
     "5": "Activa este efecto de entorno justo antes de la 1.ª vez que el\nusuario use un mov. compi en cada combate y aumenta su\nduración solo esta vez:\n• [Name:FieldEffectType ]",
     "6": "Se reduce la resiliencia de todos los compis rivales al siguiente tipo en 1 nivel la primera vez que el usuario usa un movimiento compi en cada combate.\n• [Name:Type ]"
   },
+  "filters": "Filtrar",
   "hp": "PS",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",

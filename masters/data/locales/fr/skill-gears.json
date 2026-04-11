@@ -1,5 +1,6 @@
 {
   "chances": "Probabilités",
+  "effects": "Effets additionnels",
   "equipment_name": {
     "Bandana": "Bandana",
     "Bracelet": "Bracelet",
@@ -11,10 +12,13 @@
   "passive_descr_title": "Description",
   "passive_name_title": "Nom",
   "passive_skills": "Talents passifs",
+  "region": "Région",
   "special_feathers": "Plumes Talent spéciales",
   "stat_max_title": "Max",
   "stat_min_title": "Min",
   "stat_name_title": "Stat",
   "stats": "Stats",
-  "team_skills": "Talents d'équipe"
+  "team_skills": "Talents d'équipe",
+  "trainerGroup": "Catégorie de Dresseur",
+  "type": "Type"
 }

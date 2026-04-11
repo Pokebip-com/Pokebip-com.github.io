@@ -23,6 +23,7 @@
     "5": "Implements the following field effect just before the user’s sync move is used the first time each battle. Extends the field effect duration only that time.\n• [Name:FieldEffectType ]",
     "6": "Lowers all opposing sync pairs’ Type Rebuff for the following Type by one rank the first time the user’s sync move is used each battle:\n• [Name:Type ]"
   },
+  "filters": "Filter",
   "hp": "HP",
   "menu_battle_rally": "Battle Rally",
   "menu_language": "Language",
