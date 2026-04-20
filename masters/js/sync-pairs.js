@@ -1368,7 +1368,25 @@ function suppressCellData(cell) {
 
     cell.removeAttribute("selected");
 
-    orbCell.innerText = (parseInt(orbCell.innerText) - parseInt(cell.getAttribute("data-orbs"))).toString();
+    let items = JSON.parse(orbCell.getAttribute("data-items"));
+
+    JSON.parse(cell.getAttribute("data-items")).forEach((i) => {
+        let item = items.find(item => item.itemName === i.itemName);
+
+        if (!item) {
+            return;
+        }
+
+        item.cost -= i.cost;
+
+        if(item.cost <= 0) {
+            items.splice(items.indexOf(item), 1);
+        }
+    });
+
+    orbCell.setAttribute("data-items", JSON.stringify(items));
+
+    orbCell.innerText = items.length === 0 ? "—" : items.map(i => `${i.itemName} x${i.cost}`).join("\n");
     energyCell.innerText = (parseInt(energyCell.innerText) + parseInt(cell.getAttribute("data-energy"))).toString();
     if (tileDiv) tileDiv.remove();
 }
@@ -1432,7 +1450,25 @@ function changeSelection(g) {
 
         g.setAttribute("selected", '');
 
-        orbCell.innerText = (parseInt(orbCell.innerText) + parseInt(g.getAttribute("data-orbs"))).toString();
+        let items = JSON.parse(orbCell.getAttribute("data-items"));
+
+        JSON.parse(g.getAttribute("data-items")).forEach((i) => {
+            let item = items.find(item => item.itemName === i.itemName);
+
+            if (!item) {
+                item = i;
+                items.push(item);
+
+                return;
+            }
+
+            item.cost += i.cost;
+        });
+
+        orbCell.setAttribute("data-items", JSON.stringify(items));
+
+        console.log(JSON.parse(g.getAttribute("data-items")));
+        orbCell.innerText = items.map(i => `${i.itemName} x${i.cost}`).join("\n");
         energyCell.innerText = (parseInt(energyCell.innerText) - parseInt(g.getAttribute("data-energy"))).toString();
         tilesCell.appendChild(tileDiv);
 
@@ -1696,7 +1732,7 @@ function setGridPicker(ap, gridPickerDiv) {
 
             gVisual.setAttribute("data-energy", panel.energyCost);
             gVisual.setAttribute("data-orbs", panel.orbCost);
-            gVisual.setAttribute("data-items", panel.items.join(","));
+            gVisual.setAttribute("data-items", JSON.stringify(panel.items));
             gVisual.setAttribute("data-cell-id", panel.cellId);
             gVisual.setAttribute("data-passive-id", panel.ability.passiveId);
 
@@ -1728,7 +1764,7 @@ function setGridPicker(ap, gridPickerDiv) {
                     tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_description_tooltip}:</b> ${getPassiveSkillDescr(panel.ability.passiveId)}`;
                 }
 
-                tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_items_tooltip}:</b><br />${panel.items.join("<br />")}</p>`;
+                tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_items_tooltip}:</b><br />${panel.items.map(i => `${i.itemName} x${i.cost}`).join("<br />")}</p>`;
                 tooltip.innerHTML += `<p><b>${jData.locale.syncPairs.sync_grid_tile_energy_tooltip}:</b> ${panel.energyCost}</p>`;
 
                 tooltip.style.display = "block";
@@ -1903,8 +1939,9 @@ function setGridPicker(ap, gridPickerDiv) {
     tr = document.createElement("tr");
     let orbCell = document.createElement("td");
     orbCell.id = "orbCell";
-    orbCell.innerText = "0";
+    orbCell.innerText = "—";
     orbCell.style.fontWeight = "bold";
+    orbCell.setAttribute("data-items", JSON.stringify([]));
 
     let energyCell = document.createElement("td");
     energyCell.id = "energyCell";
@@ -2028,12 +2065,14 @@ function setSyncGrid() {
                 }
             });
             ap.items = [];
-            if (ap.orbCost > 0) {
-                ap.items.push(`${jData.lsd.abilityItemName["2"]} x${ap.orbCost}`);
-            }
             ap.releaseItemSet = jData.proto.abilityPanelReleaseItemSet.find(a => a.abilityPanelId === ap.cellId);
+
+            if (ap.orbCost > 0 && !ap.releaseItemSet) {
+                ap.items.push({ "itemName": jData.lsd.abilityItemName["2"], "cost": ap.orbCost });
+            }
+
             for (let i = 1; ap.releaseItemSet && ap.releaseItemSet[`item${i}`] !== "0" && i <= 3; i++) {
-                ap.items.push(`${getItemName(ap.releaseItemSet[`item${i}`])} x${ap.releaseItemSet[`item${i}Qty`]}`);
+                ap.items.push( { "itemName": getItemName(ap.releaseItemSet[`item${i}`]), "cost": ap.releaseItemSet[`item${i}Qty`] });
             }
             ap.type = getAbilityType(ap.ability);
             ap.isNew = charaScheduleId.includes(ap.scheduleId);
