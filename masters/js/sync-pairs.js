@@ -587,8 +587,34 @@ function setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId,
     setStatsTable(lvlInput, statsDiv, monsterData, variation);
 }
 
-function setPairPassives(contentDiv, variation = null) {
+function addPassiveRow(table, passiveId, isSpecialAwaking = false) {
+    const name = getDetailedPassiveSkillName(passiveId);
+    const descr = getPassiveSkillDescr(passiveId);
+
+    if(name === undefined || descr === undefined) return;
+
+    let row = document.createElement("tr");
+
+    let nameCell = document.createElement("td");
+
+    if(isSpecialAwaking) {
+        nameCell.innerHTML += `<img src="./data/sync-grids/icons/transcendance.png" style="width: 25px; vertical-align: top;" /> `;
+    }
+
+    nameCell.innerHTML += getDetailedPassiveSkillName(passiveId);
+
+    row.appendChild(nameCell);
+
+    let descrCell = document.createElement("td");
+    descrCell.innerText = getPassiveSkillDescr(passiveId);
+    row.appendChild(descrCell);
+
+    table.appendChild(row);
+}
+
+function setPairPassives(contentDiv, monsterId, variation = null) {
     let tr = jData.proto.trainer.find(t => t.trainerId === syncPairSelect.value);
+    let mb = jData.proto.monsterBase.find(m => m.monsterBaseId === getMonsterBaseIdFromMonsterId(monsterId));
 
     let skillsH2 = document.createElement("h2");
     skillsH2.innerText = jData.locale.syncPairs.skills_title;
@@ -619,17 +645,11 @@ function setPairPassives(contentDiv, variation = null) {
     let specialAwaking = jData.proto.trainerSpecialAwaking.find(t => t.trainerId === syncPairSelect.value);
 
     if (specialAwaking) {
-        let row = document.createElement("tr");
+        addPassiveRow(table, specialAwaking["passiveSkillId"], true);
+    }
 
-        let nameCell = document.createElement("td");
-        nameCell.innerHTML = `<img src="./data/sync-grids/icons/transcendance.png" style="width: 25px; vertical-align: top;" /> ${getDetailedPassiveSkillName(specialAwaking['passiveSkillId'])}`;
-        row.appendChild(nameCell);
-
-        let descrCell = document.createElement("td");
-        descrCell.innerText = getPassiveSkillDescr(specialAwaking[`passiveSkillId`]);
-        row.appendChild(descrCell);
-
-        table.appendChild(row);
+    if(mb.formPassiveId > 0) {
+        addPassiveRow(table, mb.formPassiveId);
     }
 
     for (let i = 1; i <= 5; i++) {
@@ -638,17 +658,7 @@ function setPairPassives(contentDiv, variation = null) {
         if (passiveId === 0)
             continue;
 
-        let row = document.createElement("tr");
-
-        let nameCell = document.createElement("td");
-        nameCell.innerHTML = getDetailedPassiveSkillName(passiveId);
-        row.appendChild(nameCell);
-
-        let descrCell = document.createElement("td");
-        descrCell.innerText = getPassiveSkillDescr(passiveId);
-        row.appendChild(descrCell);
-
-        table.appendChild(row);
+        addPassiveRow(table, passiveId);
     }
 
     let tableWrapper = document.createElement("div");
@@ -2164,7 +2174,7 @@ function setTabContent(contentDiv, monsterName, monsterId, monsterBaseId, formId
     setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, variation);
     setPairStats(contentDiv, monsterName, monsterId, monsterBaseId, formId, variation);
     setPairSuperAwakening(contentDiv);
-    setPairPassives(contentDiv, variation);
+    setPairPassives(contentDiv, monsterId, variation);
     setPairTeamSkills(contentDiv);
     setPairLuckySkills(contentDiv);
     setPairMoves(contentDiv, monsterId, variation);
