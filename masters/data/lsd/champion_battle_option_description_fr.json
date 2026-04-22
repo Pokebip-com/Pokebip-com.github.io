@@ -25,5 +25,7 @@
     "champion_battle_option_description_5030_0401": "Le lanceur ne peut pas altérer la météo,\nle champ ou la zone.",
     "champion_battle_option_description_5030_0501": "Multiplie par 3 les dégâts infligés\npar les capacités offensives à tous\nles Attaquants Physiques et Spéciaux alliés.",
     "champion_battle_option_description_5030_0502": "Multiplie par 3 les dégâts infligés\npar les capacités offensives à tous\nles Tacticiens alliés.",
-    "champion_battle_option_description_5030_0503": "Multiplie par 3 les dégâts infligés\npar les capacités offensives à tous\nles Soutiens alliés."
+    "champion_battle_option_description_5030_0503": "Multiplie par 3 les dégâts infligés\npar les capacités offensives à tous\nles Soutiens alliés.",
+    "champion_battle_option_description_8040_0101": "Réduit les dégâts subis par l'ennemi de 80 %\nquand il est touché par une capacité,\nune capacité Duo ou une capacité Duo Dynamax\nd'un Duo qui n'a pas le mot-clé Paldea.",
+    "champion_battle_option_description_8040_0102": "Multiplie par 3 les dégâts infligés par\nles capacités offensives aux Duos alliés\nqui n'ont pas le mot-clé Paldea."
 }

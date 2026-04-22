@@ -114,6 +114,7 @@
     "20015800": "Karnimani ist zwar sehr klein, aber seine Kiefer sind sehr\nstark. Wenn die Pokémon denken, dass es nur spielerisch\nan ihnen knabbert, sollten sie vorsichtig sein, denn sein\nBiss kann zu schweren Verletzungen führen.",
     "20015900": "Wenn Tyracroc einen Feind mit seinen Kiefern\neingeklemmt hat, lässt es ihn nicht mehr los.\nDa seine Zahnspitzen wie Angelhaken gebogen\nsind, kann man sie nicht mehr entfernen, wenn\nsie sich verfangen haben.",
     "20016000": "Impergator schüchtert seine Feinde dadurch ein, dass es\nsein riesiges Maul aufreißt. Im Kampf erschüttert es den\nBoden mit seinen kräftigen Hinterbeinen, wenn es mit\nunglaublicher Geschwindigkeit auf seinen Gegner losrennt.",
+    "20016200": "Wiesenior ist sehr schlank. Wenn es angegriffen wird,\nkann es sich durch enge Zwischenräume schlängeln und\nentkommen. Trotz seiner kurzen Gliedmaßen ist dieses\nPokémon sehr wendig und flink.\n",
     "20016400": "Dank seines perfekten Sehvermögens entgeht ihm selbst\nin der Dunkelheit keine Beute. Man nennt es auch den\n„Herrscher der Nacht“.",
     "20016800": "Nachts wandert es auf der Suche nach Futter umher.\nWird es fündig, fesselt es seine Beute mit einem\nSeidenfaden und beißt zu.",
     "20016900": "Iksbat hat sehr scharfe Zähne, sodass seine Beute oft\nnichts davon merkt, wenn es in der Dunkelheit zubeißt\nund ihr Blut aussaugt.",
@@ -140,6 +141,7 @@
     "20021400": "Sein mächtiges Horn ist sein ganzer Stolz. Es streitet sich\nständig mit Donarion, seinem größten Rivalen in Alola.",
     "20021500": "Sie bilden ein Team, um gemeinsam Eier aus den Nestern\nvon Vogel-Pokémon zu klauen. Dann streiten sie sich\ndarüber, wer sie fressen darf.",
     "20021800": "Durch Schneckmags Kreislaufsystem fließt Magma.\nWenn dieses Pokémon erkältet ist, kühlt das Magma\naus und erhärtet. Sein Körper wird spröde und es\nbrechen Stücke heraus, sodass es kleiner wird.",
+    "20021900": "Magcargos Schale ist eigentlich seine Haut, die erhärtet\nist, als es auskühlte. Seine Schale ist sehr spröde und\nzerbrechlich. Schon bei einer leichten Berührung bricht sie\nauseinander. Dann muss es ein Bad in Magma nehmen.",
     "20022400": "Die Tinte, die es während der Flucht ausspeit, vermindert\nden Geruchssinn und verwirrt selbst Pokémon mit einer\nguten Nase.",
     "20022500": "Es teilt sein Futter mit Menschen in Not. Da es ein\nAllesfresser ist, kann es passieren, dass sie auch\nmal Käfer-Pokémon bekommen.",
     "20022700": "Die Federn, die ihm ausfallen, werden zu Küchenmessern\nverarbeitet, mit deren Schärfe auch erstklassige Köche\nzufrieden sind.",
@@ -318,6 +320,7 @@
     "20052600": "Wenn es mit geballter Kraft seine gesamte Energie\nentlädt, führt das dazu, dass sich auf seinem Körper\nunzählige Risse auftun.",
     "20052800": "Beim Abfeuern seiner Ultraschallwellen, mit denen es\nselbst Beton zertrümmern kann, wedelt es eifrig mit dem\nSchweif.",
     "20053000": "Seine zu Stahl weiterentwickelten Bohrer kriegen selbst\nEisenplatten klein. Im Tunnelbau ist es ein absolutes Ass.",
+    "20053300": "Diese durchtrainierten Muskelprotze sind im Umgang mit\nStahlträgern versiert und können damit ganze Häuser\nabreißen.",
     "20053400": "Man nimmt an, dass es der Menschheit\nvor ca. 2 000 Jahren das Betonmischen\nbeigebracht hat.",
     "20053600": "Wenn es die Beulen auf seinem Kopf zum Schwingen\nbringt, tobt je nach Umgebung entweder das Wasser\noder die Erde bebt.",
     "20053700": "Wenn es die Beulen auf seinem Kopf zum Schwingen\nbringt, tobt je nach Umgebung entweder das Wasser\noder die Erde bebt.",
@@ -457,6 +460,7 @@
     "20082300": "Jedes einzelne seiner Körner verfügt über einen eigenen\nWillen. Kleine Pokémon verschluckt es lebendig und saugt\nihnen die Lebensenergie aus.",
     "20086211": "Nun, da es erwacht ist und im Verlauf der Entwicklung\nseine schwere Maske verlor, hat es deutlich an\nGeschwindigkeit hinzugewonnen.",
     "20086212": "Durch sein Erwachen ist es nun in der Lage, wie ein\nbestimmtes Legendäres Pokémon seinen Typ zu ändern.",
+    "20081100": "Vom Augenblick seiner Geburt an verbringt es sein\nganzes Leben schlafend. Wenn es extrem tief schläft,\nwird es völlig regungslos.",
     "20085400": "Es lebt an Vulkanen, wo es sich von Schwefel und\nMineralien ernährt. Durch diese Bestandteile wird\nsein Rückenpanzer explosiv.",
     "20085800": "Es hat 14 lange stachelartige Strähnen auf dem Rücken,\ndie sich unfreiwillig aufstellen, wenn es sich freut oder\nvon etwas überrascht wird.",
     "20081911": "Eigentlich ist es friedlich und sehnt sich nur nach\nGesellschaft, doch versucht man, unter seinen\nLumpen zu linsen, wehrt es sich heftig.",
@@ -652,5 +656,8 @@
     "2010171100": "Es liebt Streiche und steckt voller Neugier. Zum Kämpfen\nnutzt es die typenspezifische Energie der Maske, die es\nträgt.",
     "2010241100": "Es schützt sich, indem es Energie in harten Kristall\numwandelt. Dieses Pokémon ist der Ursprung der\nTerakristallisierung.",
     "2010241200": "Wenn es Gefahr wittert, bereitet es sich auf einen Kampf\nvor, indem es einen robusten Panzer aus Terakristallen\nerschafft.",
-    "2010241300": "Diese Form verfügt über eine enorm verstärkte\nTerakristall-Energie. Ihr Aussehen ähnelt der Welt, wie\nuralte Völker sie sich vorgestellt haben."
+    "2010241300": "Diese Form verfügt über eine enorm verstärkte\nTerakristall-Energie. Ihr Aussehen ähnelt der Welt, wie\nuralte Völker sie sich vorgestellt haben.",
+    "2010180000": "Es sammelt statische Elektrizität aus der Umgebung. Die\nStrahlen, die es auf allen Vieren abfeuert, sind extrem\nstark.",
+    "2009840000": "In den letzten Jahren gab es Sichtungen dieses Pokémon.\nEine Kreatur aus einem gewissen Buch stand Pate für den\nNamen Riesenzahn.",
+    "2009900000": "Es ähnelt stark einer wissenschaftlichen Waffe, die einer\nesoterischen Zeitschrift zufolge von Außerirdischen auf den\nPlaneten geschickt wurde."
 }

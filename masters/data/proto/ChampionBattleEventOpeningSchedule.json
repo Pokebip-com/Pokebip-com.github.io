@@ -13,5 +13,6 @@
 { "championBattleEventOpeningId": 170400001, "championBattleEventId": 10000014, "scheduleId": "7040_1W_Event2" },
 { "championBattleEventOpeningId": 170600001, "championBattleEventId": 10000015, "scheduleId": "7060_4W_Event_4" },
 { "championBattleEventOpeningId": 170900001, "championBattleEventId": 10000016, "scheduleId": "7090_4W_Event_3" },
-{ "championBattleEventOpeningId": 171200001, "championBattleEventId": 10000017, "scheduleId": "7120_4W_Event_6" }
+{ "championBattleEventOpeningId": 171200001, "championBattleEventId": 10000017, "scheduleId": "7120_4W_Event_6" },
+{ "championBattleEventOpeningId": 180400001, "championBattleEventId": 10000018, "scheduleId": "8040_1W_Event_champion" }
 ]}

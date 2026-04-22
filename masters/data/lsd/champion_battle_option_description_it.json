@@ -25,5 +25,7 @@
     "champion_battle_option_description_5030_0401": "Non puoi cambiare le condizioni atmosferiche,\nné trasformare il campo di lotta o la zona.",
     "champion_battle_option_description_5030_0501": "Tutte le Unità alleate con il ruolo di Attaccante\nfisico o Attaccante speciale ricevono il triplo\ndei danni quando colpite da un attacco semplice.",
     "champion_battle_option_description_5030_0502": "Tutte le Unità alleate con il ruolo di Tecnico\nricevono il triplo dei danni quando colpite\nda un attacco semplice.",
-    "champion_battle_option_description_5030_0503": "Tutte le Unità alleate con il ruolo di Aiutante\nricevono il triplo dei danni quando colpite\nda un attacco semplice."
+    "champion_battle_option_description_5030_0503": "Tutte le Unità alleate con il ruolo di Aiutante\nricevono il triplo dei danni quando colpite\nda un attacco semplice.",
+    "champion_battle_option_description_8040_0101": "Le Unità avversarie subiscono l'80% di danni\nin meno dagli attacchi scagliati tramite mosse,\nUnimosse o mosse UniDynamax da un'Unità\nnon appartenente al gruppo \"Paldea\".",
+    "champion_battle_option_description_8040_0102": "Le Unità alleate non appartenenti al gruppo\n\"Paldea\" ricevono il triplo dei danni quando\ncolpite da un attacco semplice."
 }

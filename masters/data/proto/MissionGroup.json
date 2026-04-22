@@ -769,5 +769,15 @@
 { "missionGroupId": 2803040, "scheduleId": "8030_1W_Event_1_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 803040, "itemSetId": "8030139", "bannerId": 1803004, "u9": 1, "u10": 0 },
 { "missionGroupId": 2803050, "scheduleId": "8030_1W_Campaign_poke_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 803050, "itemSetId": "8030018", "bannerId": 5803001, "u9": 1, "u10": 0 },
 { "missionGroupId": 2803060, "scheduleId": "8030_1W_Event_2_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 803060, "itemSetId": "8030185", "bannerId": 1803005, "u9": 1, "u10": 0 },
-{ "missionGroupId": 2803070, "scheduleId": "8030_3W_Event_2_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 803070, "itemSetId": "7090901", "bannerId": 1803009, "u9": 1, "u10": 0 }
+{ "missionGroupId": 2803070, "scheduleId": "8030_3W_Event_2_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 803070, "itemSetId": "7090901", "bannerId": 1803009, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2804020, "scheduleId": "8040_1W_Event_HighLevelBattle", "u3": 0, "u4": 1, "u5": 0, "u6": 804020, "itemSetId": "4080008", "bannerId": 1804004, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2804030, "scheduleId": "8040_1W_Event_1_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 804030, "itemSetId": "414", "bannerId": 1804009, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2804040, "scheduleId": "8040_1W_Campaign_poke_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 804040, "itemSetId": "8040401", "bannerId": 4804001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2804060, "scheduleId": "8040_BattleRally_Mission_1", "u3": 0, "u4": 1, "u5": 0, "u6": 804060, "itemSetId": "8030904", "bannerId": 4803001, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2804070, "scheduleId": "8040_1W_Event_GB_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 804070, "itemSetId": "414", "bannerId": 1804008, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2804080, "scheduleId": "8040_2W_Event_2_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 804080, "itemSetId": "2120052", "bannerId": 1804012, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2804090, "scheduleId": "8040_3W_Event_1_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 804090, "itemSetId": "414", "bannerId": 1804013, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2804100, "scheduleId": "8040_3W_Event_2_Mission", "u3": 0, "u4": 1, "u5": 0, "u6": 804100, "itemSetId": "414", "bannerId": 1705006, "u9": 1, "u10": 0 },
+{ "missionGroupId": 2804110, "scheduleId": "8050_gym_season", "u3": 0, "u4": 4, "u5": 0, "u6": 804110, "itemSetId": "0", "bannerId": -1, "u9": 6, "u10": 0 },
+{ "missionGroupId": 2804120, "scheduleId": "8040_3W_Event_gymmission", "u3": 0, "u4": 4, "u5": 0, "u6": 804120, "itemSetId": "0", "bannerId": 1804013, "u9": 7, "u10": 0 }
 ]}

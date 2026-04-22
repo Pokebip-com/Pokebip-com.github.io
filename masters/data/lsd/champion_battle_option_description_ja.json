@@ -25,5 +25,7 @@
     "champion_battle_option_description_5030_0401": "自分は天気やフィールドやゾーンを変更できなくなる",
     "champion_battle_option_description_5030_0501": "味方全員の物理アタッカーと特殊アタッカーは\n技で攻撃を受けたときのダメージが３倍になる",
     "champion_battle_option_description_5030_0502": "味方全員のテクニカルは\n技で攻撃を受けたときのダメージが３倍になる",
-    "champion_battle_option_description_5030_0503": "味方全員のサポートは\n技で攻撃を受けたときのダメージが３倍になる"
+    "champion_battle_option_description_5030_0503": "味方全員のサポートは\n技で攻撃を受けたときのダメージが３倍になる",
+    "champion_battle_option_description_8040_0101": "相手はパルデアタグを持っていないバディーズから\n技やバディーズわざやバディーズダイマックスわざで\n攻撃を受けたときのダメージが８０％軽減される",
+    "champion_battle_option_description_8040_0102": "パルデアタグを持っていない味方バディーズは\n技で攻撃を受けたときのダメージが３倍になる"
 }

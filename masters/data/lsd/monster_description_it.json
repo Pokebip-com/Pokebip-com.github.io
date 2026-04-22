@@ -114,6 +114,7 @@
     "20015800": "Nonostante il suo corpicino minuto, le mascelle di Totodile\nsono molto potenti. Sebbene creda solo di giocare, il suo\nmorso è così forte e pericoloso da causare serie ferite.",
     "20015900": "Una volta azzannato il nemico, Croconaw non molla\nla presa facilmente. Le zanne a punta ricurva all'indietro,\na mo' di amo da pesca, rendono impossibile estrarle\nquando sono conficcate in profondità.",
     "20016000": "Feraligatr spaventa il nemico spalancando la sua bocca\nenorme. Nella lotta pesta pesantemente il terreno con le\nsue possenti zampe posteriori per scagliarsi contro\nil nemico a un'incredibile velocità.",
+    "20016200": "Furret è di esile costituzione. Quando è attaccato riesce\na scappare intrufolandosi in ogni fessura.\nNonostante i suoi arti corti, questo Pokémon è molto agile\ne rapido nei movimenti.",
     "20016400": "Riesce a vedere benissimo anche nell'oscurità\ne non si lascia mai sfuggire una preda.\nÈ chiamato anche \"re della notte\".",
     "20016800": "Vaga di notte in cerca di prede. Quando ne trova una,\nusa il suo filo per immobilizzarla e poi la divora con\nle sue zanne.",
     "20016900": "Succhia il sangue alle sue vittime nell'oscurità.\nLe sue zanne sono così affilate che i suoi morsi sono\nindolori e le vittime non se ne accorgono.",
@@ -140,6 +141,7 @@
     "20021400": "Il grosso corno è il suo punto di forza. Ad Alola\nha una forte rivalità con i Vikavolt, con i quali\nè costantemente in lotta.",
     "20021500": "Questi Pokémon agiscono in squadra per rubare le Uova\ndai nidi dei Pokémon alati, ma poi litigano per stabilire\nchi le mangerà.",
     "20021800": "Nel corpo di Slugma scorre magma liquido. In caso di\ncongelamento, il magma si raffredda e si solidifica.\nIl corpo diventa fragile e cade a pezzi consumandosi\nprogressivamente.",
+    "20021900": "La corazza di Magcargo è formata dalla sua pelle\ninduritasi per effetto del raffreddamento.\nLa corazza è fragile e friabile: cade a pezzi al minimo\ncontatto. Riacquista le sue dimensioni normali\nimmergendosi nel magma.",
     "20022400": "Mentre fugge dai nemici sputa un inchiostro che inibisce\nle funzioni olfattive persino dei Pokémon con l'odorato\npiù sviluppato.",
     "20022500": "Se incontra qualcuno che si è perso, condivide il cibo\nche ha con sé. È onnivoro, perciò potrebbe offrire anche\ndei Pokémon Coleottero.",
     "20022700": "Le piume che perde vengono usate per fabbricare coltelli\naffilatissimi, particolarmente apprezzati dai migliori cuochi.",
@@ -318,6 +320,7 @@
     "20052600": "Quando spara energia con tutte le sue forze, la potenza\nè tale da causare numerose fessure sul suo corpo.",
     "20052800": "Quando emette delle onde ultrasoniche così forti\nda rompere il cemento, la coda gli oscilla con forza.",
     "20053000": "La trivella si è evoluta diventando d'acciaio e può\nperforare una lastra di ferro. È molto utile per scavare\ntunnel.",
+    "20053300": "Ha un corpo pieno di muscoli e manovra con abilità\nla sua trave d'acciaio, con cui può abbattere una casa\nintera.",
     "20053400": "Si pensa che la tecnica per fare il cemento sia stata\ndiffusa proprio da Conkeldurr, 2000 anni fa.",
     "20053600": "Se fa vibrare il bernoccolo sulla testa può sollevare onde\nnell'acqua e anche provocare terremoti.",
     "20053700": "Facendo vibrare le protuberanze sui pugni, ne raddoppia\nla potenza. Frantuma enormi massi con un colpo.",
@@ -457,6 +460,7 @@
     "20082300": "Ognuno dei suoi granelli ha una volontà propria. Inghiotte\nvivi i Pokémon più piccoli e ne ruba l'energia vitale.",
     "20086211": "Ha risvegliato il suo potere nascosto e si è evoluto.\nSvincolato dalla pesante maschera, la sua velocità è\nnotevolmente aumentata.",
     "20086212": "È riuscito a risvegliare il suo potere nascosto.\nPuò cambiare tipo per lottare al meglio, come\nun altro Pokémon di cui si narra nelle leggende.",
+    "20081100": "Dorme ininterrottamente fin dalla nascita. Quando il suo\nsonno è particolarmente profondo rimane completamente\nimmobile.",
     "20085400": "Vive nei vulcani e si nutre di zolfo e minerali,\nche rendono il suo carapace esplosivo.",
     "20085800": "Quando viene infastidito o colto di sorpresa, le 14 spine\nche ha sulla schiena si drizzano spontaneamente.",
     "20081911": "È un Pokémon tranquillo che soffre di solitudine.\nSe qualcuno cerca di sbirciare sotto il panno che\nlo nasconde, si oppone con forza.",
@@ -652,5 +656,8 @@
     "2010171100": "È dispettoso e ha una spiccata curiosità.\nIl tipo dell'energia che sfrutta per lottare\ndipende da quella contenuta nella maschera.",
     "2010241100": "Sfrutta la sua capacità di trasformare l'energia\nin duri cristalli per proteggersi. Questo Pokémon\nè all'origine della teracristallizzazione.",
     "2010241200": "Quando percepisce un pericolo, si prepara alla lotta\ncreando un robusto carapace Teracristal.",
-    "2010241300": "Forma assunta quando l'energia Teracristal\naumenta oltremisura. Ricorda il mondo così\ncome lo immaginavano i popoli antichi."
+    "2010241300": "Forma assunta quando l'energia Teracristal\naumenta oltremisura. Ricorda il mondo così\ncome lo immaginavano i popoli antichi.",
+    "2010180000": "Raccoglie elettricità statica dall'ambiente circostante.\nQuando è a quattro zampe può emettere un raggio\ndi enorme potenza.",
+    "2009840000": "Alcuni riportano di averlo avvistato negli ultimi anni.\nIl nome \"Grandizanne\" deriva da quello di una creatura\ndescritta in un certo libro.",
+    "2009900000": "Somiglia molto a un'arma ad alta tecnologia\nche, secondo una rivista di paranormale,\nsarebbe stata inviata qui dagli alieni."
 }

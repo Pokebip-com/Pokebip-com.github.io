@@ -115,5 +115,6 @@
 { "trainerId": "10338000000", "scheduleId": "chara_7090_1004_FOREVER", "passiveSkillId": 32021001 },
 { "trainerId": "10352000000", "scheduleId": "chara_7030_0331_FOREVER", "passiveSkillId": 32019601 },
 { "trainerId": "10356000000", "scheduleId": "chara_7070_0729_FOREVER", "passiveSkillId": 32020501 },
+{ "trainerId": "10360000000", "scheduleId": "chara_8040_0429_FOREVER", "passiveSkillId": 32022201 },
 { "trainerId": "18000000000", "scheduleId": "FOREVER", "passiveSkillId": 32020901 }
 ]}

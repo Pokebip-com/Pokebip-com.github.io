@@ -25,5 +25,7 @@
     "champion_battle_option_description_5030_0401": "Der Anwender kann weder Wetter noch Feld oder\nFokus ändern.",
     "champion_battle_option_description_5030_0501": "Alle Gefährten im Team, die physische Angreifer\noder Spezial-Angreifer sind, erleiden das\nDreifache an Schaden, wenn sie von einem\nAngriff mit einer Attacke getroffen werden.",
     "champion_battle_option_description_5030_0502": "Alle Taktiker-Gefährten im Team erleiden das\nDreifache an Schaden, wenn sie von einem\nAngriff mit einer Attacke getroffen werden.",
-    "champion_battle_option_description_5030_0503": "Alle Helfer-Gefährten im Team erleiden das\nDreifache an Schaden, wenn sie von einem\nAngriff mit einer Attacke getroffen werden."
+    "champion_battle_option_description_5030_0503": "Alle Helfer-Gefährten im Team erleiden das\nDreifache an Schaden, wenn sie von einem\nAngriff mit einer Attacke getroffen werden.",
+    "champion_battle_option_description_8040_0101": "Verringert beim Gegner den durch einen Angriff\nmit einer Attacke, Gefährtenattacke oder\nGefährten-Dynamax-Attacke erlittenen Schaden\num 80 %, wenn es sich dabei nicht um ein\nGefährtengespann mit dem Attribut „Paldea“\nhandelt.",
+    "champion_battle_option_description_8040_0102": "Gefährten im Team ohne das Attribut „Paldea“\nerleiden das Dreifache an Schaden, wenn sie von\neinem Angriff mit einer Attacke getroffen\nwerden."
 }

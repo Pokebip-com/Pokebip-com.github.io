@@ -114,6 +114,7 @@
     "20015800": "Totodile tiene cuerpo pequeño, pero fuertes mandíbulas.\nA veces, piensa que solo está dando un mordisquito y\nhace unas heridas bastante considerables.",
     "20015900": "Una vez que Croconaw le ha clavado los colmillos a su\npresa, es imposible que escape porque los tiene hacia\nadentro como si fueran anzuelos. Cuando Croconaw\nhinca los dientes, no hay escapatoria.",
     "20016000": "Feraligatr intimida a sus oponentes abriendo las grandes\nfauces que tiene. En combate, golpea el suelo\nbruscamente con las gruesas y fuertes patas traseras que\ntiene para cargar contra su rival a una velocidad de\nvértigo.",
+    "20016200": "Furret es de constitución muy delgada. En combate le\nresulta útil porque puede escabullirse con habilidad por\ncualquier huequito y escapar. A pesar de que tiene\npatas cortas, es ágil y veloz.",
     "20016400": "Apodado el Emperador Nocturno, su aguzada vista lo\nconvierte en un formidable cazador aun en la más\nimpenetrable oscuridad.",
     "20016800": "Ronda por la noche en busca de presas a las que\ninmoviliza con su hilo para luego clavarles los colmillos.",
     "20016900": "Sus colmillos son tan afilados que su mordedura resulta\nindolora y puede chupar la sangre a sus presas en la\noscuridad sin que se percaten.",
@@ -140,6 +141,7 @@
     "20021400": "Luce con orgullo su gran cornamenta. Los Vikavolt son\nsus mayores rivales en Alola y tienen enfrentamientos\nconstantes.",
     "20021500": "Colabora con los suyos para saquear nidos de Pokémon\npájaro, aunque luego se disputan fieramente quién se\ncome los huevos.",
     "20021800": "Por el sistema circulatorio de Slugma corre magma\nlíquido. Si este Pokémon se enfriara, el magma perdería\nel calor y se solidificaría, por lo que se resquebrajaría\npor completo, perdería algunos trozos y reduciría su\ntamaño.",
+    "20021900": "La coraza de Magcargo es en realidad su propia piel que\nquedó endurecida al enfriarse. Está muy resquebrajada y\nes muy frágil; se desharía solo con tocarla. Este Pokémon\ndebe sumergirse en magma para recuperar su forma.",
     "20022400": "La tinta que expulsa al huir inhibe la capacidad olfativa\ndel rival y afecta incluso a los Pokémon con el olfato\nmás aguzado.",
     "20022500": "Si ve a alguien en apuros, comparte su alimento con él.\nAunque, al ser omnívoro, podría ser que compartiera\nalgún que otro Pokémon insecto.",
     "20022700": "Los cuchillos fabricados con las plumas que se le caen\nson reconocidos entre los cocineros más prestigiosos\npor la gran calidad de sus filos.",
@@ -318,6 +320,7 @@
     "20052600": "Cuando dispara energía con todas sus fuerzas, la\npotencia es tal que le provoca incontables fisuras\npor todo el cuerpo.",
     "20052800": "Cuando emite ondas ultrasónicas, que incluso pueden\nreventar el cemento, agita su cola con vehemencia.",
     "20053000": "Su taladro ha evolucionado y es capaz de atravesar una\nlámina de hierro. Es muy útil para construir túneles.",
+    "20053300": "Gracias a su entrenada musculatura, puede blandir vigas\nde acero sin problema para así derribar edificios enteros.",
     "20053400": "Se cree que Conkeldurr enseñó a los humanos la técnica\npara elaborar cemento hace más de 2000 años.",
     "20053600": "Cuando hace vibrar el bulto de su cabeza, no solo se\nembravece el mar, sino que la tierra también tiembla.",
     "20053700": "Aumenta la potencia de sus puñetazos haciendo vibrar\nsus puños. Es capaz de quebrar una roca de un solo\ngolpe.",
@@ -457,6 +460,7 @@
     "20082300": "Cada grano de arena de su cuerpo tiene voluntad\npropia. Engulle a Pokémon pequeños estando aún\nvivos para robarles la energía vital.",
     "20086211": "Esta es la forma que adopta tras evolucionar y despertar\ntodo su potencial. Al deshacerse de su máscara, su\nvelocidad ha aumentado mucho.",
     "20086212": "Tras despertar su verdadero potencial, puede cambiar\nde tipo a voluntad como cierto Pokémon legendario.",
+    "20081100": "Duerme continuamente desde que nace. Cuando el\nsueño en el que está sumido es especialmente profundo,\nse queda inmóvil.",
     "20085400": "Vive en los volcanes y se alimenta de azufre y\nminerales. Los componentes que ingiere le sirven\npara formar su caparazón explosivo.",
     "20085800": "Eriza inconscientemente las 14 púas de su lomo cuando\nse asusta o se pone nervioso.",
     "20081911": "Es de carácter tranquilo y propenso a sentirse solo.\nOdia que intenten mirar bajo su saco, y se resiste con\ntodas sus fuerzas.",
@@ -652,5 +656,8 @@
     "2010171100": "Es bromista y extremadamente curioso. A la hora de\ncombatir, se sirve del tipo de energía que contenga la\nmáscara que lleve puesta.",
     "2010241100": "Se vale de su capacidad para transformar energía en\nduros cristales para protegerse. Este Pokémon dio origen\na la teracristalización.",
     "2010241200": "Cuando presiente peligro, se prepara para combatir\nformando un caparazón de cristales muy resistente\nmediante la teracristalización.",
-    "2010241300": "Adopta esta forma cuando su energía Teracristal se ve\namplificada descomunalmente. Se asemeja a la imagen\ndel mundo que la gente tenía antaño."
+    "2010241300": "Adopta esta forma cuando su energía Teracristal se ve\namplificada descomunalmente. Se asemeja a la imagen\ndel mundo que la gente tenía antaño.",
+    "2010180000": "Acumula la electricidad estática de su entorno. El rayo\nque dispara cuando está a cuatro patas posee una\npotencia colosal.",
+    "2009840000": "Testigos afirman haberlo visto recientemente. El nombre\nColmilargo está tomado de una criatura mencionada en\ncierto libro.",
+    "2009900000": "Su aspecto recuerda al de un arma científica de origen\nextraterrestre que apareció en un artículo de una revista\nesotérica."
 }

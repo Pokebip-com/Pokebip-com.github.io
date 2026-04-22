@@ -396,5 +396,10 @@
     "10107006": "Multi (Combat)",
     "10111006": "Multi (Psy)",
     "10206006": "Multi (Kalos)",
-    "19960006": "Multi (Pouvoirs surnaturels)"
+    "19960006": "Multi (Pouvoirs surnaturels)",
+    "19975001": "Attaquant (Institut Myrtille)",
+    "19975002": "Soutien (Institut Myrtille)",
+    "19975003": "Tacticien (Institut Myrtille)",
+    "19975004": "Accélérateur (Institut Myrtille)",
+    "19975005": "Régisseur (Institut Myrtille)"
 }

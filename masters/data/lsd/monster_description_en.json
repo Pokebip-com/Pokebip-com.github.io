@@ -114,6 +114,7 @@
     "20015800": "Despite the smallness of its body, Totodile’s jaws are very powerful. While the Pokémon may think it is just playfully nipping, its bite has enough power to cause serious injury.",
     "20015900": "Once Croconaw has clamped its jaws on its foe, it will absolutely not let go. Because the tips of its fangs are forked back like barbed fishhooks, they become impossible to remove when they have sunk in.",
     "20016000": "Feraligatr intimidates its foes by opening its huge mouth. In battle, it will kick the ground hard with its thick and powerful hind legs to charge at the foe at an incredible speed.",
+    "20016200": "Furret has a very slim build. When under attack, it can slickly squirm through narrow spaces and get away. In spite of its short limbs, this Pokémon is very nimble and fleet.",
     "20016400": "With eyes that can see in pitch-darkness, it never lets its prey escape. Some even call it “the emperor of dark nights.”",
     "20016800": "Every night, it wanders around in search of prey, whose movements it restrains by spewing threads before it bites into them with its fangs.",
     "20016900": "Its fangs are so sharp, if it bites you in the dark and sucks your blood, you won’t notice any pain or realize you’ve been bitten.",
@@ -140,6 +141,7 @@
     "20021400": "It’s proud of its thick horn. In Alola, its biggest rival is Vikavolt, which it’s always fighting with.",
     "20021500": "They will cooperate to steal eggs from the nests of bird Pokémon, but fights break out to determine which one gets to eat the eggs.",
     "20021800": "Molten magma courses throughout Slugma’s circulatory system. If this Pokémon is chilled, the magma cools and hardens. Its body turns brittle and chunks fall off, reducing its size.",
+    "20021900": "Magcargo’s shell is actually its skin that hardened as a result of cooling. Its shell is very brittle and fragile—just touching it causes it to crumble apart. This Pokémon returns to its original size by dipping itself in magma.",
     "20022400": "The ink it spits when escaping is special. It contains a substance that dulls the sense of smell, so Pokémon with keen noses get lost.",
     "20022500": "It shares its food with people who are stranded. Because Delibird is omnivorous, sometimes it gives those people bug Pokémon.",
     "20022700": "The wing feathers it sheds can be processed and made into knives whose sharpness is recognized by the finest chefs.",
@@ -318,6 +320,7 @@
     "20052600": "When it fires off energy with all its might, the power creates countless fissures on its body.",
     "20052800": "It shakes its tail vigorously when it emits ultrasonic waves strong enough to reduce concrete to rubble.",
     "20053000": "It can help in tunnel construction. Its drill has evolved into steel strong enough to bore through iron plates.",
+    "20053300": "With strengthened bodies, they skillfully wield steel beams to take down buildings.",
     "20053400": "It is thought that Conkeldurr taught humans how to make concrete more than 2,000 years ago.",
     "20053600": "When they vibrate the bumps on their heads, they can make waves in water or earthquake-like vibrations on land.",
     "20053700": "It increases the power of its punches by vibrating the bumps on its fists. It can turn a boulder to rubble with one punch.",
@@ -457,6 +460,7 @@
     "20082300": "Each of its grains of sand has its own will. Palossand eats small Pokémon and siphons away their vital essence while they’re still alive.",
     "20086211": "This is its form once it has awakened and evolved. Freed from its heavy mask, its speed is greatly increased.",
     "20086212": "Having been awakened successfully, it can change its type and battle—just like a certain Pokémon depicted in legends.",
+    "20081100": "It stays asleep from the moment it’s born. When it falls into a deep sleep, it stops moving altogether.",
     "20085400": "It lives in volcanoes and eats sulfur and other minerals. Materials from the food it eats form the basis of its explosive shell.",
     "20085800": "When it’s surprised or agitated, the 14 fur spikes on its back will stand up involuntarily.",
     "20081911": "Although it’s a quiet, lonely Pokémon, if you try to look at what’s under its rag, it will become agitated and resist violently.",
@@ -652,5 +656,8 @@
     "2010171100": "This mischief-loving Pokémon is full of curiosity. It battles by drawing out the type-based energy contained within its masks.",
     "2010241100": "Terapagos protects itself using its power to transform energy into hard crystals. This Pokémon is the source of the Terastal phenomenon.",
     "2010241200": "Upon sensing danger, it prepares itself for battle by creating a sturdy shell of crystallized Terastal energy.",
-    "2010241300": "In this form, Terapagos resembles the world as the ancients saw it, and its Terastal energy is abnormally amplified."
+    "2010241300": "In this form, Terapagos resembles the world as the ancients saw it, and its Terastal energy is abnormally amplified.",
+    "2010180000": "It gathers static electricity from its surroundings. The beams it launches when down on all fours are tremendously powerful.",
+    "2009840000": "Sightings of this Pokémon have occurred in recent years. The name Great Tusk was taken from a creature listed in a certain book.",
+    "2009900000": "This Pokémon closely resembles a scientific weapon that a paranormal magazine claimed was sent to this planet by aliens."
 }

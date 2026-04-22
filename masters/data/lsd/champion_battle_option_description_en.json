@@ -25,5 +25,7 @@
     "champion_battle_option_description_5030_0401": "The user cannot change the weather, terrain,\nor zone.",
     "champion_battle_option_description_5030_0501": "All allied Physical Strike sync pairs and Special\nStrike sync pairs receive three times the damage\nwhen hit by an attack move.",
     "champion_battle_option_description_5030_0502": "All allied tech sync pairs receive three times the\ndamage when hit by an attack move.",
-    "champion_battle_option_description_5030_0503": "All allied support sync pairs receive three times\nthe damage when hit by an attack move."
+    "champion_battle_option_description_5030_0503": "All allied support sync pairs receive three times\nthe damage when hit by an attack move.",
+    "champion_battle_option_description_8040_0101": "Reduces damage the opponent receives by\n80% when the opponent is hit by a move,\nsync move, or max move from a sync pair\nwithout the Paldea theme.",
+    "champion_battle_option_description_8040_0102": "Allied sync pairs without the Paldea theme\nreceive three times the damage when hit by an\nattack move."
 }

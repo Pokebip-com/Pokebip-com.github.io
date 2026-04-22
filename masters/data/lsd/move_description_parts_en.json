@@ -1008,5 +1008,19 @@
     "998916": "Increases the Physical Moves ↑ Next effect and Special Moves ↑ Next effect of all allied sync pairs by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ] the first time the user’s sync move is used each battle.",
     "998915": "Applies [Name:ReferencedMessageTag Idx=\"9\" ] to the allied field of play the first time this attack move is successful each battle.\n[Name:ReferencedMessageTag Idx=\"9\" ] grants all of the following effects:",
     "998914": "Become Mega Alakazam until the end of battle.",
-    "998913": "Applies [Name:ReferencedMessageTag Idx=\"9\" ] to the allied field of play the first time the user’s sync move is used each battle.\n[Name:ReferencedMessageTag Idx=\"9\" ] grants all of the following effects:"
+    "998913": "Applies [Name:ReferencedMessageTag Idx=\"9\" ] to the allied field of play the first time the user’s sync move is used each battle.\n[Name:ReferencedMessageTag Idx=\"9\" ] grants all of the following effects:",
+    "998912": "Leaves the target either flinching, confused, or trapped.",
+    "998911": "If the remaining MP for the user’s [Name:MoveId Idx=\"8225\" ] is [Digit:1digit Idx=\"8\" ] or more when attacking with this move, reduces those MP by [Digit:1digit Idx=\"8\" ] and grants all of the following effects:",
+    "998910": "Restores [Digit:1digit Idx=\"8\" ] MP of the user’s buddy move.",
+    "998909": "In addition, lowers the target’s [Name:ReferencedMessageTag Idx=\"4\" ] by [Digit:1digit Idx=\"5\" ] stat [EN:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ] when it is asleep.",
+    "998908": "Turns the field of play’s zone into an [Name:ReferencedMessageTag ] the first time this attack move is successful each battle.",
+    "998907": "(An [Name:ReferencedMessageTag ] powers up [Name:ReferencedMessageTag Idx=\"1\" ]-type attacks.)",
+    "998906": "Reduces the user’s sync move countdown by [Digit:1digit Idx=\"1\" ] the first time this attack move is successful each battle.",
+    "998905": "This attack’s power is multiplied by 10 if the user’s team does not have a sync buff and if this attack has been used two times or less.\nApplies the [Name:ReferencedMessageTag Idx=\"2\" ] to the user if its team has a sync buff or if this attack has been used three times or more.",
+    "998904": "This attack’s power increases 50% when the target is paralyzed.",
+    "998903": "When the user is asleep.",
+    "998902": "When the user is not asleep.",
+    "998901": "Lowers the [Name:ReferencedMessageTag Idx=\"10\" ] of all opposing sync pairs by [Digit:1digit Idx=\"11\" ] stat [EN:Qty Ref=\"11\" S=\"rank\" P=\"ranks\" ].",
+    "998900": "If the remaining MP for the user’s [Name:MoveId Idx=\"19660\" ] is [Digit:1digit ] or more when attacking with this move, reduces those MP by [Digit:1digit ] and grants all of the following effects:",
+    "998899": "Raises an ally’s Attack and Sp. Atk by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ]."
 }

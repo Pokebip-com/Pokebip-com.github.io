@@ -1008,5 +1008,19 @@
     "998916": "Augmente l'effet Prochain boost capacité physique et l'effet Prochain boost capacité spéciale de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] la première fois que le lanceur utilise une capacité Duo à chaque combat.",
     "998915": "Applique [Name:ReferencedMessageTag Idx=\"9\" ] au côté allié la première fois que cette capacité offensive est utilisée avec succès à chaque combat.\n[Name:ReferencedMessageTag Idx=\"9\" ] applique tous les effets suivants :",
     "998914": "Permet à Alakazam de devenir Méga-Alakazam jusqu'à la fin du combat.",
-    "998913": "Applique [Name:ReferencedMessageTag Idx=\"9\" ] au côté allié la première fois que le lanceur utilise une capacité Duo à chaque combat.\n[Name:ReferencedMessageTag Idx=\"9\" ] applique tous les effets suivants :"
+    "998913": "Applique [Name:ReferencedMessageTag Idx=\"9\" ] au côté allié la première fois que le lanceur utilise une capacité Duo à chaque combat.\n[Name:ReferencedMessageTag Idx=\"9\" ] applique tous les effets suivants :",
+    "998912": "Applique l'effet Peur, Confusion ou bien Ligotage à la cible.",
+    "998911": "Si les PPC restants de [Name:MoveId Idx=\"8225\" ] du lanceur sont de [Digit:1digit Idx=\"8\" ] ou plus quand il attaque avec cette capacité, réduit la quantité de ces PPC de [Digit:1digit Idx=\"8\" ] et tous les effets suivants s'appliquent :",
+    "998910": "La capacité Synchro du lanceur regagne [Digit:1digit Idx=\"8\" ] PPC.",
+    "998909": "Baisse également [Name:ReferencedMessageTag Idx=\"4\" ] de la cible de [Digit:1digit Idx=\"5\" ] [FR:Qty Ref=\"5\" S=\"rang\" P=\"rangs\" ] quand celle-ci est endormie.",
+    "998908": "Transforme la zone en une [Name:ReferencedMessageTag ] la première fois que cette capacité offensive est utilisée avec succès à chaque combat.",
+    "998907": "(Une [Name:ReferencedMessageTag ] renforce les attaques de type [Name:ReferencedMessageTag Idx=\"1\" ].)",
+    "998906": "Réduit de [Digit:1digit Idx=\"1\" ] le nombre d'actions nécessaires pour lancer une capacité Duo pour le lanceur la première fois que cette capacité offensive est utilisée avec succès à chaque combat.",
+    "998905": "La puissance de cette attaque est multipliée par 10 si la détermination de l'équipe du lanceur n'est pas au maximum et si cette attaque a été utilisée 2 fois ou moins.\nApplique l'[Name:ReferencedMessageTag Idx=\"2\" ] au lanceur si la détermination de l'équipe du lanceur est au maximum ou si cette attaque a été utilisée 3 fois ou plus.",
+    "998904": "Augmente la puissance de l'attaque de 50 % quand la cible est paralysée.",
+    "998903": "Quand le lanceur est endormi.",
+    "998902": "Quand le lanceur n'est pas endormi.",
+    "998901": "Baisse [Name:ReferencedMessageTag Idx=\"10\" ] de tous les Duos ennemis de [Digit:1digit Idx=\"11\" ] [FR:Qty Ref=\"11\" S=\"rang\" P=\"rangs\" ].",
+    "998900": "Si les PPC restants de [Name:MoveId Idx=\"19660\" ] du lanceur sont de [Digit:1digit ] ou plus quand il attaque avec cette capacité, réduit la quantité de ces PPC de [Digit:1digit ] et tous les effets suivants s'appliquent :",
+    "998899": "Augmente l'Attaque et l'Atq. Spé. d'un allié de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ]."
 }
