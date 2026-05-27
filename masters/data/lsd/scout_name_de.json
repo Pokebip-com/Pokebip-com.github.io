@@ -236,7 +236,7 @@
     "event_7090_4W_MasterTicket_03": "Garantierte\nSonder-G-Suche",
     "event_7090_4W_SuperTicket_08": "Meisterfestival-\nFokus-G-Suche",
     "event_7100_3W_SuperTicket_03": "Fokus-G-Suche:\nJasmin (Kostüm)",
-    "event_7100_3W_MasterTicket_04": "Garant. G-Suche:\nJasmin (Kostüm)",
+    "event_7100_3W_MasterTicket_04": "Garantierte G-Suche:\nJasmin (Kostüm)",
     "event_7100_3W_SuperTicket_08": "Fokus-G-Suche:\nKabu (Kostüm)",
     "event_7100_3W_MasterTicket_09": "Garantierte G-Suche:\nKabu (Kostüm)",
     "event_7100_4W_SuperTicket_07": "Meisterfestival-\nFokus-G-Suche",
@@ -270,5 +270,6 @@
     "event_8040_3W_SuperTicket_02": "Fokus-G-Suche:\nFlavia (Kostüm)",
     "event_8040_3W_MasterTicket_02": "Garantierte G-Suche:\nFlavia (Kostüm)",
     "event_8040_3W_SuperTicket_03": "Fokus-\nKostüm-G-Suche",
-    "event_8040_4W_SuperTicket_04": "Meisterfestival-\nFokus-G-Suche"
+    "event_8040_4W_SuperTicket_04": "Meisterfestival-\nFokus-G-Suche",
+    "event_8050_4W_SuperTicket_05": "Meisterfestival-\nFokus-G-Suche"
 }

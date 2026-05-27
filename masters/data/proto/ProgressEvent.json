@@ -53,5 +53,8 @@
 { "progressEventId": "611416", "eventName": "611416", "questGroupId": "611416", "u1": 1, "eventItemName": "750000000794" },
 { "progressEventId": "611417", "eventName": "611417", "questGroupId": "611417", "u1": 1, "eventItemName": "750000000795" },
 { "progressEventId": "611421", "eventName": "611421", "questGroupId": "611421", "u1": 1, "eventItemName": "750000000797" },
-{ "progressEventId": "611422", "eventName": "611422", "questGroupId": "611422", "u1": 1, "eventItemName": "750000000798" }
+{ "progressEventId": "611422", "eventName": "611422", "questGroupId": "611422", "u1": 1, "eventItemName": "750000000798" },
+{ "progressEventId": "611440", "eventName": "611440", "questGroupId": "611440", "u1": 1, "eventItemName": "750000000800" },
+{ "progressEventId": "611448", "eventName": "611448", "questGroupId": "611448", "u1": 1, "eventItemName": "750000000802" },
+{ "progressEventId": "611449", "eventName": "611449", "questGroupId": "611449", "u1": 1, "eventItemName": "750000000803" }
 ]}

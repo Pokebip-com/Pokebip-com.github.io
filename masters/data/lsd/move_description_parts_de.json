@@ -110,7 +110,7 @@
     "999829": "Erhöht die Spezial-Verteidigung des Anwenders um [Digit:1digit ].",
     "999828": "Erhöht die Volltrefferquote des Anwenders um [Digit:1digit Idx=\"1\" ].",
     "999827": "Erhöht die Initiative des Anwenders um [Digit:1digit Idx=\"1\" ].",
-    "999826": "Füllt die Attackenleiste deines Teams um [Digit:1digit ] [DE:Qty S=\"Segment\" P=\"Segmente\" ] für jedes verbündete Gefährtengespann das sich auf dem Spielfeld befindet. Im Multiteamkampf werden stattdessen die Attackenleisten aller verbündeten Spieler um [Digit:1digit ] [DE:Qty S=\"Segment\" P=\"Segmente\" ] aufgefüllt.",
+    "999826": "Füllt die Attackenleiste deines Teams um [Digit:1digit ] [DE:Qty S=\"Segment\" P=\"Segmente\" ] für jedes verbündete Gefährtengespann, das sich auf dem Spielfeld befindet. Im Multiteamkampf werden stattdessen die Attackenleisten aller verbündeten Spieler um [Digit:1digit ] [DE:Qty S=\"Segment\" P=\"Segmente\" ] aufgefüllt.",
     "999825": "Erhöht die Verteidigung des Anwenders um [Digit:1digit ].",
     "999824": "Verursacht beim Anwender den Effekt Folgetreffer.",
     "999823": "Erhöht die Verteidigung und die Initiative aller verbündeten Gefährten um [Digit:1digit ].",
@@ -1022,5 +1022,9 @@
     "998902": "Wenn der Anwender nicht schläft.",
     "998901": "Senkt [Name:ReferencedMessageTag Idx=\"10\" ] aller gegnerischen Gefährten um [Digit:1digit Idx=\"11\" ].",
     "998900": "Wenn die verbleibenden Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"19660\" ] des Anwenders [Digit:1digit ] oder mehr betragen und mit dieser Attacke angegriffen wird, werden diese AEP um [Digit:1digit ] reduziert und alle folgenden Effekte ausgelöst:",
-    "998899": "Erhöht den Angriff und den Spezial-Angriff eines Verbündeten um [Digit:1digit Idx=\"1\" ]"
+    "998899": "Erhöht den Angriff und den Spezial-Angriff eines Verbündeten um [Digit:1digit Idx=\"1\" ]",
+    "998898": "Je mehr die Spannung des Anwenders gesteigert wurde, desto mehr wird die Stärke dieses Angriffs erhöht (um maximal 10).",
+    "998897": "Löst ein Mal pro Kampf alle folgenden Effekte aus, wenn dieser Angriff mit einer Attacke erstmals Erfolg hat:",
+    "998896": "Verursacht beim Ziel den [Name:ReferencedMessageTag Idx=\"1\" ].",
+    "998895": "Erhöht den [Name:ReferencedMessageTag ] des Anwenders um den 2-fachen Wert dessen, was durch den Einsatz dieser Attacke verbraucht wurde."
 }

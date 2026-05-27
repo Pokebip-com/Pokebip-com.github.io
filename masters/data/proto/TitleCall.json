@@ -66,5 +66,8 @@
 { "scheduleId": "7110_4W_TitleSplash", "u2": 0, "actorId": "ch0356_10_zeiyu", "u4": "31" },
 { "scheduleId": "8020_1W_TitleSplash_1", "u2": 0, "actorId": "ch0365_00_red2", "u4": "32" },
 { "scheduleId": "8030_1W_TitleSplash_1", "u2": 0, "actorId": "ch0012_90_corni", "u4": "33" },
-{ "scheduleId": "8030_1W_TitleSplash_1", "u2": 0, "actorId": "ch0114_90_natsume", "u4": "33" }
+{ "scheduleId": "8030_1W_TitleSplash_1", "u2": 0, "actorId": "ch0114_90_natsume", "u4": "33" },
+{ "scheduleId": "8050_1W_TitleSplash_1", "u2": 0, "actorId": "ch0002_90_kotone", "u4": "34" },
+{ "scheduleId": "8050_1W_TitleSplash_1", "u2": 0, "actorId": "ch0018_10_chris", "u4": "34" },
+{ "scheduleId": "8050_1W_TitleSplash_1", "u2": 0, "actorId": "ch0112_91_hibiki", "u4": "34" }
 ]}

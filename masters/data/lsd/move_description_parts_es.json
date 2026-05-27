@@ -1022,5 +1022,9 @@
     "998902": "Cuando el usuario no está dormido.",
     "998901": "Reduce [Name:ReferencedMessageTag Idx=\"10\" ] de todos los compis rivales en [Digit:1digit Idx=\"11\" ] [ES:Qty Ref=\"11\" S=\"nivel\" P=\"niveles\" ].",
     "998900": "Si los PM restantes de [Name:MoveId Idx=\"19660\" ] del usuario son [Digit:1digit ] o más cuando ataca con este movimiento, reduce dichos PM en [Digit:1digit ] y otorga todos los efectos siguientes:",
-    "998899": "Aumenta el Ataque y el Ataque Especial de un aliado en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ]."
+    "998899": "Aumenta el Ataque y el Ataque Especial de un aliado en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
+    "998898": "Cuanto más haya aumentado la determinación del usuario, más aumenta la potencia de este ataque. (El aumento máximo es de 10 niveles).",
+    "998897": "Otorga todos los efectos siguientes la primera vez que este movimiento de ataque acierta en cada combate:",
+    "998896": "Aplica el [Name:ReferencedMessageTag Idx=\"1\" ] al objetivo.",
+    "998895": "Aumenta el [Name:ReferencedMessageTag ] del usuario el doble del número de niveles consumidos al usar el movimiento."
 }

@@ -1022,5 +1022,9 @@
     "998902": "Quand le lanceur n'est pas endormi.",
     "998901": "Baisse [Name:ReferencedMessageTag Idx=\"10\" ] de tous les Duos ennemis de [Digit:1digit Idx=\"11\" ] [FR:Qty Ref=\"11\" S=\"rang\" P=\"rangs\" ].",
     "998900": "Si les PPC restants de [Name:MoveId Idx=\"19660\" ] du lanceur sont de [Digit:1digit ] ou plus quand il attaque avec cette capacité, réduit la quantité de ces PPC de [Digit:1digit ] et tous les effets suivants s'appliquent :",
-    "998899": "Augmente l'Attaque et l'Atq. Spé. d'un allié de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ]."
+    "998899": "Augmente l'Attaque et l'Atq. Spé. d'un allié de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
+    "998898": "Plus la détermination du lanceur a été augmentée, plus cette attaque est puissante. (L'augmentation maximum est de 10 rangs.)",
+    "998897": "Tous les effets suivants s'appliquent la première fois que cette capacité offensive est utilisée avec succès à chaque combat :",
+    "998896": "Applique l'[Name:ReferencedMessageTag Idx=\"1\" ] à la cible.",
+    "998895": "Augmente l'[Name:ReferencedMessageTag ] du lanceur en doublant le nombre de rangs consommés lors de l'utilisation de cette capacité."
 }

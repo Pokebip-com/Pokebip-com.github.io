@@ -1022,5 +1022,9 @@
     "998902": "When the user is not asleep.",
     "998901": "Lowers the [Name:ReferencedMessageTag Idx=\"10\" ] of all opposing sync pairs by [Digit:1digit Idx=\"11\" ] stat [EN:Qty Ref=\"11\" S=\"rank\" P=\"ranks\" ].",
     "998900": "If the remaining MP for the user’s [Name:MoveId Idx=\"19660\" ] is [Digit:1digit ] or more when attacking with this move, reduces those MP by [Digit:1digit ] and grants all of the following effects:",
-    "998899": "Raises an ally’s Attack and Sp. Atk by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ]."
+    "998899": "Raises an ally’s Attack and Sp. Atk by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "998898": "The more the user’s sync buff is raised, the greater the power of this attack. (The maximum increase is 10 ranks.)",
+    "998897": "Grants all of the following effects the first time this attack move is successful each battle:",
+    "998896": "Applies the [Name:ReferencedMessageTag Idx=\"1\" ] to the target.",
+    "998895": "Increases the user’s [Name:ReferencedMessageTag ] by double the number of ranks consumed when using this move."
 }
