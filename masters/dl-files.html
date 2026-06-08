@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+
+    <style>
+        div#contentDiv li::before {
+            content: "› ";
+            font-size: 18px;
+            font-weight: bolder;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../css/pokebip.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="./js/dist/FileSaver.min.js"></script>
+    <script src="./js/dist/jszip.min.js"></script>
+</head>
+
+<body>
+<div id="contentDiv" style="max-width: 600px;">
+    <h1 id="pageTitle">Download Files</h1>
+    <button id="dlProtosBtn">Download Proto files</button>
+    <button id="dlLsdBtn">Download LSD files</button>
+    <div id="dlInfos"></div>
+</div>
+
+<script src="./js/header.js"></script>
+<script src="./js/utils.js"></script>
+<script src="./js/dl-files.js"></script>
+</body>
+
+</html>
