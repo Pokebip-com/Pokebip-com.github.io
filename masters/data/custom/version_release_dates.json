@@ -2,59 +2,73 @@
   "entries": [
     {
       "version": "2.69.0",
-      "releaseTimestamp": 1779858000
+      "releaseTimestamp": 1779858000,
+      "hasArchive": true
     },
     {
       "version": "2.68.0",
-      "releaseTimestamp": 1776834000
+      "releaseTimestamp": 1776834000,
+      "hasArchive": true
     },
     {
       "version": "2.67.0",
-      "releaseTimestamp": 1774587600
+      "releaseTimestamp": 1774587600,
+      "hasArchive": true
     },
     {
       "version": "2.66.0",
-      "releaseTimestamp": 1772082000
+      "releaseTimestamp": 1772082000,
+      "hasArchive": true
     },
     {
       "version": "2.65.0",
-      "releaseTimestamp": 1769576400
+      "releaseTimestamp": 1769576400,
+      "hasArchive": true
     },
     {
       "version": "2.64.0",
-      "releaseTimestamp": 1766552400
+      "releaseTimestamp": 1766552400,
+      "hasArchive": true
     },
     {
       "version": "2.63.0",
-      "releaseTimestamp": 1764133200
+      "releaseTimestamp": 1764133200,
+      "hasArchive": true
     },
     {
       "version": "2.62.0",
-      "releaseTimestamp": 1761714000
+      "releaseTimestamp": 1761714000,
+      "hasArchive": true
     },
     {
       "version": "2.61.0",
-      "releaseTimestamp": 1758862800
+      "releaseTimestamp": 1758862800,
+      "hasArchive": true
     },
     {
       "version": "2.60.0",
-      "releaseTimestamp": 1756184400
+      "releaseTimestamp": 1756184400,
+      "hasArchive": true
     },
     {
       "version": "2.59.0",
-      "releaseTimestamp": 1753678800
+      "releaseTimestamp": 1753678800,
+      "hasArchive": true
     },
     {
       "version": "2.58.0",
-      "releaseTimestamp": 1750914000
+      "releaseTimestamp": 1750914000,
+      "hasArchive": true
     },
     {
       "version": "2.57.0",
-      "releaseTimestamp": 1748408400
+      "releaseTimestamp": 1748408400,
+      "hasArchive": true
     },
     {
       "version": "2.56.0",
-      "releaseTimestamp": 1745384400
+      "releaseTimestamp": 1745384400,
+      "hasArchive": true
     },
     {
       "version": "2.55.0",
@@ -70,11 +84,13 @@
     },
     {
       "version": "2.52.0",
-      "releaseTimestamp": 1734930000
+      "releaseTimestamp": 1734930000,
+      "hasArchive": true
     },
     {
       "version": "2.51.0",
-      "releaseTimestamp": 1732683600
+      "releaseTimestamp": 1732683600,
+      "hasArchive": true
     },
     {
       "version": "2.50.0",
@@ -82,15 +98,18 @@
     },
     {
       "version": "2.49.0",
-      "releaseTimestamp": 1727326800
+      "releaseTimestamp": 1727326800,
+      "hasArchive": true
     },
     {
       "version": "2.48.0",
-      "releaseTimestamp": 1724648400
+      "releaseTimestamp": 1724648400,
+      "hasArchive": true
     },
     {
       "version": "2.47.0",
-      "releaseTimestamp": 1722229200
+      "releaseTimestamp": 1722229200,
+      "hasArchive": true
     },
     {
       "version": "2.46.0",
@@ -98,59 +117,73 @@
     },
     {
       "version": "2.45.0",
-      "releaseTimestamp": 1716958800
+      "releaseTimestamp": 1716958800,
+      "hasArchive": true
     },
     {
       "version": "2.44.0",
-      "releaseTimestamp": 1713934800
+      "releaseTimestamp": 1713934800,
+      "hasArchive": true
     },
     {
       "version": "2.43.0",
-      "releaseTimestamp": 1711515600
+      "releaseTimestamp": 1711515600,
+      "hasArchive": true
     },
     {
       "version": "2.42.0",
-      "releaseTimestamp": 1708923600
+      "releaseTimestamp": 1708923600,
+      "hasArchive": true
     },
     {
       "version": "2.41.0",
-      "releaseTimestamp": 1706504400
+      "releaseTimestamp": 1706504400,
+      "hasArchive": true
     },
     {
       "version": "2.40.0",
-      "releaseTimestamp": 1703566800
+      "releaseTimestamp": 1703566800,
+      "hasArchive": true
     },
     {
       "version": "2.39.0",
-      "releaseTimestamp": 1701147600
+      "releaseTimestamp": 1701147600,
+      "hasArchive": true
     },
     {
       "version": "2.38.0",
-      "releaseTimestamp": 1698382800
+      "releaseTimestamp": 1698382800,
+      "hasArchive": true
     },
     {
       "version": "2.37.0",
-      "releaseTimestamp": 1695790800
+      "releaseTimestamp": 1695790800,
+      "hasArchive": true
     },
     {
       "version": "2.36.0",
-      "releaseTimestamp": 1692853200
+      "releaseTimestamp": 1692853200,
+      "hasArchive": true
     },
     {
       "version": "2.35.0",
-      "releaseTimestamp": 1690434000
+      "releaseTimestamp": 1690434000,
+      "hasArchive": true
     },
     {
       "version": "2.34.0",
-      "releaseTimestamp": 1687928400
+      "releaseTimestamp": 1687928400,
+      "hasArchive": true
     },
     {
       "version": "2.33.0",
-      "releaseTimestamp": 1685336400
+      "releaseTimestamp": 1685336400,
+      "hasArchive": true
     },
     {
       "version": "2.32.0",
-      "releaseTimestamp": 1682398800
+      "releaseTimestamp": 1682398800,
+      "hasArchive": true
     },
     {
       "version": "2.31.0",
