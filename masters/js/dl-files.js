@@ -44,7 +44,7 @@ async function downloadData(dirName) {
     zip.generateAsync({ type: 'blob'}).then((content) => saveAs(content, dirName + ".zip")).then(() => {
         dlProtosBtn.disabled = false;
         dlLsdBtn.disabled = false;
-        dlInfosDiv.innerHTML = `Downloading  <strong>${dirName}.zip</strong>`;
+        dlInfosDiv.innerHTML = `Downloading <strong>${dirName}.zip</strong>`;
     });
 }
 
