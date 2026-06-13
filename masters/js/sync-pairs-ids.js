@@ -72,18 +72,23 @@ function getUID(t, m = null, variation = null) {
     return uid;
 }
 
-function getEvoData(t) {
+function getEvoData(t, taid) {
     const evos = jData.proto.monsterEvolution.filter(me => me.trainerId === t.trainerId);
     let data = [];
 
     if(evos.length === 0) return data;
 
     evos.forEach(evo => {
+        const mon = jData.proto.monster.find(mon => mon.monsterId.toString() === evo.monsterIdNext.toString());
+        const mb = jData.proto.monsterBase.find(mb => mb.monsterBaseId.toString() === mon.monsterBaseId.toString());
+
         let evoData = {
             "name": `${getTrainerName(evo.trainerId)} & ${getMonsterNameByMonsterId(evo.monsterIdNext)}`,
             "uid": getUID(t, evo.monsterIdNext),
             "tid": evo.trainerId,
-            "mid": evo.monsterIdNext
+            "taid": taid,
+            "mid": evo.monsterIdNext,
+            "maid": mb.actorId
         };
         data.push(evoData);
     });
@@ -91,45 +96,38 @@ function getEvoData(t) {
     return data;
 }
 
-function getVariationData(t) {
-    let data = getEvoData(t);
-
-    let variationData = {
-        "name": "",
-        "uid": "",
-        "tid": "",
-        "mid": ""
-    };
-    return data;
-}
-
 function getPairData(t) {
     let data = [];
+
+    const mon = jData.proto.monster.find(mon => mon.monsterId.toString() === t.monsterId.toString());
+    const mb = jData.proto.monsterBase.find(mb => mb.monsterBaseId.toString() === mon.monsterBaseId.toString());
+    const taid = jData.proto.trainerBase.find(tb => tb.id.toString() === t.trainerBaseId.toString()).actorId;
 
     let pairData = {
         "name": getPairName(t.trainerId),
         "uid": getUID(t),
         "tid": t.trainerId,
-        "mid": t.monsterId
+        "taid": taid,
+        "mid": t.monsterId,
+        "maid": mb.actorId
     };
 
     data.push(pairData);
-    data.push(...getEvoData(t))
+    data.push(...getEvoData(t, taid))
 
     data.forEach(d => {
         let variations = jData.proto.monsterVariation.filter(mv => mv.monsterId.toString() === d.mid.toString() && mv.form !== 4);
 
-
         if(variations.length === 0) return;
-        console.log(variations);
 
         variations.forEach(variation => {
-            console.log(`${getNameByMonsterBaseId(getMonsterBaseIdFromActorId(variation.actorId))}`);
             let variationData = {
                 "name": `${getTrainerName(t.trainerId)} & ${getNameByMonsterBaseId(getMonsterBaseIdFromActorId(variation.actorId), variation.formId)}`,
                 "uid": getUID(t, variation.monsterId, variation),
                 "tid": t.trainerId,
-                "mid": variation.monsterId
+                "taid": taid,
+                "mid": variation.monsterId,
+                "maid": variation.actorId
             };
             data.push(variationData);
         });
@@ -146,7 +144,7 @@ function setTable() {
     let thead = document.createElement("thead");
 
     let headerRow = document.createElement("tr");
-    let headers = ["Sync Pair", "Unified ID", "Trainer ID", "Monster ID"];
+    let headers = ["Sync Pair", "Unified ID", "Trainer ID", "Tr Actor ID", "Monster ID", "Mon Actor ID"];
     headers.forEach(headerText => {
         let th = document.createElement("th");
         th.innerText = headerText;
@@ -169,17 +167,25 @@ function setTable() {
             tr.appendChild(syncPairTd);
 
             let uidTd = document.createElement("td");
-            uidTd.innerText = d.uid;
+            uidTd.innerHTML = `<strong>${d.uid}</strong>`;
             tr.appendChild(uidTd);
 
             let tidTd = document.createElement("td");
             tidTd.innerText = d.tid;
             tr.appendChild(tidTd);
 
+            let taidTd = document.createElement("td");
+            taidTd.innerText = d.taid;
+            tr.appendChild(taidTd);
+
             let midTd = document.createElement("td");
             midTd.innerText = d.mid;
             tr.appendChild(midTd);
             tbody.appendChild(tr);
+
+            let maidTd = document.createElement("td");
+            maidTd.innerText = d.maid;
+            tr.appendChild(maidTd);
         })
     });
     idTable.appendChild(tbody);
