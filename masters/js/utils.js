@@ -176,7 +176,7 @@ function getTrainerName(id) {
     let tr = jData.proto.trainer.find(t => t.trainerId === id) || {};
     let tb = jData.proto.trainerBase.find(tba => tba.id === tr.trainerBaseId?.toString()) || {};
 
-    return (jData.lsd.trainerName[tb.altTrainerNameId] || jData.lsd.trainerName[tb.trainerNameId] || jData.locale.common.base_trainer_name).replace("\n", " ");
+    return (jData.lsd.trainerName[tb.altTrainerNameId] || jData.lsd.trainerName[tb.trainerNameId] || jData.locale.common.base_trainer_name).replace("\n", " ").replace("  ", " ");
 }
 
 function getMonsterNameByTrainerId(id) {
