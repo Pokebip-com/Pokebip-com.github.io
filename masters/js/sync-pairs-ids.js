@@ -157,7 +157,7 @@ function setTable() {
 
     let dataTable;
 
-    jData.proto.trainer.forEach(t => {
+    jData.proto.trainer.filter(t => t.number !== 99900).forEach(t => {
         dataTable = getPairData(t);
 
         dataTable.forEach(d => {
