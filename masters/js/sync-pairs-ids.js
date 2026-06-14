@@ -51,7 +51,7 @@ function getMonsterUID(t, m, variation) {
     const mbid = variation === null ? mon.monsterBaseId : getMonsterBaseIdFromActorId(variation.actorId);
     const mb = jData.proto.monsterBase.find(mb => mb.monsterBaseId.toString() === mbid.toString());
 
-    const actorNumber = mb.actorNumber.toString().padStart(4, "0");
+    const dexNumber = mb.dexNumber.toString().padStart(4, "0");
     const actorVariant = mb.actorVariant.toString().padStart(2, "0");
     const shinySuffix = mb.isShiny ? "s" : "";
     let teraTypeSuffix = "";
@@ -60,7 +60,7 @@ function getMonsterUID(t, m, variation) {
         teraTypeSuffix = `-${typeId.toString().padStart(2, "0")}`;
     }
 
-    return `${actorNumber}_${actorVariant}${shinySuffix}${teraTypeSuffix}`;
+    return `${dexNumber}_${actorVariant}${shinySuffix}${teraTypeSuffix}`;
 }
 
 function getUID(t, m = null, variation = null) {
