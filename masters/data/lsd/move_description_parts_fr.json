@@ -1026,5 +1026,15 @@
     "998898": "Plus la détermination du lanceur a été augmentée, plus cette attaque est puissante. (L'augmentation maximum est de 10 rangs.)",
     "998897": "Tous les effets suivants s'appliquent la première fois que cette capacité offensive est utilisée avec succès à chaque combat :",
     "998896": "Applique l'[Name:ReferencedMessageTag Idx=\"1\" ] à la cible.",
-    "998895": "Augmente l'[Name:ReferencedMessageTag ] du lanceur en doublant le nombre de rangs consommés lors de l'utilisation de cette capacité."
+    "998895": "Augmente l'[Name:ReferencedMessageTag ] du lanceur en doublant le nombre de rangs consommés lors de l'utilisation de cette capacité.",
+    "998894": "Applique l'effet Rupture physique et l'effet Rupture spéciale à la cible la première fois que cette capacité offensive est utilisée avec succès à chaque combat.",
+    "998893": "Si le Gardevoir du lanceur a méga-évolué, baisse également de [Digit:1digit Idx=\"1\" ] le nombre de segments de la Jauge Capacité requis pour utiliser la capacité.",
+    "998892": "Quand le Gardevoir du lanceur méga-évolue.",
+    "998891": "Augmente également l'effet Prochain boost capacité physique et l'effet Prochain boost capacité spéciale de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] quand il pleut.",
+    "998890": "Plus le nombre de Pokémon mis K.O. dans votre équipe est important, plus cette attaque est puissante.",
+    "998889": "Cette capacité regagne [Digit:1digit ] PPC quand vous avez au moins deux Pokémon dans votre équipe.",
+    "998888": "Augmente l'Attaque, l'Atq. Spé. et l'Esquive de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
+    "998887": "Si le Gardevoir du lanceur a méga-évolué, augmente également l'[Name:ReferencedMessageTag ] du lanceur de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ].",
+    "998886": "Consomme jusqu'à [Digit:1digit ] [FR:Qty S=\"segment\" P=\"segments\" ] de la Jauge Capacité du lanceur. Plus il y a de segments consommés, plus l'Attaque, la Défense, l'Atq. Spé. et la Déf. Spé. de tous les Duos alliés augmentent (jusqu'à [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ]).",
+    "998885": "Augmente l'[Name:ReferencedMessageTag ] du lanceur de 10 rangs."
 }

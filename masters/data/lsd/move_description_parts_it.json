@@ -631,7 +631,7 @@
     "999306": "Se chi la usa subisce un attacco semplice fisico mentre è in uno stato di attesa per contrattacco, lo stato di attesa termina e l'Unità attacca tutte le Unità avversarie.",
     "999305": "Aumenta l'effetto \"Prossima mossa fisica ↑\" o l'effetto \"Prossima mossa speciale ↑\" di tutte le Unità alleate di [Digit:1digit Idx=\"4\" ] [IT:Qty Ref=\"4\" S=\"grado\" P=\"gradi\" ].",
     "999304": "(Viene aumentato lo stesso tipo di effetto per tutte le Unità alleate.)",
-    "999303": "Quando c'è almeno 1 Pokémon affetto da un problema di stato nel campo avversario.",
+    "999303": "Quando c'è almeno 1 Pokémon affetto da problemi di stato nel campo avversario.",
     "999302": "Quando non ci sono più Pokémon affetti da problemi di stato nel campo avversario.",
     "999301": "Questo attacco aumenta di potenza del 50% quando il campo di lotta è un [Name:ReferencedMessageTag Idx=\"3\" ].",
     "999300": "Avvelena o paralizza tutte le Unità avversarie.",
@@ -1026,5 +1026,15 @@
     "998898": "Aumenta la potenza di questo attacco in proporzione all'aumento della tensione di chi la usa. (L'aumento massimo è di 10 gradi.)",
     "998897": "Conferisce tutti gli effetti seguenti la prima volta che questo attacco semplice va a segno in ogni lotta:",
     "998896": "Applica l'[Name:ReferencedMessageTag Idx=\"1\" ] sul bersaglio.",
-    "998895": "Aumenta l'[Name:ReferencedMessageTag ] di chi la usa del doppio del numero di gradi consumati sferrando questa mossa."
+    "998895": "Aumenta l'[Name:ReferencedMessageTag ] di chi la usa del doppio del numero di gradi consumati sferrando questa mossa.",
+    "998894": "Applica l'effetto \"Aumento danni fisici\" e l'effetto \"Aumento danni speciali\" sul bersaglio la prima volta che questo attacco semplice va a segno in ogni lotta.",
+    "998893": "Se Gardevoir di chi la usa si megaevolve, questa mossa consuma anche [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"barretta\" P=\"barrette\" ] della barra mosse in meno.",
+    "998892": "Quando Gardevoir di chi la usa si megaevolve.",
+    "998891": "Inoltre, aumenta l'effetto \"Prossima mossa fisica ↑\" e l'effetto \"Prossima mossa speciale ↑\" di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ] quando piove.",
+    "998890": "Aumenta la potenza di questo attacco in proporzione ai Pokémon KO nella tua squadra.",
+    "998889": "Ripristina [Digit:1digit ] [IT:Qty S=\"utilizzo\" P=\"utilizzi\" ] di questa mossa quando hai due o più Pokémon nella tua squadra.",
+    "998888": "Aumenta l'Attacco, l'Attacco Speciale, e l'elusione di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
+    "998887": "Se Gardevoir di chi la usa si megaevolve, aumenta anche l'[Name:ReferencedMessageTag ] di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
+    "998886": "Consuma fino a [Digit:1digit ] [IT:Qty S=\"barretta\" P=\"barrette\" ] della barra mosse di chi la usa. Aumenta l'Attacco, la Difesa, l'Attacco Speciale e la Difesa Speciale di tutte le Unità alleate, fino a un massimo di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ], in base al numero di barrette consumate.",
+    "998885": "Aumenta l'[Name:ReferencedMessageTag ] di chi la usa di 10 gradi."
 }

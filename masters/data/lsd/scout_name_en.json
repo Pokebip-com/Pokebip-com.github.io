@@ -271,5 +271,11 @@
     "event_8040_3W_MasterTicket_02": "Flannery Costume Guaranteed Ticket Scout",
     "event_8040_3W_SuperTicket_03": "Costume Featured Ticket Scout",
     "event_8040_4W_SuperTicket_04": "Master Fair Featured Ticket Scout",
-    "event_8050_4W_SuperTicket_05": "Master Fair Featured Ticket Scout"
+    "event_8050_4W_SuperTicket_05": "Master Fair Featured Ticket Scout",
+    "event_8060_1W_SuperTicket_04": "Akari Seasonal Featured Ticket Scout",
+    "event_8060_1W_MasterTicket_05": "Akari Seasonal Guaranteed Ticket Scout",
+    "event_8060_1W_SuperTicket_08": "Arezu Seasonal Featured Ticket Scout",
+    "event_8060_1W_MasterTicket_09": "Arezu Seasonal Guaranteed Ticket Scout",
+    "event_8060_2W_SuperTicket_06": "Seasonal Featured Ticket Scout",
+    "event_8060_4W_SuperTicket_05": "Master Fair Featured Ticket Scout"
 }

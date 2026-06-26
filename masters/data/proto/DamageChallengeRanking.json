@@ -20,5 +20,6 @@
 { "damageChallengeRankingId": "8020", "questGroupId": "611377", "u1": "8020", "u2": 180, "u3": "8020" },
 { "damageChallengeRankingId": "8030", "questGroupId": "611399", "u1": "8030", "u2": 180, "u3": "8030" },
 { "damageChallengeRankingId": "8040", "questGroupId": "611423", "u1": "8040", "u2": 180, "u3": "8040" },
-{ "damageChallengeRankingId": "8050", "questGroupId": "611450", "u1": "8050", "u2": 180, "u3": "8050" }
+{ "damageChallengeRankingId": "8050", "questGroupId": "611450", "u1": "8050", "u2": 180, "u3": "8050" },
+{ "damageChallengeRankingId": "8060", "questGroupId": "611477", "u1": "8060", "u2": 180, "u3": "8060" }
 ]}

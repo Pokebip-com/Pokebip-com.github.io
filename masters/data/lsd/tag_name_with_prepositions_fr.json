@@ -170,6 +170,7 @@
     "51000005": "le mot-clé Plante",
     "51000006": "le mot-clé Glace",
     "51000007": "le mot-clé Combat",
+    "51000008": "le mot-clé Poison",
     "51000009": "le mot-clé Sol",
     "51000010": "le mot-clé Vol",
     "51000011": "le mot-clé Psy",
@@ -177,5 +178,6 @@
     "51000013": "le mot-clé Roche",
     "51000015": "le mot-clé Dragon",
     "51000016": "le mot-clé Ténèbres",
-    "51000017": "le mot-clé Acier"
+    "51000017": "le mot-clé Acier",
+    "51000018": "le mot-clé Fée"
 }

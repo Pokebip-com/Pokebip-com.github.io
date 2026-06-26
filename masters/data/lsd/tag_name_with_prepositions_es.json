@@ -170,6 +170,7 @@
     "51000005": "el distintivo \"Planta\"",
     "51000006": "el distintivo \"Hielo\"",
     "51000007": "el distintivo \"Lucha\"",
+    "51000008": "el distintivo \"Veneno\"",
     "51000009": "el distintivo \"Tierra\"",
     "51000010": "el distintivo \"Volador\"",
     "51000011": "el distintivo \"Psíquico\"",
@@ -177,5 +178,6 @@
     "51000013": "el distintivo \"Roca\"",
     "51000015": "el distintivo \"Dragón\"",
     "51000016": "el distintivo \"Siniestro\"",
-    "51000017": "el distintivo \"Acero\""
+    "51000017": "el distintivo \"Acero\"",
+    "51000018": "el distintivo \"Hada\""
 }

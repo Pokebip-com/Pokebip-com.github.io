@@ -63,6 +63,7 @@
 { "SalonMemorialArtItemId": "1512035", "ArtworkCategory": "No_2000_Plus", "NumberID": "2035", "scheduleId": "8030_1W_Campaign_Photo_FOREVER", "u5": 1, "ImageID": "i151_0002_0035_00", "sort": "-200127", "u8": "0" },
 { "SalonMemorialArtItemId": "1512036", "ArtworkCategory": "No_2000_Plus", "NumberID": "2036", "scheduleId": "8040_1W_Campaign_poke2_FOREVER", "u5": 1, "ImageID": "i151_0002_0038_00", "sort": "-200128", "u8": "0" },
 { "SalonMemorialArtItemId": "1512037", "ArtworkCategory": "No_2000_Plus", "NumberID": "2037", "scheduleId": "8050_1W_Campaign_Photo_FOREVER", "u5": 1, "ImageID": "i151_0002_0037_00", "sort": "-200129", "u8": "0" },
+{ "SalonMemorialArtItemId": "1512038", "ArtworkCategory": "No_2000_Plus", "NumberID": "2038", "scheduleId": "8060_1W_Campaign_poke2_FOREVER", "u5": 1, "ImageID": "i151_0002_0039_00", "sort": "-200130", "u8": "0" },
 { "SalonMemorialArtItemId": "151300010", "ArtworkCategory": "No_3000_Plus", "NumberID": "3000", "scheduleId": "FOREVER", "u5": 1, "ImageID": "i151_0003_0001_00", "sort": "-300101", "u8": "0" },
 { "SalonMemorialArtItemId": "151300020", "ArtworkCategory": "No_3000_Plus", "NumberID": "3001", "scheduleId": "FOREVER", "u5": 1, "ImageID": "i151_0003_0002_00", "sort": "-300102", "u8": "0" },
 { "SalonMemorialArtItemId": "151300030", "ArtworkCategory": "No_3000_Plus", "NumberID": "3002", "scheduleId": "FOREVER", "u5": 1, "ImageID": "i151_0003_0003_00", "sort": "-300103", "u8": "0" },

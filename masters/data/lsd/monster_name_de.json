@@ -404,6 +404,7 @@
     "20041311": "Burmadame",
     "20041600": "Honweisel",
     "20041700": "Pachirisu",
+    "20041800": "Bamelin",
     "20041900": "Bojelin",
     "20042112": "Kinoso",
     "20042311": "Gastrodon",
@@ -434,6 +435,7 @@
     "20045300": "Glibunkel",
     "20045401": "Toxiquak",
     "20045500": "Venuflibis",
+    "20045800": "Mantirps",
     "20045900": "Shnebedeck",
     "20046000": "Rexblisar",
     "20046001": "Rexblisar",
@@ -470,6 +472,7 @@
     "20048711": "Giratina",
     "20048712": "Giratina",
     "20048800": "Cresselia",
+    "20049000": "Manaphy",
     "20049100": "Darkrai",
     "20049211": "Shaymin",
     "20049212": "Shaymin",
@@ -894,5 +897,7 @@
     "2010171100": "Ogerpon",
     "2010180000": "Briduradon",
     "2009840000": "Riesenzahn",
-    "2009900000": "Eisenrad"
+    "2009900000": "Eisenrad",
+    "2009021141": "Salmagnis",
+    "2009040041": "Myriador"
 }

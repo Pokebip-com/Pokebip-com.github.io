@@ -282,7 +282,7 @@
     "override_detail_6080_1_01": "Completa la siguiente ubicación sin\nque debiliten a más de 1 pareja de\ncompis.\n• \"¡Un combate difícil al día!\" de\n\"Evento episódico: Vínculos dorados\".",
     "override_detail_6080_2_01": "Completa ubicaciones con combates\n5 veces con la siguiente formación:\n• Lylia (5.º Aniversario) y Solgaleo",
     "228": "Haz que [Digit:4digits Idx=\"1\" ] pareja[ES:Qty Ref=\"1\" P=\"s\" ] de compis\nalcance[ES:Qty Ref=\"1\" P=\"n\" ] el nivel [Digit:2digits Idx=\"2\" ] del poder\nexcelso.",
-    "229": "Crea una foto en la que salgan al\nmenos [Digit:2digits ] pareja[ES:Qty P=\"s\" ] de compis con los\nsiguientes distintivos:",
+    "229": "Crea una foto en la que salga[ES:Qty P=\"n\" ] al\nmenos [Digit:2digits ] pareja[ES:Qty P=\"s\" ] de compis con los\nsiguientes distintivos:",
     "229_element": "• [Name:TeamSkillTag ]",
     "override_detail_6100_1_01": "Completa \"Evento episódico:\nViajeros del pasado\" en solitario\nuna vez.\n\nNota: Puedes jugar el evento en la\nsección \"Repetidos\".",
     "override_detail_6100_1_02": "Completa \"Fiesta por el Día de Eevee:\nHistorias de Eevee\" en solitario\nuna vez.\n\nNota: Puedes jugar el evento en la\nsección \"Recomendados\".",

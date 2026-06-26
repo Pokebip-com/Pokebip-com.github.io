@@ -1,6 +1,11 @@
 {
   "entries": [
     {
+      "version": "2.70.0",
+      "releaseTimestamp": 1782450000,
+      "hasArchive": true
+    },
+    {
       "version": "2.69.0",
       "releaseTimestamp": 1779858000,
       "hasArchive": true

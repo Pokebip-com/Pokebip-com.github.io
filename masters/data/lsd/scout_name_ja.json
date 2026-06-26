@@ -271,5 +271,11 @@
     "event_8040_3W_MasterTicket_02": "アスナ スペコス 確定Ｂサーチ",
     "event_8040_3W_SuperTicket_03": "スペコス 出現率アップＢサーチ",
     "event_8040_4W_SuperTicket_04": "マスターフェス限定 出現率アップＢサーチ",
-    "event_8050_4W_SuperTicket_05": "マスターフェス限定 出現率アップＢサーチ"
+    "event_8050_4W_SuperTicket_05": "マスターフェス限定 出現率アップＢサーチ",
+    "event_8060_1W_SuperTicket_04": "ショウ シーズン限定 出現率アップＢサーチ",
+    "event_8060_1W_MasterTicket_05": "ショウ シーズン限定 確定Ｂサーチ",
+    "event_8060_1W_SuperTicket_08": "ヒナツ シーズン限定 出現率アップＢサーチ",
+    "event_8060_1W_MasterTicket_09": "ヒナツ シーズン限定 確定Ｂサーチ",
+    "event_8060_2W_SuperTicket_06": "シーズン限定 出現率アップＢサーチ",
+    "event_8060_4W_SuperTicket_05": "マスターフェス限定 出現率アップＢサーチ"
 }

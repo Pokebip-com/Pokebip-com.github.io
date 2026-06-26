@@ -271,5 +271,11 @@
     "event_8040_3W_MasterTicket_02": "Reclutamiento garantizado\nde trajes esp.: Candela",
     "event_8040_3W_SuperTicket_03": "Reclutamiento favorable\nde trajes especiales",
     "event_8040_4W_SuperTicket_04": "Reclutamiento favorable\ndel Pokéfestival maestro",
-    "event_8050_4W_SuperTicket_05": "Reclutamiento favorable\ndel Pokéfestival maestro"
+    "event_8050_4W_SuperTicket_05": "Reclutamiento favorable\ndel Pokéfestival maestro",
+    "event_8060_1W_SuperTicket_04": "Reclutamiento favorable\nde temporada: Kira",
+    "event_8060_1W_MasterTicket_05": "Reclutamiento garantizado\nde temporada: Kira",
+    "event_8060_1W_SuperTicket_08": "Reclutamiento favorable\nde temporada: Sera",
+    "event_8060_1W_MasterTicket_09": "Reclutamiento garantizado\nde temporada: Sera",
+    "event_8060_2W_SuperTicket_06": "Reclutamiento favorable\nde compis de temporada",
+    "event_8060_4W_SuperTicket_05": "Reclutamiento favorable\ndel Pokéfestival maestro"
 }

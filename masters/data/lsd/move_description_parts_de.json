@@ -1026,5 +1026,15 @@
     "998898": "Je mehr die Spannung des Anwenders gesteigert wurde, desto mehr wird die Stärke dieses Angriffs erhöht (um maximal 10).",
     "998897": "Löst ein Mal pro Kampf alle folgenden Effekte aus, wenn dieser Angriff mit einer Attacke erstmals Erfolg hat:",
     "998896": "Verursacht beim Ziel den [Name:ReferencedMessageTag Idx=\"1\" ].",
-    "998895": "Erhöht den [Name:ReferencedMessageTag ] des Anwenders um den 2-fachen Wert dessen, was durch den Einsatz dieser Attacke verbraucht wurde."
+    "998895": "Erhöht den [Name:ReferencedMessageTag ] des Anwenders um den 2-fachen Wert dessen, was durch den Einsatz dieser Attacke verbraucht wurde.",
+    "998894": "Verursacht ein Mal pro Kampf beim Ziel die Effekte Phys.-Att.-Anfälligkeit und Spez.-Att.-Anfälligkeit, wenn dieser Angriff mit einer Attacke erstmals Erfolg hat.",
+    "998893": "Wenn das Guardevoir des Anwenders die Mega-Entwicklung erreicht hat, wird auch der Verbrauch der Attackenleiste, der zum Einsatz dieser Attacke nötig ist, um [Digit:1digit Idx=\"1\" ] gesenkt.",
+    "998892": "Wenn das Guardevoir des Anwenders die Mega-Entwicklung erreicht.",
+    "998891": "Erhöht zusätzlich die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ aller verbündeten Gefährten bei Regen um [Digit:1digit ].",
+    "998890": "Je mehr kampfunfähige Pokémon in deinem Team sind, desto mehr wird die Stärke dieses Angriffs erhöht.",
+    "998889": "Füllt [Digit:1digit ] [DE:Qty S=\"Attackeneinsatzpunkt\" P=\"Attackeneinsatzpunkte\" ] (AEP) für diese Attacke auf, wenn du 2 oder mehr Pokémon in deinem Team hast.",
+    "998888": "Erhöht den Angriff, den Spezial-Angriff und den Fluchtwert aller verbündeten Gefährten um [Digit:1digit ].",
+    "998887": "Wenn das Guardevoir des Anwenders die Mega-Entwicklung erreicht hat, erhöht sich der [Name:ReferencedMessageTag ] des Anwenders auch um [Digit:1digit Idx=\"1\" ].",
+    "998886": "Verbraucht maximal [Digit:1digit ] [DE:Qty S=\"Segment\" P=\"Segmente\" ] der Attackenleiste deines Teams. Je mehr von der Leiste verbraucht wurde, desto mehr werden der Angriff, die Verteidigung, der Spezial-Angriff und die Spezial-Verteidigung aller verbündeten Gefährten erhöht (können um bis zu maximal [Digit:1digit Idx=\"1\" ] erhöht werden).",
+    "998885": "Erhöht den [Name:ReferencedMessageTag ] des Anwenders um 10."
 }

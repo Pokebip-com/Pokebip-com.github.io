@@ -271,5 +271,11 @@
     "event_8040_3W_MasterTicket_02": "Garantierte G-Suche:\nFlavia (Kostüm)",
     "event_8040_3W_SuperTicket_03": "Fokus-\nKostüm-G-Suche",
     "event_8040_4W_SuperTicket_04": "Meisterfestival-\nFokus-G-Suche",
-    "event_8050_4W_SuperTicket_05": "Meisterfestival-\nFokus-G-Suche"
+    "event_8050_4W_SuperTicket_05": "Meisterfestival-\nFokus-G-Suche",
+    "event_8060_1W_SuperTicket_04": "Saisonale Fokus-\nG-Suche: Lumia",
+    "event_8060_1W_MasterTicket_05": "Saisonale Garantierte\nG-Suche: Lumia",
+    "event_8060_1W_SuperTicket_08": "Saisonale Fokus-\nG-Suche: Hinatsu",
+    "event_8060_1W_MasterTicket_09": "Saisonale Garantierte\nG-Suche: Hinatsu",
+    "event_8060_2W_SuperTicket_06": "Saisonale\nFokus-G-Suche",
+    "event_8060_4W_SuperTicket_05": "Meisterfestival-\nFokus-G-Suche"
 }

@@ -170,6 +170,7 @@
     "51000005": "the Grass theme",
     "51000006": "the Ice theme",
     "51000007": "the Fighting theme",
+    "51000008": "the Poison theme",
     "51000009": "the Ground theme",
     "51000010": "the Flying theme",
     "51000011": "the Psychic theme",
@@ -177,5 +178,6 @@
     "51000013": "the Rock theme",
     "51000015": "the Dragon theme",
     "51000016": "the Dark theme",
-    "51000017": "the Steel theme"
+    "51000017": "the Steel theme",
+    "51000018": "the Fairy theme"
 }

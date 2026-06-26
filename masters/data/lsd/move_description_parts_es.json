@@ -1026,5 +1026,15 @@
     "998898": "Cuanto más haya aumentado la determinación del usuario, más aumenta la potencia de este ataque. (El aumento máximo es de 10 niveles).",
     "998897": "Otorga todos los efectos siguientes la primera vez que este movimiento de ataque acierta en cada combate:",
     "998896": "Aplica el [Name:ReferencedMessageTag Idx=\"1\" ] al objetivo.",
-    "998895": "Aumenta el [Name:ReferencedMessageTag ] del usuario el doble del número de niveles consumidos al usar el movimiento."
+    "998895": "Aumenta el [Name:ReferencedMessageTag ] del usuario el doble del número de niveles consumidos al usar el movimiento.",
+    "998894": "Aplica el efecto Vulnerabilidad a físicos y el efecto Vulnerabilidad a especiales al objetivo la primera vez que este movimiento de ataque acierta en cada combate.",
+    "998893": "Si el Gardevoir del usuario ha megaevolucionado, el movimiento también consume [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"punto\" P=\"puntos\" ] menos de la barra de movimientos.",
+    "998892": "Cuando el Gardevoir del usuario megaevoluciona.",
+    "998891": "Además, aumenta el efecto Siguiente Físico ↑ y el efecto Siguiente Especial ↑ de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ] cuando llueve.",
+    "998890": "Cuantos más Pokémon debilitados haya en tu equipo, más aumenta la potencia de este ataque.",
+    "998889": "Recupera [Digit:1digit ] PM de este movimiento cuando tienes dos o más Pokémon en el equipo.",
+    "998888": "Aumenta el Ataque, el Ataque Especial y la Evasión de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+    "998887": "Si el Gardevoir del usuario ha megaevolucionado, también aumenta el [Name:ReferencedMessageTag ] del usuario en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ].",
+    "998886": "Consume hasta [Digit:1digit ] [ES:Qty S=\"punto\" P=\"puntos\" ] de la barra de movimientos del usuario. Cuantos más puntos consuma, más aumenta el Ataque, la Defensa, el Ataque Especial y la Defensa Especial de todos los compis aliados (hasta [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ]).",
+    "998885": "Aumenta el [Name:ReferencedMessageTag ] del usuario en 10 niveles."
 }

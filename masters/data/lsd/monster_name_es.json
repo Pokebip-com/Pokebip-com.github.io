@@ -404,6 +404,7 @@
     "20041311": "Wormadam",
     "20041600": "Vespiquen",
     "20041700": "Pachirisu",
+    "20041800": "Buizel",
     "20041900": "Floatzel",
     "20042112": "Cherrim",
     "20042311": "Gastrodon",
@@ -434,6 +435,7 @@
     "20045300": "Croagunk",
     "20045401": "Toxicroak",
     "20045500": "Carnivine",
+    "20045800": "Mantyke",
     "20045900": "Snover",
     "20046000": "Abomasnow",
     "20046001": "Abomasnow",
@@ -470,6 +472,7 @@
     "20048711": "Giratina",
     "20048712": "Giratina",
     "20048800": "Cresselia",
+    "20049000": "Manaphy",
     "20049100": "Darkrai",
     "20049211": "Shaymin",
     "20049212": "Shaymin",
@@ -894,5 +897,7 @@
     "2010171100": "Ogerpon",
     "2010180000": "Archaludon",
     "2009840000": "Colmilargo",
-    "2009900000": "Ferrodada"
+    "2009900000": "Ferrodada",
+    "2009021141": "Basculegion",
+    "2009040041": "Overqwil"
 }

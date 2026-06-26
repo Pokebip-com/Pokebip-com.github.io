@@ -170,6 +170,7 @@
     "51000005": "del gruppo \"Erba\"",
     "51000006": "del gruppo \"Ghiaccio\"",
     "51000007": "del gruppo \"Lotta\"",
+    "51000008": "del gruppo \"Veleno\"",
     "51000009": "del gruppo \"Terra\"",
     "51000010": "del gruppo \"Volante\"",
     "51000011": "del gruppo \"Psico\"",
@@ -177,5 +178,6 @@
     "51000013": "del gruppo \"Roccia\"",
     "51000015": "del gruppo \"Drago\"",
     "51000016": "del gruppo \"Buio\"",
-    "51000017": "del gruppo \"Acciaio\""
+    "51000017": "del gruppo \"Acciaio\"",
+    "51000018": "del gruppo \"Folletto\""
 }

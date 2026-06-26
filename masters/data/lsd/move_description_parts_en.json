@@ -430,7 +430,7 @@
     "999509": "Lowers the Attack of all opposing sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
     "999508": "Will not consume the move gauge when the terrain is [Name:ReferencedMessageTag ].",
     "999507": "Leaves all opposing sync pairs confused.",
-    "999506": "In addition, raises the [Name:ReferencedMessageTag Idx=\"2\" ] of all allied sync pairs by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when the weather is rainy.",
+    "999506": "In addition, increases the [Name:ReferencedMessageTag Idx=\"2\" ] of all allied sync pairs by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when the weather is rainy.",
     "999505": "Has a chance ([Digit:2digits ]%) of reducing the user’s sync move countdown by one.",
     "999504": "This attack’s power increases when the terrain is [Name:ReferencedMessageTag ].",
     "999503": "Applies the [Name:ReferencedMessageTag ] to the user.",
@@ -1026,5 +1026,15 @@
     "998898": "The more the user’s sync buff is raised, the greater the power of this attack. (The maximum increase is 10 ranks.)",
     "998897": "Grants all of the following effects the first time this attack move is successful each battle:",
     "998896": "Applies the [Name:ReferencedMessageTag Idx=\"1\" ] to the target.",
-    "998895": "Increases the user’s [Name:ReferencedMessageTag ] by double the number of ranks consumed when using this move."
+    "998895": "Increases the user’s [Name:ReferencedMessageTag ] by double the number of ranks consumed when using this move.",
+    "998894": "Applies the Physical Move Break effect and Special Move Break effect to the target the first time this attack move is successful each battle.",
+    "998893": "If the user’s Gardevoir has Mega Evolved, also decreases the amount of move gauge slots needed to use this move by [Digit:1digit Idx=\"1\" ].",
+    "998892": "When the user’s Gardevoir Mega Evolves.",
+    "998891": "In addition, increases the Physical Moves ↑ Next effect and Special Moves ↑ Next effect of all allied sync pairs by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ] when the weather is rainy.",
+    "998890": "The more fainted Pokémon on your team, the greater the power of this attack.",
+    "998889": "Restores [Digit:1digit ] MP for this move when you have two or more Pokémon on your team.",
+    "998888": "Raises the Attack, Sp. Atk, and evasiveness of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "998887": "If the user’s Gardevoir has Mega Evolved, also increases the user’s [Name:ReferencedMessageTag ] by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
+    "998886": "Uses a maximum of [Digit:1digit ] [EN:Qty S=\"slot\" P=\"slots\" ] of the user’s move gauge. The more amount used, the more it raises the Attack, Defense, Sp. Atk, and Sp. Def of all allied sync pairs (can be raised by up to [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] maximum).",
+    "998885": "Increases the user’s [Name:ReferencedMessageTag ] by 10 ranks."
 }

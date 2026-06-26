@@ -170,6 +170,7 @@
     "51000005": "das Pflanzen-Attribut",
     "51000006": "das Eis-Attribut",
     "51000007": "das Kampf-Attribut",
+    "51000008": "das Gift-Attribut",
     "51000009": "das Boden-Attribut",
     "51000010": "das Flug-Attribut",
     "51000011": "das Psycho-Attribut",
@@ -177,5 +178,6 @@
     "51000013": "das Gestein-Attribut",
     "51000015": "das Drachen-Attribut",
     "51000016": "das Unlicht-Attribut",
-    "51000017": "das Stahl-Attribut"
+    "51000017": "das Stahl-Attribut",
+    "51000018": "das Feen-Attribut"
 }

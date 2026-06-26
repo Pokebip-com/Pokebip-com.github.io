@@ -46,5 +46,6 @@
 { "scoutTicketItemNameId": "890000000048", "u2": 2, "scoutTicketItemDescriptionId": "8945", "imageId": "i089_0025_00", "rarity": 9, "scheduleId": "8010_3W_BSearch_2", "u7": 10 },
 { "scoutTicketItemNameId": "890000000049", "u2": 1, "scoutTicketItemDescriptionId": "8925", "imageId": "i089_0023_02", "rarity": 9, "scheduleId": "FOREVER", "u7": 0 },
 { "scoutTicketItemNameId": "890000000050", "u2": 1, "scoutTicketItemDescriptionId": "8939", "imageId": "i089_0024_00", "rarity": 9, "scheduleId": "FOREVER", "u7": 0 },
-{ "scoutTicketItemNameId": "890000000051", "u2": 2, "scoutTicketItemDescriptionId": "8946", "imageId": "i089_0026_00", "rarity": 9, "scheduleId": "8040_1W_BSearch_1_Ticket", "u7": 10 }
+{ "scoutTicketItemNameId": "890000000051", "u2": 2, "scoutTicketItemDescriptionId": "8946", "imageId": "i089_0026_00", "rarity": 9, "scheduleId": "8040_1W_BSearch_1_Ticket", "u7": 10 },
+{ "scoutTicketItemNameId": "890000000052", "u2": 2, "scoutTicketItemDescriptionId": "8947", "imageId": "i090_0003_00", "rarity": 9, "scheduleId": "8060_1W_BSearch_1_Ticket", "u7": 10 }
 ]}
