@@ -1,0 +1,18 @@
+{"entries": [
+{ "gvgEventId": "80101001", "roundNum": 1, "u3": 1, "gvgRoundType": "RegularBattle", "pointsAwarded": 10000, "u6": 2 },
+{ "gvgEventId": "80101001", "roundNum": 2, "u3": 2, "gvgRoundType": "RegularBattle", "pointsAwarded": 20000, "u6": 3 },
+{ "gvgEventId": "80101001", "roundNum": 3, "u3": 3, "gvgRoundType": "RegularBattle", "pointsAwarded": 30000, "u6": 4 },
+{ "gvgEventId": "80101001", "roundNum": 4, "u3": 4, "gvgRoundType": "ExtraBattle", "pointsAwarded": 40000, "u6": 5 },
+{ "gvgEventId": "80101001", "roundNum": 5, "u3": 5, "gvgRoundType": "ExtraBattle", "pointsAwarded": 50000, "u6": 5 },
+{ "gvgEventId": "80101001", "roundNum": 6, "u3": 6, "gvgRoundType": "ExtraBattle", "pointsAwarded": 60000, "u6": 5 },
+{ "gvgEventId": "80101001", "roundNum": 7, "u3": 7, "gvgRoundType": "ExtraBattle", "pointsAwarded": 75000, "u6": 5 },
+{ "gvgEventId": "80101001", "roundNum": 8, "u3": 8, "gvgRoundType": "ExtraBattle", "pointsAwarded": 90000, "u6": 5 },
+{ "gvgEventId": "80301001", "roundNum": 1, "u3": 1, "gvgRoundType": "RegularBattle", "pointsAwarded": 10000, "u6": 2 },
+{ "gvgEventId": "80301001", "roundNum": 2, "u3": 2, "gvgRoundType": "RegularBattle", "pointsAwarded": 35000, "u6": 3 },
+{ "gvgEventId": "80301001", "roundNum": 3, "u3": 3, "gvgRoundType": "RegularBattle", "pointsAwarded": 80000, "u6": 4 },
+{ "gvgEventId": "80301001", "roundNum": 4, "u3": 4, "gvgRoundType": "ExtraBattle", "pointsAwarded": 100000, "u6": 5 },
+{ "gvgEventId": "80301001", "roundNum": 5, "u3": 5, "gvgRoundType": "ExtraBattle", "pointsAwarded": 125000, "u6": 5 },
+{ "gvgEventId": "80301001", "roundNum": 6, "u3": 6, "gvgRoundType": "ExtraBattle", "pointsAwarded": 150000, "u6": 5 },
+{ "gvgEventId": "80301001", "roundNum": 7, "u3": 7, "gvgRoundType": "ExtraBattle", "pointsAwarded": 175000, "u6": 5 },
+{ "gvgEventId": "80301001", "roundNum": 8, "u3": 8, "gvgRoundType": "ExtraBattle", "pointsAwarded": 200000, "u6": 5 }
+]}
