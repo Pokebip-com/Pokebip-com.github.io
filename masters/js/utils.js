@@ -169,6 +169,37 @@ function getPairPrettyPrintWithUrl(trainerId) {
     return `<a href="./duo.html?pair=${trainerId}">${getPairPrettyPrint(trainerId)}</a>`;
 }
 
+function getTrainerUID(t) {
+    const tb = jData.proto.trainerBase.find(tb => tb.id.toString() === t.trainerBaseId.toString());
+    return tb.actorId === "hero" ? "8000_00" : tb.actorId.substring(2, 9);
+}
+
+function getMonsterUID(t, m, variation) {
+    const mon = jData.proto.monster.find(mon => mon.monsterId === m);
+    const mbid = variation === null ? mon.monsterBaseId : getMonsterBaseIdFromActorId(variation.actorId);
+    const mb = jData.proto.monsterBase.find(mb => mb.monsterBaseId.toString() === mbid.toString());
+
+    const dexNumber = mb.dexNumber.toString().padStart(4, "0");
+    const actorVariant = mb.actorVariant.toString().padStart(2, "0");
+    const shinySuffix = mb.isShiny ? "s" : "";
+    let teraTypeSuffix = "";
+    if(variation && variation.form === 7) {
+        const typeId = variation.type > 0 ? variation.type : t.type;
+        teraTypeSuffix = `-${typeId.toString().padStart(2, "0")}`;
+    }
+
+    return `${dexNumber}_${actorVariant}${shinySuffix}${teraTypeSuffix}`;
+}
+
+function getUID(t, m = null, variation = null) {
+    let uid = "";
+    uid = getTrainerUID(t);
+    uid += "-";
+    uid += getMonsterUID(t, m === null ? t.monsterId : m, variation);
+
+    return uid;
+}
+
 function getTrainerName(id) {
     if (jData.lsd.trainerVerboseName[id])
         return jData.lsd.trainerVerboseName[id].replace("\n", " ");

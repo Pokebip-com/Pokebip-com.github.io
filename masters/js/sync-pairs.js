@@ -36,6 +36,7 @@ let syncLevel = 5;
 let maxEnergy = 60;
 
 const NOT_IMPLEMENTED = [];
+const iconErrorSrc = "./data/icons/unknown.png";
 
 class SyncGridShareManager {
 
@@ -219,6 +220,11 @@ function populateSelect() {
             let monsterBaseId = getMonsterBaseIdFromMonsterId(t.monsterId);
             let pokemonActorId = getMonsterActorIdFromBaseId(monsterBaseId);
             data.pokemonImage = `./data/actor/Monster/${pokemonActorId}/${pokemonActorId}_256.png`;
+
+            let uid = getUID(t);
+            data.uid = uid;
+
+            data.icon = `./data/icons/${uid}.png`;
 
             return data;
         }).sort((a, b) => a.text.localeCompare(b.text));
@@ -2416,31 +2422,13 @@ function updateFabIcons(trainerId) {
     const pair = allPairs.find(p => p.value === trainerId);
     if (!pair) return;
 
-    // Create trainer icon wrapper
-    const trainerWrapper = document.createElement("div");
-    trainerWrapper.classList.add("trainer-img");
-
-    const trainerImg = document.createElement("img");
-    trainerImg.src = pair.image;
-    trainerImg.alt = "Trainer";
-    trainerImg.crossOrigin = "anonymous";
-
-    // Apply the same cropping logic as in the modal
-    trainerImg.onload = function () {
-        cropTransparentPixels(trainerImg);
-    };
-
-    trainerWrapper.appendChild(trainerImg);
-    fabPairIcons.appendChild(trainerWrapper);
-
-    // Create Pokémon icon
-    const pokemonImg = document.createElement("img");
-    pokemonImg.classList.add("pokemon-img");
-    pokemonImg.src = pair.pokemonImage;
-    pokemonImg.alt = "Pokémon";
-    pokemonImg.crossOrigin = "anonymous";
-
-    fabPairIcons.appendChild(pokemonImg);
+    const icon = document.createElement("img");
+    icon.loading = "lazy";
+    icon.style.width = "75px";
+    icon.style.height = "75px";
+    icon.src = pair.icon;
+    icon.onerror = () => { if(icon.src !== iconErrorSrc) icon.src = iconErrorSrc; };
+    fabPairIcons.appendChild(icon);
 }
 
 function selectChange(instantScroll = false) {
@@ -2608,30 +2596,14 @@ function renderResults(results) {
         const imagesDiv = document.createElement("div");
         imagesDiv.classList.add("pair-images");
 
-        // Create wrapper for trainer image to contain the scaled image
-        const trainerWrapper = document.createElement("div");
-        trainerWrapper.classList.add("trainer-img");
+        const icon = document.createElement("img");
+        icon.loading = "lazy";
+        icon.src = pair.icon;
+        icon.onerror = () => { if (icon.src !== iconErrorSrc) icon.src = iconErrorSrc; };
+        icon.style.width = "75px";
+        icon.style.height = "75px";
 
-        const trainerImg = document.createElement("img");
-        trainerImg.src = pair.image;
-        trainerImg.alt = pair.text;
-        trainerImg.style.width = "100%";
-        trainerImg.style.height = "100%";
-        trainerImg.style.objectFit = "cover";
-
-        // Dynamically crop trainer image to remove transparent pixels from top
-        trainerImg.onload = function () {
-            cropTransparentPixels(trainerImg);
-        };
-
-        trainerWrapper.appendChild(trainerImg);
-        imagesDiv.appendChild(trainerWrapper);
-
-        const pokemonImg = document.createElement("img");
-        pokemonImg.src = pair.pokemonImage;
-        pokemonImg.alt = "Pokémon";
-        pokemonImg.classList.add("pokemon-img");
-        imagesDiv.appendChild(pokemonImg);
+        imagesDiv.appendChild(icon);
 
         li.appendChild(imagesDiv);
 
