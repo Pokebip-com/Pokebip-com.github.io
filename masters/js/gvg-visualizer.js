@@ -3,7 +3,10 @@ async function getData() {
 
     // PROTO
     jsonCache.preloadProto("Banner");
+    jsonCache.preloadProto("Battle");
     jsonCache.preloadProto("BattleChampionTheme");
+    jsonCache.preloadProto("BattleNpcUnit");
+    jsonCache.preloadProto("BattleParameter");
     jsonCache.preloadProto("EnemyOverwriteParameter");
     jsonCache.preloadProto("EventQuestGroup");
     jsonCache.preloadProto("GvG");
@@ -11,13 +14,16 @@ async function getData() {
     jsonCache.preloadProto("GvGBossRound");
     jsonCache.preloadProto("GvGEnemyOverwrite");
     jsonCache.preloadProto("GvGRound");
+    jsonCache.preloadProto("MonsterBase");
     jsonCache.preloadProto("StoryQuest");
     jsonCache.preloadProto("StoryQuestDetail");
     jsonCache.preloadProto("TrainerBase");
 
     // LSD
+    jsonCache.preloadLsd("abnormal_state");
     jsonCache.preloadLsd("banner_text");
     jsonCache.preloadLsd("champion_battle_theme");
+    jsonCache.preloadLsd("monster_name");
     jsonCache.preloadLsd("motif_type_name");
     jsonCache.preloadLsd("story_quest_name");
 
@@ -58,13 +64,33 @@ printEnemyOverwriteParameters = (enemyOverwriteParameterId, tr) => {
     return tr;
 }
 
-printEnemies = (enemyIds) => {
+printEnemies = (enemyIds, battleParams) => {
     let div = document.createElement("div");
 
-    enemyIds.forEach(enemyId => {
-        let enemy = jData.proto.gvGEnemyOverwrite.find(e => e.gvgEnemyOverwriteId.toString() === enemyId.toString());
+    let npcs = [];
 
-        const enemyType = enemyId.endsWith("1") ? "Center" : "Sides";
+    npcs.push(jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId1));
+    npcs.push(jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId2));
+    npcs.push(jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId3));
+
+    for(let i = 0; i < npcs.length; i++) {
+        let npc = npcs[i];
+        let isCenter = i === 0;
+        let enemyId = enemyIds[isCenter ? 0 : 1];
+        const enemyType = isCenter ? "Center" : "Side";
+        let enemy = jData.proto.gvGEnemyOverwrite.find(e => e.gvgEnemyOverwriteId.toString() === enemyId.toString());
+        let monster = jData.proto.monsterBase.find(mb => mb.actorId === npc.monsterActorId);
+        const monsterName = jData.lsd.monsterName[monster.monsterNameId];
+
+        console.log(npc);
+
+        let h2 = document.createElement("h2");
+        h2.innerText = `${monsterName} (${enemyType})`;
+        div.appendChild(h2);
+
+        let h3 = document.createElement("h3");
+        h3.innerText = "Moves"
+        div.appendChild(h3);
 
         let table = document.createElement("table");
         table.classList.add("bipcode");
@@ -73,111 +99,162 @@ printEnemies = (enemyIds) => {
         let thead = document.createElement("thead");
         let tr = document.createElement("tr");
 
-        let enemyTypeTh = document.createElement("th");
-        enemyTypeTh.innerText = enemyType;
-        enemyTypeTh.colSpan = 24;
-        tr.appendChild(enemyTypeTh);
+        let emptyTh = document.createElement("th");
+        emptyTh.innerText = "";
+        tr.appendChild(emptyTh);
+
+        let moveNameTh = document.createElement("th");
+        moveNameTh.innerText = "Move";
+        tr.appendChild(moveNameTh);
+
+        let moveDescrTh = document.createElement("th");
+        moveDescrTh.innerText = "Description";
+        tr.appendChild(moveDescrTh);
+
+        let moveUsessTh = document.createElement("th");
+        moveUsessTh.innerText = "Uses";
+        tr.appendChild(moveUsessTh);
+
         thead.appendChild(tr);
 
+        let tbody = document.createElement("tbody");
+
+        let moveNum = 0;
+
+        for(let i = 1; i <= 6; i++) {
+            let moveId = npc[`move${i}Id`];
+
+            if(moveId === -1) continue;
+
+            moveNum++;
+
+            let uses = npc[`move${i}Uses`];
+
+            tr = document.createElement("tr");
+
+            let moveNumTh = document.createElement("th");
+            moveNumTh.innerText = moveNum;
+            tr.appendChild(moveNumTh);
+
+            let moveNameTd = document.createElement("td");
+            moveNameTd.innerText = jData.lsd.moveName[moveId];
+            tr.appendChild(moveNameTd);
+
+            let moveDescrTd = document.createElement("td");
+            moveDescrTd.innerText = getMoveDescr(moveId);
+            tr.appendChild(moveDescrTd);
+
+            let moveUsesTd = document.createElement("td");
+            moveUsesTd.innerText = uses;
+            tr.appendChild(moveUsesTd);
+
+            tbody.appendChild(tr);
+        }
+
+        if(npc.syncMoveId !== -1) {
+            tr = document.createElement("tr");
+
+            let moveNumTh = document.createElement("th");
+            moveNumTh.innerText = "Sync";
+            tr.appendChild(moveNumTh);
+
+            let moveNameTd = document.createElement("td");
+            moveNameTd.innerText = jData.lsd.moveName[npc.syncMoveId];
+            tr.appendChild(moveNameTd);
+
+            let moveDescrTd = document.createElement("td");
+            moveDescrTd.innerText = getMoveDescr(npc.syncMoveId);
+            tr.appendChild(moveDescrTd);
+
+            let moveUsesTd = document.createElement("td");
+            moveUsesTd.innerText = "-";
+            tr.appendChild(moveUsesTd);
+
+            tbody.appendChild(tr);
+        }
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+        div.appendChild(table);
+
+        h3 = document.createElement("h3");
+        h3.innerText = "Passives"
+        div.appendChild(h3);
+
+        table = document.createElement("table");
+        table.classList.add("bipcode");
+        table.style.textAlign = "center";
+
+        thead = document.createElement("thead");
         tr = document.createElement("tr");
 
-        let idTh = document.createElement("th");
-        idTh.innerText = "Id";
-        idTh.rowSpan = 2;
-        tr.appendChild(idTh);
+        emptyTh = document.createElement("th");
+        emptyTh.innerText = "";
+        tr.appendChild(emptyTh);
 
-        let u3Th = document.createElement("th");
-        u3Th.innerText = "u3";
-        u3Th.rowSpan = 2;
-        tr.appendChild(u3Th);
+        let passiveName = document.createElement("th");
+        passiveName.innerText = "Passive Name";
+        tr.appendChild(passiveName);
 
-        let u7Th = document.createElement("th");
-        u7Th.innerText = "u7";
-        u7Th.rowSpan = 2;
-        tr.appendChild(u7Th);
+        let passiveDescr = document.createElement("th");
+        passiveDescr.innerText = "Description";
+        tr.appendChild(passiveDescr);
 
-        let u12Th = document.createElement("th");
-        u12Th.innerText = "u12";
-        u12Th.rowSpan = 2;
-        tr.appendChild(u12Th);
+        thead.appendChild(tr);
+        tbody = document.createElement("tbody");
 
-        let u17Th = document.createElement("th");
-        u17Th.innerText = "u17";
-        u17Th.rowSpan = 2;
-        tr.appendChild(u17Th);
+        let passiveNum = 0;
 
-        let u22Th = document.createElement("th");
-        u22Th.innerText = "u22";
-        u22Th.rowSpan = 2;
-        tr.appendChild(u22Th);
+        for(let i = 1; i <= 20; i++) {
+            let passiveId = npc[`passive${i}Id`];
+            if(passiveId === 0) continue;
 
-        let u23Th = document.createElement("th");
-        u23Th.innerText = "u23";
-        u23Th.rowSpan = 2;
-        tr.appendChild(u23Th);
+            passiveNum++;
 
-        let u27Th = document.createElement("th");
-        u27Th.innerText = "u27";
-        u27Th.rowSpan = 2;
-        tr.appendChild(u27Th);
+            tr = document.createElement("tr");
+            let passiveNumTh = document.createElement("th");
+            passiveNumTh.innerText = passiveNum;
+            tr.appendChild(passiveNumTh);
 
-        let u32Th = document.createElement("th");
-        u32Th.innerText = "u32";
-        u32Th.rowSpan = 2;
-        tr.appendChild(u32Th);
+            let passiveNameTd = document.createElement("td");
+            passiveNameTd.innerHTML = getDetailedPassiveSkillName(passiveId) ?? "-";
+            tr.appendChild(passiveNameTd);
 
-        let u37Th = document.createElement("th");
-        u37Th.innerText = "u37";
-        u37Th.rowSpan = 2;
-        tr.appendChild(u37Th);
+            let passiveDescrTd = document.createElement("td");
+            passiveDescrTd.innerText = getPassiveSkillDescr(passiveId) ?? "-";
+            tr.appendChild(passiveDescrTd);
+
+            tbody.appendChild(tr);
+        }
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+        div.appendChild(table);
+
+        h3 = document.createElement("h3");
+        h3.innerText = "Enemy Overwrite Params"
+        div.appendChild(h3);
+
+        table = document.createElement("table");
+        table.classList.add("bipcode");
+        table.style.textAlign = "center";
+
+        thead = document.createElement("thead");
+        tr = document.createElement("tr");
 
         let passive1IdTh = document.createElement("th");
         passive1IdTh.innerText = "passive1";
-        passive1IdTh.rowSpan = 2;
         tr.appendChild(passive1IdTh);
 
         let passive2IdTh = document.createElement("th");
         passive2IdTh.innerText = "passive2";
-        passive2IdTh.rowSpan = 2;
         tr.appendChild(passive2IdTh);
 
         let passive3IdTh = document.createElement("th");
         passive3IdTh.innerText = "passive3";
-        passive3IdTh.rowSpan = 2;
         tr.appendChild(passive3IdTh);
-
-        let enemyOverwriteParameterIdTh = document.createElement("th");
-        enemyOverwriteParameterIdTh.innerText = "enemyOverwriteParameterId";
-        enemyOverwriteParameterIdTh.colSpan = 6;
-        tr.appendChild(enemyOverwriteParameterIdTh);
-
-        let u46Th = document.createElement("th");
-        u46Th.innerText = "u46";
-        u46Th.rowSpan = 2;
-        tr.appendChild(u46Th);
-
-        let u47Th = document.createElement("th");
-        u47Th.innerText = "u47";
-        u47Th.rowSpan = 2;
-        tr.appendChild(u47Th);
-
-        let u48Th = document.createElement("th");
-        u48Th.innerText = "u48";
-        u48Th.rowSpan = 2;
-        tr.appendChild(u48Th);
-
-        let u49Th = document.createElement("th");
-        u49Th.innerText = "u49";
-        u49Th.rowSpan = 2;
-        tr.appendChild(u49Th);
-
-        let u50Th = document.createElement("th");
-        u50Th.innerText = "u50";
-        u50Th.rowSpan = 2;
-        tr.appendChild(u50Th);
-        thead.appendChild(tr);
-
-        tr = document.createElement("tr");
 
         let hpTh = document.createElement("th");
         hpTh.innerText = "HP";
@@ -203,85 +280,109 @@ printEnemies = (enemyIds) => {
         speTh.innerText = "SPE";
         tr.appendChild(speTh);
 
+        let weaknessTh = document.createElement("th");
+        weaknessTh.innerText = "weakness";
+        tr.appendChild(weaknessTh);
+
+        let watchOutOnTheseTh = document.createElement("th");
+        watchOutOnTheseTh.innerText = "Watch out";
+        tr.appendChild(watchOutOnTheseTh);
+
+        let focusOnTheseTh = document.createElement("th");
+        focusOnTheseTh.innerText = "Focus";
+        tr.appendChild(focusOnTheseTh);
         thead.appendChild(tr);
 
-        let tbody = document.createElement("tbody");
+        tbody = document.createElement("tbody");
 
         tr = document.createElement("tr");
 
-        let idTd = document.createElement("td");
-        idTd.innerText = enemy.gvgEnemyOverwriteId;
-        tr.appendChild(idTd);
-
-        let u3Td = document.createElement("td");
-        u3Td.innerText = enemy.u3;
-        tr.appendChild(u3Td);
-
-        let u7Td = document.createElement("td");
-        u7Td.innerText = enemy.u7;
-        tr.appendChild(u7Td);
-
-        let u12Td = document.createElement("td");
-        u12Td.innerText = enemy.u12;
-        tr.appendChild(u12Td);
-
-        let u17Td = document.createElement("td");
-        u17Td.innerText = enemy.u17;
-        tr.appendChild(u17Td);
-
-        let u22Td = document.createElement("td");
-        u22Td.innerText = enemy.u22;
-        tr.appendChild(u22Td);
-
-        let u23Td = document.createElement("td");
-        u23Td.innerText = enemy.u23;
-        tr.appendChild(u23Td);
-
-        let u27Td = document.createElement("td");
-        u27Td.innerText = enemy.u27;
-        tr.appendChild(u27Td);
-
-        let u32Td = document.createElement("td");
-        u32Td.innerText = enemy.u32;
-        tr.appendChild(u32Td);
-
-        let u37Td = document.createElement("td");
-        u37Td.innerText = enemy.u37;
-        tr.appendChild(u37Td);
-
         let passive1IdTd = document.createElement("td");
-        passive1IdTd.innerText = getPassiveSkillName(enemy.passive1Id) ?? "-";
+        if(getPassiveSkillName(enemy.passive1Id) === undefined) passive1IdTd.innerHTML = "-";
+        else {
+            let container = document.createElement("span");
+            container.classList.add("custom-tooltip-container");
+
+            let trigger = document.createElement("span");
+            trigger.classList.add("custom-tooltip-trigger");
+            trigger.innerHTML = getPassiveSkillName(enemy.passive1Id);
+            container.appendChild(trigger);
+
+            let tooltip = document.createElement("span");
+            tooltip.classList.add("custom-tooltip-text");
+            tooltip.innerHTML = getPassiveSkillDescr(enemy.passive1Id);
+            container.appendChild(tooltip);
+
+            passive1IdTd.innerHTML = container.outerHTML;
+        }
         tr.appendChild(passive1IdTd);
 
         let passive2IdTd = document.createElement("td");
-        passive2IdTd.innerText = getPassiveSkillName(enemy.passive2Id) ?? "-";
+        if(getPassiveSkillName(enemy.passive2Id) === undefined) passive2IdTd.innerHTML = "-";
+        else {
+            let container = document.createElement("span");
+            container.classList.add("custom-tooltip-container");
+
+            let trigger = document.createElement("span");
+            trigger.classList.add("custom-tooltip-trigger");
+            trigger.innerHTML = getPassiveSkillName(enemy.passive2Id);
+            container.appendChild(trigger);
+
+            let tooltip = document.createElement("span");
+            tooltip.classList.add("custom-tooltip-text");
+            tooltip.innerHTML = getPassiveSkillDescr(enemy.passive2Id);
+            container.appendChild(tooltip);
+
+            passive2IdTd.innerHTML = container.outerHTML;
+        }
         tr.appendChild(passive2IdTd);
 
         let passive3IdTd = document.createElement("td");
-        passive3IdTd.innerText = getPassiveSkillName(enemy.passive3Id) ?? "-";
+        if(getPassiveSkillName(enemy.passive3Id) === undefined) passive3IdTd.innerHTML = "-";
+        else {
+            let container = document.createElement("span");
+            container.classList.add("custom-tooltip-container");
+
+            let trigger = document.createElement("span");
+            trigger.classList.add("custom-tooltip-trigger");
+            trigger.innerHTML = getPassiveSkillName(enemy.passive3Id);
+            container.appendChild(trigger);
+
+            let tooltip = document.createElement("span");
+            tooltip.classList.add("custom-tooltip-text");
+            tooltip.innerHTML = getPassiveSkillDescr(enemy.passive3Id);
+            container.appendChild(tooltip);
+
+            passive3IdTd.innerHTML = container.outerHTML;
+        }
         tr.appendChild(passive3IdTd);
 
         tr = printEnemyOverwriteParameters(enemy.enemyOverwriteParameterId, tr);
 
-        let u46Td = document.createElement("td");
-        u46Td.innerText = enemy.u46;
-        tr.appendChild(u46Td);
+        let weaknessTd = document.createElement("td");
+        weaknessTd.innerText = jData.lsd.motifTypeName[enemy.weakness];
+        tr.appendChild(weaknessTd);
 
-        let u47Td = document.createElement("td");
-        u47Td.innerText = enemy.u47;
-        tr.appendChild(u47Td);
+        let watchOutTd = document.createElement("td");
+        for(let i = 1; i <= 3; i++) {
+            if(enemy[`abnormalStateWatchOut${i}`] !== "-1") {
+                watchOutTd.innerText !== "" ? watchOutTd.innerText += ", " : "";
+                watchOutTd.innerText += jData.lsd.abnormalState[enemy[`abnormalStateWatchOut${i}`]];
+            }
+        }
+        watchOutTd.innerText = watchOutTd.innerText.length > 0 ? watchOutTd.innerText : "-";
+        tr.appendChild(watchOutTd);
 
-        let u48Td = document.createElement("td");
-        u48Td.innerText = enemy.u48;
-        tr.appendChild(u48Td);
+        let focusOnTheseTd = document.createElement("td");
+        for(let i = 1; i <= 2; i++) {
+            if(enemy[`abnormalStateFocus${i}`] !== "-1") {
+                focusOnTheseTd.innerText !== "" ? focusOnTheseTd.innerText += ", " : "";
+                focusOnTheseTd.innerText += jData.lsd.abnormalState[enemy[`abnormalStateFocus${i}`]];
+            }
+        }
 
-        let u49Td = document.createElement("td");
-        u49Td.innerText = enemy.u49;
-        tr.appendChild(u49Td);
-
-        let u50Td = document.createElement("td");
-        u50Td.innerText = enemy.u50;
-        tr.appendChild(u50Td);
+        focusOnTheseTd.innerText = focusOnTheseTd.innerText.length > 0 ? focusOnTheseTd.innerText : "-";
+        tr.appendChild(focusOnTheseTd);
 
         tbody.appendChild(tr);
 
@@ -294,7 +395,9 @@ printEnemies = (enemyIds) => {
 
         div.appendChild(table);
         div.appendChild(document.createElement("br"));
-    });
+    }
+
+    div.appendChild(document.createElement("hr"));
 
     return div;
 }
@@ -307,6 +410,8 @@ printRound = (roundId, themeId, roundNum) => {
     const storyQuest = jData.proto.storyQuest.find(sq => sq.storyQuestId.toString() === bossRound.storyQuestId.toString());
     const storyQuestDetail = jData.proto.storyQuestDetail.find(sqd => sqd.storyQuestId.toString() === storyQuest.storyQuestId.toString());
     const questName = jData.lsd.storyQuestName[storyQuest.questNameId];
+    const battle = jData.proto.battle.find(b => b.battleId === storyQuestDetail.battleIds[0]);
+    const battleParams = jData.proto.battleParameter.find(bp => bp.battleParameterId === battle.battleParameterId);
 
     let h4 = document.createElement("h4");
     h4.innerHTML = `Cycle ${roundNum} - ${questName} (${roundId})`;
@@ -329,7 +434,7 @@ printRound = (roundId, themeId, roundNum) => {
     }
 
 
-    div.appendChild(printEnemies(bossRound.gvgEnemyOverwriteIds));
+    div.appendChild(printEnemies(bossRound.gvgEnemyOverwriteIds, battleParams));
 
     return div;
 }
