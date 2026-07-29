@@ -41,7 +41,7 @@
     "39": "아래의 버디즈를 Lv.[Digit:3digits ] 이상으로 만들자",
     "26_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
     "27_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
-    "28_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
+    "28_element": "・[Name:TrainerNameAndType ]&\n　[Name:PokemonName ]",
     "29_1": "[Name:QuestTypeTitle ][Kor:Particle char=\"wo\" ]\n[Digit:6digits ]회 클리어하자",
     "29_2": "[Name:QuestTypeTitle ]\n([Name:QuestDifficulty ])(을)를\n[Digit:6digits ]회 클리어하자",
     "30_0": "[Name:Type ]타입의 버디즈를 [Digit:3digits ] 편성하여\n\"[Name:QuestTitle ]\"[Kor:Particle char=\"wo\" ]\n[Digit:6digits Idx=\"1\" ]회 클리어하자",
@@ -57,7 +57,7 @@
     "33_2": "대수련을 [Digit:6digits ]회 클리어하자",
     "38_1": "",
     "38_2": "",
-    "39_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
+    "39_element": "・[Name:TrainerNameAndType ]&\n　[Name:PokemonName ]",
     "40_0": "\"[Name:QuestTitle ]\"에서\n버디즈기술을 합계 [Digit:6digits ]회\n사용하자 (배틀을 클리어했을 때만 카운트)",
     "40_1": "[Name:QuestPlayType ]의\n\"[Name:QuestTitle ]\"에서\n버디즈기술을 합계 [Digit:6digits ]회\n사용하자 (배틀을 클리어했을 때만 카운트)",
     "40_2": "[Name:QuestPlayType ]의\n\"[Name:QuestTitle ]\"\n([Name:QuestDifficulty ])에서\n버디즈기술을 합계 [Digit:6digits ]회\n사용하자 (배틀을 클리어했을 때만 카운트)",
@@ -107,9 +107,9 @@
     "55": "아래의 버디즈를 편성하여\n수련의 [Name:QuestDifficulty ](을)를\n[Digit:6digits ]회 클리어하자",
     "55_element": "・[Name:TrainerName ]&\n　[Name:PokemonName ]",
     "57": "아래의 버디즈를 편성하여\n배틀이 있는 에리어를\n[Digit:6digits ]회 클리어하자",
-    "57_element": "・[Name:TrainerName ]&\n　[Name:PokemonName ]",
+    "57_element": "・[Name:TrainerNameAndType ]&\n　[Name:PokemonName ]",
     "58": "아래의 버디즈로\n합계 [Digit:10digits ] 데미지를 주자\n(배틀을 클리어했을 때만 카운트)",
-    "58_element": "・[Name:TrainerName ]&\n　[Name:PokemonName ]",
+    "58_element": "・[Name:TrainerNameAndType ]&\n　[Name:PokemonName ]",
     "60": "아래 타입의 버디즈로\n기술을 합계 [Digit:6digits ]회 사용하자\n(배틀을 클리어했을 때만 카운트)",
     "60_element": "・[Name:Type ]",
     "61": "아래 타입의 버디즈로 효과가 굉장한 공격을\n합계 [Digit:6digits ]회 사용하자\n(배틀을 클리어했을 때만 카운트)",
@@ -375,5 +375,7 @@
     "override_detail_8030_1_04": "아래 중 하나의 아카데미 이벤트를 총 4회 클리어하자\n\n・아카데미 이벤트 : 파시오 아카데미 축제 준비!\n・아카데미 이벤트 : 친해지기 프로그램!?\n・아카데미 이벤트 : 파시오 아카데미 개교!\n\n※클리어 횟수는 아카데미 이벤트를 한차례 클리어한 시점에 반영됩니다",
     "override_detail_8030_1_05": "아래 중 하나의 아카데미 이벤트를 총 5회 클리어하자\n\n・아카데미 이벤트 : 파시오 아카데미 축제 준비!\n・아카데미 이벤트 : 친해지기 프로그램!?\n・아카데미 이벤트 : 파시오 아카데미 개교!\n\n※클리어 횟수는 아카데미 이벤트를 한차례 클리어한 시점에 반영됩니다",
     "override_detail_8030_1_06": "\"매일 도전 지방 배틀!\"을 3회 클리어하자",
-    "override_detail_8040_1_01": "특별 이벤트 : 파시오 슈퍼 스페셜 매치에서\n\"VS 테사\"를 1회 클리어하자"
+    "override_detail_8040_1_01": "특별 이벤트 : 파시오 슈퍼 스페셜 매치에서\n\"VS 테사\"를 1회 클리어하자",
+    "override_detail_8070_1_01": "Lv.140 이상의 버디즈를 3종류 동료로 만들자",
+    "override_detail_8070_1_02": "Lv.140 이상의 버디즈를 6종류 동료로 만들자"
 }

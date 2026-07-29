@@ -2592,5 +2592,19 @@
     "p997377": "자신의 팀에 있는 포켓몬이 1마리뿐일 때는\n기술이나 버디즈기술의 위력이 오른다",
     "p997376": "비가 오는 날씨일 때는\n같은 편 버디즈 전원의 기술의 위력이 오른다",
     "p997375": "처음 기술이 성공했을 때만\n같은 편 버디즈 전원을 [Name:ReferencedMessageTag Idx=\"1\" ] 상태로 만든다",
-    "p997374": "자신의 팀의 같은 편이 기절 상태가 되었을 때\n자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 10단계 오른다"
+    "p997374": "자신의 팀의 같은 편이 기절 상태가 되었을 때\n자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 10단계 오른다",
+    "p997373": "같은 편 전원의 필드가\n물리데미지경감 상태나 특수데미지경감 상태일 때는\n기술게이지가 빨리 채워진다",
+    "p997372": "\"[Name:MoveId Idx=\"19680\" ]\"의 횟수가 처음\n0이 되었을 때만\n같은 편 버디즈 전원의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ]\n[Digit:1digit Idx=\"1\" ]단계 오른다",
+    "p997371": "처음 버디즈기술을 사용했을 때만\n상대 버디즈 전원을 [Name:ReferencedMessageTag ] 상태로 만든다",
+    "p997370": "상대를 대상으로 하는 버디즈기술이 성공했을 때\n상대를 바인드 상태로 만든다",
+    "p997369": "처음 트레이너가 기술을 사용했을 때만\n자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 오른다",
+    "p997368": "등장했을 때\n같은 편 버디즈 전원의 공격과 특수공격이 [Digit:1digit ]단계 오른다",
+    "p997367": "처음 등장했을 때만\n자신을 [Name:ReferencedMessageTag Idx=\"1\" ] 상태로 만든다",
+    "p997366": "버디즈기술을 사용한 뒤\n자신의 올라간 [Name:ReferencedMessageTag ][Kor:Particle char=\"wo\" ] 모두 소비한다\n소비한 만큼 자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] 오른다",
+    "p997365": "자신의 팀이 버디즈기술을 사용한 뒤\n자신의 \"[Name:MoveId Idx=\"8216\" ]\"의 횟수를 1 줄이고\n아래의 모든 효과를 발휘한다",
+    "p997364": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ]\n[Digit:1digit Idx=\"3\" ]단계 오른다",
+    "p997363": "자신이 같은 편 전원의 필드를\n[Name:ReferencedMessageTag ]로 만들었을 때\n같은 편 전원의 필드를 물리데미지경감 상태와\n특수데미지경감 상태로 만든다",
+    "p997362": "자신의 팀이 버디즈기술을 사용한 뒤\n자신의 \"[Name:MoveId Idx=\"8215\" ]\"의 횟수를 1 줄이고\n아래의 모든 효과를 발휘한다",
+    "p997361": "처음 버디즈기술을 사용했을 때만\n상대 버디즈 전원을 [Name:ReferencedMessageTag Idx=\"2\" ] 상태로 만든다",
+    "p997360": "\"[Name:MoveId Idx=\"8216\" ]\"의 횟수가 처음 0이 되었을 때만\n그 기술의 횟수를 [Digit:1digit ] 회복한다"
 }

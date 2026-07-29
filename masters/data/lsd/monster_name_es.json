@@ -188,6 +188,7 @@
     "20015100": "Mew",
     "20015200": "Chikorita",
     "20015300": "Bayleef",
+    "20015400": "Meganium",
     "20015401": "Meganium",
     "20015500": "Cyndaquil",
     "20015600": "Quilava",
@@ -225,6 +226,7 @@
     "20020200": "Wobbuffet",
     "20020201": "Wobbuffet",
     "20020300": "Girafarig",
+    "20020301": "Girafarig",
     "20020500": "Forretress",
     "20020801": "Steelix",
     "20020851": "Mega-Steelix",
@@ -899,5 +901,7 @@
     "2009840000": "Colmilargo",
     "2009900000": "Ferrodada",
     "2009021141": "Basculegion",
-    "2009040041": "Overqwil"
+    "2009040041": "Overqwil",
+    "2001545100": "Mega-Meganium",
+    "2001605100": "Mega-Feraligatr"
 }

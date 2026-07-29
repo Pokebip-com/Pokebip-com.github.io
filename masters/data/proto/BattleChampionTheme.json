@@ -45,5 +45,11 @@
 { "battleChampionThemeId": 80100016, "championBattleThemeName": "gvg_theme_8010_009", "battleChampionRuleIds": [ 46, 0, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
 { "battleChampionThemeId": 80100017, "championBattleThemeName": "gvg_theme_8010_009", "battleChampionRuleIds": [ 47, 0, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
 { "battleChampionThemeId": 80100018, "championBattleThemeName": "gvg_theme_8010_009", "battleChampionRuleIds": [ 48, 0, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
-{ "battleChampionThemeId": 80300001, "championBattleThemeName": "damage_challenge_theme_8030_001", "battleChampionRuleIds": [ 49, 0, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] }
+{ "battleChampionThemeId": 80300001, "championBattleThemeName": "damage_challenge_theme_8030_001", "battleChampionRuleIds": [ 49, 0, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80700001, "championBattleThemeName": "gvg_theme_8070_001", "battleChampionRuleIds": [ 31, 0, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80700004, "championBattleThemeName": "gvg_theme_8070_004", "battleChampionRuleIds": [ 34, 0, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80700007, "championBattleThemeName": "gvg_theme_8070_007", "battleChampionRuleIds": [ 37, 0, 0 ], "params": [ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80700101, "championBattleThemeName": "gvg_theme_8070_101", "battleChampionRuleIds": [ 31, 35, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80700104, "championBattleThemeName": "gvg_theme_8070_104", "battleChampionRuleIds": [ 34, 35, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80700107, "championBattleThemeName": "gvg_theme_8070_107", "battleChampionRuleIds": [ 37, 35, 0 ], "params": [ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] }
 ]}

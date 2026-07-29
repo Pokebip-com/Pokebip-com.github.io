@@ -16,8 +16,8 @@
     "300200": "Der Passio-Arenakampf endet in [Digit:2digits ] [DE:Qty S=\"Tag\" P=\"Tagen\" ].",
     "300300": "Der Passio-Arenakampf hat begonnen!",
     "300400": "Der Passio-Arenakampf ist zu Ende!",
-    "300500": "Die Rangliste des Passio-Arenakampfes ist da!\n„[Name:GymName ]“ erreichte Rang „[Name:GvGRank ]“!",
-    "300510": "Die Rangliste des Passio-Arenakampfes ist da!\n„[Name:GymName ]“ hat nicht teilgenommen!",
+    "300500": "Die Rangliste des Passio-Arenakampfes ist da!\nArena „[Name:GymName ]“ erreichte Rang „[Name:GvGRank ]“!",
+    "300510": "Die Rangliste des Passio-Arenakampfes ist da!\nArena „[Name:GymName ]“ hat nicht teilgenommen.",
     "300600": "Die [Digit:2digits ]. Runde hat begonnen!",
     "300700": "Die Zusatzkämpfe haben begonnen!",
     "300800": "Die [Digit:2digits ]. Kampfrunde gegen [Name:TrainerName ]\nwurde abgeschlossen!"

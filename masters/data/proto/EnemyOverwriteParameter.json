@@ -37,6 +37,13 @@
 { "enemyOverwriteParameterId": "1506000600", "hp": 14192640, "atk": 2304, "def": 83, "spa": 2304, "spd": 83, "spe": 67 },
 { "enemyOverwriteParameterId": "1506000700", "hp": 17962560, "atk": 2304, "def": 83, "spa": 2304, "spd": 83, "spe": 67 },
 { "enemyOverwriteParameterId": "1506000800", "hp": 22176000, "atk": 2304, "def": 83, "spa": 2304, "spd": 83, "spe": 67 },
+{ "enemyOverwriteParameterId": "1507000900", "hp": 26832960, "atk": 2304, "def": 83, "spa": 2304, "spd": 83, "spe": 67 },
+{ "enemyOverwriteParameterId": "1507001000", "hp": 31933440, "atk": 2880, "def": 83, "spa": 2880, "spd": 83, "spe": 67 },
+{ "enemyOverwriteParameterId": "1507001100", "hp": 37477440, "atk": 2880, "def": 83, "spa": 2880, "spd": 83, "spe": 67 },
+{ "enemyOverwriteParameterId": "1507001200", "hp": 43464960, "atk": 2880, "def": 83, "spa": 2880, "spd": 83, "spe": 67 },
+{ "enemyOverwriteParameterId": "1507001300", "hp": 49896000, "atk": 3456, "def": 83, "spa": 3456, "spd": 83, "spe": 67 },
+{ "enemyOverwriteParameterId": "1507001400", "hp": 56770560, "atk": 3456, "def": 83, "spa": 3456, "spd": 83, "spe": 67 },
+{ "enemyOverwriteParameterId": "1507001500", "hp": 64088640, "atk": 3456, "def": 83, "spa": 3456, "spd": 83, "spe": 67 },
 { "enemyOverwriteParameterId": "2001000100", "hp": 760, "atk": 500, "def": 83, "spa": 500, "spd": 83, "spe": 204 },
 { "enemyOverwriteParameterId": "2001000200", "hp": 1378, "atk": 592, "def": 83, "spa": 592, "spd": 83, "spe": 204 },
 { "enemyOverwriteParameterId": "2001000300", "hp": 1996, "atk": 684, "def": 83, "spa": 684, "spd": 83, "spe": 204 },
@@ -74,5 +81,12 @@
 { "enemyOverwriteParameterId": "2506000500", "hp": 5433120, "atk": 2304, "def": 83, "spa": 2304, "spd": 83, "spe": 204 },
 { "enemyOverwriteParameterId": "2506000600", "hp": 7096320, "atk": 2304, "def": 83, "spa": 2304, "spd": 83, "spe": 204 },
 { "enemyOverwriteParameterId": "2506000700", "hp": 8981280, "atk": 2304, "def": 83, "spa": 2304, "spd": 83, "spe": 204 },
-{ "enemyOverwriteParameterId": "2506000800", "hp": 11088000, "atk": 2304, "def": 83, "spa": 2304, "spd": 83, "spe": 204 }
+{ "enemyOverwriteParameterId": "2506000800", "hp": 11088000, "atk": 2304, "def": 83, "spa": 2304, "spd": 83, "spe": 204 },
+{ "enemyOverwriteParameterId": "2507000900", "hp": 13416480, "atk": 2304, "def": 83, "spa": 2304, "spd": 83, "spe": 204 },
+{ "enemyOverwriteParameterId": "2507001000", "hp": 15966720, "atk": 2880, "def": 83, "spa": 2880, "spd": 83, "spe": 204 },
+{ "enemyOverwriteParameterId": "2507001100", "hp": 18738720, "atk": 2880, "def": 83, "spa": 2880, "spd": 83, "spe": 204 },
+{ "enemyOverwriteParameterId": "2507001200", "hp": 21732480, "atk": 2880, "def": 83, "spa": 2880, "spd": 83, "spe": 204 },
+{ "enemyOverwriteParameterId": "2507001300", "hp": 24948000, "atk": 3456, "def": 83, "spa": 3456, "spd": 83, "spe": 204 },
+{ "enemyOverwriteParameterId": "2507001400", "hp": 28385280, "atk": 3456, "def": 83, "spa": 3456, "spd": 83, "spe": 204 },
+{ "enemyOverwriteParameterId": "2507001500", "hp": 32044320, "atk": 3456, "def": 83, "spa": 3456, "spd": 83, "spe": 204 }
 ]}

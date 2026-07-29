@@ -41,7 +41,7 @@
     "39": "讓下列拍組達到Lv.[Digit:3digits ]以上",
     "26_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
     "27_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
-    "28_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
+    "28_element": "・[Name:TrainerNameAndType ]＆\n　[Name:PokemonName ]",
     "29_1": "挑戰[Name:QuestTypeTitle ]並成功過關[Digit:6digits ]次",
     "29_2": "挑戰[Name:QuestTypeTitle ]（[Name:QuestDifficulty ]）並成功過關[Digit:6digits ]次",
     "30_0": "用[Digit:3digits ]對[Name:Type ]屬性的拍組編制隊伍，挑戰「[Name:QuestTitle ]」並過關[Digit:6digits Idx=\"1\" ]次",
@@ -57,7 +57,7 @@
     "33_2": "挑戰大修練並成功過關[Digit:6digits ]次",
     "38_1": "",
     "38_2": "",
-    "39_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
+    "39_element": "・[Name:TrainerNameAndType ]＆\n　[Name:PokemonName ]",
     "40_0": "在「[Name:QuestTitle ]」使出總計[Digit:6digits ]次拍組招式（僅有對戰過關時列入計算）",
     "40_1": "在[Name:QuestPlayType ]的「[Name:QuestTitle ]」使出總計[Digit:6digits ]次拍組招式（僅有對戰過關時列入計算）",
     "40_2": "在[Name:QuestPlayType ]的「[Name:QuestTitle ]」（[Name:QuestDifficulty ]）使出總計[Digit:6digits ]次拍組招式（僅有對戰過關時列入計算）",
@@ -107,9 +107,9 @@
     "55": "用下列的拍組編制隊伍，\n挑戰修練的[Name:QuestDifficulty ]\n並成功過關[Digit:6digits ]次",
     "55_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
     "57": "用下列的拍組編制隊伍，\n挑戰有對戰的區域\n並成功過關[Digit:6digits ]次",
-    "57_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
+    "57_element": "・[Name:TrainerNameAndType ]＆\n　[Name:PokemonName ]",
     "58": "用下列的拍組達成總計[Digit:10digits ]的傷害（僅有對戰過關時列入計算）",
-    "58_element": "・[Name:TrainerName ]＆\n　[Name:PokemonName ]",
+    "58_element": "・[Name:TrainerNameAndType ]＆\n　[Name:PokemonName ]",
     "60": "用下列屬性的拍組使出總計[Digit:6digits ]次招式（僅有對戰過關時列入計算）",
     "60_element": "・[Name:Type ]屬性",
     "61": "用下列屬性的拍組使出總計[Digit:6digits ]次效果絕佳的攻擊（僅有對戰過關時列入計算）",
@@ -375,5 +375,7 @@
     "override_detail_8030_1_04": "成功過關下列任一學院活動共４次\n\n・學院活動「帕希歐校慶　準備篇！」\n・學院活動「增進友誼的程式！？」\n・學院活動「帕希歐學院開學！！」\n\n※過關次數會在完整地成功過關學院活動時列入計算",
     "override_detail_8030_1_05": "成功過關下列任一學院活動共５次\n\n・學院活動「帕希歐校慶　準備篇！」\n・學院活動「增進友誼的程式！？」\n・學院活動「帕希歐學院開學！！」\n\n※過關次數會在完整地成功過關學院活動時列入計算",
     "override_detail_8030_1_06": "成功過關「每日挑戰：地區對戰！」３次",
-    "override_detail_8040_1_01": "成功過關特別活動：帕希歐超級特別模擬戰的「ＶＳ　也慈」1次"
+    "override_detail_8040_1_01": "成功過關特別活動：帕希歐超級特別模擬戰的「ＶＳ　也慈」1次",
+    "override_detail_8070_1_01": "與３對Lv.140以上的拍組成為夥伴",
+    "override_detail_8070_1_02": "與６對Lv.140以上的拍組成為夥伴"
 }

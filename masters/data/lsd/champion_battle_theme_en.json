@@ -37,5 +37,11 @@
     "gvg_theme_8010_007": "Ally move gauge\nmaximum –2",
     "gvg_theme_8010_008": "The move gauge increases slower for allies",
     "gvg_theme_8010_009": "Opponents won’t take damage from\nattacks from sync pairs that don’t have\nthe designated theme(s)",
-    "damage_challenge_theme_8030_001": "Field effects are permanent"
+    "damage_challenge_theme_8030_001": "Field effects are permanent",
+    "gvg_theme_8070_001": "Zero physical damage",
+    "gvg_theme_8070_004": "Zero damage when\nunaffected",
+    "gvg_theme_8070_007": "Ally move gauge max -2",
+    "gvg_theme_8070_101": "Zero physical damage;\nzero damage when not\nsuper effective",
+    "gvg_theme_8070_104": "Zero damage when\nunaffected; zero damage\nwhen not super effective",
+    "gvg_theme_8070_107": "Ally move gauge max -2;\nzero damage when not\nsuper effective"
 }

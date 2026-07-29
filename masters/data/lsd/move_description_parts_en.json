@@ -1036,5 +1036,19 @@
     "998888": "Raises the Attack, Sp. Atk, and evasiveness of all allied sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
     "998887": "If the user’s Gardevoir has Mega Evolved, also increases the user’s [Name:ReferencedMessageTag ] by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ].",
     "998886": "Uses a maximum of [Digit:1digit ] [EN:Qty S=\"slot\" P=\"slots\" ] of the user’s move gauge. The more amount used, the more it raises the Attack, Defense, Sp. Atk, and Sp. Def of all allied sync pairs (can be raised by up to [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] maximum).",
-    "998885": "Increases the user’s [Name:ReferencedMessageTag ] by 10 ranks."
+    "998885": "Increases the user’s [Name:ReferencedMessageTag ] by 10 ranks.",
+    "998884": "Lowers the target’s [Name:ReferencedMessageTag Idx=\"6\" ] by [Digit:1digit Idx=\"7\" ] stat [EN:Qty Ref=\"7\" S=\"rank\" P=\"ranks\" ].",
+    "998883": "Turns the field of play’s zone into a [Name:ReferencedMessageTag Idx=\"2\" ] the first time this attack move is successful each battle.",
+    "998882": "In addition, lowers the target’s [Name:ReferencedMessageTag Idx=\"5\" ] by [Digit:1digit Idx=\"6\" ] stat [EN:Qty Ref=\"6\" S=\"rank\" P=\"ranks\" ] when the [Name:ReferencedMessageTag Idx=\"4\" ] applies to the allied field of play.",
+    "998881": "In addition, lowers the target’s [Name:ReferencedMessageTag Idx=\"8\" ] by [Digit:1digit Idx=\"9\" ] stat [EN:Qty Ref=\"9\" S=\"rank\" P=\"ranks\" ] when the [Name:ReferencedMessageTag Idx=\"7\" ] applies to the allied field of play.",
+    "998880": "When a Kalos Circle is applied to the allied field of play.",
+    "998879": "When there are no longer any Kalos Circles applied to the allied field of play.",
+    "998878": "The preparation period is skipped when the weather is sunny or if the user’s Meganium has Mega Evolved, and the user will attack right away.",
+    "998877": "This attack’s power increases 50% when the Physical Damage Reduction effect applies to the allied field of play.\nThis attack’s power increases 50% when the Special Damage Reduction effect applies to the allied field of play.\n(This attack’s power is doubled if both the Physical Damage Reduction effect and Special Damage Reduction effect apply to the allied field of play.)",
+    "998876": "If the user’s Feraligatr has Mega Evolved, also increases this attack’s power by 50%.",
+    "998875": "If the remaining MP for the user’s [Name:MoveId Idx=\"19680\" ] is [Digit:1digit ] or more when attacking with this move, reduces those MP by [Digit:1digit ] and grants all of the following effects:",
+    "998874": "Raises the user’s [Name:ReferencedMessageTag Idx=\"7\" ] by [Digit:1digit Idx=\"8\" ] stat [EN:Qty Ref=\"8\" S=\"rank\" P=\"ranks\" ].",
+    "998873": "Raises the user’s [Name:ReferencedMessageTag Idx=\"10\" ] by [Digit:1digit Idx=\"11\" ] stat [EN:Qty Ref=\"11\" S=\"rank\" P=\"ranks\" ].",
+    "998872": "Become Mega Meganium until the end of battle.",
+    "998871": "Become Mega Feraligatr until the end of battle."
 }

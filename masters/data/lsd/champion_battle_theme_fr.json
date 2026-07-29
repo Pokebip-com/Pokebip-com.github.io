@@ -37,5 +37,11 @@
     "gvg_theme_8010_007": "Jauge Capacité des alliés\nréduite de deux segments",
     "gvg_theme_8010_008": "Le remplissage de la Jauge Capacité des Duos\nalliés est plus lent",
     "gvg_theme_8010_009": "Duos qui n'ont pas les mots-clés indiqués :\naucun dégât de capacité offensive\ninfligé aux ennemis",
-    "damage_challenge_theme_8030_001": "Les effets sur le terrain durent tout le combat."
+    "damage_challenge_theme_8030_001": "Les effets sur le terrain durent tout le combat.",
+    "gvg_theme_8070_001": "0 dégât physique",
+    "gvg_theme_8070_004": "Sans altération de statut\nou tourment : 0 dégât",
+    "gvg_theme_8070_007": "Jauge Capacité des alliés\nréduite de deux segments",
+    "gvg_theme_8070_101": "0 dégât physique ; non\nsuper efficace 0 dégât",
+    "gvg_theme_8070_104": "Sans altération de statut\nou tourment : 0 dégât ;\nnon super efficace 0 dégât",
+    "gvg_theme_8070_107": "Jauge Capacité des alliés\nréduite de deux segments ;\nnon super efficace 0 dégât"
 }

@@ -490,5 +490,10 @@
 { "salonTopicId": 20000472, "u1": 1, "salonTopicCategoryId": 3, "salonTopicName": "20000472" },
 { "salonTopicId": 20000473, "u1": 1, "salonTopicCategoryId": 4, "salonTopicName": "20000064" },
 { "salonTopicId": 20000474, "u1": 1, "salonTopicCategoryId": 5, "salonTopicName": "20000474" },
-{ "salonTopicId": 20000475, "u1": 1, "salonTopicCategoryId": 7, "salonTopicName": "20000475" }
+{ "salonTopicId": 20000475, "u1": 1, "salonTopicCategoryId": 7, "salonTopicName": "20000475" },
+{ "salonTopicId": 20000476, "u1": 1, "salonTopicCategoryId": 3, "salonTopicName": "20000476" },
+{ "salonTopicId": 20000477, "u1": 1, "salonTopicCategoryId": 3, "salonTopicName": "20000477" },
+{ "salonTopicId": 20000478, "u1": 1, "salonTopicCategoryId": 2, "salonTopicName": "20000478" },
+{ "salonTopicId": 20000479, "u1": 1, "salonTopicCategoryId": 4, "salonTopicName": "20000479" },
+{ "salonTopicId": 20000480, "u1": 1, "salonTopicCategoryId": 6, "salonTopicName": "20000480" }
 ]}

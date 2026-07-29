@@ -2592,5 +2592,19 @@
     "p997377": "Augmente la puissance des capacités et de la capacité Duo du lanceur quand vous n'avez qu'un seul Pokémon dans votre équipe.",
     "p997376": "Augmente la puissance des capacités de tous les Duos alliés quand il pleut.",
     "p997375": "Applique l'[Name:ReferencedMessageTag Idx=\"1\" ] à tous les Duos alliés la première fois que le lanceur utilise avec succès une capacité à chaque combat.",
-    "p997374": "Augmente l'[Name:ReferencedMessageTag ] du lanceur de 10 rangs quand un allié de votre équipe est mis K.O."
+    "p997374": "Augmente l'[Name:ReferencedMessageTag ] du lanceur de 10 rangs quand un allié de votre équipe est mis K.O.",
+    "p997373": "La Jauge Capacité se remplit plus vite quand l'effet Résilience Physique ou l'effet Résilience Spéciale s'applique au côté allié.",
+    "p997372": "Augmente l'[Name:ReferencedMessageTag ] de tous les Duos alliés de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] la première fois que les PPC restants de la capacité [Name:MoveId Idx=\"19680\" ] du lanceur sont de 0 à chaque combat.",
+    "p997371": "Applique l'[Name:ReferencedMessageTag ] à tous les Duos ennemis la première fois que le lanceur utilise une capacité Duo à chaque combat.",
+    "p997370": "Applique l'effet Ligotage à la cible quand le lanceur utilise avec succès une capacité Duo qui vise cet ennemi.",
+    "p997369": "Augmente [Name:ReferencedMessageTag ] du lanceur de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] la première fois que son Dresseur utilise une capacité à chaque combat.",
+    "p997368": "Augmente l'Attaque et l'Atq. Spé. de tous les Duos alliés de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] quand le lanceur arrive au combat.",
+    "p997367": "Applique l'[Name:ReferencedMessageTag Idx=\"1\" ] au lanceur la première fois qu'il arrive au combat à chaque combat.",
+    "p997366": "Annule toutes les augmentations de [Name:ReferencedMessageTag ] du lanceur et augmente [Name:ReferencedMessageTag Idx=\"1\" ] de la même proportion après l'utilisation d'une capacité Duo.",
+    "p997365": "Réduit les PPC de [Name:MoveId Idx=\"8216\" ] du lanceur de 1 et tous les effets suivants s'appliquent après l'utilisation d'une capacité Duo par le Duo de votre équipe :",
+    "p997364": "Augmente l'[Name:ReferencedMessageTag Idx=\"2\" ] de tous les Duos alliés de [Digit:1digit Idx=\"3\" ] [FR:Qty Ref=\"3\" S=\"rang\" P=\"rangs\" ].",
+    "p997363": "Applique l'effet Résilience Physique et l'effet Résilience Spéciale au côté allié quand le lanceur applique [Name:ReferencedMessageTag ] au côté allié.",
+    "p997362": "Réduit les PPC de [Name:MoveId Idx=\"8215\" ] du lanceur de 1 et tous les effets suivants s'appliquent après l'utilisation d'une capacité Duo par le Duo de votre équipe :",
+    "p997361": "Applique l'[Name:ReferencedMessageTag Idx=\"2\" ] à tous les Duos ennemis la première fois que le lanceur utilise une capacité Duo à chaque combat.",
+    "p997360": "La capacité [Name:MoveId Idx=\"8216\" ] du lanceur regagne [Digit:1digit ] PPC la première fois que les PPC restants de cette capacité sont de 0 à chaque combat."
 }

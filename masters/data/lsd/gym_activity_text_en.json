@@ -16,8 +16,8 @@
     "300200": "Pasio gym battle ends in [Digit:2digits ] [EN:Qty S=\"day\" P=\"days\" ]",
     "300300": "Pasio gym battle has begun!",
     "300400": "Pasio gym battle has ended!",
-    "300500": "The Pasio gym battle rankings have been finalized!\n[Name:GymName ]’s rank was [Name:GvGRank ]!",
-    "300510": "The Pasio gym battle rankings have been finalized!\n[Name:GymName ] did not participate.",
+    "300500": "The Pasio gym battle rankings have been finalized!\n[Name:GymName ] Gym’s rank was [Name:GvGRank ]!",
+    "300510": "The Pasio gym battle rankings have been finalized!\n[Name:GymName ] Gym did not participate.",
     "300600": "Circuit [Digit:2digits ] has started!",
     "300700": "Extra battles have started!",
     "300800": "The Circuit [Digit:2digits ] battle against\n[Name:TrainerName ] has been completed!"

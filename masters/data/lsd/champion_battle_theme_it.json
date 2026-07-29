@@ -37,5 +37,11 @@
     "gvg_theme_8010_007": "Due barrette in meno\nper la barra mosse\nalleata",
     "gvg_theme_8010_008": "La barra mosse si riempie più lentamente\nper gli alleati",
     "gvg_theme_8010_009": "Gli avversari non subiscono danni dagli attacchi\ndelle Unità non appartenenti a determinati gruppi",
-    "damage_challenge_theme_8030_001": "Gli effetti sul campo durano più a lungo"
+    "damage_challenge_theme_8030_001": "Gli effetti sul campo durano più a lungo",
+    "gvg_theme_8070_001": "Zero danni fisici",
+    "gvg_theme_8070_004": "Zero danni se non affetti\nda problemi di stato o\nimpedimenti",
+    "gvg_theme_8070_007": "Menobarra 2",
+    "gvg_theme_8070_101": "Zero danni fisici &\nNormoefficacia zerodanni",
+    "gvg_theme_8070_104": "Zeroafflizioni zerodanni &\nnormoefficacia zerodanni",
+    "gvg_theme_8070_107": "Menobarra 2 &\nNormoefficacia\nzerodanni"
 }

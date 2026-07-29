@@ -188,6 +188,7 @@
     "20015100": "Mew",
     "20015200": "Endivie",
     "20015300": "Lorblatt",
+    "20015400": "Meganie",
     "20015401": "Meganie",
     "20015500": "Feurigel",
     "20015600": "Igelavar",
@@ -225,6 +226,7 @@
     "20020200": "Woingenau",
     "20020201": "Woingenau",
     "20020300": "Girafarig",
+    "20020301": "Girafarig",
     "20020500": "Forstellka",
     "20020801": "Stahlos",
     "20020851": "Mega-Stahlos",
@@ -899,5 +901,7 @@
     "2009840000": "Riesenzahn",
     "2009900000": "Eisenrad",
     "2009021141": "Salmagnis",
-    "2009040041": "Myriador"
+    "2009040041": "Myriador",
+    "2001545100": "Mega-Meganie",
+    "2001605100": "Mega-Impergator"
 }

@@ -16,8 +16,8 @@
     "300200": "Le Combat d'Arène de Passio se termine\ndans [Digit:2digits ] jour[FR:Qty P=\"s\" ].",
     "300300": "Le Combat d'Arène de Passio a commencé !",
     "300400": "Le Combat d'Arène de Passio est terminé !",
-    "300500": "Les classements du Combat d'Arène sont prêts !\n[Name:GymName ] a obtenu le rang [Name:GvGRank ] !",
-    "300510": "Les classements du Combat d'Arène sont prêts !\n[Name:GymName ] n'a pas participé.",
+    "300500": "Les classements du Combat d'Arène sont prêts !\nL'Arène [Name:GymName ] a obtenu le rang [Name:GvGRank ] !",
+    "300510": "Les classements du Combat d'Arène sont prêts !\nL'Arène [Name:GymName ] n'a pas participé.",
     "300600": "Le tour nº [Digit:2digits ] a commencé !",
     "300700": "Des combats additionnels ont commencé !",
     "300800": "Le combat contre [Name:TrainerName ] du tour nº [Digit:2digits ] est terminé !"

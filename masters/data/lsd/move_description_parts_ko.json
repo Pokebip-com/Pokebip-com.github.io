@@ -1036,5 +1036,19 @@
     "998888": "같은 편 버디즈 전원의 공격과 특수공격, 회피율이 [Digit:1digit ]단계 오른다",
     "998887": "추가로 자신이 메가가디안이 되어있을 때는 자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 오른다",
     "998886": "자신의 기술게이지를 최대 [Digit:1digit ]까지 사용한다\n사용한 양이 많을수록 같은 편 버디즈 전원의 공격과 방어, 특수공격, 특수방어가 최대 [Digit:1digit Idx=\"1\" ]단계까지 오른다",
-    "998885": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 10단계 오른다"
+    "998885": "자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] 10단계 오른다",
+    "998884": "상대의 [Name:ReferencedMessageTag Idx=\"6\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"7\" ]단계 떨어뜨린다",
+    "998883": "처음 이 기술로 공격에 성공했을 때만 존을 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ni\" ] 만든다",
+    "998882": "같은 편 전원의 필드가 [Name:ReferencedMessageTag Idx=\"4\" ] 상태일 때는 추가로 상대의 [Name:ReferencedMessageTag Idx=\"5\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"6\" ]단계 떨어뜨린다",
+    "998881": "같은 편 전원의 필드가 [Name:ReferencedMessageTag Idx=\"7\" ] 상태일 때는 추가로 상대의 [Name:ReferencedMessageTag Idx=\"8\" ][Kor:Particle char=\"wo\" ] [Digit:1digit Idx=\"9\" ]단계 떨어뜨린다",
+    "998880": "같은 편 전원의 필드가 칼로스서클 중 하나가 되었을 때",
+    "998879": "같은 편 전원의 필드의 모든 칼로스서클이 해제되었을 때",
+    "998878": "햇살이 강한 날씨일 때 또는 자신이 메가메가니움이 되어있을 때는 공격대기 상태가 되지 않고 공격한다",
+    "998877": "같은 편 전원의 필드가 물리데미지경감 상태일 때는 위력이 1.5배가 된다\n같은 편 전원의 필드가 특수데미지경감 상태일 때는 위력이 1.5배가 된다\n(같은 편 전원의 필드가 물리데미지경감 상태와 특수데미지경감 상태일 때는 위력이 2배가 된다)",
+    "998876": "추가로 자신이 메가장크로다일이 되어있을 때는 위력이 1.5배가 된다",
+    "998875": "이 기술로 공격할 때 자신의 \"[Name:MoveId Idx=\"19680\" ]\"의 남은 횟수가 [Digit:1digit ] 이상일 때는 그 횟수를 [Digit:1digit ] 줄이고 아래의 모든 효과를 발휘한다",
+    "998874": "자신의 [Name:ReferencedMessageTag Idx=\"7\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"8\" ]단계 오른다",
+    "998873": "자신의 [Name:ReferencedMessageTag Idx=\"10\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"11\" ]단계 오른다",
+    "998872": "배틀이 끝날 때까지 메가메가니움이 된다",
+    "998871": "배틀이 끝날 때까지 메가장크로다일이 된다"
 }

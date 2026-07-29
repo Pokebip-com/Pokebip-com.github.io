@@ -6390,6 +6390,7 @@
 { "growthConfigId": "lv_limit.initial_phase.trainer.10286000001", "value": "9" },
 { "growthConfigId": "lv_limit.initial_phase.trainer.10286000002", "value": "9" },
 { "growthConfigId": "lv_limit.initial_phase.trainer.10287000001", "value": "9" },
+{ "growthConfigId": "lv_limit.initial_phase.trainer.10287000002", "value": "9" },
 { "growthConfigId": "lv_limit.initial_phase.trainer.10289000002", "value": "9" },
 { "growthConfigId": "lv_limit.initial_phase.trainer.10296000002", "value": "9" },
 { "growthConfigId": "lv_limit.initial_phase.trainer.10317000002", "value": "9" },

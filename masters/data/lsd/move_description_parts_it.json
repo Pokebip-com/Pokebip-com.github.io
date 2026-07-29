@@ -1036,5 +1036,19 @@
     "998888": "Aumenta l'Attacco, l'Attacco Speciale, e l'elusione di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "998887": "Se Gardevoir di chi la usa si megaevolve, aumenta anche l'[Name:ReferencedMessageTag ] di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
     "998886": "Consuma fino a [Digit:1digit ] [IT:Qty S=\"barretta\" P=\"barrette\" ] della barra mosse di chi la usa. Aumenta l'Attacco, la Difesa, l'Attacco Speciale e la Difesa Speciale di tutte le Unità alleate, fino a un massimo di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ], in base al numero di barrette consumate.",
-    "998885": "Aumenta l'[Name:ReferencedMessageTag ] di chi la usa di 10 gradi."
+    "998885": "Aumenta l'[Name:ReferencedMessageTag ] di chi la usa di 10 gradi.",
+    "998884": "Riduce [Name:ReferencedMessageTag Idx=\"6\" ] del bersaglio di [Digit:1digit Idx=\"7\" ] [IT:Qty Ref=\"7\" S=\"grado\" P=\"gradi\" ].",
+    "998883": "Trasforma la zona in una [Name:ReferencedMessageTag Idx=\"2\" ] la prima volta che questo attacco semplice va a segno in ogni lotta.",
+    "998882": "Inoltre, riduce [Name:ReferencedMessageTag Idx=\"5\" ] del bersaglio di [Digit:1digit Idx=\"6\" ] [IT:Qty Ref=\"6\" S=\"grado\" P=\"gradi\" ] quando al campo alleato viene applicato l'[Name:ReferencedMessageTag Idx=\"4\" ].",
+    "998881": "Inoltre, riduce [Name:ReferencedMessageTag Idx=\"8\" ] del bersaglio di [Digit:1digit Idx=\"9\" ] [IT:Qty Ref=\"9\" S=\"grado\" P=\"gradi\" ] quando al campo alleato viene applicato l'[Name:ReferencedMessageTag Idx=\"7\" ].",
+    "998880": "Quando al campo alleato viene applicata una Cerchia di Kalos.",
+    "998879": "Quando al campo alleato non è più applicata una Cerchia di Kalos.",
+    "998878": "Quando la luce del sole è intensa o se Meganium di chi la usa si megaevolve, chi la usa non entra in uno stato di attesa ma attacca direttamente.",
+    "998877": "Questo attacco aumenta di potenza del 50% quando al campo alleato viene applicato l'effetto \"Riduzione danni fisici\".\nQuesto attacco aumenta di potenza del 50% quando al campo alleato viene applicato l'effetto \"Riduzione danni speciali\".\n(Raddoppia la potenza di questo attacco se al campo alleato sono applicati sia l'effetto \"Riduzione danni fisici\" che l'effetto \"Riduzione danni speciali\".)",
+    "998876": "Se Feraligatr di chi la usa si megaevolve, aumenta anche la potenza di questo attacco del 50%.",
+    "998875": "Se gli utilizzi residui di [Name:MoveId Idx=\"19680\" ] di chi la usa sono pari o superiori a [Digit:1digit ] quando si attacca con questa mossa, riduce tali utilizzi di [Digit:1digit ] e conferisce tutti gli effetti seguenti:",
+    "998874": "Aumenta [Name:ReferencedMessageTag Idx=\"7\" ] di chi la usa di [Digit:1digit Idx=\"8\" ] [IT:Qty Ref=\"8\" S=\"grado\" P=\"gradi\" ].",
+    "998873": "Aumenta [Name:ReferencedMessageTag Idx=\"10\" ] di chi la usa di [Digit:1digit Idx=\"11\" ] [IT:Qty Ref=\"11\" S=\"grado\" P=\"gradi\" ].",
+    "998872": "Permette a Meganium di megaevolversi. L'effetto svanisce al termine della lotta.",
+    "998871": "Permette a Feraligatr di megaevolversi. L'effetto svanisce al termine della lotta."
 }

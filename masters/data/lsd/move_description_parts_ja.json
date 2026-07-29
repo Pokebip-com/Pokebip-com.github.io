@@ -1036,5 +1036,19 @@
     "998888": "味方のバディーズ全員の攻撃と特攻と回避率を[Digit:1digit ]段階あげる",
     "998887": "自分がメガサーナイトになっているときはさらに自分の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階あげる",
     "998886": "自分のわざゲージを最大で[Digit:1digit ]つかう\nつかった量が多いほど味方のバディーズ全員の攻撃と防御と特攻と特防を最大で[Digit:1digit Idx=\"1\" ]段階あげる",
-    "998885": "自分の[Name:ReferencedMessageTag ]を１０段階あげる"
+    "998885": "自分の[Name:ReferencedMessageTag ]を１０段階あげる",
+    "998884": "相手の[Name:ReferencedMessageTag Idx=\"6\" ]を[Digit:1digit Idx=\"7\" ]段階さげる",
+    "998883": "初めてこの技での攻撃が成功したときだけゾーンを[Name:ReferencedMessageTag Idx=\"2\" ]にする",
+    "998882": "味方全体の場が[Name:ReferencedMessageTag Idx=\"4\" ]のときはさらに相手の[Name:ReferencedMessageTag Idx=\"5\" ]を[Digit:1digit Idx=\"6\" ]段階さげる",
+    "998881": "味方全体の場が[Name:ReferencedMessageTag Idx=\"7\" ]のときはさらに相手の[Name:ReferencedMessageTag Idx=\"8\" ]を[Digit:1digit Idx=\"9\" ]段階さげる",
+    "998880": "味方全体の場がいずれかのカロスサークルになったとき",
+    "998879": "味方全体の場のすべてのカロスサークルが解除されたとき",
+    "998878": "天気がひざしがつよい状態のときか自分がメガメガニウムになっているときは攻撃待機状態にならず攻撃する",
+    "998877": "味方全体の場が物理ダメージ軽減状態のときは威力が１．５倍になる\n味方全体の場が特殊ダメージ軽減状態のときは威力が１．５倍になる\n（味方全体の場が物理ダメージ軽減状態と特殊ダメージ軽減状態のときは威力が２倍になる）",
+    "998876": "自分がメガオーダイルになっているときはさらに威力が１．５倍になる",
+    "998875": "この技で攻撃するときに自分の「[Name:MoveId Idx=\"19680\" ]」の残り回数が[Digit:1digit ]以上のときは　その回数を[Digit:1digit ]減らして以下のすべての効果を発揮する",
+    "998874": "自分の[Name:ReferencedMessageTag Idx=\"7\" ]を[Digit:1digit Idx=\"8\" ]段階あげる",
+    "998873": "自分の[Name:ReferencedMessageTag Idx=\"10\" ]を[Digit:1digit Idx=\"11\" ]段階あげる",
+    "998872": "バトル終了までメガメガニウムになる",
+    "998871": "バトル終了までメガオーダイルになる"
 }

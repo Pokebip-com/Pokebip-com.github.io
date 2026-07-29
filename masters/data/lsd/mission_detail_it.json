@@ -41,7 +41,7 @@
     "39": "Porta l'Unità seguente almeno\nal L. [Digit:3digits ]:",
     "26_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
     "27_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
-    "28_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
+    "28_element": "• [Name:TrainerNameAndType ] & \n[Name:PokemonName ]",
     "29_1": "Completa [Digit:6digits ] Guid[IT:Qty S=\"a\" P=\"e\" ] area dalla schermata [Name:QuestTypeTitle ].",
     "29_2": "Completa [Digit:6digits ] Guid[IT:Qty S=\"a\" P=\"e\" ] area ([Name:QuestDifficulty ]) dalla schermata [Name:QuestTypeTitle ].",
     "30_0": "Completa [Digit:6digits Idx=\"1\" ] volt[IT:Qty Ref=\"1\" S=\"a\" P=\"e\" ]:\n• [Name:QuestTitle ]\nDevi avere in squadra [Digit:3digits ] Unità\ndi tipo [Name:Type ].",
@@ -57,7 +57,7 @@
     "33_2": "Completa [Digit:6digits ] training SP.",
     "38_1": "",
     "38_2": "",
-    "39_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ].",
+    "39_element": "• [Name:TrainerNameAndType ] &\n[Name:PokemonName ].",
     "40_0": "Usa [Digit:6digits ] Unimoss[IT:Qty S=\"a\" P=\"e\" ] in totale in:\n• [Name:QuestTitle ]\nGli utilizzi vengono conteggiati solo\nin caso di vittoria.",
     "40_1": "Usa [Digit:6digits ] Unimoss[IT:Qty S=\"a\" P=\"e\" ] in totale in:\n• [Name:QuestTitle ]\nDevi giocare in modalità [Name:QuestPlayType ].\nGli utilizzi vengono conteggiati solo\nin caso di vittoria.",
     "40_2": "Usa [Digit:6digits ] Unimoss[IT:Qty S=\"a\" P=\"e\" ] in totale in:\n• [Name:QuestTitle ] ([Name:QuestDifficulty ])\nDevi giocare in modalità [Name:QuestPlayType ].\nGli utilizzi vengono conteggiati solo\nin caso di vittoria.",
@@ -107,9 +107,9 @@
     "55": "Completa [Digit:6digits ] training\n([Name:QuestDifficulty ]) con\nle seguenti Unità in squadra:",
     "55_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ].",
     "57": "Completa [Digit:6digits ] Guid[IT:Qty S=\"a\" P=\"e\" ] area\nche preved[IT:Qty S=\"e\" P=\"ono\" ] delle lotte con\nle seguenti Unità in squadra:",
-    "57_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ].",
+    "57_element": "• [Name:TrainerNameAndType ] &\n[Name:PokemonName ].",
     "58": "Infliggi danni per [Digit:10digits ] PS\nin totale con le seguenti Unità\n(i danni vengono conteggiati solo\nin caso di vittoria):",
-    "58_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ].",
+    "58_element": "• [Name:TrainerNameAndType ] &\n[Name:PokemonName ].",
     "60": "Fai usare [Digit:6digits ] moss[IT:Qty S=\"a\" P=\"e\" ] in totale\na Unità del tipo seguente (le mosse\nvengono conteggiate solo in caso\ndi vittoria):",
     "60_element": "• [Name:Type ].",
     "61": "Fai usare [Digit:6digits ] moss[IT:Qty S=\"a\" P=\"e\" ] superefficac[IT:Qty S=\"e\" P=\"i\" ]\nin totale a Unità del tipo seguente\n(gli utilizzi vengono conteggiati solo\nin caso di vittoria):",
@@ -375,5 +375,7 @@
     "override_detail_8030_1_04": "Completa uno dei seguenti eventi accademici quattro volte:\n\n• Evento accademico - Preparativi per il festival accademico\n• Evento accademico - Programmazione e amicizia\n• Evento accademico - Alla scoperta dell'Accademia di Pasio\n\nIl conteggio si aggiorna al completamento di un intero corso accademico.",
     "override_detail_8030_1_05": "Completa uno dei seguenti eventi accademici cinque volte:\n\n• Evento accademico - Preparativi per il festival accademico\n• Evento accademico - Programmazione e amicizia\n• Evento accademico - Alla scoperta dell'Accademia di Pasio\n\nIl conteggio si aggiorna al completamento di un intero corso accademico.",
     "override_detail_8030_1_06": "Completa tre lotte regionali\ngiornaliere.",
-    "override_detail_8040_1_01": "Completa una volta \"VS Alisma\"\nnell'evento speciale \"Una sfida\nsuperspeciale a Pasio\"."
+    "override_detail_8040_1_01": "Completa una volta \"VS Alisma\"\nnell'evento speciale \"Una sfida\nsuperspeciale a Pasio\".",
+    "override_detail_8070_1_01": "Porta tre Unità al L. 140 o superiore.",
+    "override_detail_8070_1_02": "Porta sei Unità al L. 140 o superiore."
 }

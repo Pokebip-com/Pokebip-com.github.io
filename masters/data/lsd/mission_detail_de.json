@@ -41,7 +41,7 @@
     "39": "Bringe diese Gefährten auf mindestens Lv. [Digit:3digits ].",
     "26_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
     "27_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
-    "28_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
+    "28_element": "• [Name:TrainerNameAndType ] & \n  [Name:PokemonName ]",
     "29_1": "Schließe ein Gebiet der folgenden Kategorie [Digit:6digits ]  Mal ab:\n[Name:QuestTypeTitle ]\n",
     "29_2": "Schließe ein Gebiet der folgenden Kategorie [Digit:6digits ]  Mal im Schwierigkeitsgrad „[Name:QuestDifficulty ]“ ab:\n[Name:QuestTypeTitle ]",
     "30_0": "Schließe folgendes Gebiet [Digit:6digits Idx=\"1\" ]  Mal mit [Digit:3digits ] Gefährten des Typs [Name:Type ] ab:\n[Name:QuestTitle ]",
@@ -57,7 +57,7 @@
     "33_2": "Schließe [Digit:6digits ] Mal ein Training+ ab.",
     "38_1": "",
     "38_2": "",
-    "39_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
+    "39_element": "• [Name:TrainerNameAndType ] &\n  [Name:PokemonName ]",
     "40_0": "Setze in diesem Gebiet insgesamt [Digit:6digits ]  Mal eine Gefährtenattacke ein (Nur gewonnene Kämpfen zählen):\n[Name:QuestTitle ]",
     "40_1": "Setze in diesem Gebiet im [Name:QuestPlayType ] insgesamt [Digit:6digits ]  Mal eine Gefährtenattacke ein (Nur gewonnene Kämpfe zählen):\n[Name:QuestTitle ]",
     "40_2": "Setze in folgendem Gebiet im Schwierigkeitsgrad „[Name:QuestDifficulty ]“ insgesamt [Digit:6digits ]  Mal eine Gefährtenattacke ein (Nur gewonnene Kämpfe zählen):\n[Name:QuestTitle ]",
@@ -107,9 +107,9 @@
     "55": "Schließe [Digit:6digits ] Mal mit diesen Gefährten im Team ein Training im Schwierigkeitsgrad „[Name:QuestDifficulty ]“ ab:",
     "55_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
     "57": "Schließe [Digit:6digits ] Mal mit diesen Gefährten im Team ein Gebiet ab, in dem gekämpft wird:",
-    "57_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
+    "57_element": "• [Name:TrainerNameAndType ] &\n  [Name:PokemonName ]",
     "58": "Richte mit diesen Gefährten insgesamt [Digit:10digits ] Schadenspunkte an (Nur gewonnene Kämpfe zählen):",
-    "58_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
+    "58_element": "• [Name:TrainerNameAndType ] &\n  [Name:PokemonName ]",
     "60": "Setze mit Gefährten dieses Typs [Digit:6digits ] Mal eine Attacke ein (Nur gewonnene Kämpfe zählen):",
     "60_element": "• [Name:Type ]",
     "61": "Setze mit Gefährten dieses Typs [Digit:6digits ] Mal eine sehr effektive Attacke ein (Nur gewonnene Kämpfe zählen):",
@@ -375,5 +375,7 @@
     "override_detail_8030_1_04": "Schließe eines der unten aufgeführten\nAkademie-Events viermal ab:\n\n• Akademie-Event: Vorbereitungen\nzum Passio-Akademie-Fest\n• Akademie-Event: Der Code der\nFreundschaft\n• Akademie-Event:\nAkademie-Eröffnung\n\nHinweis: Die Anzahl wird jeweils\nnach dem Abschluss eines\nAkademie-Events hinzugefügt.",
     "override_detail_8030_1_05": "Schließe eines der unten aufgeführten\nAkademie-Events fünfmal ab:\n\n• Akademie-Event: Vorbereitungen\nzum Passio-Akademie-Fest\n• Akademie-Event: Der Code der\nFreundschaft\n• Akademie-Event:\nAkademie-Eröffnung\n\nHinweis: Die Anzahl wird jeweils\nnach dem Abschluss eines\nAkademie-Events hinzugefügt.",
     "override_detail_8030_1_06": "Schließe die täglichen Regionskämpfe\ndreimal ab.",
-    "override_detail_8040_1_01": "Schließe den Kampf „Sagaria“ im\nRahmen des Spezialevents\n„Passio Super-Spezialkampf“ einmal\nab."
+    "override_detail_8040_1_01": "Schließe den Kampf „Sagaria“ im\nRahmen des Spezialevents\n„Passio Super-Spezialkampf“ einmal\nab.",
+    "override_detail_8070_1_01": "Bringe 3 Gefährten auf mindestens\nLv. 140!",
+    "override_detail_8070_1_02": "Bringe 6 Gefährten auf mindestens\nLv. 140!"
 }

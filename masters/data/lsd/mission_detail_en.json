@@ -41,7 +41,7 @@
     "39": "Level up the following sync pair to\nLv. [Digit:3digits ] or higher:",
     "26_element": "• [Name:TrainerName ] & \n[Name:PokemonName ]",
     "27_element": "• [Name:TrainerName ] & \n[Name:PokemonName ]",
-    "28_element": "• [Name:TrainerName ] & \n[Name:PokemonName ]",
+    "28_element": "• [Name:TrainerNameAndType ] & \n[Name:PokemonName ]",
     "29_1": "Complete an area from the following\nmenu ×[Digit:6digits ]:\n[Name:QuestTypeTitle ]",
     "29_2": "Complete an area from the following\nmenu on [Name:QuestDifficulty ]\n×[Digit:6digits ]:\n[Name:QuestTypeTitle ]",
     "30_0": "Complete the following area with [Digit:3digits ]\n[Name:Type ]-type sync pair(s)\non your team ×[Digit:6digits Idx=\"1\" ]:\n[Name:QuestTitle ]",
@@ -57,7 +57,7 @@
     "33_2": "Complete a supercourse ×[Digit:6digits ]",
     "38_1": "",
     "38_2": "",
-    "39_element": "• [Name:TrainerName ] &\n[Name:PokemonName ]",
+    "39_element": "• [Name:TrainerNameAndType ] &\n[Name:PokemonName ]",
     "40_0": "Use [Digit:6digits ] sync move(s) to complete\nthe following area:\n[Name:QuestTitle ]",
     "40_1": "Use [Digit:6digits ] sync move(s) to complete\nthe following [Name:QuestPlayType ] area:\n[Name:QuestTitle ]",
     "40_2": "Use [Digit:6digits ] sync move(s) to complete\nthe following [Name:QuestPlayType ] area\non [Name:QuestDifficulty ]:\n[Name:QuestTitle ]",
@@ -107,9 +107,9 @@
     "55": "Complete a course on\n[Name:QuestDifficulty ] ×[Digit:6digits ]\nwith the following sync pair(s)\non your team:",
     "55_element": "• [Name:TrainerName ] &\n[Name:PokemonName ]",
     "57": "Complete an area that has a\nbattle ×[Digit:6digits ] with the following\nsync pair(s) on your team:",
-    "57_element": "• [Name:TrainerName ] &\n[Name:PokemonName ]",
+    "57_element": "• [Name:TrainerNameAndType ] &\n[Name:PokemonName ]",
     "58": "Deal a cumulative total of [Digit:10digits ]\ndamage with the following sync\npair(s) (counts only when the battle\nis completed):",
-    "58_element": "• [Name:TrainerName ] &\n[Name:PokemonName ]",
+    "58_element": "• [Name:TrainerNameAndType ] &\n[Name:PokemonName ]",
     "60": "Use a move of the following sync\npair type(s) ×[Digit:6digits ] (counts only\nwhen the battle is completed):",
     "60_element": "• [Name:Type ]",
     "61": "Use a supereffective attack of the\nfollowing sync pair type(s) ×[Digit:6digits ]\n(counts only when the battle\nis completed):",
@@ -375,5 +375,7 @@
     "override_detail_8030_1_04": "Complete any of the academy events below ×4\n\n• Academy Event: Pasio Academy Fair—Prep\n• Academy Event: Best Buddies Program\n• Academy Event: Pasio Academy Opening\n\nNote: Counts are added upon the completion of one academy event cycle.",
     "override_detail_8030_1_05": "Complete any of the academy events below ×5\n\n• Academy Event: Pasio Academy Fair—Prep\n• Academy Event: Best Buddies Program\n• Academy Event: Pasio Academy Opening\n\nNote: Counts are added upon the completion of one academy event cycle.",
     "override_detail_8030_1_06": "Complete the Daily Region Rotation ×3",
-    "override_detail_8040_1_01": "Complete “Geeta” in the special event\nPasio Super Special Stadium ×1"
+    "override_detail_8040_1_01": "Complete “Geeta” in the special event\nPasio Super Special Stadium ×1",
+    "override_detail_8070_1_01": "Reach Lv. 140 or higher with three\nsync pairs",
+    "override_detail_8070_1_02": "Reach Lv. 140 or higher with six\nsync pairs"
 }

@@ -2592,5 +2592,19 @@
     "p997377": "我方隊伍中的寶可夢只有１隻時，\n會提高招式和拍組招式的威力。",
     "p997376": "當天氣為下雨時，\n會提高我方全體拍組的招式的威力。",
     "p997375": "首次招式成功時，\n會讓我方全體拍組變成[Name:ReferencedMessageTag Idx=\"1\" ]狀態。",
-    "p997374": "當我方隊伍的成員陷入瀕死狀態時，\n會提高自己的[Name:ReferencedMessageTag ]１０階段。"
+    "p997374": "當我方隊伍的成員陷入瀕死狀態時，\n會提高自己的[Name:ReferencedMessageTag ]１０階段。",
+    "p997373": "當我方場地為\n減輕物理傷害狀態或減輕特殊傷害狀態時，\n招式計量槽會累積得較快。",
+    "p997372": "當「[Name:MoveId Idx=\"19680\" ]」的使用次數首次變成０時，\n會提高我方全體拍組的[Name:ReferencedMessageTag ]\n[Digit:1digit Idx=\"1\" ]階段。",
+    "p997371": "首次使出拍組招式時，\n會讓對手全體拍組陷入[Name:ReferencedMessageTag ]狀態。",
+    "p997370": "當以對手為對象的拍組招式成功時，\n會讓對手陷入束縛狀態。",
+    "p997369": "在訓練家首次使出招式時，\n會提高自己的[Name:ReferencedMessageTag ][Digit:1digit Idx=\"1\" ]階段。",
+    "p997368": "上場時，\n會提高我方全體拍組的攻擊和特攻[Digit:1digit ]階段。",
+    "p997367": "首次上場時，\n會讓自己變成[Name:ReferencedMessageTag Idx=\"1\" ]狀態。",
+    "p997366": "使出拍組招式後，\n會消耗自己提高的所有[Name:ReferencedMessageTag ]，\n並且等量提高自己的[Name:ReferencedMessageTag Idx=\"1\" ]。",
+    "p997365": "我方隊伍使出拍組招式後，\n會減少自己的「[Name:MoveId Idx=\"8216\" ]」的使用次數１次\n並發揮下列所有效果。",
+    "p997364": "提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"2\" ]\n[Digit:1digit Idx=\"3\" ]階段。",
+    "p997363": "當自己將我方場地\n變成[Name:ReferencedMessageTag ]時，\n會讓我方場地變成減輕物理傷害狀態和\n減輕特殊傷害狀態。",
+    "p997362": "我方隊伍使出拍組招式後，\n會減少自己的「[Name:MoveId Idx=\"8215\" ]」的使用次數１次\n並發揮下列所有效果。",
+    "p997361": "首次使出拍組招式時，\n會讓對手全體拍組陷入[Name:ReferencedMessageTag Idx=\"2\" ]狀態。",
+    "p997360": "當「[Name:MoveId Idx=\"8216\" ]」的使用次數首次變成０時，\n會幫該招式的使用次數回復[Digit:1digit ]次。"
 }

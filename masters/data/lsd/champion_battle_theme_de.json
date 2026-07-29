@@ -37,5 +37,11 @@
     "gvg_theme_8010_007": "Team-Att.-Leiste-Limit 2",
     "gvg_theme_8010_008": "Die Attackenleiste wird bei Verbündeten\nlangsamer aufgefüllt",
     "gvg_theme_8010_009": "Gegner erleiden keinen Schaden durch\nAngriffe von Gefährten, die nicht die\nvorgegebenen Attribute erfüllen",
-    "damage_challenge_theme_8030_001": "Seiten-Effekte wirken permanent"
+    "damage_challenge_theme_8030_001": "Seiten-Effekte wirken permanent",
+    "gvg_theme_8070_001": "Kein physischer Schaden",
+    "gvg_theme_8070_004": "Kein Schaden wenn\nproblemfrei",
+    "gvg_theme_8070_007": "Team-Att.-Leiste-Limit 2",
+    "gvg_theme_8070_101": "Kein physischer Schaden;\nSchadensfrei bei\nStandard-Effektivität",
+    "gvg_theme_8070_104": "Kein Schaden wenn\nproblemfrei; Schadensfrei\nbei Standard-Effektivität",
+    "gvg_theme_8070_107": "Team-Att.-Leiste-Limit 2;\nSchadensfrei bei\nStandard-Effektivität"
 }

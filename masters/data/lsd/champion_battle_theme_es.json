@@ -37,5 +37,11 @@
     "gvg_theme_8010_007": "Reducción de barra de movimientos +2",
     "gvg_theme_8010_008": "Reducción de la velocidad a la que se llena la\nbarra de movimientos de tu equipo",
     "gvg_theme_8010_009": "Equipo rival inmune al daño producido por los\nataques de compis sin el distintivo indicado",
-    "damage_challenge_theme_8030_001": "Los efectos de entorno duran todo el combate"
+    "damage_challenge_theme_8030_001": "Los efectos de entorno duran todo el combate",
+    "gvg_theme_8070_001": "Daño físico nulo",
+    "gvg_theme_8070_004": "Daño nulo cuando\nno hay cambios ni\nproblemas de estado",
+    "gvg_theme_8070_007": "Reducción de barra de\nmovimientos +2",
+    "gvg_theme_8070_101": "Daño físico nulo y daño\nno supereficaz nulo",
+    "gvg_theme_8070_104": "Daño nulo si no hay\ncambios ni prob. de est.\ny daño no superef. nulo",
+    "gvg_theme_8070_107": "Reducción de barra de\nmovimientos +2 y daño\nno supereficaz nulo"
 }

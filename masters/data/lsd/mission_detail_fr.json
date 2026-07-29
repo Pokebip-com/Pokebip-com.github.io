@@ -41,7 +41,7 @@
     "39": "Faites monter le Duo suivant\nau niveau [Digit:3digits ] :",
     "26_element": "• [Name:TrainerName ]\net [Name:PokemonName ]",
     "27_element": "• [Name:TrainerName ]\net [Name:PokemonName ]",
-    "28_element": "• [Name:TrainerName ]\net [Name:PokemonName ]",
+    "28_element": "• [Name:TrainerNameAndType ] &\n  [Name:PokemonName ]",
     "29_1": "Terminez [Digit:6digits ] fois :\n• [Name:QuestTypeTitle ]",
     "29_2": "Terminez [Digit:6digits ] fois :\n• [Name:QuestTypeTitle ] ([Name:QuestDifficulty ])",
     "30_0": "Utilisez [Digit:3digits ] Duo[FR:Qty P=\"s\" ] de type [Name:Type ]\npour terminer [Digit:6digits Idx=\"1\" ] fois :\n• [Name:QuestTitle ]",
@@ -57,7 +57,7 @@
     "33_2": "Finissez une Épreuve [Digit:6digits ] fois.",
     "38_1": "",
     "38_2": "",
-    "39_element": "• [Name:TrainerName ]\net [Name:PokemonName ]",
+    "39_element": "• [Name:TrainerNameAndType ] &\n  [Name:PokemonName ]",
     "40_0": "Utilisez [Digit:6digits ] capacité[FR:Qty P=\"s\" ] Duo pour\nterminer :\n• [Name:QuestTitle ]\n(seuls les combats terminés sont\ncomptabilisés)",
     "40_1": "Utilisez [Digit:6digits ] capacité[FR:Qty P=\"s\" ] Duo pour\nterminer en [Name:QuestPlayType ] :\n• [Name:QuestTitle ]\n(seuls les combats terminés sont\ncomptabilisés)",
     "40_2": "Utilisez [Digit:6digits ] capacité[FR:Qty P=\"s\" ] Duo pour\nterminer en [Name:QuestPlayType ] :\n• [Name:QuestTitle ] ([Name:QuestDifficulty ])\n(seuls les combats terminés sont\ncomptabilisés)",
@@ -107,9 +107,9 @@
     "55": "Terminez [Digit:6digits ] fois un test\n([Name:QuestDifficulty ]) en\nutilisant les Duos suivants :",
     "55_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]\n",
     "57": "Terminez une zone avec un combat\n[Digit:6digits ] fois en utilisant les Duos\nsuivants :",
-    "57_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
+    "57_element": "• [Name:TrainerNameAndType ] &\n  [Name:PokemonName ]",
     "58": "Infligez un nombre de dégâts cumulés\nde [Digit:10digits Sep=\"32\" ] ou plus avec le[FR:Qty P=\"s\" ] Duo[FR:Qty P=\"s\" ]\nsuivant[FR:Qty P=\"s\" ] :\n(seuls les combats terminés sont\ncomptabilisés)",
-    "58_element": "• [Name:TrainerName ] &\n  [Name:PokemonName ]",
+    "58_element": "• [Name:TrainerNameAndType ] &\n  [Name:PokemonName ]",
     "60": "Utilisez [Digit:6digits ] fois des capacités\navec des Duos du type suivant\n(seuls les combats terminés sont\ncomptabilisés) :",
     "60_element": "• [Name:Type ]",
     "61": "Utilisez [Digit:6digits ] fois des capacités\nsuper efficaces avec des Duos du\ntype suivant (seuls les combats\nterminés sont comptabilisés) :",
@@ -375,5 +375,7 @@
     "override_detail_8030_1_04": "Terminez n'importe quel évènement\nde l'académie ci-dessous quatre fois :\n\n• Préparatifs du festival étudiant\n• Programme d'amitié\n• Inauguration de l'académie\n\nRemarque : les comptes se font\nune fois un cycle d'évènement\nde l'académie terminé.",
     "override_detail_8030_1_05": "Terminez n'importe quel évènement\nde l'académie ci-dessous cinq fois :\n\n• Préparatifs du festival étudiant\n• Programme d'amitié\n• Inauguration de l'académie\n\nRemarque : les comptes se font\nune fois un cycle d'évènement\nde l'académie terminé.",
     "override_detail_8030_1_06": "Terminez le combat régional\nquotidien trois fois.",
-    "override_detail_8040_1_01": "Terminez une fois le combat contre\nAlisma dans l'évènement spécial\n« Match super spécial de Passio »."
+    "override_detail_8040_1_01": "Terminez une fois le combat contre\nAlisma dans l'évènement spécial\n« Match super spécial de Passio ».",
+    "override_detail_8070_1_01": "Faites atteindre le N. 140 ou plus\nà 3 Duos.",
+    "override_detail_8070_1_02": "Faites atteindre le N. 140 ou plus\nà 6 Duos."
 }

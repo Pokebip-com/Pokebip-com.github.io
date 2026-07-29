@@ -742,7 +742,10 @@ function printShopBanner(shopBanner, schedule, printDiv) {
 
             let price = jData.custom.shopTierPrices.find(stp => stp.tier.toString() === matches[1]);
 
-            price = price.euros || "??.??";
+            if(!price)
+                console.log(pi.internalName);
+
+            price = price?.euros || "??.??";
 
             ul += `<li><b>${additionnalText}${matches[2]} ${jData.locale.schedule.gems}</b> ${price}€ (${pi.limit}x)</li>\n`;
         });
@@ -892,8 +895,8 @@ function printSalonGuest(scheduleId, printDiv) {
 
 function printShopOffers(schedule, printDiv) {
     let eventBannerIds = jData.proto.eventBanner.filter(eb => eb.scheduleId === schedule.scheduleId).map(eb => eb.bannerId);
-    let bannerIds = jData.proto.shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId && spi.bannerId > 0)
-        .map(spi => parseInt(spi.bannerId)).concat(eventBannerIds);
+    let bannerIds = [...new Set(jData.proto.shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId && spi.bannerId > 0)
+        .map(spi => parseInt(spi.bannerId)).concat(eventBannerIds))];
 
     if(bannerIds.length === 0)
         return;
