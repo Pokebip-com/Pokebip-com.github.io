@@ -289,6 +289,8 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
 
     let exTitleRow, exImageRow;
 
+    let mindscapeCell = trainerImageCell;
+
     if (hasExUnlocked(syncPairSelect.value) && trainerActorDress) {
         pokemonImageCell.rowSpan = 3;
 
@@ -301,10 +303,7 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
         exImageRow = document.createElement("tr");
         let exImageCell = document.createElement("td");
 
-        exImageCell.style.backgroundImage = `url("./data/actor/mindscape/Tx_${trainerActorId}_mindscape00.png")`;
-        exImageCell.style.backgroundPosition = "center";
-        exImageCell.style.backgroundSize = "cover";
-        exImageCell.style.backgroundRepeat = "no-repeat";
+        mindscapeCell = exImageCell;
         exImageCell.colSpan = 5;
 
         let exImg = document.createElement("img");
@@ -318,6 +317,12 @@ function setPairOverview(contentDiv, monsterName, monsterId, monsterBaseId, vari
         table.appendChild(exTitleRow);
         table.appendChild(exImageRow);
     }
+
+    mindscapeCell.style.backgroundImage = `url("./data/actor/mindscape/Tx_${trainerActorId}_mindscape00.png")`;
+    mindscapeCell.style.backgroundPosition = "center";
+    mindscapeCell.style.backgroundSize = "cover";
+    mindscapeCell.style.backgroundRepeat = "no-repeat";
+
 
     let infosTitleRow = document.createElement("tr");
     let roleTitle = document.createElement("th");
