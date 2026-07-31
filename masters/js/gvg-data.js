@@ -150,6 +150,11 @@ function fetchBossRound(round = state.roundNum) {
 function fetchGvGData() {
     gvgData.gvg = jData.proto.gvG.find(gvg => gvg.gvgId.toString() === state.gvgId.toString());
     gvgData.boss = jData.proto.gvGBoss.filter(boss => gvgData.gvg.gvgBossIds.includes(boss.gvgBossId.toString()));
+
+    gvgData.boss.forEach(boss => {
+        boss.weakType = jData.proto.storyQuestDetail.find(sqd => sqd.storyQuestId === jData.proto.gvGBossRound.find(br => br.gvgBossRoundId === boss.gvgBossRoundIds[0]).storyQuestId).weakTypes[0];
+    })
+
     state.bossNum = gvgData.boss.findIndex(item => item.gvgBossId.toString() === state.bossId.toString());
     state.bossNum = state.bossNum === -1 ? 0 : state.bossNum;
     state.bossId = gvgData.boss[state.bossNum].gvgBossId.toString();
@@ -173,14 +178,14 @@ function renderChampionList() {
     $('#championList').innerHTML = champions.length ? champions.map(champion => `
         <button class="champion-card ${champion.gvgBossId === state.bossId ? 'is-active' : ''}" type="button" data-champion-id="${escapeHtml(champion.gvgBossId)}">
           <div class="brand-line">
-            <span class="slot-icon">${escapeHtml(champion.weaknessIcon || '•')}</span>
+            <span class="slot-icon" style="background-image: url('./data/icons/types/${champion.weakType}.png'); background-size: contain;"></span>
             <strong>${escapeHtml(getTrainerNameByActorId(champion.actorId))}</strong>
           </div>
         </button>
       `).join('') : '<div class="empty panel">Aucun résultat.</div>';
 
     $('#mobileStrip').innerHTML = champions.map(champion => `
-        <button class="${champion.gvgBossId === state.bossId ? 'is-active' : ''}" type="button" data-mobile-champion-id="${escapeHtml(champion.gvgBossId)}">${escapeHtml(champion.weaknessIcon || '•')} ${escapeHtml(getTrainerNameByActorId(champion.actorId))}</button>
+        <button class="${champion.gvgBossId === state.bossId ? 'is-active' : ''}" type="button" data-mobile-champion-id="${escapeHtml(champion.gvgBossId)}" ><span class="slot-icon" style="background-image: url('./data/icons/types/${champion.weakType}.png'); background-size: contain;"></span> ${escapeHtml(getTrainerNameByActorId(champion.actorId))}</button>
       `).join('');
 
     document.querySelectorAll('[data-champion-id], [data-mobile-champion-id]').forEach(button => {
@@ -200,26 +205,22 @@ function renderSummary() {
         return;
     }
     const weak = jData.lsd.motifTypeName[gvgData.weakTypes[0]];
-    const weakIcon = '•';
 
     let themes = (state.roundNum > gvgData.boss[state.bossNum].roundsBattleChampionThemeIds.length ? gvgData.boss[state.bossNum].repeatedRoundBattleChampionThemeIds : [gvgData.boss[state.bossNum].roundsBattleChampionThemeIds[state.roundNum - 1]])
         .map(id => {
             if (id === '0') return '0';
             let theme = jData.proto.battleChampionTheme.find(theme => theme.battleChampionThemeId.toString() === id.toString());
-            console.log(id);
             theme.battleChampionRules = theme.battleChampionRuleIds.filter(rid => rid !== 0).map(rid => jData.proto.battleChampionRule.find(rule => rule.battleChampionRuleId.toString() === rid.toString()));
             return theme;
         });
 
-    console.log(themes);
-
     $('#summaryPanel').innerHTML = `
         <div class="summary-head">
           <div>
-            <h2><span class="slot-icon">${escapeHtml(weakIcon)}</span> ${escapeHtml(getTrainerNameByActorId(gvgData.boss[state.bossNum].actorId))}</h2>
+            <h2><span class="slot-icon" style="background-image: url('./data/icons/types/${gvgData.boss[state.bossNum].type}.png'); background-size: contain;"></span> ${escapeHtml(getTrainerNameByActorId(gvgData.boss[state.bossNum].actorId))}</h2>
           </div>
           <div class="chip-row">
-            <span class="summary-pill primary">Faiblesse ${escapeHtml(weak)}</span>
+            <strong>Faiblesse :</strong> <span class="summary-pill primary"><span class="slot-icon" style="margin-right: 5px; background-image: url('./data/icons/types/${gvgData.weakTypes[0]}.png'); background-size: contain;"></span> <strong>${escapeHtml(weak)}</strong></span>
           </div>
           
           <div class="section-stack">
@@ -337,25 +338,25 @@ function renderPokemonPanel() {
             <div class="pokemon-meta">
               <div class="meta-row">
                 <span class="meta-label">Faiblesse :</span>
-                <span class="tag watch">${escapeHtml(jData.lsd.motifTypeName[npc.weakType] || '-')}</span>
+                <span class="tag watch"><span class="slot-icon" style="margin-right: 5px; background-image: url('./data/icons/types/${npc.weakType}.png'); background-size: contain;"></span> <strong>${escapeHtml(jData.lsd.motifTypeName[npc.weakType] || '-')}</strong></span>
               </div>
               <div class="meta-row">
-                <span class="meta-label">Watch out :</span>
+                <span class="meta-label">Attention :</span>
                 <div class="tag-row">
-                  ${["1", "2", "3"].map(i => npc.enemyOverwrite[`abnormalStateWatchOut${i}`]).filter(as => as !== "-1").length ? ["1", "2", "3"].map(i => npc.enemyOverwrite[`abnormalStateWatchOut${i}`]).filter(as => as !== "-1").map(item => `<span class="tag watch">${escapeHtml(jData.lsd.abnormalState[item])}</span>`).join('') : '<span class="faint">-</span>'}
+                  ${["1", "2", "3"].map(i => npc.enemyOverwrite[`abnormalStateWatchOut${i}`]).filter(as => as !== "-1").length ? ["1", "2", "3"].map(i => npc.enemyOverwrite[`abnormalStateWatchOut${i}`]).filter(as => as !== "-1").map(item => `<span class="tag watch"><strong>${escapeHtml(jData.lsd.abnormalState[item])}</strong></span>`).join('') : '<span class="faint">-</span>'}
                 </div>
               </div>
               <div class="meta-row">
-                <span class="meta-label">Focus :</span>
+                <span class="meta-label">Recommandé :</span>
                 <div class="tag-row">
-                  ${["1", "2"].map(i => npc.enemyOverwrite[`abnormalStateFocus${i}`]).filter(as => as !== "-1").length ? ["1", "2"].map(i => npc.enemyOverwrite[`abnormalStateFocus${i}`]).filter(as => as !== "-1").map(item => `<span class="tag focus">${escapeHtml(jData.lsd.abnormalState[item])}</span>`).join('') : '<span class="faint">-</span>'}
+                  ${["1", "2"].map(i => npc.enemyOverwrite[`abnormalStateFocus${i}`]).filter(as => as !== "-1").length ? ["1", "2"].map(i => npc.enemyOverwrite[`abnormalStateFocus${i}`]).filter(as => as !== "-1").map(item => `<span class="tag focus"><strong>${escapeHtml(jData.lsd.abnormalState[item])}</strong></span>`).join('') : '<span class="faint">-</span>'}
                 </div>
               </div>
             </div>
         </div>
 
         <div class="section-stack">
-          <div class="section-title">Moves</div>
+          <div class="section-title">Capacités</div>
           <div class="passive-grid primary-passives">
             ${moves.length ? moves.map(move => {
         const uses = moveUsesLabel(move.uses);
@@ -376,7 +377,7 @@ function renderPokemonPanel() {
         </div>
 
         <div class="section-stack">
-          <div class="section-title">Passives</div>
+          <div class="section-title">Talents passifs</div>
           ${(primaryPassiveIds.length || passives.length) ? `
             ${primaryPassiveIds.length ? `
               <div class="passive-grid primary-passives">

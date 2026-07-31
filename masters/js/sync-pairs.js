@@ -36,7 +36,7 @@ let syncLevel = 5;
 let maxEnergy = 60;
 
 const NOT_IMPLEMENTED = [];
-const iconErrorSrc = "./data/icons/unknown.png";
+const iconErrorSrc = "./data/icons/trainers/unknown.png";
 
 class SyncGridShareManager {
 
@@ -224,7 +224,7 @@ function populateSelect() {
             let uid = getUID(t);
             data.uid = uid;
 
-            data.icon = `./data/icons/${uid}.png`;
+            data.icon = `./data/icons/trainers/${uid}.png`;
 
             return data;
         }).sort((a, b) => a.text.localeCompare(b.text));
