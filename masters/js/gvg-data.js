@@ -225,6 +225,7 @@ function renderSummary() {
           
           <div class="section-stack">
             <div class="section-title">Règles</div>
+            ${themes.length > 1 ? '<div class="muted">La règle change à chaque cycle. L\'ordre affiché est celui qui est utilisé en jeu.</div>' : ''}
             <div class="passive-grid">
               ${themes.map((theme, index) => `<div class="passive-item">
                 <div class="passive-item-head">
