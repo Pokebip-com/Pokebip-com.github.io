@@ -278,5 +278,10 @@
     "event_8060_1W_MasterTicket_09": "성화 시즌 한정 확정 B서치",
     "event_8060_2W_SuperTicket_06": "시즌 한정 출현율업 B서치",
     "event_8060_4W_SuperTicket_05": "마스터페스티벌 한정 출현율업 B서치",
-    "event_8070_1W_MasterTicket_03": "페스티벌 한정 확정 B서치"
+    "event_8070_1W_MasterTicket_03": "페스티벌 한정 확정 B서치",
+    "event_8080_1W_MasterTicket_02": "버라이어티 확정 B서치",
+    "event_8080_2W_limited_forTicket_01": "파시오타워 층 추가 기념 티켓 전용 B서치 A",
+    "event_8080_2W_limited_forTicket_02": "파시오타워 층 추가 기념 티켓 전용 B서치 B",
+    "event_8080_2W_limited_forTicket_03": "파시오타워 층 추가 기념 티켓 전용 B서치 C",
+    "event_8080_3W_MasterTicket_01": "갤럭시단 ★5 확정 티켓 전용 B서치"
 }

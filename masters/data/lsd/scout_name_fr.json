@@ -278,5 +278,10 @@
     "event_8060_1W_MasterTicket_09": "Appel Duo saisonnier garanti : Marcia !",
     "event_8060_2W_SuperTicket_06": "Appel Duo saisonnier taux ↑",
     "event_8060_4W_SuperTicket_05": "Master festival taux ↑",
-    "event_8070_1W_MasterTicket_03": "Appel Duo avec Bons Festival Garanti"
+    "event_8070_1W_MasterTicket_03": "Appel Duo avec Bons Festival Garanti",
+    "event_8080_1W_MasterTicket_02": "Appel Duo commun garanti",
+    "event_8080_2W_limited_forTicket_01": "Appel Duo avec Bons Élévation des Tours A",
+    "event_8080_2W_limited_forTicket_02": "Appel Duo avec Bons Élévation des Tours B",
+    "event_8080_2W_limited_forTicket_03": "Appel Duo avec Bons Élévation des Tours C",
+    "event_8080_3W_MasterTicket_01": "Appel Duo avec Bon Team Galaxie 5★ Garanti"
 }

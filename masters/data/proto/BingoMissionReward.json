@@ -403,5 +403,14 @@
 { "bingoMissionRewardId": 804001, "nbLines": 5, "itemSetId": "8040403" },
 { "bingoMissionRewardId": 804001, "nbLines": 6, "itemSetId": "8040405" },
 { "bingoMissionRewardId": 804001, "nbLines": 7, "itemSetId": "8040406" },
-{ "bingoMissionRewardId": 804001, "nbLines": 8, "itemSetId": "8040407" }
+{ "bingoMissionRewardId": 804001, "nbLines": 8, "itemSetId": "8040407" },
+{ "bingoMissionRewardId": 808001, "nbLines": 0, "itemSetId": "8080278" },
+{ "bingoMissionRewardId": 808001, "nbLines": 1, "itemSetId": "8080276" },
+{ "bingoMissionRewardId": 808001, "nbLines": 2, "itemSetId": "8080277" },
+{ "bingoMissionRewardId": 808001, "nbLines": 3, "itemSetId": "3040114" },
+{ "bingoMissionRewardId": 808001, "nbLines": 4, "itemSetId": "3040115" },
+{ "bingoMissionRewardId": 808001, "nbLines": 5, "itemSetId": "3040116" },
+{ "bingoMissionRewardId": 808001, "nbLines": 6, "itemSetId": "5070024" },
+{ "bingoMissionRewardId": 808001, "nbLines": 7, "itemSetId": "5070025" },
+{ "bingoMissionRewardId": 808001, "nbLines": 8, "itemSetId": "4080008" }
 ]}

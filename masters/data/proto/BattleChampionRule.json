@@ -47,6 +47,9 @@
 { "battleChampionRuleId": 47, "championBattleRuleName": "gvg_rule_8010_017", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000152, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
 { "battleChampionRuleId": 48, "championBattleRuleName": "gvg_rule_8010_018", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000153, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
 { "battleChampionRuleId": 49, "championBattleRuleName": "damage_challenge_rule_8030_001", "u3": 9, "u4": [ -1, -1 ], "passiveIds": [ -1, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
+{ "battleChampionRuleId": 50, "championBattleRuleName": "passio_tower_rule_8080_001", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000261, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
+{ "battleChampionRuleId": 51, "championBattleRuleName": "passio_tower_rule_8080_002", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000271, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
+{ "battleChampionRuleId": 52, "championBattleRuleName": "passio_tower_rule_8080_003", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000281, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
 { "battleChampionRuleId": 1001, "championBattleRuleName": "", "u3": 10, "u4": [ -1, -1 ], "passiveIds": [ -1, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
 { "battleChampionRuleId": 1002, "championBattleRuleName": "", "u3": 11, "u4": [ -1, -1 ], "passiveIds": [ -1, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
 { "battleChampionRuleId": 1003, "championBattleRuleName": "", "u3": 12, "u4": [ -1, -1 ], "passiveIds": [ -1, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
@@ -79,5 +82,7 @@
 { "battleChampionRuleId": 1030, "championBattleRuleName": "", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000045, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
 { "battleChampionRuleId": 1031, "championBattleRuleName": "", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000036, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
 { "battleChampionRuleId": 1032, "championBattleRuleName": "", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000178, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
-{ "battleChampionRuleId": 1033, "championBattleRuleName": "", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000183, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 }
+{ "battleChampionRuleId": 1033, "championBattleRuleName": "", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000183, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
+{ "battleChampionRuleId": 1034, "championBattleRuleName": "", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000248, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 },
+{ "battleChampionRuleId": 1035, "championBattleRuleName": "", "u3": 0, "u4": [ -1, -1 ], "passiveIds": [ 60000253, -1, -1, -1, -1, -1, -1, -1 ], "u6": 0 }
 ]}

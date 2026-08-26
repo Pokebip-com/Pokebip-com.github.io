@@ -39,5 +39,7 @@
     "champion_battle_option_name_5030_0502": "Tech Sync Pairs\nTake ×3 Damage",
     "champion_battle_option_name_5030_0503": "Support Sync Pairs\nTake ×3 Damage",
     "champion_battle_option_name_8040_0101": "Non-Paldea\nDmg. Reduction 8",
-    "champion_battle_option_name_8040_0102": "Non-Paldea\nTake ×3 Damage"
+    "champion_battle_option_name_8040_0102": "Non-Paldea\nTake ×3 Damage",
+    "champion_battle_option_name_8080_0101": "Non-Sinnoh\nDmg. Reduction 8",
+    "champion_battle_option_name_8080_0201": "Non-Sinnoh\nTake ×3 Damage"
 }

@@ -91,5 +91,16 @@
     "legend_rule_7020_003": "Der Schaden von Kappalores sinkt abhängig\nvon der Summe der erhöhten Statuswerte.",
     "legend_rule_7030_001": "Fallen Aeropteryx’ KP das erste Mal auf\n30 % oder Maxax’ auf 40 %, halten sie mit\nder jeweiligen Anzahl an KP durch.",
     "legend_rule_7030_002": "Erhöht die Stärke von Att. oder von Att. und\nder GA des Geg., wenn Verbündete nicht v.\nEffekten der Anwender-Seite betroffen sind.",
-    "legend_rule_7030_003": "Wenn Aeropteryx nicht von Statusproblemen\nbetroffen ist oder Maxax’ Vert. erhöht ist,\nwerden ihre Vert. & Sp.-Vert. verfünffacht."
+    "legend_rule_7030_003": "Wenn Aeropteryx nicht von Statusproblemen\nbetroffen ist oder Maxax’ Vert. erhöht ist,\nwerden ihre Vert. & Sp.-Vert. verfünffacht.",
+    "event_rule_8080_101": "Gemäß „Mega-Regel: Schaden↓“ erleiden\nGegner weniger Schaden durch nicht\nMega-entwickelte Verbündete.",
+    "event_rule_8080_201": "Gemäß „Mega-Regel: GA-Countdown↓“ ist\nder GA-Countdown bei Verbündeten zu\nKampfbeginn reduziert, wenn sie eine\nMega-Entwicklung durchführen.",
+    "event_rule_8080_202": "Gemäß „Mega-Regel: GA-Countdown↓“ ist\nder GA-Countdown bei Verbündeten zu\nKampfbeginn reduziert, wenn sie eine\nMega-Entwicklung durchführen.",
+    "event_rule_8080_203": "Gemäß „Mega-Regel: GA-Countdown↓“ ist\nder GA-Countdown bei Verbündeten zu\nKampfbeginn reduziert, wenn sie eine\nMega-Entwicklung durchführen.",
+    "event_rule_8080_204": "Gemäß „Mega-Regel: GA-Countdown↓“ ist\nder GA-Countdown bei Verbündeten zu\nKampfbeginn reduziert, wenn sie eine\nMega-Entwicklung durchführen.",
+    "event_rule_8080_205": "Gemäß „Mega-Regel: GA-Countdown↓“ ist\nder GA-Countdown bei Verbündeten zu\nKampfbeginn reduziert, wenn sie eine\nMega-Entwicklung durchführen.",
+    "event_rule_8080_206": "Gemäß „Mega-Regel: GA-Countdown↓“ ist\nder GA-Countdown bei Verbündeten zu\nKampfbeginn reduziert, wenn sie eine\nMega-Entwicklung durchführen.",
+    "event_rule_8080_207": "Gemäß „Mega-Regel: GA-Countdown↓“ ist\nder GA-Countdown bei Verbündeten zu\nKampfbeginn reduziert, wenn sie eine\nMega-Entwicklung durchführen.",
+    "event_rule_8080_208": "Gemäß „Mega-Regel: GA-Countdown↓“ ist\nder GA-Countdown bei Verbündeten zu\nKampfbeginn reduziert, wenn sie eine\nMega-Entwicklung durchführen.",
+    "event_rule_8080_209": "Gemäß „Mega-Regel: GA-Countdown↓“ ist\nder GA-Countdown bei Verbündeten zu\nKampfbeginn reduziert, wenn sie eine\nMega-Entwicklung durchführen.",
+    "event_rule_8080_301": "Gemäß „Mega-Regel: Schwächung“ lösen\nVerbündete nach der Mega-Entwicklung\nStatuseffekte bei Gegnern aus."
 }

@@ -91,5 +91,16 @@
     "legend_rule_7020_003": "Plus les stats de Ludicolo sont augmentées,\nplus les dégâts qu'il subit sont réduits.",
     "legend_rule_7030_001": "Les PV d'Aéroptéryx restent à 30 %\net les PV de Tranchodon restent à 40 %\nla première fois que leurs PV chutent\nà 30 % et 40 % ou moins.",
     "legend_rule_7030_002": "La puissance des capacités de l'ennemi, de ses\ncapacités Duo, ou des deux, augmente quand\nles alliés ne sont pas affectés par le côté allié.",
-    "legend_rule_7030_003": "Quand Aéroptéryx ne subit pas d'altération de\nstatut, ou quand la Défense de Tranchodon\nest augmentée, leur Défense et Déf. Spé.\nsont multipliées par cinq."
+    "legend_rule_7030_003": "Quand Aéroptéryx ne subit pas d'altération de\nstatut, ou quand la Défense de Tranchodon\nest augmentée, leur Défense et Déf. Spé.\nsont multipliées par cinq.",
+    "event_rule_8080_101": "Méga-Règle Stoïcisme : les ennemis\nsubissent moins de dégâts de la part\ndes alliés qui n'ont pas méga-évolué.",
+    "event_rule_8080_201": "Méga-Règle Compteur ↓ : le compteur des\ncapacités Duo des alliés diminue au début\ndu combat et lors de Méga-Évolutions.",
+    "event_rule_8080_202": "Méga-Règle Compteur ↓ : le compteur des\ncapacités Duo des alliés diminue au début\ndu combat et lors de Méga-Évolutions.",
+    "event_rule_8080_203": "Méga-Règle Compteur ↓ : le compteur des\ncapacités Duo des alliés diminue au début\ndu combat et lors de Méga-Évolutions.",
+    "event_rule_8080_204": "Méga-Règle Compteur ↓ : le compteur des\ncapacités Duo des alliés diminue au début\ndu combat et lors de Méga-Évolutions.",
+    "event_rule_8080_205": "Méga-Règle Compteur ↓ : le compteur des\ncapacités Duo des alliés diminue au début\ndu combat et lors de Méga-Évolutions.",
+    "event_rule_8080_206": "Méga-Règle Compteur ↓ : le compteur des\ncapacités Duo des alliés diminue au début\ndu combat et lors de Méga-Évolutions.",
+    "event_rule_8080_207": "Méga-Règle Compteur ↓ : le compteur des\ncapacités Duo des alliés diminue au début\ndu combat et lors de Méga-Évolutions.",
+    "event_rule_8080_208": "Méga-Règle Compteur ↓ : le compteur des\ncapacités Duo des alliés diminue au début\ndu combat et lors de Méga-Évolutions.",
+    "event_rule_8080_209": "Méga-Règle Compteur ↓ : le compteur des\ncapacités Duo des alliés diminue au début\ndu combat et lors de Méga-Évolutions.",
+    "event_rule_8080_301": "Méga-Règle Infliction : les alliés appliquent\ndes altérations de statut aux ennemis après\nune Méga-Évolution."
 }

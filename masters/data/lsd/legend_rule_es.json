@@ -91,5 +91,16 @@
     "legend_rule_7020_003": "Cuanto más aumentan las características de\nLudicolo, más se reduce el daño que recibe.",
     "legend_rule_7030_001": "La primera vez que los PS de Archeops\nbajan al 30% o menos y la primera vez que\nlos PS de Haxorus bajan al 40% o menos,\nse quedan a esos respectivos porcentajes.",
     "legend_rule_7030_002": "Se potencian los movimientos, o bien los\nmovimientos y los movimientos compi del\nrival cuando no hay ningún efecto en el\nbando aliado.",
-    "legend_rule_7030_003": "Se quintuplican la Defensa y la Defensa\nEspecial de Archeops cuando este no sufre\nproblemas de estado, y las de Haxorus\ncuando la Defensa de este ha aumentado."
+    "legend_rule_7030_003": "Se quintuplican la Defensa y la Defensa\nEspecial de Archeops cuando este no sufre\nproblemas de estado, y las de Haxorus\ncuando la Defensa de este ha aumentado.",
+    "event_rule_8080_101": "Megarregla: Mitigación\nEl rival sufre menos daño de Pokémon\nque no hayan megaevolucionado.",
+    "event_rule_8080_201": "Megarregla: Aceleración\nSe reduce el contador de movimientos compi\nal inicio del combate y al megaevolucionar.",
+    "event_rule_8080_202": "Megarregla: Aceleración\nSe reduce el contador de movimientos compi\nal inicio del combate y al megaevolucionar.",
+    "event_rule_8080_203": "Megarregla: Aceleración\nSe reduce el contador de movimientos compi\nal inicio del combate y al megaevolucionar.",
+    "event_rule_8080_204": "Megarregla: Aceleración\nSe reduce el contador de movimientos compi\nal inicio del combate y al megaevolucionar.",
+    "event_rule_8080_205": "Megarregla: Aceleración\nSe reduce el contador de movimientos compi\nal inicio del combate y al megaevolucionar.",
+    "event_rule_8080_206": "Megarregla: Aceleración\nSe reduce el contador de movimientos compi\nal inicio del combate y al megaevolucionar.",
+    "event_rule_8080_207": "Megarregla: Aceleración\nSe reduce el contador de movimientos compi\nal inicio del combate y al megaevolucionar.",
+    "event_rule_8080_208": "Megarregla: Aceleración\nSe reduce el contador de movimientos compi\nal inicio del combate y al megaevolucionar.",
+    "event_rule_8080_209": "Megarregla: Aceleración\nSe reduce el contador de movimientos compi\nal inicio del combate y al megaevolucionar.",
+    "event_rule_8080_301": "Megarregla: Aflicción\nTras megaevolucionar, los aliados infligen\ncambios de estado como retroceso y\nvulnerabilidad."
 }

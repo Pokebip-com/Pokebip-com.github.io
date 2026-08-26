@@ -1,5 +1,7 @@
 {"entries": [
 { "rewardId": "campaign_LoginBonus_7090_1", "monthlyRewardId": [ 709031, 709028, 709031, 709030, 709031, 709030, 709031, 709031, 709030, 709031, 709030, 709031 ], "leapYearMonthlyRewardId": 709029, "leapYearIdx": "1", "rewardName": "monthlyloginbonus_rare_reward_01" },
 { "rewardId": "campaign_LoginBonus_8020_1", "monthlyRewardId": [ 709031, 709028, 802031, 709030, 709031, 709030, 709031, 709031, 709030, 709031, 709030, 709031 ], "leapYearMonthlyRewardId": 709029, "leapYearIdx": "1", "rewardName": "monthlyloginbonus_rare_reward_01" },
-{ "rewardId": "campaign_LoginBonus_8020_2", "monthlyRewardId": [ 709031, 709028, 709031, 709030, 709031, 709030, 709031, 709031, 709030, 709031, 709030, 709031 ], "leapYearMonthlyRewardId": 709029, "leapYearIdx": "1", "rewardName": "monthlyloginbonus_rare_reward_01" }
+{ "rewardId": "campaign_LoginBonus_8020_2", "monthlyRewardId": [ 709031, 709028, 709031, 709030, 709031, 709030, 709031, 709031, 709030, 709031, 709030, 709031 ], "leapYearMonthlyRewardId": 709029, "leapYearIdx": "1", "rewardName": "monthlyloginbonus_rare_reward_01" },
+{ "rewardId": "campaign_SpecialMonthlyLoginBonus_end_8080", "monthlyRewardId": [ 709031, 709028, 709031, 709030, 709031, 709030, 709031, 709031, 709030, 709031, 709030, 709031 ], "leapYearMonthlyRewardId": 709029, "leapYearIdx": "1", "rewardName": "monthlyloginbonus_rare_reward_01" },
+{ "rewardId": "campaign_SpecialMonthlyLoginBonus_start_8080", "monthlyRewardId": [ 709031, 709028, 709031, 709030, 709031, 709030, 709031, 709031, 808030, 709031, 709030, 709031 ], "leapYearMonthlyRewardId": 709029, "leapYearIdx": "1", "rewardName": "monthlyloginbonus_rare_reward_01" }
 ]}

@@ -46,5 +46,8 @@
     "gvg_rule_8010_016": "Les ennemis ne subissent aucun dégât\nde capacités offensives de Duos qui n'ont pas\nle mot-clé suivant :\n• Galar",
     "gvg_rule_8010_017": "Les ennemis ne subissent aucun dégât\nde capacités offensives de Duos qui n'ont pas\nle mot-clé suivant :\n• Paldea",
     "gvg_rule_8010_018": "Les ennemis ne subissent aucun dégât\nde capacités offensives de Duos qui n'ont pas\nle mot-clé suivant :\n• Passio",
-    "damage_challenge_rule_8030_001": "Les effets sur le terrain déclenchés par\nles alliés et les ennemis durent tout le combat."
+    "damage_challenge_rule_8030_001": "Les effets sur le terrain déclenchés par\nles alliés et les ennemis durent tout le combat.",
+    "passio_tower_rule_8080_001": "Les ennemis ne souffrant pas d'une altération\nde statut ou d'un tourment multiplient par 3\nles dégâts infligés par les capacités Duo.",
+    "passio_tower_rule_8080_002": "Si leurs stats n'ont pas réduit de 16 rangs au total,\nles ennemis multiplient par 3 les dégâts\ninfligés par les capacités Duo.",
+    "passio_tower_rule_8080_003": "Si leur cible n'est pas affectée par les effets qui\nne s'appliquent qu'au côté allié, les ennemis\nmultiplient par 3 les dégâts infligés\npar les capacités Duo."
 }

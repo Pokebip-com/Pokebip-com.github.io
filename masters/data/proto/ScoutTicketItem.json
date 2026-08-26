@@ -52,5 +52,11 @@
 { "scoutTicketItemNameId": "890000000054", "u2": 2, "scoutTicketItemDescriptionId": "8949", "imageId": "i089_0025_00", "rarity": 9, "scheduleId": "8070_3W_BSearch_2", "u7": 10 },
 { "scoutTicketItemNameId": "890000000055", "u2": 2, "scoutTicketItemDescriptionId": "8950", "imageId": "i089_0027_00", "rarity": 9, "scheduleId": "8070_select_master_pack", "u7": 10 },
 { "scoutTicketItemNameId": "890000000056", "u2": 2, "scoutTicketItemDescriptionId": "8951", "imageId": "i089_0027_00", "rarity": 9, "scheduleId": "8070_select_master_pack", "u7": 10 },
-{ "scoutTicketItemNameId": "890000000057", "u2": 2, "scoutTicketItemDescriptionId": "8952", "imageId": "i089_0027_00", "rarity": 9, "scheduleId": "8070_select_master_pack", "u7": 10 }
+{ "scoutTicketItemNameId": "890000000057", "u2": 2, "scoutTicketItemDescriptionId": "8952", "imageId": "i089_0027_00", "rarity": 9, "scheduleId": "8070_select_master_pack", "u7": 10 },
+{ "scoutTicketItemNameId": "890000000058", "u2": 2, "scoutTicketItemDescriptionId": "8953", "imageId": "i089_0027_00", "rarity": 9, "scheduleId": "8080_1W_BSearch_Ticket_1", "u7": 10 },
+{ "scoutTicketItemNameId": "890000000059", "u2": 2, "scoutTicketItemDescriptionId": "8954", "imageId": "i089_0021_00", "rarity": 9, "scheduleId": "8080_1W_BSearch_Ticket_2", "u7": 10 },
+{ "scoutTicketItemNameId": "890000000060", "u2": 2, "scoutTicketItemDescriptionId": "8955", "imageId": "i089_0028_00", "rarity": 9, "scheduleId": "8080_1W_BSearch_Ticket_3", "u7": 10 },
+{ "scoutTicketItemNameId": "890000000061", "u2": 2, "scoutTicketItemDescriptionId": "8956", "imageId": "i089_0029_00", "rarity": 9, "scheduleId": "8080_1W_BSearch_Ticket_4", "u7": 10 },
+{ "scoutTicketItemNameId": "890000000062", "u2": 2, "scoutTicketItemDescriptionId": "8957", "imageId": "i089_0031_00", "rarity": 3, "scheduleId": "8080_3W_BSearch_4_Ticket", "u7": 10 },
+{ "scoutTicketItemNameId": "890000000063", "u2": 2, "scoutTicketItemDescriptionId": "8958", "imageId": "i089_0032_00", "rarity": 9, "scheduleId": "8080_3W_BSearch_5_Ticket", "u7": 10 }
 ]}

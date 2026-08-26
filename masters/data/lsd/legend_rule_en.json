@@ -91,5 +91,16 @@
     "legend_rule_7020_003": "Ludicolo gains more damage reduction the\nmore its stats have been raised in total.",
     "legend_rule_7030_001": "The first time Archeops’s HP reaches 30% or\nlower, or Haxorus’s HP reaches 40% or\nlower, they endure with that HP.",
     "legend_rule_7030_002": "Powers up the opponent’s moves, sync\nmove, or both when allies are not affected\nby the allied field of play.",
-    "legend_rule_7030_003": "When Archeops is not affected by a status\ncondition, or when Haxorus’s Defense is raised,\ntheir Defense and Sp. Def are quintupled."
+    "legend_rule_7030_003": "When Archeops is not affected by a status\ncondition, or when Haxorus’s Defense is raised,\ntheir Defense and Sp. Def are quintupled.",
+    "event_rule_8080_101": "Per Mega Rule: Mitigate, opponents take\nless damage from non-Mega-Evolved allies.",
+    "event_rule_8080_201": "Per Mega Rule: Accelerate, ally sync move\ncountdowns severely lower when the battle\nstarts and after Mega Evolution.",
+    "event_rule_8080_202": "Per Mega Rule: Accelerate, ally sync move\ncountdowns severely lower when the battle\nstarts and after Mega Evolution.",
+    "event_rule_8080_203": "Per Mega Rule: Accelerate, ally sync move\ncountdowns severely lower when the battle\nstarts and after Mega Evolution.",
+    "event_rule_8080_204": "Per Mega Rule: Accelerate, ally sync move\ncountdowns severely lower when the battle\nstarts and after Mega Evolution.",
+    "event_rule_8080_205": "Per Mega Rule: Accelerate, ally sync move\ncountdowns severely lower when the battle\nstarts and after Mega Evolution.",
+    "event_rule_8080_206": "Per Mega Rule: Accelerate, ally sync move\ncountdowns severely lower when the battle\nstarts and after Mega Evolution.",
+    "event_rule_8080_207": "Per Mega Rule: Accelerate, ally sync move\ncountdowns severely lower when the battle\nstarts and after Mega Evolution.",
+    "event_rule_8080_208": "Per Mega Rule: Accelerate, ally sync move\ncountdowns severely lower when the battle\nstarts and after Mega Evolution.",
+    "event_rule_8080_209": "Per Mega Rule: Accelerate, ally sync move\ncountdowns severely lower when the battle\nstarts and after Mega Evolution.",
+    "event_rule_8080_301": "Per Mega Rule: Inflict, allies inflict status\neffects, such as flinching and break, on\nopponents after Mega Evolving."
 }

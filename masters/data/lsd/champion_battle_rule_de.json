@@ -46,5 +46,8 @@
     "gvg_rule_8010_016": "Gegner erleiden keinen Schaden durch Angriffe\nvon Gefährten, die nicht dieses Attribut erfüllen:\n\n• Galar",
     "gvg_rule_8010_017": "Gegner erleiden keinen Schaden durch Angriffe\nvon Gefährten, die nicht dieses Attribut erfüllen:\n\n• Paldea",
     "gvg_rule_8010_018": "Gegner erleiden keinen Schaden durch Angriffe\nvon Gefährten, die nicht dieses Attribut erfüllen:\n\n• Passio",
-    "damage_challenge_rule_8030_001": "Von Mitstreitern und von Gegnern ausgelöste\nSeiten-Effekte wirken permanent."
+    "damage_challenge_rule_8030_001": "Von Mitstreitern und von Gegnern ausgelöste\nSeiten-Effekte wirken permanent.",
+    "passio_tower_rule_8080_001": "Gegner fügen das Dreifache an Schaden durch\nGefährtenattacken zu, wenn sie nicht von\nStatusproblemen oder Störungen betroffen sind.",
+    "passio_tower_rule_8080_002": "Gegner fügen das Dreifache an Schaden durch\nGefährtenattacken zu, wenn ihre Statuswerte nicht\num insgesamt 16 Ränge gesenkt worden sind.",
+    "passio_tower_rule_8080_003": "Gegner fügen das Dreifache an Schaden durch\nGefährtenattacken zu, wenn ihr Ziel von Effekten,\ndie nur für die Anwender-Seite gelten, nicht\nbetroffen ist."
 }

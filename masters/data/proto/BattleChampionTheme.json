@@ -51,5 +51,11 @@
 { "battleChampionThemeId": 80700007, "championBattleThemeName": "gvg_theme_8070_007", "battleChampionRuleIds": [ 37, 0, 0 ], "params": [ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
 { "battleChampionThemeId": 80700101, "championBattleThemeName": "gvg_theme_8070_101", "battleChampionRuleIds": [ 31, 35, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
 { "battleChampionThemeId": 80700104, "championBattleThemeName": "gvg_theme_8070_104", "battleChampionRuleIds": [ 34, 35, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
-{ "battleChampionThemeId": 80700107, "championBattleThemeName": "gvg_theme_8070_107", "battleChampionRuleIds": [ 37, 35, 0 ], "params": [ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] }
+{ "battleChampionThemeId": 80700107, "championBattleThemeName": "gvg_theme_8070_107", "battleChampionRuleIds": [ 37, 35, 0 ], "params": [ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80800001, "championBattleThemeName": "passio_tower_theme_8080_001", "battleChampionRuleIds": [ 29, 50, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80800002, "championBattleThemeName": "passio_tower_theme_8080_002", "battleChampionRuleIds": [ 28, 50, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80800003, "championBattleThemeName": "passio_tower_theme_8080_003", "battleChampionRuleIds": [ 29, 51, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80800004, "championBattleThemeName": "passio_tower_theme_8080_004", "battleChampionRuleIds": [ 28, 51, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80800005, "championBattleThemeName": "passio_tower_theme_8080_005", "battleChampionRuleIds": [ 29, 52, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] },
+{ "battleChampionThemeId": 80800006, "championBattleThemeName": "passio_tower_theme_8080_006", "battleChampionRuleIds": [ 28, 52, 0 ], "params": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], "u5": [ 0, 0, 0, 0, 0, 0, 0, 0, 0 ] }
 ]}

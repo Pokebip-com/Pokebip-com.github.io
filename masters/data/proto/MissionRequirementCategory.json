@@ -76,5 +76,6 @@
 { "requirementId": 74, "u2": 175, "u3": 5 },
 { "requirementId": 75, "u2": 229, "u3": 0 },
 { "requirementId": 76, "u2": 234, "u3": 4 },
-{ "requirementId": 77, "u2": 188, "u3": 0 }
+{ "requirementId": 77, "u2": 188, "u3": 0 },
+{ "requirementId": 78, "u2": 237, "u3": 1 }
 ]}

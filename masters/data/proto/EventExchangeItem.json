@@ -747,5 +747,13 @@
 { "itemId": "750000000814", "descriptionId": 600000, "imageId": "i075_0003_00", "u4": 0, "storyQuestId": "611499", "trainerId": "-1", "scheduleId": "8070_3W_Event_4_Exchange", "itemNameOverride": "750000000566" },
 { "itemId": "750000000815", "descriptionId": 600000, "imageId": "i075_0015_00", "u4": 0, "storyQuestId": "611500", "trainerId": "-1", "scheduleId": "8070_3W_Event_5_Exchange", "itemNameOverride": "750000000568" },
 { "itemId": "750000000816", "descriptionId": 600000, "imageId": "i075_0014_00", "u4": 0, "storyQuestId": "611501", "trainerId": "-1", "scheduleId": "8070_3W_Event_6_Exchange", "itemNameOverride": "750000000570" },
-{ "itemId": "750000000817", "descriptionId": 600000, "imageId": "i075_0016_00", "u4": 0, "storyQuestId": "611502", "trainerId": "-1", "scheduleId": "8070_3W_Event_8_Exchange", "itemNameOverride": "750000000571" }
+{ "itemId": "750000000817", "descriptionId": 600000, "imageId": "i075_0016_00", "u4": 0, "storyQuestId": "611502", "trainerId": "-1", "scheduleId": "8070_3W_Event_8_Exchange", "itemNameOverride": "750000000571" },
+{ "itemId": "750000000819", "descriptionId": 600060, "imageId": "i075_0066_01", "u4": 0, "storyQuestId": "611530", "trainerId": "-1", "scheduleId": "8080_1W_Campaign_1_Exchange", "itemNameOverride": "750000000819" },
+{ "itemId": "750000000820", "descriptionId": 600061, "imageId": "i075_0067_01", "u4": 0, "storyQuestId": "611531", "trainerId": "-1", "scheduleId": "8080_1W_Campaign_2_Exchange", "itemNameOverride": "750000000820" },
+{ "itemId": "750000000821", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611520", "trainerId": "-1", "scheduleId": "8080_1W_Event_3", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000822", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611523", "trainerId": "-1", "scheduleId": "8080_2W_Event_1", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000823", "descriptionId": 600048, "imageId": "i075_9000_01", "u4": 0, "storyQuestId": "611524", "trainerId": "-1", "scheduleId": "8080_3W_Event_1", "itemNameOverride": "750000000611" },
+{ "itemId": "750000000824", "descriptionId": 600000, "imageId": "i075_0011_00", "u4": 0, "storyQuestId": "611528", "trainerId": "-1", "scheduleId": "8080_3W_Event_5_Exchange", "itemNameOverride": "750000000626" },
+{ "itemId": "750000000825", "descriptionId": 600000, "imageId": "i075_0036_01", "u4": 0, "storyQuestId": "611529", "trainerId": "-1", "scheduleId": "8080_4W_Event_1_Exchange", "itemNameOverride": "750000000181" },
+{ "itemId": "750000000826", "descriptionId": 600062, "imageId": "i075_0061_01", "u4": 0, "storyQuestId": "611525", "trainerId": "-1", "scheduleId": "8080_3W_Event_2_honor_FOREVER", "itemNameOverride": "-1" }
 ]}

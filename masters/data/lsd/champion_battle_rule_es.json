@@ -46,5 +46,8 @@
     "gvg_rule_8010_016": "El equipo rival no recibe daño producido por los\nataques de compis que no tengan el siguiente\ndistintivo:\n• Galar",
     "gvg_rule_8010_017": "El equipo rival no recibe daño producido por los\nataques de compis que no tengan el siguiente\ndistintivo:\n• Paldea",
     "gvg_rule_8010_018": "El equipo rival no recibe daño producido por los\nataques de compis que no tengan el siguiente\ndistintivo:\n• Passio",
-    "damage_challenge_rule_8030_001": "Los efectos de entorno activados por ambos\nbandos duran todo el combate."
+    "damage_challenge_rule_8030_001": "Los efectos de entorno activados por ambos\nbandos duran todo el combate.",
+    "passio_tower_rule_8080_001": "El equipo rival inflige el triple de daño con\nmovimientos compi cuando no le afecta ningún\nproblema ni cambio de estado.",
+    "passio_tower_rule_8080_002": "El equipo rival inflige el triple de daño con\nmovimientos compi cuando sus características\nno se han reducido 16 niveles en total.",
+    "passio_tower_rule_8080_003": "El equipo rival inflige el triple de daño con\nmovimientos compi cuando al objetivo no le\nafecta ningún efecto que solo se aplique a\nsu bando."
 }

@@ -27,5 +27,7 @@
     "champion_battle_option_description_5030_0502": "같은 편 전원의 테크니컬은\n기술로 공격받았을 때의 데미지가 3배가 된다",
     "champion_battle_option_description_5030_0503": "같은 편 전원의 서포트는\n기술로 공격받았을 때의 데미지가 3배가 된다",
     "champion_battle_option_description_8040_0101": "상대는 팔데아 태그를 갖고 있지 않은 버디즈에게\n기술이나 버디즈기술, 버디즈다이맥스기술로\n공격받았을 때의 데미지를 80% 약하게 한다",
-    "champion_battle_option_description_8040_0102": "팔데아 태그를 갖고 있지 않은 같은 편 버디즈는\n기술로 공격받았을 때의 데미지가 3배가 된다"
+    "champion_battle_option_description_8040_0102": "팔데아 태그를 갖고 있지 않은 같은 편 버디즈는\n기술로 공격받았을 때의 데미지가 3배가 된다",
+    "champion_battle_option_description_8080_0101": "상대는 신오 태그를 갖고 있지 않은 버디즈에게\n기술이나 버디즈기술, 버디즈다이맥스기술로\n공격받았을 때의 데미지를 80% 약하게 한다",
+    "champion_battle_option_description_8080_0201": "신오 태그를 갖고 있지 않은 같은 편 버디즈는\n기술로 공격받았을 때의 데미지가 3배가 된다"
 }
