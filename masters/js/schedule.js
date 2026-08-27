@@ -603,6 +603,8 @@ function getVersionSchedule(versionId) {
         return s;
     }));
 
+
+
     //jData.custom.versionReleaseDates[idx].schedule = ver.schedule;
     jData.custom.versionReleaseDates[idx].schedule.push(...getCyclingRankingEvents(idx));
     jData.custom.versionReleaseDates[idx].hasCyclingRankingEventData = true;
@@ -895,14 +897,25 @@ function printSalonGuest(scheduleId, printDiv) {
 
 function printShopOffers(schedule, printDiv) {
     let eventBannerIds = jData.proto.eventBanner.filter(eb => eb.scheduleId === schedule.scheduleId).map(eb => eb.bannerId);
-    let bannerIds = [...new Set(jData.proto.shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId && spi.bannerId > 0)
+    let bannerIds = [...new Set(jData.proto.shopPurchasableItem.filter(spi => spi.scheduleId === schedule.scheduleId)
         .map(spi => parseInt(spi.bannerId)).concat(eventBannerIds))];
+
+    console.log(bannerIds[0]);
 
     if(bannerIds.length === 0)
         return;
 
     bannerIds.forEach(bid => {
         let banners = jData.proto.banner.filter(b => b.bannerId === bid);
+
+        if(banners.length === 0) {
+            banners.push({
+                "bannerId" : 0,
+                "bannerIdString" : "event_1100a_1w_Campaign_01",
+                "text1Id" : 16209001,
+                "text2Id" : -1
+            });
+        }
 
         banners.forEach(ban => printShopBanner(ban, schedule, printDiv));
     });
