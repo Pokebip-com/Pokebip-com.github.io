@@ -121,8 +121,6 @@ function fetchFloor(floor = state.floorNum) {
 
 function fetchTowerData() {
 
-    console.log(state);
-
     towerData.floors = jData.proto.passioTowerQuest.filter(ptq => ptq.towerId.toString() === state.towerId.toString()).sort((a, b) => a.floor - b.floor);
 
     state.floorNum = towerData.floors.findIndex(item => item.floor.toString() === state.floorNum.toString());
@@ -158,6 +156,7 @@ function renderTowersList() {
     document.querySelectorAll('[data-champion-id], [data-mobile-champion-id]').forEach(button => {
         button.addEventListener('click', () => {
             state.towerId = button.dataset.championId || button.dataset.mobileChampionId;
+            towerData.currentTower = jData.proto.passioTower.find(tower => tower.towerId.toString() === state.towerId.toString());
             fetchFloor();
             syncUrl();
             render();
