@@ -9,12 +9,9 @@ async function getData() {
     jsonCache.preloadProto("BattleParameter");
     jsonCache.preloadProto("EnemyOverwriteParameter");
     jsonCache.preloadProto("EventQuestGroup");
-    jsonCache.preloadProto("GvG");
-    jsonCache.preloadProto("GvGBoss");
-    jsonCache.preloadProto("GvGBossRound");
-    jsonCache.preloadProto("GvGEnemyOverwrite");
-    jsonCache.preloadProto("GvGRound");
     jsonCache.preloadProto("MonsterBase");
+    jsonCache.preloadProto("PassioTower");
+    jsonCache.preloadProto("PassioTowerQuest");
     jsonCache.preloadProto("StoryQuest");
     jsonCache.preloadProto("StoryQuestDetail");
     jsonCache.preloadProto("TrainerBase");
@@ -26,6 +23,7 @@ async function getData() {
     jsonCache.preloadLsd("champion_battle_theme");
     jsonCache.preloadLsd("monster_name");
     jsonCache.preloadLsd("motif_type_name");
+    jsonCache.preloadLsd("passio_tower_name");
     jsonCache.preloadLsd("story_quest_name");
 
     // Other Preloads
@@ -35,34 +33,28 @@ async function getData() {
     await jsonCache.runPreload();
 }
 
-function getGvGName(gvg) {
-    const eqg = jData.proto.eventQuestGroup.find(eqg => eqg.questGroupId === gvg.eventQuestGroupId.toString());
-    const banner = jData.proto.banner.find(b => b.bannerId === eqg.bannerId);
-    return `${gvg.gvgNum}. ${jData.lsd.bannerText[banner.text2Id].replace("\n", " ")}`;
+function getTowerName(towerId) {
+    const tower = jData.proto.passioTower.find(t => t.towerId === towerId);
+    return tower ? tower.name : '';
 }
 
-const gvgData = {
-    gvg: {},
+const towerData = {
+    currentTower: {},
     battle: {},
-    boss: [],
-    bossRound: {},
+    floors: [],
     npc: {
         center: {},
         left: {},
         right: {}
     },
     weakTypes: [],
-    name: function() { getGvGName(this.gvg) }
+    name: function() { getTowerName(this.towerId) }
 }
 
 const state = {
-    gvgId: null,
-    bossId: "",
-    bossNum: 0,
-    roundNum: 1,
-    bossRoundId: "",
+    towerId: null,
+    floorNum: 1,
     npc: "center",
-    cycleId: 'cycle-1',
     theme: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 };
 
@@ -80,119 +72,93 @@ function slotLabel(slot) {
 
 function syncUrl() {
     const params = new URLSearchParams();
-    params.set('gvg', state.gvgId);
-    params.set('boss', state.bossId);
-    params.set('round', state.bossRoundId || '');
-    state.roundNum = state.roundNum > getBossRoundIds().length ? 1 : state.roundNum;
-    params.set('circuit', state.roundNum || 1);
+    params.set('tower', state.towerId || '');
+    state.floorNum = state.floorNum > getTowerFloors().length ? 1 : state.floorNum;
+    params.set('floor', state.floorNum || '1');
     params.set('npc', state.npc || 'center');
     history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
 }
 
 function hydrateFromUrl() {
     const params = new URLSearchParams(location.search);
-    state.gvgId = params.get('gvg') || state.gvgId || jData.proto.gvG[jData.proto.gvG.length - 1].gvgId;
-    state.bossId = params.get('boss') || state.bossId;
-    state.bossRoundId = params.get('round') || state.bossRoundId;
-    state.roundNum = params.get('circuit') || state.roundNum;
+    state.towerId = params.get('tower') || state.towerId || jData.proto.passioTower[0].towerId;
+    state.floorNum = parseInt(params.get('floor')) || state.floorNum;
     state.npc = params.get('npc') || state.npc;
 }
 
-function getBossRoundIds(bossNum = state.bossNum) {
-    return gvgData.boss[bossNum]?.gvgBossRoundIds.concat(gvgData.boss[bossNum]?.gvgBossRoundRepeatedId) || [];
+function getTowerFloors(towerId = state.towerId) {
+    return jData.proto.passioTowerQuest.filter(ptq => ptq.towerId.toString() === towerId.toString()).sort((a, b) => a.floor - b.floor) || [];
 }
 
 function fetchNPCs() {
-    const storyQuestDetail = jData.proto.storyQuestDetail.find(sqd => sqd.storyQuestId.toString() === gvgData.bossRound.storyQuestId.toString());
+    const storyQuestDetail = jData.proto.storyQuestDetail.find(sqd => sqd.storyQuestId.toString() === towerData.currentFloor.storyQuestId.toString());
 
-    gvgData.weakTypes = storyQuestDetail.weakTypes;
+    towerData.weakTypes = storyQuestDetail.weakTypes;
 
     const battle = jData.proto.battle.find(b => b.battleId === storyQuestDetail.battleIds[0]);
 
     const battleParams = jData.proto.battleParameter.find(bp => bp.battleParameterId === battle.battleParameterId);;
 
-    gvgData.npc.center = jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId1);
-    gvgData.npc.left = jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId2);
-    gvgData.npc.right = jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId3);
+    towerData.npc.center = jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId1);
+    towerData.npc.left = jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId2);
+    towerData.npc.right = jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId3);
 
-    gvgData.npc.center.enemyOverwrite = jData.proto.gvGEnemyOverwrite.find(eo => eo.gvgEnemyOverwriteId.toString() === gvgData.bossRound.gvgEnemyOverwriteIds[0].toString());
-    gvgData.npc.center.enemyOverwriteParams = jData.proto.enemyOverwriteParameter.find(eop => eop.enemyOverwriteParameterId.toString() === gvgData.npc.center.enemyOverwrite.enemyOverwriteParameterId.toString());
-
-    gvgData.npc.left.enemyOverwrite = gvgData.npc.right.enemyOverwrite = jData.proto.gvGEnemyOverwrite.find(eo => eo.gvgEnemyOverwriteId.toString() === gvgData.bossRound.gvgEnemyOverwriteIds[1].toString());
-    gvgData.npc.left.enemyOverwriteParams = gvgData.npc.right.enemyOverwriteParams = jData.proto.enemyOverwriteParameter.find(eop => eop.enemyOverwriteParameterId.toString() === gvgData.npc.left.enemyOverwrite.enemyOverwriteParameterId.toString());
+    towerData.npc.center.enemyOverwriteParams = jData.proto.enemyOverwriteParameter.find(eop => eop.enemyOverwriteParameterId.toString() === towerData.currentFloor.enemyOverwriteParameter[0].toString());
+    towerData.npc.left.enemyOverwriteParams = towerData.npc.right.enemyOverwriteParams = jData.proto.enemyOverwriteParameter.find(eop => eop.enemyOverwriteParameterId.toString() === towerData.currentFloor.enemyOverwriteParameter[1].toString());
 
     let watchOut = []
 
-    for(let i = 1; i <= 3; i++) {
-        watchOut.push(gvgData.npc.center.enemyOverwrite[`abnormalStateWatchOut${i}`]);
-        watchOut.push(gvgData.npc.left.enemyOverwrite[`abnormalStateWatchOut${i}`]);
-    }
-
-    gvgData.watchOut = [...new Set(watchOut)]
+    towerData.watchOut = [...new Set(watchOut)]
         .filter(as => as !== "-1")
         .map(as => jData.lsd.abnormalState[as]);
 }
 
-function fetchBossRound(round = state.roundNum) {
-    const boss = gvgData.boss.find(b => b.gvgBossId.toString() === state.bossId);
-    const roundId = (round <= boss.gvgBossRoundIds.length ? boss.gvgBossRoundIds[round - 1] : boss.gvgBossRoundRepeatedId);
-
-    state.cycleId = roundId;
-    state.roundNum = round;
-
-    gvgData.bossRound = jData.proto.gvGBossRound.find(bossRound => bossRound.gvgBossRoundId === roundId);
-
-    state.bossRoundId = gvgData.bossRound.gvgBossRoundId;
+function fetchFloor(floor = state.floorNum) {
+    towerData.currentFloor = towerData.floors.find(f => f.floor.toString() === floor.toString());
 
     fetchNPCs();
 }
 
-function fetchGvGData() {
-    gvgData.gvg = jData.proto.gvG.find(gvg => gvg.gvgId.toString() === state.gvgId.toString());
-    gvgData.boss = jData.proto.gvGBoss.filter(boss => gvgData.gvg.gvgBossIds.includes(boss.gvgBossId.toString()));
+function fetchTowerData() {
 
-    gvgData.boss.forEach(boss => {
-        boss.weakType = jData.proto.storyQuestDetail.find(sqd => sqd.storyQuestId === jData.proto.gvGBossRound.find(br => br.gvgBossRoundId === boss.gvgBossRoundIds[0]).storyQuestId).weakTypes[0];
-    })
+    console.log(state);
 
-    state.bossNum = gvgData.boss.findIndex(item => item.gvgBossId.toString() === state.bossId.toString());
-    state.bossNum = state.bossNum === -1 ? 0 : state.bossNum;
-    state.bossId = gvgData.boss[state.bossNum].gvgBossId.toString();
-    fetchBossRound();
-    console.log(gvgData);
+    towerData.floors = jData.proto.passioTowerQuest.filter(ptq => ptq.towerId.toString() === state.towerId.toString()).sort((a, b) => a.floor - b.floor);
+
+    state.floorNum = towerData.floors.findIndex(item => item.floor.toString() === state.floorNum.toString());
+    state.floorNum = state.floorNum === -1 ? '1' : state.floorNum + 1;
+
+    towerData.currentTower = jData.proto.passioTower.find(tower => tower.towerId.toString() === state.towerId.toString());
+    state.towerId = towerData.currentTower.towerId.toString();
+
+    fetchFloor();
 }
 
 function renderSelects() {
-
-    $('#editionSelect').innerHTML = jData.proto.gvG.map(item => `
-        <option value="${escapeHtml(item.gvgId)}" ${item.gvgId.toString() === state.gvgId.toString() ? 'selected' : ''}>${escapeHtml(getGvGName(item))}</option>
-      `).join('');
-
-    $('#cycleSelect').innerHTML = getBossRoundIds().map((item, index) => `
-        <option value="${escapeHtml(index + 1)}" ${(index + 1).toString() === state.roundNum.toString() || (index === 0 && getBossRoundIds().length < state.roundNum) ? 'selected' : ''}>${index + 1}</option>
+    $('#floorSelect').innerHTML = getTowerFloors().map((item, index) => `
+        <option value="${escapeHtml(index + 1)}" ${(index + 1).toString() === state.floorNum.toString() || (index === 0 && getTowerFloors().length < state.floorNum) ? 'selected' : ''}>${index + 1}</option>
       `).join(``);
 }
 
-function renderChampionList() {
-    let champions = gvgData.boss;
-    $('#championList').innerHTML = champions.length ? champions.map(champion => `
-        <button class="champion-card ${champion.gvgBossId === state.bossId ? 'is-active' : ''}" type="button" data-champion-id="${escapeHtml(champion.gvgBossId)}">
+function renderTowersList() {
+    let towers = jData.proto.passioTower;
+    $('#towersList').innerHTML = towers.length ? towers.map(tower => `
+        <button class="champion-card ${tower.towerId === state.towerId ? 'is-active' : ''}" type="button" data-champion-id="${escapeHtml(tower.towerId)}">
           <div class="brand-line">
-            <span class="slot-icon" style="background-image: url('./data/icons/types/${champion.weakType}.png'); background-size: contain;"></span>
-            <strong>${escapeHtml(getTrainerNameByActorId(champion.actorId))}</strong>
+            <span class="slot-icon" style="background-image: url('./data/icons/types/${tower.motifTypeNameId}.png'); background-size: contain;"></span>
+            <strong>${escapeHtml(jData.lsd.passioTowerName[tower.passioTowerNameId])}</strong>
           </div>
         </button>
       `).join('') : '<div class="empty panel">Aucun résultat.</div>';
 
-    $('#mobileStrip').innerHTML = champions.map(champion => `
-        <button class="${champion.gvgBossId === state.bossId ? 'is-active' : ''}" type="button" data-mobile-champion-id="${escapeHtml(champion.gvgBossId)}" ><span class="slot-icon" style="background-image: url('./data/icons/types/${champion.weakType}.png'); background-size: contain;"></span> ${escapeHtml(getTrainerNameByActorId(champion.actorId))}</button>
+    $('#mobileStrip').innerHTML = towers.map(tower => `
+        <button class="${tower.towerId === state.towerId ? 'is-active' : ''}" type="button" data-mobile-champion-id="${escapeHtml(tower.towerId)}" ><span class="slot-icon" style="background-image: url('./data/icons/types/${tower.motifTypeNameId}.png'); background-size: contain;"></span> ${escapeHtml(jData.lsd.passioTowerName[tower.passioTowerNameId])}</button>
       `).join('');
 
     document.querySelectorAll('[data-champion-id], [data-mobile-champion-id]').forEach(button => {
         button.addEventListener('click', () => {
-            state.bossId = button.dataset.championId || button.dataset.mobileChampionId;
-            state.bossNum = gvgData.boss.findIndex(item => item.gvgBossId.toString() === state.bossId.toString());
-            fetchBossRound();
+            state.towerId = button.dataset.championId || button.dataset.mobileChampionId;
+            fetchFloor();
             syncUrl();
             render();
         });
@@ -200,42 +166,39 @@ function renderChampionList() {
 }
 
 function renderSummary() {
-    if (!gvgData.boss) {
-        $('#summaryPanel').innerHTML = '<div class="empty">Sélectionne un combat.</div>';
+    if (!towerData.currentFloor) {
+        $('#summaryPanel').innerHTML = '<div class="empty">Sélectionne un étage.</div>';
         return;
     }
-    const weak = jData.lsd.motifTypeName[gvgData.weakTypes[0]];
+    const weak = jData.lsd.motifTypeName[towerData.weakTypes[0]];
 
-    let themes = (state.roundNum > gvgData.boss[state.bossNum].roundsBattleChampionThemeIds.length ? gvgData.boss[state.bossNum].repeatedRoundBattleChampionThemeIds : [gvgData.boss[state.bossNum].roundsBattleChampionThemeIds[state.roundNum - 1]])
-        .map(id => {
-            if (id === '0') return '0';
-            let theme = jData.proto.battleChampionTheme.find(theme => theme.battleChampionThemeId.toString() === id.toString());
-            theme.battleChampionRules = theme.battleChampionRuleIds.filter(rid => rid !== 0).map(rid => jData.proto.battleChampionRule.find(rule => rule.battleChampionRuleId.toString() === rid.toString()));
-            return theme;
-        });
+    const storyQuest = jData.proto.storyQuest.find(sq => sq.storyQuestId.toString() === towerData.currentFloor.storyQuestId.toString());
+
+    let theme = '0';
+    if (towerData.currentFloor.battleChampionThemeId !== '0') {
+        theme = jData.proto.battleChampionTheme.find(theme => theme.battleChampionThemeId.toString() === towerData.currentFloor.battleChampionThemeId.toString());
+        theme.battleChampionRules = theme.battleChampionRuleIds.filter(rid => rid !== 0).map(rid => jData.proto.battleChampionRule.find(rule => rule.battleChampionRuleId.toString() === rid.toString()));
+    }
+
+    const name = jData.lsd.storyQuestName[storyQuest.questNameId].replace("[Digit:6digits ]", towerData.currentFloor.floor).replace("[Name:TowerName ]", jData.lsd.passioTowerName[towerData.currentTower.passioTowerNameId]);
 
     $('#summaryPanel').innerHTML = `
         <div class="summary-head">
           <div>
-            <h2><span class="slot-icon" style="background-image: url('./data/icons/types/${gvgData.boss[state.bossNum].type}.png'); background-size: contain;"></span> ${escapeHtml(getTrainerNameByActorId(gvgData.boss[state.bossNum].actorId))}</h2>
+            <h2>${escapeHtml(name)}</h2>
           </div>
-          <div class="chip-row">
-            <strong>Faiblesse :</strong> <span class="summary-pill primary"><span class="slot-icon" style="margin-right: 5px; background-image: url('./data/icons/types/${gvgData.weakTypes[0]}.png'); background-size: contain;"></span> <strong>${escapeHtml(weak)}</strong></span>
           </div>
           
           <div class="section-stack">
-            <div class="section-title">Règles</div>
-            ${themes.length > 1 ? '<div class="muted">La règle change à chaque cycle. L\'ordre affiché est celui qui est utilisé en jeu.</div>' : ''}
+            <div class="section-title">Règle</div>
             <div class="passive-grid">
-              ${themes.map((theme, index) => `<div class="passive-item">
+              <div class="passive-item">
                 <div class="passive-item-head">
-                  ${ theme === '0' ? '' : `<span class="num-badge">${index + 1}</span>` }
                   <div class="passive-inline">
-                    ${ theme === '0' ? 'Aucune règle pour ce cycle.' : tooltipButton(jData.lsd.championBattleTheme[theme.championBattleThemeName], theme.battleChampionRules.map(bcr => jData.lsd.championBattleRule[bcr.championBattleRuleName]).join("<br>"), jData.lsd.championBattleTheme[theme.championBattleThemeName]) }
+                    ${ theme === '0' ? 'Aucune règle pour cet étage.' : tooltipButton(jData.lsd.championBattleTheme[theme.championBattleThemeName], theme.battleChampionRules.map(bcr => jData.lsd.championBattleRule[bcr.championBattleRuleName]).join("<br>"), jData.lsd.championBattleTheme[theme.championBattleThemeName]) }
                   </div>
                 </div>
               </div>
-              `).join('')}
             </div>
           </div>
         </div>
@@ -243,13 +206,13 @@ function renderSummary() {
 }
 
 function renderPokemonTabs() {
-    if (!gvgData.boss) {
+    if (!towerData.currentFloor) {
         $('#pokemonTabs').innerHTML = '';
         return;
     }
 
     $('#pokemonTabs').innerHTML = ['left', 'center', 'right'].map(slot => {
-        const npc = gvgData.npc[slot];
+        const npc = towerData.npc[slot];
         const monster = jData.proto.monsterBase.find(mb => mb.actorId === npc.monsterActorId);
         const monsterName = jData.lsd.monsterName[monster.monsterNameId];
         return `
@@ -289,7 +252,7 @@ function moveUsesLabel(value) {
 }
 
 function renderPokemonPanel() {
-    const npc = gvgData.npc[state.npc];
+    const npc = towerData.npc[state.npc];
 
     if (!npc) {
         $('#pokemonPanel').innerHTML = '<div class="empty">Aucun Pokémon.</div>';
@@ -299,7 +262,6 @@ function renderPokemonPanel() {
     const monster = jData.proto.monsterBase.find(mb => mb.actorId === npc.monsterActorId);
     const monsterName = jData.lsd.monsterName[monster.monsterNameId];
 
-    const primaryPassiveIds = ["1", "2", "3"].map(i => npc.enemyOverwrite[`passive${i}Id`]).filter(p => p !== "0");
     const moves = [];
 
     for(let i = 1; i <= 6; i++) {
@@ -341,18 +303,6 @@ function renderPokemonPanel() {
                 <span class="meta-label">Faiblesse :</span>
                 <span class="tag watch"><span class="slot-icon" style="margin-right: 5px; background-image: url('./data/icons/types/${npc.weakType}.png'); background-size: contain;"></span> <strong>${escapeHtml(jData.lsd.motifTypeName[npc.weakType] || '-')}</strong></span>
               </div>
-              <div class="meta-row">
-                <span class="meta-label">Attention :</span>
-                <div class="tag-row">
-                  ${["1", "2", "3"].map(i => npc.enemyOverwrite[`abnormalStateWatchOut${i}`]).filter(as => as !== "-1").length ? ["1", "2", "3"].map(i => npc.enemyOverwrite[`abnormalStateWatchOut${i}`]).filter(as => as !== "-1").map(item => `<span class="tag watch"><strong>${escapeHtml(jData.lsd.abnormalState[item])}</strong></span>`).join('') : '<span class="faint">-</span>'}
-                </div>
-              </div>
-              <div class="meta-row">
-                <span class="meta-label">Recommandé :</span>
-                <div class="tag-row">
-                  ${["1", "2"].map(i => npc.enemyOverwrite[`abnormalStateFocus${i}`]).filter(as => as !== "-1").length ? ["1", "2"].map(i => npc.enemyOverwrite[`abnormalStateFocus${i}`]).filter(as => as !== "-1").map(item => `<span class="tag focus"><strong>${escapeHtml(jData.lsd.abnormalState[item])}</strong></span>`).join('') : '<span class="faint">-</span>'}
-                </div>
-              </div>
             </div>
         </div>
 
@@ -379,22 +329,6 @@ function renderPokemonPanel() {
 
         <div class="section-stack">
           <div class="section-title">Talents passifs</div>
-          ${(primaryPassiveIds.length || passives.length) ? `
-            ${primaryPassiveIds.length ? `
-              <div class="passive-grid primary-passives">
-                ${primaryPassiveIds.map((item, index) => `
-                  <article class="passive-item primary-passive">
-                    <div class="passive-item-head">
-                      <span class="num-badge">P${index + 1}</span>
-                      <div class="passive-inline">
-                        ${tooltipButton(getPassiveSkillName(item), getPassiveSkillDescr(item), getPassiveSkillName(item))}
-                      </div>
-                    </div>
-                  </article>
-                `).join('')}
-              </div>
-              <hr class="passive-separator">
-            ` : ''}
             <div class="passive-grid">
               ${passives.map((passive, index) => `
                 <article class="passive-item">
@@ -407,7 +341,6 @@ function renderPokemonPanel() {
                 </article>
               `).join('')}
             </div>
-          ` : '<p class="muted">Aucun passif renseigné.</p>'}
         </div>
       `;
 
@@ -467,22 +400,16 @@ function bindTooltipTriggers() {
 function render() {
     //normalizeState();
     renderSelects();
-    renderChampionList();
+    renderTowersList();
     renderSummary();
     renderPokemonTabs();
     renderPokemonPanel();
 }
 
 function bindEvents() {
-    $('#editionSelect').addEventListener('change', (event) => {
-        state.gvgId = event.target.value;
-        fetchGvGData();
-        syncUrl();
-        render();
-    });
-
-    $('#cycleSelect').addEventListener('change', (event) => {
-        fetchBossRound(event.target.value);
+    $('#floorSelect').addEventListener('change', (event) => {
+        state.floorNum = event.target.value;
+        fetchFloor();
         syncUrl();
         render();
     });
@@ -504,7 +431,7 @@ function bindEvents() {
 
 getData().then(() => {
     hydrateFromUrl();
-    fetchGvGData();
+    fetchTowerData();
     bindEvents();
     render();
 });
