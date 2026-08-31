@@ -1,4 +1,5 @@
 let championBattleAllPeriod;
+let championBattleEventIds;
 let cyclicRankingIds;
 let eventIds;
 let loginBonusIds;
@@ -42,6 +43,7 @@ async function getData() {
     jsonCache.preloadProto("Banner");
     jsonCache.preloadProto("ChallengeToStrongTrainerQuestGroup");
     jsonCache.preloadProto("ChampionBattleEvent");
+    jsonCache.preloadProto("ChampionBattleEventOpeningSchedule");
     jsonCache.preloadProto("ChampionBattleEventQuestGroup");
     jsonCache.preloadProto("ChampionBattleRegion");
     jsonCache.preloadProto("ChampionBattleRegionOpeningSchedule");
@@ -125,8 +127,14 @@ function processData() {
     getSchedule();
 
     jData.proto.eventQuestGroup.push(...jData.proto.challengeToStrongTrainerQuestGroup);
-    jData.proto.eventQuestGroup.push(...jData.proto.championBattleEventQuestGroup);
-    jData.proto.eventQuestGroup.push(...jData.proto.villaQuestGroup.map(vqg => vqg.bannerId = 1202001));
+    jData.proto.eventQuestGroup.push(...jData.proto.championBattleEventQuestGroup.map(cbeqg => {
+        cbeqg.scheduleId = jData.proto.championBattleEventOpeningSchedule.find(cbeos => cbeos.championBattleEventId === cbeqg.championBattleEventId).scheduleId;
+        return cbeqg;
+    }));
+    jData.proto.eventQuestGroup.push(...jData.proto.villaQuestGroup.map(vqg => {
+        vqg.bannerId = 1202001;
+        return vqg;
+    }));
 
     const lastScheduleStartDate = Math.max(...new Set(jData.proto.schedule.map(s => s.startDate*1)));
 
@@ -154,6 +162,7 @@ function processData() {
 function getSchedule() {
     scoutIds = jData.proto.scout.map(s => s.scheduleId);
     championBattleAllPeriod = [...new Set(jData.proto.schedule.filter(s => s.scheduleId.endsWith("ChampionBattle_AllPeriod")))];
+    championBattleEventIds = [...new Set(jData.proto.championBattleEventOpeningSchedule.map(cbeos => cbeos.scheduleId))];
     cyclicRankingIds = [...new Set(jData.proto.cyclicRankingQuestGroupSchedule.map(crqg => crqg.scheduleId))];
     eventIds = [...new Set(jData.proto.eventQuestGroup.map(eqg => eqg.scheduleId))];
     legendaryBattleIds = [...new Set(Object.keys(jData.proto.legendQuestGroupSchedule))];
@@ -168,6 +177,7 @@ function getSchedule() {
         !s.scheduleId.startsWith("QA_") && (
             s.scheduleId === gymStartScheduleId
             || scoutIds.includes(s.scheduleId)
+            || championBattleEventIds.includes(s.scheduleId)
             || cyclicRankingIds.includes(s.scheduleId)
             || eventIds.includes(s.scheduleId)
             || legendaryBattleIds.includes(s.scheduleId)
@@ -188,7 +198,7 @@ function getSchedule() {
             )
     );
 
-    // console.log(jData.proto.schedule.filter(s => s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp && !usableSchedule.includes(s.scheduleId)));
+    console.log(jData.proto.schedule.filter(s => s.startDate >= jData.custom.versionReleaseDates[0].releaseTimestamp && !usableSchedule.includes(s.scheduleId)));
 
     jData.proto.schedule = usableSchedule;
 }
@@ -599,7 +609,7 @@ function getVersionSchedule(versionId) {
         s.isLoginBonus = loginBonusIds.includes(s.scheduleId);
         s.isChampionBattle = s.scheduleId.includes("_ChampionBattle_");
         s.isMission = missionGroupIds.includes(s.scheduleId);
-        s.isEvent = eventIds.includes(s.scheduleId);
+        s.isEvent = eventIds.includes(s.scheduleId) || championBattleEventIds.includes(s.scheduleId);
         return s;
     }));
 
