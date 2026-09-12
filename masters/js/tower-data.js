@@ -156,7 +156,7 @@ function renderTowersList() {
     document.querySelectorAll('[data-champion-id], [data-mobile-champion-id]').forEach(button => {
         button.addEventListener('click', () => {
             state.towerId = button.dataset.championId || button.dataset.mobileChampionId;
-            towerData.currentTower = jData.proto.passioTower.find(tower => tower.towerId.toString() === state.towerId.toString());
+            fetchTowerData();
             fetchFloor();
             syncUrl();
             render();
