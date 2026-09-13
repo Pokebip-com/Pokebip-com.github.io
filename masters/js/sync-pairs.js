@@ -927,8 +927,56 @@ function getTooltipMoveData(moveId) {
     return p;
 }
 
-function getMoveRow(moveId) {
-    let mov = jData.proto.move.find(m => m.moveId == moveId);
+function getMoveRow(moveId, convertNormalTo = -1, moveOverrideData = []) {
+    let mov = jData.proto.move.find(m => m.moveId.toString() === moveId.toString());
+
+    let moveOverrideType = -1;
+    let doOverrideMove = false;
+
+    let moveOverrideIsScalePower = false;
+    let moveOverrideScaleValue = 100;
+
+    let moveOverrideScaleGaugeType = 0;
+    let moveOverrideScaleGaugeValue = 0;
+
+    if(moveOverrideData.length > 0) {
+        moveOverrideType = moveOverrideData[0];
+
+        switch(moveOverrideType) {
+            case 0:
+                if(mov.category !== "Status") {
+                    doOverrideMove = true;
+                }
+                break;
+
+            case 1:
+                if(mov.moveId === moveOverrideData[1]) {
+                    doOverrideMove = true;
+                }
+                break;
+
+            case 2:
+                break;
+
+            case 3:
+                if(mov.user === "Pokemon") {
+                    doOverrideMove = true;
+                }
+                break;
+
+            case 4:
+                if([moveOverrideData[1], moveOverrideData[6], moveOverrideData[7]].includes(mov.moveId)) {
+                    doOverrideMove = true;
+                }
+                break;
+        }
+
+        moveOverrideIsScalePower = moveOverrideData[2];
+        moveOverrideScaleValue = moveOverrideData[3];
+
+        moveOverrideScaleGaugeType = moveOverrideData[4];
+        moveOverrideScaleGaugeValue = moveOverrideData[5];
+    }
 
     let tr = document.createElement("tr");
 
@@ -937,15 +985,21 @@ function getMoveRow(moveId) {
     tr.appendChild(nameCell);
 
     let typeCell = document.createElement("td");
-    typeCell.innerText = jData.lsd.motifTypeName[mov.type];
+    typeCell.innerText = jData.lsd.motifTypeName[mov.type === 1 && convertNormalTo > 1 ? convertNormalTo : mov.type];
     tr.appendChild(typeCell);
 
     let categoryCell = document.createElement("td");
     categoryCell.innerText = jData.locale.common.category_names[mov.category];
     tr.appendChild(categoryCell);
 
+    let power = mov.power;
+
+    if(doOverrideMove && moveOverrideIsScalePower) {
+        power = Math.floor(power * moveOverrideScaleValue / 100);
+    }
+
     let powerCell = document.createElement("td");
-    powerCell.innerText = mov.power > 0 ? `${mov.power}\n-\n${Math.floor(mov.power * 1.2)}` : "—";
+    powerCell.innerText = mov.power > 0 ? `${power}\n-\n${Math.floor(power * 1.2)}` : "—";
 
     tr.appendChild(powerCell);
 
@@ -953,8 +1007,18 @@ function getMoveRow(moveId) {
     accuracyCell.innerText = mov.accuracy || "—";
     tr.appendChild(accuracyCell);
 
+    let gauge = mov.gaugeDrain;
+
+    if(doOverrideMove && moveOverrideScaleGaugeType > 0) {
+        if(moveOverrideScaleGaugeType === 1) {
+            gauge = Math.floor(gauge * moveOverrideScaleGaugeValue / 100);
+        } else if(moveOverrideScaleGaugeType === 2) {
+            gauge += moveOverrideScaleGaugeValue;
+        }
+    }
+
     let gaugeCell = document.createElement("td");
-    gaugeCell.innerText = mov.gaugeDrain || "—";
+    gaugeCell.innerText = gauge || "—";
     tr.appendChild(gaugeCell);
 
     let targetCell = document.createElement("td");
@@ -1104,9 +1168,28 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
     table.appendChild(titleRow);
 
     let tr = jData.proto.trainer.find(t => t.trainerId === syncPairSelect.value);
+
+    let convertNormalTo = -1;
+    let moveOverrideData = [];
+
+    for(let i = 1; i <= 5; i++) {
+        let passive = tr[`passive${i}Id`];
+
+        if(variation && variation[`passive${i}Id`] > 0) {
+            passive = variation[`passive${i}Id`];
+        }
+        convertNormalTo = Math.max(convertNormalTo, passiveSkillConvertsNormalMoveToType(passive));
+
+        let pse = jData.proto.passiveSkillExtra.find(pse => pse.passiveId.toString() === passive.toString());
+
+        if (moveOverrideData.length === 0 && pse && pse.moveOverrideParams.length > 0) {
+            moveOverrideData = pse.moveOverrideParams;
+        }
+    }
+
     let mon = jData.proto.monster.find(m => m.monsterId === monsterId);
 
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i <= 4; i++) {
         let moveId;
 
         if (variation && variation[`move${i}Id`] > -1) {
@@ -1118,7 +1201,7 @@ function setPairMoves(contentDiv, monsterId, variation = null) {
         }
 
         if (moveId > -1) {
-            table.appendChild(getMoveRow(moveId));
+            table.appendChild(getMoveRow(moveId, convertNormalTo, moveOverrideData));
         }
     }
 
@@ -1488,7 +1571,6 @@ function changeSelection(g) {
 
         orbCell.setAttribute("data-items", JSON.stringify(items));
 
-        console.log(JSON.parse(g.getAttribute("data-items")));
         orbCell.innerText = items.map(i => `${i.itemName} x${i.cost}`).join("\n");
         energyCell.innerText = (parseInt(energyCell.innerText) - parseInt(g.getAttribute("data-energy"))).toString();
         tilesCell.appendChild(tileDiv);

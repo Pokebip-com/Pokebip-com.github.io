@@ -3,6 +3,7 @@ function preloadMovePassiveSkills() {
     jsonCache.preloadProto("Move");
     jsonCache.preloadProto("MoveAndPassiveSkillDigit");
     jsonCache.preloadProto("PassiveSkillChild");
+    jsonCache.preloadProto("PassiveSkillExtra");
 
     // LSD
     jsonCache.preloadLsd("move_description");
@@ -15,6 +16,16 @@ function preloadMovePassiveSkills() {
     jsonCache.preloadLsd("passive_skill_name");
     jsonCache.preloadLsd("passive_skill_name_parts");
     jsonCache.preloadLsd("tag_name_with_prepositions");
+}
+
+function passiveSkillConvertsNormalMoveToType(passiveId) {
+    let pse = jData.proto.passiveSkillExtra.find(pse => pse.passiveId.toString() === passiveId.toString());
+
+    if(pse && pse.type !== -1) {
+        return pse.type;
+    }
+
+    return -1;
 }
 
 function getMoveDescr(id) {
