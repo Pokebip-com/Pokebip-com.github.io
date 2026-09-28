@@ -38,6 +38,7 @@
     "gvg_theme_8010_008": "Reducción de la velocidad a la que se llena la\nbarra de movimientos de tu equipo",
     "gvg_theme_8010_009": "Equipo rival inmune al daño producido por los\nataques de compis sin el distintivo indicado",
     "damage_challenge_theme_8030_001": "Los efectos de entorno duran todo el combate",
+    "damage_challenge_theme_8090_001": "Reducción de daño de compis\nsin \"Equipo villano\" +8",
     "passio_tower_theme_8080_001": "Equipo rival inmune al daño producido por los\nataques especiales y triple de daño para los\nmovimientos compi del equipo rival cuando no le\nafectan problemas ni cambios de estado",
     "passio_tower_theme_8080_002": "Equipo rival inmune al daño producido por los\nataques físicos y triple de daño para los\nmovimientos compi del equipo rival cuando no le\nafectan problemas ni cambios de estado",
     "passio_tower_theme_8080_003": "Equipo rival inmune al daño producido por los\nataques especiales y triple de daño para los\nmovimientos compi del equipo rival cuando sus\ncaract. no se han reducido 16 niveles en total",
@@ -45,9 +46,18 @@
     "passio_tower_theme_8080_005": "Equipo rival inmune al daño producido por los\nataques especiales y triple de daño para los\nmovimientos compi del equipo rival cuando el\nobjetivo no tiene efectos de bando aliado activos",
     "passio_tower_theme_8080_006": "Equipo rival inmune al daño producido por los\nataques físicos y triple de daño para los\nmovimientos compi del equipo rival cuando el\nobjetivo no tiene efectos de bando aliado activos",
     "gvg_theme_8070_001": "Daño físico nulo",
+    "gvg_theme_8070_002": "Daño especial nulo",
+    "gvg_theme_8070_003": "Daño de los mov. compi\ny mov. compi Dinamax\nnulo",
     "gvg_theme_8070_004": "Daño nulo cuando\nno hay cambios ni\nproblemas de estado",
+    "gvg_theme_8070_005": "Daño no supereficaz\nnulo",
+    "gvg_theme_8070_006": "Potencia ↑ para los\nmov. Pokémon +5",
     "gvg_theme_8070_007": "Reducción de barra de\nmovimientos +2",
+    "gvg_theme_8070_008": "Barra de movimientos\ndesacelerada",
     "gvg_theme_8070_101": "Daño físico nulo y daño\nno supereficaz nulo",
+    "gvg_theme_8070_102": "Daño especial nulo y\ndaño no supereficaz\nnulo",
+    "gvg_theme_8070_103": "Daño de los mov. compi\ny compi Dinamax nulo y\ndaño no superef. nulo",
     "gvg_theme_8070_104": "Daño nulo si no hay\ncambios ni prob. de est.\ny daño no superef. nulo",
-    "gvg_theme_8070_107": "Reducción de barra de\nmovimientos +2 y daño\nno supereficaz nulo"
+    "gvg_theme_8070_106": "Potencia ↑ para los\nmov. Pokémon +5 y\ndaño no superef. nulo",
+    "gvg_theme_8070_107": "Reducción de barra de\nmovimientos +2 y daño\nno supereficaz nulo",
+    "gvg_theme_8070_108": "Barra de movimientos\ndesacelerada y daño\nno supereficaz nulo"
 }

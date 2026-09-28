@@ -15,6 +15,7 @@
 { "itemId": "570000000045", "imageId": "i057_0006_02", "stars": 5, "frame": 3, "paramType": 2, "param": "4" },
 { "itemId": "570000000055", "imageId": "i057_0007_02", "stars": 5, "frame": 3, "paramType": 2, "param": "5" },
 { "itemId": "571000000000", "imageId": "i057_0001_02", "stars": 5, "frame": 3, "paramType": 4, "param": "10000000000" },
+{ "itemId": "571000241001", "imageId": "i057_0001_02", "stars": 5, "frame": 3, "paramType": 4, "param": "10002410001" },
 { "itemId": "571000440000", "imageId": "i057_0001_02", "stars": 5, "frame": 3, "paramType": 4, "param": "10004400000" },
 { "itemId": "571001290000", "imageId": "i057_0001_02", "stars": 5, "frame": 3, "paramType": 4, "param": "10012900000" },
 { "itemId": "571001590000", "imageId": "i057_0001_02", "stars": 5, "frame": 3, "paramType": 4, "param": "10015900000" },

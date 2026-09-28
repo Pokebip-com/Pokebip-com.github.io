@@ -2,7 +2,7 @@
     "999999": "Aucun effet additionnel.",
     "999998": "Taux de critiques élevé.",
     "999997": "Applique l'effet Anti-altérations de stats au côté allié.",
-    "999995": "Brûle l'ennemi.",
+    "999995": "Brûle la cible.",
     "999994": "Plus les stats du lanceur ont été augmentées, plus cette attaque est puissante.",
     "999991": "Applique l'effet Accélération Jauge Capacité au côté allié.",
     "999984": "Applique l'effet Conso. 0 assurée au lanceur.",
@@ -908,9 +908,9 @@
     "999018": "Augmente la puissance de cette attaque quand la cible est apeurée, confuse ou ligotée.",
     "999017": "Annule les augmentations de stats de tous les Duos ennemis.",
     "999016": "Augmente la puissance de l'attaque de 50 % quand la cible souffre d'une altération de statut.",
-    "999015": "Fait briller le soleil EX si les PPC restants sont équivalents à [Digit:1digit Idx=\"1\" ] quand cette capacité est choisie.",
-    "999014": "Baisse la Défense et la Déf. Spé. de la cible de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] si les PPC restants sont équivalents à [Digit:1digit Idx=\"2\" ] quand cette capacité est choisie.",
-    "999013": "Applique l'[Name:ReferencedMessageTag Idx=\"4\" ] à tous les Duos alliés si les PPC restants sont équivalents à [Digit:1digit Idx=\"3\" ] quand cette capacité est choisie.",
+    "999015": "Fait briller le soleil EX si les PPC restants sont de [Digit:1digit Idx=\"1\" ] quand cette capacité est choisie.",
+    "999014": "Baisse la Défense et la Déf. Spé. de la cible de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] si les PPC restants sont de [Digit:1digit Idx=\"2\" ] quand cette capacité est choisie.",
+    "999013": "Applique l'[Name:ReferencedMessageTag Idx=\"4\" ] à tous les Duos alliés si les PPC restants sont de [Digit:1digit Idx=\"3\" ] quand cette capacité est choisie.",
     "999012": "Quand le lanceur souffre d'une altération de statut.",
     "999011": "Quand le lanceur ne souffre pas d'une altération de statut.",
     "999010": "Baisse la Déf. Spé. et la Vitesse de la cible de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ].",
@@ -1063,5 +1063,7 @@
     "998862": "Permet à Dracolosse de devenir Méga-Dracolosse jusqu'à la fin du combat.",
     "998861": "Permet à Dardargnan de devenir Méga-Dardargnan jusqu'à la fin du combat.",
     "998860": "Permet à Léviator de devenir Méga-Léviator jusqu'à la fin du combat.",
-    "998859": "Permet à Drattak de devenir Méga-Drattak jusqu'à la fin du combat."
+    "998859": "Permet à Drattak de devenir Méga-Drattak jusqu'à la fin du combat.",
+    "998858": "Augmente l'[Name:ReferencedMessageTag Idx=\"2\" ] de tous les Duos alliés de 10 rangs.",
+    "998857": "Permet à Sharpedo de devenir Méga-Sharpedo jusqu'à la fin du combat."
 }

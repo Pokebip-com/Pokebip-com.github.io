@@ -752,7 +752,7 @@
     "p999247": "Hat eine [Digit:2digits ] %-Chance, [Name:ReferencedMessageTag Idx=\"1\" ] eines Gegners, der den Anwender angegriffen hat, um [Digit:1digit Idx=\"2\" ] zu senken und den eigenen Angriff um denselben Wert zu erhöhen, wenn der Anwender von einem Angriff mit einer Attacke getroffen wird.",
     "p999246": "Erhöht zufällig einen der folgenden Statuswerte des Anwenders um 1, wenn sein Angriff mit einer Attacke Erfolg hat: Angriff, Verteidigung, Spezial-Angriff, Spezial-Verteidigung, Initiative, Genauigkeit oder Fluchtwert.",
     "p999245": "Beschleunigt das Auffüllen der Attackenleiste, wenn ein [Name:ReferencedMessageTag ] aktiv ist.",
-    "p999244": "Erhöht die Stärke von Attacken des Anwenders, wenn sie sehr effektiv sind.",
+    "p999244": "Erhöht die Stärke der Attacken des Anwenders, wenn sie sehr effektiv sind.",
     "p999243": "Erhöht die Stärke der Gefährtenattacke des Anwenders, wenn sie sehr effektiv ist.",
     "p999242": "Hat eine [Digit:2digits ] %-Chance, 1 Attackeneinsatzpunkt (AEP) des Anwenders aufzufüllen, nachdem er seine Gefährtenattacke eingesetzt hat.",
     "p999241": "Füllt 1 Attackeneinsatzpunkt (AEP) des Anwenders auf, wenn sein Pokémon eine Attacke einsetzt.",
@@ -1557,7 +1557,7 @@
     "p998426": "Senkt den Angriff und den Spezial-Angriff des Zieles um [Digit:1digit ], wenn der Angriff des Anwenders mit einer Attacke Erfolg hat.",
     "p998425": "Erhöht [Name:ReferencedMessageTag ] eines verbündeten Gefährten, der von der Wirkung der Attacke (mit Ausnahme von Seiten-Effekten) beeinflusst wurde, um [Digit:1digit Idx=\"1\" ], wenn die Attacke des Anwenders auf einen verbündeten Gefährten Erfolg hat.",
     "p998424": "Hat eine [Digit:2digits Idx=\"2\" ] %-Chance [Name:ReferencedMessageTag ] des Anwenders um [Digit:1digit Idx=\"1\" ] zu erhöhen, wenn sein Pokémon eine Status-Attacke einsetzt.",
-    "p998423": "Verlängert die Dauer vom [Name:ReferencedMessageTag ], wenn [Name:ReferencedMessageTag ] auf der Anwender-Seite verursacht wird.",
+    "p998423": "Verlängert die Dauer von [Name:ReferencedMessageTag ], wenn [Name:ReferencedMessageTag ] auf der Anwender-Seite verursacht wird.",
     "p998422": "Erzeugt ein Mal pro Kampf Hagel, wenn die KP des Anwenders erstmals auf oder unter die Hälfte fallen.",
     "p998421": "Verursacht auf der Anwender-Seite den [Name:ReferencedMessageTag ], nachdem die Gefährten-Dynamax-Attacke des Anwenders eingesetzt wurde.",
     "p998420": "Senkt ein Mal pro Kampf [Name:ReferencedMessageTag ] aller gegnerischen Gefährten um [Digit:1digit Idx=\"1\" ], wenn der Anwender erstmals den Kampf antritt.",
@@ -2642,5 +2642,14 @@
     "p997327": "Senkt die Verteidigung und die Spezial-Verteidigung aller gegnerischen Gefährten um [Digit:1digit ], wenn der Anwender den Kampf antritt.",
     "p997326": "Hat eine [Digit:2digits Idx=\"1\" ] %-Chance auf der Anwender-Seite [Name:ReferencedMessageTag ] zu verursachen, wenn die Attacke des Anwenders Erfolg hat.",
     "p997325": "Verursacht auf der Anwender-Seite [Name:ReferencedMessageTag ], wenn der Angriff des Anwenders mit einer Attacke Erfolg hat.",
-    "p997324": "Verursacht auf der Anwender-Seite [Name:ReferencedMessageTag Idx=\"2\" ], wenn der Angriff des Anwenders mit einer Attacke Erfolg hat."
+    "p997324": "Verursacht auf der Anwender-Seite [Name:ReferencedMessageTag Idx=\"2\" ], wenn der Angriff des Anwenders mit einer Attacke Erfolg hat.",
+    "p997323": "Gegner fügen mit physischen Attacken, physischen Gefährtenattacken und physischen Gefährten-Dynamax-Attacken weniger Schaden zu.",
+    "p997322": "Gegner fügen mit Spezial-Attacken, Spezial-Gefährtenattacken und Spezial-Gefährten-Dynamax-Attacken weniger Schaden zu.",
+    "p997321": "Schützt den Anwender vor Statusproblemen, Zurückschrecken, Verwirrung und Umschlingung, wenn ein [Name:ReferencedMessageTag ] aktiv ist.",
+    "p997320": "Hat eine [Digit:2digits Idx=\"2\" ] %-Chance den [Name:ReferencedMessageTag ] aller verbündeten Gefährten um [Digit:1digit Idx=\"1\" ] zu erhöhen, wenn der Anwender einen Freundeskreis auf der Anwender-Seite verursacht.",
+    "p997319": "Erhöht den [Name:ReferencedMessageTag ] aller verbündeten Gefährten um [Digit:1digit Idx=\"1\" ], wenn der Anwender einen Freundeskreis auf der Anwender-Seite verursacht.",
+    "p997318": "Senkt durch Gefährten-Terakristallisierung [Name:ReferencedMessageTag ] aller gegnerischen Gefährten um [Digit:1digit Idx=\"1\" ].",
+    "p997317": "Erhöht den Schaden, den ein Gegner durch physische Attacken, physische Gefährtenattacken und physische Gefährten-Dynamax-Attacken erleidet.",
+    "p997316": "Reduziert die Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"19070\" ] des Anwenders um [Digit:1digit Idx=\"4\" ] und löst alle folgenden Effekte aus, nachdem die Gefährten deines Teams ihre Gefährtenattacke eingesetzt haben:",
+    "p997315": "Erhöht den Schaden, den ein Gegner durch Spezial-Attacken, Spezial-Gefährtenattacken und Spezial-Gefährten-Dynamax-Attacken erleidet."
 }

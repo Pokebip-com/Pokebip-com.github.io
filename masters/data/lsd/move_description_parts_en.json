@@ -1063,5 +1063,7 @@
     "998862": "Become Mega Dragonite until the end of battle.",
     "998861": "Become Mega Beedrill until the end of battle.",
     "998860": "Become Mega Gyarados until the end of battle.",
-    "998859": "Become Mega Salamence until the end of battle."
+    "998859": "Become Mega Salamence until the end of battle.",
+    "998858": "Increases the [Name:ReferencedMessageTag Idx=\"2\" ] of all allied sync pairs by 10 ranks.",
+    "998857": "Become Mega Sharpedo until the end of battle."
 }

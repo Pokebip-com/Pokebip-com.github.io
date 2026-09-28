@@ -283,5 +283,14 @@
     "event_8080_2W_limited_forTicket_01": "파시오타워 층 추가 기념 티켓 전용 B서치 A",
     "event_8080_2W_limited_forTicket_02": "파시오타워 층 추가 기념 티켓 전용 B서치 B",
     "event_8080_2W_limited_forTicket_03": "파시오타워 층 추가 기념 티켓 전용 B서치 C",
-    "event_8080_3W_MasterTicket_01": "갤럭시단 ★5 확정 티켓 전용 B서치"
+    "event_8080_3W_MasterTicket_01": "갤럭시단 ★5 확정 티켓 전용 B서치",
+    "event_8090_1W_MasterTicket_06": "페스티벌 한정 확정 B서치",
+    "event_8090_3W_MasterTicket_01": "시즌 한정 확정 티켓 전용 B서치",
+    "event_8090_3W_SuperTicket_04": "아강 시즌 한정 출현율업 B서치",
+    "event_8090_3W_MasterTicket_05": "아강 시즌 한정 확정 B서치",
+    "event_8090_3W_SuperTicket_08": "마적 시즌 한정 출현율업 B서치",
+    "event_8090_3W_MasterTicket_09": "마적 시즌 한정 확정 B서치",
+    "event_8090_3W_SuperTicket_014": "로켓단 출현율업 티켓 전용 B서치",
+    "event_8090_4W_SuperTicket_03": "트리플 픽업 출현율업 B서치",
+    "event_8090_4W_SuperTicket_08": "마스터페스티벌 한정 출현율업 B서치"
 }

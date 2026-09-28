@@ -283,5 +283,14 @@
     "event_8080_2W_limited_forTicket_01": "パシオタワー階層追加記念 チケット専用ＢサーチＡ",
     "event_8080_2W_limited_forTicket_02": "パシオタワー階層追加記念 チケット専用ＢサーチＢ",
     "event_8080_2W_limited_forTicket_03": "パシオタワー階層追加記念 チケット専用ＢサーチＣ",
-    "event_8080_3W_MasterTicket_01": "ギンガ団★５確定 チケット専用Ｂサーチ"
+    "event_8080_3W_MasterTicket_01": "ギンガ団★５確定 チケット専用Ｂサーチ",
+    "event_8090_1W_MasterTicket_06": "フェス限定 確定Ｂサーチ",
+    "event_8090_3W_MasterTicket_01": "シーズン限定確定 チケット専用Ｂサーチ",
+    "event_8090_3W_SuperTicket_04": "アオギリ シーズン限定 出現率アップＢサーチ",
+    "event_8090_3W_MasterTicket_05": "アオギリ シーズン限定 確定Ｂサーチ",
+    "event_8090_3W_SuperTicket_08": "マツブサ シーズン限定 出現率アップＢサーチ",
+    "event_8090_3W_MasterTicket_09": "マツブサ シーズン限定 確定Ｂサーチ",
+    "event_8090_3W_SuperTicket_014": "ロケット団出現率アップ チケット専用Ｂサーチ",
+    "event_8090_4W_SuperTicket_03": "トリプルピックアップ 出現率アップＢサーチ",
+    "event_8090_4W_SuperTicket_08": "マスターフェス限定 出現率アップＢサーチ"
 }

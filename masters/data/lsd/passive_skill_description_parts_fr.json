@@ -2642,5 +2642,14 @@
     "p997327": "Baisse la Défense et la Déf. Spé. de tous les Duos ennemis de [Digit:1digit ] [FR:Qty S=\"rang\" P=\"rangs\" ] quand le lanceur arrive au combat.",
     "p997326": "[Digit:2digits Idx=\"1\" ] % de chances d'appliquer [Name:ReferencedMessageTag ] au côté allié quand le lanceur utilise avec succès une capacité.",
     "p997325": "Applique [Name:ReferencedMessageTag ] au côté allié quand le lanceur utilise avec succès une capacité.",
-    "p997324": "Applique [Name:ReferencedMessageTag Idx=\"2\" ] au côté allié quand le lanceur utilise avec succès une capacité."
+    "p997324": "Applique [Name:ReferencedMessageTag Idx=\"2\" ] au côté allié quand le lanceur utilise avec succès une capacité.",
+    "p997323": "Réduit les dégâts que les ennemis infligent avec des capacités physiques, des capacités Duo physiques et des capacités Duo Dynamax physiques.",
+    "p997322": "Réduit les dégâts que les ennemis infligent avec des capacités spéciales, des capacités Duo spéciales et des capacités Duo Dynamax spéciales.",
+    "p997321": "Protège le lanceur des altérations de statut, de la peur, de la confusion et du ligotage quand la zone est une [Name:ReferencedMessageTag ].",
+    "p997320": "[Digit:2digits Idx=\"2\" ] % de chances d'augmenter l'[Name:ReferencedMessageTag ] de tous les Duos alliés de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] quand le lanceur applique un cercle au côté allié.",
+    "p997319": "Augmente l'[Name:ReferencedMessageTag ] de tous les Duos alliés de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] quand le lanceur applique un cercle au côté allié.",
+    "p997318": "Baisse [Name:ReferencedMessageTag ] de tous les Duos ennemis de [Digit:1digit Idx=\"1\" ] [FR:Qty Ref=\"1\" S=\"rang\" P=\"rangs\" ] quand le lanceur bascule en Duo-Téracristal.",
+    "p997317": "Augmente les dégâts subis par un ennemi avec des capacités physiques, des capacités Duo physiques et des capacités Duo Dynamax physiques.",
+    "p997316": "Réduit les PPC d'[Name:MoveId Idx=\"19070\" ] du lanceur de [Digit:1digit Idx=\"4\" ] et tous les effets suivants s'appliquent après l'utilisation d'une capacité Duo par le Duo de votre équipe :",
+    "p997315": "Augmente les dégâts subis par un ennemi avec des capacités spéciales, des capacités Duo spéciales et des capacités Duo Dynamax spéciales."
 }

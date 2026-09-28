@@ -101,7 +101,7 @@
     "999838": "Aumenta l'Attacco, l'Attacco Speciale e la Velocità di tutte le Unità alleate di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ]. Aumenta invece le statistiche di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ] quando la luce del sole è intensa.",
     "999837": "Quando la Velocità di chi la usa viene aumentata, applica al suo Attacco il doppio di tale aumento.",
     "999836": "Aumenta la Difesa, fino a un massimo di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ], in proporzione inversa rispetto alla percentuale di PS residui di chi la usa.",
-    "999835": "Aumenta l'Attacco e l'Attacco Speciale di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
+    "999835": "Aumenta l'Attacco e l'Attacco Speciale di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999834": "Aumenta l'Attacco Speciale di chi la usa di [Digit:1digit ] [IT:Qty S=\"grado\" P=\"gradi\" ].",
     "999833": "Aumenta la Difesa di chi la usa di [Digit:1digit Idx=\"1\" ] [IT:Qty Ref=\"1\" S=\"grado\" P=\"gradi\" ].",
     "999832": "Chi la usa recupera PS per una certa percentuale ([Digit:2digits ]% circa) dei suoi PS massimi.",
@@ -1063,5 +1063,7 @@
     "998862": "Permette a Dragonite di megaevolversi. L'effetto svanisce al termine della lotta.",
     "998861": "Permette a Beedrill di megaevolversi. L'effetto svanisce al termine della lotta.",
     "998860": "Permette a Gyarados di megaevolversi. L'effetto svanisce al termine della lotta.",
-    "998859": "Permette a Salamence di megaevolversi. L'effetto svanisce al termine della lotta."
+    "998859": "Permette a Salamence di megaevolversi. L'effetto svanisce al termine della lotta.",
+    "998858": "Aumenta l'[Name:ReferencedMessageTag Idx=\"2\" ] di tutte le Unità alleate di 10 gradi.",
+    "998857": "Permette a Sharpedo di megaevolversi. L'effetto svanisce al termine della lotta."
 }

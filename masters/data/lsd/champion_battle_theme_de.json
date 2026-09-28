@@ -38,6 +38,7 @@
     "gvg_theme_8010_008": "Die Attackenleiste wird bei Verbündeten\nlangsamer aufgefüllt",
     "gvg_theme_8010_009": "Gegner erleiden keinen Schaden durch\nAngriffe von Gefährten, die nicht die\nvorgegebenen Attribute erfüllen",
     "damage_challenge_theme_8030_001": "Seiten-Effekte wirken permanent",
+    "damage_challenge_theme_8090_001": "Nicht-Schurken-\nSchaden↓ 8",
     "passio_tower_theme_8080_001": "Gegner erleiden keinen Schaden durch Spezial-\nAngriffe; problemfreie Gegner verfügen über\nentschlossene Gefährtenattacken",
     "passio_tower_theme_8080_002": "Gegner erleiden keinen Schaden durch physische\nAngriffe; problemfreie Gegner verfügen über\nentschlossene Gefährtenattacken",
     "passio_tower_theme_8080_003": "Gegner erleiden keinen Schaden durch Spezial-\nAngriffe; Gegner verfügen über entschlossene\nGefährtenattacken, bis ihre Statuswerte um\ninsgesamt 16 Ränge gesenkt werden",
@@ -45,9 +46,18 @@
     "passio_tower_theme_8080_005": "Gegner erleiden keinen Schaden durch Spezial-\nAngriffe; Gegner verfügen über entschlossene\nGefährtenattacken, wenn ihr Ziel von Anwender-\nSeite-Effekten nicht betroffen ist",
     "passio_tower_theme_8080_006": "Gegner erleiden keinen Schaden durch physische\nAngriffe; Gegner verfügen über entschlossene\nGefährtenattacken, wenn ihr Ziel von Anwender-\nSeite-Effekten nicht betroffen ist",
     "gvg_theme_8070_001": "Kein physischer Schaden",
+    "gvg_theme_8070_002": "Kein Spezial-Schaden",
+    "gvg_theme_8070_003": "Kein Schaden durch GAs\nund G-D-Attacken",
     "gvg_theme_8070_004": "Kein Schaden wenn\nproblemfrei",
+    "gvg_theme_8070_005": "Schadensfrei bei\nStandard-Effektivität",
+    "gvg_theme_8070_006": "P-Attacke-Stärke↑ 5",
     "gvg_theme_8070_007": "Team-Att.-Leiste-Limit 2",
+    "gvg_theme_8070_008": "Mitstr.-Attackenleiste↓",
     "gvg_theme_8070_101": "Kein physischer Schaden;\nSchadensfrei bei\nStandard-Effektivität",
+    "gvg_theme_8070_102": "Kein Spezial-Schaden;\nSchadensfrei bei\nStandard-Effektivität",
+    "gvg_theme_8070_103": "Kein Schaden durch GAs\n& G-D-Attacken; Schadensf.\nbei Standard-Effektivität",
     "gvg_theme_8070_104": "Kein Schaden wenn\nproblemfrei; Schadensfrei\nbei Standard-Effektivität",
-    "gvg_theme_8070_107": "Team-Att.-Leiste-Limit 2;\nSchadensfrei bei\nStandard-Effektivität"
+    "gvg_theme_8070_106": "P-Attacke-Stärke↑ 5;\nSchadensfrei bei\nStandard-Effektivität",
+    "gvg_theme_8070_107": "Team-Att.-Leiste-Limit 2;\nSchadensfrei bei\nStandard-Effektivität",
+    "gvg_theme_8070_108": "Mitstr.-Attackenleiste↓;\nSchadensfrei bei\nStandard-Effektivität"
 }

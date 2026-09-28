@@ -38,6 +38,7 @@
     "gvg_theme_8010_008": "La barra mosse si riempie più lentamente\nper gli alleati",
     "gvg_theme_8010_009": "Gli avversari non subiscono danni dagli attacchi\ndelle Unità non appartenenti a determinati gruppi",
     "damage_challenge_theme_8030_001": "Gli effetti sul campo durano più a lungo",
+    "damage_challenge_theme_8090_001": "Danni inflitti da Unità non del gruppo \"Gruppi\nmalvagi\" ridotti di molto per gli attacchi,\nle Unimosse e le mosse UniDynamax",
     "passio_tower_theme_8080_001": "Gli avversari non subiscono danni dagli attacchi\nspeciali; gli avversari indenni hanno\nUnimosse serissime",
     "passio_tower_theme_8080_002": "Gli avversari non subiscono danni dagli attacchi\nfisici; gli avversari indenni hanno\nUnimosse serissime",
     "passio_tower_theme_8080_003": "Gli avversari non subiscono danni dagli attacchi\nspeciali; gli avversari usano Unimosse serissime\nfino a quando le loro statistiche non vengono\nridotte di un totale di 16 gradi",
@@ -45,9 +46,18 @@
     "passio_tower_theme_8080_005": "Gli avversari non subiscono danni dagli attacchi\nspeciali; gli avversari usano Unimosse serissime\nquando il loro bersaglio è indenne agli effetti\nsul campo alleato",
     "passio_tower_theme_8080_006": "Gli avversari non subiscono danni dagli attacchi\nfisici; gli avversari usano Unimosse serissime\nquando il loro bersaglio è indenne agli effetti\nsul campo alleato",
     "gvg_theme_8070_001": "Zero danni fisici",
+    "gvg_theme_8070_002": "Zero danni speciali",
+    "gvg_theme_8070_003": "Zero danni da ottimosse",
     "gvg_theme_8070_004": "Zero danni se non affetti\nda problemi di stato o\nimpedimenti",
+    "gvg_theme_8070_005": "Normoefficacia zerodanni",
+    "gvg_theme_8070_006": "Potenziattività 5",
     "gvg_theme_8070_007": "Menobarra 2",
+    "gvg_theme_8070_008": "Frenabarra alleata",
     "gvg_theme_8070_101": "Zero danni fisici &\nNormoefficacia zerodanni",
+    "gvg_theme_8070_102": "Zero danni speciali &\nNormoefficacia zerodanni",
+    "gvg_theme_8070_103": "Zero danni da ottimosse &\nNormoefficacia zerodanni",
     "gvg_theme_8070_104": "Zeroafflizioni zerodanni &\nnormoefficacia zerodanni",
-    "gvg_theme_8070_107": "Menobarra 2 &\nNormoefficacia\nzerodanni"
+    "gvg_theme_8070_106": "Potenziattività 5 &\nNormoefficacia zerodanni",
+    "gvg_theme_8070_107": "Menobarra 2 &\nNormoefficacia\nzerodanni",
+    "gvg_theme_8070_108": "Frenabarra alleata &\nNormoefficacia zerodanni"
 }

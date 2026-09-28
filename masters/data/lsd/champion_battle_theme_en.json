@@ -38,6 +38,7 @@
     "gvg_theme_8010_008": "The move gauge increases slower for allies",
     "gvg_theme_8010_009": "Opponents won’t take damage from\nattacks from sync pairs that don’t have\nthe designated theme(s)",
     "damage_challenge_theme_8030_001": "Field effects are permanent",
+    "damage_challenge_theme_8090_001": "Non-Villain\ndmg. reduction 8",
     "passio_tower_theme_8080_001": "Opponents won’t take damage from special\nattacks; unaffected opponents have super serious\nsync moves",
     "passio_tower_theme_8080_002": "Opponents won’t take damage from physical\nattacks; unaffected opponents have super serious\nsync moves",
     "passio_tower_theme_8080_003": "Opponents won’t take damage from special\nattacks; opponents have super serious sync moves\nuntil their stats are lowered by a total of 16 ranks",
@@ -45,9 +46,18 @@
     "passio_tower_theme_8080_005": "Opponents won’t take damage from special\nattacks; opponents have super serious sync moves\nwhen their target is unaffected by allied field\neffects",
     "passio_tower_theme_8080_006": "Opponents won’t take damage from physical\nattacks; opponents have super serious sync moves\nwhen their target is unaffected by allied field\neffects",
     "gvg_theme_8070_001": "Zero physical damage",
+    "gvg_theme_8070_002": "Zero special damage",
+    "gvg_theme_8070_003": "Zero sync move &\nmax move damage",
     "gvg_theme_8070_004": "Zero damage when\nunaffected",
+    "gvg_theme_8070_005": "Zero damage when not\nsuper effective",
+    "gvg_theme_8070_006": "P-move power ↑ 5",
     "gvg_theme_8070_007": "Ally move gauge max -2",
+    "gvg_theme_8070_008": "Ally MG deceleration",
     "gvg_theme_8070_101": "Zero physical damage;\nzero damage when not\nsuper effective",
+    "gvg_theme_8070_102": "Zero special damage;\nzero damage when not\nsuper effective",
+    "gvg_theme_8070_103": "Zero sync move & max\nmove damage; zero damage\nwhen not super effective",
     "gvg_theme_8070_104": "Zero damage when\nunaffected; zero damage\nwhen not super effective",
-    "gvg_theme_8070_107": "Ally move gauge max -2;\nzero damage when not\nsuper effective"
+    "gvg_theme_8070_106": "P-move power ↑ 5;\nzero damage when not\nsuper effective",
+    "gvg_theme_8070_107": "Ally move gauge max -2;\nzero damage when not\nsuper effective",
+    "gvg_theme_8070_108": "Ally MG deceleration;\nzero damage when not\nsuper effective"
 }

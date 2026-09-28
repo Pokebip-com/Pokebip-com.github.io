@@ -891,7 +891,7 @@
     "999035": "Lässt das Ziel zurückschrecken, verwirrt und fängt es in einer Umschlingung.",
     "999034": "Erhöht [Name:ReferencedMessageTag Idx=\"6\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"7\" ].",
     "999033": "Verursacht bei allen verbündeten Gefährten den Effekt Folge-Leistenverbr. 0.",
-    "999032": "Reduziert den Wert des Gefährtenattacken-\nCountdowns des Anwenders um 1.",
+    "999032": "Reduziert den Wert des Gefährtenattacken-Countdowns des Anwenders um 1.",
     "999031": "Verursacht beim Anwender den Effekt Folge-Schadensschutz.",
     "999030": "Wenn die Gefährten deines Teams eine Gefährtenattacke einmal einsetzen.",
     "999029": "Senkt [Name:ReferencedMessageTag Idx=\"7\" ] des Zieles um [Digit:1digit Idx=\"8\" ].",
@@ -1063,5 +1063,7 @@
     "998862": "Löst bei Dragoran bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Dragoran aus.",
     "998861": "Löst bei Bibor bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Bibor aus.",
     "998860": "Löst bei Garados bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Garados aus.",
-    "998859": "Löst bei Brutalanda bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Brutalanda aus."
+    "998859": "Löst bei Brutalanda bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Brutalanda aus.",
+    "998858": "Erhöht den [Name:ReferencedMessageTag Idx=\"2\" ] aller verbündeten Gefährten um 10.",
+    "998857": "Löst bei Tohaido bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Tohaido aus."
 }

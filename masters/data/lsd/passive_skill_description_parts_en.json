@@ -2642,5 +2642,14 @@
     "p997327": "Lowers the Defense and Sp. Def of all opposing sync pairs by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ] when the user enters a battle.",
     "p997326": "Has a chance ([Digit:2digits Idx=\"1\" ]%) of applying [Name:ReferencedMessageTag ] to the allied field of play when the user’s move is successful.",
     "p997325": "Applies [Name:ReferencedMessageTag ] to the allied field of play when the user’s move is successful.",
-    "p997324": "Applies [Name:ReferencedMessageTag Idx=\"2\" ] to the allied field of play when the user’s move is successful."
+    "p997324": "Applies [Name:ReferencedMessageTag Idx=\"2\" ] to the allied field of play when the user’s move is successful.",
+    "p997323": "Reduces the damage opponents deal with physical attack moves, physical sync moves, and physical max moves.",
+    "p997322": "Reduces the damage opponents deal with special attack moves, special sync moves, and special max moves.",
+    "p997321": "Prevents the user from being inflicted with status conditions, flinching, becoming confused, or becoming trapped when the zone is a [Name:ReferencedMessageTag ].",
+    "p997320": "Has a chance ([Digit:2digits Idx=\"2\" ]%) of increasing the [Name:ReferencedMessageTag ] of all allied sync pairs by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when the user applies a circle to the allied field of play.",
+    "p997319": "Increases the [Name:ReferencedMessageTag ] of all allied sync pairs by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when the user applies a circle to the allied field of play.",
+    "p997318": "Lowers the [Name:ReferencedMessageTag ] of all opposing sync pairs by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when the user Sync Terastallizes.",
+    "p997317": "Increases the amount of damage an opponent takes from physical attack moves, physical sync moves, and physical max moves.",
+    "p997316": "Reduces the MP for the user’s [Name:MoveId Idx=\"19070\" ] by [Digit:1digit Idx=\"4\" ] and grants all of the following effects after your team’s sync pair uses their sync move:",
+    "p997315": "Increases the amount of damage an opponent takes from special attack moves, special sync moves, and special max moves."
 }
