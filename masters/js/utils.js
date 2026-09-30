@@ -278,6 +278,10 @@ function getMonsterBaseIdFromMonsterId(monsterId) {
     return jData.proto.monster.find(m => m.monsterId === monsterId).monsterBaseId;
 }
 
+function getMonsterBaseIdFromTrainerId(trainerId) {
+    return getMonsterBaseIdFromMonsterId(jData.proto.trainer.find(tr => tr.trainerId === trainerId).monsterId);
+}
+
 function getMonsterBaseIdFromActorId(actorId) {
     return jData.proto.monsterBase.find(mb => mb.actorId === actorId).monsterBaseId || -1;
 }
