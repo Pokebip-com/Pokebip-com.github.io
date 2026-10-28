@@ -340,8 +340,8 @@
     "override_detail_7070_1_44": "Schließe ein Kapitel des\nArceus-Abenteuers der\nHauptgeschichte ab.",
     "override_detail_7070_1_47": "Schließe eine\nZeitschaden-Challenge ab.",
     "override_detail_7070_1_49": "Tritt einer Trainer-Arena bei.",
-    "246": "Schließe insgesamt [Digit:6digits ] [DE:Qty S=\"Ebene\" P=\"Ebenen\" ] in\nden Passio-Türmen ab.",
-    "247": "Schließe insgesamt [Digit:6digits ] [DE:Qty S=\"Ebene\" P=\"Ebenen\" ] in\nden folgenden Türmen ab:",
+    "246": "Schließe insgesamt [Digit:6digits ] [DE:Qty S=\"Ebene\" P=\"Ebenen\" ] in den Passio-Türmen ab.",
+    "247": "Schließe insgesamt [Digit:6digits ] [DE:Qty S=\"Ebene\" P=\"Ebenen\" ] in den folgenden Türmen ab:",
     "247_element": "• [Name:TowerName ]",
     "248": "Schließe insgesamt [Digit:6digits ] [DE:Qty S=\"Ebene\" P=\"Ebenen\" ] in\neinem der folgenden Türme ab:",
     "248_element": "• [Name:TowerName ]",
@@ -394,5 +394,6 @@
     "override_detail_8080_2_06": "Schließe „Täglicher schwerer Kampf“\nin „Neo-Champs: Wahre Zeit, wahrer\nRaum“ dreimal ab.",
     "override_detail_8080_2_07": "Schließe die täglichen Regionskämpfe\neinmal ab.",
     "override_detail_8080_2_08": "Schließe die täglichen Regionskämpfe \nzweimal ab.",
-    "override_detail_8080_2_09": "Nutze einmal den Item-Tausch in\n„Sagenhafter Mega-7J-Tausch EX“."
+    "override_detail_8080_2_09": "Nutze einmal den Item-Tausch in\n„Sagenhafter Mega-7J-Tausch EX“.",
+    "override_detail_8100_1_01": "Mache ein Foto."
 }

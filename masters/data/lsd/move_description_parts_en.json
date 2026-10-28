@@ -1007,7 +1007,7 @@
     "998918": "If the user’s Lucario has Mega Evolved, also applies the [Name:ReferencedMessageTag Idx=\"1\" ] to the user.",
     "998917": "Turns the field of play’s terrain into [Name:ReferencedMessageTag ].",
     "998916": "Increases the Physical Moves ↑ Next effect and Special Moves ↑ Next effect of all allied sync pairs by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ] the first time the user’s sync move is used each battle.",
-    "998915": "Applies [Name:ReferencedMessageTag Idx=\"9\" ] to the allied field of play the first time this attack move is successful each battle.\n[Name:ReferencedMessageTag Idx=\"9\" ] grants all of the following effects:",
+    "998915": "Applies [Name:ReferencedMessageTag Idx=\"9\" ] to the allied field of play the first time this attack move is successful each battle. [Name:ReferencedMessageTag Idx=\"9\" ] grants all of the following effects:",
     "998914": "Become Mega Alakazam until the end of battle.",
     "998913": "Applies [Name:ReferencedMessageTag Idx=\"9\" ] to the allied field of play the first time the user’s sync move is used each battle.\n[Name:ReferencedMessageTag Idx=\"9\" ] grants all of the following effects:",
     "998912": "Leaves the target either flinching, confused, or trapped.",
@@ -1065,5 +1065,11 @@
     "998860": "Become Mega Gyarados until the end of battle.",
     "998859": "Become Mega Salamence until the end of battle.",
     "998858": "Increases the [Name:ReferencedMessageTag Idx=\"2\" ] of all allied sync pairs by 10 ranks.",
-    "998857": "Become Mega Sharpedo until the end of battle."
+    "998857": "Become Mega Sharpedo until the end of battle.",
+    "998856": "This attack’s power is doubled against targets that are affected by the [Name:ReferencedMessageTag ].",
+    "998855": "Increases the [Name:ReferencedMessageTag ] of all allied sync pairs by [Digit:1digit Idx=\"1\" ] [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when the user lands a critical hit.",
+    "998854": "Increases the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by [Digit:1digit Idx=\"2\" ] [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] when its remaining HP is at [Digit:2digits ]% or more.",
+    "998853": "Fully restores the user’s HP when its remaining HP is less than [Digit:2digits ]%.",
+    "998852": "Raises the user’s Attack and accuracy by [Digit:1digit ] stat [EN:Qty S=\"rank\" P=\"ranks\" ].",
+    "998851": "Turns the field of play’s zone into a [Name:ReferencedMessageTag ] the first time the user’s sync move is used each battle."
 }

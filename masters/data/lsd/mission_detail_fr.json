@@ -252,7 +252,7 @@
     "178": "Utilisez [Digit:6digits ]\nde Vigueur avec les\nDresseurs suivants\ndans votre équipe :",
     "178_element": "• [Name:TrainerName ]",
     "179": "Débloquez [Digit:6digits ] morceau[FR:Qty P=\"x\" ].",
-    "180": "Passez le potentiel de [Digit:6digits ] Duo[FR:Qty P=\"s\" ]\nà 6★ EX !",
+    "180": "Passez le potentiel de [Digit:6digits ] Duo[FR:Qty P=\"s\" ] à 6★ EX !",
     "181": "Atteignez le rang de joueur [Digit:6digits ].",
     "182": "Connectez-vous pendant [Digit:6digits ] jour[FR:Qty P=\"s\" ].",
     "183": "Terminez « Combat : Red\n(Look Ultime) » sur\nla Route Victoire.",
@@ -281,7 +281,7 @@
     "201": "Atteignez un rang spécifique dans\nle classement final du combat\nféroce nº [Digit:6digits ].",
     "override_detail_6080_1_01": "Terminez la zone suivante une fois\nsans avoir plus d'un Duo mis K.O. :\n• « Combat difficile limité à une fois\npar jour ! » dans « Évènement\nsecondaire : Liens en or à Passio »",
     "override_detail_6080_2_01": "Terminez une zone avec un combat\ncinq fois en utilisant le Duo\nsuivant :\n• Lilie (Anniversaire 2024) &\nSolgaleo",
-    "228": "Augmentez de [Digit:2digits Idx=\"2\" ] le niveau\nde transcendance de [Digit:4digits Idx=\"1\" ] Duo[FR:Qty Ref=\"1\" P=\"s\" ].",
+    "228": "Augmentez de [Digit:2digits Idx=\"2\" ] le niveau de transcendance de [Digit:4digits Idx=\"1\" ] Duo[FR:Qty Ref=\"1\" P=\"s\" ].",
     "229": "Prenez une photo avec [Digit:2digits ] Duo[FR:Qty P=\"s\" ]\nou plus, qui ont tous les mots-clés\nsuivants en commun :",
     "229_element": "• [Name:TeamSkillTag ]",
     "override_detail_6100_1_01": "Terminez une fois\n« Évènement secondaire :\nVoyageurs du passé » en solo.\n(Vous pouvez jouer à l'évènement\ndepuis la section « De retour ».)",
@@ -340,8 +340,8 @@
     "override_detail_7070_1_44": "Terminez un chapitre de l'arc narratif\nd'Arceus dans le scénario principal.",
     "override_detail_7070_1_47": "Terminez un défi dégâts.",
     "override_detail_7070_1_49": "Rejoignez une Arène de Dresseurs.",
-    "246": "Terminez un total de [Digit:6digits ] étage[FR:Qty P=\"s\" ]\ndans les Tours de Passio.",
-    "247": "Terminez [Digit:6digits ] étage[FR:Qty P=\"s\" ] dans\ntoutes les tours suivantes :",
+    "246": "Terminez un total de [Digit:6digits ] étage[FR:Qty P=\"s\" ] dans les Tours de Passio.",
+    "247": "Terminez [Digit:6digits ] étage[FR:Qty P=\"s\" ] dans toutes les tours suivantes :",
     "247_element": "• [Name:TowerName ]",
     "248": "Terminez [Digit:6digits ] étage[FR:Qty P=\"s\" ] dans\nl'une des tours suivantes :",
     "248_element": "• [Name:TowerName ]",
@@ -394,5 +394,6 @@
     "override_detail_8080_2_06": "Terminez trois fois « Combat difficile\nlimité à une fois par jour ! » dans\n« Les Néo-Maîtres : Temps\net espace véritables ».",
     "override_detail_8080_2_07": "Terminez le combat régional\nquotidien une fois.",
     "override_detail_8080_2_08": "Terminez le combat régional\nquotidien deux fois.",
-    "override_detail_8080_2_09": "Échangez des objets dans le menu\nÉchange EX pour la méga-célébration\ndes 7 ans une fois."
+    "override_detail_8080_2_09": "Échangez des objets dans le menu\nÉchange EX pour la méga-célébration\ndes 7 ans une fois.",
+    "override_detail_8100_1_01": "Prenez une photo."
 }

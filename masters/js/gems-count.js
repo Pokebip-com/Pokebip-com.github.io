@@ -567,6 +567,8 @@ function getBingoMissionsDetailsFromSchedule(s) {
 
 function getMissionsDetailsFromSchedule(s, missionName = undefined) {
     console.log(s, missionName);
+    if(s === undefined)
+        return;
     const missionGroup = jData.proto.missionGroup.find(mg => mg.scheduleId === s.scheduleId);
     const name = missionName ?? getBannerText(jData.proto.banner.find(b => b.bannerId === missionGroup.bannerId));
     const missionList = jData.proto.mission.filter(m => m.missionGroupId === missionGroup.missionGroupId);
@@ -585,6 +587,8 @@ function getMissions(version) {
     return version.schedule.filter(s => s.scheduleType.name === "mission")
         .map(s => s.isBingo ? getBingoMissionsDetailsFromSchedule(s) : getMissionsDetailsFromSchedule(s)).concat(version.dailyMissions)
         .reduce((acc, cur) => {
+        if(cur === undefined)
+            return acc;
         if(!acc.find(mg => mg.name === cur.name)) {
             if(cur.gemCount === 0)
                 return acc;

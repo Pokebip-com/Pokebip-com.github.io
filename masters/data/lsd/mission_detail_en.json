@@ -340,8 +340,8 @@
     "override_detail_7070_1_44": "Complete one chapter of the\nmain story’s Arceus arc.",
     "override_detail_7070_1_47": "Complete a Damage Challenge.",
     "override_detail_7070_1_49": "Join a Trainer Gym.",
-    "246": "Complete a total of [Digit:6digits ] [EN:Qty S=\"floor\" P=\"floors\" ] in\nPasio Towers.",
-    "247": "Complete [Digit:6digits ] [EN:Qty S=\"floor\" P=\"floors\" ] in all of the\nfollowing towers:",
+    "246": "Complete a total of [Digit:6digits ] [EN:Qty S=\"floor\" P=\"floors\" ] in Pasio Towers.",
+    "247": "Complete [Digit:6digits ] [EN:Qty S=\"floor\" P=\"floors\" ] in all of the following towers:",
     "247_element": "• [Name:TowerName ]",
     "248": "Complete [Digit:6digits ] [EN:Qty S=\"floor\" P=\"floors\" ] in any of the\nfollowing towers:",
     "248_element": "• [Name:TowerName ]",
@@ -394,5 +394,6 @@
     "override_detail_8080_2_06": "Complete “Daily Extreme Battle 1”\nin “Neo Champions: True Time and\nSpace” ×3",
     "override_detail_8080_2_07": "Complete the Daily Region Rotation ×1",
     "override_detail_8080_2_08": "Complete the Daily Region Rotation ×2",
-    "override_detail_8080_2_09": "Exchange items in the Marvelous\nMega 7 Years EX Exchange ×1"
+    "override_detail_8080_2_09": "Exchange items in the Marvelous\nMega 7 Years EX Exchange ×1",
+    "override_detail_8100_1_01": "Take a photo"
 }

@@ -340,8 +340,8 @@
     "override_detail_7070_1_44": "Completa un capitolo della storia\n\"La saga di Arceus\".",
     "override_detail_7070_1_47": "Completa una Sfida turbodanno.",
     "override_detail_7070_1_49": "Iscriviti a una Palestra Allenatori.",
-    "246": "Completa un totale di [Digit:6digits ] pian[IT:Qty S=\"o\" P=\"i\" ]\ndelle Torri di Pasio.",
-    "247": "Completa [Digit:6digits ] pian[IT:Qty S=\"o\" P=\"i\" ] in ciascuna\ndelle seguenti Torri di Pasio:",
+    "246": "Completa un totale di [Digit:6digits ] pian[IT:Qty S=\"o\" P=\"i\" ] delle Torri di Pasio.",
+    "247": "Completa [Digit:6digits ] pian[IT:Qty S=\"o\" P=\"i\" ] in ciascuna delle seguenti Torri di Pasio:",
     "247_element": "• [Name:TowerName ].",
     "248": "Completa [Digit:6digits ] pian[IT:Qty S=\"o\" P=\"i\" ] in una\ndelle seguenti Torri di Pasio:",
     "248_element": "• [Name:TowerName ].",
@@ -394,5 +394,6 @@
     "override_detail_8080_2_06": "Completa tre volte \"Lotta ad alta\ndifficoltà (una al giorno)!\" in \"Nuovi\nCampioni - Tempo e spazio originali\".",
     "override_detail_8080_2_07": "Completa una delle lotte regionali\ngiornaliere.",
     "override_detail_8080_2_08": "Completa due lotte regionali\ngiornaliere.",
-    "override_detail_8080_2_09": "Scambia strumenti nello scambio EX\nSette anni megavigliosi."
+    "override_detail_8080_2_09": "Scambia strumenti nello scambio EX\nSette anni megavigliosi.",
+    "override_detail_8100_1_01": "Scatta una foto."
 }

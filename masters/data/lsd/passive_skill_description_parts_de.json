@@ -2651,5 +2651,20 @@
     "p997318": "Senkt durch Gefährten-Terakristallisierung [Name:ReferencedMessageTag ] aller gegnerischen Gefährten um [Digit:1digit Idx=\"1\" ].",
     "p997317": "Erhöht den Schaden, den ein Gegner durch physische Attacken, physische Gefährtenattacken und physische Gefährten-Dynamax-Attacken erleidet.",
     "p997316": "Reduziert die Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"19070\" ] des Anwenders um [Digit:1digit Idx=\"4\" ] und löst alle folgenden Effekte aus, nachdem die Gefährten deines Teams ihre Gefährtenattacke eingesetzt haben:",
-    "p997315": "Erhöht den Schaden, den ein Gegner durch Spezial-Attacken, Spezial-Gefährtenattacken und Spezial-Gefährten-Dynamax-Attacken erleidet."
+    "p997315": "Erhöht den Schaden, den ein Gegner durch Spezial-Attacken, Spezial-Gefährtenattacken und Spezial-Gefährten-Dynamax-Attacken erleidet.",
+    "p997314": "Setzt gesenkte Statuswerte des Anwenders auf die Ausgangswerte zurück, wenn seine Attacke Erfolg hat.",
+    "p997313": "Reduziert den Wert des Gefährtenattacken-Countdowns des Anwenders um [Digit:1digit Idx=\"4\" ], wenn er einen Freundeskreis auf der Anwender-Seite verursacht.",
+    "p997312": "Verlängert die Dauer von [Name:ReferencedMessageTag Idx=\"2\" ], wenn [Name:ReferencedMessageTag Idx=\"2\" ] auf der Anwender-Seite verursacht wird.",
+    "p997311": "Füllt [Digit:1digit Idx=\"2\" ] [DE:Qty Ref=\"2\" S=\"Attackeneinsatzpunkt\" P=\"Attackeneinsatzpunkte\" ] (AEP) der Sync-Attacke des Anwenders auf, wenn ein Verbündeter einen [Name:ReferencedMessageTag ] erzeugt.",
+    "p997310": "Reduziert den Wert des Gefährtenattacken-Countdowns des Anwenders um [Digit:1digit Idx=\"2\" ], wenn er einen [Name:ReferencedMessageTag ] erzeugt.",
+    "p997309": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] des Anwenders um [Digit:1digit Idx=\"2\" ], wenn er einen [Name:ReferencedMessageTag ] erzeugt.",
+    "p997308": "Reduziert die Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"8218\" ] des Anwenders um 1 und löst alle folgenden Effekte aus, nachdem die Gefährten deines Teams ihre Gefährtenattacke eingesetzt haben:",
+    "p997307": "Reduziert die Attackeneinsatzpunkte (AEP) für [Name:MoveId Idx=\"604\" ] des Anwenders um 1 und löst alle folgenden Effekte aus, nachdem die Gefährten deines Teams ihre Gefährtenattacke eingesetzt haben:",
+    "p997306": "Erhöht die Initiative und den Fluchtwert aller verbündeten Gefährten um [Digit:1digit Idx=\"5\" ], wenn der Anwender ein [Name:ReferencedMessageTag Idx=\"4\" ] erzeugt.",
+    "p997305": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] aller verbündeten Gefährten um [Digit:1digit Idx=\"2\" ], wenn der Anwender ein [Name:ReferencedMessageTag ] erzeugt.",
+    "p997304": "Verursacht beim Anwender den [Name:ReferencedMessageTag Idx=\"2\" ], wenn sein Angriff mit einer Attacke Erfolg hat, während ein Freundeskreis auf der Anwender-Seite aktiv ist.",
+    "p997303": "Füllt [Digit:1digit ] [DE:Qty S=\"Attackeneinsatzpunkt\" P=\"Attackeneinsatzpunkte\" ] (AEP) von [Name:MoveId Idx=\"8221\" ] des Anwenders auf, nachdem er seine Gefährten-Dynamax-Attacke eingesetzt hat.",
+    "p997302": "Füllt ein Mal pro Kampf [Digit:1digit ] [DE:Qty S=\"Attackeneinsatzpunkt\" P=\"Attackeneinsatzpunkte\" ] (AEP) von der Attacke des Anwenders auf, wenn die verbleibenden Attackeneinsatzpunkte (AEP) dieser Attacke erstmals 0 betragen.",
+    "p997301": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] des Anwenders um [Digit:1digit Idx=\"2\" ], wenn er ein [Name:ReferencedMessageTag ] erzeugt.",
+    "p997300": "Erhöht ein Mal pro Kampf die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ aller verbündeten Gefährten um [Digit:1digit ], wenn das Pokémon des Anwenders erstmals eine Status-Attacke einsetzt."
 }

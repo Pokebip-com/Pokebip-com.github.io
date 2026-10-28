@@ -2651,5 +2651,20 @@
     "p997318": "Lowers the [Name:ReferencedMessageTag ] of all opposing sync pairs by [Digit:1digit Idx=\"1\" ] stat [EN:Qty Ref=\"1\" S=\"rank\" P=\"ranks\" ] when the user Sync Terastallizes.",
     "p997317": "Increases the amount of damage an opponent takes from physical attack moves, physical sync moves, and physical max moves.",
     "p997316": "Reduces the MP for the user’s [Name:MoveId Idx=\"19070\" ] by [Digit:1digit Idx=\"4\" ] and grants all of the following effects after your team’s sync pair uses their sync move:",
-    "p997315": "Increases the amount of damage an opponent takes from special attack moves, special sync moves, and special max moves."
+    "p997315": "Increases the amount of damage an opponent takes from special attack moves, special sync moves, and special max moves.",
+    "p997314": "Returns the user’s lowered stats to normal when its move is successful.",
+    "p997313": "Reduces the user’s sync move countdown by [Digit:1digit Idx=\"4\" ] when it applies a circle to the allied field of play.",
+    "p997312": "Extends the duration of [Name:ReferencedMessageTag Idx=\"2\" ] when [Name:ReferencedMessageTag Idx=\"2\" ] is applied to the allied field of play.",
+    "p997311": "Restores [Digit:1digit Idx=\"2\" ] MP of the user’s buddy move when an ally turns the field of play’s zone into a [Name:ReferencedMessageTag ].",
+    "p997310": "Reduces the user’s sync move countdown by [Digit:1digit Idx=\"2\" ] when it turns the field of play’s zone into a [Name:ReferencedMessageTag ].",
+    "p997309": "Increases the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by [Digit:1digit Idx=\"2\" ] [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] when it turns the field of play’s zone into a [Name:ReferencedMessageTag ].",
+    "p997308": "Reduces the MP for the user’s [Name:MoveId Idx=\"8218\" ] by one and grants all of the following effects after your team’s sync pair uses their sync move:",
+    "p997307": "Reduces the MP for the user’s [Name:MoveId Idx=\"604\" ] by one and grants all of the following effects after your team’s sync pair uses their sync move:",
+    "p997306": "Raises the Speed and evasiveness of all allied sync pairs by [Digit:1digit Idx=\"5\" ] stat [EN:Qty Ref=\"5\" S=\"rank\" P=\"ranks\" ] when the user turns the field of play’s terrain into [Name:ReferencedMessageTag Idx=\"4\" ].",
+    "p997305": "Increases the [Name:ReferencedMessageTag Idx=\"1\" ] of all allied sync pairs by [Digit:1digit Idx=\"2\" ] [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] when the user turns the field of play’s terrain into [Name:ReferencedMessageTag ].",
+    "p997304": "Applies the [Name:ReferencedMessageTag Idx=\"2\" ] to the user when its attack move is successful while a circle applies to the allied field of play.",
+    "p997303": "Restores [Digit:1digit ] MP of the user’s [Name:MoveId Idx=\"8221\" ] after using its max move.",
+    "p997302": "Restores [Digit:1digit ] MP of the user’s move the first time the remaining MP for that move is zero each battle.",
+    "p997301": "Increases the user’s [Name:ReferencedMessageTag Idx=\"1\" ] by [Digit:1digit Idx=\"2\" ] [EN:Qty Ref=\"2\" S=\"rank\" P=\"ranks\" ] when it turns the field of play’s terrain into [Name:ReferencedMessageTag ].",
+    "p997300": "Increases the Physical Moves ↑ Next effect and Special Moves ↑ Next effect of all allied sync pairs by [Digit:1digit ] [EN:Qty S=\"rank\" P=\"ranks\" ] the first time the user’s Pokémon uses a status move each battle."
 }

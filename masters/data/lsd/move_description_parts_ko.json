@@ -1065,5 +1065,11 @@
     "998860": "배틀이 끝날 때까지 메가갸라도스가 된다",
     "998859": "배틀이 끝날 때까지 메가보만다가 된다",
     "998858": "같은 편 버디즈 전원의 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ga\" ] 10단계 오른다",
-    "998857": "배틀이 끝날 때까지 메가샤크니아가 된다"
+    "998857": "배틀이 끝날 때까지 메가샤크니아가 된다",
+    "998856": "상대가 [Name:ReferencedMessageTag ] 상태일 때는 위력이 2배가 된다",
+    "998855": "상대의 급소를 맞혔을 때 같은 편 버디즈 전원의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 오른다",
+    "998854": "자신의 남은 HP가 [Digit:2digits ]% 이상일 때는 자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"2\" ]단계 오른다",
+    "998853": "자신의 남은 HP가 [Digit:2digits ]% 미만일 때는 자신의 HP를 최대 HP의 100%만큼 회복한다",
+    "998852": "자신의 공격과 명중률이 [Digit:1digit ]단계 오른다",
+    "998851": "처음 버디즈기술을 사용했을 때만 존을 [Name:ReferencedMessageTag ][Kor:Particle char=\"ni\" ] 만든다"
 }

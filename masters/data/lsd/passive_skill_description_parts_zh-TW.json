@@ -2651,5 +2651,20 @@
     "p997318": "拍組太晶化時，\n會降低對手全體拍組的[Name:ReferencedMessageTag ][Digit:1digit Idx=\"1\" ]階段。",
     "p997317": "增加對手受到物理招式、物理拍組招式\n或物理拍組極巨化招式攻擊時造成的傷害。",
     "p997316": "我方隊伍使出拍組招式後，\n會減少自己的「[Name:MoveId Idx=\"19070\" ]」的使用次數[Digit:1digit Idx=\"4\" ]次\n並發揮下列所有效果。",
-    "p997315": "增加對手受到特殊招式、特殊拍組招式\n或特殊拍組極巨化招式攻擊時造成的傷害。"
+    "p997315": "增加對手受到特殊招式、特殊拍組招式\n或特殊拍組極巨化招式攻擊時造成的傷害。",
+    "p997314": "招式成功時，\n會讓自己被降低的能力回到初始狀態。",
+    "p997313": "當自己將我方場地變成任一鬥陣時，\n會讓發動拍組招式所需的行動數減少[Digit:1digit Idx=\"4\" ]次。",
+    "p997312": "我方場地變成[Name:ReferencedMessageTag Idx=\"2\" ]的瞬間在場上時，\n會延長[Name:ReferencedMessageTag Idx=\"2\" ]的持續時間。",
+    "p997311": "當我方使[Name:ReferencedMessageTag ]生效時，\n會幫自己的同步招式的使用次數回復 [Digit:1digit Idx=\"2\" ] 次。",
+    "p997310": "當自己使[Name:ReferencedMessageTag ]生效時，\n會讓發動拍組招式所需的行動數減少[Digit:1digit Idx=\"2\" ]次。",
+    "p997309": "當自己使[Name:ReferencedMessageTag ]生效時，\n會提高自己的[Name:ReferencedMessageTag Idx=\"1\" ][Digit:1digit Idx=\"2\" ]階段。",
+    "p997308": "我方隊伍使出拍組招式後，\n會減少自己的「[Name:MoveId Idx=\"8218\" ]」的使用次數１次\n並發揮下列所有效果。",
+    "p997307": "我方隊伍使出拍組招式後，\n會減少自己的「[Name:MoveId Idx=\"604\" ]」的使用次數１次\n並發揮下列所有效果。",
+    "p997306": "當自己使場地變成[Name:ReferencedMessageTag Idx=\"4\" ]時，\n會提高我方全體拍組的速度和閃避率[Digit:1digit Idx=\"5\" ]階段。",
+    "p997305": "當自己使場地變成[Name:ReferencedMessageTag ]時，\n會提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"1\" ]\n[Digit:1digit Idx=\"2\" ]階段。",
+    "p997304": "當我方場地為任一鬥陣\n且使出招式攻擊成功時，\n會讓自己變成[Name:ReferencedMessageTag Idx=\"2\" ]狀態。",
+    "p997303": "使出拍組極巨化招式後，\n會幫自己的「[Name:MoveId Idx=\"8221\" ]」的使用次數回復[Digit:1digit ]次。",
+    "p997302": "當招式的使用次數首次變成０時，\n會幫該招式的使用次數回復[Digit:1digit ]次。",
+    "p997301": "當自己使場地變成[Name:ReferencedMessageTag ]時，\n會提高自己的[Name:ReferencedMessageTag Idx=\"1\" ][Digit:1digit Idx=\"2\" ]階段。",
+    "p997300": "在寶可夢首次使出變化招式時，\n會分別提高我方全體拍組的下次物理招式威力增強和\n下次特殊招式威力增強[Digit:1digit ]階段。"
 }

@@ -1065,5 +1065,11 @@
     "998860": "變成超級暴鯉龍直到對戰結束。",
     "998859": "變成超級暴飛龍直到對戰結束。",
     "998858": "提高我方全體拍組的[Name:ReferencedMessageTag Idx=\"2\" ]１０階段。",
-    "998857": "變成超級巨牙鯊直到對戰結束。"
+    "998857": "變成超級巨牙鯊直到對戰結束。",
+    "998856": "當對手陷入[Name:ReferencedMessageTag ]狀態時，威力會變成２倍。",
+    "998855": "擊中對手要害時，會提高我方全體拍組的\n[Name:ReferencedMessageTag ][Digit:1digit Idx=\"1\" ]階段。",
+    "998854": "在自己的ＨＰ剩下[Digit:2digits ]％以上時，會提高自己的[Name:ReferencedMessageTag Idx=\"1\" ][Digit:1digit Idx=\"2\" ]階段。",
+    "998853": "在自己的ＨＰ剩下不到[Digit:2digits ]％時，會回復自己的ＨＰ，為最大ＨＰ的１００％。",
+    "998852": "提高自己的攻擊和命中率[Digit:1digit ]階段。",
+    "998851": "首次使出拍組招式時，會將領域變成[Name:ReferencedMessageTag ]。"
 }

@@ -281,7 +281,7 @@
     "201": "Alcanza un rango específico cuando\nse cierre la clasificación del\nEntrenamientotal n.º [Digit:6digits ].",
     "override_detail_6080_1_01": "Completa la siguiente ubicación sin\nque debiliten a más de 1 pareja de\ncompis.\n• \"¡Un combate difícil al día!\" de\n\"Evento episódico: Vínculos dorados\".",
     "override_detail_6080_2_01": "Completa ubicaciones con combates\n5 veces con la siguiente formación:\n• Lylia (5.º Aniversario) y Solgaleo",
-    "228": "Haz que [Digit:4digits Idx=\"1\" ] pareja[ES:Qty Ref=\"1\" P=\"s\" ] de compis\nalcance[ES:Qty Ref=\"1\" P=\"n\" ] el nivel [Digit:2digits Idx=\"2\" ] del poder\nexcelso.",
+    "228": "Haz que [Digit:4digits Idx=\"1\" ] pareja[ES:Qty Ref=\"1\" P=\"s\" ] de compis alcance[ES:Qty Ref=\"1\" P=\"n\" ] el nivel [Digit:2digits Idx=\"2\" ] del poder excelso.",
     "229": "Crea una foto en la que salga[ES:Qty P=\"n\" ] al\nmenos [Digit:2digits ] pareja[ES:Qty P=\"s\" ] de compis con los\nsiguientes distintivos:",
     "229_element": "• [Name:TeamSkillTag ]",
     "override_detail_6100_1_01": "Completa \"Evento episódico:\nViajeros del pasado\" en solitario\nuna vez.\n\nNota: Puedes jugar el evento en la\nsección \"Repetidos\".",
@@ -394,5 +394,6 @@
     "override_detail_8080_2_06": "Completa \"¡Un combate difícil al día!\"\nen \"Neocampeones: Espacio-tiempo\nverdadero\" tres veces.",
     "override_detail_8080_2_07": "Completa los combates diarios por\nregiones una vez.",
     "override_detail_8080_2_08": "Completa los combates diarios por\nregiones dos veces.",
-    "override_detail_8080_2_09": "Canjea objetos una vez en el canje\ndel 7.º aniversario megaespecial EX."
+    "override_detail_8080_2_09": "Canjea objetos una vez en el canje\ndel 7.º aniversario megaespecial EX.",
+    "override_detail_8100_1_01": "Saca una foto."
 }

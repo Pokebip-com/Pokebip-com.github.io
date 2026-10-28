@@ -1007,7 +1007,7 @@
     "998918": "Wenn das Lucario des Anwenders die Mega-Entwicklung erreicht hat, wird beim Anwender der [Name:ReferencedMessageTag Idx=\"1\" ] verursacht.",
     "998917": "Erzeugt ein [Name:ReferencedMessageTag ].",
     "998916": "Erhöht ein Mal pro Kampf die Effekte Folge-Phys.-Attacke↑ und Folge-Sp.-Attacke↑ aller verbündeten Gefährten um [Digit:1digit ], wenn der Anwender erstmals seine Gefährtenattacke einsetzt.",
-    "998915": "Verursacht ein Mal pro Kampf auf der Anwender-Seite [Name:ReferencedMessageTag Idx=\"9\" ], wenn dieser Angriff mit einer Attacke erstmals Erfolg hat.\n[Name:ReferencedMessageTag Idx=\"9\" ] löst alle folgenden Effekte aus:",
+    "998915": "Verursacht ein Mal pro Kampf auf der Anwender-Seite [Name:ReferencedMessageTag Idx=\"9\" ], wenn dieser Angriff mit einer Attacke erstmals Erfolg hat. [Name:ReferencedMessageTag Idx=\"9\" ] löst alle folgenden Effekte aus:",
     "998914": "Löst bei Simsala bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Simsala aus.",
     "998913": "Verursacht ein Mal pro Kampf auf der Anwender-Seite [Name:ReferencedMessageTag Idx=\"9\" ], wenn der Anwender erstmals seine Gefährtenattacke einsetzt.\n[Name:ReferencedMessageTag Idx=\"9\" ] löst alle folgenden Effekte aus:",
     "998912": "Lässt das Ziel entweder zurückschrecken, verwirrt es oder fängt es in einer Umschlingung.",
@@ -1065,5 +1065,11 @@
     "998860": "Löst bei Garados bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Garados aus.",
     "998859": "Löst bei Brutalanda bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Brutalanda aus.",
     "998858": "Erhöht den [Name:ReferencedMessageTag Idx=\"2\" ] aller verbündeten Gefährten um 10.",
-    "998857": "Löst bei Tohaido bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Tohaido aus."
+    "998857": "Löst bei Tohaido bis zum Ende des Kampfes die Mega-Entwicklung zu Mega-Tohaido aus.",
+    "998856": "Die Stärke dieses Angriffs wird gegen Ziele verdoppelt, die vom [Name:ReferencedMessageTag ] betroffen sind.",
+    "998855": "Erhöht den [Name:ReferencedMessageTag ] aller verbündeten Gefährten um [Digit:1digit Idx=\"1\" ], wenn der Anwender einen Volltreffer landet.",
+    "998854": "Erhöht den [Name:ReferencedMessageTag Idx=\"1\" ] des Anwenders um [Digit:1digit Idx=\"2\" ], wenn er noch mindestens [Digit:2digits ] % seiner KP hat.",
+    "998853": "Stellt die KP des Anwenders komplett wieder her, wenn seine KP weniger als [Digit:2digits ] % betragen.",
+    "998852": "Erhöht den Angriff und die Genauigkeit des Anwenders um [Digit:1digit ].",
+    "998851": "Erzeugt einmal pro Kampf einen [Name:ReferencedMessageTag ], wenn der Anwender erstmals seine Gefährtenattacke einsetzt."
 }

@@ -1007,7 +1007,7 @@
     "998918": "Si el Lucario del usuario ha megaevolucionado, también aplica el [Name:ReferencedMessageTag Idx=\"1\" ] a dicho usuario.",
     "998917": "Crea un [Name:ReferencedMessageTag ].",
     "998916": "Aumenta el efecto Siguiente Físico ↑ y el efecto Siguiente Especial ↑ de todos los compis aliados en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ] la primera vez que el usuario usa un movimiento compi en cada combate.",
-    "998915": "Aplica [Name:ReferencedMessageTag Idx=\"9\" ] al bando aliado la primera vez que este movimiento de ataque acierta en cada combate.\n[Name:ReferencedMessageTag Idx=\"9\" ] otorga todos los efectos siguientes:",
+    "998915": "Aplica [Name:ReferencedMessageTag Idx=\"9\" ] al bando aliado la primera vez que este movimiento de ataque acierta en cada combate. [Name:ReferencedMessageTag Idx=\"9\" ] otorga todos los efectos siguientes:",
     "998914": "Evoluciona a Mega-Alakazam. Vuelve a la normalidad tras terminar el combate.",
     "998913": "Aplica [Name:ReferencedMessageTag Idx=\"9\" ] al bando aliado la primera vez que el usuario usa un movimiento compi en cada combate. \n[Name:ReferencedMessageTag Idx=\"9\" ] otorga todos los efectos siguientes:",
     "998912": "Hace retroceder, confunde o deja bajo ataduras al objetivo.",
@@ -1065,5 +1065,11 @@
     "998860": "Evoluciona a Mega-Gyarados. Vuelve a la normalidad tras terminar el combate.",
     "998859": "Evoluciona a Mega-Salamence. Vuelve a la normalidad tras terminar el combate.",
     "998858": "Aumenta el [Name:ReferencedMessageTag Idx=\"2\" ] de todos los compis aliados en 10 niveles.",
-    "998857": "Evoluciona a Mega-Sharpedo. Vuelve a la normalidad tras terminar el combate."
+    "998857": "Evoluciona a Mega-Sharpedo. Vuelve a la normalidad tras terminar el combate.",
+    "998856": "Duplica la potencia de este ataque contra objetivos que sufren el [Name:ReferencedMessageTag ].",
+    "998855": "Aumenta el [Name:ReferencedMessageTag ] de todos los compis aliados en [Digit:1digit Idx=\"1\" ] [ES:Qty Ref=\"1\" S=\"nivel\" P=\"niveles\" ] cuando el usuario asesta un golpe crítico.",
+    "998854": "Aumenta el [Name:ReferencedMessageTag Idx=\"1\" ] del usuario en [Digit:1digit Idx=\"2\" ] [ES:Qty Ref=\"2\" S=\"nivel\" P=\"niveles\" ] cuando sus PS restantes sean un [Digit:2digits ]% o más.",
+    "998853": "Recupera todos los PS del usuario cuando sus PS restantes sean inferiores al [Digit:2digits ]%.",
+    "998852": "Aumenta el Ataque y la Precisión del usuario en [Digit:1digit ] [ES:Qty S=\"nivel\" P=\"niveles\" ].",
+    "998851": "Crea una [Name:ReferencedMessageTag ] la primera vez que el usuario usa un movimiento compi en cada combate."
 }
