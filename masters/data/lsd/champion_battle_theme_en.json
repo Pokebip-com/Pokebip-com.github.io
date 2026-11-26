@@ -59,5 +59,10 @@
     "gvg_theme_8070_104": "Zero damage when\nunaffected; zero damage\nwhen not super effective",
     "gvg_theme_8070_106": "P-move power ↑ 5;\nzero damage when not\nsuper effective",
     "gvg_theme_8070_107": "Ally move gauge max -2;\nzero damage when not\nsuper effective",
-    "gvg_theme_8070_108": "Ally MG deceleration;\nzero damage when not\nsuper effective"
+    "gvg_theme_8070_108": "Ally MG deceleration;\nzero damage when not\nsuper effective",
+    "gvg_theme_8110_011": "Normal or supereffective\nonly",
+    "gvg_theme_8110_012": "Ally supereffective\npower ↑5",
+    "gvg_theme_8110_102": "Zero special damage;\nNormal or supereffective only;\nally supereffective power ↑5",
+    "gvg_theme_8110_104": "Zero damage when unaffected;\nNormal or supereffective only;\nally supereffective power ↑5",
+    "gvg_theme_8110_107": "Ally move gauge max -2;\nNormal or supereffective only;\nally supereffective power ↑5"
 }

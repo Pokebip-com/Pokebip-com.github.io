@@ -1,4 +1,5 @@
 {"entries": [
+{ "potentialId": 11010701, "rarity": 1 },
 { "potentialId": 11011109, "rarity": 1 },
 { "potentialId": 11012701, "rarity": 1 },
 { "potentialId": 11013904, "rarity": 1 },
@@ -81,6 +82,7 @@
 { "potentialId": 16017304, "rarity": 1 },
 { "potentialId": 16017504, "rarity": 1 },
 { "potentialId": 16017604, "rarity": 1 },
+{ "potentialId": 16018104, "rarity": 1 },
 { "potentialId": 16018904, "rarity": 1 },
 { "potentialId": 16019003, "rarity": 1 },
 { "potentialId": 16030504, "rarity": 1 },
@@ -192,6 +194,7 @@
 { "potentialId": 17071302, "rarity": 1 },
 { "potentialId": 17071801, "rarity": 1 },
 { "potentialId": 17074001, "rarity": 1 },
+{ "potentialId": 17074703, "rarity": 1 },
 { "potentialId": 17075902, "rarity": 1 },
 { "potentialId": 17083801, "rarity": 1 },
 { "potentialId": 17085605, "rarity": 1 },
@@ -422,5 +425,10 @@
 { "potentialId": 99054401, "rarity": 1 },
 { "potentialId": 99054501, "rarity": 1 },
 { "potentialId": 99054601, "rarity": 1 },
-{ "potentialId": 99054701, "rarity": 1 }
+{ "potentialId": 99054701, "rarity": 1 },
+{ "potentialId": 99055901, "rarity": 1 },
+{ "potentialId": 99056001, "rarity": 1 },
+{ "potentialId": 99056101, "rarity": 1 },
+{ "potentialId": 99056201, "rarity": 1 },
+{ "potentialId": 99056301, "rarity": 1 }
 ]}

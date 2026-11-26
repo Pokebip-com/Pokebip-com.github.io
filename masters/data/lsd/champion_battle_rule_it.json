@@ -50,5 +50,7 @@
     "damage_challenge_rule_8090_001": "Le Unità avversarie subiscono l'80% di danni\nin meno dagli attacchi scagliati tramite mosse,\nUnimosse o mosse UniDynamax da un'Unità\nnon appartenente al gruppo \"Gruppi malvagi\".",
     "passio_tower_rule_8080_001": "Se non sono affette da problemi di stato \no impedimenti, le Unità avversarie infliggono\nil triplo dei danni quando usano un'Unimossa.",
     "passio_tower_rule_8080_002": "Se le statistiche degli avversari non sono state\nridotte di un totale di 16 gradi, le loro Unimosse\ninfliggono il triplo dei danni.",
-    "passio_tower_rule_8080_003": "Le Unità avversarie infliggono il triplo dei danni\nquando usano un'Unimossa su un bersaglio\nindenne agli effetti che si applicano solo\nal campo alleato."
+    "passio_tower_rule_8080_003": "Le Unità avversarie infliggono il triplo dei danni\nquando usano un'Unimossa su un bersaglio\nindenne agli effetti che si applicano solo\nal campo alleato.",
+    "gvg_rule_8110_011": "Gli avversari subiscono danni solo dagli attacchi\nsuperefficaci o di tipo Normale.",
+    "gvg_rule_8110_012": "I danni inflitti dalle Unità alleate usando\nattacchi superefficaci sono incrementati del 50%."
 }

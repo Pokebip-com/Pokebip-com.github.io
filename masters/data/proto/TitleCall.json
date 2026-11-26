@@ -81,5 +81,7 @@
 { "scheduleId": "8090_3W_TitleSplash_2", "u2": 0, "actorId": "ch0195_10_ghetsis", "u4": "38" },
 { "scheduleId": "8090_3W_TitleSplash_2", "u2": 0, "actorId": "ch0196_11_fleurdelis", "u4": "38" },
 { "scheduleId": "8100_1W_TitleSplash", "u2": 0, "actorId": "ch0098_90_hau", "u4": "39" },
-{ "scheduleId": "8100_1W_TitleSplash", "u2": 0, "actorId": "ch0119_90_gladion", "u4": "39" }
+{ "scheduleId": "8100_1W_TitleSplash", "u2": 0, "actorId": "ch0119_90_gladion", "u4": "39" },
+{ "scheduleId": "8110_1W_TitleSplash_1", "u2": 0, "actorId": "ch0003_10_calme", "u4": "40" },
+{ "scheduleId": "8110_1W_TitleSplash_1", "u2": 0, "actorId": "ch0368_00_kyoya", "u4": "40" }
 ]}

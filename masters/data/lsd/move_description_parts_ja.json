@@ -1071,5 +1071,11 @@
     "998854": "自分の残りＨＰが[Digit:2digits ]％以上のときは自分の[Name:ReferencedMessageTag Idx=\"1\" ]を[Digit:1digit Idx=\"2\" ]段階あげる",
     "998853": "自分の残りＨＰが[Digit:2digits ]％未満のときは自分のＨＰを最大ＨＰの１００％回復する",
     "998852": "自分の攻撃と命中率を[Digit:1digit ]段階あげる",
-    "998851": "初めてバディーズわざをつかったときだけゾーンを[Name:ReferencedMessageTag ]にする"
+    "998851": "初めてバディーズわざをつかったときだけゾーンを[Name:ReferencedMessageTag ]にする",
+    "998850": "この技で攻撃するときに自分の「[Name:MoveId Idx=\"19630\" ]」の残り回数が１以上のときは　その回数を１減らしてゾーンを[Name:ReferencedMessageTag Idx=\"2\" ]にする",
+    "998849": "自分が[Name:ReferencedMessageTag Idx=\"6\" ]のときは攻撃待機状態にならず攻撃する",
+    "998848": "自分がメガマフォクシーになっているときはさらに自分の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階あげる",
+    "998847": "味方のバディーズわざ発動可能状態までのカウントを[Digit:1digit Idx=\"6\" ]減らす",
+    "998846": "バトル終了までメガエンブオーになる",
+    "998845": "バトル終了までメガマフォクシーになる"
 }

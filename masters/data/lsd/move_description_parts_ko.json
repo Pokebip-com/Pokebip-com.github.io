@@ -1071,5 +1071,11 @@
     "998854": "자신의 남은 HP가 [Digit:2digits ]% 이상일 때는 자신의 [Name:ReferencedMessageTag Idx=\"1\" ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"2\" ]단계 오른다",
     "998853": "자신의 남은 HP가 [Digit:2digits ]% 미만일 때는 자신의 HP를 최대 HP의 100%만큼 회복한다",
     "998852": "자신의 공격과 명중률이 [Digit:1digit ]단계 오른다",
-    "998851": "처음 버디즈기술을 사용했을 때만 존을 [Name:ReferencedMessageTag ][Kor:Particle char=\"ni\" ] 만든다"
+    "998851": "처음 버디즈기술을 사용했을 때만 존을 [Name:ReferencedMessageTag ][Kor:Particle char=\"ni\" ] 만든다",
+    "998850": "이 기술로 공격할 때 자신의 \"[Name:MoveId Idx=\"19630\" ]\"의 남은 횟수가 1 이상일 때는 그 횟수를 1 줄이고 존을 [Name:ReferencedMessageTag Idx=\"2\" ][Kor:Particle char=\"ni\" ] 만든다",
+    "998849": "자신이 [Name:ReferencedMessageTag Idx=\"6\" ] 상태일 때는 공격대기 상태가 되지 않고 공격한다",
+    "998848": "추가로 자신이 메가마폭시가 되어있을 때는 자신의 [Name:ReferencedMessageTag ][Kor:Particle char=\"ga\" ] [Digit:1digit Idx=\"1\" ]단계 오른다",
+    "998847": "같은 편의 버디즈기술 발동 가능 상태가 되기까지의 카운트를 [Digit:1digit Idx=\"6\" ] 줄인다",
+    "998846": "배틀이 끝날 때까지 메가염무왕이 된다",
+    "998845": "배틀이 끝날 때까지 메가마폭시가 된다"
 }

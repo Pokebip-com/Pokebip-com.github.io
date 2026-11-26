@@ -295,5 +295,12 @@
     "event_8090_4W_SuperTicket_08": "Master Fair Featured Ticket Scout",
     "event_8100_4W_SuperTicket_04": "Variety Featured Ticket Scout",
     "event_8100_4W_SuperTicket_06": "Master Fair Featured Ticket Scout",
-    "event_8100_5W_SuperTicket_05": "Master Fair Featured Ticket Scout"
+    "event_8100_5W_SuperTicket_05": "Master Fair Featured Ticket Scout",
+    "event_8110_1W_MasterTicket_06": "Fair-Exclusive Guaranteed Ticket Scout",
+    "event_8110_2W_MasterTicket_01": "Seasonal Exclusive Guaranteed December Seasonal Event Ticket Scout",
+    "event_8110_2W_SuperTicket_04": "Penny Seasonal Featured Ticket Scout",
+    "event_8110_2W_MasterTicket_05": "Penny Seasonal Guaranteed Ticket Scout",
+    "event_8110_2W_MasterTicket_08": "New Year’s Masters Fest Seasonal Exclusive Guaranteed Ticket Scout",
+    "event_8110_4W_MasterTicket_01": "New Year’s Masters Fest Costume Guaranteed Ticket Scout",
+    "event_8110_4W_MasterTicket_011": "EX Master Fair–Exclusive Guaranteed Ticket Scout"
 }

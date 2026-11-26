@@ -501,6 +501,7 @@
     "20051200": "Feuiloutan",
     "20051400": "Flamoutan",
     "20051600": "Flotoutan",
+    "20051700": "Munna",
     "20051800": "Mushana",
     "20052100": "Déflaisan",
     "20052101": "Déflaisan",
@@ -919,5 +920,9 @@
     "2010010000": "Chongjian",
     "2010030000": "Dinglu",
     "2008910000": "Wushours",
-    "2008921100": "Shifours"
+    "2008921100": "Shifours",
+    "2009910000": "Hotte-de-Fer",
+    "2005005100": "Méga-Roitiflam",
+    "2006555100": "Méga-Goupelin",
+    "2007060041": "Muplodocus"
 }

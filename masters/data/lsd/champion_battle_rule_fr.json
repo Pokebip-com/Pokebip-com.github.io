@@ -50,5 +50,7 @@
     "damage_challenge_rule_8090_001": "Réduit les dégâts subis par l'ennemi de 80 %\nquand il est touché par une capacité, une\ncapacité Duo ou une capacité Duo Dynamax\nd'un Duo qui n'a pas le mot-clé\nOrganisation maléfique.",
     "passio_tower_rule_8080_001": "Les ennemis ne souffrant pas d'une altération\nde statut ou d'un tourment multiplient par 3\nles dégâts infligés par les capacités Duo.",
     "passio_tower_rule_8080_002": "Si leurs stats n'ont pas réduit de 16 rangs au total,\nles ennemis multiplient par 3 les dégâts\ninfligés par les capacités Duo.",
-    "passio_tower_rule_8080_003": "Si leur cible n'est pas affectée par les effets qui\nne s'appliquent qu'au côté allié, les ennemis\nmultiplient par 3 les dégâts infligés\npar les capacités Duo."
+    "passio_tower_rule_8080_003": "Si leur cible n'est pas affectée par les effets qui\nne s'appliquent qu'au côté allié, les ennemis\nmultiplient par 3 les dégâts infligés\npar les capacités Duo.",
+    "gvg_rule_8110_011": "Les ennemis subissent seulement les dégâts\ndes capacités offensives de type Normal ou\ndes capacités offensives super efficaces.",
+    "gvg_rule_8110_012": "Augmente les dégâts que les alliés infligent\navec les capacités offensives super efficaces\nde 50 %."
 }

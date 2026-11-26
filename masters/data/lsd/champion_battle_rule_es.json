@@ -50,5 +50,7 @@
     "damage_challenge_rule_8090_001": "Se reduce en un 80% el daño que el rival\nrecibe de movimientos, movimientos compi\no movimientos compi Dinamax de compis\nsin el distintivo \"Equipo villano\".",
     "passio_tower_rule_8080_001": "El equipo rival inflige el triple de daño con\nmovimientos compi cuando no le afecta ningún\nproblema ni cambio de estado.",
     "passio_tower_rule_8080_002": "El equipo rival inflige el triple de daño con\nmovimientos compi cuando sus características\nno se han reducido 16 niveles en total.",
-    "passio_tower_rule_8080_003": "El equipo rival inflige el triple de daño con\nmovimientos compi cuando al objetivo no le\nafecta ningún efecto que solo se aplique a\nsu bando."
+    "passio_tower_rule_8080_003": "El equipo rival inflige el triple de daño con\nmovimientos compi cuando al objetivo no le\nafecta ningún efecto que solo se aplique a\nsu bando.",
+    "gvg_rule_8110_011": "El equipo rival solo recibe daño producido por\nataques de tipo Normal o supereficaces.",
+    "gvg_rule_8110_012": "Se aumenta en un 50% el daño que inflige tu\nequipo con ataques supereficaces."
 }

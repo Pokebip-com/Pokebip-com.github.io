@@ -104,5 +104,6 @@
 { "trainerRarityupBonusId": "8060002", "trainerId": "10158900000", "itemSetId": "8060002", "scheduleId": "8060_3W_Music_01_FOREVER" },
 { "trainerRarityupBonusId": "8070001", "trainerId": "10366000000", "itemSetId": "8070001", "scheduleId": "8070_3W_Music_01_FOREVER" },
 { "trainerRarityupBonusId": "8100278", "trainerId": "10098900000", "itemSetId": "8100278", "scheduleId": "8100_1W_BSearch_2_FOREVER" },
-{ "trainerRarityupBonusId": "8100279", "trainerId": "10119900000", "itemSetId": "8100279", "scheduleId": "8100_1W_BSearch_1_FOREVER" }
+{ "trainerRarityupBonusId": "8100279", "trainerId": "10119900000", "itemSetId": "8100279", "scheduleId": "8100_1W_BSearch_1_FOREVER" },
+{ "trainerRarityupBonusId": "8110001", "trainerId": "10368000000", "itemSetId": "8110001", "scheduleId": "8110_1W_Music_01_FOREVER" }
 ]}

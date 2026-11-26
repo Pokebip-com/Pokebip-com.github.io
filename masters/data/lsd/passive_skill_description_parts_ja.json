@@ -2666,5 +2666,19 @@
     "p997303": "バディーズダイマックスわざをつかったあと\n自分の「[Name:MoveId Idx=\"8221\" ]」の回数を[Digit:1digit ]回復する",
     "p997302": "初めて技の回数が０になったときだけ\nその技の回数を[Digit:1digit ]回復する",
     "p997301": "自分がフィールドを[Name:ReferencedMessageTag ]にしたときに\n自分の[Name:ReferencedMessageTag Idx=\"1\" ]を[Digit:1digit Idx=\"2\" ]段階あげる",
-    "p997300": "初めてポケモンが変化技をつかったときだけ\n味方のバディーズ全員の次回物理技威力ブーストと\n次回特殊技威力ブーストをそれぞれ[Digit:1digit ]段階あげる"
+    "p997300": "初めてポケモンが変化技をつかったときだけ\n味方のバディーズ全員の次回物理技威力ブーストと\n次回特殊技威力ブーストをそれぞれ[Digit:1digit ]段階あげる",
+    "p997299": "フィールドが[Name:ReferencedMessageTag ]のときは\n味方のバディーズ全員の技や\nバディーズわざの威力をあげる",
+    "p997298": "初めて技での攻撃が成功したときだけ\nバディーズわざ発動可能状態までのカウントを[Digit:1digit Idx=\"2\" ]減らす",
+    "p997297": "登場したときに\n相手のバディーズ全員を[Name:ReferencedMessageTag ]にする",
+    "p997296": "相手がやけど状態のときは\n味方の技での攻撃が成功したときに[Digit:2digits Idx=\"2\" ]％の確率で\n自分の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階あげる",
+    "p997295": "相手がやけど状態のときは\n味方の技での攻撃が成功したときに\n自分の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階あげる",
+    "p997294": "自分が「[Name:MoveId Idx=\"19170\" ]」をつかったときか\n味方がフィールドを[Name:ReferencedMessageTag ]にしたときに\n以下のすべての効果を発揮する",
+    "p997293": "相手のバディーズ全員を[Name:ReferencedMessageTag Idx=\"1\" ]にする",
+    "p997292": "味方全体の場がいずれかのサークルのときは\n味方のバディーズ全員の技や\nバディーズわざの威力をあげる",
+    "p997291": "初めてポケモンが技をつかったときだけ\nバディーズわざ発動可能状態までのカウントを[Digit:1digit ]減らす",
+    "p997290": "相手がやけど状態のときは\n技での攻撃が成功したときに[Digit:2digits Idx=\"2\" ]％の確率で\n相手の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階さげる",
+    "p997289": "相手がやけど状態のときは\n技での攻撃が成功したときに\n相手の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階さげる",
+    "p997288": "初めてポケモンが変化技をつかったときだけ\nフィールドを[Name:ReferencedMessageTag ]にする",
+    "p997287": "味方が[Name:ReferencedMessageTag Idx=\"3\" ]を発生させたときに\n自分の[Name:ReferencedMessageTag Idx=\"4\" ]を[Digit:1digit Idx=\"5\" ]段階あげる",
+    "p997286": "効果タグに連続を持つ技のときは攻撃が命中するたびに\n自分の[Name:ReferencedMessageTag ]を[Digit:1digit Idx=\"1\" ]段階あげる"
 }

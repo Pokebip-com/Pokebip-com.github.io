@@ -289,5 +289,9 @@
 { "scoutServerTicketItemNameId": "900000000294", "scoutServerTicketItemDescriptionId": "294", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8090_4W_SuperTicket_08" },
 { "scoutServerTicketItemNameId": "900000000295", "scoutServerTicketItemDescriptionId": "295", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8100_4W_SuperTicket_04" },
 { "scoutServerTicketItemNameId": "900000000296", "scoutServerTicketItemDescriptionId": "296", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8100_4W_SuperTicket_06" },
-{ "scoutServerTicketItemNameId": "900000000297", "scoutServerTicketItemDescriptionId": "297", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8100_5W_SuperTicket_05" }
+{ "scoutServerTicketItemNameId": "900000000297", "scoutServerTicketItemDescriptionId": "297", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8100_5W_SuperTicket_05" },
+{ "scoutServerTicketItemNameId": "900000000298", "scoutServerTicketItemDescriptionId": "298", "imageId": "i090_0003_00", "rarity": 9, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8110_1W_MasterTicket_06" },
+{ "scoutServerTicketItemNameId": "900000000299", "scoutServerTicketItemDescriptionId": "299", "imageId": "i090_0001_00", "rarity": 3, "trainerId": "10293400000", "isGuaranteedTicket": false, "scheduleId": "event_8110_2W_SuperTicket_04" },
+{ "scoutServerTicketItemNameId": "900000000300", "scoutServerTicketItemDescriptionId": "300", "imageId": "i090_0003_00", "rarity": 9, "trainerId": "10293400000", "isGuaranteedTicket": true, "scheduleId": "event_8110_2W_MasterTicket_05" },
+{ "scoutServerTicketItemNameId": "900000000301", "scoutServerTicketItemDescriptionId": "301", "imageId": "i090_0003_00", "rarity": 9, "trainerId": "-1", "isGuaranteedTicket": false, "scheduleId": "event_8110_4W_MasterTicket_011" }
 ]}

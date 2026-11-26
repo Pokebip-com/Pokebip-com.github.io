@@ -59,5 +59,10 @@
     "gvg_theme_8070_104": "Sans altération de statut\nou tourment : 0 dégât ;\nnon super efficace 0 dégât",
     "gvg_theme_8070_106": "Puissance action ↑ 5,\nnon super efficace\n0 dégât",
     "gvg_theme_8070_107": "Jauge Capacité des alliés\nréduite de deux segments ;\nnon super efficace 0 dégât",
-    "gvg_theme_8070_108": "Décélération de la Jauge\nCapacité des alliés, non\nsuper efficace 0 dégât"
+    "gvg_theme_8070_108": "Décélération de la Jauge\nCapacité des alliés, non\nsuper efficace 0 dégât",
+    "gvg_theme_8110_011": "Normal ou super\nefficace uniquement",
+    "gvg_theme_8110_012": "Alliés ultra efficace 5",
+    "gvg_theme_8110_102": "0 dégât spécial, normal\nou super efficace uniq.\nAlliés ultra efficace 5",
+    "gvg_theme_8110_104": "0 alt. de stat. ou tourment : 0 dégât\nNormal ou super efficace uniquement\nAlliés ultra efficace 5",
+    "gvg_theme_8110_107": "Jauge Capacité des alliés - 2\nNormal ou super efficace uniq.\nAlliés ultra efficace 5"
 }

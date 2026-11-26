@@ -50,5 +50,7 @@
     "damage_challenge_rule_8090_001": "Reduces damage the opponent receives by\n80% when the opponent is hit by a move,\nsync move, or max move from a sync pair\nwithout the Villain theme.",
     "passio_tower_rule_8080_001": "Opponents deal three times the sync move\ndamage when they are unaffected by a status\ncondition or interference.",
     "passio_tower_rule_8080_002": "Opponents deal three times the sync move\ndamage when their stats haven’t been lowered\nby a total of 16 ranks.",
-    "passio_tower_rule_8080_003": "Opponents deal three times the sync move\ndamage when their target is unaffected by effects\nthat apply only to the allied field of play."
+    "passio_tower_rule_8080_003": "Opponents deal three times the sync move\ndamage when their target is unaffected by effects\nthat apply only to the allied field of play.",
+    "gvg_rule_8110_011": "Opponents only take damage from Normal-type\nattacks or supereffective attacks.",
+    "gvg_rule_8110_012": "Increases the damage allies deal with\nsupereffective attacks by 50%."
 }
