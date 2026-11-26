@@ -102,14 +102,18 @@ function getBossRoundIds(bossNum = state.bossNum) {
     return gvgData.boss[bossNum]?.gvgBossRoundIds.concat(gvgData.boss[bossNum]?.gvgBossRoundRepeatedId) || [];
 }
 
+function getBossWeakType(boss) {
+    let bossRound = jData.proto.gvGBossRound.find(br => br.gvgBossRoundId === boss.gvgBossRoundIds[0]);
+    let enemyOverwrite = jData.proto.gvGEnemyOverwrite.find(eo => eo.gvgEnemyOverwriteId === bossRound.gvgEnemyOverwriteIds[0]);
+    return enemyOverwrite.weakness;
+}
+
 function fetchNPCs() {
     const storyQuestDetail = jData.proto.storyQuestDetail.find(sqd => sqd.storyQuestId.toString() === gvgData.bossRound.storyQuestId.toString());
 
-    gvgData.weakTypes = storyQuestDetail.weakTypes;
-
     const battle = jData.proto.battle.find(b => b.battleId === storyQuestDetail.battleIds[0]);
 
-    const battleParams = jData.proto.battleParameter.find(bp => bp.battleParameterId === battle.battleParameterId);;
+    const battleParams = jData.proto.battleParameter.find(bp => bp.battleParameterId === battle.battleParameterId);
 
     gvgData.npc.center = jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId1);
     gvgData.npc.left = jData.proto.battleNpcUnit.find(npc => npc.npcUnitId === battleParams.npcUnitId2);
@@ -120,6 +124,16 @@ function fetchNPCs() {
 
     gvgData.npc.left.enemyOverwrite = gvgData.npc.right.enemyOverwrite = jData.proto.gvGEnemyOverwrite.find(eo => eo.gvgEnemyOverwriteId.toString() === gvgData.bossRound.gvgEnemyOverwriteIds[1].toString());
     gvgData.npc.left.enemyOverwriteParams = gvgData.npc.right.enemyOverwriteParams = jData.proto.enemyOverwriteParameter.find(eop => eop.enemyOverwriteParameterId.toString() === gvgData.npc.left.enemyOverwrite.enemyOverwriteParameterId.toString());
+
+    let weakTypes = [];
+
+    ["center", "left", "right"].forEach(side => {
+        if(!weakTypes.includes(gvgData.npc[side].enemyOverwrite.weakness)) {
+            weakTypes.push(gvgData.npc[side].enemyOverwrite.weakness);
+        }
+    });
+
+    gvgData.weakTypes = weakTypes;
 
     let watchOut = []
 
@@ -152,14 +166,13 @@ function fetchGvGData() {
     gvgData.boss = jData.proto.gvGBoss.filter(boss => gvgData.gvg.gvgBossIds.includes(boss.gvgBossId.toString()));
 
     gvgData.boss.forEach(boss => {
-        boss.weakType = jData.proto.storyQuestDetail.find(sqd => sqd.storyQuestId === jData.proto.gvGBossRound.find(br => br.gvgBossRoundId === boss.gvgBossRoundIds[0]).storyQuestId).weakTypes[0];
+        boss.weakType = getBossWeakType(boss);
     })
 
     state.bossNum = gvgData.boss.findIndex(item => item.gvgBossId.toString() === state.bossId.toString());
     state.bossNum = state.bossNum === -1 ? 0 : state.bossNum;
     state.bossId = gvgData.boss[state.bossNum].gvgBossId.toString();
     fetchBossRound();
-    console.log(gvgData);
 }
 
 function renderSelects() {
@@ -339,7 +352,7 @@ function renderPokemonPanel() {
             <div class="pokemon-meta">
               <div class="meta-row">
                 <span class="meta-label">Faiblesse :</span>
-                <span class="tag watch"><span class="slot-icon" style="margin-right: 5px; background-image: url('./data/icons/types/${npc.weakType}.png'); background-size: contain;"></span> <strong>${escapeHtml(jData.lsd.motifTypeName[npc.weakType] || '-')}</strong></span>
+                <span class="tag watch"><span class="slot-icon" style="margin-right: 5px; background-image: url('./data/icons/types/${npc.enemyOverwrite.weakness}.png'); background-size: contain;"></span> <strong>${escapeHtml(jData.lsd.motifTypeName[npc.enemyOverwrite.weakness] || '-')}</strong></span>
               </div>
               <div class="meta-row">
                 <span class="meta-label">Attention :</span>
